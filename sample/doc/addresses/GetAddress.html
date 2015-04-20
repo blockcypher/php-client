@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>addresses\GetAddress</title></head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="groc-relative-root" content="../">
+<meta name="groc-document-path" content="addresses\GetAddress">
+<meta name="groc-project-path" content="addresses\GetAddress.php">
+<link rel="stylesheet" type="text/css" media="all" href="../assets/style.css">
+<script type="text/javascript" src="../assets/behavior.js"></script>
+<body>
+<div id="meta">
+    <div class="file-path">addresses\GetAddress.php</div>
+</div>
+<div id="document">
+    <div class="segment">
+        <div class="code">
+            <div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><h1 id="get-address-sample">Get Address Sample</h1>
+
+                <p>The Address resource allows you to
+                    retrieve details about an Address.
+                    API called: &#39;/v1/btc/main/addrs/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD&#39;</p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> .
+                <span class="hljs-string">'/../bootstrap.php'</span>;
+            </div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><p>The following code takes you through
+                the process of retrieving details about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD</p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-comment">/// ### Retrieve 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD</span>
+            </div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><p>(See bootstrap.php for more on <code>ApiContext</code>)</p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-keyword">try</span> {
+                <span class="hljs-variable">$address</span> = \BlockCypher\Api\Address::get(<span class="hljs-string">'1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'</span>,
+                <span class="hljs-variable">$apiContext</span>);
+                } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span
+                        class="hljs-variable">$ex</span>) {
+                ResultPrinter::printError(<span class="hljs-string">"Get Address"</span>, <span class="hljs-string">"Address"</span>,
+                <span class="hljs-string">'1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'</span>, <span
+                        class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
+                <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+                }
+
+                ResultPrinter::printResult(<span class="hljs-string">"Get Address"</span>, <span class="hljs-string">"Address"</span>,
+                <span class="hljs-variable">$address</span>-&gt;getAddress(), <span class="hljs-keyword">null</span>,
+                <span class="hljs-variable">$address</span>);
+
+                <span class="hljs-keyword">return</span> <span class="hljs-variable">$address</span>;
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
