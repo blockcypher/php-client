@@ -8,6 +8,7 @@ v0.6.0
 * Added batching for blocks
 * Added batching for addresses
 * Added batching for transactions
+* Allows getting only address balance
 
 v0.5.0
 ------

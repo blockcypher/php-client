@@ -2981,6 +2981,42 @@
                         "title": "GetMultipleAddresses"
                     },
                     "depth": 2
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddressesBalance.php",
+                        "projectPath": "addresses\\GetMultipleAddressesBalance.php",
+                        "targetPath": "addresses\\GetMultipleAddressesBalance",
+                        "pageTitle": "addresses\\GetMultipleAddressesBalance",
+                        "title": "GetMultipleAddressesBalance"
+                    },
+                    "depth": 2
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetOnlyBalance.php",
+                        "projectPath": "addresses\\GetOnlyBalance.php",
+                        "targetPath": "addresses\\GetOnlyBalance",
+                        "pageTitle": "addresses\\GetOnlyBalance",
+                        "title": "GetOnlyBalance"
+                    },
+                    "depth": 2
                 }
             ]
         }, {
@@ -3100,18 +3136,7 @@
                         "pageTitle": "transactions\\GetMultipleTransactions",
                         "title": "GetMultipleTransactions"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Transactions Sample",
-                                "slug": "get-multiple-transactions-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {

@@ -209,6 +209,31 @@ class AddressTest extends \PHPUnit_Framework_TestCase
      * @dataProvider mockProvider
      * @param Address $obj
      */
+    public function testGetOnlyBalance($obj, /** @noinspection PhpDocSignatureInspection */
+                                       $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                AddressBalanceTest::getJson()
+            ));
+
+        $address = AddressBalanceTest::getObject();
+
+        /** @noinspection PhpParamsInspection */
+        $result = $obj->getOnlyBalance($address->getAddress(), $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertEquals($address, $result);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param Address $obj
+     */
     public function testGetMultiple($obj, $mockApiContext)
     {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')

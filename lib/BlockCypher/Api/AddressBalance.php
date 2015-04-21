@@ -9,7 +9,7 @@ use BlockCypher\Validation\ArgumentValidator;
 use BlockCypher\Validation\ArrayValidator;
 
 /**
- * Class Address
+ * Class AddressBalance
  *
  * A resource representing a block.
  *
@@ -24,48 +24,16 @@ use BlockCypher\Validation\ArrayValidator;
  * @property int n_tx
  * @property int unconfirmed_n_tx
  * @property int final_n_tx
- * @property \BlockCypher\Api\Txref[] txrefs
- * @property \BlockCypher\Api\Links tx_url
  */
-class Address extends BlockCypherResourceModel
+class AddressBalance extends BlockCypherResourceModel
 {
-    // TODO: Code Review. Replace these fields address, total_received ... final_n_tx by AddressBalance object
-
     /**
-     * Create a new address.
-     *
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return AddressCreateResponse
-     */
-    public static function create($apiContext = null, $restCall = null)
-    {
-        $payLoad = "";
-
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
-
-        $json = self::executeCall(
-            "$chainUrlPrefix/addrs",
-            "POST",
-            $payLoad,
-            null,
-            $apiContext,
-            $restCall
-        );
-        $ret = new AddressCreateResponse();
-        $ret->fromJson($json);
-        return $ret;
-    }
-
-    /**
-     * Obtain the Address resource for the given identifier.
+     * Obtain the AddressBalance resource for the given identifier.
      *
      * @param string $address
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Address
+     * @return AddressBalance
      */
     public static function get($address, $apiContext = null, $restCall = null)
     {
@@ -78,38 +46,25 @@ class Address extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$address",
+            "$chainUrlPrefix/addrs/$address/balance",
             "GET",
             $payLoad,
             null,
             $apiContext,
             $restCall
         );
-        $ret = new Address();
+        $ret = new AddressBalance();
         $ret->fromJson($json);
         return $ret;
     }
 
     /**
-     * Obtain the AddressBalance resource for the given address.
-     *
-     * @param string $address
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return AddressBalance
-     */
-    public static function getOnlyBalance($address, $apiContext = null, $restCall = null)
-    {
-        return AddressBalance::get($address, $apiContext, $restCall);
-    }
-
-    /**
-     * Obtain multiple Addresses resources for the given identifiers.
+     * Obtain multiple AddressBalances resources for the given identifiers.
      *
      * @param string[] $array
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Address[]
+     * @return AddressBalance[]
      */
     public static function getMultiple($array, $apiContext = null, $restCall = null)
     {
@@ -127,14 +82,14 @@ class Address extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$addressList",
+            "$chainUrlPrefix/addrs/$addressList/balance",
             "GET",
             $payLoad,
             null,
             $apiContext,
             $restCall
         );
-        return Address::getList($json);
+        return AddressBalance::getList($json);
     }
 
     /**
@@ -318,81 +273,6 @@ class Address extends BlockCypherResourceModel
     public function setUnconfirmedNTx($unconfirmed_n_tx)
     {
         $this->unconfirmed_n_tx = $unconfirmed_n_tx;
-        return $this;
-    }
-
-    /**
-     * Append Txref to the list.
-     *
-     * @param \BlockCypher\Api\Txref $txref
-     * @return $this
-     */
-    public function addTxref($txref)
-    {
-        if (!$this->getTxrefs()) {
-            return $this->setTxrefs(array($txref));
-        } else {
-            return $this->setTxrefs(
-                array_merge($this->getTxrefs(), array($txref))
-            );
-        }
-    }
-
-    /**
-     * All transaction inputs and outputs for the specified address.
-     *
-     * @return \BlockCypher\Api\Txref[]
-     */
-    public function getTxrefs()
-    {
-        return $this->txrefs;
-    }
-
-    /**
-     * All transaction inputs and outputs for the specified address.
-     *
-     * @param \BlockCypher\Api\Txref[] $txrefs
-     *
-     * @return $this
-     */
-    public function setTxrefs($txrefs)
-    {
-        $this->txrefs = $txrefs;
-        return $this;
-    }
-
-    /**
-     * Remove Txref from the list.
-     *
-     * @param \BlockCypher\Api\Txref $txref
-     * @return $this
-     */
-    public function removeTxref($txref)
-    {
-        return $this->setTxrefs(
-            array_diff($this->getTxrefs(), array($txref))
-        );
-    }
-
-    /**
-     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
-     *
-     * @return Links
-     */
-    public function getTxUrl()
-    {
-        return $this->tx_url;
-    }
-
-    /**
-     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
-     *
-     * @param Links $tx_url
-     * @return $this
-     */
-    public function setTxUrl($tx_url)
-    {
-        $this->tx_url = $tx_url;
         return $this;
     }
 
