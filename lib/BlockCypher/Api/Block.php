@@ -6,6 +6,7 @@ use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 use BlockCypher\Validation\ArgumentValidator;
+use BlockCypher\Validation\ArrayValidator;
 
 /**
  * Class Chain
@@ -36,7 +37,7 @@ use BlockCypher\Validation\ArgumentValidator;
 class Block extends BlockCypherResourceModel
 {
     /**
-     * Obtain the Bank Account resource for the given identifier.
+     * Obtain the Block resource for the given identifier (hash or height).
      *
      * @param string $hashOrHeight
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -63,6 +64,40 @@ class Block extends BlockCypherResourceModel
         $ret = new Block();
         $ret->fromJson($json);
         return $ret;
+    }
+
+    /**
+     * Obtain the Block resource for the given identifier (hash or height).
+     *
+     * @param string[] $array
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return Block[]
+     */
+    public static function getMultiple($array, $apiContext = null, $restCall = null)
+    {
+        ArrayValidator::validate($array, 'array');
+        foreach ($array as $hashOrHeight) {
+            ArgumentValidator::validate($hashOrHeight, 'hashOrHeight');
+        }
+
+        $payLoad = "";
+
+        $blockList = implode(";", $array);
+
+        //Initialize the context if not provided explicitly
+        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
+        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/blocks/$blockList",
+            "GET",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        return Block::getList($json);
     }
 
     /**

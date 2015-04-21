@@ -2990,18 +2990,7 @@
                         "pageTitle": "blocks\\GetBlock",
                         "title": "GetBlock"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Block Sample",
-                                "slug": "get-block-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3019,18 +3008,25 @@
                         "pageTitle": "blocks\\GetBlockByHeight",
                         "title": "GetBlockByHeight"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Block Sample",
-                                "slug": "get-block-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetMultipleBlocks.php",
+                        "projectPath": "blocks\\GetMultipleBlocks.php",
+                        "targetPath": "blocks\\GetMultipleBlocks",
+                        "pageTitle": "blocks\\GetMultipleBlocks",
+                        "title": "GetMultipleBlocks"
+                    },
+                    "depth": 2
         }
             ]
         }, {

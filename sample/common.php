@@ -82,7 +82,11 @@ class ResultPrinter
 
             echo '<div class="row hidden-xs hidden-sm hidden-md"><div class="col-md-6"><h4>Request Object</h4>';
             self::printObject($request);
-            echo '</div><div class="col-md-6"><h4 class="' . ($errorMessage ? 'error' : '') . '">Response Object</h4>';
+            if (!is_array($response)) {
+                echo '</div><div class="col-md-6"><h4 class="' . ($errorMessage ? 'error' : '') . '">Response Object</h4>';
+            } else {
+                echo '</div><div class="col-md-6"><h4 class="' . ($errorMessage ? 'error' : '') . '">Response Objects</h4>';
+            }
             self::printObject($response, $errorMessage);
             echo '</div></div>';
 
@@ -138,6 +142,10 @@ class ResultPrinter
                 echo '<pre class="prettyprint ' . ($error ? 'error' : '') . '">' . str_replace('\\/', '/', json_encode(json_decode($object), 128)) . "</pre>";
             } elseif (is_string($object)) {
                 echo '<pre class="prettyprint ' . ($error ? 'error' : '') . '">' . $object . '</pre>';
+            } elseif (is_array($object)) {
+                foreach ($object as $item) {
+                    self::printObject($item, $error);
+                }
             } else {
                 echo "<pre>";
                 print_r($object);

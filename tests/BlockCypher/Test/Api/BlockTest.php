@@ -187,6 +187,38 @@ class BlockTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($result);
     }
 
+    /**
+     * @dataProvider mockProvider
+     * @param Block $obj
+     */
+    public function testGetMultiple($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . BlockTest::getJson() . ']'
+            ));
+
+        $blockList = Array(BlockTest::getObject()->getHeight());
+
+        $result = $obj->getMultiple($blockList, $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertEquals($result[0], BlockTest::getObject());
+    }
+
+    /**
+     * Gets Object Instance with Json data filled in
+     * @return Block
+     */
+    public static function getObject()
+    {
+        return new Block(self::getJson());
+    }
+
     public function mockProvider()
     {
         $obj = self::getObject();
@@ -204,14 +236,5 @@ class BlockTest extends \PHPUnit_Framework_TestCase
             array($obj, $mockApiContext),
             array($obj, null)
         );
-    }
-
-    /**
-     * Gets Object Instance with Json data filled in
-     * @return Block
-     */
-    public static function getObject()
-    {
-        return new Block(self::getJson());
     }
 }

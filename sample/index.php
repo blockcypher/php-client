@@ -293,12 +293,24 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Get block details bu block height</h5></div>
+                            <div class="col-md-8"><h5>Get block details by block height</h5></div>
                             <div class="col-md-4">
                                 <a href="blocks/GetBlockByHeight.php" class="btn btn-primary pull-left execute"> Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/blocks/GetBlockByHeight.html" class="btn btn-default pull-right">Source <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Get multiple blocks</h5></div>
+                            <div class="col-md-4">
+                                <a href="blocks/GetMultipleBlocks.php" class="btn btn-primary pull-left execute"> Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/blocks/GetMultipleBlocks.html" class="btn btn-default pull-right">Source <i
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
