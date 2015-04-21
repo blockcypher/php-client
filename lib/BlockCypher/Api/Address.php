@@ -29,6 +29,34 @@ use BlockCypher\Validation\ArgumentValidator;
 class Address extends BlockCypherResourceModel
 {
     /**
+     * Create a new address.
+     *
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return AddressCreateResponse
+     */
+    public static function create($apiContext = null, $restCall = null)
+    {
+        $payLoad = "";
+
+        //Initialize the context if not provided explicitly
+        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
+        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/addrs",
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $ret = new AddressCreateResponse();
+        $ret->fromJson($json);
+        return $ret;
+    }
+
+    /**
      * Obtain the Transaction resource for the given identifier.
      *
      * @param string $address

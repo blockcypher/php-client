@@ -263,7 +263,7 @@ if (PHP_SAPI == 'cli') {
                             <div class="col-md-4">
                                 <a href="chains/GetChain.php" class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc-REMOVE/chains/GetChain.html" class="btn btn-default pull-right">Source <i
+                                <a href="doc/chains/GetChain.html" class="btn btn-default pull-right">Source <i
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
@@ -286,7 +286,7 @@ if (PHP_SAPI == 'cli') {
                             <div class="col-md-4">
                                 <a href="blocks/GetBlock.php" class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc-REMOVE/blocks/GetBlock.html" class="btn btn-default pull-right">Source <i
+                                <a href="doc/blocks/GetBlock.html" class="btn btn-default pull-right">Source <i
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
@@ -310,7 +310,7 @@ if (PHP_SAPI == 'cli') {
                                 <a href="transactions/GetTransaction.php" class="btn btn-primary pull-left execute"> Try
                                     It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc-REMOVE/transactions/GetTransaction.html"
+                                <a href="doc/transactions/GetTransaction.html"
                                    class="btn btn-default pull-right">Source <i
                                         class="fa fa-file-code-o"></i></a>
                             </div>
@@ -353,7 +353,7 @@ if (PHP_SAPI == 'cli') {
                             <div class="col-md-4">
                                 <a href="addresses/GetAddress.php" class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc-REMOVE/addresses/GetAddress.html" class="btn btn-default pull-right">Source
+                                <a href="doc/addresses/GetAddress.html" class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
                             </div>
@@ -373,8 +373,14 @@ if (PHP_SAPI == 'cli') {
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Coming soon!</h5></div>
+                            <div class="col-md-8"><h5>Create new address</h5></div>
                             <div class="col-md-4">
+                                <a href="addresses/CreateAddress.php" class="btn btn-primary pull-left execute"> Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/addresses/CreateAddress.html" class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
                     </li>

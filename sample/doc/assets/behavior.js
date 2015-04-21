@@ -2938,7 +2938,47 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "D:\\GIT\\Projects\\blockchyper\\src\\sample\\addresses\\GetAddress.php",
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\CreateAddress.php",
+                        "projectPath": "addresses\\CreateAddress.php",
+                        "targetPath": "addresses\\CreateAddress",
+                        "pageTitle": "addresses\\CreateAddress",
+                        "title": "CreateAddress"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Create Address Sample",
+                                "slug": "create-address-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 3,
+                                        "title": "Create Address",
+                                        "slug": "create-address"
+                                    },
+                                    "depth": 3
+                                }
+                            ]
+                        }
+                    ]
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetAddress.php",
                         "projectPath": "addresses\\GetAddress.php",
                         "targetPath": "addresses\\GetAddress",
                         "pageTitle": "addresses\\GetAddress",
@@ -2966,7 +3006,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "D:\\GIT\\Projects\\blockchyper\\src\\sample\\blocks\\GetBlock.php",
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlock.php",
                         "projectPath": "blocks\\GetBlock.php",
                         "targetPath": "blocks\\GetBlock",
                         "pageTitle": "blocks\\GetBlock",
@@ -2994,7 +3034,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "D:\\GIT\\Projects\\blockchyper\\src\\sample\\chains\\GetChain.php",
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\chains\\GetChain.php",
                         "projectPath": "chains\\GetChain.php",
                         "targetPath": "chains\\GetChain",
                         "pageTitle": "chains\\GetChain",
@@ -3022,7 +3062,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "D:\\GIT\\Projects\\blockchyper\\src\\sample\\transactions\\GetTransaction.php",
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetTransaction.php",
                         "projectPath": "transactions\\GetTransaction.php",
                         "targetPath": "transactions\\GetTransaction",
                         "pageTitle": "transactions\\GetTransaction",
@@ -3079,7 +3119,7 @@
                 parents$ = currentNode$.parents('li');
                 if (parents$.length > 0) {
                     selectNode(parents$.first());
-                }
+        }
             }
         }
         return focusCurrentNode();
@@ -3106,7 +3146,7 @@
                 if (urlChunks[1] === headerSlug) {
                     currentNode$ = $(link).parents('li').first();
                     break;
-                }
+        }
             }
         }
         currentNode$.addClass('selected expanded');

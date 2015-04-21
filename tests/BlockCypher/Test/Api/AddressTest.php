@@ -40,7 +40,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Gets Json String of Object Block
+     * Gets Json String of Object Address
      * @return string
      */
     public static function getJson()
@@ -165,7 +165,30 @@ class AddressTest extends \PHPUnit_Framework_TestCase
      * @dataProvider mockProvider
      * @param Address $obj
      */
-    public function testGet($obj, $mockApiContext)
+    public function testCreate($obj, /** @noinspection PhpDocSignatureInspection */
+                               $mockApiContext)
+    {
+        $mockPayPalRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockPayPalRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                AddressCreateResponseTest::getJson()
+            ));
+
+        /** @noinspection PhpParamsInspection */
+        $result = $obj->create($mockApiContext, $mockPayPalRestCall);
+        $this->assertNotNull($result);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param Address $obj
+     */
+    public function testGet($obj, /** @noinspection PhpDocSignatureInspection */
+                            $mockApiContext)
     {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
@@ -177,6 +200,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase
                 AddressTest::getJson()
             ));
 
+        /** @noinspection PhpParamsInspection */
         $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
