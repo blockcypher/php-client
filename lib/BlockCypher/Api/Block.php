@@ -67,7 +67,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Obtain the Block resource for the given identifier (hash or height).
+     * Obtain multiple Block resources for the given identifiers (hash or height).
      *
      * @param string[] $array
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
