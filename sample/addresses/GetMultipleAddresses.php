@@ -3,7 +3,7 @@
 // # Get Multiple Addresses Sample
 // This method allows you to
 // retrieve details about multiple addresses at once.
-// API called: '/v1/btc/main/addrs/1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE;1JP8F...'
+// API called: '/v1/btc/main/addrs/1J38WorKqMin9g5jqUfngZLJvA7TQUBZNE;1JP8F...'
 
 require __DIR__ . '/../bootstrap.php';
 

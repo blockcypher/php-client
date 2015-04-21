@@ -218,6 +218,38 @@ class TransactionTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($result);
     }
 
+    /**
+     * @dataProvider mockProvider
+     * @param Transaction $obj
+     */
+    public function testGetMultiple($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . TransactionTest::getJson() . ']'
+            ));
+
+        $transactionList = Array(AddressTest::getObject()->getAddress());
+
+        $result = $obj->getMultiple($transactionList, $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertEquals($result[0], TransactionTest::getObject());
+    }
+
+    /**
+     * Gets Object Instance with Json data filled in
+     * @return Transaction
+     */
+    public static function getObject()
+    {
+        return new Transaction(self::getJson());
+    }
+
     public function mockProvider()
     {
         $obj = self::getObject();
@@ -235,14 +267,5 @@ class TransactionTest extends \PHPUnit_Framework_TestCase
             array($obj, $mockApiContext),
             array($obj, null)
         );
-    }
-
-    /**
-     * Gets Object Instance with Json data filled in
-     * @return Transaction
-     */
-    public static function getObject()
-    {
-        return new Transaction(self::getJson());
     }
 }

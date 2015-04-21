@@ -89,7 +89,7 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * Obtain the Address resources for the given identifiers.
+     * Obtain multiple Addresses resources for the given identifiers.
      *
      * @param string[] $array
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.

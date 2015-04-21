@@ -6,6 +6,7 @@ use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 use BlockCypher\Validation\ArgumentValidator;
+use BlockCypher\Validation\ArrayValidator;
 
 /**
  * Class Chain
@@ -67,6 +68,39 @@ class Transaction extends BlockCypherResourceModel
         $ret = new Transaction();
         $ret->fromJson($json);
         return $ret;
+    }
+
+    /**
+     * Obtain multiple Transaction resources for the given identifier.
+     *
+     * @param string[] $array
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return Transaction
+     */
+    public static function getMultiple($array, $apiContext = null, $restCall = null)
+    {
+        ArrayValidator::validate($array, 'array');
+        foreach ($array as $transaction) {
+            ArgumentValidator::validate($transaction, 'transaction');
+        }
+
+        $payLoad = "";
+        $transactionList = implode(";", $array);
+
+        //Initialize the context if not provided explicitly
+        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
+        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs/$transactionList",
+            "GET",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        return Transaction::getList($json);
     }
 
     /**

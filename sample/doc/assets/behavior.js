@@ -2927,25 +2927,25 @@
             },
             "depth": 1,
             "children": [
-                {
-                    "type": "file",
-                    "data": {
-                        "language": {
-                            "nameMatchers": [{}, ".fbp"],
-                            "pygmentsLexer": "php",
-                            "singleLineComment": ["//"],
-                            "ignorePrefix": "}",
-                            "foldPrefix": "^",
-                            "name": "PHP"
+        {
+            "type": "file",
+            "data": {
+                "language": {
+                    "nameMatchers": [{}, ".fbp"],
+                    "pygmentsLexer": "php",
+                    "singleLineComment": ["//"],
+                    "ignorePrefix": "}",
+                    "foldPrefix": "^",
+                    "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\CreateAddress.php",
-                        "projectPath": "addresses\\CreateAddress.php",
-                        "targetPath": "addresses\\CreateAddress",
-                        "pageTitle": "addresses\\CreateAddress",
-                        "title": "CreateAddress"
-                    },
-                    "depth": 2
-                }, {
+                "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\CreateAddress.php",
+                "projectPath": "addresses\\CreateAddress.php",
+                "targetPath": "addresses\\CreateAddress",
+                "pageTitle": "addresses\\CreateAddress",
+                "title": "CreateAddress"
+            },
+            "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -2963,7 +2963,7 @@
                         "title": "GetAddress"
                     },
                     "depth": 2
-                }, {
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -2980,19 +2980,8 @@
                         "pageTitle": "addresses\\GetMultipleAddresses",
                         "title": "GetMultipleAddresses"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Addresses Sample",
-                                "slug": "get-multiple-addresses-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
-        }
+                    "depth": 2
+                }
             ]
         }, {
             "type": "folder",
@@ -3104,7 +3093,36 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetMultipleTransactions.php",
+                        "projectPath": "transactions\\GetMultipleTransactions.php",
+                        "targetPath": "transactions\\GetMultipleTransactions",
+                        "pageTitle": "transactions\\GetMultipleTransactions",
+                        "title": "GetMultipleTransactions"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Transactions Sample",
+                                "slug": "get-multiple-transactions-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetTransaction.php",
                         "projectPath": "transactions\\GetTransaction.php",
                         "targetPath": "transactions\\GetTransaction",
