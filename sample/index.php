@@ -305,7 +305,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Get multiple blocks</h5></div>
+                            <div class="col-md-8"><h5>Get multiple blocks at once</h5></div>
                             <div class="col-md-4">
                                 <a href="blocks/GetMultipleBlocks.php" class="btn btn-primary pull-left execute"> Try It
                                     <i
@@ -378,6 +378,20 @@ if (PHP_SAPI == 'cli') {
                                 <a href="addresses/GetAddress.php" class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/addresses/GetAddress.html" class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Get multiple addresses at once</h5></div>
+                            <div class="col-md-4">
+                                <a href="addresses/GetMultipleAddresses.php" class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/addresses/GetMultipleAddresses.html" class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
                             </div>

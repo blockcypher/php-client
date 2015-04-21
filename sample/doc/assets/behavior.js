@@ -2937,7 +2937,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\CreateAddress.php",
                         "projectPath": "addresses\\CreateAddress.php",
                         "targetPath": "addresses\\CreateAddress",
@@ -2955,7 +2955,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetAddress.php",
                         "projectPath": "addresses\\GetAddress.php",
                         "targetPath": "addresses\\GetAddress",
@@ -2963,7 +2963,36 @@
                         "title": "GetAddress"
                     },
                     "depth": 2
-                }
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddresses.php",
+                        "projectPath": "addresses\\GetMultipleAddresses.php",
+                        "targetPath": "addresses\\GetMultipleAddresses",
+                        "pageTitle": "addresses\\GetMultipleAddresses",
+                        "title": "GetMultipleAddresses"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Addresses Sample",
+                                "slug": "get-multiple-addresses-sample"
+                            },
+                            "depth": 1
+            }
+                    ]
+        }
             ]
         }, {
             "type": "folder",
@@ -2973,7 +3002,25 @@
             },
             "depth": 1,
             "children": [
-                {
+        {
+            "type": "file",
+            "data": {
+                "language": {
+                    "nameMatchers": [{}, ".fbp"],
+                    "pygmentsLexer": "php",
+                    "singleLineComment": ["//"],
+                    "ignorePrefix": "}",
+                    "foldPrefix": "^",
+                    "name": "PHP"
+            },
+                "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlock.php",
+                "projectPath": "blocks\\GetBlock.php",
+                "targetPath": "blocks\\GetBlock",
+                "pageTitle": "blocks\\GetBlock",
+                "title": "GetBlock"
+            },
+            "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -2983,25 +3030,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlock.php",
-                        "projectPath": "blocks\\GetBlock.php",
-                        "targetPath": "blocks\\GetBlock",
-                        "pageTitle": "blocks\\GetBlock",
-                        "title": "GetBlock"
-                    },
-                    "depth": 2
-                }, {
-                    "type": "file",
-                    "data": {
-                        "language": {
-                            "nameMatchers": [{}, ".fbp"],
-                            "pygmentsLexer": "php",
-                            "singleLineComment": ["//"],
-                            "ignorePrefix": "}",
-                            "foldPrefix": "^",
-                            "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlockByHeight.php",
                         "projectPath": "blocks\\GetBlockByHeight.php",
                         "targetPath": "blocks\\GetBlockByHeight",
@@ -3009,7 +3038,7 @@
                         "title": "GetBlockByHeight"
                     },
                     "depth": 2
-                }, {
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3019,7 +3048,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetMultipleBlocks.php",
                         "projectPath": "blocks\\GetMultipleBlocks.php",
                         "targetPath": "blocks\\GetMultipleBlocks",
@@ -3027,7 +3056,7 @@
                         "title": "GetMultipleBlocks"
                     },
                     "depth": 2
-        }
+                }
             ]
         }, {
             "type": "folder",
@@ -3047,7 +3076,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\chains\\GetChain.php",
                         "projectPath": "chains\\GetChain.php",
                         "targetPath": "chains\\GetChain",
@@ -3452,7 +3481,7 @@
                 evt.preventDefault();
                 return false;
             });
-        });
+    });
     });
 
 }).call(this);

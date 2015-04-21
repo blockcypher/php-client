@@ -6,6 +6,7 @@ use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 use BlockCypher\Validation\ArgumentValidator;
+use BlockCypher\Validation\ArrayValidator;
 
 /**
  * Class Address
@@ -57,7 +58,7 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * Obtain the Transaction resource for the given identifier.
+     * Obtain the Address resource for the given identifier.
      *
      * @param string $address
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -85,6 +86,40 @@ class Address extends BlockCypherResourceModel
         $ret = new Address();
         $ret->fromJson($json);
         return $ret;
+    }
+
+    /**
+     * Obtain the Address resources for the given identifiers.
+     *
+     * @param string[] $array
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return Address[]
+     */
+    public static function getMultiple($array, $apiContext = null, $restCall = null)
+    {
+        ArrayValidator::validate($array, 'array');
+        foreach ($array as $address) {
+            ArgumentValidator::validate($address, 'address');
+        }
+
+        $payLoad = "";
+
+        $addressList = implode(";", $array);
+
+        //Initialize the context if not provided explicitly
+        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
+        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/addrs/$addressList",
+            "GET",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        return Address::getList($json);
     }
 
     /**

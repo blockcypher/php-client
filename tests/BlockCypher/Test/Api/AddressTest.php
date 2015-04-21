@@ -205,6 +205,38 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($result);
     }
 
+    /**
+     * @dataProvider mockProvider
+     * @param Address $obj
+     */
+    public function testGetMultiple($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . AddressTest::getJson() . ']'
+            ));
+
+        $addressList = Array(AddressTest::getObject()->getAddress());
+
+        $result = $obj->getMultiple($addressList, $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertEquals($result[0], AddressTest::getObject());
+    }
+
+    /**
+     * Gets Object Instance with Json data filled in
+     * @return Address
+     */
+    public static function getObject()
+    {
+        return new Address(self::getJson());
+    }
+
     public function mockProvider()
     {
         $obj = self::getObject();
@@ -222,14 +254,5 @@ class AddressTest extends \PHPUnit_Framework_TestCase
             array($obj, $mockApiContext),
             array($obj, null)
         );
-    }
-
-    /**
-     * Gets Object Instance with Json data filled in
-     * @return Address
-     */
-    public static function getObject()
-    {
-        return new Address(self::getJson());
     }
 }

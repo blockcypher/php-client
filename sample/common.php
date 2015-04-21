@@ -85,7 +85,7 @@ class ResultPrinter
             if (!is_array($response)) {
                 echo '</div><div class="col-md-6"><h4 class="' . ($errorMessage ? 'error' : '') . '">Response Object</h4>';
             } else {
-                echo '</div><div class="col-md-6"><h4 class="' . ($errorMessage ? 'error' : '') . '">Response Objects</h4>';
+                echo '</div><div class="col-md-6"><h4 class="' . ($errorMessage ? 'error' : '') . '">Response Objects Array</h4>';
             }
             self::printObject($response, $errorMessage);
             echo '</div></div>';
