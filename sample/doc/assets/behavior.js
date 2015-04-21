@@ -2944,29 +2944,7 @@
                         "pageTitle": "addresses\\CreateAddress",
                         "title": "CreateAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Create Address Sample",
-                                "slug": "create-address-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 3,
-                                        "title": "Create Address",
-                                        "slug": "create-address"
-                                    },
-                                    "depth": 3
-                                }
-                            ]
-                        }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3012,8 +2990,48 @@
                         "pageTitle": "blocks\\GetBlock",
                         "title": "GetBlock"
                     },
-                    "depth": 2
-                }
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Block Sample",
+                                "slug": "get-block-sample"
+                            },
+                            "depth": 1
+            }
+                    ]
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlockByHeight.php",
+                        "projectPath": "blocks\\GetBlockByHeight.php",
+                        "targetPath": "blocks\\GetBlockByHeight",
+                        "pageTitle": "blocks\\GetBlockByHeight",
+                        "title": "GetBlockByHeight"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Block Sample",
+                                "slug": "get-block-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
+        }
             ]
         }, {
             "type": "folder",
@@ -3071,7 +3089,7 @@
                     "depth": 2
                 }
             ]
-        }
+    }
     ];
 
     nav$ = null;
@@ -3087,7 +3105,7 @@
         } else {
             nav$.removeClass('active');
             return html$.removeClass('popped');
-        }
+    }
     };
 
     toggleTableOfContents = function () {
@@ -3102,7 +3120,7 @@
         currentNodeBottom = currentNodeTop + currentNode$.children('.label').height();
         if (currentNodeTop < toc$.scrollTop()) {
             toc$.scrollTop(currentNodeTop);
-        }
+    }
         if (currentNodeBottom > toc$.scrollTop() + toc$.height()) {
             return toc$.scrollTop(currentNodeBottom - toc$.height());
         }
@@ -3121,7 +3139,7 @@
                     selectNode(parents$.first());
         }
             }
-        }
+    }
         return focusCurrentNode();
     };
 
@@ -3148,7 +3166,7 @@
                     break;
         }
             }
-        }
+    }
         currentNode$.addClass('selected expanded');
         currentNode$.parents('li').addClass('expanded');
         return focusCurrentNode();
@@ -3164,13 +3182,13 @@
                 newIndex = up ? i - 1 : i + 1;
                 if (newIndex < 0) {
                     newIndex = 0;
-                }
+        }
                 if (newIndex > visibleNodes$.length - 1) {
                     newIndex = visibleNodes$.length - 1;
-                }
+        }
                 break;
             }
-        }
+    }
         return selectNode($(visibleNodes$[newIndex]));
     };
 
@@ -3179,7 +3197,7 @@
         labelLink$ = currentNode$.children('a.label');
         if (labelLink$.length > 0) {
             return window.location = labelLink$.attr('href');
-        }
+    }
     };
 
     MAX_FILTER_SIZE = 10;
@@ -3199,11 +3217,11 @@
         queryString = queryString.toLowerCase().replace(/\s+/, '');
         if (queryString === currentQuery) {
             return;
-        }
+    }
         currentQuery = queryString;
         if (queryString === '') {
             return clearFilter();
-        }
+    }
         matcher = new RegExp(((function () {
             var j, len, results;
             results = [];
@@ -3222,17 +3240,17 @@
             } else {
                 filtered.push(nodeInfo);
             }
-        }
+    }
         if (matched.length > MAX_FILTER_SIZE) {
             return clearFilter();
-        }
+    }
         nav$.addClass('searching');
         for (k = 0, len1 = filtered.length; k < len1; k++) {
             nodeInfo = filtered[k];
             nodeInfo[1].removeClass('matched-child');
             nodeInfo[1].addClass('filtered');
             clearHighlight(nodeInfo[2]);
-        }
+    }
         results = [];
         for (l = 0, len2 = matched.length; l < len2; l++) {
             nodeInfo = matched[l];
@@ -3246,10 +3264,10 @@
                 for (m = 0, len3 = ref.length; m < len3; m++) {
                     p = ref[m];
                     results1.push($(p).addClass('matched-child'));
-                }
+        }
                 return results1;
             })());
-        }
+    }
         return results;
     };
 
@@ -3262,7 +3280,7 @@
             nodeInfo = searchableNodes[j];
             nodeInfo[1].removeClass('filtered matched-child');
             results.push(clearHighlight(nodeInfo[2]));
-        }
+    }
         return results;
     };
 
@@ -3277,7 +3295,7 @@
             foundIndex = lowerText.indexOf(char, furthestIndex);
             markedText += nodeText.slice(furthestIndex, foundIndex) + ("<em>" + nodeText[foundIndex] + "</em>");
             furthestIndex = foundIndex + 1;
-        }
+    }
         return text$.html(markedText + nodeText.slice(furthestIndex));
     };
 
@@ -3298,11 +3316,11 @@
                 sourceURL = metaInfo.githubURL + "/blob/master/" + metaInfo.projectPath;
             }
             nav$.find('.tools').prepend("<li class=\"github\">\n  <a href=\"" + sourceURL + "\" title=\"View source on GitHub\">\n    View source on GitHub\n  </a>\n</li>");
-        }
+    }
         for (j = 0, len = tableOfContents.length; j < len; j++) {
             node = tableOfContents[j];
             toc$.append(buildTOCNode(node, metaInfo));
-        }
+    }
         return nav$;
     };
 
@@ -3330,7 +3348,7 @@
                     evt.preventDefault();
                     return false;
                 };
-        }
+    }
         if (((ref = node.children) != null ? ref.length : void 0) > 0) {
             children$ = $('<ol class="children"/>');
             ref1 = node.children;
@@ -3339,17 +3357,17 @@
                 children$.append(buildTOCNode(c, metaInfo));
             }
             node$.append(children$);
-        }
+    }
         label$ = node$.find('> .label');
         label$.click(clickLabel);
         discloser$ = $('<span class="discloser"/>').prependTo(label$);
         if (!(((ref2 = node.children) != null ? ref2.length : void 0) > 0)) {
             discloser$.addClass('placeholder');
-        }
+    }
         discloser = discloser$.get(0);
         if (node.type === 'file') {
             fileMap[node.data.targetPath] = node$;
-        }
+    }
         appendSearchNode(node$);
         return node$;
     };
@@ -3361,27 +3379,27 @@
             githubURL: $('meta[name="groc-github-url"]').attr('content'),
             documentPath: $('meta[name="groc-document-path"]').attr('content'),
             projectPath: $('meta[name="groc-project-path"]').attr('content')
-        };
+    };
         nav$ = buildNav(metaInfo);
         toc$ = nav$.find('.toc');
         search$ = $('#search');
         selectNodeByDocumentPath(metaInfo.documentPath, window.location.hash.replace('#', ''));
         search$.focus(function () {
             return setTableOfContentsActive(true);
-        });
+    });
         lastMousedownTimestamp = null;
         nav$.mousedown(function (evt) {
             if (evt.target !== toggle$[0]) {
                 return lastMousedownTimestamp = evt.timeStamp;
             }
-        });
+    });
         search$.blur(function (evt) {
             if (evt.timeStamp - lastMousedownTimestamp < 10) {
                 return search$.focus();
             } else {
                 return setTableOfContentsActive(false);
             }
-        });
+    });
         toggle$ = nav$.find('.toggle');
         toggle$.click(function (evt) {
             if (search$.is(':focus')) {
@@ -3390,10 +3408,10 @@
                 search$.focus();
             }
             return evt.preventDefault();
-        });
+    });
         toggle$.mousedown(function (evt) {
             return evt.preventDefault();
-        });
+    });
         $('body').keydown(function (evt) {
             if (nav$.hasClass('active')) {
                 switch (evt.keyCode) {
@@ -3414,22 +3432,22 @@
                         break;
                     default:
                         return;
-                }
+        }
                 return evt.preventDefault();
             }
-        });
+    });
         search$.bind('keyup search', function (evt) {
             return searchNodes(search$.val());
-        });
+    });
         search$.keydown(function (evt) {
             if (evt.keyCode === 27) {
                 if (search$.val().trim() === '') {
                     return search$.blur();
-                } else {
+        } else {
                     return search$.val('');
-                }
+        }
             }
-        });
+    });
         return $('.code.folded').each(function (index, code) {
             var code$;
             code$ = $(code);
