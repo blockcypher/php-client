@@ -214,7 +214,36 @@ class TransactionTest extends \PHPUnit_Framework_TestCase
 
         /** @noinspection PhpParamsInspection */
         /** @noinspection SpellCheckingInspection */
-        $result = $obj->get("f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449", $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->get("f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449", array(), $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param Transaction $obj
+     * @param $mockApiContext
+     */
+    public function testGetWithParams($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                TransactionTest::getJson()
+            ));
+
+        $params = array(
+            'instart' => 1,
+            'outstart' => 1,
+            'limit' => 1,
+        );
+
+        /** @noinspection PhpParamsInspection */
+        /** @noinspection SpellCheckingInspection */
+        $result = $obj->get("f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449", $params, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
@@ -248,6 +277,34 @@ class TransactionTest extends \PHPUnit_Framework_TestCase
     public static function getObject()
     {
         return new Transaction(self::getJson());
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param Transaction $obj
+     */
+    public function testGetMultipleWithParams($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . TransactionTest::getJson() . ']'
+            ));
+
+        $transactionList = Array(AddressTest::getObject()->getAddress());
+        $params = array(
+            'instart' => 1,
+            'outstart' => 1,
+            'limit' => 1,
+        );
+
+        $result = $obj->getMultiple($transactionList, $params, $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertEquals($result[0], TransactionTest::getObject());
     }
 
     public function mockProvider()

@@ -44,13 +44,21 @@ class Transaction extends BlockCypherResourceModel
      * Obtain the Transaction resource for the given identifier.
      *
      * @param string $hash
+     * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return Transaction
      */
-    public static function get($hash, $apiContext = null, $restCall = null)
+    public static function get($hash, $params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($hash, 'hash');
+        ArgumentValidator::validate($params, 'params');
+
+        $allowedParams = array(
+            'instart' => 1,
+            'outstart' => 1,
+            'limit' => 1,
+        );
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -58,7 +66,7 @@ class Transaction extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/txs/$hash",
+            "$chainUrlPrefix/txs/$hash?" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,
@@ -74,26 +82,33 @@ class Transaction extends BlockCypherResourceModel
      * Obtain multiple Transaction resources for the given identifier.
      *
      * @param string[] $array
+     * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return Transaction
      */
-    public static function getMultiple($array, $apiContext = null, $restCall = null)
+    public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
         ArrayValidator::validate($array, 'array');
         foreach ($array as $transaction) {
             ArgumentValidator::validate($transaction, 'transaction');
         }
+        ArgumentValidator::validate($params, 'params');
 
-        $payLoad = "";
         $transactionList = implode(";", $array);
+        $allowedParams = array(
+            'instart' => 1,
+            'outstart' => 1,
+            'limit' => 1,
+        );
+        $payLoad = "";
 
         //Initialize the context if not provided explicitly
         $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/txs/$transactionList",
+            "$chainUrlPrefix/txs/$transactionList?" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,

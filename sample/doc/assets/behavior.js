@@ -3152,18 +3152,7 @@
                         "pageTitle": "blocks\\GetBlockWithPaging",
                         "title": "GetBlockWithPaging"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Block With Paging Sample",
-                                "slug": "get-block-with-paging-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -3256,6 +3245,35 @@
                         "title": "GetTransaction"
                     },
                     "depth": 2
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\transactions\\GetTransactionWithPaging.php",
+                        "projectPath": "transactions\\GetTransactionWithPaging.php",
+                        "targetPath": "transactions\\GetTransactionWithPaging",
+                        "pageTitle": "transactions\\GetTransactionWithPaging",
+                        "title": "GetTransactionWithPaging"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Transaction With Paging Sample",
+                                "slug": "get-transaction-with-paging-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
                 }
             ]
     }
