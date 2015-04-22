@@ -1,6 +1,6 @@
 # PHP REST API SDK for BlockChyper
 
-![Home Image](https://raw.githubusercontent.com/wiki/blockcypher/php-client/images/homepage.jpg)
+![Home Image](http://blockcypher.github.io/php-client/images/homepage.jpg)
 
 [![Build Status](https://travis-ci.org/blockcypher/php-client.png?branch=master)](https://travis-ci.org/blockcypher/php-client) [![Coverage Status](https://img.shields.io/coveralls/blockcypher/php-client.svg)](https://coveralls.io/r/blockcypher/php-client?branch=master)
 
