@@ -13,7 +13,7 @@ require __DIR__ . '/../bootstrap.php';
 /// ### Retrieve Block by hash
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $block = \BlockCypher\Api\Block::get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', $apiContext);
+    $block = \BlockCypher\Api\Block::get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', array(), $apiContext);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Block", "Block", '0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', null, $ex);
     exit(1);

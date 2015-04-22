@@ -12,6 +12,7 @@ v0.6.0
 * Allows getting full address
 * Added URL params 'unspentOnly' and 'before' to Address
 * Added URL params 'unspentOnly' and 'before' to FullAddress
+* Added URL params 'txstart' and 'limit' to Block
 
 v0.5.0
 ------

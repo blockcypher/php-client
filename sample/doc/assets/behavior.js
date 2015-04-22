@@ -2963,7 +2963,7 @@
                         "title": "GetAddress"
                     },
                     "depth": 2
-                }, {
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3034,18 +3034,7 @@
                         "pageTitle": "addresses\\GetMultipleAddresses",
                         "title": "GetMultipleAddresses"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Addresses Sample",
-                                "slug": "get-multiple-addresses-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -3082,7 +3071,7 @@
                         "title": "GetMultipleFullAddresses"
                     },
                     "depth": 2
-                }, {
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3092,7 +3081,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetOnlyBalance.php",
                         "projectPath": "addresses\\GetOnlyBalance.php",
                         "targetPath": "addresses\\GetOnlyBalance",
@@ -3146,6 +3135,35 @@
                         "title": "GetBlockByHeight"
                     },
                     "depth": 2
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\blocks\\GetBlockWithPaging.php",
+                        "projectPath": "blocks\\GetBlockWithPaging.php",
+                        "targetPath": "blocks\\GetBlockWithPaging",
+                        "pageTitle": "blocks\\GetBlockWithPaging",
+                        "title": "GetBlockWithPaging"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Block With Paging Sample",
+                                "slug": "get-block-with-paging-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {

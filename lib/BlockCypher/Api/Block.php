@@ -40,13 +40,20 @@ class Block extends BlockCypherResourceModel
      * Obtain the Block resource for the given identifier (hash or height).
      *
      * @param string $hashOrHeight
+     * @param array $params Parameters. Options: txstart, and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return Block
      */
-    public static function get($hashOrHeight, $apiContext = null, $restCall = null)
+    public static function get($hashOrHeight, $params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($hashOrHeight, 'hashOrHeight');
+        ArgumentValidator::validate($params, 'params');
+
+        $allowedParams = array(
+            'txstart' => 1,
+            'limit' => 1,
+        );
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -54,7 +61,7 @@ class Block extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/blocks/$hashOrHeight",
+            "$chainUrlPrefix/blocks/$hashOrHeight?" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,
@@ -70,27 +77,32 @@ class Block extends BlockCypherResourceModel
      * Obtain multiple Block resources for the given identifiers (hash or height).
      *
      * @param string[] $array
+     * @param array $params Parameters. Options: txstart, and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return Block[]
      */
-    public static function getMultiple($array, $apiContext = null, $restCall = null)
+    public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
         ArrayValidator::validate($array, 'array');
         foreach ($array as $hashOrHeight) {
             ArgumentValidator::validate($hashOrHeight, 'hashOrHeight');
         }
-
-        $payLoad = "";
+        ArgumentValidator::validate($params, 'params');
 
         $blockList = implode(";", $array);
+        $allowedParams = array(
+            'txstart' => 1,
+            'limit' => 1,
+        );
+        $payLoad = "";
 
         //Initialize the context if not provided explicitly
         $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/blocks/$blockList",
+            "$chainUrlPrefix/blocks/$blockList?" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,
