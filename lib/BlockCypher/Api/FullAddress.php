@@ -33,13 +33,20 @@ class FullAddress extends BlockCypherResourceModel
      * Obtain the FullAddress resource for the given identifier.
      *
      * @param string $address
+     * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return FullAddress
      */
-    public static function get($address, $apiContext = null, $restCall = null)
+    public static function get($address, $params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($address, 'address');
+        ArgumentValidator::validate($params, 'params');
+
+        $allowedParams = array(
+            'unspentOnly' => 1,
+            'before' => 1,
+        );
 
         $payLoad = "";
 
@@ -48,7 +55,7 @@ class FullAddress extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$address/full",
+            "$chainUrlPrefix/addrs/$address/full?" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,
@@ -64,27 +71,32 @@ class FullAddress extends BlockCypherResourceModel
      * Obtain multiple FullAddress resources for the given identifiers.
      *
      * @param string[] $array
+     * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return FullAddress[]
      */
-    public static function getMultiple($array, $apiContext = null, $restCall = null)
+    public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
         ArrayValidator::validate($array, 'array');
         foreach ($array as $address) {
             ArgumentValidator::validate($address, 'address');
         }
-
-        $payLoad = "";
+        ArgumentValidator::validate($params, 'params');
 
         $addressList = implode(";", $array);
+        $allowedParams = array(
+            'unspentOnly' => 1,
+            'before' => 1,
+        );
+        $payLoad = "";
 
         //Initialize the context if not provided explicitly
         $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$addressList/full",
+            "$chainUrlPrefix/addrs/$addressList/full?" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,

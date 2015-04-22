@@ -100,13 +100,14 @@ class Address extends BlockCypherResourceModel
      * Obtain the FullAddress resource for the given address.
      *
      * @param string $address
+     * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return FullAddress
      */
-    public static function getFullAddress($address, $apiContext = null, $restCall = null)
+    public static function getFullAddress($address, $params = array(), $apiContext = null, $restCall = null)
     {
-        return FullAddress::get($address, $apiContext, $restCall);
+        return FullAddress::get($address, $params, $apiContext, $restCall);
     }
 
     /**

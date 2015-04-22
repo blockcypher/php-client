@@ -503,7 +503,34 @@ class FullAddressTest extends \PHPUnit_Framework_TestCase
             ));
 
         /** @noinspection PhpParamsInspection */
-        $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", array(), $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param FullAddress $obj
+     */
+    public function testGetWithParams($obj, /** @noinspection PhpDocSignatureInspection */
+                                      $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                FullAddressTest::getJson()
+            ));
+
+        $params = array(
+            'unspentOnly' => 'true',
+            'before' => 300000,
+        );
+
+        /** @noinspection PhpParamsInspection */
+        $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $params, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
@@ -525,7 +552,7 @@ class FullAddressTest extends \PHPUnit_Framework_TestCase
 
         $fullAddressList = Array(FullAddressTest::getObject()->getAddress());
 
-        $result = $obj->getMultiple($fullAddressList, $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->getMultiple($fullAddressList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($result[0], FullAddressTest::getObject());
     }
@@ -537,6 +564,33 @@ class FullAddressTest extends \PHPUnit_Framework_TestCase
     public static function getObject()
     {
         return new FullAddress(self::getJson());
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param FullAddress $obj
+     */
+    public function testGetMultipleWithParams($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . FullAddressTest::getJson() . ']'
+            ));
+
+        $fullAddressList = Array(FullAddressTest::getObject()->getAddress());
+        $params = array(
+            'unspentOnly' => 'true',
+            'before' => 300000,
+        );
+
+        $result = $obj->getMultiple($fullAddressList, $params, $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertEquals($result[0], FullAddressTest::getObject());
     }
 
     public function mockProvider()
