@@ -31,6 +31,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($obj->getFinalBalance());
         $this->assertNotNull($obj->getNTx());
         $this->assertNotNull($obj->getUnconfirmedNTx());
+        $this->assertNotNull($obj->getFinalNTx());
         $this->assertNotNull($obj->getTxrefs());
         $this->assertNotNull($obj->getTxUrl());
 
@@ -156,6 +157,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($obj->getFinalBalance(), 4433416);
         $this->assertEquals($obj->getNTx(), 7);
         $this->assertEquals($obj->getUnconfirmedNTx(), 0);
+        $this->assertEquals($obj->getFinalNTx(), 7);
         // TODO: change self::getJson to use TxrefTest::getJson()
         //$this->assertEquals($obj->getTxrefs(), array(TxrefTest::getObject()));
         $this->assertEquals($obj->getTxUrl(), "https://api.blockcypher.com/v1/btc/main/txs/");

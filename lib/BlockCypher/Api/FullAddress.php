@@ -9,7 +9,7 @@ use BlockCypher\Validation\ArgumentValidator;
 use BlockCypher\Validation\ArrayValidator;
 
 /**
- * Class Address
+ * Class FullAddress
  *
  * A resource representing a block.
  *
@@ -24,48 +24,18 @@ use BlockCypher\Validation\ArrayValidator;
  * @property int n_tx
  * @property int unconfirmed_n_tx
  * @property int final_n_tx
- * @property \BlockCypher\Api\Txref[] txrefs
+ * @property \BlockCypher\Api\Transaction[] txs
  * @property \BlockCypher\Api\Links tx_url
  */
-class Address extends BlockCypherResourceModel
+class FullAddress extends BlockCypherResourceModel
 {
-    // TODO: Code Review. Replace these fields address, total_received ... final_n_tx by AddressBalance object
-
     /**
-     * Create a new address.
-     *
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return AddressCreateResponse
-     */
-    public static function create($apiContext = null, $restCall = null)
-    {
-        $payLoad = "";
-
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
-
-        $json = self::executeCall(
-            "$chainUrlPrefix/addrs",
-            "POST",
-            $payLoad,
-            null,
-            $apiContext,
-            $restCall
-        );
-        $ret = new AddressCreateResponse();
-        $ret->fromJson($json);
-        return $ret;
-    }
-
-    /**
-     * Obtain the Address resource for the given identifier.
+     * Obtain the FullAddress resource for the given identifier.
      *
      * @param string $address
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Address
+     * @return FullAddress
      */
     public static function get($address, $apiContext = null, $restCall = null)
     {
@@ -78,51 +48,25 @@ class Address extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$address",
+            "$chainUrlPrefix/addrs/$address/full",
             "GET",
             $payLoad,
             null,
             $apiContext,
             $restCall
         );
-        $ret = new Address();
+        $ret = new FullAddress();
         $ret->fromJson($json);
         return $ret;
     }
 
     /**
-     * Obtain the FullAddress resource for the given address.
-     *
-     * @param string $address
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return FullAddress
-     */
-    public static function getFullAddress($address, $apiContext = null, $restCall = null)
-    {
-        return FullAddress::get($address, $apiContext, $restCall);
-    }
-
-    /**
-     * Obtain the AddressBalance resource for the given address.
-     *
-     * @param string $address
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return AddressBalance
-     */
-    public static function getOnlyBalance($address, $apiContext = null, $restCall = null)
-    {
-        return AddressBalance::get($address, $apiContext, $restCall);
-    }
-
-    /**
-     * Obtain multiple Addresses resources for the given identifiers.
+     * Obtain multiple FullAddress resources for the given identifiers.
      *
      * @param string[] $array
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Address[]
+     * @return FullAddress[]
      */
     public static function getMultiple($array, $apiContext = null, $restCall = null)
     {
@@ -140,14 +84,14 @@ class Address extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$addressList",
+            "$chainUrlPrefix/addrs/$addressList/full",
             "GET",
             $payLoad,
             null,
             $apiContext,
             $restCall
         );
-        return Address::getList($json);
+        return FullAddress::getList($json);
     }
 
     /**
@@ -335,18 +279,29 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * Append Txref to the list.
+     * Alias for addTx method.
      *
-     * @param \BlockCypher\Api\Txref $txref
+     * @param \BlockCypher\Api\Transaction $transaction
      * @return $this
      */
-    public function addTxref($txref)
+    public function addTransaction($transaction)
     {
-        if (!$this->getTxrefs()) {
-            return $this->setTxrefs(array($txref));
+        return $this->addTx($transaction);
+    }
+
+    /**
+     * Append Transaction to the list.
+     *
+     * @param \BlockCypher\Api\Transaction $tx
+     * @return $this
+     */
+    public function addTx($tx)
+    {
+        if (!$this->getTxs()) {
+            return $this->setTxs(array($tx));
         } else {
-            return $this->setTxrefs(
-                array_merge($this->getTxrefs(), array($txref))
+            return $this->setTxs(
+                array_merge($this->getTxs(), array($tx))
             );
         }
     }
@@ -354,36 +309,69 @@ class Address extends BlockCypherResourceModel
     /**
      * All transaction inputs and outputs for the specified address.
      *
-     * @return \BlockCypher\Api\Txref[]
+     * @return \BlockCypher\Api\Transaction[]
      */
-    public function getTxrefs()
+    public function getTxs()
     {
-        return $this->txrefs;
+        return $this->txs;
     }
 
     /**
      * All transaction inputs and outputs for the specified address.
      *
-     * @param \BlockCypher\Api\Txref[] $txrefs
+     * @param \BlockCypher\Api\Transaction[] $tx
      *
      * @return $this
      */
-    public function setTxrefs($txrefs)
+    public function setTxs($tx)
     {
-        $this->txrefs = $txrefs;
+        $this->txs = $tx;
         return $this;
     }
 
     /**
-     * Remove Txref from the list.
+     * Alias for getTxs method.
      *
-     * @param \BlockCypher\Api\Txref $txref
+     * @return \BlockCypher\Api\Transaction[]
+     */
+    public function getTransactions()
+    {
+        return $this->getTxs();
+    }
+
+    /**
+     * Alias for setTxs method.
+     *
+     * @param \BlockCypher\Api\Transaction[] $transactions
+     *
      * @return $this
      */
-    public function removeTxref($txref)
+    public function setTransactions($transactions)
     {
-        return $this->setTxrefs(
-            array_diff($this->getTxrefs(), array($txref))
+        return $this->setTxs($transactions);
+    }
+
+    /**
+     * Alias for removeTx method.
+     *
+     * @param \BlockCypher\Api\Transaction $transaction
+     * @return $this
+     */
+    public function removeTransaction($transaction)
+    {
+        return $this->removeTx($transaction);
+    }
+
+    /**
+     * Remove Transaction from the list.
+     *
+     * @param \BlockCypher\Api\Transaction $tx
+     * @return $this
+     */
+    public function removeTx($tx)
+    {
+        return $this->setTxs(
+            array_diff($this->getTxs(), array($tx))
         );
     }
 

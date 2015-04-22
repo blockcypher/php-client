@@ -28,6 +28,7 @@ class AddressBalanceTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($obj->getFinalBalance());
         $this->assertNotNull($obj->getNTx());
         $this->assertNotNull($obj->getUnconfirmedNTx());
+        $this->assertNotNull($obj->getFinalNTx());
 
         $this->assertEquals(self::getJson(), $obj->toJson());
 
@@ -71,6 +72,7 @@ class AddressBalanceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($obj->getFinalBalance(), 4433416);
         $this->assertEquals($obj->getNTx(), 7);
         $this->assertEquals($obj->getUnconfirmedNTx(), 0);
+        $this->assertEquals($obj->getFinalNTx(), 7);
     }
 
     /**

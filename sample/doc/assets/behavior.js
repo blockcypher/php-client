@@ -2938,7 +2938,7 @@
                     "foldPrefix": "^",
                     "name": "PHP"
             },
-                "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\CreateAddress.php",
+                "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\CreateAddress.php",
                 "projectPath": "addresses\\CreateAddress.php",
                 "targetPath": "addresses\\CreateAddress",
                 "pageTitle": "addresses\\CreateAddress",
@@ -2956,7 +2956,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetAddress.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetAddress.php",
                         "projectPath": "addresses\\GetAddress.php",
                         "targetPath": "addresses\\GetAddress",
                         "pageTitle": "addresses\\GetAddress",
@@ -2974,7 +2974,36 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddresses.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetFullAddress.php",
+                        "projectPath": "addresses\\GetFullAddress.php",
+                        "targetPath": "addresses\\GetFullAddress",
+                        "pageTitle": "addresses\\GetFullAddress",
+                        "title": "GetFullAddress"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Full Address Sample",
+                                "slug": "get-full-address-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddresses.php",
                         "projectPath": "addresses\\GetMultipleAddresses.php",
                         "targetPath": "addresses\\GetMultipleAddresses",
                         "pageTitle": "addresses\\GetMultipleAddresses",
@@ -2992,7 +3021,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddressesBalance.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddressesBalance.php",
                         "projectPath": "addresses\\GetMultipleAddressesBalance.php",
                         "targetPath": "addresses\\GetMultipleAddressesBalance",
                         "pageTitle": "addresses\\GetMultipleAddressesBalance",
@@ -3010,7 +3039,36 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetOnlyBalance.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleFullAddresses.php",
+                        "projectPath": "addresses\\GetMultipleFullAddresses.php",
+                        "targetPath": "addresses\\GetMultipleFullAddresses",
+                        "pageTitle": "addresses\\GetMultipleFullAddresses",
+                        "title": "GetMultipleFullAddresses"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Full Addresses Sample",
+                                "slug": "get-multiple-full-addresses-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetOnlyBalance.php",
                         "projectPath": "addresses\\GetOnlyBalance.php",
                         "targetPath": "addresses\\GetOnlyBalance",
                         "pageTitle": "addresses\\GetOnlyBalance",
@@ -3038,7 +3096,7 @@
                     "foldPrefix": "^",
                     "name": "PHP"
             },
-                "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlock.php",
+                "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\blocks\\GetBlock.php",
                 "projectPath": "blocks\\GetBlock.php",
                 "targetPath": "blocks\\GetBlock",
                 "pageTitle": "blocks\\GetBlock",
@@ -3056,7 +3114,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlockByHeight.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\blocks\\GetBlockByHeight.php",
                         "projectPath": "blocks\\GetBlockByHeight.php",
                         "targetPath": "blocks\\GetBlockByHeight",
                         "pageTitle": "blocks\\GetBlockByHeight",
@@ -3074,7 +3132,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetMultipleBlocks.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\blocks\\GetMultipleBlocks.php",
                         "projectPath": "blocks\\GetMultipleBlocks.php",
                         "targetPath": "blocks\\GetMultipleBlocks",
                         "pageTitle": "blocks\\GetMultipleBlocks",
@@ -3102,7 +3160,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\chains\\GetChain.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\chains\\GetChain.php",
                         "projectPath": "chains\\GetChain.php",
                         "targetPath": "chains\\GetChain",
                         "pageTitle": "chains\\GetChain",
@@ -3130,7 +3188,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetMultipleTransactions.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\transactions\\GetMultipleTransactions.php",
                         "projectPath": "transactions\\GetMultipleTransactions.php",
                         "targetPath": "transactions\\GetMultipleTransactions",
                         "pageTitle": "transactions\\GetMultipleTransactions",
@@ -3148,7 +3206,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetTransaction.php",
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\transactions\\GetTransaction.php",
                         "projectPath": "transactions\\GetTransaction.php",
                         "targetPath": "transactions\\GetTransaction",
                         "pageTitle": "transactions\\GetTransaction",
