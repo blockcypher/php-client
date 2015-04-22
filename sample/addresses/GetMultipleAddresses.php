@@ -21,7 +21,7 @@ try {
         '1ENn7XmqXNnReiQEFHhBGzfiv5gAyBj7r1'
     );
 
-    $addresses = \BlockCypher\Api\Address::getMultiple($addressList, $apiContext);
+    $addresses = \BlockCypher\Api\Address::getMultiple($addressList, array(), $apiContext);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple Addresses", "Addresses", implode(",", $addressList), null, $ex);
     exit(1);

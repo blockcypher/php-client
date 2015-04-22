@@ -51,7 +51,7 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
         $request = $this->operation['response']['body'];
         $address = new Address($request);
 
-        $result = Address::get($address->getAddress(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $result = Address::get($address->getAddress(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($address->getAddress(), $result->getAddress());
         // TODO: all fields should be equal except some values as confirmations

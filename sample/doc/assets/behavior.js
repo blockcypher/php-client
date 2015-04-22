@@ -2963,6 +2963,42 @@
                         "title": "GetAddress"
                     },
                     "depth": 2
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetAddressWithPaging.php",
+                        "projectPath": "addresses\\GetAddressWithPaging.php",
+                        "targetPath": "addresses\\GetAddressWithPaging",
+                        "pageTitle": "addresses\\GetAddressWithPaging",
+                        "title": "GetAddressWithPaging"
+                    },
+                    "depth": 2
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetAddressWithUnspentOnly.php",
+                        "projectPath": "addresses\\GetAddressWithUnspentOnly.php",
+                        "targetPath": "addresses\\GetAddressWithUnspentOnly",
+                        "pageTitle": "addresses\\GetAddressWithUnspentOnly",
+                        "title": "GetAddressWithUnspentOnly"
+                    },
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -2980,19 +3016,8 @@
                         "pageTitle": "addresses\\GetFullAddress",
                         "title": "GetFullAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Full Address Sample",
-                                "slug": "get-full-address-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3002,14 +3027,25 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddresses.php",
                         "projectPath": "addresses\\GetMultipleAddresses.php",
                         "targetPath": "addresses\\GetMultipleAddresses",
                         "pageTitle": "addresses\\GetMultipleAddresses",
                         "title": "GetMultipleAddresses"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Addresses Sample",
+                                "slug": "get-multiple-addresses-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {
@@ -3045,18 +3081,7 @@
                         "pageTitle": "addresses\\GetMultipleFullAddresses",
                         "title": "GetMultipleFullAddresses"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Full Addresses Sample",
-                                "slug": "get-multiple-full-addresses-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {

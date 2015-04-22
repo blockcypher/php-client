@@ -10,6 +10,7 @@ v0.6.0
 * Added batching for transactions
 * Allows getting only address balance
 * Allows getting full address
+* Added URL params 'unspentOnly' and 'before' to Address
 
 v0.5.0
 ------
