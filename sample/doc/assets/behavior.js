@@ -2963,7 +2963,7 @@
                         "title": "GetAddress"
                     },
                     "depth": 2
-                }, {
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3016,7 +3016,18 @@
                         "pageTitle": "addresses\\GetFullAddress",
                         "title": "GetFullAddress"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Full Address Sample",
+                                "slug": "get-full-address-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {
@@ -3052,7 +3063,18 @@
                         "pageTitle": "addresses\\GetMultipleAddressesBalance",
                         "title": "GetMultipleAddressesBalance"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Addresses Balance Sample",
+                                "slug": "get-multiple-addresses-balance-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {
@@ -3070,7 +3092,18 @@
                         "pageTitle": "addresses\\GetMultipleFullAddresses",
                         "title": "GetMultipleFullAddresses"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Full Addresses Sample",
+                                "slug": "get-multiple-full-addresses-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {
@@ -3088,7 +3121,18 @@
                         "pageTitle": "addresses\\GetOnlyBalance",
                         "title": "GetOnlyBalance"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Only Balance Sample",
+                                "slug": "get-only-balance-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
                 }
             ]
         }, {
@@ -3109,7 +3153,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlock.php",
                         "projectPath": "blocks\\GetBlock.php",
                         "targetPath": "blocks\\GetBlock",
@@ -3170,7 +3214,18 @@
                         "pageTitle": "blocks\\GetMultipleBlocks",
                         "title": "GetMultipleBlocks"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Blocks Sample",
+                                "slug": "get-multiple-blocks-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
                 }
             ]
         }, {
@@ -3198,7 +3253,18 @@
                 "pageTitle": "chains\\GetChain",
                 "title": "GetChain"
             },
-            "depth": 2
+            "depth": 2,
+            "outline": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 1,
+                        "title": "Get Chain Sample",
+                        "slug": "get-chain-sample"
+                    },
+                    "depth": 1
+                }
+            ]
         }
             ]
         }, {
@@ -3219,14 +3285,25 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-            },
+                        },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetMultipleTransactions.php",
                         "projectPath": "transactions\\GetMultipleTransactions.php",
                         "targetPath": "transactions\\GetMultipleTransactions",
                         "pageTitle": "transactions\\GetMultipleTransactions",
                         "title": "GetMultipleTransactions"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get Multiple Transactions Sample",
+                                "slug": "get-multiple-transactions-sample"
+                            },
+                            "depth": 1
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {
@@ -3245,7 +3322,7 @@
                         "title": "GetTransaction"
                     },
                     "depth": 2
-        }, {
+                }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3283,14 +3360,47 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-            },
+                        },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\webhooks\\CreateAndDeleteAllWebHooks.php",
                         "projectPath": "webhooks\\CreateAndDeleteAllWebHooks.php",
                         "targetPath": "webhooks\\CreateAndDeleteAllWebHooks",
                         "pageTitle": "webhooks\\CreateAndDeleteAllWebHooks",
                         "title": "CreateAndDeleteAllWebHooks"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Delete All WebHooks Sample",
+                                "slug": "delete-all-webhooks-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 2,
+                                        "title": "Get WebHook Instance",
+                                        "slug": "get-webhook-instance"
+                                    },
+                                    "depth": 2,
+                                    "children": [
+                                        {
+                                            "type": "heading",
+                                            "data": {
+                                                "level": 3,
+                                                "title": "Delete All WebHooks",
+                                                "slug": "delete-all-webhooks"
+                                            },
+                                            "depth": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {
@@ -3308,40 +3418,7 @@
                         "pageTitle": "webhooks\\CreateAndDeleteWebHook",
                         "title": "CreateAndDeleteWebHook"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Delete WebHook Sample",
-                                "slug": "delete-webhook-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 2,
-                        "title": "Get WebHook Instance",
-                        "slug": "get-webhook-instance"
-                    },
-                    "depth": 2,
-                    "children": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 3,
-                                "title": "Delete WebHook",
-                                "slug": "delete-webhook"
-                            },
-                            "depth": 3
-                        }
-                    ]
-                }
-                            ]
-                        }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -3359,8 +3436,41 @@
                         "pageTitle": "webhooks\\CreateAndListWebHooks",
                         "title": "CreateAndListWebHooks"
                     },
-                    "depth": 2
-                }, {
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get All WebHooks Sample",
+                                "slug": "get-all-webhooks-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 2,
+                                        "title": "List WebHooks",
+                                        "slug": "list-webhooks"
+                                    },
+                                    "depth": 2,
+                                    "children": [
+                                        {
+                                            "type": "heading",
+                                            "data": {
+                                                "level": 3,
+                                                "title": "Get List of All WebHooks",
+                                                "slug": "get-list-of-all-webhooks"
+                                            },
+                                            "depth": 3
+                                        }
+                                    ]
+                }
+                            ]
+                        }
+                    ]
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3395,7 +3505,40 @@
                         "pageTitle": "webhooks\\DeleteAllWebHooks",
                         "title": "DeleteAllWebHooks"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Delete All WebHooks Sample",
+                                "slug": "delete-all-webhooks-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 2,
+                        "title": "Get WebHook Instance",
+                        "slug": "get-webhook-instance"
+                    },
+                    "depth": 2,
+                    "children": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 3,
+                                "title": "Delete All WebHooks",
+                                "slug": "delete-all-webhooks"
+                            },
+                            "depth": 3
+                        }
+                    ]
+                }
+                            ]
+                        }
+                    ]
         }, {
                     "type": "file",
                     "data": {
@@ -3413,41 +3556,8 @@
                         "pageTitle": "webhooks\\GetMultipleWebHooks",
                         "title": "GetMultipleWebHooks"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple WebHooks Sample",
-                                "slug": "get-multiple-webhooks-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 2,
-                                        "title": "Get WebHook ID.",
-                                        "slug": "get-webhook-id"
-                                    },
-                                    "depth": 2,
-                                    "children": [
-                                        {
-                                            "type": "heading",
-                                            "data": {
-                                                "level": 3,
-                                                "title": "Get Multiple WebHooks",
-                                                "slug": "get-multiple-webhooks"
-                                            },
-                                            "depth": 3
-                                        }
-                                    ]
-                }
-                            ]
-                        }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3457,48 +3567,15 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\webhooks\\GetWebHook.php",
                         "projectPath": "webhooks\\GetWebHook.php",
                         "targetPath": "webhooks\\GetWebHook",
                         "pageTitle": "webhooks\\GetWebHook",
                         "title": "GetWebHook"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get WebHook Sample",
-                                "slug": "get-webhook-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 2,
-                                        "title": "Get WebHook ID.",
-                                        "slug": "get-webhook-id"
-                                    },
-                                    "depth": 2,
-                                    "children": [
-                                        {
-                                            "type": "heading",
-                                            "data": {
-                                                "level": 3,
-                                                "title": "Get WebHook",
-                                                "slug": "get-webhook"
-                                            },
-                                            "depth": 3
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3508,14 +3585,36 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\webhooks\\ListWebHooks.php",
                         "projectPath": "webhooks\\ListWebHooks.php",
                         "targetPath": "webhooks\\ListWebHooks",
                         "pageTitle": "webhooks\\ListWebHooks",
                         "title": "ListWebHooks"
                     },
-                    "depth": 2
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get All WebHooks Sample",
+                                "slug": "get-all-webhooks-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 3,
+                                        "title": "Get List of All WebHooks",
+                                        "slug": "get-list-of-all-webhooks"
+                                    },
+                                    "depth": 3
+                }
+                            ]
+                        }
+                    ]
                 }
             ]
     }
