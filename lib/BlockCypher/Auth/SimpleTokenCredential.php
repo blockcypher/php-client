@@ -7,7 +7,6 @@ use BlockCypher\Core\BlockCypherHttpConfig;
 use BlockCypher\Core\BlockCypherHttpConnection;
 use BlockCypher\Core\BlockCypherLoggingManager;
 use BlockCypher\Exception\BlockCypherConfigurationException;
-use BlockCypher\Exception\BlockCypherConnectionException;
 use BlockCypher\Handler\IBlockCypherHandler;
 use BlockCypher\Rest\ApiContext;
 
@@ -93,8 +92,8 @@ class SimpleTokenCredential extends BlockCypherResourceModel implements TokenCre
      * Generates a new access token
      *
      * @param array $config
-     * @return null
-     * @throws BlockCypherConnectionException
+     * @param null $refreshToken
+     * @return string
      */
     public function generateAccessToken($config, $refreshToken = null)
     {

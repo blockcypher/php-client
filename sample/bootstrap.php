@@ -31,6 +31,12 @@ ini_set('display_errors', '1');
 /** @noinspection SpellCheckingInspection */
 $token = 'c0afcccdde5081d6429de37d16166ead';
 
+if (isset($_GET['token'])) $token = $_GET['token'];
+if (!validateToken($token)) {
+    echo 'Invalid token. Please get new one: <a href="https://accounts.blockcypher.com/">https://accounts.blockcypher.com/</a>';
+    exit(1);
+}
+
 /** @var \BlockCypher\Rest\ApiContext $apiContext */
 $apiContext = getApiContext($token);
 
@@ -84,4 +90,21 @@ function getApiContext($token)
     // $apiContext->addRequestHeader('BlockCypher-Partner-Attribution-Id', '123123123');
 
     return $apiContext;
+}
+
+/**
+ * @param $token
+ * @return bool
+ */
+function validateToken($token)
+{
+    // sample tokens:
+    // c0afcccdde5081d6429de37d16166ead
+    // ddf3g04f-0f31-4060-978b-63b1ff43e185
+
+    if (strlen($token) < 20) return false;
+    if (strlen($token) > 50) return false;
+    if (!preg_match('/[a-z0-9-]+/', $token)) return false;
+
+    return true;
 }
