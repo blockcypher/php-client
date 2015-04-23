@@ -14,6 +14,7 @@ v0.6.0
 * Added URL params 'unspentOnly' and 'before' to FullAddress
 * Added URL params 'txstart' and 'limit' to Block
 * Added URL params 'instart', 'outstart' and 'limit' to Transaction
+* Added WebHook API endpoint
 
 v0.5.0
 ------

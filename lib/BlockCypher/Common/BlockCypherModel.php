@@ -159,17 +159,22 @@ class BlockCypherModel
             //Convert to Array if Json Data Sent
             $data = json_decode($data, true);
         }
+        $list = array();
         if (!ArrayUtil::isAssocArray($data)) {
-            $list = array();
             //This means, root element is array
             foreach ($data as $k => $v) {
                 $obj = new static;
                 $obj->fromArray($v);
                 $list[] = $obj;
             }
-            return $list;
+        } else {
+            // TODO: Code Review. Original code returns empty array in this case
+            //This means, root element is object
+            $obj = new static;
+            $obj->fromArray($data);
+            $list[] = $obj;
         }
-        return array();
+        return $list;
     }
 
     /**
