@@ -130,7 +130,7 @@ class WebHookTest extends \PHPUnit_Framework_TestCase
      * @dataProvider mockProvider
      * @param WebHook $obj
      */
-    public function testMultiple($obj, $mockApiContext)
+    public function testGetMultiple($obj, $mockApiContext)
     {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
@@ -146,7 +146,6 @@ class WebHookTest extends \PHPUnit_Framework_TestCase
 
         $result = $obj->getMultiple($webHookList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertInternalType('array', $result);
         $this->assertEquals($result[0], WebHookTest::getObject());
     }
 
