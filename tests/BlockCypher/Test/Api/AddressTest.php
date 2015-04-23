@@ -170,18 +170,18 @@ class AddressTest extends \PHPUnit_Framework_TestCase
     public function testCreate($obj, /** @noinspection PhpDocSignatureInspection */
                                $mockApiContext)
     {
-        $mockPayPalRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
 
-        $mockPayPalRestCall->expects($this->any())
+        $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 AddressCreateResponseTest::getJson()
             ));
 
         /** @noinspection PhpParamsInspection */
-        $result = $obj->create($mockApiContext, $mockPayPalRestCall);
+        $result = $obj->create($mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
