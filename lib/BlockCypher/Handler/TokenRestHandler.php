@@ -79,15 +79,44 @@ class TokenRestHandler extends RestHandler
      */
     private function addTokenToUrl($url, $token)
     {
-        $query = parse_url($url, PHP_URL_QUERY);
+        // TODO: add test for this method.
+
+        // Check url already contains the token
+        if ($this->urlContainsToken($url))
+            return $url;
 
         // Returns a string if the URL has parameters or NULL if not
-        if ($query) {
-            $urlWithToken = $url . "&token={$token}";
+        $query = parse_url($url, PHP_URL_QUERY);
+
+        if ($query === null) {
+            // url already ends with ?
+            if (substr($url, -1) == '?')
+                $urlWithToken = $url . "token={$token}";
+            else
+                $urlWithToken = $url . "?token={$token}";
         } else {
-            $urlWithToken = $url . "?token={$token}";
+            $urlWithToken = $url . "&token={$token}";
         }
 
         return $urlWithToken;
+    }
+
+    /**
+     * Return true if the given url contains a parameter called 'token'.
+     *
+     * @param $url
+     * @return bool
+     */
+    private function urlContainsToken($url)
+    {
+        // TODO: add test for this method.
+
+        $query = parse_url($url, PHP_URL_QUERY);
+        parse_str($query, $params);
+        if (isset($params["token"])) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
