@@ -30,15 +30,18 @@ class Chain extends BlockCypherResourceModel
      * Obtain the Bank Account resource for the given identifier.
      *
      * @param string $name
+     * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return Chain
      */
-    public static function get($name, $apiContext = null, $restCall = null)
+    public static function get($name, $params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($name, 'name');
+        ArgumentValidator::validate($params, 'params');
         // TODO: validate chain name?
 
+        $allowedParams = array();
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -49,7 +52,7 @@ class Chain extends BlockCypherResourceModel
         $coin = strtolower($coin);
 
         $json = self::executeCall(
-            "/$version/$coin/$chain",
+            "/$version/$coin/$chain" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,

@@ -93,7 +93,7 @@ class AddressBalanceTest extends \PHPUnit_Framework_TestCase
             ));
 
         /** @noinspection PhpParamsInspection */
-        $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
@@ -115,7 +115,7 @@ class AddressBalanceTest extends \PHPUnit_Framework_TestCase
 
         $addressBalanceList = Array(AddressBalanceTest::getObject()->getAddress());
 
-        $result = $obj->getMultiple($addressBalanceList, $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->getMultiple($addressBalanceList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($result[0], AddressBalanceTest::getObject());
     }

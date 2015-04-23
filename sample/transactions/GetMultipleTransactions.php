@@ -20,7 +20,7 @@ try {
         '6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780'
     );
 
-    $transactions = \BlockCypher\Api\Transaction::getMultiple($transactionList, $apiContext);
+    $transactions = \BlockCypher\Api\Transaction::getMultiple($transactionList, array(), $apiContext);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple Transactions", "Transactions", implode(",", $transactionList), null, $ex);
     exit(1);

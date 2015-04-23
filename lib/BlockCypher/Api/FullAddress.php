@@ -47,7 +47,6 @@ class FullAddress extends BlockCypherResourceModel
             'unspentOnly' => 1,
             'before' => 1,
         );
-
         $payLoad = "";
 
         //Initialize the context if not provided explicitly

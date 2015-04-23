@@ -91,7 +91,7 @@ class ChainTest extends \PHPUnit_Framework_TestCase
                 ChainTest::getJson()
             ));
 
-        $result = $obj->get("BTC.main", $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->get("BTC.main", array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 

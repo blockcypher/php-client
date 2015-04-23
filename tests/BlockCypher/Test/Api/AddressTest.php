@@ -254,7 +254,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $address = AddressBalanceTest::getObject();
 
         /** @noinspection PhpParamsInspection */
-        $result = $obj->getOnlyBalance($address->getAddress(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->getOnlyBalance($address->getAddress(), array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($address, $result);
     }

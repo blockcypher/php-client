@@ -31,14 +31,17 @@ class AddressBalance extends BlockCypherResourceModel
      * Obtain the AddressBalance resource for the given identifier.
      *
      * @param string $address
+     * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return AddressBalance
      */
-    public static function get($address, $apiContext = null, $restCall = null)
+    public static function get($address, $params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($address, 'address');
+        ArgumentValidator::validate($params, 'params');
 
+        $allowedParams = array();
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -46,7 +49,7 @@ class AddressBalance extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$address/balance",
+            "$chainUrlPrefix/addrs/$address/balance" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,
@@ -62,17 +65,20 @@ class AddressBalance extends BlockCypherResourceModel
      * Obtain multiple AddressBalances resources for the given identifiers.
      *
      * @param string[] $array
+     * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return AddressBalance[]
      */
-    public static function getMultiple($array, $apiContext = null, $restCall = null)
+    public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
         ArrayValidator::validate($array, 'array');
         foreach ($array as $address) {
             ArgumentValidator::validate($address, 'address');
         }
+        ArgumentValidator::validate($params, 'params');
 
+        $allowedParams = array();
         $payLoad = "";
 
         $addressList = implode(";", $array);
@@ -82,7 +88,7 @@ class AddressBalance extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$addressList/balance",
+            "$chainUrlPrefix/addrs/$addressList/balance" . http_build_query(array_intersect_key($params, $allowedParams)),
             "GET",
             $payLoad,
             null,

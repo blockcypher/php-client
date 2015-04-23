@@ -15,6 +15,7 @@ v0.6.0
 * Added URL params 'txstart' and 'limit' to Block
 * Added URL params 'instart', 'outstart' and 'limit' to Transaction
 * Added WebHook API endpoint
+* Added 'params' parameter to all GET methods to allow add URL parameters in the future without breaking method signature
 
 v0.5.0
 ------

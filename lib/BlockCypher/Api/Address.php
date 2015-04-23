@@ -114,13 +114,14 @@ class Address extends BlockCypherResourceModel
      * Obtain the AddressBalance resource for the given address.
      *
      * @param string $address
+     * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return AddressBalance
      */
-    public static function getOnlyBalance($address, $apiContext = null, $restCall = null)
+    public static function getOnlyBalance($address, $params = array(), $apiContext = null, $restCall = null)
     {
-        return AddressBalance::get($address, $apiContext, $restCall);
+        return AddressBalance::get($address, $params, $apiContext, $restCall);
     }
 
     /**
