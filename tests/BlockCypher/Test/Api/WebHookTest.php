@@ -176,6 +176,8 @@ class WebHookTest extends \PHPUnit_Framework_TestCase
 
         $result = $obj->getAll(array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
+        $this->assertNotNull($result);
+        $this->assertEquals($result[0], WebHookTest::getObject());
     }
 
     /**
