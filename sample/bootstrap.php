@@ -52,8 +52,8 @@ function getApiContext($token)
     // Register the sdk_config.ini file in current directory
     // as the configuration source.
     /*
-    if(!defined("PP_CONFIG_PATH")) {
-        define("PP_CONFIG_PATH", __DIR__);
+    if(!defined("BC_CONFIG_PATH")) {
+        define("BC_CONFIG_PATH", __DIR__);
     }
     */
 
@@ -67,7 +67,7 @@ function getApiContext($token)
         new SimpleTokenCredential($token)
     );
 
-    // Comment this line out and uncomment the PP_CONFIG_PATH
+    // Comment this line out and uncomment the BC_CONFIG_PATH
     // 'define' block if you want to use static file
     // based configuration
 

@@ -31,8 +31,8 @@ class BlockCypherConfigManager
      */
     private function __construct()
     {
-        if (defined('PP_CONFIG_PATH')) {
-            $configFile = constant('PP_CONFIG_PATH') . '/sdk_config.ini';
+        if (defined('BC_CONFIG_PATH')) {
+            $configFile = constant('BC_CONFIG_PATH') . '/sdk_config.ini';
         } else {
             $configFile = implode(DIRECTORY_SEPARATOR,
                 array(dirname(__FILE__), "..", "config", "sdk_config.ini"));
