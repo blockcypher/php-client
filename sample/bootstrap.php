@@ -77,7 +77,7 @@ function getApiContext($token)
             'log.LogEnabled' => true,
             'log.FileName' => '../BlockCypher.log',
             'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
-            'validation.level' => 'log',
+            'validation.level' => 'log', // log, strict, disable
             'cache.enabled' => true,
             // 'http.CURLOPT_CONNECTTIMEOUT' => 30
             // 'http.headers.BlockCypher-Partner-Attribution-Id' => '123123123'

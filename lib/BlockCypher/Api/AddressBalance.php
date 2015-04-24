@@ -41,8 +41,9 @@ class AddressBalance extends BlockCypherResourceModel
     {
         ArgumentValidator::validate($address, 'address');
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -75,8 +76,9 @@ class AddressBalance extends BlockCypherResourceModel
     {
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         $addressList = implode(";", $array);

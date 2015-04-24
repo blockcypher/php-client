@@ -40,8 +40,9 @@ class Chain extends BlockCypherResourceModel
     {
         ArgumentValidator::validate($name, 'name');
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly

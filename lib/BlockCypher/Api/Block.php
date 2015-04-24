@@ -50,11 +50,12 @@ class Block extends BlockCypherResourceModel
     {
         ArgumentValidator::validate($hashOrHeight, 'hashOrHeight');
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array(
             'txstart' => 1,
             'limit' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -62,7 +63,7 @@ class Block extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/blocks/$hashOrHeight?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/blocks/$hashOrHeight?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
@@ -87,12 +88,13 @@ class Block extends BlockCypherResourceModel
     {
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
-
-        $blockList = implode(";", $array);
         $allowedParams = array(
             'txstart' => 1,
             'limit' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $blockList = implode(";", $array);
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -100,7 +102,7 @@ class Block extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/blocks/$blockList?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/blocks/$blockList?" . http_build_query($params),
             "GET",
             $payLoad,
             null,

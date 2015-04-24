@@ -43,11 +43,12 @@ class FullAddress extends BlockCypherResourceModel
     {
         ArgumentValidator::validate($address, 'address');
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array(
             'unspentOnly' => 1,
             'before' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -55,7 +56,7 @@ class FullAddress extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$address/full?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/addrs/$address/full?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
@@ -80,12 +81,13 @@ class FullAddress extends BlockCypherResourceModel
     {
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
-
-        $addressList = implode(";", $array);
         $allowedParams = array(
             'unspentOnly' => 1,
             'before' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $addressList = implode(";", $array);
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -93,7 +95,7 @@ class FullAddress extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/addrs/$addressList/full?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/addrs/$addressList/full?" . http_build_query($params),
             "GET",
             $payLoad,
             null,

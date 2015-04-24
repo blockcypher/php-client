@@ -1,6 +1,8 @@
 <?php
 
 namespace BlockCypher\Validation;
+use BlockCypher\Core\BlockCypherConfigManager;
+use BlockCypher\Core\BlockCypherLoggingManager;
 
 /**
  * Class ArgumentGetParamsValidator
@@ -33,5 +35,62 @@ class ArgumentGetParamsValidator
             }
         }
         return true;
+    }
+
+    /**
+     * @param $params
+     * @param $allowedParams
+     * @return array
+     */
+    public static function sanitize($params, $allowedParams)
+    {
+        $notAllowedParams = self::getNotAllowedParams($params, $allowedParams);
+        if (count($notAllowedParams) > 0) {
+            $validationLevel = BlockCypherConfigManager::getInstance()->get('validation.level');
+            foreach ($notAllowedParams as $key => $value) {
+                $validationMessage = "Param {$key} not allowed: It can be a typo in the param name or you should update the PHP SDK library.";
+                switch ($validationLevel) {
+                    case 'log':
+                        // logs the error message to logger only (default)
+                        $logger = BlockCypherLoggingManager::getInstance(__CLASS__);
+                        $logger->warning($validationMessage);
+                        break;
+                    case 'strict':
+                        // throws a php notice message
+                        trigger_error($validationMessage, E_USER_NOTICE);
+                        break;
+                    case 'disable':
+                        // disable the validation
+                        break;
+                }
+            }
+
+            if ($validationLevel == 'strict') {
+                // Do not add not allowed params to the url
+                $params = array_intersect_key($params, $allowedParams);
+                return $params;
+            }
+            return $params;
+        }
+        return $params;
+    }
+
+    /**
+     * Return all params present in $params and not present in $allowedParams
+     *
+     * @param array $params
+     * @param array $allowedParams
+     * @return array
+     */
+    private static function getNotAllowedParams($params, $allowedParams)
+    {
+        $notAllowedParams = array();
+        foreach ($params as $key => $value) {
+            if (!isset($allowedParams[$key])) {
+                $notAllowedParams[$key] = $value;
+            }
+        }
+
+        return $notAllowedParams;
     }
 }

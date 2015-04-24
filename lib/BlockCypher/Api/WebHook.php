@@ -43,8 +43,9 @@ class WebHook extends BlockCypherResourceModel
     {
         ArgumentValidator::validate($webHookId, 'webHookId');
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -52,7 +53,7 @@ class WebHook extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/hooks/$webHookId?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/hooks/$webHookId?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
@@ -77,11 +78,12 @@ class WebHook extends BlockCypherResourceModel
     {
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
-
-        $webHookList = implode(";", $array);
         $allowedParams = array(
             'token' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $webHookList = implode(";", $array);
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -89,7 +91,7 @@ class WebHook extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/hooks/$webHookList?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/hooks/$webHookList?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
@@ -110,10 +112,11 @@ class WebHook extends BlockCypherResourceModel
     public static function getAll($params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array(
             'token' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -121,7 +124,7 @@ class WebHook extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/hooks?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/hooks?" . http_build_query($params),
             "GET",
             $payLoad,
             null,

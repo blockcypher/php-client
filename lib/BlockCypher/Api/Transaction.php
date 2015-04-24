@@ -54,12 +54,13 @@ class Transaction extends BlockCypherResourceModel
     {
         ArgumentValidator::validate($hash, 'hash');
         ArgumentGetParamsValidator::validate($params, 'params');
-
         $allowedParams = array(
             'instart' => 1,
             'outstart' => 1,
             'limit' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -67,7 +68,7 @@ class Transaction extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/txs/$hash?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/txs/$hash?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
@@ -92,13 +93,14 @@ class Transaction extends BlockCypherResourceModel
     {
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
-
-        $transactionList = implode(";", $array);
         $allowedParams = array(
             'instart' => 1,
             'outstart' => 1,
             'limit' => 1,
         );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $transactionList = implode(";", $array);
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
@@ -106,7 +108,7 @@ class Transaction extends BlockCypherResourceModel
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
 
         $json = self::executeCall(
-            "$chainUrlPrefix/txs/$transactionList?" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "$chainUrlPrefix/txs/$transactionList?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
