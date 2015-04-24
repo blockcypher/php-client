@@ -9,7 +9,7 @@ use BlockCypher\Api\Input;
  *
  * @package BlockCypher\Test\Api
  */
-class InputTest extends \PHPUnit_Framework_TestCase
+class InputTest extends ResourceModelTestCase
 {
     // TODO:
     // - add test for unconfirmed transaction with age property

@@ -9,7 +9,7 @@ use BlockCypher\Api\WebHook;
  *
  * @package BlockCypher\Test\Api
  */
-class WebHookTest extends \PHPUnit_Framework_TestCase
+class WebHookTest extends ResourceModelTestCase
 {
     /**
      * Tests for Serialization and Deserialization Issues
@@ -127,6 +127,34 @@ class WebHookTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param WebHook $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                WebHookTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get("webHookId", $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
      * @dataProvider mockProvider
      * @param WebHook $obj
      */
@@ -156,6 +184,36 @@ class WebHookTest extends \PHPUnit_Framework_TestCase
     public static function getObject()
     {
         return new WebHook(self::getJson());
+    }
+
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param WebHook $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetMultipleParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . WebHookTest::getJson() . ']'
+            ));
+
+        $webHookList = array(WebHookTest::getObject()->getId());
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get($webHookList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 
     /**
@@ -198,24 +256,5 @@ class WebHookTest extends \PHPUnit_Framework_TestCase
 
         $result = $obj->delete($mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
-    }
-
-    public function mockProvider()
-    {
-        $obj = self::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->once())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue('/v1/btc/main'));
-
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
     }
 }

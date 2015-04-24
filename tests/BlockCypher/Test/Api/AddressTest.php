@@ -9,7 +9,7 @@ use BlockCypher\Api\Address;
  *
  * @package BlockCypher\Test\Api
  */
-class AddressTest extends \PHPUnit_Framework_TestCase
+class AddressTest extends ResourceModelTestCase
 {
     // TODO: add test for paging
     // http://api.blockcypher.com/v1/btc/main/addrs/1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE?unspentOnly=true&before=300000
@@ -210,6 +210,52 @@ class AddressTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider mockProvider
      * @param Address $obj
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForAddressNull($obj, /** @noinspection PhpDocSignatureInspection */
+                                                          $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                AddressTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get(null, array(), $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param Address $obj
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForEmptyAddress($obj, /** @noinspection PhpDocSignatureInspection */
+                                                           $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                AddressTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get('', array(), $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param Address $obj
      */
     public function testGetWithParams($obj, /** @noinspection PhpDocSignatureInspection */
                                       $mockApiContext)
@@ -232,6 +278,34 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         /** @noinspection PhpParamsInspection */
         $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $params, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
+    }
+
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param Address $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                AddressTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 
     /**
@@ -292,6 +366,36 @@ class AddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param Address $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetMultipleParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . AddressTest::getJson() . ']'
+            ));
+
+        $addressList = Array(AddressTest::getObject()->getAddress());
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get($addressList, $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
      * @dataProvider mockProvider
      * @param Address $obj
      */
@@ -316,24 +420,5 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $result = $obj->getMultiple($addressList, $params, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($result[0], AddressTest::getObject());
-    }
-
-    public function mockProvider()
-    {
-        $obj = self::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->once())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue('/v1/btc/main'));
-
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
     }
 }

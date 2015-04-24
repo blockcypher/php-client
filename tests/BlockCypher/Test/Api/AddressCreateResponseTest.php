@@ -9,7 +9,7 @@ use BlockCypher\Api\AddressCreateResponse;
  *
  * @package BlockCypher\Test\Api
  */
-class AddressCreateResponseTest extends \PHPUnit_Framework_TestCase
+class AddressCreateResponseTest extends ResourceModelTestCase
 {
     /**
      * Gets Object Instance with Json data filled in

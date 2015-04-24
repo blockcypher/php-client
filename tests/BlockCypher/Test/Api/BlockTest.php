@@ -9,7 +9,7 @@ use BlockCypher\Api\Block;
  *
  * @package BlockCypher\Test\Api
  */
-class BlockTest extends \PHPUnit_Framework_TestCase
+class BlockTest extends ResourceModelTestCase
 {
     /**
      * Tests for Serialization and Deserialization Issues
@@ -238,8 +238,37 @@ class BlockTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param Block $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                BlockTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get("293000", $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
      * @dataProvider mockProvider
      * @param Block $obj
+     * @param $mockApiContext
      */
     public function testGetMultiple($obj, $mockApiContext)
     {
@@ -255,6 +284,7 @@ class BlockTest extends \PHPUnit_Framework_TestCase
 
         $blockList = Array(BlockTest::getObject()->getHeight());
 
+        /** @noinspection PhpParamsInspection */
         $result = $obj->getMultiple($blockList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($result[0], BlockTest::getObject());
@@ -267,6 +297,36 @@ class BlockTest extends \PHPUnit_Framework_TestCase
     public static function getObject()
     {
         return new Block(self::getJson());
+    }
+
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param Block $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetMultipleParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . BlockTest::getJson() . ']'
+            ));
+
+        $blockList = Array(BlockTest::getObject()->getHeight());
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get($blockList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 
     /**
@@ -294,24 +354,5 @@ class BlockTest extends \PHPUnit_Framework_TestCase
         $result = $obj->getMultiple($blockList, $params, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($result[0], BlockTest::getObject());
-    }
-
-    public function mockProvider()
-    {
-        $obj = self::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->once())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue('/v1/btc/main'));
-
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
     }
 }

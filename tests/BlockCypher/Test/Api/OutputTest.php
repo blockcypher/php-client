@@ -9,7 +9,7 @@ use BlockCypher\Api\Output;
  *
  * @package BlockCypher\Test\Api
  */
-class OutputTest extends \PHPUnit_Framework_TestCase
+class OutputTest extends ResourceModelTestCase
 {
     /**
      * Gets Object Instance with Json data filled in

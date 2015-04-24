@@ -9,7 +9,7 @@ use BlockCypher\Api\FullAddress;
  *
  * @package BlockCypher\Test\Api
  */
-class FullAddressTest extends \PHPUnit_Framework_TestCase
+class FullAddressTest extends ResourceModelTestCase
 {
     /**
      * Tests for Serialization and Deserialization Issues
@@ -535,6 +535,34 @@ class FullAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param FullAddress $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                FullAddressTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
      * @dataProvider mockProvider
      * @param FullAddress $obj
      */
@@ -593,22 +621,33 @@ class FullAddressTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($result[0], FullAddressTest::getObject());
     }
 
-    public function mockProvider()
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param FullAddress $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetMultipleParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
     {
-        $obj = self::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
             ->getMock();
 
-        $mockApiContext->expects($this->once())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue('/v1/btc/main'));
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . FullAddressTest::getJson() . ']'
+            ));
 
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
+        $fullAddressList = Array(FullAddressTest::getObject()->getAddress());
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get($fullAddressList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 }

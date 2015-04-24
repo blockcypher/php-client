@@ -5,8 +5,9 @@ namespace BlockCypher\Api;
 use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
+use BlockCypher\Validation\ArgumentArrayValidator;
+use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
-use BlockCypher\Validation\ArrayValidator;
 
 /**
  * Class Chain
@@ -52,7 +53,7 @@ class Transaction extends BlockCypherResourceModel
     public static function get($hash, $params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($hash, 'hash');
-        ArgumentValidator::validate($params, 'params');
+        ArgumentGetParamsValidator::validate($params, 'params');
 
         $allowedParams = array(
             'instart' => 1,
@@ -89,11 +90,8 @@ class Transaction extends BlockCypherResourceModel
      */
     public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
-        ArrayValidator::validate($array, 'array');
-        foreach ($array as $transaction) {
-            ArgumentValidator::validate($transaction, 'transaction');
-        }
-        ArgumentValidator::validate($params, 'params');
+        ArgumentArrayValidator::validate($array, 'array');
+        ArgumentGetParamsValidator::validate($params, 'params');
 
         $transactionList = implode(";", $array);
         $allowedParams = array(

@@ -9,7 +9,7 @@ use BlockCypher\Api\Links;
  *
  * @package BlockCypher\Test\Api
  */
-class LinksTest extends \PHPUnit_Framework_TestCase
+class LinksTest extends ResourceModelTestCase
 {
     /**
      * Gets Object Instance with Json data filled in

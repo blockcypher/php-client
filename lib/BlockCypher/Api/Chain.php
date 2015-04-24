@@ -5,6 +5,7 @@ namespace BlockCypher\Api;
 use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
+use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
 /**
@@ -38,8 +39,7 @@ class Chain extends BlockCypherResourceModel
     public static function get($name, $params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($name, 'name');
-        ArgumentValidator::validate($params, 'params');
-        // TODO: validate chain name?
+        ArgumentGetParamsValidator::validate($params, 'params');
 
         $allowedParams = array();
         $payLoad = "";

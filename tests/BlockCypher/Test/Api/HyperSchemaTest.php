@@ -9,7 +9,7 @@ use BlockCypher\Api\HyperSchema;
  *
  * @package BlockCypher\Test\Api
  */
-class HyperSchemaTest extends \PHPUnit_Framework_TestCase
+class HyperSchemaTest extends ResourceModelTestCase
 {
     /**
      * Gets Object Instance with Json data filled in
@@ -72,5 +72,4 @@ class HyperSchemaTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($obj->getPathStart(), "TestSample");
         $this->assertEquals($obj->getMediaType(), "TestSample");
     }
-
 }

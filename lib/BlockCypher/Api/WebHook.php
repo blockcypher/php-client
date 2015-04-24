@@ -5,8 +5,9 @@ namespace BlockCypher\Api;
 use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
+use BlockCypher\Validation\ArgumentArrayValidator;
+use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
-use BlockCypher\Validation\ArrayValidator;
 use BlockCypher\Validation\UrlValidator;
 
 /**
@@ -40,8 +41,8 @@ class WebHook extends BlockCypherResourceModel
      */
     public static function get($webHookId, $params = array(), $apiContext = null, $restCall = null)
     {
-        ArgumentValidator::validate($webHookId, 'address');
-        ArgumentValidator::validate($params, 'params');
+        ArgumentValidator::validate($webHookId, 'webHookId');
+        ArgumentGetParamsValidator::validate($params, 'params');
 
         $allowedParams = array();
         $payLoad = "";
@@ -74,11 +75,8 @@ class WebHook extends BlockCypherResourceModel
      */
     public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
-        ArrayValidator::validate($array, 'array');
-        foreach ($array as $webHook) {
-            ArgumentValidator::validate($webHook, 'webHook');
-        }
-        ArgumentValidator::validate($params, 'params');
+        ArgumentArrayValidator::validate($array, 'array');
+        ArgumentGetParamsValidator::validate($params, 'params');
 
         $webHookList = implode(";", $array);
         $allowedParams = array(
@@ -111,7 +109,7 @@ class WebHook extends BlockCypherResourceModel
      */
     public static function getAll($params = array(), $apiContext = null, $restCall = null)
     {
-        ArgumentValidator::validate($params, 'params');
+        ArgumentGetParamsValidator::validate($params, 'params');
 
         $allowedParams = array(
             'token' => 1,

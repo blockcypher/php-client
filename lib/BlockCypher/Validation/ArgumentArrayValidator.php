@@ -3,11 +3,11 @@
 namespace BlockCypher\Validation;
 
 /**
- * Class ArrayValidator
+ * Class ArgumentArrayValidator
  *
  * @package BlockCypher\Validation
  */
-class ArrayValidator
+class ArgumentArrayValidator
 {
 
     /**
@@ -22,6 +22,15 @@ class ArrayValidator
         if (!is_array($argument)) {
             throw new \InvalidArgumentException("$argumentName is not an array");
 
+        }
+        foreach ($argument as $item) {
+            if ($item === null) {
+                // Error if Object Null
+                throw new \InvalidArgumentException("$argumentName item cannot be null");
+            } else if (gettype($item) == 'string' && trim($item) == '') {
+                // Error if String Empty
+                throw new \InvalidArgumentException("$argumentName item string cannot be empty");
+            }
         }
         return true;
     }

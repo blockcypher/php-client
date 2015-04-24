@@ -9,7 +9,7 @@ use BlockCypher\Api\Txref;
  *
  * @package BlockCypher\Test\Api
  */
-class TxrefTest extends \PHPUnit_Framework_TestCase
+class TxrefTest extends ResourceModelTestCase
 {
     // TODO:
     // - add test for double spend case (double_of, receive_count)

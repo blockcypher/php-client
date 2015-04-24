@@ -9,7 +9,7 @@ use BlockCypher\Api\AddressBalance;
  *
  * @package BlockCypher\Test\Api
  */
-class AddressBalanceTest extends \PHPUnit_Framework_TestCase
+class AddressBalanceTest extends ResourceModelTestCase
 {
     /**
      * Tests for Serialization and Deserialization Issues
@@ -98,6 +98,34 @@ class AddressBalanceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param AddressBalance $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                AddressBalanceTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
      * @dataProvider mockProvider
      * @param AddressBalance $obj
      */
@@ -129,22 +157,33 @@ class AddressBalanceTest extends \PHPUnit_Framework_TestCase
         return new AddressBalance(self::getJson());
     }
 
-    public function mockProvider()
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param AddressBalance $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetMultipleParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
     {
-        $obj = self::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
             ->getMock();
 
-        $mockApiContext->expects($this->once())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue('/v1/btc/main'));
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . AddressBalanceTest::getJson() . ']'
+            ));
 
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
+        $addressBalanceList = Array(AddressBalanceTest::getObject()->getAddress());
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->getMultiple($addressBalanceList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 }

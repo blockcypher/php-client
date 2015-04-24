@@ -9,30 +9,15 @@ use BlockCypher\Api\Chain;
  *
  * @package BlockCypher\Test\Api
  */
-class ChainTest extends \PHPUnit_Framework_TestCase
+class ChainTest extends ResourceModelTestCase
 {
     /**
-     * Tests for Serialization and Deserialization Issues
+     * Gets Object Instance with Json data filled in
      * @return Chain
      */
-    public function testSerializationDeserialization()
+    public static function getObject()
     {
-        $obj = new Chain(self::getJson());
-
-        $this->assertNotNull($obj);
-        $this->assertNotNull($obj->getName());
-        $this->assertNotNull($obj->getHeight());
-        $this->assertNotNull($obj->getHash());
-        $this->assertNotNull($obj->getTime());
-        $this->assertNotNull($obj->getLatestUrl());
-        $this->assertNotNull($obj->getPreviousHash());
-        $this->assertNotNull($obj->getPreviousUrl());
-        $this->assertNotNull($obj->getPeerCount());
-        $this->assertNotNull($obj->getUnconfirmedCount());
-
-        $this->assertEquals(self::getJson(), $obj->toJson());
-
-        return $obj;
+        return new Chain(self::getJson());
     }
 
     /**
@@ -56,6 +41,30 @@ class ChainTest extends \PHPUnit_Framework_TestCase
         */
 
         return '{"name":"BTC.main","height":351963,"hash":"0000000000000000004ffa5650fc8148beb6f9f21bd2a2db115376ecbcb61f21","time":"2015-04-13T15:38:39.568144246Z","latest_url":"https://api.blockcypher.com/v1/btc/main/blocks/0000000000000000004ffa5650fc8148beb6f9f21bd2a2db115376ecbcb61f21","previous_hash":"00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab","previous_url":"https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab","peer_count":257,"unconfirmed_count":3731}';
+    }
+
+    /**
+     * Tests for Serialization and Deserialization Issues
+     * @return Chain
+     */
+    public function testSerializationDeserialization()
+    {
+        $obj = new Chain(self::getJson());
+
+        $this->assertNotNull($obj);
+        $this->assertNotNull($obj->getName());
+        $this->assertNotNull($obj->getHeight());
+        $this->assertNotNull($obj->getHash());
+        $this->assertNotNull($obj->getTime());
+        $this->assertNotNull($obj->getLatestUrl());
+        $this->assertNotNull($obj->getPreviousHash());
+        $this->assertNotNull($obj->getPreviousUrl());
+        $this->assertNotNull($obj->getPeerCount());
+        $this->assertNotNull($obj->getUnconfirmedCount());
+
+        $this->assertEquals(self::getJson(), $obj->toJson());
+
+        return $obj;
     }
 
     /**
@@ -95,31 +104,31 @@ class ChainTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($result);
     }
 
-    public function mockProvider()
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param Chain $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
     {
-        $obj = self::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
-            ->setMethods(array('getVersion'))
             ->getMock();
 
-        $mockApiContext->expects($this->once())
-            ->method('getVersion')
-            ->will($this->returnValue('v1'));
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                ChainTest::getJson()
+            ));
 
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
-    }
-
-    /**
-     * Gets Object Instance with Json data filled in
-     * @return Chain
-     */
-    public static function getObject()
-    {
-        return new Chain(self::getJson());
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get("BTC.main", $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 }

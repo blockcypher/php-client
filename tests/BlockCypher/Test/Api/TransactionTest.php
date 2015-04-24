@@ -9,7 +9,7 @@ use BlockCypher\Api\Transaction;
  *
  * @package BlockCypher\Test\Api
  */
-class TransactionTest extends \PHPUnit_Framework_TestCase
+class TransactionTest extends ResourceModelTestCase
 {
     // TODO:
     // - add test with hex property. Only included when the includeHex URL property is set to true.
@@ -248,6 +248,34 @@ class TransactionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param Transaction $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                TransactionTest::getJson()
+            ));
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get("f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449", $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
      * @dataProvider mockProvider
      * @param Transaction $obj
      */
@@ -307,22 +335,33 @@ class TransactionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($result[0], TransactionTest::getObject());
     }
 
-    public function mockProvider()
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param Transaction $obj
+     * @param $mockApiContext
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetMultipleParamsValidationForParams(
+        $obj, /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext,
+        $params
+    )
     {
-        $obj = self::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
             ->getMock();
 
-        $mockApiContext->expects($this->once())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue('/v1/btc/main'));
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . TransactionTest::getJson() . ']'
+            ));
 
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
+        $transactionList = Array(AddressTest::getObject()->getAddress());
+
+        /** @noinspection PhpUndefinedVariableInspection */
+        /** @noinspection PhpParamsInspection */
+        $obj->get($transactionList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 }
