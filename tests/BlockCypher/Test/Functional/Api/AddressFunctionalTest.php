@@ -149,13 +149,18 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
         $request = $this->operation['response']['body'];
         $address = new Address($request);
 
-        $result = Address::get($address->getAddress(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $params = array(
+            'before' => 300000,
+        );
+
+        $result = Address::get($address->getAddress(), $params, $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertInstanceOf('\BlockCypher\Api\Address', $result);
         // Assert only immutable values.
         $this->assertEquals($address->getAddress(), $result->getAddress());
         $this->assertEquals($address->getTxUrl(), $result->getTxUrl());
         $this->assertEquals(count($address->getTxrefs()), count($result->getTxrefs()));
+
         return $result;
     }
 
@@ -167,7 +172,11 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
         $request = $this->operation['response']['body'];
         $address = new Address($request);
 
-        $result = Address::get($address->getAddress(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $params = array(
+            'unspentOnly' => 'true', // NOTICE: string type not boolean
+        );
+
+        $result = Address::get($address->getAddress(), $params, $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertInstanceOf('\BlockCypher\Api\Address', $result);
         // Assert only immutable values.

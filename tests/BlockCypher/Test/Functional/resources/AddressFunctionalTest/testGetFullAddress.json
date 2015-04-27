@@ -21,7 +21,7 @@
   "request": {
     "headers": {},
     "body": {},
-    "path": "/v1/btc/main/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD/full",
+    "path": "/v1/btc/main/addrs/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD/full",
     "method": "GET"
   },
   "response": {

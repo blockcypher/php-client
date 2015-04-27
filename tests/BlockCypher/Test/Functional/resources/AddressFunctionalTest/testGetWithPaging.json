@@ -21,7 +21,7 @@
   "request": {
     "headers": {},
     "body": {},
-    "path": "/v1/btc/main/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD?before=300000",
+    "path": "/v1/btc/main/addrs/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD?before=300000",
     "method": "GET"
   },
   "response": {
@@ -44,7 +44,7 @@
           "tx_output_n": 0,
           "value": 3500000,
           "spent": false,
-          "confirmations": 59530,
+          "confirmations": 61344,
           "confirmed": "2014-03-26T17:08:04Z",
           "double_spend": false
         },
@@ -55,7 +55,7 @@
           "tx_output_n": 0,
           "value": 100000,
           "spent": false,
-          "confirmations": 59612,
+          "confirmations": 61426,
           "confirmed": "2014-03-26T04:18:38Z",
           "double_spend": false
         },
@@ -66,7 +66,7 @@
           "tx_output_n": 0,
           "value": 500000,
           "spent": false,
-          "confirmations": 59662,
+          "confirmations": 61476,
           "confirmed": "2014-03-25T21:32:08Z",
           "double_spend": false
         },
@@ -77,7 +77,7 @@
           "tx_output_n": 0,
           "value": 171116,
           "spent": false,
-          "confirmations": 59795,
+          "confirmations": 61609,
           "confirmed": "2014-03-25T00:07:31Z",
           "double_spend": false
         }
