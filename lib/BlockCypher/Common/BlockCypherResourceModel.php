@@ -10,7 +10,6 @@ use BlockCypher\Transport\BlockCypherRestCall;
  * Class BlockCypherResourceModel
  * An Executable BlockCypherModel Class
  *
- * @property \BlockCypher\Api\Links[] links
  * @package BlockCypher\Common
  */
 class BlockCypherResourceModel extends BlockCypherModel implements IResource
@@ -44,68 +43,5 @@ class BlockCypherResourceModel extends BlockCypherModel implements IResource
         //Make the execution call
         $json = $restCall->execute($handlers, $url, $method, $payLoad, $headers);
         return $json;
-    }
-
-    public function getLink($rel)
-    {
-        foreach ($this->links as $link) {
-            if ($link->getRel() == $rel) {
-                return $link->getHref();
-            }
-        }
-        return null;
-    }
-
-    /**
-     * Append Links to the list.
-     *
-     * @param \BlockCypher\Api\Links $links
-     * @return $this
-     */
-    public function addLink($links)
-    {
-        if (!$this->getLinks()) {
-            return $this->setLinks(array($links));
-        } else {
-            return $this->setLinks(
-                array_merge($this->getLinks(), array($links))
-            );
-        }
-    }
-
-    /**
-     * Gets Links
-     *
-     * @return \BlockCypher\Api\Links[]
-     */
-    public function getLinks()
-    {
-        return $this->links;
-    }
-
-    /**
-     * Sets Links
-     *
-     * @param \BlockCypher\Api\Links[] $links
-     *
-     * @return $this
-     */
-    public function setLinks($links)
-    {
-        $this->links = $links;
-        return $this;
-    }
-
-    /**
-     * Remove Links from the list.
-     *
-     * @param \BlockCypher\Api\Links $links
-     * @return $this
-     */
-    public function removeLink($links)
-    {
-        return $this->setLinks(
-            array_diff($this->getLinks(), array($links))
-        );
     }
 }

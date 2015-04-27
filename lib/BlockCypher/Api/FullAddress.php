@@ -26,7 +26,7 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int unconfirmed_n_tx
  * @property int final_n_tx
  * @property \BlockCypher\Api\Transaction[] txs
- * @property \BlockCypher\Api\Links tx_url
+ * @property string tx_url
  */
 class FullAddress extends BlockCypherResourceModel
 {
@@ -389,7 +389,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
      *
-     * @return Links
+     * @return string
      */
     public function getTxUrl()
     {
@@ -399,7 +399,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
      *
-     * @param Links $tx_url
+     * @param string $tx_url
      * @return $this
      */
     public function setTxUrl($tx_url)

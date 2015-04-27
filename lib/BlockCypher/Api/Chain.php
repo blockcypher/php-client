@@ -19,9 +19,9 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int height
  * @property string hash
  * @property string time
- * @property Links latest_url
+ * @property string latest_url
  * @property string previous_hash
- * @property Links previous_url
+ * @property string previous_url
  * @property int peer_count
  * @property int unconfirmed_count
  */
@@ -122,7 +122,7 @@ class Chain extends BlockCypherResourceModel
     /**
      * Hash of the latest block in the chain.
      *
-     * @return Links
+     * @return string
      */
     public function getLatestUrl()
     {
@@ -132,7 +132,7 @@ class Chain extends BlockCypherResourceModel
     /**
      * Hash of the latest block in the chain.
      *
-     * @param Links $latest_url
+     * @param string $latest_url
      * @return $this
      */
     public function setLatestUrl($latest_url)
@@ -166,7 +166,7 @@ class Chain extends BlockCypherResourceModel
     /**
      * URL to retrieve information on the second to last block in the chain.
      *
-     * @return Links
+     * @return string
      */
     public function getPreviousUrl()
     {
@@ -174,7 +174,7 @@ class Chain extends BlockCypherResourceModel
     }
 
     /**
-     * @param Links $previous_url
+     * @param string $previous_url
      * @return $this
      */
     public function setPreviousUrl($previous_url)

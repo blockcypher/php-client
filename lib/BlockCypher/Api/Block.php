@@ -31,9 +31,9 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property string mrkl_root
  * @property string[] txids
  * @property int depth
- * @property Links prev_block_url
- * @property Links tx_url
- * @property Links next_txids
+ * @property string prev_block_url
+ * @property string tx_url
+ * @property string next_txids
  */
 class Block extends BlockCypherResourceModel
 {
@@ -421,7 +421,7 @@ class Block extends BlockCypherResourceModel
     /**
      * URL for the previous block's details.
      *
-     * @return Links
+     * @return string
      */
     public function getPrevBlockUrl()
     {
@@ -431,7 +431,7 @@ class Block extends BlockCypherResourceModel
     /**
      * URL for the previous block's details.
      *
-     * @param Links $prev_block_url
+     * @param string $prev_block_url
      * @return $this
      */
     public function setPrevBlockUrl($prev_block_url)
@@ -443,7 +443,7 @@ class Block extends BlockCypherResourceModel
     /**
      * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
      *
-     * @return Links
+     * @return string
      */
     public function getTxUrl()
     {
@@ -453,7 +453,7 @@ class Block extends BlockCypherResourceModel
     /**
      * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
      *
-     * @param Links $tx_url
+     * @param string $tx_url
      * @return $this
      */
     public function setTxUrl($tx_url)
@@ -465,7 +465,7 @@ class Block extends BlockCypherResourceModel
     /**
      * URL to get the same block information with the next 20 transactions.
      *
-     * @return Links
+     * @return string
      */
     public function getNextTxids()
     {
@@ -475,7 +475,7 @@ class Block extends BlockCypherResourceModel
     /**
      * URL to get the same block information with the next 20 transactions.
      *
-     * @param Links $next_txids
+     * @param string $next_txids
      * @return $this
      */
     public function setNextTxids($next_txids)
