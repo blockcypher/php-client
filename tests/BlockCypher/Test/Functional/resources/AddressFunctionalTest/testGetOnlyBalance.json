@@ -1,0 +1,42 @@
+{
+  "description": "Obtain the address balance resource for the given address.",
+  "title": "Get the address balance resource",
+  "runnable": true,
+  "operationId": "address.get_only_balance",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/addrs/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD/balance",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": {
+      "address": "1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD",
+      "total_received": 4433416,
+      "total_sent": 0,
+      "balance": 4433416,
+      "unconfirmed_balance": 0,
+      "final_balance": 4433416,
+      "n_tx": 7,
+      "unconfirmed_n_tx": 0,
+      "final_n_tx": 7
+    },
+    "status": "200 OK"
+  }
+}

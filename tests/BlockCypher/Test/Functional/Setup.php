@@ -5,6 +5,7 @@ namespace BlockCypher\Test\Functional;
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Core\BlockCypherCredentialManager;
 use BlockCypher\Rest\ApiContext;
+use BlockCypher\Validation\JsonValidator;
 
 class Setup
 {
@@ -45,6 +46,7 @@ class Setup
         if (self::$mode != 'sandbox') {
 
             // Mock BlockCypherRest Caller if mode set to mock
+            /** @noinspection PhpUndefinedFieldInspection */
             $test->mockBlockCypherRestCall = $test->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
                 ->disableOriginalConstructor()
                 ->getMock();
@@ -56,5 +58,16 @@ class Setup
                     $test->response
                 ));
         }
+    }
+
+    /**
+     * Wrapper around json_decode to validate string first.
+     * @param $data
+     * @return mixed
+     */
+    public static function jsonDecode($data)
+    {
+        JsonValidator::validate($data);
+        return json_decode($data, true);
     }
 }

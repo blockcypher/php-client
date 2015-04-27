@@ -1,0 +1,39 @@
+{
+  "description": "Create an address",
+  "title": "Create an address",
+  "runnable": true,
+  "operationId": "address.create",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "path": "/v1/oauth/token",
+      "clientId": "",
+      "clientSecret": ""
+    }
+  },
+  "request": {
+    "path": "/v1/btc/main/addrs",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": ""
+  },
+  "response": {
+    "status": "201",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "private": "1f98b3574696c4010a4c28b4901df302bf2796ecc2d8dab2d9751922b1b6f2da",
+      "public": "036e322ed24cf9decc2efec7421171b5db8af01f95b9310732c5cd638ff3e6d60d",
+      "address": "15CnTSLRaD5B3estrseU3mHbUvYQW4Ag6D",
+      "wif": "KxH8Wf63wsgFD3LSryPqNvfNhHtB4wSs49Wcm3EceWqC9duSkYCs"
+    }
+  }
+}
