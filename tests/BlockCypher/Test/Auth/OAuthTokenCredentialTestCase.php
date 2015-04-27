@@ -9,9 +9,13 @@ use BlockCypher\Rest\ApiContext;
 use BlockCypher\Test\Cache\AuthorizationCacheTest;
 use BlockCypher\Test\Constants;
 
+/**
+ * NOTICE: Test ignored until OAuth authentication is supported by the API.
+ * Class OAuthTokenCredentialTest
+ * @package BlockCypher\Test\Auth
+ */
 class OAuthTokenCredentialTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @group integration
      */
