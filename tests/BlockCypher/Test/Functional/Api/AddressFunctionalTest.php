@@ -53,10 +53,10 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
 
         $result = Address::get($address->getAddress(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertEquals($address->getAddress(), $result->getAddress());
-        // TODO: all fields should be equal except some values as confirmations
         // Assert only immutable values.
-        //$this->assertEquals($address, $result, "", 0, 10, true);
+        $this->assertEquals($address->getAddress(), $result->getAddress());
+        $this->assertEquals($address->getTxUrl(), $result->getTxUrl());
+        $this->assertEquals($address->getTxrefs()[0]->getTxHash(), $result->getTxrefs()[0]->getTxHash());
         return $result;
     }
 }
