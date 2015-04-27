@@ -1,6 +1,6 @@
 <?php
 
-namespace sample\Test\Functional\addresses;
+namespace sample\Test\Functional\fullAddresses;
 
 use sample\Test\Functional\WebTestCase;
 
