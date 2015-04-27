@@ -1,4 +1,5 @@
 <?php
+
 namespace BlockCypher\Test;
 
 class Constants
