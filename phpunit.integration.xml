@@ -2,7 +2,7 @@
 <phpunit bootstrap="./tests/bootstrap.php"
          colors="true"
          processIsolation="false"
-         stopOnFailure="false"
+         stopOnFailure="true"
          syntaxCheck="false"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
