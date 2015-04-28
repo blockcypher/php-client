@@ -59,7 +59,7 @@ class FullAddressFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return array
+     * @return FullAddress[]
      */
     public function testGetMultiple()
     {

@@ -59,7 +59,7 @@ class AddressBalanceFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return array
+     * @return AddressBalance[]
      */
     public function testGetMultiple()
     {

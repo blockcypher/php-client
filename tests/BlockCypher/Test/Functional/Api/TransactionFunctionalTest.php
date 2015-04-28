@@ -61,7 +61,7 @@ class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return array
+     * @return Transaction[]
      */
     public function testGetMultiple()
     {

@@ -79,7 +79,7 @@ class BlockFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return array
+     * @return Block[]
      */
     public function testGetMultiple()
     {

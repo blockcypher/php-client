@@ -102,7 +102,7 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return array
+     * @return Address[]
      */
     public function testGetMultiple()
     {
