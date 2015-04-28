@@ -1,0 +1,145 @@
+{
+  "description": "Obtain multiple transaction resources for the given transactions.",
+  "title": "Get multiple transaction resources",
+  "runnable": true,
+  "operationId": "transaction.get_multiple",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/txs/950d61ab2f51ea877e6183c8210de1677d78e16abfd4103990c3703f17de13a7;6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": [
+      {
+        "block_hash": "00000000000000001112aaeb1d5a4ca6210c5f816ec4ada0d97e5bc782c88d4a",
+        "block_height": 327237,
+        "hash": "950d61ab2f51ea877e6183c8210de1677d78e16abfd4103990c3703f17de13a7",
+        "addresses": [
+          "13FpT8f87GBB4VMDfmgXz5F9Z1xRJgTWZL",
+          "1LGa54kUyKGp4pTE9Kh3YXPWzhGqw5rDDa"
+        ],
+        "total": 299990000,
+        "fees": 10000,
+        "size": 226,
+        "preference": "medium",
+        "relayed_by": "",
+        "confirmed": "2014-10-27T17:27:24Z",
+        "received": "2014-10-27T17:27:24Z",
+        "ver": 1,
+        "lock_time": 0,
+        "double_spend": false,
+        "vin_sz": 1,
+        "vout_sz": 2,
+        "confirmations": 26839,
+        "confidence": 1,
+        "inputs": [
+          {
+            "prev_hash": "9fc0e529507af9cfe7938ae2abd330fec2f566c36bca8fda51976f8a711b57ee",
+            "output_index": 0,
+            "script": "48304502207e1f928fb6c80df4d3b5117a0194d71964214ef8ff067da033dc91f394a9287b022100de085c670e4de96fc55066aca800fa3b655b29bad07d13460e64703bda95ca5a0121022807895e689c9bef4b3f5ea5ef8b6629a733252102151fb71ae4c1769afc0756",
+            "output_value": 300000000,
+            "sequence": 4294967295,
+            "addresses": [
+              "13FpT8f87GBB4VMDfmgXz5F9Z1xRJgTWZL"
+            ],
+            "script_type": "pay-to-pubkey-hash"
+          }
+        ],
+        "outputs": [
+          {
+            "value": 10562438,
+            "script": "76a914d35c3c1de80de7c1aa6ce04a626a8530029712c688ac",
+            "spent_by": "14541be485dd89364093446c2fd46f065df418a2f187ec0e00c4a35831ea8a9a",
+            "addresses": [
+              "1LGa54kUyKGp4pTE9Kh3YXPWzhGqw5rDDa"
+            ],
+            "script_type": "pay-to-pubkey-hash"
+          },
+          {
+            "value": 289427562,
+            "script": "76a91418bdaf4c59d1214df3dbbaff7f27d8d810aaba2588ac",
+            "spent_by": "8126818c4e839a2cf1a32caa5284e9d43d56a1ab19e8c6a98095f2af018e175e",
+            "addresses": [
+              "13FpT8f87GBB4VMDfmgXz5F9Z1xRJgTWZL"
+            ],
+            "script_type": "pay-to-pubkey-hash"
+          }
+        ]
+      },
+      {
+        "block_hash": "00000000000000000ef849590ba11ab2931a3919812f12188e56bea3156f4625",
+        "block_height": 335593,
+        "hash": "6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780",
+        "addresses": [
+          "17zDATFzik8BgsKrKG1NXJJw3HH8CTQdHH",
+          "1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV"
+        ],
+        "total": 187458995,
+        "fees": 10000,
+        "size": 227,
+        "preference": "medium",
+        "relayed_by": "",
+        "confirmed": "2014-12-23T22:27:25Z",
+        "received": "2014-12-23T22:27:25Z",
+        "ver": 1,
+        "lock_time": 0,
+        "double_spend": false,
+        "vin_sz": 1,
+        "vout_sz": 2,
+        "confirmations": 18483,
+        "confidence": 1,
+        "inputs": [
+          {
+            "prev_hash": "21981f2c80e0d77dc348010ae281c3ab92c5a8e6268cc993aabe90e2c53565aa",
+            "output_index": 1,
+            "script": "493046022100b8eaa4035785645286e4351fe4322b34d743af3584097545e91cfea83f093396022100f5b5b203745e32e8453fbbe965c6284a008dc3a4c730297fdfdb2c2b46a801b9012103a4935fa9aa164ab5d31a7e06eb421e16e0448f057fe4b6fec64e66d8d291c2fb",
+            "output_value": 187468995,
+            "sequence": 4294967295,
+            "addresses": [
+              "1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV"
+            ],
+            "script_type": "pay-to-pubkey-hash"
+          }
+        ],
+        "outputs": [
+          {
+            "value": 146116568,
+            "script": "76a9144ca29e1f755136b3e0b36924e823ec1e1d1dfc2b88ac",
+            "spent_by": "3ec56e36f90223dba9f3aa469631f3b6b54d396007c40d633e62674b0faf751c",
+            "addresses": [
+              "17zDATFzik8BgsKrKG1NXJJw3HH8CTQdHH"
+            ],
+            "script_type": "pay-to-pubkey-hash"
+          },
+          {
+            "value": 41342427,
+            "script": "76a914bea958ad300b1968c41889f8907e9082392d257888ac",
+            "spent_by": "e0321b09fd818bc9e43ba817373fcfe7a8221b72e7cfcf20da839ba5a1be025a",
+            "addresses": [
+              "1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV"
+            ],
+            "script_type": "pay-to-pubkey-hash"
+          }
+        ]
+      }
+    ],
+    "status": "200 OK"
+  }
+}

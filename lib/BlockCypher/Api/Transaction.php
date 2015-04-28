@@ -87,7 +87,7 @@ class Transaction extends BlockCypherResourceModel
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Transaction
+     * @return Transaction[]
      */
     public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {

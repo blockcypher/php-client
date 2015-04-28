@@ -1,0 +1,72 @@
+{
+  "description": "Obtain the transaction resource for the given transaction paging transactions inputs and outputs.",
+  "title": "Get a transaction resource paging transactions inputs and outputs",
+  "runnable": true,
+  "operationId": "address.get_with_paging",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=1&outstart=1&limit=1",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": {
+      "block_hash": "0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328",
+      "block_height": 293000,
+      "hash": "f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449",
+      "addresses": [
+        "13XXaBufpMvqRqLkyDty1AXqueZHVe6iyy",
+        "19YtzZdcfs1V2ZCgyRWo8i2wLT8ND1Tu4L",
+        "1BNiazBzCxJacAKo2yL83Wq1VJ18AYzNHy",
+        "1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq",
+        "1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"
+      ],
+      "total": 70320221545,
+      "fees": 0,
+      "size": 636,
+      "preference": "low",
+      "relayed_by": "",
+      "confirmed": "2014-03-29T01:29:19Z",
+      "received": "2014-03-29T01:29:19Z",
+      "ver": 1,
+      "lock_time": 0,
+      "double_spend": false,
+      "vin_sz": 4,
+      "vout_sz": 1,
+      "confirmations": 61077,
+      "confidence": 1,
+      "inputs": [
+        {
+          "prev_hash": "f6966bb3d3ba0eb97fd11b223fb13c793c0b4a1b3deb575e8ae38d666c1d00d9",
+          "output_index": 36,
+          "script": "48304502210086de855e03008abcc49335c775973eab9ace2e16c3bfe6536218c1d029287fdb0220129ced657870af63f61cdd4b941996f9a243d1f306e774fc9c5f3dea0af8d581012103cbe40d1d790799a6494c07f844eaf05b4c6deab0b9dee2ee45c8decead12c5cd",
+          "output_value": 10061545,
+          "sequence": 4294967295,
+          "addresses": [
+            "19YtzZdcfs1V2ZCgyRWo8i2wLT8ND1Tu4L"
+          ],
+          "script_type": "pay-to-pubkey-hash"
+        }
+      ],
+      "outputs": [],
+      "next_inputs": "https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=2\u0026outstart=1\u0026limit=1"
+    },
+    "status": "200 OK"
+  }
+}
