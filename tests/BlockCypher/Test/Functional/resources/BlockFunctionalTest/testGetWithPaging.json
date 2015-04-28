@@ -1,8 +1,8 @@
 {
-  "description": "Obtain the address resource for the given address paging transactions refs.",
-  "title": "Get an address resource paging transactions refs",
+  "description": "Obtain the block resource for the given block paging transactions txids.",
+  "title": "Get a block resource paging transactions ids",
   "runnable": true,
-  "operationId": "address.get_with_paging",
+  "operationId": "block.get_with_paging",
   "user": {
     "scopes": []
   },

@@ -1,8 +1,8 @@
 {
-  "description": "Obtain multiple address resources for the given addresses.",
-  "title": "Get multiple address resources",
+  "description": "Obtain multiple block resources for the given blocks.",
+  "title": "Get multiple block resources",
   "runnable": true,
-  "operationId": "address.get_multiple",
+  "operationId": "block.get_multiple",
   "user": {
     "scopes": []
   },
