@@ -1,0 +1,53 @@
+{
+  "description": "Obtain the address resource for the given address paging transactions refs.",
+  "title": "Get an address resource paging transactions refs",
+  "runnable": true,
+  "operationId": "address.get_with_paging",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/blocks/0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328?txstart=1&limit=1",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": {
+      "hash": "0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328",
+      "height": 293000,
+      "chain": "BTC.main",
+      "total": 288801092067,
+      "fees": 6635337,
+      "ver": 2,
+      "time": "2014-03-29T01:29:19Z",
+      "received_time": "2014-12-04T02:52:15.827Z",
+      "bits": 419486617,
+      "nonce": 704197304,
+      "n_tx": 373,
+      "prev_block": "0000000000000000b358b3b54788547080f49ed52392c2ed32a241951e2c9d5f",
+      "mrkl_root": "5edf6a7e92e65d32843a79227042c215b875675fb92ff9613c90d6964fb069cd",
+      "txids": [
+        "a90d9bc04a4e6be53e0ddc47b043625a0bdc849ef3bc05f551bc05336de3a87c"
+      ],
+      "depth": 61069,
+      "prev_block_url": "https://api.blockcypher.com/v1/btc/main/blocks/0000000000000000b358b3b54788547080f49ed52392c2ed32a241951e2c9d5f",
+      "tx_url": "https://api.blockcypher.com/v1/btc/main/txs/",
+      "next_txids": "https://api.blockcypher.com/v1/btc/main/blocks/0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328?txstart=2\u0026limit=1"
+    },
+    "status": "200 OK"
+  }
+}

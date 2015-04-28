@@ -1,0 +1,96 @@
+{
+  "description": "Obtain multiple address resources for the given addresses.",
+  "title": "Get multiple address resources",
+  "runnable": true,
+  "operationId": "address.get_multiple",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/blocks/5;6;7",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": [
+      {
+        "hash": "000000009b7262315dbf071787ad3656097b892abffd1f95a1a022f896f533fc",
+        "height": 5,
+        "chain": "BTC.main",
+        "total": 0,
+        "fees": 0,
+        "ver": 1,
+        "time": "2009-01-09T03:23:48Z",
+        "received_time": "2014-11-16T18:51:27.121Z",
+        "bits": 486604799,
+        "nonce": 2011431709,
+        "n_tx": 1,
+        "prev_block": "000000004ebadb55ee9096c9a2f8880e09da59c0d68b1c228da88e48844a1485",
+        "mrkl_root": "63522845d294ee9b0188ae5cac91bf389a0c3723f084ca1025e7d9cdfe481ce1",
+        "txids": [
+          "63522845d294ee9b0188ae5cac91bf389a0c3723f084ca1025e7d9cdfe481ce1"
+        ],
+        "depth": 354064,
+        "prev_block_url": "https://api.blockcypher.com/v1/btc/main/blocks/000000004ebadb55ee9096c9a2f8880e09da59c0d68b1c228da88e48844a1485",
+        "tx_url": "https://api.blockcypher.com/v1/btc/main/txs/"
+      },
+      {
+        "hash": "000000003031a0e73735690c5a1ff2a4be82553b2a12b776fbd3a215dc8f778d",
+        "height": 6,
+        "chain": "BTC.main",
+        "total": 0,
+        "fees": 0,
+        "ver": 1,
+        "time": "2009-01-09T03:29:49Z",
+        "received_time": "2014-11-16T18:51:27.135Z",
+        "bits": 486604799,
+        "nonce": 2538380312,
+        "n_tx": 1,
+        "prev_block": "000000009b7262315dbf071787ad3656097b892abffd1f95a1a022f896f533fc",
+        "mrkl_root": "20251a76e64e920e58291a30d4b212939aae976baca40e70818ceaa596fb9d37",
+        "txids": [
+          "20251a76e64e920e58291a30d4b212939aae976baca40e70818ceaa596fb9d37"
+        ],
+        "depth": 354063,
+        "prev_block_url": "https://api.blockcypher.com/v1/btc/main/blocks/000000009b7262315dbf071787ad3656097b892abffd1f95a1a022f896f533fc",
+        "tx_url": "https://api.blockcypher.com/v1/btc/main/txs/"
+      },
+      {
+        "hash": "0000000071966c2b1d065fd446b1e485b2c9d9594acd2007ccbd5441cfc89444",
+        "height": 7,
+        "chain": "BTC.main",
+        "total": 0,
+        "fees": 0,
+        "ver": 1,
+        "time": "2009-01-09T03:39:29Z",
+        "received_time": "2014-11-16T18:51:27.148Z",
+        "bits": 486604799,
+        "nonce": 2258412857,
+        "n_tx": 1,
+        "prev_block": "000000003031a0e73735690c5a1ff2a4be82553b2a12b776fbd3a215dc8f778d",
+        "mrkl_root": "8aa673bc752f2851fd645d6a0a92917e967083007d9c1684f9423b100540673f",
+        "txids": [
+          "8aa673bc752f2851fd645d6a0a92917e967083007d9c1684f9423b100540673f"
+        ],
+        "depth": 354062,
+        "prev_block_url": "https://api.blockcypher.com/v1/btc/main/blocks/000000003031a0e73735690c5a1ff2a4be82553b2a12b776fbd3a215dc8f778d",
+        "tx_url": "https://api.blockcypher.com/v1/btc/main/txs/"
+      }
+    ],
+    "status": "200 OK"
+  }
+}
