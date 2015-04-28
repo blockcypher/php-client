@@ -1,0 +1,44 @@
+{
+  "description": "Create a webhook",
+  "title": "Create a webhook",
+  "runnable": true,
+  "operationId": "web_hook.create",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "path": "/v1/oauth/token",
+      "clientId": "",
+      "clientSecret": ""
+    }
+  },
+  "request": {
+    "path": "/v1/btc/main/hooks",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "url": "https://requestb.in/slmm49sl?uniqid=553f746fc71d9",
+      "event": "unconfirmed-tx"
+    }
+  },
+  "response": {
+    "status": "201",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "url": "https://requestb.in/slmm49sl?uniqid=553f746fc71d9",
+      "event": "unconfirmed-tx",
+      "id": "bccbda7b-6da1-49e6-aa37-455b65a1151c",
+      "token": "c0afcccdde5081d6429de37d16166ead",
+      "errors": 0,
+      "filter": "event=unconfirmed-tx"
+    }
+  }
+}

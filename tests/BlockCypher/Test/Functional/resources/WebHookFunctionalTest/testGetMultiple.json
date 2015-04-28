@@ -1,0 +1,49 @@
+{
+  "description": "Obtain multiple webhooks resources for the given webhooks.",
+  "title": "Get multiple webhook resources",
+  "runnable": true,
+  "operationId": "web_hook.get_multiple",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/hooks/e07ca0ac-4032-41fb-bb7a-3d6d6e11f0e7;e07ca0ac-4032-41fb-bb7a-3d6d6e11f0e7",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": [
+      {
+        "id": "e07ca0ac-4032-41fb-bb7a-3d6d6e11f0e7",
+        "token": "c0afcccdde5081d6429de37d16166ead",
+        "url": "https://requestb.in/slmm49sl?uniqid=553f783c57ecc",
+        "errors": 0,
+        "event": "unconfirmed-tx",
+        "filter": "event=unconfirmed-tx"
+      },
+      {
+        "id": "e07ca0ac-4032-41fb-bb7a-3d6d6e11f0e7",
+        "token": "c0afcccdde5081d6429de37d16166ead",
+        "url": "https://requestb.in/slmm49sl?uniqid=553f783c57ecc",
+        "errors": 0,
+        "event": "unconfirmed-tx",
+        "filter": "event=unconfirmed-tx"
+      }
+    ],
+    "status": "200 OK"
+  }
+}

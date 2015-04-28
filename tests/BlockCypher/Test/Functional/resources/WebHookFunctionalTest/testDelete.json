@@ -1,0 +1,32 @@
+{
+  "description": "Delete a webhook",
+  "title": "Delete a webhook",
+  "runnable": true,
+  "operationId": "web_hook.delete",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "path": "/v1/oauth/token",
+      "clientId": "",
+      "clientSecret": ""
+    }
+  },
+  "request": {
+    "path": "/v1/btc/main/hooks/e07ca0ac-4032-41fb-bb7a-3d6d6e11f0e7",
+    "method": "DELETE",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  "response": {
+    "status": "201",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
