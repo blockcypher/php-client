@@ -43,6 +43,10 @@ class Chain extends BlockCypherResourceModel
         $allowedParams = array();
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
+        if (strpos($name, '.') === FALSE) {
+            throw new \InvalidArgumentException("Invalid chain name $name. FORMAT: COIN.chain e.g. BTC.main");
+        }
+
         $payLoad = "";
 
         //Initialize the context if not provided explicitly
