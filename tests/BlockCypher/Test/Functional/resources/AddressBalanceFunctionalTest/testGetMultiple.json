@@ -1,0 +1,66 @@
+{
+  "description": "Obtain multiple address balance resources for the given addresses.",
+  "title": "Get multiple address balance resources",
+  "runnable": true,
+  "operationId": "address_balance.get_multiple",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/addrs/1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE;1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV;1ENn7XmqXNnReiQEFHhBGzfiv5gAyBj7r1/balance",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": [
+      {
+        "address": "1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE",
+        "total_received": 748104724,
+        "total_sent": 735494433,
+        "balance": 5950421,
+        "unconfirmed_balance": 0,
+        "final_balance": 5950421,
+        "n_tx": 598,
+        "unconfirmed_n_tx": 0,
+        "final_n_tx": 598
+      },
+      {
+        "address": "1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV",
+        "total_received": 84779223944,
+        "total_sent": 84085474135,
+        "balance": 1922291622,
+        "unconfirmed_balance": 0,
+        "final_balance": 1922291622,
+        "n_tx": 4800,
+        "unconfirmed_n_tx": 0,
+        "final_n_tx": 4800
+      },
+      {
+        "address": "1ENn7XmqXNnReiQEFHhBGzfiv5gAyBj7r1",
+        "total_received": 1024182,
+        "total_sent": 1024182,
+        "balance": 0,
+        "unconfirmed_balance": 0,
+        "final_balance": 0,
+        "n_tx": 2,
+        "unconfirmed_n_tx": 0,
+        "final_n_tx": 2
+      }
+    ],
+    "status": "200 OK"
+  }
+}
