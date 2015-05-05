@@ -37,7 +37,14 @@ class BlockCypherResourceModel extends BlockCypherModel implements IResource
     )
     {
         //Initialize the context and rest call object if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
+        if ($apiContext === null) {
+            // First try default ApiContext
+            $apiContext = ApiContext::getDefault();
+            if ($apiContext === null) {
+                $apiContext = new ApiContext(self::$credential);
+            }
+        }
+
         $restCall = $restCall ? $restCall : new BlockCypherRestCall($apiContext);
 
         //Make the execution call

@@ -2,6 +2,7 @@
 
 namespace BlockCypher\Rest;
 
+use BlockCypher\Auth\TokenCredential;
 use BlockCypher\Core\BlockCypherConfigManager;
 use BlockCypher\Core\BlockCypherCredentialManager;
 
@@ -14,6 +15,12 @@ use BlockCypher\Core\BlockCypherCredentialManager;
  */
 class ApiContext
 {
+    /**
+     * Default ApiContext when no ApiContext is provided as param.
+     * @var ApiContext
+     */
+    public static $defaultApiContext = null;
+
     /**
      * Unique request id to be used for this call
      * The user can either generate one as per application
@@ -52,7 +59,7 @@ class ApiContext
     /**
      * Construct
      *
-     * @param \BlockCypher\Auth\SimpleTokenCredential $credential
+     * @param TokenCredential $credential
      * @param string|null $requestId
      * @param string|null $chain
      * @param string|null $coin
@@ -71,6 +78,77 @@ class ApiContext
         $this->chain = $chain;
         $this->coin = $coin;
         $this->version = $version;
+    }
+
+    /**
+     * Create new default ApiContext.
+     *
+     * @param TokenCredential $credential
+     * @param array $config
+     * @param string $blockCypherPartnerAttributionId
+     * @return ApiContext
+     */
+    public static function create($credential, $config = array(), $blockCypherPartnerAttributionId = null)
+    {
+        // ### Api context
+        // Use an ApiContext object to authenticate
+        // API calls. The Token for the
+        // SimpleTokenCredential class can be retrieved from
+        // https://accounts.blockcypher.com/
+
+        $apiContext = new ApiContext($credential);
+
+        // #### SDK configuration
+        // Register the sdk_config.ini file in current directory
+        // as the configuration source.
+        if (!defined("BC_CONFIG_PATH")) {
+            $apiContext->setConfig($config);
+        }
+
+        // Partner Attribution Id. For the time being it is not used.
+        if ($blockCypherPartnerAttributionId !== null) {
+            $apiContext->addRequestHeader('BlockCypher-Partner-Attribution-Id', $blockCypherPartnerAttributionId);
+        }
+
+        return $apiContext;
+    }
+
+    /**
+     * Sets Config
+     *
+     * @param array $config SDK configuration parameters
+     */
+    public function setConfig(array $config)
+    {
+        BlockCypherConfigManager::getInstance()->addConfigs($config);
+    }
+
+    public function addRequestHeader($name, $value)
+    {
+        // Determine if the name already has a 'http.headers' prefix. If not, add one.
+        if (!(substr($name, 0, strlen('http.headers')) === 'http.headers')) {
+            $name = 'http.headers.' . $name;
+        }
+        BlockCypherConfigManager::getInstance()->addConfigs(array($name => $value));
+    }
+
+    /**
+     * @param ApiContext $apiContext
+     * @return ApiContext
+     */
+    public static function setDefault($apiContext)
+    {
+        self::$defaultApiContext = $apiContext;
+    }
+
+    /**
+     * Returns default ApiContext.
+     *
+     * @return ApiContext
+     */
+    public static function getDefault()
+    {
+        return self::$defaultApiContext;
     }
 
     /**
@@ -95,15 +173,6 @@ class ApiContext
             $headers[$headerName] = $value;
         }
         return $headers;
-    }
-
-    public function addRequestHeader($name, $value)
-    {
-        // Determine if the name already has a 'http.headers' prefix. If not, add one.
-        if (!(substr($name, 0, strlen('http.headers')) === 'http.headers')) {
-            $name = 'http.headers.' . $name;
-        }
-        BlockCypherConfigManager::getInstance()->addConfigs(array($name => $value));
     }
 
     /**
@@ -158,16 +227,6 @@ class ApiContext
         }
 
         return $this->requestId;
-    }
-
-    /**
-     * Sets Config
-     *
-     * @param array $config SDK configuration parameters
-     */
-    public function setConfig(array $config)
-    {
-        BlockCypherConfigManager::getInstance()->addConfigs($config);
     }
 
     /**

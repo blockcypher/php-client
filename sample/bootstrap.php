@@ -38,56 +38,54 @@ if (!validateToken($token)) {
 }
 
 /** @var \BlockCypher\Rest\ApiContext $apiContext */
-$apiContext = getApiContext($token);
+$apiContext = getApiContextUsingConfigArray($token);
 
 return $apiContext;
+
 /**
- * Helper method for getting an APIContext for all calls
- * @param $token
- * @return ApiContext
+ * Helper method for getting an APIContext for all calls (getting config from ini file)
+ * @param string $token
+ * @return \BlockCypher\Rest\ApiContext
  */
-function getApiContext($token)
+function getApiContextUsingConfigIni($token)
 {
     // #### SDK configuration
     // Register the sdk_config.ini file in current directory
     // as the configuration source.
-    /*
     if(!defined("BC_CONFIG_PATH")) {
         define("BC_CONFIG_PATH", __DIR__);
     }
-    */
 
-    // ### Api context
-    // Use an ApiContext object to authenticate
-    // API calls. The clientId and clientSecret for the
-    // OAuthTokenCredential class can be retrieved from
-    // https://accounts.blockcypher.com/
+    $credentials = new SimpleTokenCredential($token);
 
-    $apiContext = new ApiContext(
-        new SimpleTokenCredential($token)
+    $apiContext = ApiContext::create($credentials);
+
+    ApiContext::setDefault($apiContext);
+
+    return $apiContext;
+}
+
+/**
+ * Helper method for getting an APIContext for all calls (getting config from array)
+ * @param string $token
+ * @return \BlockCypher\Rest\ApiContext
+ */
+function getApiContextUsingConfigArray($token)
+{
+    $credentials = new SimpleTokenCredential($token);
+
+    $config = array(
+        'mode' => 'sandbox',
+        'log.LogEnabled' => true,
+        'log.FileName' => '../BlockCypher.log',
+        'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
+        'validation.level' => 'log',
+        // 'http.CURLOPT_CONNECTTIMEOUT' => 30
     );
 
-    // Comment this line out and uncomment the BC_CONFIG_PATH
-    // 'define' block if you want to use static file
-    // based configuration
+    $apiContext = ApiContext::create($credentials, $config);
 
-    $apiContext->setConfig(
-        array(
-            'mode' => 'sandbox',
-            'log.LogEnabled' => true,
-            'log.FileName' => '../BlockCypher.log',
-            'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
-            'validation.level' => 'log', // log, strict, disable
-            'cache.enabled' => true,
-            // 'http.CURLOPT_CONNECTTIMEOUT' => 30
-            // 'http.headers.BlockCypher-Partner-Attribution-Id' => '123123123'
-        )
-    );
-
-    // Partner Attribution Id
-    // Use this header if you are a BlockCypher partner. Specify a unique BN Code to receive revenue attribution.
-    // To learn more or to request a BN Code, contact your Partner Manager or visit the BlockCypher Partner Portal
-    // $apiContext->addRequestHeader('BlockCypher-Partner-Attribution-Id', '123123123');
+    ApiContext::setDefault($apiContext);
 
     return $apiContext;
 }
