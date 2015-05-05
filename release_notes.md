@@ -1,8 +1,13 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v1.0.0-beta
+-----------
+
+* Allow getting token from config ini file
+
 v0.6.0
------
+------
 * Added address generation
 * Added sample to get a block by height
 * Added batching for blocks

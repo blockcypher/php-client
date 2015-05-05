@@ -38,16 +38,16 @@ if (!validateToken($token)) {
 }
 
 /** @var \BlockCypher\Rest\ApiContext $apiContext */
-$apiContext = getApiContextUsingConfigArray($token);
+$apiContext = getApiContextUsingConfigArray($token); // Uncomment to use config array
+//$apiContext = getApiContextUsingConfigIni(); // Uncomment to use config sdk_config.ini file
 
 return $apiContext;
 
 /**
  * Helper method for getting an APIContext for all calls (getting config from ini file)
- * @param string $token
  * @return \BlockCypher\Rest\ApiContext
  */
-function getApiContextUsingConfigIni($token)
+function getApiContextUsingConfigIni()
 {
     // #### SDK configuration
     // Register the sdk_config.ini file in current directory
@@ -56,11 +56,7 @@ function getApiContextUsingConfigIni($token)
         define("BC_CONFIG_PATH", __DIR__);
     }
 
-    $credentials = new SimpleTokenCredential($token);
-
-    $apiContext = ApiContext::create($credentials);
-
-    ApiContext::setDefault($apiContext);
+    $apiContext = ApiContext::create();
 
     return $apiContext;
 }

@@ -88,7 +88,7 @@ class ApiContext
      * @param string $blockCypherPartnerAttributionId
      * @return ApiContext
      */
-    public static function create($credential, $config = array(), $blockCypherPartnerAttributionId = null)
+    public static function create($credential = null, $config = array(), $blockCypherPartnerAttributionId = null)
     {
         // ### Api context
         // Use an ApiContext object to authenticate
