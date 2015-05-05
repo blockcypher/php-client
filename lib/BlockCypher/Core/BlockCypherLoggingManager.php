@@ -149,17 +149,7 @@ class BlockCypherLoggingManager
     }
 
     /**
-     * Log Fine
-     *
-     * @param string $message
-     */
-    public function fine($message)
-    {
-        $this->log("FINE\t: " . $message, BlockCypherLoggingLevel::FINE);
-    }
-
-    /**
-     * Log Fine
+     * Log Debug
      *
      * @param string $message
      */

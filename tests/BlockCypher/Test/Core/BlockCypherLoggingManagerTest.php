@@ -41,9 +41,9 @@ class BlockCypherLoggingManagerTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function testFine()
+    public function testDebug()
     {
-        $this->object->fine('Test fine Message');
+        $this->object->debug('Test debug Message');
     }
 
     /**
@@ -52,7 +52,7 @@ class BlockCypherLoggingManagerTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = BlockCypherLoggingManager::getInstance('InvoiceTest');
+        $this->object = BlockCypherLoggingManager::getInstance('AddressTest');
     }
 
     /**
@@ -63,5 +63,3 @@ class BlockCypherLoggingManagerTest extends \PHPUnit_Framework_TestCase
     {
     }
 }
-
-?>

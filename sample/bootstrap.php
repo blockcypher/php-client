@@ -74,7 +74,7 @@ function getApiContextUsingConfigArray($token)
         'mode' => 'sandbox',
         'log.LogEnabled' => true,
         'log.FileName' => '../BlockCypher.log',
-        'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
+        'log.LogLevel' => 'DEBUG', // PLEASE USE `INFO` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
         'validation.level' => 'log',
         // 'http.CURLOPT_CONNECTTIMEOUT' => 30
     );

@@ -18,7 +18,7 @@ class Setup
             'http.ConnectionTimeOut' => 30,
             'log.LogEnabled' => true,
             'log.FileName' => '../BlockCypher.log',
-            'log.LogLevel' => 'FINE',
+            'log.LogLevel' => 'INFO',
             'validation.level' => 'log'
         );
 

@@ -5,6 +5,7 @@ v1.0.0-beta
 -----------
 
 * Allow getting token from config ini file
+* Removed FINE log level
 
 v0.6.0
 ------
