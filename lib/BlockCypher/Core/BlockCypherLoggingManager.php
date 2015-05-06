@@ -9,7 +9,6 @@ namespace BlockCypher\Core;
  */
 class BlockCypherLoggingManager
 {
-
     /**
      * Default Logging Level
      */
