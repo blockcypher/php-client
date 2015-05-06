@@ -63,9 +63,7 @@ class Transaction extends BlockCypherResourceModel
 
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/txs/$hash?" . http_build_query($params),
@@ -103,9 +101,7 @@ class Transaction extends BlockCypherResourceModel
         $transactionList = implode(";", $array);
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/txs/$transactionList?" . http_build_query($params),

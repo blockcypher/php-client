@@ -49,8 +49,9 @@ class Chain extends BlockCypherResourceModel
 
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
+        if ($apiContext === null) {
+            $apiContext = self::getApiContext();
+        }
         $version = $apiContext->getVersion();
 
         list($coin, $chain) = explode(".", $name);

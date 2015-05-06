@@ -51,9 +51,7 @@ class FullAddress extends BlockCypherResourceModel
 
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/addrs/$address/full?" . http_build_query($params),
@@ -90,9 +88,7 @@ class FullAddress extends BlockCypherResourceModel
         $addressList = implode(";", $array);
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/addrs/$addressList/full?" . http_build_query($params),

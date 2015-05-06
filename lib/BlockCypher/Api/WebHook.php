@@ -48,9 +48,7 @@ class WebHook extends BlockCypherResourceModel
 
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/hooks/$webHookId?" . http_build_query($params),
@@ -86,9 +84,7 @@ class WebHook extends BlockCypherResourceModel
         $webHookList = implode(";", $array);
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/hooks/$webHookList?" . http_build_query($params),
@@ -119,9 +115,7 @@ class WebHook extends BlockCypherResourceModel
 
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/hooks?" . http_build_query($params),
@@ -145,9 +139,7 @@ class WebHook extends BlockCypherResourceModel
     {
         $payLoad = $this->toJSON();
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/hooks",
@@ -172,9 +164,7 @@ class WebHook extends BlockCypherResourceModel
     {
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         self::executeCall(
             "$chainUrlPrefix/hooks/{$this->getId()}",

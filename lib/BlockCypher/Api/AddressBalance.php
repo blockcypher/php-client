@@ -46,9 +46,7 @@ class AddressBalance extends BlockCypherResourceModel
 
         $payLoad = "";
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/addrs/$address/balance" . http_build_query(array_intersect_key($params, $allowedParams)),
@@ -83,9 +81,7 @@ class AddressBalance extends BlockCypherResourceModel
 
         $addressList = implode(";", $array);
 
-        //Initialize the context if not provided explicitly
-        $apiContext = $apiContext ? $apiContext : new ApiContext(self::$credential);
-        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
             "$chainUrlPrefix/addrs/$addressList/balance" . http_build_query(array_intersect_key($params, $allowedParams)),

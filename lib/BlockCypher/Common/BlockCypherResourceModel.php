@@ -36,13 +36,8 @@ class BlockCypherResourceModel extends BlockCypherModel implements IResource
         $handlers = array('BlockCypher\Handler\TokenRestHandler')
     )
     {
-        //Initialize the context and rest call object if not provided explicitly
         if ($apiContext === null) {
-            // First try default ApiContext
-            $apiContext = ApiContext::getDefault();
-            if ($apiContext === null) {
-                $apiContext = new ApiContext(self::$credential);
-            }
+            $apiContext = self::getApiContext();
         }
 
         $restCall = $restCall ? $restCall : new BlockCypherRestCall($apiContext);
@@ -50,5 +45,32 @@ class BlockCypherResourceModel extends BlockCypherModel implements IResource
         //Make the execution call
         $json = $restCall->execute($handlers, $url, $method, $payLoad, $headers);
         return $json;
+    }
+
+    /**
+     * @return ApiContext
+     */
+    protected static function getApiContext()
+    {
+        // First try default ApiContext
+        $apiContext = ApiContext::getDefault();
+        if ($apiContext === null) {
+            $apiContext = new ApiContext(self::$credential);
+            return $apiContext;
+        }
+        return $apiContext;
+    }
+
+    /**
+     * @param ApiContext|null $apiContext
+     * @return array
+     */
+    protected static function getChainUrlPrefix($apiContext)
+    {
+        if ($apiContext === null) {
+            $apiContext = self::getApiContext();
+        }
+        $chainUrlPrefix = $apiContext->getBaseChainUrl();
+        return $chainUrlPrefix;
     }
 }
