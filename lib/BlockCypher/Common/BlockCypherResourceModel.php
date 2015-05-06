@@ -12,7 +12,7 @@ use BlockCypher\Transport\BlockCypherRestCall;
  *
  * @package BlockCypher\Common
  */
-class BlockCypherResourceModel extends BlockCypherModel implements IResource
+class BlockCypherResourceModel extends BlockCypherBaseModel implements IResource
 {
     /**
      * Execute SDK Call to BlockCypher services
