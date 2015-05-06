@@ -9,7 +9,7 @@
 require __DIR__ . '/../bootstrap.php';
 
 // Create a new instance of WebHook object
-$webhook = new \BlockCypher\Api\WebHook();
+$webHook = new \BlockCypher\Api\WebHook();
 
 // # Basic Information
 //     {
@@ -25,19 +25,19 @@ $webhook = new \BlockCypher\Api\WebHook();
 // of the webhook which triggered the request.
 // X-Eventtype: unconfirmed-tx
 // X-Eventid: f1cef7d6-cfd9-459c-8ebc-42226ae2b1a7
-$webhook->setUrl("https://requestb.in/slmm49sl?uniqid=" . uniqid());
+$webHook->setUrl("https://requestb.in/slmm49sl?uniqid=" . uniqid());
 
 // # Event Types
 // Event types correspond to what kind of notifications you want to receive on the given URL.
 // Complete event list: <a href="http://dev.blockcypher.com/#events">http://dev.blockcypher.com/#events</a>
-$webhook->setEvent('unconfirmed-tx');
+$webHook->setEvent('unconfirmed-tx');
 
 // For Sample Purposes Only.
-$request = clone $webhook;
+$request = clone $webHook;
 
 // ### Create WebHook
 try {
-    $output = $webhook->create($apiContexts['BTC.main']);
+    $output = $webHook->create($apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created WebHook", "WebHook", null, $request, $ex);
     exit(1);
