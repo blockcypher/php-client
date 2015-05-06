@@ -48,8 +48,8 @@ class WebHookTest extends ResourceModelTestCase
             "url": "https://requestb.in/slmm49sl?uniqid=5537d0e823f80",
             "callback_errors": 0,
             "event": "unconfirmed-tx",
-            "filter": "event=unconfirmed-tx",
-            "hash": "TestHash",
+            "hash": "2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa871b",
+            "filter": "event=unconfirmed-tx\u0026hash=2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa871b"
             "wallet_name": "TestWalletName",
             "address": "TestAddress",
             "script": "TestScript",
@@ -57,7 +57,7 @@ class WebHookTest extends ResourceModelTestCase
             "errors": []
         }
         */
-        return '{"id":"23beeafe-2f93-4d88-84d9-6cc9acf4d459","token":"c0afcccdde5081d6429de37d16166ead","url":"https://requestb.in/slmm49sl?uniqid=5537d0e823f80","callback_errors":0,"event":"unconfirmed-tx","filter":"event=unconfirmed-tx","hash":"TestHash","wallet_name":"TestWalletName","address":"TestAddress","script":"TestScript","error":"","errors":[]}';
+        return '{"id":"23beeafe-2f93-4d88-84d9-6cc9acf4d459","token":"c0afcccdde5081d6429de37d16166ead","url":"https://requestb.in/slmm49sl?uniqid=5537d0e823f80","callback_errors":0,"event":"unconfirmed-tx","hash":"2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa871b","filter":"event=unconfirmed-tx\u0026hash=2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa871b","wallet_name":"TestWalletName","address":"TestAddress","script":"TestScript","error":"","errors":[]}';
     }
 
     /**
@@ -68,14 +68,15 @@ class WebHookTest extends ResourceModelTestCase
     {
         $this->assertEquals($obj->getId(), "23beeafe-2f93-4d88-84d9-6cc9acf4d459");
         $this->assertEquals($obj->getEvent(), "unconfirmed-tx");
-        $this->assertEquals($obj->getHash(), "TestHash");
+        $this->assertEquals($obj->getHash(), "2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa871b");
         $this->assertEquals($obj->getWalletName(), "TestWalletName");
         $this->assertEquals($obj->getToken(), "c0afcccdde5081d6429de37d16166ead");
         $this->assertEquals($obj->getAddress(), "TestAddress");
         $this->assertEquals($obj->getScript(), "TestScript");
         $this->assertEquals($obj->getUrl(), "https://requestb.in/slmm49sl?uniqid=5537d0e823f80");
         $this->assertEquals($obj->getCallbackErrors(), 0);
-        $this->assertEquals($obj->getFilter(), "event=unconfirmed-tx");
+        // NOTICE: filter string does not contains \u0026 present in json string
+        $this->assertEquals($obj->getFilter(), "event=unconfirmed-tx&hash=2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa871b");
     }
 
     /**
