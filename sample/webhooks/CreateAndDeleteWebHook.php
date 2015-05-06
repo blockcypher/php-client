@@ -13,7 +13,7 @@ $webHook = require 'CreateWebHook.php';
 
 // ### Delete WebHook
 try {
-    $output = $webHook->delete($apiContext);
+    $output = $webHook->delete($apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Delete a WebHook", "WebHook", null, $webHook->getId(), $ex);
     exit(1);

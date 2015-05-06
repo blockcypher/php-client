@@ -13,13 +13,13 @@ require __DIR__ . '/../bootstrap.php';
 /// ### Retrieve 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    // BTC.main address
-    $address = \BlockCypher\Api\Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContexts['BTC.main']);
+    // BTC.test3 address
+    $address = \BlockCypher\Api\Address::get('2N66DDrmjDCMM3yMSYtAQyAqRtasSkFhbmX', array(), $apiContexts['BTC.test3']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Get Address", "Address", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
+    ResultPrinter::printError("Get Address BTC Test3", "Address", '2N66DDrmjDCMM3yMSYtAQyAqRtasSkFhbmX', null, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Get Address", "Address", $address->getAddress(), null, $address);
+ResultPrinter::printResult("Get Address BTC Test3", "Address", $address->getAddress(), null, $address);
 
 return $address;

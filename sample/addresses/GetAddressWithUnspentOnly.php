@@ -19,7 +19,7 @@ try {
         'unspentOnly' => 'true', // NOTICE: string type not boolean
     );
 
-    $address = \BlockCypher\Api\Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', $params, $apiContext);
+    $address = \BlockCypher\Api\Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', $params, $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Address", "Address", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
     exit(1);

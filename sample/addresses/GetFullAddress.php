@@ -13,7 +13,7 @@ require __DIR__ . '/../bootstrap.php';
 /// ### Retrieve this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $fullAddress = \BlockCypher\Api\Address::getFullAddress('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContext);
+    $fullAddress = \BlockCypher\Api\Address::getFullAddress('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Full Address", "Full Address", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
     exit(1);

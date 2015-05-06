@@ -13,7 +13,7 @@ require __DIR__ . '/../bootstrap.php';
 /// ### Retrieve Block by height
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $block = \BlockCypher\Api\Block::get('293000', array(), $apiContext);
+    $block = \BlockCypher\Api\Block::get('293000', array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Block By Height", "Block", '293000', null, $ex);
     exit(1);

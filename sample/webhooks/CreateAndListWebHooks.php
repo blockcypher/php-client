@@ -16,7 +16,7 @@ $webHook = require 'CreateWebHook.php';
 
 // ### Get List of All WebHooks
 try {
-    $output = \BlockCypher\Api\WebHook::getAll(array(), $apiContext);
+    $output = \BlockCypher\Api\WebHook::getAll(array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("List all WebHooks", "WebHookList", null, null, $ex);
     exit(1);

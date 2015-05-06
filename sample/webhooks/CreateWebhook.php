@@ -37,7 +37,7 @@ $request = clone $webhook;
 
 // ### Create WebHook
 try {
-    $output = $webhook->create($apiContext);
+    $output = $webhook->create($apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created WebHook", "WebHook", null, $request, $ex);
     exit(1);

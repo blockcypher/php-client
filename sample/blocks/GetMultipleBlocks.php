@@ -17,7 +17,7 @@ try {
     // List of blocks. You can use height or hash and mix them in the same request
     $blockList = Array('5', '6', '7');
 
-    $blocks = \BlockCypher\Api\Block::getMultiple($blockList, array(), $apiContext);
+    $blocks = \BlockCypher\Api\Block::getMultiple($blockList, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple Blocks", "Blocks", implode(",", $blockList), null, $ex);
     exit(1);

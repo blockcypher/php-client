@@ -15,7 +15,7 @@ $webHookId = $webHook->getId();
 
 // ### Get WebHook
 try {
-    $output = \BlockCypher\Api\WebHook::get($webHookId, array(), $apiContext);
+    $output = \BlockCypher\Api\WebHook::get($webHookId, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get a WebHook", "WebHook", null, $webHookId, $ex);
     exit(1);

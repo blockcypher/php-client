@@ -15,7 +15,7 @@ try {
     // ### Create Address
     // Create an address by calling the Address::create() method
     // with a valid ApiContext (See bootstrap.php for more on `ApiContext`)
-    $address = Address::create($apiContext);
+    $address = Address::create($apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Create Address", "Address", null, $request, $ex);
     exit(1);

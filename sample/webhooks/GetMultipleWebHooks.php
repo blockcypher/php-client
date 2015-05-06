@@ -17,7 +17,7 @@ $webHookId = $webHook->getId();
 try {
     $webHookList = array($webHookId);
 
-    $output = \BlockCypher\Api\WebHook::getMultiple($webHookList, array(), $apiContext);
+    $output = \BlockCypher\Api\WebHook::getMultiple($webHookList, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple WebHooks", "WebHook Array", null, implode(';', $webHookList), $ex);
     exit(1);

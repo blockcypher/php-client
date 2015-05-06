@@ -21,7 +21,7 @@ try {
         '1ENn7XmqXNnReiQEFHhBGzfiv5gAyBj7r1'
     );
 
-    $addressesBalance = \BlockCypher\Api\AddressBalance::getMultiple($addressList, array(), $apiContext);
+    $addressesBalance = \BlockCypher\Api\AddressBalance::getMultiple($addressList, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple Addresses Balance", "Addresses Balance", implode(",", $addressList), null, $ex);
     exit(1);

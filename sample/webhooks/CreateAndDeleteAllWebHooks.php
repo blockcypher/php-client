@@ -14,7 +14,7 @@ try {
     /** @var \BlockCypher\Api\WebHook $webHook */
     foreach ($webHookList as $webHook) {
         $webHookIdList[] = $webHook->getId();
-        $webHook->delete($apiContext);
+        $webHook->delete($apiContexts['BTC.main']);
     }
 } catch (Exception $ex) {
     ResultPrinter::printError("Deleted All WebHooks", "", implode(';', $webHookIdList), null, $ex);

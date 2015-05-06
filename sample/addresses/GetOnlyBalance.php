@@ -13,7 +13,7 @@ require __DIR__ . '/../bootstrap.php';
 /// ### Retrieve this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD balance
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $addressBalance = \BlockCypher\Api\Address::getOnlyBalance('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContext);
+    $addressBalance = \BlockCypher\Api\Address::getOnlyBalance('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Only Address Balance", "Address Balance", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
     exit(1);

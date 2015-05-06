@@ -13,7 +13,7 @@ require __DIR__ . '/../bootstrap.php';
 /// ### Retrieve Chain
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $chain = \BlockCypher\Api\Chain::get('BTC.main', array(), $apiContext);
+    $chain = \BlockCypher\Api\Chain::get('BTC.main', array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Chain", "Chain", 'BTC.main', null, $ex);
     exit(1);

@@ -40,7 +40,8 @@ class Setup
 
         //BlockCypherConfigManager::getInstance()->addConfigFromIni(__DIR__. '/../../../sdk_config.ini');
         //BlockCypherConfigManager::getInstance()->addConfigs($configs);
-        BlockCypherCredentialManager::getInstance()->setCredentialObject(BlockCypherCredentialManager::getInstance()->getCredentialObject('acct1'));
+        BlockCypherCredentialManager::getInstance()->setCredentialObject(
+            BlockCypherCredentialManager::getInstance()->getCredentialObject('acct1'));
 
         self::$mode = getenv('REST_MODE') ? getenv('REST_MODE') : 'mock';
         if (self::$mode != 'sandbox') {

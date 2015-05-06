@@ -19,7 +19,7 @@ try {
         'txstart' => 1,
         'limit' => 1,
     );
-    $block = \BlockCypher\Api\Block::get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', $params, $apiContext);
+    $block = \BlockCypher\Api\Block::get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', $params, $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Block With Paging", "Block", '0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', null, $ex);
     exit(1);

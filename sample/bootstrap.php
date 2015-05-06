@@ -38,10 +38,42 @@ if (!validateToken($token)) {
 }
 
 /** @var \BlockCypher\Rest\ApiContext $apiContext */
-$apiContext = getApiContextUsingConfigArray($token); // Uncomment to use config array
-//$apiContext = getApiContextUsingConfigIni(); // Uncomment to use config sdk_config.ini file
+$apiContextSdkConfigFile = getApiContextUsingConfigIni();
 
-return $apiContext;
+$apiContexts = createApiContextForAllChains($token);
+$apiContexts['sdk_config'] = $apiContextSdkConfigFile; // Add ApiContext created using sdk_config.ini custom settings
+
+return $apiContexts;
+
+/**
+ * Create an ApiContext for each chain
+ * @param $token
+ * @return array
+ */
+function createApiContextForAllChains($token)
+{
+    $version = 'v1';
+
+    $chainNames = array(
+        'BTC.main',
+        'BTC.test3',
+        'DOGE.main',
+        'LTC.main',
+        'URO.main',
+        'BCY.test'
+    );
+
+    $apiContexts = array();
+    foreach ($chainNames as $chainName) {
+
+        list($coin, $chain) = explode(".", $chainName);
+        $coin = strtolower($coin);
+
+        $apiContexts[$chainName] = getApiContextUsingConfigArray($token, $chain, $coin, $version);
+    }
+
+    return $apiContexts;
+}
 
 /**
  * Helper method for getting an APIContext for all calls (getting config from ini file)
@@ -56,7 +88,7 @@ function getApiContextUsingConfigIni()
         define("BC_CONFIG_PATH", __DIR__);
     }
 
-    $apiContext = ApiContext::create();
+    $apiContext = ApiContext::create('main', 'btc', 'v1');
 
     return $apiContext;
 }
@@ -64,9 +96,12 @@ function getApiContextUsingConfigIni()
 /**
  * Helper method for getting an APIContext for all calls (getting config from array)
  * @param string $token
- * @return \BlockCypher\Rest\ApiContext
+ * @param string $version v1
+ * @param string $coin btc|doge|ltc|uro|bcy
+ * @param string $chain main|test3|test
+ * @return ApiContext
  */
-function getApiContextUsingConfigArray($token)
+function getApiContextUsingConfigArray($token, $chain = 'main', $coin = 'btc', $version = 'v1')
 {
     $credentials = new SimpleTokenCredential($token);
 
@@ -79,7 +114,7 @@ function getApiContextUsingConfigArray($token)
         // 'http.CURLOPT_CONNECTTIMEOUT' => 30
     );
 
-    $apiContext = ApiContext::create($credentials, $config);
+    $apiContext = ApiContext::create($chain, $coin, $version, $credentials, $config);
 
     ApiContext::setDefault($apiContext);
 
