@@ -14,6 +14,7 @@ use BlockCypher\Core\BlockCypherHttpConfig;
 use BlockCypher\Exception\BlockCypherConfigurationException;
 use BlockCypher\Exception\BlockCypherInvalidCredentialException;
 use BlockCypher\Exception\BlockCypherMissingCredentialException;
+use BlockCypher\Rest\ApiContext;
 
 /**
  * Class TokenRestHandler
@@ -50,9 +51,10 @@ class TokenRestHandler extends RestHandler
             throw new BlockCypherInvalidCredentialException("Invalid credentials passed");
         }
 
-        $url = rtrim(trim($this->_getEndpoint($config)), '/') . (isset($options['path']) ? $options['path'] : '');
+        $path = (isset($options['path']) ? $options['path'] : '');
+        $url = $this->getAbsoluteUrl($path, $this->apiContext);
 
-        $httpConfig->setUrl($this->addTokenToUrl($url, $credential->getAccessToken($config)));
+        $httpConfig->setUrl($url);
 
         if (!array_key_exists("User-Agent", $httpConfig->getHeaders())) {
             $httpConfig->addHeader("User-Agent", BlockCypherUserAgent::getValue(BlockCypherConstants::SDK_NAME, BlockCypherConstants::SDK_VERSION));
@@ -70,6 +72,24 @@ class TokenRestHandler extends RestHandler
         foreach ($headers as $key => $value) {
             $httpConfig->addHeader($key, $value);
         }
+    }
+
+    /**
+     * @param array $path
+     * @param ApiContext $apiContext
+     * @return string
+     * @throws BlockCypherConfigurationException
+     */
+    private function getAbsoluteUrl($path, $apiContext)
+    {
+        $credential = $apiContext->getCredential();
+        $config = $apiContext->getConfig();
+
+        $endPoint = rtrim(trim($this->_getEndpoint($config)), '/');
+        $path = rtrim(trim($path, '/'));
+        $url = $endPoint . '/' . $path;
+        $url = $this->addTokenToUrl($url, $credential->getAccessToken($config));
+        return $url;
     }
 
     /**
