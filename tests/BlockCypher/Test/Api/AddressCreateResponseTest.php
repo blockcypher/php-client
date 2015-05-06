@@ -31,11 +31,13 @@ class AddressCreateResponseTest extends ResourceModelTestCase
             "private": "bf442658d87e2fa590aca663b9f2bbff4fd19cac690941e6225b4eee3c6318d1",
             "public": "028043b74cddd7e25c8ad27794927f245cf7f8a9c2d08ffb9fb5e5776c03febaa1",
             "address": "15vah7EL1kekvR56Y1pA4gDp7PETR5wUud",
-            "wif": "L3dWP9XFYznfeoDRabcUGDddcJrvauuMqx5bpSpoH7QgKiGe1PLq"
+            "wif": "L3dWP9XFYznfeoDRabcUGDddcJrvauuMqx5bpSpoH7QgKiGe1PLq",
+            "error": "",
+            "errors": []
         }
         */
 
-        return '{"private":"bf442658d87e2fa590aca663b9f2bbff4fd19cac690941e6225b4eee3c6318d1","public":"028043b74cddd7e25c8ad27794927f245cf7f8a9c2d08ffb9fb5e5776c03febaa1","address":"15vah7EL1kekvR56Y1pA4gDp7PETR5wUud","wif":"L3dWP9XFYznfeoDRabcUGDddcJrvauuMqx5bpSpoH7QgKiGe1PLq"}';
+        return '{"private":"bf442658d87e2fa590aca663b9f2bbff4fd19cac690941e6225b4eee3c6318d1","public":"028043b74cddd7e25c8ad27794927f245cf7f8a9c2d08ffb9fb5e5776c03febaa1","address":"15vah7EL1kekvR56Y1pA4gDp7PETR5wUud","wif":"L3dWP9XFYznfeoDRabcUGDddcJrvauuMqx5bpSpoH7QgKiGe1PLq","error":"","errors":[]}';
     }
 
     /**

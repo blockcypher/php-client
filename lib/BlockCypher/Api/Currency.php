@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Common\BlockCypherModel;
+use BlockCypher\Common\BlockCypherBaseModel;
 use BlockCypher\Converter\FormatConverter;
 use BlockCypher\Validation\NumericValidator;
 
@@ -16,7 +16,7 @@ use BlockCypher\Validation\NumericValidator;
  * @property string currency
  * @property string value
  */
-class Currency extends BlockCypherModel
+class Currency extends BlockCypherBaseModel
 {
     /**
      * 3 letter currency code as defined by ISO 4217.

@@ -40,10 +40,12 @@ class TxrefTest extends ResourceModelTestCase
             "spent": false,
             "confirmations": 50118,
             "confirmed": "2014-05-22T03:46:25Z",
-            "double_spend": false
+            "double_spend": false,
+            "error": "",
+            "errors": []
         }
         */
-        return '{"tx_hash":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","block_height":302013,"tx_input_n":-1,"tx_output_n":0,"value":20213,"spent":false,"confirmations":50118,"confirmed":"2014-05-22T03:46:25Z","double_spend":false}';
+        return '{"tx_hash":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","block_height":302013,"tx_input_n":-1,"tx_output_n":0,"value":20213,"spent":false,"confirmations":50118,"confirmed":"2014-05-22T03:46:25Z","double_spend":false,"error":"","errors":[]}';
     }
 
     /**

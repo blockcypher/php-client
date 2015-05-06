@@ -25,7 +25,7 @@ use BlockCypher\Validation\UrlValidator;
  * @property string address
  * @property string script
  * @property string url
- * @property int|string|string[] errors
+ * @property int callback_errors
  * @property string filter
  */
 class WebHook extends BlockCypherResourceModel
@@ -354,20 +354,20 @@ class WebHook extends BlockCypherResourceModel
     }
 
     /**
-     * @return int|string|\string[]
+     * @return int
      */
-    public function getErrors()
+    public function getCallbackErrors()
     {
-        return $this->errors;
+        return $this->callback_errors;
     }
 
     /**
-     * @param int|string|\string[] $errors
+     * @param int $errors
      * @return $this
      */
-    public function setErrors($errors)
+    public function setCallbackErrors($errors)
     {
-        $this->errors = $errors;
+        $this->callback_errors = $errors;
         return $this;
     }
 

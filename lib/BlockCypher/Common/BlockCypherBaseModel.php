@@ -77,5 +77,5 @@ class BlockCypherBaseModel extends BlockCypherModel
         return $this->setErrors(
             array_diff($this->getErrors(), array($error))
         );
-    }
+    }    
 }

@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Common\BlockCypherModel;
+use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
  * Class PatchRequest
@@ -13,7 +13,7 @@ use BlockCypher\Common\BlockCypherModel;
  *
  * @property \BlockCypher\Api\Patch[] patches
  */
-class PatchRequest extends BlockCypherModel
+class PatchRequest extends BlockCypherBaseModel
 {
     /**
      * Append Patches to the list.

@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Common\BlockCypherModel;
+use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
  * Class Output
@@ -17,7 +17,7 @@ use BlockCypher\Common\BlockCypherModel;
  * @property string[] addresses
  * @property string script_type
  */
-class Output extends BlockCypherModel
+class Output extends BlockCypherBaseModel
 {
     /**
      * Value transferred by the transaction output, in satoshi.

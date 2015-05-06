@@ -28,17 +28,19 @@ class OutputTest extends ResourceModelTestCase
     {
         /*
         {
-          "value": 70320221545,
-          "script": "76a914e6aad9d712c419ea8febf009a3f3bfdd8d222fac88ac",
-          "spent_by": "35832d6c70b98b54e9a53ab2d51176eb19ad11bc4505d6bb1ea6c51a68cb92ee",
-          "addresses": [
-            "1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"
-          ],
-          "script_type": "pay-to-pubkey-hash"
+            "value": 70320221545,
+            "script": "76a914e6aad9d712c419ea8febf009a3f3bfdd8d222fac88ac",
+            "spent_by": "35832d6c70b98b54e9a53ab2d51176eb19ad11bc4505d6bb1ea6c51a68cb92ee",
+            "addresses": [
+              "1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"
+            ],
+            "script_type": "pay-to-pubkey-hash",
+            "error": "",
+            "errors": []
         }
         */
         /** @noinspection SpellCheckingInspection */
-        return '{"value":70320221545,"script":"76a914e6aad9d712c419ea8febf009a3f3bfdd8d222fac88ac","spent_by":"35832d6c70b98b54e9a53ab2d51176eb19ad11bc4505d6bb1ea6c51a68cb92ee","addresses":["1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"],"script_type":"pay-to-pubkey-hash"}';
+        return '{"value":70320221545,"script":"76a914e6aad9d712c419ea8febf009a3f3bfdd8d222fac88ac","spent_by":"35832d6c70b98b54e9a53ab2d51176eb19ad11bc4505d6bb1ea6c51a68cb92ee","addresses":["1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"],"script_type":"pay-to-pubkey-hash","error":"","errors":[]}';
     }
 
     /**

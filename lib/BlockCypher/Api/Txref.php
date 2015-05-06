@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Common\BlockCypherModel;
+use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
  * Class Txref
@@ -26,7 +26,7 @@ use BlockCypher\Common\BlockCypherModel;
  * @property int receive_count
  * @property float confidence
  */
-class Txref extends BlockCypherModel
+class Txref extends BlockCypherBaseModel
 {
     /**
      * @return int

@@ -28,7 +28,7 @@ class WebHookTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getAddress());
         $this->assertNotNull($obj->getScript());
         $this->assertNotNull($obj->getUrl());
-        $this->assertNotNull($obj->getErrors());
+        $this->assertNotNull($obj->getCallbackErrors());
         $this->assertNotNull($obj->getFilter());
 
         $this->assertEquals(self::getJson(), $obj->toJson());
@@ -46,16 +46,18 @@ class WebHookTest extends ResourceModelTestCase
             "id": "23beeafe-2f93-4d88-84d9-6cc9acf4d459",
             "token": "c0afcccdde5081d6429de37d16166ead",
             "url": "https://requestb.in/slmm49sl?uniqid=5537d0e823f80",
-            "errors": 0,
+            "callback_errors": 0,
             "event": "unconfirmed-tx",
             "filter": "event=unconfirmed-tx",
             "hash": "TestHash",
             "wallet_name": "TestWalletName",
             "address": "TestAddress",
-            "script": "TestScript"
+            "script": "TestScript",
+            "error": "",
+            "errors": []
         }
         */
-        return '{"id":"23beeafe-2f93-4d88-84d9-6cc9acf4d459","token":"c0afcccdde5081d6429de37d16166ead","url":"https://requestb.in/slmm49sl?uniqid=5537d0e823f80","errors":0,"event":"unconfirmed-tx","filter":"event=unconfirmed-tx","hash":"TestHash","wallet_name":"TestWalletName","address":"TestAddress","script":"TestScript"}';
+        return '{"id":"23beeafe-2f93-4d88-84d9-6cc9acf4d459","token":"c0afcccdde5081d6429de37d16166ead","url":"https://requestb.in/slmm49sl?uniqid=5537d0e823f80","callback_errors":0,"event":"unconfirmed-tx","filter":"event=unconfirmed-tx","hash":"TestHash","wallet_name":"TestWalletName","address":"TestAddress","script":"TestScript","error":"","errors":[]}';
     }
 
     /**
@@ -72,7 +74,7 @@ class WebHookTest extends ResourceModelTestCase
         $this->assertEquals($obj->getAddress(), "TestAddress");
         $this->assertEquals($obj->getScript(), "TestScript");
         $this->assertEquals($obj->getUrl(), "https://requestb.in/slmm49sl?uniqid=5537d0e823f80");
-        $this->assertEquals($obj->getErrors(), 0);
+        $this->assertEquals($obj->getCallbackErrors(), 0);
         $this->assertEquals($obj->getFilter(), "event=unconfirmed-tx");
     }
 

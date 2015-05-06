@@ -36,11 +36,13 @@ class ChainTest extends ResourceModelTestCase
             "previous_hash": "00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab",
             "previous_url": "https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab",
             "peer_count": 257,
-            "unconfirmed_count": 3731
+            "unconfirmed_count": 3731,
+            "error": "",
+            "errors": []
         }
         */
 
-        return '{"name":"BTC.main","height":351963,"hash":"0000000000000000004ffa5650fc8148beb6f9f21bd2a2db115376ecbcb61f21","time":"2015-04-13T15:38:39.568144246Z","latest_url":"https://api.blockcypher.com/v1/btc/main/blocks/0000000000000000004ffa5650fc8148beb6f9f21bd2a2db115376ecbcb61f21","previous_hash":"00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab","previous_url":"https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab","peer_count":257,"unconfirmed_count":3731}';
+        return '{"name":"BTC.main","height":351963,"hash":"0000000000000000004ffa5650fc8148beb6f9f21bd2a2db115376ecbcb61f21","time":"2015-04-13T15:38:39.568144246Z","latest_url":"https://api.blockcypher.com/v1/btc/main/blocks/0000000000000000004ffa5650fc8148beb6f9f21bd2a2db115376ecbcb61f21","previous_hash":"00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab","previous_url":"https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000df8d41fc91fb5514736270c6fd7930b4348c830a8648eab","peer_count":257,"unconfirmed_count":3731,"error":"","errors":[]}';
     }
 
     /**

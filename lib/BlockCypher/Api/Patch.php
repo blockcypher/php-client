@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Common\BlockCypherModel;
+use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
  * Class Patch
@@ -16,7 +16,7 @@ use BlockCypher\Common\BlockCypherModel;
  * @property mixed value
  * @property string from
  */
-class Patch extends BlockCypherModel
+class Patch extends BlockCypherBaseModel
 {
     /**
      * Patch operation to perform.Value required for add & remove operation can be any JSON value.

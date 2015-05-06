@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Common\BlockCypherModel;
+use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
  * Class Input
@@ -21,7 +21,7 @@ use BlockCypher\Common\BlockCypherModel;
  * @property string script_type
  * @property \BlockCypher\Api\RelatedResources[] related_resources
  */
-class Input extends BlockCypherModel
+class Input extends BlockCypherBaseModel
 {
     /**
      * Number of confirmations since the transaction referenced by this input was included in the blockchain.
