@@ -25,12 +25,13 @@ $webHook = new \BlockCypher\Api\WebHook();
 // of the webhook which triggered the request.
 // X-Eventtype: unconfirmed-tx
 // X-Eventid: f1cef7d6-cfd9-459c-8ebc-42226ae2b1a7
-$webHook->setUrl("https://requestb.in/slmm49sl?uniqid=" . uniqid());
+$webHook->setUrl("http://requestb.in/rwp6jirw?uniqid=" . uniqid());
 
 // # Event Types
 // Event types correspond to what kind of notifications you want to receive on the given URL.
 // Complete event list: <a href="http://dev.blockcypher.com/#events">http://dev.blockcypher.com/#events</a>
 $webHook->setEvent('unconfirmed-tx');
+$webHook->setHash('2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa871b');
 
 // For Sample Purposes Only.
 $request = clone $webHook;
