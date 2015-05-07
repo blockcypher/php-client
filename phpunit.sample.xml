@@ -16,6 +16,7 @@
             <directory>tests/sample/Test/Functional/blocks</directory>
             <directory>tests/sample/Test/Functional/chains</directory>
             <directory>tests/sample/Test/Functional/full-addresses</directory>
+            <directory>tests/sample/Test/Functional/transaction-confidence</directory>
             <directory>tests/sample/Test/Functional/transactions</directory>
             <file>tests/sample/Test/Functional/webhooks/CreateAndDeleteAllWebHooksTest.php</file>
             <file>tests/sample/Test/Functional/webhooks/CreateAndDeleteWebHookTest.php</file>

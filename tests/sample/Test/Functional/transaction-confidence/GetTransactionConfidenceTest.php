@@ -5,10 +5,10 @@ namespace sample\Test\Functional\addresses;
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetTransactionsConfidenceTest
+ * Class GetTransactionConfidenceTest
  * @package sample\Test\Functional\addresses
  */
-class GetTransactionsConfidenceTest extends WebTestCase
+class GetTransactionConfidenceTest extends WebTestCase
 {
     public function setUp()
     {
