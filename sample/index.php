@@ -528,10 +528,10 @@ if (PHP_SAPI == 'cli') {
                         <div class="row">
                             <div class="col-md-8"><h5>Get multiple full addresses at once</h5></div>
                             <div class="col-md-4">
-                                <a href="addresses/GetMultipleFullAddresses.php"
+                                <a href="full-addresses/GetMultipleFullAddresses.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/addresses/GetMultipleFullAddresses.html"
+                                <a href="doc/full-addresses/GetMultipleFullAddresses.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
