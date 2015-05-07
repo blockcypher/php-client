@@ -25,13 +25,12 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int n_tx
  * @property int unconfirmed_n_tx
  * @property int final_n_tx
- * @property \BlockCypher\Api\Txref[] txrefs
  * @property string tx_url
+ * @property \BlockCypher\Api\Txref[] txrefs
+ * @property \BlockCypher\Api\Txref[] unconfirmed_txrefs
  */
 class Address extends BlockCypherResourceModel
 {
-    // TODO: Code Review. Replace these fields address, total_received ... final_n_tx by AddressBalance object
-
     /**
      * Create a new address.
      *
@@ -342,6 +341,50 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
+     * Final number of transactions, including unconfirmed transactions, for this address.
+     *
+     * @return int
+     */
+    public function getFinalNTx()
+    {
+        return $this->final_n_tx;
+    }
+
+    /**
+     * Final number of transactions, including unconfirmed transactions, for this address.
+     *
+     * @param int $final_n_tx
+     * @return $this
+     */
+    public function setFinalNTx($final_n_tx)
+    {
+        $this->final_n_tx = $final_n_tx;
+        return $this;
+    }
+
+    /**
+     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
+     *
+     * @return string
+     */
+    public function getTxUrl()
+    {
+        return $this->tx_url;
+    }
+
+    /**
+     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
+     *
+     * @param string $tx_url
+     * @return $this
+     */
+    public function setTxUrl($tx_url)
+    {
+        $this->tx_url = $tx_url;
+        return $this;
+    }
+
+    /**
      * Append Txref to the list.
      *
      * @param \BlockCypher\Api\Txref $txref
@@ -395,46 +438,54 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
+     * Append Unconfirmed Txref to the list.
      *
-     * @return string
+     * @param \BlockCypher\Api\Txref $unconfirmedTxref
+     * @return $this
      */
-    public function getTxUrl()
+    public function addUnconfirmedTxref($unconfirmedTxref)
     {
-        return $this->tx_url;
+        if (!$this->getUnconfirmedTxrefs()) {
+            return $this->setUnconfirmedTxrefs(array($unconfirmedTxref));
+        } else {
+            return $this->setUnconfirmedTxrefs(
+                array_merge($this->getUnconfirmedTxrefs(), array($unconfirmedTxref))
+            );
+        }
+    }    
+
+    /**
+     * All unconfirmed transaction inputs and outputs for the specified address.
+     *
+     * @return Txref[]
+     */
+    public function getUnconfirmedTxrefs()
+    {
+        return $this->unconfirmed_txrefs;
     }
 
     /**
-     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
+     * All unconfirmed transaction inputs and outputs for the specified address.
      *
-     * @param string $tx_url
+     * @param Txref[] $unconfirmed_txrefs
      * @return $this
      */
-    public function setTxUrl($tx_url)
+    public function setUnconfirmedTxrefs($unconfirmed_txrefs)
     {
-        $this->tx_url = $tx_url;
+        $this->unconfirmed_txrefs = $unconfirmed_txrefs;
         return $this;
     }
 
     /**
-     * Final number of transactions, including unconfirmed transactions, for this address.
+     * Remove Unconfirmed Txref from the list.
      *
-     * @return int
-     */
-    public function getFinalNTx()
-    {
-        return $this->final_n_tx;
-    }
-
-    /**
-     * Final number of transactions, including unconfirmed transactions, for this address.
-     *
-     * @param int $final_n_tx
+     * @param \BlockCypher\Api\Txref $unconfirmedTxref
      * @return $this
      */
-    public function setFinalNTx($final_n_tx)
+    public function removeUnconfirmedTxref($unconfirmedTxref)
     {
-        $this->final_n_tx = $final_n_tx;
-        return $this;
-    }
+        return $this->setUnconfirmedTxrefs(
+            array_diff($this->getUnconfirmedTxrefs(), array($unconfirmedTxref))
+        );
+    }    
 }

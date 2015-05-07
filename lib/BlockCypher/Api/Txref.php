@@ -18,7 +18,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
  * @property int value
  * @property string preference
  * @property bool spent
- * @property string spend_by
+ * @property string spent_by
  * @property int confirmations
  * @property string confirmed
  * @property bool double_spend
@@ -247,6 +247,24 @@ class Txref extends BlockCypherBaseModel
     }
 
     /**
+     * @return string
+     */
+    public function getPreference()
+    {
+        return $this->preference;
+    }
+
+    /**
+     * @param string $preference
+     * @return $this
+     */
+    public function setPreference($preference)
+    {
+        $this->preference = $preference;
+        return $this;
+    }
+
+    /**
      * Is 'true' if the output was spent.
      *
      * @return boolean
@@ -275,6 +293,24 @@ class Txref extends BlockCypherBaseModel
     public function setSpent($spent)
     {
         $this->spent = $spent;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSpentBy()
+    {
+        return $this->spent_by;
+    }
+
+    /**
+     * @param string $spent_by
+     * @return $this
+     */
+    public function setSpentBy($spent_by)
+    {
+        $this->spent_by = $spent_by;
         return $this;
     }
 
