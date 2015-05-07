@@ -1,14 +1,14 @@
 <?php
 
-// # Get Only Balance Sample
+// # Get Address Balance Sample
 // This method allows you to
-// retrieve only balance and number of transactions for a given address/wallet.
+// retrieve only balance for a given address/wallet.
 // API called: '/v1/btc/main/addrs/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD/balance'
 
 require __DIR__ . '/../bootstrap.php';
 
 // The following code takes you through
-// the process of retrieving balance and number of transactions about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
+// the process of retrieving balance about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 
 /// ### Retrieve this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD balance
 // (See bootstrap.php for more on `ApiContext`)
