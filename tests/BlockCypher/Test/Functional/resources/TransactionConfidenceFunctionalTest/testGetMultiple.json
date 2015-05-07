@@ -1,0 +1,47 @@
+{
+  "description": "Obtain multiple transaction confidence resources for the given transactions.",
+  "title": "Get multiple transaction confidence resources",
+  "runnable": true,
+  "operationId": "transaction_confidence.get_multiple",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main/txs/950d61ab2f51ea877e6183c8210de1677d78e16abfd4103990c3703f17de13a7;6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780/confidence",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": [
+      {
+        "age_seconds": 8.22636511835647e+09,
+        "receive_count": -1,
+        "confidence": 1,
+        "txhash": "950d61ab2f51ea877e6183c8210de1677d78e16abfd4103990c3703f17de13a7",
+        "txurl": "https://api.blockcypher.com/v1/btc/main/txs/950d61ab2f51ea877e6183c8210de1677d78e16abfd4103990c3703f17de13a7"
+      },
+      {
+        "age_seconds": 8.226365118358858e+09,
+        "receive_count": -1,
+        "confidence": 1,
+        "txhash": "6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780",
+        "txurl": "https://api.blockcypher.com/v1/btc/main/txs/6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780"
+      }
+    ],
+    "status": "200 OK"
+  }
+}

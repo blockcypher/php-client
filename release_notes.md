@@ -7,6 +7,7 @@ v1.0.0-beta
 * Allow getting token from config ini file
 * Removed FINE log level
 * Added BlockCypherBaseModel. Base model class with error and errors properties
+* Added TransactionConfidence class
 
 v0.6.0
 ------
