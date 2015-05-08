@@ -501,10 +501,10 @@ if (PHP_SAPI == 'cli') {
                         <div class="row">
                             <div class="col-md-8"><h5>Get multiple addresses balance at once (only balance)</h5></div>
                             <div class="col-md-4">
-                                <a href="addresses/GetMultipleAddressesBalance.php"
+                                <a href="address-balance/GetMultipleAddressesBalance.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/addresses/GetMultipleAddressesBalance.html"
+                                <a href="doc/address-balance/GetMultipleAddressesBalance.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
