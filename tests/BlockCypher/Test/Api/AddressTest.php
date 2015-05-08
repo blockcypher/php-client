@@ -11,9 +11,6 @@ use BlockCypher\Api\Address;
  */
 class AddressTest extends ResourceModelTestCase
 {
-    // TODO: add test for paging
-    // http://api.blockcypher.com/v1/btc/main/addrs/1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE?unspentOnly=true&before=300000
-
     /**
      * Tests for Serialization and Deserialization Issues
      * @return Address

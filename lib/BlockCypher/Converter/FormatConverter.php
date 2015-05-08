@@ -31,8 +31,11 @@ class FormatConverter
     {
         $decimals = 2;
         $currencyDecimals = array(
-            // TODO: add the rest od virtual currencies supported by the API
             'BTC' => 8,
+            'DOGE' => 8,
+            'LTC' => 8,
+            'URO' => 8,
+            'BCY' => 8,
             'JPY' => 0,
             'TWD' => 0
         );
