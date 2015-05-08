@@ -12,13 +12,13 @@ use BlockCypher\Validation\ModelAccessorValidator;
  */
 class BlockCypherModel
 {
-
     /**
-     * OAuth Credentials to use for this call
+     * Credentials to use for this call
      *
-     * @var \BlockCypher\Auth\OAuthTokenCredential $credential
+     * @var \BlockCypher\Auth\TokenCredential $credential
      */
     protected static $credential;
+
     private $_propMap = array();
 
     /**
