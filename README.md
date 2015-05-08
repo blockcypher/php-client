@@ -6,6 +6,8 @@
 
 __Welcome to BlockChyper PHP SDK__. This repository contains BlockChyper's PHP SDK and samples for REST API.
 
+> **Before starting to use the sdk, please be aware it´s still a beta.
+
 ## SDK Documentation
 
 [ Our BlockChyper-PHP-SDK Page ](http://blockcypher.github.io/php-client/) includes all the documentation related to PHP SDK. Everything from SDK Wiki, to Sample Codes, to Releases. Here are few quick links to get you there faster.
