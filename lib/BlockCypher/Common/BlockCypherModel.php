@@ -2,6 +2,7 @@
 
 namespace BlockCypher\Common;
 
+use BlockCypher\Api\Error;
 use BlockCypher\Validation\JsonValidator;
 use BlockCypher\Validation\ModelAccessorValidator;
 
@@ -162,7 +163,17 @@ class BlockCypherModel
 
         if (is_a($data, get_class(new \stdClass()))) {
             //This means, root element is object
-            return new static(json_encode($data));
+
+            $accessibleProperties = get_object_vars($data);
+
+            if (count($accessibleProperties) == 1
+                && (isset($accessibleProperties['error']) || isset($accessibleProperties['errors']))
+            ) {
+                // Object is only an error {"error":"message"} or {"errors":["error1":"message1"]}
+                return new Error(json_encode($data));
+            } else {
+                return new static(json_encode($data));
+            }
         }
 
         $list = array();
