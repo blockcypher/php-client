@@ -31,11 +31,15 @@ __Welcome to BlockChyper PHP SDK__. This repository contains BlockChyper's PHP S
    * [Reporting Issues / Feature Requests] (https://github.com/blockcypher/php-client/issues)
    
 ## Upcoming features
-Currently unavailable/upcoming REST API features.
+
+Currently unavailable/upcoming REST API features
+
    * [Address Wallets API](http://dev.blockcypher.com/#wallet_api)
    * [Payments and Forwarding](http://dev.blockcypher.com/#payments)
    * [Creating Transactions](http://dev.blockcypher.com/#creating_transactions)
+   
 New samples
+
    - PHP wallet demo.
    - Faucet use.
    - Capturing callback sample.
