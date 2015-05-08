@@ -23,7 +23,7 @@ after_success:
 notifications:
   email:
     recipients:
-    - DL-PP-PHP-SDK@ebay.com
+    - josecelano@gmail.com
     on_success: change
 env:
   global:
