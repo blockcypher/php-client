@@ -25,6 +25,7 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int n_tx
  * @property int unconfirmed_n_tx
  * @property int final_n_tx
+ * @property bool has_more
  * @property string tx_url
  * @property \BlockCypher\Api\Txref[] txrefs
  * @property \BlockCypher\Api\Txref[] unconfirmed_txrefs
@@ -360,6 +361,32 @@ class Address extends BlockCypherResourceModel
     {
         $this->final_n_tx = $final_n_tx;
         return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function hasMore()
+    {
+        return $this->has_more;
+    }
+
+    /**
+     * @param boolean $has_more
+     * @return $this
+     */
+    public function setHasMore($has_more)
+    {
+        $this->has_more = $has_more;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getHasMore()
+    {
+        return $this->has_more;
     }
 
     /**
