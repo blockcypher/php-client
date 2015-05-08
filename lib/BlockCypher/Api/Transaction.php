@@ -30,6 +30,7 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int ver
  * @property int lock_time
  * @property bool double_spend
+ * @property string double_spend_tx
  * @property string double_of
  * @property int receive_count
  * @property int vin_sz
@@ -379,6 +380,24 @@ class Transaction extends BlockCypherResourceModel
     public function setDoubleSpend($double_spend)
     {
         $this->double_spend = $double_spend;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDoubleSpendTx()
+    {
+        return $this->double_spend_tx;
+    }
+
+    /**
+     * @param string $double_spend_tx
+     * @return $this
+     */
+    public function setDoubleSpendTx($double_spend_tx)
+    {
+        $this->double_spend_tx = $double_spend_tx;
         return $this;
     }
 
