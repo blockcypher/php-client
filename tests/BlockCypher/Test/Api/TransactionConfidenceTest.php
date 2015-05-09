@@ -11,6 +11,9 @@ use BlockCypher\Api\TransactionConfidence;
  */
 class TransactionConfidenceTest extends ResourceModelTestCase
 {
+    // TODO: some test fail if this value is used: "age_seconds": 8226347662.8374
+    // If a number in json has more than 14 digits (32bits system W7 PHP 5.3.10)
+
     /**
      * Tests for Serialization and Deserialization Issues
      * @return TransactionConfidence
@@ -28,11 +31,8 @@ class TransactionConfidenceTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getError());
         $this->assertNotNull($obj->getErrors());
 
-        //$precision = ini_get('precision');
-        //$minFloatString = '0.'.str_repeat('0', $precision-2).'1';
-        //$minFloat = (float)$minFloatString;
-        //$this->assertEquals(self::getJson(), $obj->toJson(), '', $minFloat);
-
+        // TODO: use assertJsonStringEqualsJsonString instead of assertEquals?
+        //$this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
         $this->assertEquals(self::getJson(), $obj->toJson());
 
         return $obj;
@@ -53,7 +53,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
 
         /*
         {
-            "age_seconds": 8226347662.8374,
+            "age_seconds": 8226347662.8384,
             "receive_count": -1,
             "confidence": 1,
             "txhash": "f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449",
@@ -62,7 +62,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
             "errors": []
         }
         */
-        return '{"age_seconds":8226347662.8374,"receive_count":-1,"confidence":1,"txhash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","txurl":"https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","error":"","errors":[]}';
+        return '{"age_seconds":8226347662.84,"receive_count":-1,"confidence":1,"txhash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","txurl":"https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","error":"","errors":[]}';
     }
 
     /**
@@ -71,7 +71,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
      */
     public function testGetters($obj)
     {
-        $this->assertEquals($obj->getAgeSeconds(), 8226347662.8374);
+        $this->assertEquals($obj->getAgeSeconds(), 8226347662.84);
         $this->assertEquals($obj->getReceiveCount(), -1);
         $this->assertEquals($obj->getConfidence(), 1);
         $this->assertEquals($obj->getTxhash(), "f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449");
