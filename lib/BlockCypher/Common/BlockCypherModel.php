@@ -3,6 +3,7 @@
 namespace BlockCypher\Common;
 
 use BlockCypher\Api\Error;
+use BlockCypher\Converter\JsonConverter;
 use BlockCypher\Validation\JsonValidator;
 use BlockCypher\Validation\ModelAccessorValidator;
 
@@ -55,7 +56,8 @@ class BlockCypherModel
      */
     public function fromJson($json)
     {
-        return $this->fromArray(json_decode($json, true));
+        //return $this->fromArray(JsonConverter::decode($json, true, 512, JSON_BIGINT_AS_STRING));
+        return $this->fromArray(JsonConverter::decode($json, true));
     }
 
     /**
@@ -170,21 +172,21 @@ class BlockCypherModel
                 && (isset($accessibleProperties['error']) || isset($accessibleProperties['errors']))
             ) {
                 // Object is only an error {"error":"message"} or {"errors":["error1":"message1"]}
-                return new Error(json_encode($data));
+                return new Error(JsonConverter::encode($data));
             } else {
-                return new static(json_encode($data));
+                return new static(JsonConverter::encode($data));
             }
         }
 
         $list = array();
 
         if (is_array($data)) {
-            $data = json_encode($data);
+            $data = JsonConverter::encode($data);
         }
 
         if (JsonValidator::validate($data)) {
             // It is valid JSON
-            $decoded = json_decode($data);
+            $decoded = JsonConverter::decode($data);
             if ($decoded === null) {
                 return $list;
             }
@@ -195,7 +197,7 @@ class BlockCypherModel
             }
             if (is_a($decoded, get_class(new \stdClass()))) {
                 //This means, root element is object
-                $list[] = new static(json_encode($decoded));
+                $list[] = new static(JsonConverter::encode($decoded));
             }
         }
 
@@ -271,15 +273,11 @@ class BlockCypherModel
      */
     public function toJSON($options = 0)
     {
-        // Because of PHP Version 5.3, we cannot use JSON_UNESCAPED_SLASHES option
-        // Instead we would use the str_replace command for now.
-        // TODO: Replace this code with return json_encode($this->toArray(), $options | 64); once we support PHP >= 5.4
-        if (version_compare(phpversion(), '5.4.0', '>=') === true) {
-            // http://php.net/manual/es/json.constants.php
-            return json_encode($this->toArray(), $options | 2 | 64);
-        }
-        // TODO: replace &
-        return str_replace('\\/', '/', json_encode($this->toArray(), $options));
+        //$options = $options | JSON_HEX_AMP | JSON_NUMERIC_CHECK | JSON_UNESCAPED_SLASHES;
+
+        $options = $options | 2 | 64; // $options | JSON_HEX_AMP | JSON_UNESCAPED_SLASHES;
+
+        return JsonConverter::encode($this->toArray(), $options);
     }
 
     /**
