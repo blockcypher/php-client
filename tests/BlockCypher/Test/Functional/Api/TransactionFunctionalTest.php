@@ -56,7 +56,9 @@ class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
         // Assert only immutable values.
         $this->assertEquals($transaction->getHash(), $result->getHash());
         $this->assertEquals($transaction->getAddresses(), $result->getAddresses());
-        $this->assertEquals($transaction->getInputs()[0]->getPrevHash(), $result->getInputs()[0]->getPrevHash());
+        $transactionInputs = $transaction->getInputs();
+        $resultInputs = $result->getInputs();
+        $this->assertEquals($transactionInputs[0]->getPrevHash(), $resultInputs[0]->getPrevHash());
         return $result;
     }
 
@@ -104,7 +106,9 @@ class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
         // Assert only immutable values.
         $this->assertEquals($transaction->getHash(), $result->getHash());
         $this->assertEquals($transaction->getAddresses(), $result->getAddresses());
-        $this->assertEquals($transaction->getInputs()[0]->getPrevHash(), $result->getInputs()[0]->getPrevHash());
+        $transactionInputs = $transaction->getInputs();
+        $resultInputs = $result->getInputs();
+        $this->assertEquals($transactionInputs[0]->getPrevHash(), $resultInputs[0]->getPrevHash());
         return $result;
     }
 }

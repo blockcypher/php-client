@@ -78,7 +78,9 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
         // Assert only immutable values.
         $this->assertEquals($address->getAddress(), $result->getAddress());
         $this->assertEquals($address->getTxUrl(), $result->getTxUrl());
-        $this->assertEquals($address->getTxrefs()[0]->getTxHash(), $result->getTxrefs()[0]->getTxHash());
+        $addressTxrefs = $address->getTxrefs();
+        $resultTxrefs = $result->getTxrefs();
+        $this->assertEquals($addressTxrefs[0]->getTxHash(), $resultTxrefs[0]->getTxHash());
         return $result;
     }
 
