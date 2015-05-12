@@ -42,6 +42,7 @@ class TxrefTest extends ResourceModelTestCase
             "spent_by": "14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e",
             "confirmations": 50118,
             "confirmed": "2014-05-22T03:46:25Z",
+            "received": "2014-05-22T03:46:25Z",
             "double_spend": false,
             "double_of": "14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e",
             "receive_count": 42,
@@ -50,7 +51,7 @@ class TxrefTest extends ResourceModelTestCase
             "errors": []
         }
         */
-        return '{"tx_hash":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","block_height":302013,"tx_input_n":-1,"tx_output_n":0,"value":20213,"preference":"high","spent":false,"spent_by":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","confirmations":50118,"confirmed":"2014-05-22T03:46:25Z","double_spend":false,"double_of":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","receive_count":42,"confidence":0.98819,"error":"","errors":[]}';
+        return '{"tx_hash":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","block_height":302013,"tx_input_n":-1,"tx_output_n":0,"value":20213,"preference":"high","spent":false,"spent_by":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","confirmations":50118,"confirmed":"2014-05-22T03:46:25Z","received":"2014-05-22T03:46:25Z","double_spend":false,"double_of":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","receive_count":42,"confidence":0.98819,"error":"","errors":[]}';
     }
 
     /**
@@ -72,6 +73,7 @@ class TxrefTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getSpentBy());
         $this->assertNotNull($obj->getConfirmations());
         $this->assertNotNull($obj->getConfirmed());
+        $this->assertNotNull($obj->getReceived());
         $this->assertNotNull($obj->isDoubleSpend());
         $this->assertNotNull($obj->getDoubleOf());
         $this->assertNotNull($obj->getReceiveCount());
@@ -99,6 +101,7 @@ class TxrefTest extends ResourceModelTestCase
         $this->assertEquals($obj->getSpentBy(), "14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e");
         $this->assertEquals($obj->getConfirmations(), 50118);
         $this->assertEquals($obj->getConfirmed(), "2014-05-22T03:46:25Z");
+        $this->assertEquals($obj->getReceived(), "2014-05-22T03:46:25Z");
         $this->assertEquals($obj->isDoubleSpend(), false);
         $this->assertEquals($obj->getDoubleSpend(), false);
         $this->assertEquals($obj->getDoubleOf(), "14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e");

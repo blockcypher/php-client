@@ -21,6 +21,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
  * @property string spent_by
  * @property int confirmations
  * @property string confirmed
+ * @property string received
  * @property bool double_spend
  * @property string double_of
  * @property int receive_count
@@ -47,6 +48,8 @@ class Txref extends BlockCypherBaseModel
     }
 
     /**
+     * Unconfirmed transactions only. Confidence this transaction will be confirmed (see Zero Confirmations).
+     *
      * @return float
      */
     public function getConfidence()
@@ -55,6 +58,8 @@ class Txref extends BlockCypherBaseModel
     }
 
     /**
+     * Unconfirmed transactions only. Confidence this transaction will be confirmed (see Zero Confirmations).
+     *
      * @param float $confidence
      * @return $this
      */
@@ -65,6 +70,8 @@ class Txref extends BlockCypherBaseModel
     }
 
     /**
+     * Date at which the transaction was included in a block, in ISO format.
+     *
      * @return string
      */
     public function getConfirmed()
@@ -73,12 +80,36 @@ class Txref extends BlockCypherBaseModel
     }
 
     /**
+     * Date at which the transaction was included in a block, in ISO format.
+     *
      * @param string $confirmed
      * @return $this
      */
     public function setConfirmed($confirmed)
     {
         $this->confirmed = $confirmed;
+        return $this;
+    }
+
+    /**
+     * When the transaction was received by BlockCypher servers.
+     *
+     * @return string
+     */
+    public function getReceived()
+    {
+        return $this->received;
+    }
+
+    /**
+     * When the transaction was received by BlockCypher servers.
+     *
+     * @param string $received
+     * @return $this
+     */
+    public function setReceived($received)
+    {
+        $this->received = $received;
         return $this;
     }
 

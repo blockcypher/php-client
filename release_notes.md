@@ -1,6 +1,11 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v1.0.0
+------
+
+* Added TxrefTest::received property
+
 v1.0.0-beta
 -----------
 
