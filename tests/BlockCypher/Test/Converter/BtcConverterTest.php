@@ -23,7 +23,6 @@ class BtcConverterTest extends \PHPUnit_Framework_TestCase
             array('     ', null),
             array('a', null),
             array('1a', null),
-            array(array(), null),
         );
     }
 
@@ -45,7 +44,6 @@ class BtcConverterTest extends \PHPUnit_Framework_TestCase
             array('     ', null),
             array('a', null),
             array('1a', null),
-            array(array(), null),
         );
     }
 
@@ -68,7 +66,6 @@ class BtcConverterTest extends \PHPUnit_Framework_TestCase
             array('     ', null),
             array('a', null),
             array('1a', null),
-            array(array(), null),
         );
     }
 
