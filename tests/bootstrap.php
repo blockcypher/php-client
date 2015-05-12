@@ -7,3 +7,6 @@ $loader->add('sample\\Test', __DIR__);
 if (!defined("BC_CONFIG_PATH")) {
     define("BC_CONFIG_PATH", __DIR__);
 }
+
+ini_set('precision', 17);
+ini_set('serialize_precision', 17);

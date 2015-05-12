@@ -26,6 +26,12 @@ use BlockCypher\Rest\ApiContext;
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
+if (ini_set('precision', 17) === false) {
+    die("Couldn't update precision.");
+}
+if (ini_set('serialize_precision', 17) === false) {
+    die("Couldn't update serialize_precision.");
+}
 
 // Replace these values by entering your own token by visiting https://accounts.blockcypher.com/
 /** @noinspection SpellCheckingInspection */
