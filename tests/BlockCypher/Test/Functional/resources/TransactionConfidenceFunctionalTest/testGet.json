@@ -27,7 +27,7 @@
   "response": {
     "headers": {},
     "body": {
-      "age_seconds": 8.226364789854583e+09,
+      "age_millis": 1502800272850054400,
       "receive_count": -1,
       "confidence": 1,
       "txhash": "950d61ab2f51ea877e6183c8210de1677d78e16abfd4103990c3703f17de13a7",

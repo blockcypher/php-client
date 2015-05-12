@@ -79,7 +79,7 @@ class TxrefTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getReceiveCount());
         $this->assertNotNull($obj->getConfidence());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
 
         return $obj;
     }

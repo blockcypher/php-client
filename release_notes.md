@@ -5,6 +5,7 @@ v1.0.0
 ------
 
 * Added TxrefTest::received property
+* Renamed TransactionConfidence::age_seconds TransactionConfidence::age_millis
 
 v1.0.0-beta
 -----------

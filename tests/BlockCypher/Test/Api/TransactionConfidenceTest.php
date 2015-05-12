@@ -11,9 +11,6 @@ use BlockCypher\Api\TransactionConfidence;
  */
 class TransactionConfidenceTest extends ResourceModelTestCase
 {
-    // TODO: some test fail if this value is used: "age_seconds": 8226347662.8374
-    // If a number in json has more than 14 digits (32bits system W7 PHP 5.3.10)
-
     /**
      * Tests for Serialization and Deserialization Issues
      * @return TransactionConfidence
@@ -23,7 +20,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
         $obj = new TransactionConfidence(self::getJson());
 
         $this->assertNotNull($obj);
-        $this->assertNotNull($obj->getAgeSeconds());
+        $this->assertNotNull($obj->getAgeMillis());
         $this->assertNotNull($obj->getReceiveCount());
         $this->assertNotNull($obj->getConfidence());
         $this->assertNotNull($obj->getTxhash());
@@ -31,9 +28,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getError());
         $this->assertNotNull($obj->getErrors());
 
-        // TODO: use assertJsonStringEqualsJsonString instead of assertEquals?
-        //$this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
 
         return $obj;
     }
@@ -44,16 +39,9 @@ class TransactionConfidenceTest extends ResourceModelTestCase
      */
     public static function getJson()
     {
-        // NOTICE: test fail with float values with precision bigger than php setting value (default value 14)
-        // e.g.:
-        // "age_seconds": 8.226347662837406e+09,
-        // value is converted to float 8226347662.8374 and later back to json:
-        // "age_seconds": 8.226347662837406,
-        // https://bugs.php.net/bug.php?id=68200
-
         /*
         {
-            "age_seconds": 8226347662.8384,
+            "age_millis": 1082096894333054400,
             "receive_count": -1,
             "confidence": 1,
             "txhash": "f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449",
@@ -62,7 +50,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
             "errors": []
         }
         */
-        return '{"age_seconds":8226347662.84,"receive_count":-1,"confidence":1,"txhash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","txurl":"https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","error":"","errors":[]}';
+        return '{"age_millis":1082096894333054400,"receive_count":-1,"confidence":1,"txhash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","txurl":"https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","error":"","errors":[]}';
     }
 
     /**
@@ -71,7 +59,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
      */
     public function testGetters($obj)
     {
-        $this->assertEquals($obj->getAgeSeconds(), 8226347662.84);
+        $this->assertEquals($obj->getAgeMillis(), 1082096894333054400);
         $this->assertEquals($obj->getReceiveCount(), -1);
         $this->assertEquals($obj->getConfidence(), 1);
         $this->assertEquals($obj->getTxhash(), "f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449");

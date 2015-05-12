@@ -16,7 +16,7 @@ use BlockCypher\Validation\ArgumentValidator;
  *
  * @package BlockCypher\Api
  *
- * @property float age_seconds
+ * @property int age_millis
  * @property int receive_count
  * @property float confidence
  * @property string txhash
@@ -93,20 +93,20 @@ class TransactionConfidence extends BlockCypherResourceModel
     }
 
     /**
-     * @return float
+     * @return int
      */
-    public function getAgeSeconds()
+    public function getAgeMillis()
     {
-        return $this->age_seconds;
+        return $this->age_millis;
     }
 
     /**
-     * @param float $age_seconds
+     * @param int $age_millis
      * @return $this
      */
-    public function setAgeSeconds($age_seconds)
+    public function setAgeMillis($age_millis)
     {
-        $this->age_seconds = $age_seconds;
+        $this->age_millis = $age_millis;
         return $this;
     }
 
