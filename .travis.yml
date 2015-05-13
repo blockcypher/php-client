@@ -23,7 +23,7 @@ after_success:
 notifications:
   email:
     recipients:
-    - josecelano@gmail.com
+    - travis@josecelano.email
     on_success: change
 env:
   global:
