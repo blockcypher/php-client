@@ -4,6 +4,7 @@ namespace BlockCypher\Common;
 
 use BlockCypher\Api\Error;
 use BlockCypher\Converter\JsonConverter;
+use BlockCypher\Core\BlockCypherLoggingManager;
 use BlockCypher\Validation\JsonValidator;
 use BlockCypher\Validation\ModelAccessorValidator;
 
@@ -96,9 +97,18 @@ class BlockCypherModel
                             // Iterate through each element in that array.
                             foreach ($v as $nk => $nv) {
                                 if (is_array($nv)) {
-                                    $o = new $clazz();
-                                    $o->fromArray($nv);
-                                    $arr[$nk] = $o;
+                                    BlockCypherLoggingManager::getInstance()->debug("new instance of class: $clazz");
+                                    if (!class_exists($clazz)) {
+                                        BlockCypherLoggingManager::getInstance()->error("Class not found: $clazz");
+                                    } else {
+                                        try {
+                                            $o = new $clazz();
+                                            $o->fromArray($nv);
+                                            $arr[$nk] = $o;
+                                        } catch (\Exception $e) {
+                                            BlockCypherLoggingManager::getInstance()->error($e->getMessage());
+                                        }
+                                    }
                                 } else {
                                     $arr[$nk] = $nv;
                                 }
