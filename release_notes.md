@@ -15,6 +15,7 @@ v1.0.0-beta
 * Removed FINE log level
 * Added BlockCypherBaseModel. Base model class with error and errors properties
 * Added TransactionConfidence class
+* Added Address:getAllTxrefs method
 
 v0.6.0
 ------

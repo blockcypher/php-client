@@ -484,7 +484,7 @@ class Address extends BlockCypherResourceModel
     /**
      * All unconfirmed transaction inputs and outputs for the specified address.
      *
-     * @return Txref[]
+     * @return \BlockCypher\Api\Txref[]
      */
     public function getUnconfirmedTxrefs()
     {
@@ -494,7 +494,7 @@ class Address extends BlockCypherResourceModel
     /**
      * All unconfirmed transaction inputs and outputs for the specified address.
      *
-     * @param Txref[] $unconfirmed_txrefs
+     * @param \BlockCypher\Api\Txref[] $unconfirmed_txrefs
      * @return $this
      */
     public function setUnconfirmedTxrefs($unconfirmed_txrefs)
@@ -514,5 +514,26 @@ class Address extends BlockCypherResourceModel
         return $this->setUnconfirmedTxrefs(
             array_diff($this->getUnconfirmedTxrefs(), array($unconfirmedTxref))
         );
-    }    
+    }
+
+    /**
+     * All transactions refs for confirmed and unconfirmed transactions.
+     *
+     * @return \BlockCypher\Api\Txref[]
+     */
+    public function getAllTxrefs()
+    {
+        $allTxrefs = array();
+        if (is_array($this->txrefs)) {
+            $allTxrefs = array_merge($allTxrefs, $this->txrefs);
+        }
+        if (is_array($this->unconfirmed_txrefs)) {
+            $allTxrefs = array_merge($allTxrefs, $this->unconfirmed_txrefs);
+        }
+
+        if (count($allTxrefs) == 0)
+            return null;
+        else
+            return $allTxrefs;
+    }
 }
