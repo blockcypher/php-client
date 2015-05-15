@@ -9,6 +9,9 @@ use BlockCypher\Validation\ArgumentArrayValidator;
 use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
+// TODO: add next_inputs
+// https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=1&outstart=1&limit=1&token=c0afcccdde5081d6429de37d16166ead
+
 /**
  * Class Chain
  *

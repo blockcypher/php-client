@@ -62,6 +62,9 @@ class TransactionTest extends ResourceModelTestCase
      */
     public static function getJson()
     {
+        // TODO: add next_inputs
+        // https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=1&outstart=1&limit=1&token=c0afcccdde5081d6429de37d16166ead
+
         /*
         {
           "block_hash": "0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328",
