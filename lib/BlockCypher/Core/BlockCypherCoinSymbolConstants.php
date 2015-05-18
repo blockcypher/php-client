@@ -84,12 +84,14 @@ class BlockCypherCoinSymbolConstants
             "address_first_char_list" => array('B', 'C', 'D')
         )
     );
+
     /**
      * Singleton Object
      *
      * @var $this
      */
-    private static $instance;
+    protected static $instance;
+
     /**
      * @const array
      */
@@ -142,7 +144,7 @@ class BlockCypherCoinSymbolConstants
     /**
      * Private Constructor
      */
-    private function __construct()
+    public function __construct()
     {
         // Safety checks on the data
         $this->checkData();
@@ -276,10 +278,10 @@ class BlockCypherCoinSymbolConstants
      */
     public static function getInstance()
     {
-        if (!isset(static::$instance)) {
-            static::$instance = new static();
+        if (!isset(self::$instance)) {
+            self::$instance = new self();
         }
-        return static::$instance;
+        return self::$instance;
     }
 
     /**
