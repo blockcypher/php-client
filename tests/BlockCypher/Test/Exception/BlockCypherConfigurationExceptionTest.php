@@ -1,4 +1,5 @@
 <?php
+
 use BlockCypher\Exception\BlockCypherConfigurationException;
 
 /**
@@ -34,5 +35,3 @@ class BlockCypherConfigurationExceptionTest extends \PHPUnit_Framework_TestCase
     {
     }
 }
-
-?>
