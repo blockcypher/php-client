@@ -97,7 +97,7 @@ class BlockCypherModel
                             // Iterate through each element in that array.
                             foreach ($v as $nk => $nv) {
                                 if (is_array($nv)) {
-                                    BlockCypherLoggingManager::getInstance()->debug("new instance of class: $clazz");
+                                    //BlockCypherLoggingManager::getInstance()->debug("new instance of class: $clazz");
                                     if (!class_exists($clazz)) {
                                         BlockCypherLoggingManager::getInstance()->error("Class not found: $clazz");
                                     } else {

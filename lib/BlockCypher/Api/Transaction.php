@@ -9,9 +9,6 @@ use BlockCypher\Validation\ArgumentArrayValidator;
 use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
-// TODO: add next_inputs
-// https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=1&outstart=1&limit=1&token=c0afcccdde5081d6429de37d16166ead
-
 /**
  * Class Chain
  *
@@ -42,6 +39,7 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int confidence
  * @property \BlockCypher\Api\Input[] inputs
  * @property \BlockCypher\Api\Output[] outputs
+ * @property string next_inputs
  */
 class Transaction extends BlockCypherResourceModel
 {
@@ -628,5 +626,23 @@ class Transaction extends BlockCypherResourceModel
     public function getFees()
     {
         return $this->fees;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNextInputs()
+    {
+        return $this->next_inputs;
+    }
+
+    /**
+     * @param string $next_inputs
+     * @return $this
+     */
+    public function setNextInputs($next_inputs)
+    {
+        $this->next_inputs = $next_inputs;
+        return $this;
     }
 }

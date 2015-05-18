@@ -51,6 +51,7 @@ class TransactionTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getConfidence());
         $this->assertNotNull($obj->getInputs());
         $this->assertNotNull($obj->getOutputs());
+        $this->assertNotNull($obj->getNextInputs());
 
         $this->assertEquals(self::getJson(), $obj->toJson());
         return $obj;
@@ -62,9 +63,6 @@ class TransactionTest extends ResourceModelTestCase
      */
     public static function getJson()
     {
-        // TODO: add next_inputs
-        // https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=1&outstart=1&limit=1&token=c0afcccdde5081d6429de37d16166ead
-
         /*
         {
           "block_hash": "0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328",
@@ -147,13 +145,14 @@ class TransactionTest extends ResourceModelTestCase
               "script_type": "pay-to-pubkey-hash"
             }
           ],
+          "next_inputs": "https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=2\u0026outstart=1\u0026limit=1",
           "error": "",
           "errors": []
         }
         */
 
         /** @noinspection SpellCheckingInspection */
-        return '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","block_height":293000,"hash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","addresses":["13XXaBufpMvqRqLkyDty1AXqueZHVe6iyy","19YtzZdcfs1V2ZCgyRWo8i2wLT8ND1Tu4L","1BNiazBzCxJacAKo2yL83Wq1VJ18AYzNHy","1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq","1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"],"total":70320221545,"fees":0,"preference":"low","relayed_by":"","confirmed":"2014-03-29T01:29:19Z","received":"2014-03-29T01:29:19Z","ver":1,"lock_time":0,"double_spend":false,"vin_sz":4,"vout_sz":1,"confirmations":59116,"confidence":1,"inputs":[' . InputTest::getJson() . '],"outputs":[' . OutputTest::getJson() . '],"error":"","errors":[]}';
+        return '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","block_height":293000,"hash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","addresses":["13XXaBufpMvqRqLkyDty1AXqueZHVe6iyy","19YtzZdcfs1V2ZCgyRWo8i2wLT8ND1Tu4L","1BNiazBzCxJacAKo2yL83Wq1VJ18AYzNHy","1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq","1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"],"total":70320221545,"fees":0,"preference":"low","relayed_by":"","confirmed":"2014-03-29T01:29:19Z","received":"2014-03-29T01:29:19Z","ver":1,"lock_time":0,"double_spend":false,"vin_sz":4,"vout_sz":1,"confirmations":59116,"confidence":1,"inputs":[' . InputTest::getJson() . '],"outputs":[' . OutputTest::getJson() . '],"next_inputs":"https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=2\u0026outstart=1\u0026limit=1","error":"","errors":[]}';
     }
 
     /**
@@ -196,6 +195,7 @@ class TransactionTest extends ResourceModelTestCase
         $this->assertEquals($obj->getConfidence(), 1);
         $this->assertEquals($obj->getInputs(), array(InputTest::getObject()));
         $this->assertEquals($obj->getOutputs(), array(OutputTest::getObject()));
+        $this->assertEquals($obj->getNextInputs(), "https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=2&outstart=1&limit=1");
     }
 
     /**
@@ -294,9 +294,9 @@ class TransactionTest extends ResourceModelTestCase
                 '[' . TransactionTest::getJson() . ']'
             ));
 
-        $transactionList = Array(AddressTest::getObject()->getAddress());
+        $transactionList = Array(TransactionTest::getObject()->getHash());
 
-        $result = $obj->getMultiple($transactionList, $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->getMultiple($transactionList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertEquals($result[0], TransactionTest::getObject());
     }

@@ -11,7 +11,7 @@ use BlockCypher\Api\Txref;
  */
 class TxrefTest extends ResourceModelTestCase
 {
-    // TODO:
+    // TODO: add tests
     // - add test for double spend case (double_of, receive_count)
     // - add test for confidence
 

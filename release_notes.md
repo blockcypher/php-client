@@ -9,6 +9,7 @@ v1.0.0
 * Added BtcConverter
 * Added TokenValidator
 * Added BlockCypherCoinSymbolConstants
+* Added missing property Transaction::next_inputs
 
 v1.0.0-beta
 -----------
