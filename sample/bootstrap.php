@@ -22,6 +22,7 @@ require $composerAutoload;
 require __DIR__ . '/common.php';
 
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Core\BlockCypherCoinSymbol;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Validation\TokenValidator;
 
@@ -61,14 +62,7 @@ function createApiContextForAllChains($token)
 {
     $version = 'v1';
 
-    $chainNames = array(
-        'BTC.main',
-        'BTC.test3',
-        'DOGE.main',
-        'LTC.main',
-        'URO.main',
-        'BCY.test'
-    );
+    $chainNames = BlockCypherCoinSymbol::CHAIN_NAMES();
 
     $apiContexts = array();
     foreach ($chainNames as $chainName) {

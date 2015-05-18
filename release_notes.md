@@ -8,6 +8,7 @@ v1.0.0
 * Renamed TransactionConfidence::age_seconds TransactionConfidence::age_millis
 * Added BtcConverter
 * Added TokenValidator
+* Added BlockCypherCoinSymbol
 
 v1.0.0-beta
 -----------
