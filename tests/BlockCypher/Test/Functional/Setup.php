@@ -22,13 +22,6 @@ class Setup
             'validation.level' => 'log'
         );
 
-        /*
-        // OAuthTokenCredential is still not supported
-        $test->apiContext = new ApiContext(
-            new OAuthTokenCredential('AYSq3RDGsmBLJE-otTkBtM-jBRd1TCQwFf9RGfwddNXWz0uFU9ztymylOhRS', 'EGnHDxD_qRPdaLdZz8iCr8N7_MzF-YHPTkjs6NKYQvQSBngp4PTTVWkPZRbL')
-        );
-        */
-
         // Replace these values by entering your own token by visiting https://accounts.blockcypher.com/
         /** @noinspection SpellCheckingInspection */
         $token = 'c0afcccdde5081d6429de37d16166ead';

@@ -3,26 +3,14 @@
 namespace BlockCypher\Auth;
 
 use BlockCypher\Common\BlockCypherResourceModel;
-use BlockCypher\Core\BlockCypherHttpConfig;
-use BlockCypher\Core\BlockCypherHttpConnection;
 use BlockCypher\Core\BlockCypherLoggingManager;
 use BlockCypher\Exception\BlockCypherConfigurationException;
-use BlockCypher\Handler\IBlockCypherHandler;
-use BlockCypher\Rest\ApiContext;
 
 /**
  * Class SimpleTokenCredential
  */
 class SimpleTokenCredential extends BlockCypherResourceModel implements TokenCredential
 {
-
-    public static $CACHE_PATH = '/../../../var/auth.cache';
-
-    /**
-     * @var string Default Auth Handler
-     */
-    public static $AUTH_HANDLER = 'BlockCypher\Handler\TokenHandler';
-
     /**
      * Private Variable
      *
@@ -83,8 +71,6 @@ class SimpleTokenCredential extends BlockCypherResourceModel implements TokenCre
      */
     public function updateAccessToken($config, $refreshToken = null)
     {
-        $this->generateAccessToken($config, $refreshToken);
-
         return $this->accessToken;
     }
 
@@ -113,25 +99,6 @@ class SimpleTokenCredential extends BlockCypherResourceModel implements TokenCre
      */
     public function getToken($config, $clientId, $clientSecret, $payload)
     {
-        $httpConfig = new BlockCypherHttpConfig(null, 'POST', $config);
-
-        $handlers = array(self::$AUTH_HANDLER);
-
-        /** @var IBlockCypherHandler $handler */
-        foreach ($handlers as $handler) {
-            if (!is_object($handler)) {
-                $fullHandler = "\\" . (string)$handler;
-                $handler = new $fullHandler(new ApiContext($this));
-            }
-            $handler->handle($httpConfig, $payload, array('clientId' => $clientId, 'clientSecret' => $clientSecret));
-        }
-
-        $connection = new BlockCypherHttpConnection($httpConfig, $config);
-        $res = $connection->execute($payload);
-        $response = json_decode($res, true);
-
-        return $response;
+        return $this->accessToken;
     }
-
-
 }

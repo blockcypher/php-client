@@ -152,7 +152,7 @@ class BlockCypherModel
      * Sets Credential
      *
      * @deprecated Pass ApiContext to create/get methods instead
-     * @param \BlockCypher\Auth\OAuthTokenCredential $credential
+     * @param \BlockCypher\Auth\TokenCredential $credential
      */
     public static function setCredential($credential)
     {

@@ -49,7 +49,7 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetCredentialObject()
     {
-        $authObject = $this->getMockBuilder('\BlockCypher\Auth\OAuthTokenCredential')
+        $authObject = $this->getMockBuilder('\BlockCypher\Auth\SimpleTokenCredential')
             ->disableOriginalConstructor()
             ->getMock();
         $cred = $this->object->setCredentialObject($authObject)->getCredentialObject();
@@ -65,7 +65,7 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetCredentialObjectWithUserId()
     {
-        $authObject = $this->getMockBuilder('\BlockCypher\Auth\OAuthTokenCredential')
+        $authObject = $this->getMockBuilder('\BlockCypher\Auth\SimpleTokenCredential')
             ->disableOriginalConstructor()
             ->getMock();
         $cred = $this->object->setCredentialObject($authObject, 'sample')->getCredentialObject('sample');
@@ -80,7 +80,7 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetCredentialObjectWithoutDefault()
     {
-        $authObject = $this->getMockBuilder('\BlockCypher\Auth\OAuthTokenCredential')
+        $authObject = $this->getMockBuilder('\BlockCypher\Auth\SimpleTokenCredential')
             ->disableOriginalConstructor()
             ->getMock();
         $cred = $this->object->setCredentialObject($authObject, null, false)->getCredentialObject();
