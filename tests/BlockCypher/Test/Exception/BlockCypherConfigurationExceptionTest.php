@@ -13,7 +13,7 @@ class BlockCypherConfigurationExceptionTest extends \PHPUnit_Framework_TestCase
      */
     protected $object;
 
-    public function testPPConfigurationException()
+    public function testBCConfigurationException()
     {
         $this->assertEquals('Test BlockCypherConfigurationException', $this->object->getMessage());
     }
