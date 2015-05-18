@@ -32,9 +32,9 @@ class TokenValidator
         // Type 0: c0afcccdde5081d6429de37d16166ead
         $type0RegExpression = '/(^[a-z0-9]+$)/i';
 
-        // Type 1: ddf3g04f-0f31-4060-978b-63b1ff43e185
-        //$type1RegExpression = '/(^[a-f0-9]{8}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{12}$)/i'; // UUID strict: http://en.wikipedia.org/wiki/Universally_unique_identifier#Definition
-        $type1RegExpression = '/(^[a-g0-9]{8}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{12}$)/i';
+        // Type 1: de305d54-75b4-431b-adb2-eb6b9e546014
+        // UUID strict: http://en.wikipedia.org/wiki/Universally_unique_identifier#Definition
+        $type1RegExpression = '/(^[a-f0-9]{8}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{12}$)/i';
 
         if (preg_match($type0RegExpression, $token) == false
             && preg_match($type1RegExpression, $token) == false
