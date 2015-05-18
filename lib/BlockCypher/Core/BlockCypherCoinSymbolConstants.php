@@ -5,11 +5,11 @@ namespace BlockCypher\Core;
 use BlockCypher\Exception\BlockCypherConfigurationException;
 
 /**
- * Class BlockCypherCoinSymbol
+ * Class BlockCypherCoinSymbolConstants
  *
  * @package BlockCypher\Core
  */
-class BlockCypherCoinSymbol
+class BlockCypherCoinSymbolConstants
 {
     /**
      * List of Coin Symbol Ordered Dictionaries

@@ -1,9 +1,9 @@
 <?php
 
-use BlockCypher\Core\BlockCypherCoinSymbol;
+use BlockCypher\Core\BlockCypherCoinSymbolConstants;
 
 /**
- * Test class for BlockCypherCoinSymbol.
+ * Test class for BlockCypherCoinSymbolConstants.
  */
 class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
 {
@@ -12,8 +12,8 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetInstance()
     {
-        $instance = BlockCypherCoinSymbol::getInstance();
-        $this->assertTrue($instance instanceof BlockCypherCoinSymbol);
+        $instance = BlockCypherCoinSymbolConstants::getInstance();
+        $this->assertTrue($instance instanceof BlockCypherCoinSymbolConstants);
     }
 
     public function positiveGetDisplayNameProvider()
@@ -45,7 +45,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetDisplayName($coinSymbol, $displayName)
     {
-        $this->assertEquals(BlockCypherCoinSymbol::getDisplayName($coinSymbol), $displayName);
+        $this->assertEquals(BlockCypherCoinSymbolConstants::getDisplayName($coinSymbol), $displayName);
     }
 
     /**
@@ -57,7 +57,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetDisplayNameInvalidInput($coinSymbol)
     {
-        BlockCypherCoinSymbol::getDisplayName($coinSymbol);
+        BlockCypherCoinSymbolConstants::getDisplayName($coinSymbol);
     }
 
     public function positiveGetCurrencyAbbrevProvider()
@@ -89,7 +89,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetCurrencyAbbrev($coinSymbol, $displayName)
     {
-        $this->assertEquals(BlockCypherCoinSymbol::getCurrencyAbbrev($coinSymbol), $displayName);
+        $this->assertEquals(BlockCypherCoinSymbolConstants::getCurrencyAbbrev($coinSymbol), $displayName);
     }
 
     /**
@@ -101,7 +101,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetCurrencyAbbrevInvalidInput($coinSymbol)
     {
-        BlockCypherCoinSymbol::getCurrencyAbbrev($coinSymbol);
+        BlockCypherCoinSymbolConstants::getCurrencyAbbrev($coinSymbol);
     }
 
     public function positiveGetBlockCypherCodeProvider()
@@ -133,7 +133,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetBlockCypherCode($coinSymbol, $displayName)
     {
-        $this->assertEquals(BlockCypherCoinSymbol::getBlockCypherCode($coinSymbol), $displayName);
+        $this->assertEquals(BlockCypherCoinSymbolConstants::getBlockCypherCode($coinSymbol), $displayName);
     }
 
     /**
@@ -145,7 +145,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetBlockCypherCodeInvalidInput($coinSymbol)
     {
-        BlockCypherCoinSymbol::getBlockCypherCode($coinSymbol);
+        BlockCypherCoinSymbolConstants::getBlockCypherCode($coinSymbol);
     }
 
     public function positiveGetBlockCypherNetworkProvider()
@@ -177,7 +177,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetBlockCypherNetwork($coinSymbol, $displayName)
     {
-        $this->assertEquals(BlockCypherCoinSymbol::getBlockCypherNetwork($coinSymbol), $displayName);
+        $this->assertEquals(BlockCypherCoinSymbolConstants::getBlockCypherNetwork($coinSymbol), $displayName);
     }
 
     /**
@@ -189,7 +189,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetBlockCypherNetworkInvalidInput($coinSymbol)
     {
-        BlockCypherCoinSymbol::getBlockCypherNetwork($coinSymbol);
+        BlockCypherCoinSymbolConstants::getBlockCypherNetwork($coinSymbol);
     }
 
     /**
@@ -260,7 +260,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $this->assertEquals($expectedCoinSymbolMappings, BlockCypherCoinSymbol::COIN_SYMBOL_MAPPINGS());
+        $this->assertEquals($expectedCoinSymbolMappings, BlockCypherCoinSymbolConstants::COIN_SYMBOL_MAPPINGS());
     }
 
     /**
@@ -269,7 +269,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
     public function testCOIN_SYMBOL_LIST()
     {
         $expectedCoinSymbolList = array('btc', 'btc-testnet', 'ltc', 'doge', 'uro', 'bcy');
-        $this->assertEquals($expectedCoinSymbolList, BlockCypherCoinSymbol::COIN_SYMBOL_LIST());
+        $this->assertEquals($expectedCoinSymbolList, BlockCypherCoinSymbolConstants::COIN_SYMBOL_LIST());
     }
 
     /**
@@ -278,7 +278,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
     public function testSHA_COINS()
     {
         $expectedShaCoins = array('btc', 'btc-testnet', 'uro', 'bcy');
-        $this->assertEquals($expectedShaCoins, BlockCypherCoinSymbol::SHA_COINS());
+        $this->assertEquals($expectedShaCoins, BlockCypherCoinSymbolConstants::SHA_COINS());
     }
 
     /**
@@ -287,7 +287,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
     public function testSCRYPT_COINS()
     {
         $expectedScryptCoins = array('ltc', 'doge');
-        $this->assertEquals($expectedScryptCoins, BlockCypherCoinSymbol::SCRYPT_COINS());
+        $this->assertEquals($expectedScryptCoins, BlockCypherCoinSymbolConstants::SCRYPT_COINS());
     }
 
     /**
@@ -303,7 +303,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
             'uro' => 'Uro',
             'bcy' => 'BlockCypher Testnet'
         );
-        $this->assertEquals($expectedCoinChoices, BlockCypherCoinSymbol::COIN_CHOICES());
+        $this->assertEquals($expectedCoinChoices, BlockCypherCoinSymbolConstants::COIN_CHOICES());
     }
 
     /**
@@ -319,7 +319,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
             'URO.main',
             'BCY.test',
         );
-        $this->assertEquals($expectedChainNames, BlockCypherCoinSymbol::CHAIN_NAMES());
+        $this->assertEquals($expectedChainNames, BlockCypherCoinSymbolConstants::CHAIN_NAMES());
     }
 
     /**
@@ -328,7 +328,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testAllRequiredFieldsArePresent()
     {
-        BlockCypherCoinSymbolRequiredFieldConfigError::getInstance();
+        BlockCypherCoinSymbolConstantsRequiredFieldConfigError::getInstance();
     }
 
     /**
@@ -337,7 +337,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidPow()
     {
-        BlockCypherCoinSymbolInvalidPowConfigError::getInstance();
+        BlockCypherCoinSymbolConstantsInvalidPowConfigError::getInstance();
     }
 
     /**
@@ -357,7 +357,7 @@ class BlockCypherCoinSymbolTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class BlockCypherCoinSymbolRequiredFieldConfigError extends BlockCypherCoinSymbol
+class BlockCypherCoinSymbolConstantsRequiredFieldConfigError extends BlockCypherCoinSymbolConstants
 {
     /**
      * List of Coin Symbol Ordered Dictionaries
@@ -379,7 +379,7 @@ class BlockCypherCoinSymbolRequiredFieldConfigError extends BlockCypherCoinSymbo
     );
 }
 
-class BlockCypherCoinSymbolInvalidPowConfigError extends BlockCypherCoinSymbol
+class BlockCypherCoinSymbolConstantsInvalidPowConfigError extends BlockCypherCoinSymbolConstants
 {
     /**
      * List of Coin Symbol Ordered Dictionaries
