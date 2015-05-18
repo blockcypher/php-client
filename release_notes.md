@@ -7,6 +7,7 @@ v1.0.0
 * Added TxrefTest::received property
 * Renamed TransactionConfidence::age_seconds TransactionConfidence::age_millis
 * Added BtcConverter
+* Added TokenValidator
 
 v1.0.0-beta
 -----------

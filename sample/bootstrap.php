@@ -23,6 +23,7 @@ require __DIR__ . '/common.php';
 
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Rest\ApiContext;
+use BlockCypher\Validation\TokenValidator;
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -133,13 +134,5 @@ function getApiContextUsingConfigArray($token, $chain = 'main', $coin = 'btc', $
  */
 function validateToken($token)
 {
-    // sample tokens:
-    // c0afcccdde5081d6429de37d16166ead
-    // ddf3g04f-0f31-4060-978b-63b1ff43e185
-
-    if (strlen($token) < 20) return false;
-    if (strlen($token) > 50) return false;
-    if (!preg_match('/[a-z0-9-]+/', $token)) return false;
-
-    return true;
+    return TokenValidator::validate($token);
 }
