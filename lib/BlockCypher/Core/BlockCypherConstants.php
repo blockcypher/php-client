@@ -11,7 +11,7 @@ namespace BlockCypher\Core;
 class BlockCypherConstants
 {
     const SDK_NAME = 'BlockCypher-PHP-SDK';
-    const SDK_VERSION = '0.5.0';
+    const SDK_VERSION = '1.0.0';
 
     /**
      * Approval URL for Payment
