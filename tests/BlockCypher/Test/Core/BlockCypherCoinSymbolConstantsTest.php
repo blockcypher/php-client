@@ -328,7 +328,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
      */
     public function testAllRequiredFieldsArePresent()
     {
-        BlockCypherCoinSymbolConstantsRequiredFieldConfigError::getInstance();
+        new BlockCypherCoinSymbolConstantsRequiredFieldConfigError();
     }
 
     /**
@@ -337,7 +337,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidPow()
     {
-        BlockCypherCoinSymbolConstantsInvalidPowConfigError::getInstance();
+        new BlockCypherCoinSymbolConstantsInvalidPowConfigError();
     }
 
     /**
@@ -377,20 +377,6 @@ class BlockCypherCoinSymbolConstantsRequiredFieldConfigError extends BlockCypher
             "address_first_char_list" => array('1', '3')
         )
     );
-
-    /**
-     * Overridden to avoid HHVM error: Fatal error: Invalid static property access
-     * Returns the singleton object
-     *
-     * @return $this
-     */
-    public static function getInstance()
-    {
-        if (!isset(self::$instance)) {
-            self::$instance = new BlockCypherCoinSymbolConstantsRequiredFieldConfigError();
-        }
-        return self::$instance;
-    }
 }
 
 class BlockCypherCoinSymbolConstantsInvalidPowConfigError extends BlockCypherCoinSymbolConstants
@@ -413,18 +399,4 @@ class BlockCypherCoinSymbolConstantsInvalidPowConfigError extends BlockCypherCoi
             "address_first_char_list" => array('1', '3')
         )
     );
-
-    /**
-     * Overridden to avoid HHVM error: Fatal error: Invalid static property access
-     * Returns the singleton object
-     *
-     * @return $this
-     */
-    public static function getInstance()
-    {
-        if (!isset(self::$instance)) {
-            self::$instance = new BlockCypherCoinSymbolConstantsInvalidPowConfigError();
-        }
-        return self::$instance;
-    }
 }

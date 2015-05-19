@@ -157,81 +157,22 @@ class BlockCypherCoinSymbolConstants
         $this->initChainNames();
     }
 
-    private static function checkData()
+    private function checkData()
     {
-        foreach (static::$COIN_SYMBOL_ODICT_LIST as $coinSymbol) {
+        foreach (static::COIN_SYMBOL_ODICT_LIST() as $coinSymbol) {
 
             // Make sure no required fields are missing
-            foreach (self::$REQUIRED_FIELDS as $requiredField) {
+            foreach (static::REQUIRED_FIELDS() as $requiredField) {
                 if (!isset($coinSymbol[$requiredField])) {
                     throw new BlockCypherConfigurationException("Missing required field $requiredField");
                 }
             }
 
             // Make sure POW is set correctly
-            if (!in_array($coinSymbol['pow'], self::$ELIGIBLE_POW_ENTRIES)) {
+            if (!in_array($coinSymbol['pow'], static::ELIGIBLE_POW_ENTRIES())) {
                 throw new BlockCypherConfigurationException("Invalid CoinSymbol POW " . $coinSymbol['pow'] . " in CoinSymbol " . $coinSymbol['coin_symbol']);
             }
         }
-    }
-
-    private function initCoinSymbolMappings()
-    {
-        $coinSymbolMappings = array();
-        foreach (self::$COIN_SYMBOL_ODICT_LIST as $coinSymbolDict) {
-            $coinSymbol = array_shift($coinSymbolDict);
-            $coinSymbolMappings[$coinSymbol] = $coinSymbolDict;
-        }
-        $this->COIN_SYMBOL_MAPPINGS = $coinSymbolMappings;
-    }
-
-    private function initCoinSymbolList()
-    {
-        $coinSymbolList = array();
-        foreach (self::$COIN_SYMBOL_ODICT_LIST as $x) {
-            $coinSymbolList[] = $x['coin_symbol'];
-        }
-        $this->COIN_SYMBOL_LIST = $coinSymbolList;
-    }
-
-    private function initShaCoins()
-    {
-        $shaCoins = array();
-        foreach (self::$COIN_SYMBOL_ODICT_LIST as $x) {
-            if ($x['pow'] == 'sha') {
-                $shaCoins[] = $x['coin_symbol'];
-            }
-        }
-        $this->SHA_COINS = $shaCoins;
-    }
-
-    private function initScryptCoins()
-    {
-        $scryptCoins = array();
-        foreach (self::$COIN_SYMBOL_ODICT_LIST as $x) {
-            if ($x['pow'] == 'scrypt') {
-                $scryptCoins[] = $x['coin_symbol'];
-            }
-        }
-        $this->SCRYPT_COINS = $scryptCoins;
-    }
-
-    private function initCoinChoices()
-    {
-        $coinChoices = array();
-        foreach (self::$COIN_SYMBOL_ODICT_LIST as $x) {
-            $coinChoices[$x['coin_symbol']] = $x['display_name'];
-        }
-        $this->COIN_CHOICES = $coinChoices;
-    }
-
-    private function initChainNames()
-    {
-        $chainNames = array();
-        foreach (self::$COIN_SYMBOL_ODICT_LIST as $x) {
-            $chainNames[] = strtoupper($x['blockcypher_code']) . '.' . $x['blockcypher_network'];
-        }
-        $this->CHAIN_NAMES = $chainNames;
     }
 
     /**
@@ -256,6 +197,65 @@ class BlockCypherCoinSymbolConstants
     public static function ELIGIBLE_POW_ENTRIES()
     {
         return self::$ELIGIBLE_POW_ENTRIES;
+    }
+
+    private function initCoinSymbolMappings()
+    {
+        $coinSymbolMappings = array();
+        foreach (static::COIN_SYMBOL_ODICT_LIST() as $coinSymbolDict) {
+            $coinSymbol = array_shift($coinSymbolDict);
+            $coinSymbolMappings[$coinSymbol] = $coinSymbolDict;
+        }
+        $this->COIN_SYMBOL_MAPPINGS = $coinSymbolMappings;
+    }
+
+    private function initCoinSymbolList()
+    {
+        $coinSymbolList = array();
+        foreach (static::COIN_SYMBOL_ODICT_LIST() as $x) {
+            $coinSymbolList[] = $x['coin_symbol'];
+        }
+        $this->COIN_SYMBOL_LIST = $coinSymbolList;
+    }
+
+    private function initShaCoins()
+    {
+        $shaCoins = array();
+        foreach (static::COIN_SYMBOL_ODICT_LIST() as $x) {
+            if ($x['pow'] == 'sha') {
+                $shaCoins[] = $x['coin_symbol'];
+            }
+        }
+        $this->SHA_COINS = $shaCoins;
+    }
+
+    private function initScryptCoins()
+    {
+        $scryptCoins = array();
+        foreach (static::COIN_SYMBOL_ODICT_LIST() as $x) {
+            if ($x['pow'] == 'scrypt') {
+                $scryptCoins[] = $x['coin_symbol'];
+            }
+        }
+        $this->SCRYPT_COINS = $scryptCoins;
+    }
+
+    private function initCoinChoices()
+    {
+        $coinChoices = array();
+        foreach (static::COIN_SYMBOL_ODICT_LIST() as $x) {
+            $coinChoices[$x['coin_symbol']] = $x['display_name'];
+        }
+        $this->COIN_CHOICES = $coinChoices;
+    }
+
+    private function initChainNames()
+    {
+        $chainNames = array();
+        foreach (static::COIN_SYMBOL_ODICT_LIST() as $x) {
+            $chainNames[] = strtoupper($x['blockcypher_code']) . '.' . $x['blockcypher_network'];
+        }
+        $this->CHAIN_NAMES = $chainNames;
     }
 
     /**
