@@ -19,7 +19,8 @@ script:
 - phpunit
 after_success:
 - php vendor/bin/coveralls -v -c .coveralls.yml
-- if [ $TRAVIS_PHP_VERSION = '5.6' ] && [ $TRAVIS_BRANCH = 'master' ] && [ $TRAVIS_PULL_REQUEST = 'false' ]; then sh generate-api.sh; fi
+- if [ $TRAVIS_PHP_VERSION = '5.6' ] && [ $TRAVIS_BRANCH = 'master' ] && [ $TRAVIS_PULL_REQUEST
+  = 'false' ]; then sh generate-api.sh; fi
 notifications:
   email:
     recipients:
@@ -27,4 +28,4 @@ notifications:
     on_success: change
 env:
   global:
-    secure: UazgSLMJmrhmO+Do9TDiu8EKop06Xc2Ghi9F/8rx/CLz2FDZ5UDdzDD8uetjfdOnmMV7oadq13FGxJb9YCqTiJPZFpKsGtEr/IcCdpkO2krluLuWw5Veh8YxRG4rcZ+UWS0JpfQ72L9Zp4dMqPRo8SzcfiZV3HMG1uKYKpTSKnM=
+  - secure: nlWeUxzHfhYRFDaUIDDwTJ3bUwmwfb6iJrbNMmBi8+4HuHjp1RKwMZ7tbLJb9p8YVYP3NF0NtJQzFoLdLESJamebtr+UDfQ/Cn0mneriqyI4NKvg5yj86Ggxn7tmVDrp/R5pzBUurDLh7VMlKN82HIFpVa8W4wFwkYUet5yhrZJKvBcAE+M0/iysHjS/AamC6h6tV4woaOcR7CTJTwu3EDs28aeSRkxVabMWuW4o/2ZwqtM8yN5S4C4h67liif8Adcb1vrqO9WjV4dfn67g8PNdB5KoqaHs9Om9u0Px/LCk/wQTYCbVrayeytND0BhSKBRylNRWa5SzTYXZaNuGLkoLU2sgPS42WxCmhMQE6Zp0oJy9jcrC7FPEsdvfQ0AuDi79NLm3FibXDa6MZaxzvs3vvw0NhYeVyYp23hw/j0U1tK9r9gNrS0o1COXAJd5rNWNpQpae4XCS4Y1aByR+L75r4L6bhmjtvvAZkX0cLJLm04eur5kILjnTsMcp5btihTNiFPEIQv0c+gkbaJjzgpzkFr+OUY0Gtw3poWQtmGyAFn1zXs+qWwSDpmjJR96EegAvJ4hqaHD2iU2AQoc5A6LC2OsEw7jDcpqmtq7Lk5XbKDqtvWx5gX7LnKpMRGQ1/r/u3WQnYMh8AtdKyjmcbzU8uX31SGOjQPzGinacRgSs=
