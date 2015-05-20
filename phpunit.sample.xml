@@ -18,6 +18,13 @@
             <directory>tests/sample/Test/Functional/full-addresses</directory>
             <directory>tests/sample/Test/Functional/transaction-confidence</directory>
             <directory>tests/sample/Test/Functional/transactions</directory>
+            <file>tests/sample/Test/Functional/wallets/CreateWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallets/AddAddressesToWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallets/RemoveAddressesFromWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallets/GenerateNewAddressForWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallets/GetWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallets/ListWalletAddressesTest.php</file>
+            <file>tests/sample/Test/Functional/wallets/DeleteWalletTest.php</file>
             <file>tests/sample/Test/Functional/webhooks/CreateAndDeleteAllWebHooksTest.php</file>
             <file>tests/sample/Test/Functional/webhooks/CreateAndDeleteWebHookTest.php</file>
             <file>tests/sample/Test/Functional/webhooks/CreateAndListWebHookTest.php</file>

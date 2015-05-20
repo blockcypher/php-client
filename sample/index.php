@@ -231,7 +231,7 @@ if (PHP_SAPI == 'cli') {
                     <li><a href="#zero_confirmations">0-Confirmations</a></li>
                     <li><a href="#address_details">Address Details</a></li>
                     <li><a href="#address_gen">Address Generation</a></li>
-                    <li><a href="#wallet_api">Wallet</a></li>
+                    <li><a href="#wallet_api">Wallets</a></li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#websockets">WebSockets</a></li>
                     <li><a href="#webhooks">WebHooks</a></li>
@@ -599,14 +599,129 @@ if (PHP_SAPI == 'cli') {
                 <div class="panel-heading">
                     <h3 id="wallet_api" class="panel-title"><a
                             href="http://dev.blockcypher.com/#wallet_api"
-                            target="_blank">Wallet</a></h3>
+                            target="_blank">Wallets</a></h3>
                 </div>
                 <!-- List group -->
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Coming soon!</h5></div>
+                            <div class="col-md-8"><h5>Create wallet</h5></div>
                             <div class="col-md-4">
+                                <a href="wallets/CreateWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallets/CreateWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Get wallet*
+                                    <small>(Depends on "Create wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallets/GetWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallets/GetWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Add addresses to a wallet*
+                                    <small>(Depends on "Create wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallets/AddAddressesToWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallets/AddAddressesToWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Generate new address and associated it to a wallet*
+                                    <small>(Depends on "Create wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallets/GenerateNewAddressForWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallets/GenerateNewAddressForWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>List wallet addresses*
+                                    <small>(Depends on "Add addresses to a wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallets/ListWalletAddresses.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallets/ListWalletAddresses.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Remove addresses from a wallet*
+                                    <small>(Depends on "Create wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallets/RemoveAddressesFromWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallets/RemoveAddressesFromWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Delete wallet*
+                                    <small>(Depends on "Create wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallets/DeleteWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallets/DeleteWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
                     </li>

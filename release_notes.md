@@ -10,6 +10,7 @@ v1.0.0
 * Added TokenValidator
 * Added BlockCypherCoinSymbolConstants
 * Added missing property Transaction::next_inputs
+* Added Wallet API
 
 v1.0.0-beta
 -----------
