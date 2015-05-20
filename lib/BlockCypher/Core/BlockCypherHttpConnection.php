@@ -72,6 +72,7 @@ class BlockCypherHttpConnection
                 curl_setopt($ch, CURLOPT_POST, true);
             case 'PUT':
             case 'PATCH':
+            case 'DELETE':
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
                 break;
         }
@@ -112,7 +113,7 @@ class BlockCypherHttpConnection
             } while (in_array($httpStatus, self::$retryCodes) && (++$retries < $this->httpConfig->getHttpRetryCount()));
         }
 
-        //Throw Exception if Retries and Certificates doenst work
+        //Throw Exception if Retries and Certificates does not work
         if (curl_errno($ch)) {
             $ex = new BlockCypherConnectionException(
                 $this->httpConfig->getUrl(),
@@ -125,11 +126,13 @@ class BlockCypherHttpConnection
 
         // Get Request and Response Headers
         $requestHeaders = curl_getinfo($ch, CURLINFO_HEADER_OUT);
+
         //Using alternative solution to CURLINFO_HEADER_SIZE as it throws invalid number when called using PROXY.
         $responseHeaderSize = strlen($result) - curl_getinfo($ch, CURLINFO_SIZE_DOWNLOAD);
         $responseHeaders = substr($result, 0, $responseHeaderSize);
         $result = substr($result, $responseHeaderSize);
 
+        //$this->logger->debug("Request Retries \t: " . $retries);
         $this->logger->debug("Request Headers \t: " . str_replace("\r\n", ", ", $requestHeaders));
         $this->logger->debug(($data && $data != '' ? "Request Data\t\t: " . $data : "No Request Payload") . "\n" . str_repeat('-', 128) . "\n");
         $this->logger->info("Response Status \t: " . $httpStatus);
@@ -169,25 +172,16 @@ class BlockCypherHttpConnection
     }
 
     /**
-     * Executes an HTTP request
-     *
-     * @param string $data query string OR POST content as a string
-     * @throws BlockCypherConnectionException
-     */
-
-    /**
      * Gets all Http Headers
      *
      * @return array
      */
     private function getHttpHeaders()
     {
-
         $ret = array();
         foreach ($this->httpConfig->getHeaders() as $k => $v) {
             $ret[] = "$k: $v";
         }
         return $ret;
     }
-
 }

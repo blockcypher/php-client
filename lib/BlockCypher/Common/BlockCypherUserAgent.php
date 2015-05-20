@@ -37,7 +37,13 @@ class BlockCypherUserAgent
             $curlVersion = curl_version();
             $featureList[] = 'curl=' . $curlVersion['version'];
         }
-        return sprintf("BlockCypherSDK/%s %s (%s)", $sdkName, $sdkVersion, implode(';', $featureList));
+
+        $userAgent = sprintf("BlockCypherSDK/%s %s (%s)", $sdkName, $sdkVersion, implode(';', $featureList));
+
+        // Test UserAgent: uncomment to force a User Agent value. For debug purposes.
+        //$userAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36";
+
+        return $userAgent;
     }
 
     /**
