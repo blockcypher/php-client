@@ -2944,18 +2944,7 @@
                         "pageTitle": "address-balance\\GetAddressBalance",
                         "title": "GetAddressBalance"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address Balance Sample",
-                                "slug": "get-address-balance-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -2973,18 +2962,7 @@
                         "pageTitle": "address-balance\\GetMultipleAddressesBalance",
                         "title": "GetMultipleAddressesBalance"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Addresses Balance Sample",
-                                "slug": "get-multiple-addresses-balance-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
         }
             ]
         }, {
@@ -3005,36 +2983,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\CreateAddress.php",
                         "projectPath": "addresses\\CreateAddress.php",
                         "targetPath": "addresses\\CreateAddress",
                         "pageTitle": "addresses\\CreateAddress",
                         "title": "CreateAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Create Address Sample",
-                                "slug": "create-address-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 3,
-                                        "title": "Create Address",
-                                        "slug": "create-address"
-                                    },
-                                    "depth": 3
-                }
-                            ]
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3045,25 +3001,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetAddress.php",
                         "projectPath": "addresses\\GetAddress.php",
                         "targetPath": "addresses\\GetAddress",
                         "pageTitle": "addresses\\GetAddress",
                         "title": "GetAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address Sample",
-                                "slug": "get-address-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3074,25 +3019,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetAddressBtcTest3.php",
                         "projectPath": "addresses\\GetAddressBtcTest3.php",
                         "targetPath": "addresses\\GetAddressBtcTest3",
                         "pageTitle": "addresses\\GetAddressBtcTest3",
                         "title": "GetAddressBtcTest3"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address Sample",
-                                "slug": "get-address-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3103,25 +3037,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetAddressWithPaging.php",
                         "projectPath": "addresses\\GetAddressWithPaging.php",
                         "targetPath": "addresses\\GetAddressWithPaging",
                         "pageTitle": "addresses\\GetAddressWithPaging",
                         "title": "GetAddressWithPaging"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address paging transactions Sample",
-                                "slug": "get-address-paging-transactions-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3132,25 +3055,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetAddressWithUnspentOnly.php",
                         "projectPath": "addresses\\GetAddressWithUnspentOnly.php",
                         "targetPath": "addresses\\GetAddressWithUnspentOnly",
                         "pageTitle": "addresses\\GetAddressWithUnspentOnly",
                         "title": "GetAddressWithUnspentOnly"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address Only with the unspent transactions Sample",
-                                "slug": "get-address-only-with-the-unspent-transactions-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3161,25 +3073,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetFullAddress.php",
                         "projectPath": "addresses\\GetFullAddress.php",
                         "targetPath": "addresses\\GetFullAddress",
                         "pageTitle": "addresses\\GetFullAddress",
                         "title": "GetFullAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Full Address Sample",
-                                "slug": "get-full-address-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3190,25 +3091,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\addresses\\GetMultipleAddresses.php",
                         "projectPath": "addresses\\GetMultipleAddresses.php",
                         "targetPath": "addresses\\GetMultipleAddresses",
                         "pageTitle": "addresses\\GetMultipleAddresses",
                         "title": "GetMultipleAddresses"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Addresses Sample",
-                                "slug": "get-multiple-addresses-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3226,18 +3116,7 @@
                         "pageTitle": "addresses\\GetOnlyBalance",
                         "title": "GetOnlyBalance"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Only Balance Sample",
-                                "slug": "get-only-balance-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
         }
             ]
         }, {
@@ -3258,25 +3137,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\blocks\\GetBlock.php",
                         "projectPath": "blocks\\GetBlock.php",
                         "targetPath": "blocks\\GetBlock",
                         "pageTitle": "blocks\\GetBlock",
                         "title": "GetBlock"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Block Sample",
-                                "slug": "get-block-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3294,18 +3162,7 @@
                         "pageTitle": "blocks\\GetBlockByHeight",
                         "title": "GetBlockByHeight"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Block Sample",
-                                "slug": "get-block-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3323,18 +3180,7 @@
                         "pageTitle": "blocks\\GetBlockWithPaging",
                         "title": "GetBlockWithPaging"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Block With Paging Sample",
-                                "slug": "get-block-with-paging-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3352,18 +3198,7 @@
                         "pageTitle": "blocks\\GetMultipleBlocks",
                         "title": "GetMultipleBlocks"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Blocks Sample",
-                                "slug": "get-multiple-blocks-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
         }
             ]
         }, {
@@ -3374,35 +3209,24 @@
             },
             "depth": 1,
             "children": [
-                {
-                    "type": "file",
-                    "data": {
-                        "language": {
-                            "nameMatchers": [{}, ".fbp"],
-                            "pygmentsLexer": "php",
-                            "singleLineComment": ["//"],
-                            "ignorePrefix": "}",
-                            "foldPrefix": "^",
-                            "name": "PHP"
-                        },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\chains\\GetChain.php",
-                        "projectPath": "chains\\GetChain.php",
-                        "targetPath": "chains\\GetChain",
-                        "pageTitle": "chains\\GetChain",
-                        "title": "GetChain"
-                    },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Chain Sample",
-                                "slug": "get-chain-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+        {
+            "type": "file",
+            "data": {
+                "language": {
+                    "nameMatchers": [{}, ".fbp"],
+                    "pygmentsLexer": "php",
+                    "singleLineComment": ["//"],
+                    "ignorePrefix": "}",
+                    "foldPrefix": "^",
+                    "name": "PHP"
+            },
+                "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\chains\\GetChain.php",
+                "projectPath": "chains\\GetChain.php",
+                "targetPath": "chains\\GetChain",
+                "pageTitle": "chains\\GetChain",
+                "title": "GetChain"
+            },
+            "depth": 2
         }
             ]
         }, {
@@ -3430,19 +3254,8 @@
                         "pageTitle": "full-addresses\\GetFullAddress",
                         "title": "GetFullAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Full Address Sample",
-                                "slug": "get-full-address-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3452,25 +3265,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\full-addresses\\GetMultipleFullAddresses.php",
                         "projectPath": "full-addresses\\GetMultipleFullAddresses.php",
                         "targetPath": "full-addresses\\GetMultipleFullAddresses",
                         "pageTitle": "full-addresses\\GetMultipleFullAddresses",
                         "title": "GetMultipleFullAddresses"
                     },
-                    "depth": 2,
-                    "outline": [
-            {
-                "type": "heading",
-                "data": {
-                    "level": 1,
-                    "title": "Get Multiple Full Addresses Sample",
-                    "slug": "get-multiple-full-addresses-sample"
-                },
-                "depth": 1
-            }
-                    ]
+                    "depth": 2
         }
             ]
         }, {
@@ -3498,19 +3300,8 @@
                         "pageTitle": "transaction-confidence\\GetMultipleTransactionsConfidence",
                         "title": "GetMultipleTransactionsConfidence"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Transactions Confidence Sample",
-                                "slug": "get-multiple-transactions-confidence-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3520,25 +3311,14 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transaction-confidence\\GetTransactionConfidence.php",
                         "projectPath": "transaction-confidence\\GetTransactionConfidence.php",
                         "targetPath": "transaction-confidence\\GetTransactionConfidence",
                         "pageTitle": "transaction-confidence\\GetTransactionConfidence",
                         "title": "GetTransactionConfidence"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Transaction Confidence Sample",
-                                "slug": "get-transaction-confidence-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
         }
             ]
         }, {
@@ -3566,19 +3346,8 @@
                         "pageTitle": "transactions\\GetMultipleTransactions",
                         "title": "GetMultipleTransactions"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple Transactions Sample",
-                                "slug": "get-multiple-transactions-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3588,23 +3357,230 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
+            },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetTransaction.php",
                         "projectPath": "transactions\\GetTransaction.php",
                         "targetPath": "transactions\\GetTransaction",
                         "pageTitle": "transactions\\GetTransaction",
                         "title": "GetTransaction"
                     },
+                    "depth": 2
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetTransactionWithPaging.php",
+                        "projectPath": "transactions\\GetTransactionWithPaging.php",
+                        "targetPath": "transactions\\GetTransactionWithPaging",
+                        "pageTitle": "transactions\\GetTransactionWithPaging",
+                        "title": "GetTransactionWithPaging"
+                    },
+                    "depth": 2
+                }
+            ]
+        }, {
+            "type": "folder",
+            "data": {
+                "path": "wallets",
+                "title": "wallets"
+            },
+            "depth": 1,
+            "children": [
+                {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\wallets\\AddAddressesToWallet.php",
+                        "projectPath": "wallets\\AddAddressesToWallet.php",
+                        "targetPath": "wallets\\AddAddressesToWallet",
+                        "pageTitle": "wallets\\AddAddressesToWallet",
+                        "title": "AddAddressesToWallet"
+                    },
                     "depth": 2,
                     "outline": [
                         {
                             "type": "heading",
                             "data": {
                                 "level": 1,
-                                "title": "Get Transaction Sample",
-                                "slug": "get-transaction-sample"
+                                "title": "Add Addresses to Wallet Sample",
+                                "slug": "add-addresses-to-wallet-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 2,
+                        "title": "Get Wallet Name.",
+                        "slug": "get-wallet-name"
+                    },
+                    "depth": 2,
+                    "children": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 3,
+                                "title": "Add Addresses to the Wallet",
+                                "slug": "add-addresses-to-the-wallet"
+                            },
+                            "depth": 3
+                        }
+                    ]
+                }
+                            ]
+            }
+                    ]
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\wallets\\CreateWallet.php",
+                        "projectPath": "wallets\\CreateWallet.php",
+                        "targetPath": "wallets\\CreateWallet",
+                        "pageTitle": "wallets\\CreateWallet",
+                        "title": "CreateWallet"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Create Wallet Sample",
+                                "slug": "create-wallet-sample"
                             },
                             "depth": 1
+                        }, {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Wallet Information",
+                                "slug": "wallet-information"
+                            },
+                            "depth": 1,
+                            "children": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 3,
+                        "title": "Create Wallet",
+                        "slug": "create-wallet"
+                    },
+                    "depth": 3
+                }
+                            ]
+            }
+                    ]
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\wallets\\DeleteWallet.php",
+                        "projectPath": "wallets\\DeleteWallet.php",
+                        "targetPath": "wallets\\DeleteWallet",
+                        "pageTitle": "wallets\\DeleteWallet",
+                        "title": "DeleteWallet"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Delete Wallet Sample",
+                                "slug": "delete-wallet-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 3,
+                        "title": "Delete Wallet",
+                        "slug": "delete-wallet"
+                    },
+                    "depth": 3
+                }
+                            ]
+            }
+                    ]
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\wallets\\GenerateNewAddressForWallet.php",
+                        "projectPath": "wallets\\GenerateNewAddressForWallet.php",
+                        "targetPath": "wallets\\GenerateNewAddressForWallet",
+                        "pageTitle": "wallets\\GenerateNewAddressForWallet",
+                        "title": "GenerateNewAddressForWallet"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Generate a new Addresses and associated to Wallet Sample",
+                                "slug": "generate-a-new-addresses-and-associated-to-wallet-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 2,
+                        "title": "Get Wallet Name.",
+                        "slug": "get-wallet-name"
+                    },
+                    "depth": 2,
+                    "children": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 3,
+                                "title": "Generate new address and associated it to the Wallet",
+                                "slug": "generate-new-address-and-associated-it-to-the-wallet"
+                            },
+                            "depth": 3
+                    }
+                    ]
+                }
+                            ]
             }
                     ]
                 }, {
@@ -3617,12 +3593,12 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-                        },
-                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\transactions\\GetTransactionWithPaging.php",
-                        "projectPath": "transactions\\GetTransactionWithPaging.php",
-                        "targetPath": "transactions\\GetTransactionWithPaging",
-                        "pageTitle": "transactions\\GetTransactionWithPaging",
-                        "title": "GetTransactionWithPaging"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\wallets\\GetWallet.php",
+                        "projectPath": "wallets\\GetWallet.php",
+                        "targetPath": "wallets\\GetWallet",
+                        "pageTitle": "wallets\\GetWallet",
+                        "title": "GetWallet"
                     },
                     "depth": 2,
                     "outline": [
@@ -3630,13 +3606,137 @@
                             "type": "heading",
                             "data": {
                                 "level": 1,
-                                "title": "Get Transaction With Paging Sample",
-                                "slug": "get-transaction-with-paging-sample"
+                                "title": "Get Wallet Sample",
+                                "slug": "get-wallet-sample"
                             },
-                            "depth": 1
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 2,
+                                        "title": "Get Wallet Name.",
+                                        "slug": "get-wallet-name"
+                                    },
+                                    "depth": 2,
+                                    "children": [
+                                        {
+                                            "type": "heading",
+                                            "data": {
+                                                "level": 3,
+                                                "title": "Get Wallet",
+                                                "slug": "get-wallet"
+                                            },
+                                            "depth": 3
+                    }
+                                    ]
+                }
+                            ]
             }
                     ]
-        }
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\wallets\\ListWalletAddresses.php",
+                        "projectPath": "wallets\\ListWalletAddresses.php",
+                        "targetPath": "wallets\\ListWalletAddresses",
+                        "pageTitle": "wallets\\ListWalletAddresses",
+                        "title": "ListWalletAddresses"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Get All Wallet Addresses Sample",
+                                "slug": "get-all-wallet-addresses-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 2,
+                                        "title": "Get Wallet Name.",
+                                        "slug": "get-wallet-name"
+                                    },
+                                    "depth": 2,
+                                    "children": [
+                                        {
+                                            "type": "heading",
+                                            "data": {
+                                                "level": 3,
+                                                "title": "Get List of All Addresses for the Wallet",
+                                                "slug": "get-list-of-all-addresses-for-the-wallet"
+                                            },
+                                            "depth": 3
+                    }
+                                    ]
+                }
+                            ]
+            }
+                    ]
+        }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+            },
+                        "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\wallets\\RemoveAddressesFromWallet.php",
+                        "projectPath": "wallets\\RemoveAddressesFromWallet.php",
+                        "targetPath": "wallets\\RemoveAddressesFromWallet",
+                        "pageTitle": "wallets\\RemoveAddressesFromWallet",
+                        "title": "RemoveAddressesFromWallet"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Remove Addresses from Wallet Sample",
+                                "slug": "remove-addresses-from-wallet-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 2,
+                        "title": "Get Wallet Name and Add Addresses.",
+                        "slug": "get-wallet-name-and-add-addresses"
+                    },
+                    "depth": 2,
+                    "children": [
+                        {
+                            "type": "heading",
+                            "data": {
+                        "level": 3,
+                                "title": "Remove Addresses from the Wallet",
+                                "slug": "remove-addresses-from-the-wallet"
+                            },
+                            "depth": 3
+                        }
+                    ]
+                }
+                            ]
+                        }
+                    ]
+                }
             ]
         }, {
             "type": "folder",
@@ -3663,41 +3763,8 @@
                         "pageTitle": "webhooks\\CreateAndDeleteAllWebHooks",
                         "title": "CreateAndDeleteAllWebHooks"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Delete All WebHooks Sample",
-                                "slug": "delete-all-webhooks-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 2,
-                                        "title": "Get WebHook Instance",
-                                        "slug": "get-webhook-instance"
-                                    },
-                                    "depth": 2,
-                                    "children": [
-                                        {
-                                            "type": "heading",
-                                            "data": {
-                                                "level": 3,
-                                                "title": "Delete All WebHooks",
-                                                "slug": "delete-all-webhooks"
-                                            },
-                                            "depth": 3
-                    }
-                                    ]
-                }
-                            ]
-            }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3714,41 +3781,8 @@
                         "pageTitle": "webhooks\\CreateAndDeleteWebHook",
                         "title": "CreateAndDeleteWebHook"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Delete WebHook Sample",
-                                "slug": "delete-webhook-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 2,
-                                        "title": "Get WebHook Instance",
-                                        "slug": "get-webhook-instance"
-                                    },
-                                    "depth": 2,
-                                    "children": [
-                                        {
-                                            "type": "heading",
-                                            "data": {
-                                                "level": 3,
-                                                "title": "Delete WebHook",
-                                                "slug": "delete-webhook"
-                                            },
-                                            "depth": 3
-                    }
-                                    ]
-                }
-                            ]
-            }
-                    ]
-                }, {
+                    "depth": 2
+        }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3776,28 +3810,28 @@
                             },
                             "depth": 1,
                             "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 2,
-                                        "title": "List WebHooks",
-                                        "slug": "list-webhooks"
-                                    },
-                                    "depth": 2,
-                                    "children": [
-                                        {
-                                            "type": "heading",
-                                            "data": {
-                                                "level": 3,
-                                                "title": "Get List of All WebHooks",
-                                                "slug": "get-list-of-all-webhooks"
-                                            },
-                                            "depth": 3
-                    }
-                                    ]
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 2,
+                        "title": "List WebHooks",
+                        "slug": "list-webhooks"
+                    },
+                    "depth": 2,
+                    "children": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 3,
+                                "title": "Get List of All WebHooks",
+                                "slug": "get-list-of-all-webhooks"
+                            },
+                            "depth": 3
+                        }
+                    ]
                 }
                             ]
-            }
+                        }
                     ]
         }, {
                     "type": "file",
@@ -3816,56 +3850,7 @@
                         "pageTitle": "webhooks\\CreateWebHook",
                         "title": "CreateWebHook"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Create WebHook Sample",
-                                "slug": "create-webhook-sample"
-                            },
-                            "depth": 1
-                        }, {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Basic Information",
-                                "slug": "basic-information"
-                            },
-                            "depth": 1,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 4,
-                                        "title": "NOTE: Please note that the use of https is recommended for webhooks.",
-                                        "slug": "note-please-note-that-the-use-of-https-is-recommended-for-webhooks"
-                                    },
-                                    "depth": 4
-                }
-                            ]
-                        }, {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Event Types",
-                                "slug": "event-types"
-                            },
-                            "depth": 1,
-                            "children": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 3,
-                        "title": "Create WebHook",
-                        "slug": "create-webhook"
-                    },
-                    "depth": 3
-                }
-                            ]
-                        }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -3883,41 +3868,8 @@
                         "pageTitle": "webhooks\\DeleteAllWebHooks",
                         "title": "DeleteAllWebHooks"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Delete All WebHooks Sample",
-                                "slug": "delete-all-webhooks-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 2,
-                        "title": "Get WebHook Instance",
-                        "slug": "get-webhook-instance"
-                    },
-                    "depth": 2,
-                    "children": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 3,
-                                "title": "Delete All WebHooks",
-                                "slug": "delete-all-webhooks"
-                            },
-                            "depth": 3
-                        }
-                    ]
-                }
-                            ]
-                        }
-                    ]
-        }, {
+                    "depth": 2
+                }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3927,48 +3879,15 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-            },
+                        },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\webhooks\\GetMultipleWebHooks.php",
                         "projectPath": "webhooks\\GetMultipleWebHooks.php",
                         "targetPath": "webhooks\\GetMultipleWebHooks",
                         "pageTitle": "webhooks\\GetMultipleWebHooks",
                         "title": "GetMultipleWebHooks"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Multiple WebHooks Sample",
-                                "slug": "get-multiple-webhooks-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 2,
-                        "title": "Get WebHook ID.",
-                        "slug": "get-webhook-id"
-                    },
-                    "depth": 2,
-                    "children": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 3,
-                                "title": "Get Multiple WebHooks",
-                                "slug": "get-multiple-webhooks"
-                            },
-                            "depth": 3
-                        }
-                    ]
-                }
-                            ]
-                        }
-                    ]
-        }, {
+                    "depth": 2
+                }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -3978,48 +3897,15 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-            },
+                        },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\webhooks\\GetWebHook.php",
                         "projectPath": "webhooks\\GetWebHook.php",
                         "targetPath": "webhooks\\GetWebHook",
                         "pageTitle": "webhooks\\GetWebHook",
                         "title": "GetWebHook"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get WebHook Sample",
-                                "slug": "get-webhook-sample"
-                            },
-                            "depth": 1,
-                            "children": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 2,
-                        "title": "Get WebHook ID.",
-                        "slug": "get-webhook-id"
-                    },
-                    "depth": 2,
-                    "children": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 3,
-                                "title": "Get WebHook",
-                                "slug": "get-webhook"
-                            },
-                            "depth": 3
-                        }
-                    ]
-                }
-                            ]
-                        }
-                    ]
-        }, {
+                    "depth": 2
+                }, {
                     "type": "file",
                     "data": {
                         "language": {
@@ -4029,7 +3915,7 @@
                             "ignorePrefix": "}",
                             "foldPrefix": "^",
                             "name": "PHP"
-            },
+                        },
                         "sourcePath": "D:\\git\\Projects\\blockchyper\\php-client\\sample\\webhooks\\ListWebHooks.php",
                         "projectPath": "webhooks\\ListWebHooks.php",
                         "targetPath": "webhooks\\ListWebHooks",
