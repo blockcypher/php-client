@@ -155,31 +155,6 @@ class WalletTest extends ResourceModelTestCase
     }
 
     /**
-     * TODO: I think it is not supported.
-     * @dataProvider mockProvider
-     * @param Wallet $obj
-     * @param $mockApiContext
-     */
-    /*public function testGetMultiple($obj, $mockApiContext)
-    {
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $mockBlockCypherRestCall->expects($this->any())
-            ->method('execute')
-            ->will($this->returnValue(
-                '[' . WalletTest::getJson() . ']'
-            ));
-
-        $walletList = array(WalletTest::getObject()->getName());
-
-        $result = $obj->getMultiple($walletList, array(), $mockApiContext, $mockBlockCypherRestCall);
-        $this->assertNotNull($result);
-        $this->assertEquals($result[0], WalletTest::getObject());
-    }*/
-
-    /**
      * @dataProvider mockProviderGetParamsValidation
      * @param Wallet $obj
      * @param $mockApiContext
