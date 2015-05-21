@@ -21,7 +21,7 @@ class OutputTest extends ResourceModelTestCase
     }
 
     /**
-     * Gets Json String of Object InvoiceItem
+     * Gets Json String of Object Output
      * @return string
      */
     public static function getJson()

@@ -25,7 +25,7 @@ class TxrefTest extends ResourceModelTestCase
     }
 
     /**
-     * Gets Json String of Object InvoiceItem
+     * Gets Json String of Object Txref
      * @return string
      */
     public static function getJson()

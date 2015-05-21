@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetMultipleFullAddressesTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\full-addresses
  */
 class GetMultipleFullAddressesTest extends WebTestCase
 {

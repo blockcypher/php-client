@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetTransactionWithPagingTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\transactions
  */
 class GetTransactionWithPagingTest extends WebTestCase
 {

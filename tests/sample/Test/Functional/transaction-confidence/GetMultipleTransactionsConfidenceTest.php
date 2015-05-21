@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetMultipleTransactionsConfidenceTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\transaction-confidence
  */
 class GetMultipleTransactionsConfidenceTest extends WebTestCase
 {

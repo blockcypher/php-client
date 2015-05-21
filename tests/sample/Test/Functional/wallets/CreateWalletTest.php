@@ -4,7 +4,7 @@ namespace sample\Test\Functional\wallets;
 
 /**
  * Class CreateWalletTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\wallets
  */
 class CreateWalletTest extends WalletSampleTestCase
 {

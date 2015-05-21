@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetAddressBtcTest3Test
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\blocks
  */
 class GetAddressBtcTest3Test extends WebTestCase
 {

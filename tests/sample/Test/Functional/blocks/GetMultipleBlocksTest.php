@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetMultipleBlocksTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\blocks
  */
 class GetMultipleBlocksTest extends WebTestCase
 {

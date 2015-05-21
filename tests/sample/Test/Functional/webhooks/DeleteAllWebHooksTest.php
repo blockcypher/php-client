@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class DeleteAllWebHooksTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\webhooks
  */
 class DeleteAllWebHooksTest extends WebTestCase
 {

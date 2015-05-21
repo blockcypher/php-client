@@ -21,7 +21,7 @@ class AddressesListTest extends ResourceModelTestCase
     }
 
     /**
-     * Gets Json String of Object InvoiceItem
+     * Gets Json String of Object AddressesList
      * @return string
      */
     public static function getJson()

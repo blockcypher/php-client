@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetChainTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\chains
  */
 class GetChainTest extends WebTestCase
 {

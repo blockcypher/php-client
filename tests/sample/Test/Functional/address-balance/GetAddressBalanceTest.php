@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetAddressBalanceTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\address-balance
  */
 class GetAddressBalanceTest extends WebTestCase
 {

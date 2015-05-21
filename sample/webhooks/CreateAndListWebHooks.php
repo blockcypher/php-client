@@ -18,10 +18,10 @@ $webHook = require 'CreateWebHook.php';
 try {
     $output = \BlockCypher\Api\WebHook::getAll(array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("List all WebHooks", "WebHookList", null, null, $ex);
+    ResultPrinter::printError("List all WebHooks", "Array of WebHook", null, null, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("List all WebHooks", "WebHookList", null, null, $output);
+ResultPrinter::printResult("List all WebHooks", "Array of WebHook", null, null, $output);
 
 return $output;

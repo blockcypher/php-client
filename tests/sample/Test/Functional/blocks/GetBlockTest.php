@@ -6,7 +6,7 @@ use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetBlockTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\blocks
  */
 class GetBlockTest extends WebTestCase
 {
