@@ -246,7 +246,7 @@ class Wallet extends BlockCypherResourceModel
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Wallet
+     * @return WalletGenerateAddressResponse
      */
     public function generateAddress($params = array(), $apiContext = null, $restCall = null)
     {
@@ -266,8 +266,9 @@ class Wallet extends BlockCypherResourceModel
             $apiContext,
             $restCall
         );
-        $this->fromJson($json);
-        return $this;
+        $ret = new WalletGenerateAddressResponse();
+        $ret->fromJson($json);
+        return $ret;
     }
 
     /**

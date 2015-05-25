@@ -59,4 +59,23 @@ class ResourceModelTestCase extends \PHPUnit_Framework_TestCase
             array($obj, $mockApiContext, 'TestSample'),
         );
     }
+
+    /**
+     * Asserts that an array has a specified subset.
+     * TODO: replace by
+     * https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertArraySubset
+     * when PHPUnit version is updated.
+     *
+     * @param array  $subset
+     * @param array $array
+     * @param boolean            $strict  Check for object identity
+     * @param string             $message
+     * @since Method available since PHPUnit Release 4.4.0
+     */
+    protected function assertArraySubset($subset, $array, $strict = false, $message = '')
+    {
+        foreach($subset as $item) {
+            $this->assertContains($item, $array);
+        }
+    }
 }
