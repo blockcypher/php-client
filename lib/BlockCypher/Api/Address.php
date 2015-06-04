@@ -16,7 +16,8 @@ use BlockCypher\Validation\ArgumentValidator;
  *
  * @package BlockCypher\Api
  *
- * @property string address
+ * @property string address Only present when object represents an address
+ * @property \BlockCypher\Api\Wallet wallet Only present when object represents a wallet
  * @property int total_received
  * @property int total_sent
  * @property int balance
@@ -177,6 +178,22 @@ class Address extends BlockCypherResourceModel
     {
         $this->address = $address;
         return $this;
+    }
+
+    /**
+     * @return \BlockCypher\Api\Wallet
+     */
+    public function getWallet()
+    {
+        return $this->wallet;
+    }
+
+    /**
+     * @param \BlockCypher\Api\Wallet $wallet
+     */
+    public function setWallet($wallet)
+    {
+        $this->wallet = $wallet;
     }
 
     /**

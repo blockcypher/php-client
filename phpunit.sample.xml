@@ -23,6 +23,7 @@
             <file>tests/sample/Test/Functional/wallets/RemoveAddressesFromWalletTest.php</file>
             <file>tests/sample/Test/Functional/wallets/GenerateNewAddressForWalletTest.php</file>
             <file>tests/sample/Test/Functional/wallets/GetWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallets/GetWalletAsAddressTest.php</file>
             <file>tests/sample/Test/Functional/wallets/ListWalletAddressesTest.php</file>
             <file>tests/sample/Test/Functional/wallets/DeleteWalletTest.php</file>
             <file>tests/sample/Test/Functional/webhooks/CreateAndDeleteAllWebHooksTest.php</file>

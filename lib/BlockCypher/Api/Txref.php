@@ -11,6 +11,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
  *
  * @package BlockCypher\Api
  *
+ * @property string address Only present when parent object represents a wallet
  * @property string tx_hash
  * @property int block_height
  * @property int tx_input_n
@@ -29,6 +30,22 @@ use BlockCypher\Common\BlockCypherBaseModel;
  */
 class Txref extends BlockCypherBaseModel
 {
+    /**
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param string $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
     /**
      * @return int
      */

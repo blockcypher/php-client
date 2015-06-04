@@ -5,7 +5,7 @@ namespace BlockCypher\Test\Api;
 use BlockCypher\Api\Address;
 
 /**
- * Class Address
+ * Class AddressTest
  *
  * @package BlockCypher\Test\Api
  */

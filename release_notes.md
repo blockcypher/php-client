@@ -11,6 +11,7 @@ v1.0.0
 * Added BlockCypherCoinSymbolConstants
 * Added missing property Transaction::next_inputs
 * Added Wallet API
+* Get wallet as address
 
 v1.0.0-beta
 -----------
