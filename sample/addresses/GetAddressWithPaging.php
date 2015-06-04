@@ -11,6 +11,13 @@ require __DIR__ . '/../bootstrap.php';
 // the process of retrieving details about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 // Transactions should be older than before URL parameter (block height)
 
+// override default sample address with GET parameter
+if (isset($_GET['address'])) {
+    $sampleAddress = filter_input(INPUT_GET, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
+} else {
+    $sampleAddress = '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'; // Default address for samples
+}
+
 /// ### Retrieve 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 // (See bootstrap.php for more on `ApiContext`)
 try {
@@ -19,9 +26,9 @@ try {
         'before' => 300000,
     );
 
-    $address = \BlockCypher\Api\Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', $params, $apiContexts['BTC.main']);
+    $address = \BlockCypher\Api\Address::get($sampleAddress, $params, $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Get Address", "Address", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
+    ResultPrinter::printError("Get Address", "Address", $sampleAddress, null, $ex);
     exit(1);
 }
 

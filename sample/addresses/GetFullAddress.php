@@ -10,12 +10,19 @@ require __DIR__ . '/../bootstrap.php';
 // The following code takes you through
 // the process of retrieving all details about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 
+// override default sample address with GET parameter
+if (isset($_GET['address'])) {
+    $sampleAddress = filter_input(INPUT_GET, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
+} else {
+    $sampleAddress = '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'; // Default address for samples
+}
+
 /// ### Retrieve this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $fullAddress = \BlockCypher\Api\Address::getFullAddress('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContexts['BTC.main']);
+    $fullAddress = \BlockCypher\Api\Address::getFullAddress($sampleAddress, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Get Full Address", "Full Address", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
+    ResultPrinter::printError("Get Full Address", "Full Address", $sampleAddress, null, $ex);
     exit(1);
 }
 

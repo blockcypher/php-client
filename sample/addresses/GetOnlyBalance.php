@@ -10,12 +10,19 @@ require __DIR__ . '/../bootstrap.php';
 // The following code takes you through
 // the process of retrieving balance and number of transactions about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 
+// override default sample address with GET parameter
+if (isset($_GET['address'])) {
+    $sampleAddress = filter_input(INPUT_GET, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
+} else {
+    $sampleAddress = '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'; // Default address for samples
+}
+
 /// ### Retrieve this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD balance
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $addressBalance = \BlockCypher\Api\Address::getOnlyBalance('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContexts['BTC.main']);
+    $addressBalance = \BlockCypher\Api\Address::getOnlyBalance($sampleAddress, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Get Only Address Balance", "Address Balance", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
+    ResultPrinter::printError("Get Only Address Balance", "Address Balance", $sampleAddress, null, $ex);
     exit(1);
 }
 
