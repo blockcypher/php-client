@@ -97,6 +97,7 @@ class AddressBalanceTest extends ResourceModelTestCase
         /** @noinspection PhpParamsInspection */
         $result = $obj->get("1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD", array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
+        $this->assertInstanceOf('BlockCypher\Api\AddressBalance', $result);
     }
 
     /**

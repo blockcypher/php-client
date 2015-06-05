@@ -12,6 +12,7 @@ v1.0.0
 * Added missing property Transaction::next_inputs
 * Added Wallet API
 * Get wallet as address
+* Get wallet balance as address balance
 
 v1.0.0-beta
 -----------

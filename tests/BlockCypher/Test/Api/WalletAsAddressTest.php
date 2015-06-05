@@ -145,5 +145,6 @@ class WalletAsAddressTest extends ResourceModelTestCase
         /** @noinspection PhpParamsInspection */
         $result = $obj->get("alice", array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
+        $this->assertInstanceOf('BlockCypher\Api\Address', $result);
     }
 }
