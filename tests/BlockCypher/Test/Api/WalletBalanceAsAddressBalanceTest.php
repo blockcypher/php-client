@@ -7,7 +7,7 @@ use BlockCypher\Api\AddressBalance;
 /**
  * Class WalletBalanceAsAddressBalanceTest
  *
- * This test case only tests Address class when it is used with a wallet instead of an address.
+ * This test case only tests AddressBalance class when it is used with a wallet instead of an address.
  *
  * @package BlockCypher\Test\Api
  */

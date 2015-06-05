@@ -22,6 +22,7 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property string[] addresses
  * @property int total
  * @property int fees
+ * @property int size
  * @property string hex
  * @property string preference
  * @property string relayed_by
@@ -626,6 +627,22 @@ class Transaction extends BlockCypherResourceModel
     public function getFees()
     {
         return $this->fees;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @param int $size
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
     }
 
     /**

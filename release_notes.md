@@ -13,6 +13,7 @@ v1.0.0
 * Added Wallet API
 * Get wallet as address
 * Get wallet balance as address balance
+* Get full wallet as full address
 
 v1.0.0-beta
 -----------
