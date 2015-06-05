@@ -1,8 +1,8 @@
 {
   "name": "blockcypher/php-client",
-  "description": "BlockChyper's PHP SDK for REST API",
+  "description": "BlockCypher's PHP SDK for REST API",
   "keywords": [
-    "blockchyper",
+    "blockcypher",
     "bitcoin",
     "rest",
     "sdk",
@@ -10,11 +10,11 @@
   ],
   "type": "library",
   "license": "Apache2",
-  "homepage": "https://github.com/blockchyper/php-client",
+  "homepage": "https://github.com/blockcypher/php-client",
   "authors": [
     {
-      "name": "BlockChyper",
-      "homepage": "https://github.com/blockchyper/php-client/contributors"
+      "name": "BlockCypher",
+      "homepage": "https://github.com/blockcypher/php-client/contributors"
     }
   ],
   "require": {
