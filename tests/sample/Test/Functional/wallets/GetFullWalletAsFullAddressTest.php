@@ -3,10 +3,10 @@
 namespace sample\Test\Functional\wallets;
 
 /**
- * Class GetFullWalletAsFullAddressTest
+ * Class GetWalletAsFullAddressTest
  * @package sample\Test\Functional\wallets
  */
-class GetFullWalletAsFullAddressTest extends WalletSampleTestCase
+class GetWalletAsFullAddressTest extends WalletSampleTestCase
 {
     public function setUp()
     {
@@ -25,7 +25,7 @@ class GetFullWalletAsFullAddressTest extends WalletSampleTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetFullWalletAsFullAddress()
+    public function testGetWalletAsFullAddress()
     {
         $this->loadAndAssertSample($this->url . '?wallet_name=' . self::$walletName);
     }

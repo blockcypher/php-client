@@ -203,8 +203,7 @@ class BlockCypherCoinSymbolConstants
     {
         $coinSymbolMappings = array();
         foreach (static::COIN_SYMBOL_ODICT_LIST() as $coinSymbolDict) {
-            //$coinSymbol = array_shift($coinSymbolDict); // Deprecated. coin_symbol needed for reverse mapping
-            $coinSymbol = $coinSymbolDict['coin_symbol'];
+            $coinSymbol = array_shift($coinSymbolDict);
             $coinSymbolMappings[$coinSymbol] = $coinSymbolDict;
         }
         $this->COIN_SYMBOL_MAPPINGS = $coinSymbolMappings;
@@ -345,12 +344,12 @@ class BlockCypherCoinSymbolConstants
      */
     public static function getCoinSymbolFrom($code, $network)
     {
-        foreach (self::COIN_SYMBOL_MAPPINGS() as $coinSymbolMapping) {
+        foreach (self::COIN_SYMBOL_MAPPINGS() as $coinSymbol => $coinSymbolMapping) {
             if ($coinSymbolMapping['blockcypher_code'] == $code &&
                 $coinSymbolMapping['blockcypher_network'] == $network
             ) {
                 // Found
-                return $coinSymbolMapping['coin_symbol'];
+                return $coinSymbol;
             }
         }
         return null;
