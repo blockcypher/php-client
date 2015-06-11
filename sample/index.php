@@ -714,7 +714,7 @@ if (PHP_SAPI == 'cli') {
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="wallets/GetFullWalletAsFullAddress.php"
+                                <a href="wallets/GetFullWalletAsFullAddressOld.php"
                                    class="btn btn-primary pull-left execute"> Try
                                     It <i
                                         class="fa fa-play-circle-o"></i></a>
