@@ -2938,7 +2938,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\address-balance\\GetAddressBalance.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-balance\\GetAddressBalance.php",
                         "projectPath": "address-balance\\GetAddressBalance.php",
                         "targetPath": "address-balance\\GetAddressBalance",
                         "pageTitle": "address-balance\\GetAddressBalance",
@@ -2956,7 +2956,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\address-balance\\GetMultipleAddressesBalance.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-balance\\GetMultipleAddressesBalance.php",
                         "projectPath": "address-balance\\GetMultipleAddressesBalance.php",
                         "targetPath": "address-balance\\GetMultipleAddressesBalance",
                         "pageTitle": "address-balance\\GetMultipleAddressesBalance",
@@ -2984,7 +2984,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\CreateAddress.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\CreateAddress.php",
                         "projectPath": "addresses\\CreateAddress.php",
                         "targetPath": "addresses\\CreateAddress",
                         "pageTitle": "addresses\\CreateAddress",
@@ -3002,24 +3002,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\GetAddress.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\GetAddress.php",
                         "projectPath": "addresses\\GetAddress.php",
                         "targetPath": "addresses\\GetAddress",
                         "pageTitle": "addresses\\GetAddress",
                         "title": "GetAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address Sample",
-                                "slug": "get-address-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3031,24 +3020,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\GetAddressBtcTest3.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\GetAddressBtcTest3.php",
                         "projectPath": "addresses\\GetAddressBtcTest3.php",
                         "targetPath": "addresses\\GetAddressBtcTest3",
                         "pageTitle": "addresses\\GetAddressBtcTest3",
                         "title": "GetAddressBtcTest3"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address Sample",
-                                "slug": "get-address-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3060,24 +3038,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\GetAddressWithPaging.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\GetAddressWithPaging.php",
                         "projectPath": "addresses\\GetAddressWithPaging.php",
                         "targetPath": "addresses\\GetAddressWithPaging",
                         "pageTitle": "addresses\\GetAddressWithPaging",
                         "title": "GetAddressWithPaging"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address paging transactions Sample",
-                                "slug": "get-address-paging-transactions-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3089,24 +3056,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\GetAddressWithUnspentOnly.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\GetAddressWithUnspentOnly.php",
                         "projectPath": "addresses\\GetAddressWithUnspentOnly.php",
                         "targetPath": "addresses\\GetAddressWithUnspentOnly",
                         "pageTitle": "addresses\\GetAddressWithUnspentOnly",
                         "title": "GetAddressWithUnspentOnly"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Address Only with the unspent transactions Sample",
-                                "slug": "get-address-only-with-the-unspent-transactions-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3118,24 +3074,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\GetFullAddress.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\GetFullAddress.php",
                         "projectPath": "addresses\\GetFullAddress.php",
                         "targetPath": "addresses\\GetFullAddress",
                         "pageTitle": "addresses\\GetFullAddress",
                         "title": "GetFullAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Full Address Sample",
-                                "slug": "get-full-address-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
                 }, {
                     "type": "file",
                     "data": {
@@ -3147,7 +3092,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\GetMultipleAddresses.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\GetMultipleAddresses.php",
                         "projectPath": "addresses\\GetMultipleAddresses.php",
                         "targetPath": "addresses\\GetMultipleAddresses",
                         "pageTitle": "addresses\\GetMultipleAddresses",
@@ -3165,25 +3110,14 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\addresses\\GetOnlyBalance.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\addresses\\GetOnlyBalance.php",
                         "projectPath": "addresses\\GetOnlyBalance.php",
                         "targetPath": "addresses\\GetOnlyBalance",
                         "pageTitle": "addresses\\GetOnlyBalance",
                         "title": "GetOnlyBalance"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Only Balance Sample",
-                                "slug": "get-only-balance-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
-        }
+                    "depth": 2
+                }
             ]
         }, {
             "type": "folder",
@@ -3204,7 +3138,7 @@
                     "foldPrefix": "^",
                     "name": "PHP"
             },
-                "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\blocks\\GetBlock.php",
+                "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\blocks\\GetBlock.php",
                 "projectPath": "blocks\\GetBlock.php",
                 "targetPath": "blocks\\GetBlock",
                 "pageTitle": "blocks\\GetBlock",
@@ -3222,7 +3156,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\blocks\\GetBlockByHeight.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\blocks\\GetBlockByHeight.php",
                         "projectPath": "blocks\\GetBlockByHeight.php",
                         "targetPath": "blocks\\GetBlockByHeight",
                         "pageTitle": "blocks\\GetBlockByHeight",
@@ -3240,7 +3174,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\blocks\\GetBlockWithPaging.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\blocks\\GetBlockWithPaging.php",
                         "projectPath": "blocks\\GetBlockWithPaging.php",
                         "targetPath": "blocks\\GetBlockWithPaging",
                         "pageTitle": "blocks\\GetBlockWithPaging",
@@ -3258,7 +3192,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\blocks\\GetMultipleBlocks.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\blocks\\GetMultipleBlocks.php",
                         "projectPath": "blocks\\GetMultipleBlocks.php",
                         "targetPath": "blocks\\GetMultipleBlocks",
                         "pageTitle": "blocks\\GetMultipleBlocks",
@@ -3286,7 +3220,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\chains\\GetChain.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\chains\\GetChain.php",
                         "projectPath": "chains\\GetChain.php",
                         "targetPath": "chains\\GetChain",
                         "pageTitle": "chains\\GetChain",
@@ -3314,7 +3248,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\full-addresses\\GetFullAddress.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\full-addresses\\GetFullAddress.php",
                         "projectPath": "full-addresses\\GetFullAddress.php",
                         "targetPath": "full-addresses\\GetFullAddress",
                         "pageTitle": "full-addresses\\GetFullAddress",
@@ -3332,7 +3266,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\full-addresses\\GetMultipleFullAddresses.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\full-addresses\\GetMultipleFullAddresses.php",
                         "projectPath": "full-addresses\\GetMultipleFullAddresses.php",
                         "targetPath": "full-addresses\\GetMultipleFullAddresses",
                         "pageTitle": "full-addresses\\GetMultipleFullAddresses",
@@ -3360,7 +3294,7 @@
                     "foldPrefix": "^",
                     "name": "PHP"
             },
-                "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\transaction-confidence\\GetMultipleTransactionsConfidence.php",
+                "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-confidence\\GetMultipleTransactionsConfidence.php",
                 "projectPath": "transaction-confidence\\GetMultipleTransactionsConfidence.php",
                 "targetPath": "transaction-confidence\\GetMultipleTransactionsConfidence",
                 "pageTitle": "transaction-confidence\\GetMultipleTransactionsConfidence",
@@ -3378,7 +3312,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\transaction-confidence\\GetTransactionConfidence.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-confidence\\GetTransactionConfidence.php",
                         "projectPath": "transaction-confidence\\GetTransactionConfidence.php",
                         "targetPath": "transaction-confidence\\GetTransactionConfidence",
                         "pageTitle": "transaction-confidence\\GetTransactionConfidence",
@@ -3406,7 +3340,98 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\transactions\\GetMultipleTransactions.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transactions\\CreateAndSendTransaction.php",
+                        "projectPath": "transactions\\CreateAndSendTransaction.php",
+                        "targetPath": "transactions\\CreateAndSendTransaction",
+                        "pageTitle": "transactions\\CreateAndSendTransaction",
+                        "title": "CreateAndSendTransaction"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Create and Send Transaction Sample",
+                                "slug": "create-and-send-transaction-sample"
+                            },
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 3,
+                                        "title": "Send Transaction to the network",
+                                        "slug": "send-transaction-to-the-network"
+                                    },
+                                    "depth": 3
+                                }
+                            ]
+                        }
+                    ]
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transactions\\CreateTransaction.php",
+                        "projectPath": "transactions\\CreateTransaction.php",
+                        "targetPath": "transactions\\CreateTransaction",
+                        "pageTitle": "transactions\\CreateTransaction",
+                        "title": "CreateTransaction"
+                    },
+                    "depth": 2,
+                    "outline": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 1,
+                                "title": "Create Transaction Sample (without sending it)",
+                                "slug": "create-transaction-sample-without-sending-it"
+                            },
+                            "depth": 1,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 2,
+                                        "title": "partially-filled out TX request object.",
+                                        "slug": "partially-filled-out-tx-request-object"
+                                    },
+                                    "depth": 2,
+                                    "children": [
+                                        {
+                                            "type": "heading",
+                                            "data": {
+                                                "level": 3,
+                                                "title": "Create New Transaction",
+                                                "slug": "create-new-transaction"
+                                            },
+                                            "depth": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }, {
+                    "type": "file",
+                    "data": {
+                        "language": {
+                            "nameMatchers": [{}, ".fbp"],
+                            "pygmentsLexer": "php",
+                            "singleLineComment": ["//"],
+                            "ignorePrefix": "}",
+                            "foldPrefix": "^",
+                            "name": "PHP"
+                        },
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transactions\\GetMultipleTransactions.php",
                         "projectPath": "transactions\\GetMultipleTransactions.php",
                         "targetPath": "transactions\\GetMultipleTransactions",
                         "pageTitle": "transactions\\GetMultipleTransactions",
@@ -3424,7 +3449,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\transactions\\GetTransaction.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transactions\\GetTransaction.php",
                         "projectPath": "transactions\\GetTransaction.php",
                         "targetPath": "transactions\\GetTransaction",
                         "pageTitle": "transactions\\GetTransaction",
@@ -3442,14 +3467,14 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\transactions\\GetTransactionWithPaging.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transactions\\GetTransactionWithPaging.php",
                         "projectPath": "transactions\\GetTransactionWithPaging.php",
                         "targetPath": "transactions\\GetTransactionWithPaging",
                         "pageTitle": "transactions\\GetTransactionWithPaging",
                         "title": "GetTransactionWithPaging"
                     },
                     "depth": 2
-        }
+                }
             ]
         }, {
             "type": "folder",
@@ -3470,7 +3495,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
                         },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\AddAddressesToWallet.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\AddAddressesToWallet.php",
                         "projectPath": "wallets\\AddAddressesToWallet.php",
                         "targetPath": "wallets\\AddAddressesToWallet",
                         "pageTitle": "wallets\\AddAddressesToWallet",
@@ -3488,7 +3513,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\CreateWallet.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\CreateWallet.php",
                         "projectPath": "wallets\\CreateWallet.php",
                         "targetPath": "wallets\\CreateWallet",
                         "pageTitle": "wallets\\CreateWallet",
@@ -3506,7 +3531,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\DeleteWallet.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\DeleteWallet.php",
                         "projectPath": "wallets\\DeleteWallet.php",
                         "targetPath": "wallets\\DeleteWallet",
                         "pageTitle": "wallets\\DeleteWallet",
@@ -3524,7 +3549,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\GenerateNewAddressForWallet.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\GenerateNewAddressForWallet.php",
                         "projectPath": "wallets\\GenerateNewAddressForWallet.php",
                         "targetPath": "wallets\\GenerateNewAddressForWallet",
                         "pageTitle": "wallets\\GenerateNewAddressForWallet",
@@ -3542,24 +3567,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\GetFullWalletAsFullAddress.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\GetFullWalletAsFullAddress.php",
                         "projectPath": "wallets\\GetFullWalletAsFullAddress.php",
                         "targetPath": "wallets\\GetFullWalletAsFullAddress",
                         "pageTitle": "wallets\\GetFullWalletAsFullAddress",
                         "title": "GetFullWalletAsFullAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Full Wallet Sample",
-                                "slug": "get-full-wallet-sample"
-                            },
-                            "depth": 1
-                        }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -3571,7 +3585,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\GetWallet.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\GetWallet.php",
                         "projectPath": "wallets\\GetWallet.php",
                         "targetPath": "wallets\\GetWallet",
                         "pageTitle": "wallets\\GetWallet",
@@ -3589,24 +3603,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\GetWalletAsAddress.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\GetWalletAsAddress.php",
                         "projectPath": "wallets\\GetWalletAsAddress.php",
                         "targetPath": "wallets\\GetWalletAsAddress",
                         "pageTitle": "wallets\\GetWalletAsAddress",
                         "title": "GetWalletAsAddress"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Wallet as Address Sample",
-                                "slug": "get-wallet-as-address-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -3618,24 +3621,13 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\GetWalletBalanceAsAddressBalance.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\GetWalletBalanceAsAddressBalance.php",
                         "projectPath": "wallets\\GetWalletBalanceAsAddressBalance.php",
                         "targetPath": "wallets\\GetWalletBalanceAsAddressBalance",
                         "pageTitle": "wallets\\GetWalletBalanceAsAddressBalance",
                         "title": "GetWalletBalanceAsAddressBalance"
                     },
-                    "depth": 2,
-                    "outline": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 1,
-                                "title": "Get Only Wallet Balance Sample",
-                                "slug": "get-only-wallet-balance-sample"
-                            },
-                            "depth": 1
-            }
-                    ]
+                    "depth": 2
         }, {
                     "type": "file",
                     "data": {
@@ -3647,7 +3639,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\ListWalletAddresses.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\ListWalletAddresses.php",
                         "projectPath": "wallets\\ListWalletAddresses.php",
                         "targetPath": "wallets\\ListWalletAddresses",
                         "pageTitle": "wallets\\ListWalletAddresses",
@@ -3665,7 +3657,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\wallets\\RemoveAddressesFromWallet.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallets\\RemoveAddressesFromWallet.php",
                         "projectPath": "wallets\\RemoveAddressesFromWallet.php",
                         "targetPath": "wallets\\RemoveAddressesFromWallet",
                         "pageTitle": "wallets\\RemoveAddressesFromWallet",
@@ -3693,7 +3685,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\CreateAndDeleteAllWebHooks.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\CreateAndDeleteAllWebHooks.php",
                         "projectPath": "webhooks\\CreateAndDeleteAllWebHooks.php",
                         "targetPath": "webhooks\\CreateAndDeleteAllWebHooks",
                         "pageTitle": "webhooks\\CreateAndDeleteAllWebHooks",
@@ -3711,7 +3703,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\CreateAndDeleteWebHook.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\CreateAndDeleteWebHook.php",
                         "projectPath": "webhooks\\CreateAndDeleteWebHook.php",
                         "targetPath": "webhooks\\CreateAndDeleteWebHook",
                         "pageTitle": "webhooks\\CreateAndDeleteWebHook",
@@ -3729,7 +3721,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\CreateAndListWebHooks.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\CreateAndListWebHooks.php",
                         "projectPath": "webhooks\\CreateAndListWebHooks.php",
                         "targetPath": "webhooks\\CreateAndListWebHooks",
                         "pageTitle": "webhooks\\CreateAndListWebHooks",
@@ -3747,7 +3739,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\CreateWebHook.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\CreateWebHook.php",
                         "projectPath": "webhooks\\CreateWebHook.php",
                         "targetPath": "webhooks\\CreateWebHook",
                         "pageTitle": "webhooks\\CreateWebHook",
@@ -3765,7 +3757,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\DeleteAllWebHooks.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\DeleteAllWebHooks.php",
                         "projectPath": "webhooks\\DeleteAllWebHooks.php",
                         "targetPath": "webhooks\\DeleteAllWebHooks",
                         "pageTitle": "webhooks\\DeleteAllWebHooks",
@@ -3783,7 +3775,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\GetMultipleWebHooks.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\GetMultipleWebHooks.php",
                         "projectPath": "webhooks\\GetMultipleWebHooks.php",
                         "targetPath": "webhooks\\GetMultipleWebHooks",
                         "pageTitle": "webhooks\\GetMultipleWebHooks",
@@ -3801,7 +3793,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\GetWebHook.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\GetWebHook.php",
                         "projectPath": "webhooks\\GetWebHook.php",
                         "targetPath": "webhooks\\GetWebHook",
                         "pageTitle": "webhooks\\GetWebHook",
@@ -3819,7 +3811,7 @@
                             "foldPrefix": "^",
                             "name": "PHP"
             },
-                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockChyper\\php-client\\sample\\webhooks\\ListWebHooks.php",
+                        "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\webhooks\\ListWebHooks.php",
                         "projectPath": "webhooks\\ListWebHooks.php",
                         "targetPath": "webhooks\\ListWebHooks",
                         "pageTitle": "webhooks\\ListWebHooks",

@@ -3,6 +3,7 @@
 namespace BlockCypher\Rest;
 
 use BlockCypher\Auth\TokenCredential;
+use BlockCypher\Core\BlockCypherCoinSymbolConstants;
 use BlockCypher\Core\BlockCypherConfigManager;
 use BlockCypher\Core\BlockCypherCredentialManager;
 use BlockCypher\Exception\BlockCypherConfigurationException;
@@ -21,6 +22,7 @@ class ApiContext
      * @var ApiContext
      */
     public static $defaultApiContext = null;
+
     /**
      * This is a placeholder for holding credential for the request
      * If the value is not set, it would get the value from @\BlockCypher\Core\BlockCypherCredentialManager
@@ -28,6 +30,7 @@ class ApiContext
      * @var \BlockCypher\Auth\SimpleTokenCredential
      */
     protected $credential;
+
     /**
      * main|test|test3
      * @var string
@@ -321,5 +324,14 @@ class ApiContext
     public function getBaseChainUrl()
     {
         return "/{$this->version}/{$this->coin}/{$this->chain}";
+    }
+
+    /**
+     * Map coin and chain to coin symbol
+     * @return string
+     */
+    public function getCoinSymbol()
+    {
+        return BlockCypherCoinSymbolConstants::getCoinSymbolFrom($this->coin, $this->chain);
     }
 }

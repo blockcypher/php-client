@@ -227,7 +227,7 @@ if (PHP_SAPI == 'cli') {
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#chains">Chains</a></li>
                     <li><a href="#blocks">Blocks</a></li>
-                    <li><a href="#transactions">Transactions</a></li>
+                    <li><a href="#transaction-api">Transactions</a></li>
                     <li><a href="#zero_confirmations">0-Confirmations</a></li>
                     <li><a href="#address_details">Address Details</a></li>
                     <li><a href="#address_gen">Address Generation</a></li>
@@ -237,7 +237,6 @@ if (PHP_SAPI == 'cli') {
                     <li><a href="#webhooks">WebHooks</a></li>
                     <li><a href="#payments_summary">Payments Summary</a></li>
                     <li><a href="#payments_details">Payments Details</a></li>
-                    <li><a href="#generic_transactions">Generic Transactions</a></li>
                     <li><a href="#micro_transactions">Micro Transactions</a></li>
                     <li><a href="#signing_sending">Signing and sending</a></li>
                     <li><a href="#multisig">Multisig</a></li>
@@ -335,8 +334,8 @@ if (PHP_SAPI == 'cli') {
             <!-- transactions -->
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 id="transactions" class="panel-title"><a
-                            href="http://dev.blockcypher.com/#transactions"
+                    <h3 id="transaction-api" class="panel-title"><a
+                            href="http://dev.blockcypher.com/#transaction-api"
                             target="_blank">Transactions</a></h3>
                 </div>
                 <!-- List group -->
@@ -408,6 +407,42 @@ if (PHP_SAPI == 'cli') {
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/transaction-confidence/GetMultipleTransactionsConfidence.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Create transaction (without sending it)</h5></div>
+                            <div class="col-md-4">
+                                <a href="transactions/CreateTransaction.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transactions/CreateTransaction.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Create and send transaction*
+                                    <small>(source address must contains enough balance)</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="transactions/CreateAndSendTransaction.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transactions/CreateAndSendTransaction.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -942,25 +977,6 @@ if (PHP_SAPI == 'cli') {
                     <h3 id="payments_details" class="panel-title"><a
                             href="http://dev.blockcypher.com/#payments_details"
                             target="_blank">Payments Details</a></h3>
-                </div>
-                <!-- List group -->
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Coming soon!</h5></div>
-                            <div class="col-md-4">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- generic_transactions -->
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 id="generic_transactions" class="panel-title"><a
-                            href="http://dev.blockcypher.com/#generic_transactions"
-                            target="_blank">Generic Transactions</a></h3>
                 </div>
                 <!-- List group -->
                 <ul class="list-group">

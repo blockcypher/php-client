@@ -154,6 +154,23 @@ class Input extends BlockCypherBaseModel
     }
 
     /**
+     * Append Address to the list.
+     *
+     * @param string $address
+     * @return $this
+     */
+    public function addAddress($address)
+    {
+        if (!$this->getAddresses()) {
+            return $this->setAddresses(array($address));
+        } else {
+            return $this->setAddresses(
+                array_merge($this->getAddresses(), array($address))
+            );
+        }
+    }
+
+    /**
      * Addresses referenced in the transaction output being spent.
      *
      * @return \string[]
@@ -173,6 +190,19 @@ class Input extends BlockCypherBaseModel
     {
         $this->addresses = $addresses;
         return $this;
+    }
+
+    /**
+     * Remove Address from the list.
+     *
+     * @param string $address
+     * @return $this
+     */
+    public function removeAddress($address)
+    {
+        return $this->setAddresses(
+            array_diff($this->getAddresses(), array($address))
+        );
     }
 
     /**

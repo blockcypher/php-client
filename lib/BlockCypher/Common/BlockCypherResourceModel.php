@@ -73,4 +73,16 @@ class BlockCypherResourceModel extends BlockCypherBaseModel implements IResource
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
         return $chainUrlPrefix;
     }
+
+    /**
+     * @param ApiContext|null $apiContext
+     * @return string
+     */
+    protected static function getCoinSymbol($apiContext)
+    {
+        if ($apiContext === null) {
+            $apiContext = self::getApiContext();
+        }
+        return $apiContext->getCoinSymbol();
+    }
 }

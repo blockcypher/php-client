@@ -118,6 +118,32 @@ class Transaction extends BlockCypherResourceModel
     }
 
     /**
+     * Create a new Transaction.
+     *
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return TXSkeleton
+     */
+    public function create($apiContext = null, $restCall = null)
+    {
+        $payLoad = $this->toJSON();
+
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs/new",
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $ret = new TXSkeleton();
+        $ret->fromJson($json);
+        return $ret;
+    }
+
+    /**
      * Unconfirmed transactions only. The number of peers that have sent this transaction to us (see Zero Confirmations).
      *
      * @return int
@@ -492,6 +518,23 @@ class Transaction extends BlockCypherResourceModel
     }
 
     /**
+     * Append Input to the list.
+     *
+     * @param \BlockCypher\Api\Input $input
+     * @return \BlockCypher\Api\Input[]
+     */
+    public function addInput($input)
+    {
+        if (!$this->getInputs()) {
+            return $this->setInputs(array($input));
+        } else {
+            return $this->setInputs(
+                array_merge($this->getInputs(), array($input))
+            );
+        }
+    }
+
+    /**
      * Array of inputs, limited to 20. Use paging to get more inputs (see section on blocks) with
      * instart and limit URL parameters.
      *
@@ -513,6 +556,36 @@ class Transaction extends BlockCypherResourceModel
     {
         $this->inputs = $inputs;
         return $this;
+    }
+
+    /**
+     * Remove Input from the list.
+     *
+     * @param \BlockCypher\Api\Input $input
+     * @return \BlockCypher\Api\Input[]
+     */
+    public function removeInput($input)
+    {
+        return $this->setInputs(
+            array_diff($this->getInputs(), array($input))
+        );
+    }
+
+    /**
+     * Append Output to the list.
+     *
+     * @param \BlockCypher\Api\Output $output
+     * @return \BlockCypher\Api\Output[]
+     */
+    public function addOutput($output)
+    {
+        if (!$this->getOutputs()) {
+            return $this->setOutputs(array($output));
+        } else {
+            return $this->setOutputs(
+                array_merge($this->getOutputs(), array($output))
+            );
+        }
     }
 
     /**
@@ -538,6 +611,19 @@ class Transaction extends BlockCypherResourceModel
         $this->outputs = $outputs;
         return $this;
     }
+
+    /**
+     * Remove Output from the list.
+     *
+     * @param \BlockCypher\Api\Output $output
+     * @return \BlockCypher\Api\Output[]
+     */
+    public function removeOutput($output)
+    {
+        return $this->setOutputs(
+            array_diff($this->getOutputs(), array($output))
+        );
+    }    
 
     /**
      * BlockHash of the block the transaction is in. Only exists for confirmed transactions.
