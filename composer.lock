@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5bd1ac985af6f17a153574adb456ad05",
+    "hash": "00ec2ed6012e5feef346f488b55d61c7",
     "packages": [
         {
             "name": "bitwasp/bitcoin",
@@ -1832,7 +1832,8 @@
     "platform": {
         "php": ">=5.3.0",
         "ext-curl": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-gmp": "*"
     },
     "platform-dev": []
 }

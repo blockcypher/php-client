@@ -1,5 +1,5 @@
 Rest API Samples
-===================
+================
 
 This sample project is a simple web app that you can explore to understand what the APIs can do for you.
 

@@ -17,6 +17,7 @@ if (!file_exists($composerAutoload)) {
         exit(1);
     }
 }
+
 /** @noinspection PhpIncludeInspection */
 require $composerAutoload;
 require __DIR__ . '/common.php';
