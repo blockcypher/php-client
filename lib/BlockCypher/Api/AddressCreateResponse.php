@@ -15,6 +15,8 @@ use BlockCypher\Common\BlockCypherResourceModel;
  * @property string public
  * @property string address
  * @property string wif
+ * @property string[] pubkeys
+ * @property string script_type
  */
 class AddressCreateResponse extends BlockCypherResourceModel
 {
@@ -104,5 +106,68 @@ class AddressCreateResponse extends BlockCypherResourceModel
     {
         $this->address = $address;
         return $this;
+    }
+
+    /**
+     * Append Pubkey to the list.
+     *
+     * @param string $pubkey
+     * @return $this
+     */
+    public function addPubkey($pubkey)
+    {
+        if (!$this->getPubkeys()) {
+            return $this->setPubkeys(array($pubkey));
+        } else {
+            return $this->setPubkeys(
+                array_merge($this->getPubkeys(), array($pubkey))
+            );
+        }
+    }
+
+    /**
+     * @return \string[]
+     */
+    public function getPubkeys()
+    {
+        return $this->pubkeys;
+    }
+
+    /**
+     * @param \string[] $pubkeys
+     * @return $this
+     */
+    public function setPubkeys($pubkeys)
+    {
+        $this->pubkeys = $pubkeys;
+    }
+
+    /**
+     * Remove Pubkey from the list.
+     *
+     * @param string $pubkey
+     * @return $this
+     */
+    public function removePubkey($pubkey)
+    {
+        return $this->setPubkeys(
+            array_diff($this->getPubkeys(), array($pubkey))
+        );
+    }
+
+    /**
+     * @return string
+     */
+    public function getScriptType()
+    {
+        return $this->script_type;
+    }
+
+    /**
+     * @param string $script_type
+     */
+    public function setScriptType($script_type)
+    {
+        $this->script_type = $script_type;
     }
 }
