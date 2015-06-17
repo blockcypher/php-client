@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\addresses;
+namespace sample\Test\Functional\confidence;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetTransactionConfidenceTest
- * @package sample\Test\Functional\transaction-confidence
+ * @package sample\Test\Functional\confidence
  */
 class GetTransactionConfidenceTest extends WebTestCase
 {

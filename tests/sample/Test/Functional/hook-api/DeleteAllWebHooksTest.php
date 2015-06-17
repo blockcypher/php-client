@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\webhooks;
+namespace sample\Test\Functional\hook;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class DeleteAllWebHooksTest
- * @package sample\Test\Functional\webhooks
+ * @package sample\Test\Functional\hook
  */
 class DeleteAllWebHooksTest extends WebTestCase
 {

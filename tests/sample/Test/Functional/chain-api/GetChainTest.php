@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\chains;
+namespace sample\Test\Functional\chain;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetChainTest
- * @package sample\Test\Functional\chains
+ * @package sample\Test\Functional\chain
  */
 class GetChainTest extends WebTestCase
 {

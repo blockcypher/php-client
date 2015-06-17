@@ -4,7 +4,7 @@ namespace BlockCypher\Test\Functional\Api;
 
 use BlockCypher\Api\Address;
 use BlockCypher\Api\AddressBalance;
-use BlockCypher\Api\AddressCreateResponse;
+use BlockCypher\Api\AddressKeyChain;
 use BlockCypher\Api\FullAddress;
 use BlockCypher\Exception\BlockCypherConnectionException;
 use BlockCypher\Test\Functional\Setup;
@@ -47,20 +47,20 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return AddressCreateResponse|null
+     * @return AddressKeyChain|null
      */
     public function testCreate()
     {
         //$request = $this->operation['request']['body'];
-        //$addressCreateResponse = new AddressCreateResponse($request);
+        //$addressCreateResponse = new AddressKeyChain($request);
         $result = null;
         try {
-            $result = Address::create($this->apiContext, $this->mockBlockCypherRestCall);
+            $result = Address::create(null, $this->apiContext, $this->mockBlockCypherRestCall);
         } catch (BlockCypherConnectionException $ex) {
             $this->fail($ex->getMessage());
         }
         $this->assertNotNull($result);
-        $this->assertInstanceOf('\BlockCypher\Api\AddressCreateResponse', $result);
+        $this->assertInstanceOf('\BlockCypher\Api\AddressKeychain', $result);
         return $result;
     }
 

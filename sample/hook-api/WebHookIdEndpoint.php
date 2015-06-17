@@ -1,26 +1,20 @@
 <?php
 
-// # Get WebHook Sample
-//
-// This sample code demonstrate how you can get a webhook, as documented here at:
-// http://dev.blockcypher.com/#webhooks
-// API used: GET /v1/btc/main/hooks/WebHook-Id
+// Run on console:
+// php -f .\sample\hook-api\WebHookIdEndpoint.php
 
-// ## Get WebHook ID.
-// In samples we are using CreateWebHook.php sample to get the created instance of webhook.
-// However, in real case scenario, we could use just the ID.
-/** @var \BlockCypher\Api\WebHook $webHook */
-$webHook = require 'CreateWebHook.php';
-$webHookId = $webHook->getId();
+require __DIR__ . '/../bootstrap.php';
 
-// ### Get WebHook
-try {
-    $output = \BlockCypher\Api\WebHook::get($webHookId, array(), $apiContexts['BTC.main']);
-} catch (Exception $ex) {
-    ResultPrinter::printError("Get a WebHook", "WebHook", null, $webHookId, $ex);
-    exit(1);
-}
+use BlockCypher\Api\WebHook;
+use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Rest\ApiContext;
 
-ResultPrinter::printResult("Get a WebHook", "WebHook", $output->getId(), null, $output);
+$apiContext = ApiContext::create(
+    'main', 'btc', 'v1',
+    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
+    array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
+);
 
-return $output;
+$webHook = WebHook::get('d5ca3bd3-5dfb-477d-9fb4-ac3510af258d', array(), $apiContext);
+
+ResultPrinter::printResult("WebHook ID Endpoint", "WebHook", $webHook->getId(), null, $webHook);

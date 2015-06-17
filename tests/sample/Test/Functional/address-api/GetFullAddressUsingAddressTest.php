@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\fullAddresses;
+namespace sample\Test\Functional\address;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetFullAddressTest
- * @package sample\Test\Functional\full-addresses
+ * Class GetFullAddressUsingAddressTest
+ * @package sample\Test\Functional\address
  */
-class GetFullAddressTest extends WebTestCase
+class GetFullAddressUsingAddressTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GetFullAddressTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetFullAddress()
+    public function testGetFullAddressUsingAddress()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

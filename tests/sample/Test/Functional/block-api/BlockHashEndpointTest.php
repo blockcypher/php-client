@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\blocks;
+namespace sample\Test\Functional\block;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetBlockByHeightTest
- * @package sample\Test\Functional\addresses
+ * Class BlockHashEndpointTest
+ * @package sample\Test\Functional\block
  */
-class GetBlockByHeightTest extends WebTestCase
+class BlockHashEndpointTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GetBlockByHeightTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetBlockByHeight()
+    public function testBlockHashEndpoint()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

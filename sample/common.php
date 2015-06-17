@@ -119,6 +119,14 @@ class ResultPrinter
                 echo str_replace('\\/', '/', json_encode(json_decode($object), 128));
             } elseif (is_string($object)) {
                 echo $object;
+            } elseif (is_array($object)) {
+                echo "[\n";
+                $cont = 0;
+                foreach ($object as $item) {
+                    if ($cont++ > 0) echo ",\n";
+                    self::printConsoleObject($item);
+                }
+                echo ']';
             } else {
                 print_r($object);
             }

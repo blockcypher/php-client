@@ -5,7 +5,7 @@ namespace BlockCypher\Test\Api;
 use BlockCypher\Api\FaucetResponse;
 
 /**
- * Class FaucetResponse
+ * Class FaucetResponseTest
  *
  * @package BlockCypher\Test\Api
  */
@@ -28,15 +28,13 @@ class FaucetResponseTest extends ResourceModelTestCase
     {
         /*
         {
-            "address": "CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd",
-            "amount": 100000,
             "tx_ref": "a0704e43c11b9b124d7604870aae186b4d9b9232f428582305726fc10a372a6c",
             "error": "",
             "errors": []
         }
         */
 
-        return '{"address":"CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd","amount":100000,"tx_ref":"a0704e43c11b9b124d7604870aae186b4d9b9232f428582305726fc10a372a6c","error":"","errors":[]}';
+        return '{"tx_ref":"a0704e43c11b9b124d7604870aae186b4d9b9232f428582305726fc10a372a6c","error":"","errors":[]}';
     }
 
     /**
@@ -48,8 +46,6 @@ class FaucetResponseTest extends ResourceModelTestCase
         $obj = new FaucetResponse(self::getJson());
 
         $this->assertNotNull($obj);
-        $this->assertNotNull($obj->getAddress());
-        $this->assertNotNull($obj->getAmount());
         $this->assertNotNull($obj->getTxRef());
 
         $this->assertEquals(self::getJson(), $obj->toJson());
@@ -63,8 +59,6 @@ class FaucetResponseTest extends ResourceModelTestCase
      */
     public function testGetters($obj)
     {
-        $this->assertEquals($obj->getAddress(), "CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd");
-        $this->assertEquals($obj->getAmount(), 100000);
         $this->assertEquals($obj->getTxRef(), "a0704e43c11b9b124d7604870aae186b4d9b9232f428582305726fc10a372a6c");
     }
 }

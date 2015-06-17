@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\addressBalance;
+namespace sample\Test\Functional\address;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class CreateBtcTestnetAddressTest
- * @package sample\Test\Functional\address-balance
+ * Class CreateBcyTestAddressTest
+ * @package sample\Test\Functional\address
  */
-class CreateBtcTestnetAddressTest extends WebTestCase
+class CreateBcyTestAddressTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class CreateBtcTestnetAddressTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testCreateBtcTestnetAddress()
+    public function testCreateBcyTestAddress()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

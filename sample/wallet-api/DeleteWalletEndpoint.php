@@ -1,34 +1,21 @@
 <?php
 
-// # Delete Wallet Sample
-//
-// This sample code demonstrate how you can delete a wallet, as documented here at:
-// <a href="http://dev.blockcypher.com/#wallet_api">http://dev.blockcypher.com/#wallet_api</a>
-// API used: DELETE /v1/btc/main/wallets/Wallet-Name
+// Run on console:
+// php -f .\sample\wallet-api\DeleteWalletEndpoint.php
 
 require __DIR__ . '/../bootstrap.php';
 
-// Delete a new instance of Wallet object
-// First you have to run CreateWallet sample to create "alice" wallet
+use BlockCypher\Api\Wallet;
+use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Rest\ApiContext;
 
-if (isset($_GET['wallet_name'])) {
-    $walletName = filter_input(INPUT_GET, 'wallet_name', FILTER_SANITIZE_SPECIAL_CHARS);
-} else {
-    $walletName = 'alice'; // Default wallet name for samples
-}
+$apiContext = ApiContext::create(
+    'main', 'btc', 'v1',
+    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
+    array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
+);
 
-// ### Delete Wallet
-try {
-    // Get the Wallet
-    $wallet = \BlockCypher\Api\Wallet::get($walletName, array(), $apiContexts['BTC.main']);
+$wallet = Wallet::get('alice', array(), $apiContext);
+$result = $wallet->delete(array(), $apiContext);
 
-    // Delete the Wallet
-    $output = $wallet->delete(array(), $apiContexts['BTC.main']);
-} catch (Exception $ex) {
-    ResultPrinter::printError("Deleted Wallet", "Wallet", $walletName, null, $ex);
-    exit(1);
-}
-
-ResultPrinter::printResult("Deleted Wallet", "Wallet", $walletName, null, $output);
-
-return $output;
+ResultPrinter::printResult("Delete Wallet Endpoint", "Wallet", 'alice', null, $result);

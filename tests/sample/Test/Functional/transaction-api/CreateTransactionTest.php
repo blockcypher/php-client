@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\transactions;
+namespace sample\Test\Functional\transaction;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetTransactionTest
- * @package sample\Test\Functional\transactions
+ * Class CreateTransactionTest
+ * @package sample\Test\Functional\transaction
  */
-class GetTransactionTest extends WebTestCase
+class CreateTransactionTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GetTransactionTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetTransaction()
+    public function testCreateTransaction()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

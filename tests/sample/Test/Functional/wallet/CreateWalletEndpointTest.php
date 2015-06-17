@@ -1,13 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\wallets;
+namespace sample\Test\Functional\wallet;
+
 use BlockCypher\Api\Wallet;
-use BlockCypher\Rest\ApiContext;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Rest\ApiContext;
 
 /**
  * Class CreateWalletEndpointTest
- * @package sample\Test\Functional\wallets
+ * @package sample\Test\Functional\wallet
  */
 class CreateWalletEndpointTest extends WalletSampleTestCase
 {
@@ -37,11 +38,6 @@ class CreateWalletEndpointTest extends WalletSampleTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testCreateWalletEndpoint()
-    {
-        $this->loadAndAssertSample($this->url . '?wallet_name=' . self::$walletName);
-    }
-
     /**
      * @param $apiContext
      */
@@ -53,5 +49,10 @@ class CreateWalletEndpointTest extends WalletSampleTestCase
             $wallet->delete(array(), $apiContext);
         } catch (\Exception $ex) {
         }
+    }
+
+    public function testCreateWalletEndpoint()
+    {
+        $this->loadAndAssertSample($this->url . '?wallet_name=' . self::$walletName);
     }
 }

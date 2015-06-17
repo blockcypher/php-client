@@ -1,28 +1,26 @@
 <?php
 
-// # Fund Address with Faucet
-// The Faucet allows you to fund test addresses.
-// API called: '/v1/btc/test3' or  '/v1/bcy/test'
+// # Generate new test BCY address
+// API called: '/v1/bcy/test'
 
 require __DIR__ . '/../bootstrap.php';
 
-// The following code takes you through
-// the process of funding a test address
+// An AddressKeychain represents an associated collection of public and
+// private keys alongside their respective public address.
+$addressKeyChain = new \BlockCypher\Api\AddressKeyChain();
 
-/// ### Fund Address
+// Clone request object for sample purposes only.
+$request = clone $addressKeyChain;
+
 // (See bootstrap.php for more on `ApiContext`)
 try {
-    $faucetResponse = \BlockCypher\Api\Faucet::fundAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd', 100000, $apiContexts['BCY.test']);
+    /// ### Create new test BCY Address
+    $addressKeyChain->create($apiContexts['BCY.test']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Fund Bcy Test Address", "FaucetResponse", null, null, $ex);
+    ResultPrinter::printError("Generate Test Bcy Address", "AddressKeyChain", null, $request, $ex);
     exit(1);
 }
 
-// For Sample Purposes Only.
-$faucet = new \BlockCypher\Api\Faucet();
-$faucet->setAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd');
-$faucet->setAmount(100000);
+ResultPrinter::printResult("Generate Test Bcy Address", "AddressKeyChain", $addressKeyChain->getAddress(), $request, $addressKeyChain);
 
-ResultPrinter::printResult("Fund Bcy Test Address", "FaucetResponse", null, $faucet, $faucetResponse);
-
-return $faucetResponse;
+return $addressKeyChain;

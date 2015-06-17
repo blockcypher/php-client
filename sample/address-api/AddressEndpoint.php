@@ -1,6 +1,7 @@
 <?php
 
-// php -f .\sample\address-api\address-endpoint.php
+// Run on console:
+// php -f .\sample\address-api\AddressEndpoint.php
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -10,7 +11,8 @@ use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
     'main', 'btc', 'v1',
-    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead')
+    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
+    array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
 $address = Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContext);

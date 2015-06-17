@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\addresses;
+namespace sample\Test\Functional\address;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetAddressBtcTest3Test
- * @package sample\Test\Functional\blocks
+ * @package sample\Test\Functional\address
  */
 class GetAddressBtcTest3Test extends WebTestCase
 {

@@ -1,24 +1,20 @@
 <?php
 
-// # Get Transaction Sample
-// The Block resource allows you to
-// retrieve details about a Transaction.
-// API called: '/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'
+// Run on console:
+// php -f .\sample\transaction-api\TransactionHashEndpoint.php
 
 require __DIR__ . '/../bootstrap.php';
 
-// The following code takes you through
-// the process of retrieving a Transaction
+use BlockCypher\Api\Transaction;
+use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Rest\ApiContext;
 
-/// ### Retrieve Transaction
-// (See bootstrap.php for more on `ApiContext`)
-try {
-    $transaction = \BlockCypher\Api\Transaction::get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', array(), $apiContexts['BTC.main']);
-} catch (Exception $ex) {
-    ResultPrinter::printError("Get Transaction", "Transaction", 'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', null, $ex);
-    exit(1);
-}
+$apiContext = ApiContext::create(
+    'main', 'btc', 'v1',
+    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
+    array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
+);
 
-ResultPrinter::printResult("Get Transaction", "Transaction", $transaction->getHash(), null, $transaction);
+$transaction = Transaction::get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', array(), $apiContext);
 
-return $transaction;
+ResultPrinter::printResult("Transaction Hash Endpoint", "Transaction", $transaction->getHash(), null, $transaction);

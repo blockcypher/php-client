@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\chains;
+namespace sample\Test\Functional\introduction;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class FundBcyAddressWithFaucetShortVersionTest
- * @package sample\Test\Functional\chains
+ * Class FundBcyAddressWithFaucetTest
+ * @package sample\Test\Functional\introduction
  */
-class FundBcyAddressWithFaucetShortVersionTest extends WebTestCase
+class FundBcyAddressWithFaucetTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class FundBcyAddressWithFaucetShortVersionTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testFundBcyAddressWithFaucetShortVersion()
+    public function testFundBcyAddressWithFaucet()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

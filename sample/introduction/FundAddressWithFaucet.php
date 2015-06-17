@@ -1,18 +1,28 @@
 <?php
 
-// php -f .\sample\docs-sample\introduction\fund-bcy-address-with-faucet-short-v.php
+// # Fund Address with Faucet
+// The Faucet allows you to fund test addresses.
+// API called: '/v1/btc/test3' or  '/v1/bcy/test'
 
-require __DIR__ . '/../../bootstrap.php';
+require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\Faucet;
-use BlockCypher\Auth\SimpleTokenCredential;
-use BlockCypher\Rest\ApiContext;
+// The following code takes you through
+// the process of funding a test address
 
-$apiContext = ApiContext::create(
-    'test', 'bcy', 'v1',
-    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead')
-);
+// (See bootstrap.php for more on `ApiContext`)
+try {
+    /// ### Fund Address
+    $faucetResponse = \BlockCypher\Api\Faucet::fundAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd', 100000, $apiContexts['BCY.test']);
+} catch (Exception $ex) {
+    ResultPrinter::printError("Fund Bcy Test Address", "FaucetResponse", null, null, $ex);
+    exit(1);
+}
 
-$faucetResponse = Faucet::fundAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd', 100000, $apiContext);
+// For Sample Purposes Only.
+$faucet = new \BlockCypher\Api\Faucet();
+$faucet->setAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd');
+$faucet->setAmount(100000);
 
-ResultPrinter::printResult("Fund Address With Faucet", "FaucetResponse", 'CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd', null, $faucetResponse);
+ResultPrinter::printResult("Fund Bcy Test Address", "FaucetResponse", null, $faucet, $faucetResponse);
+
+return $faucetResponse;

@@ -1,10 +1,10 @@
 <?php
 
-namespace sample\Test\Functional\wallet-api;
+namespace sample\Test\Functional\wallet;
 
 /**
  * Class AddAddressesToWalletTest
- * @package sample\Test\Functional\wallets
+ * @package sample\Test\Functional\wallet
  */
 class AddAddressesToWalletTest extends WalletSampleTestCase
 {

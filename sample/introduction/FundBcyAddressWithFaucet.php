@@ -1,6 +1,6 @@
 <?php
 
-// Docs site sample
+// Run on console:
 // php -f .\sample\introduction\FundBcyAddressWithFaucet.php
 
 require __DIR__ . '/../bootstrap.php';
@@ -11,7 +11,8 @@ use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
     'test', 'bcy', 'v1',
-    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead')
+    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
+    array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
 $faucet = new Faucet();

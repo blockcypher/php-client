@@ -11,30 +11,37 @@
 
     <testsuites>
         <testsuite name="Sample">
-            <directory>tests/sample/Test/Functional/address-balance</directory>
-            <directory>tests/sample/Test/Functional/addresses</directory>
-            <directory>tests/sample/Test/Functional/blocks</directory>
-            <directory>tests/sample/Test/Functional/chains</directory>
-            <directory>tests/sample/Test/Functional/full-addresses</directory>
-            <directory>tests/sample/Test/Functional/transaction-confidence</directory>
-            <directory>tests/sample/Test/Functional/transactions</directory>
-            <file>tests/sample/Test/Functional/wallets/CreateWalletTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/AddAddressesToWalletTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/RemoveAddressesFromWalletTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/GenerateNewAddressForWalletTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/GetWalletTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/GetWalletAsAddressTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/GetWalletAsFullAddressTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/GetWalletBalanceAsAddressBalanceTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/ListWalletAddressesTest.php</file>
-            <file>tests/sample/Test/Functional/wallets/DeleteWalletTest.php</file>
-            <file>tests/sample/Test/Functional/webhooks/CreateAndDeleteAllWebHooksTest.php</file>
-            <file>tests/sample/Test/Functional/webhooks/CreateAndDeleteWebHookTest.php</file>
-            <file>tests/sample/Test/Functional/webhooks/CreateAndListWebHookTest.php</file>
-            <file>tests/sample/Test/Functional/webhooks/DeleteAllWebHooksTest.php</file>
-            <file>tests/sample/Test/Functional/webhooks/GetMultipleWebHooksTest.php</file>
-            <file>tests/sample/Test/Functional/webhooks/GetWebHooksTest.php</file>
-            <file>tests/sample/Test/Functional/webhooks/ListWebHooksTest.php</file>
+            <directory>tests/sample/Test/Functional/address-api</directory>
+            <directory>tests/sample/Test/Functional/block-api</directory>
+            <directory>tests/sample/Test/Functional/chain-api</directory>
+            <directory>tests/sample/Test/Functional/confidence-factor</directory>
+            <directory>tests/sample/Test/Functional/transaction-api</directory>
+            <!-- hook-api tests must be executed in order -->
+            <file>tests/sample/Test/Functional/hook-api/CreateAndDeleteAllWebHooksTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/CreateAndDeleteWebHookTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/CreateAndListWebHookTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/DeleteAllWebHooksTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/GetMultipleWebHooksTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/GetWebHooksTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/ListWebHooksTest.php</file>
+            <!-- wallet-api tests must be executed in order -->
+            <file>tests/sample/Test/Functional/wallet-api/CreateWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/AddAddressesToWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/RemoveAddressesFromWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GenerateNewAddressForWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetWalletAsAddressTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetWalletAsFullAddressTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetWalletBalanceAsAddressBalanceTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/ListWalletAddressesTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/DeleteWalletTest.php</file>
+            <!-- wallet-api tests for samples in official docs site -->
+            <file>tests/sample/Test/Functional/wallet-api/CreateWalletEndpointTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/AddAddressesToWalletEndpointTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/RemoveAddressesFromWalletEndpointTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GenerateAddressInWalletEndpointTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/WalletAddressesEndpointTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/DeleteWalletEndpointTest.php</file>
         </testsuite>
     </testsuites>
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\blocks;
+namespace sample\Test\Functional\block;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetMultipleBlocksTest
- * @package sample\Test\Functional\blocks
+ * @package sample\Test\Functional\block
  */
 class GetMultipleBlocksTest extends WebTestCase
 {

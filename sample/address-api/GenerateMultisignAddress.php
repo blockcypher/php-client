@@ -13,9 +13,11 @@ $pubkeys = array(
     "022b8934cc41e76cb4286b9f3ed57e2d27798395b04dd23711981a77dc216df8ca"
 );
 $addressKeyChain->setPubkeys($pubkeys);
+// script format: 'multisig-n-of-m', where n and m are integers.
+$addressKeyChain->setScriptType('multisig-2-of-3');
 
 // For Sample Purposes Only.
-$request = null;
+$request = clone $addressKeyChain;
 
 try {
     // ### Create Multisig Address

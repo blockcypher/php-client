@@ -1,10 +1,10 @@
 <?php
 
-namespace sample\Test\Functional\wallets;
+namespace sample\Test\Functional\wallet;
 
 /**
  * Class GenerateAddressInWalletEndpointTest
- * @package sample\Test\Functional\wallets
+ * @package sample\Test\Functional\wallet
  */
 class GenerateAddressInWalletEndpointTest extends WalletSampleTestCase
 {

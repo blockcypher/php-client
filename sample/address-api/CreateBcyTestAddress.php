@@ -1,26 +1,26 @@
 <?php
 
-// # Create Bitcoin Testnet Address Sample
+// # Create BlockCypher Test Address Sample
 // This sample code demonstrate how you can create
 // an address.
 
 require __DIR__ . '/../bootstrap.php';
 
-$address = null;
+$addressKeyChain = null;
 
 // For Sample Purposes Only.
 $request = null;
 
 try {
-    // ### Create Btc Testnet Address
+    // ### Create BlockCypher Test Address
     // Create an address by calling the Address::create() method
     // with a valid ApiContext (See bootstrap.php for more on `ApiContext`)
-    $address = \BlockCypher\Api\Address::create(null, $apiContexts['BTC.test3']);
+    $addressKeyChain = \BlockCypher\Api\Address::create(null, $apiContexts['BCY.test']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Create Btc Testnet Address", "Address", null, $request, $ex);
+    ResultPrinter::printError("Create BlockCypher Test Address", "AddressKeyChain", null, $request, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Create Btc Testnet Address", "Address", $address->getAddress(), $request, $address);
+ResultPrinter::printResult("Create BlockCypher Test Address", "AddressKeyChain", $addressKeyChain->getAddress(), $request, $addressKeyChain);
 
-return $address;
+return $addressKeyChain;

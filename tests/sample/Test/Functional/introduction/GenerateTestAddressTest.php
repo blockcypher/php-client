@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\chains;
+namespace sample\Test\Functional\introduction;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GenerateBcyAddressTest
- * @package sample\Test\Functional\chains
+ * Class GenerateTestAddressTest
+ * @package sample\Test\Functional\introduction
  */
-class GenerateBcyAddressTest extends WebTestCase
+class GenerateTestAddressTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GenerateBcyAddressTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGenerateBcyAddress()
+    public function testGenerateTestAddress()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

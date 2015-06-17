@@ -9,7 +9,6 @@ namespace BlockCypher\Validation;
  */
 class ArgumentValidator
 {
-
     /**
      * Helper method for validating an argument that will be used by this API in any requests.
      *

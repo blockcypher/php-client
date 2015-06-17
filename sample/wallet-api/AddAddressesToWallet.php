@@ -19,7 +19,7 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
-$addressesList = \BlockCypher\Api\AddressesList::fromAddressesArray(array(
+$addressesList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
     "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
 ));
 

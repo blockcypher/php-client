@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\addresses;
+namespace sample\Test\Functional\address;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetMultipleAddressesTest
- * @package sample\Test\Functional\addresses
+ * @package sample\Test\Functional\address
  */
 class GetMultipleAddressesTest extends WebTestCase
 {

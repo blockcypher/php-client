@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\addressBalance;
+namespace sample\Test\Functional\address;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetMultipleAddressesBalanceTest
- * @package sample\Test\Functional\address-balance
+ * @package sample\Test\Functional\address
  */
 class GetMultipleAddressesBalanceTest extends WebTestCase
 {

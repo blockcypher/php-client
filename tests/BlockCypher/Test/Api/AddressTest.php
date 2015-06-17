@@ -182,11 +182,11 @@ class AddressTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                AddressCreateResponseTest::getJson()
+                AddressKeyChainTest::getJson()
             ));
 
         /** @noinspection PhpParamsInspection */
-        $result = $obj->create($mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->create(null, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 

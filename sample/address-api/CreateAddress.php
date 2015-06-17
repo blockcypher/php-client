@@ -6,7 +6,7 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-$address = null;
+$addressKeyChain = null;
 
 // For Sample Purposes Only.
 $request = null;
@@ -15,12 +15,12 @@ try {
     // ### Create Address
     // Create an address by calling the Address::create() method
     // with a valid ApiContext (See bootstrap.php for more on `ApiContext`)
-    $address = \BlockCypher\Api\Address::create(null, $apiContexts['BTC.main']);
+    $addressKeyChain = \BlockCypher\Api\Address::create(null, $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Create Address", "Address", null, $request, $ex);
+    ResultPrinter::printError("Create Address", "AddressKeyChain", null, $request, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Create Address", "Address", $address->getAddress(), $request, $address);
+ResultPrinter::printResult("Create Address", "AddressKeyChain", $addressKeyChain->getAddress(), $request, $addressKeyChain);
 
-return $address;
+return $addressKeyChain;

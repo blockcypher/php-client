@@ -21,7 +21,7 @@ if (isset($_GET['wallet_name'])) {
 }
 
 // List of addresses to be removed from the wallet
-$addressesList = \BlockCypher\Api\AddressesList::fromAddressesArray(array(
+$addressesList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
     "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
 ));
 

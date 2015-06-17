@@ -61,18 +61,6 @@ class WalletTest extends ResourceModelTestCase
     }
 
     /**
-     * @return string[]
-     */
-    public static function addresses()
-    {
-        $addresses = array(
-            "18VAyux27CiWQnmYumZeTKNcaw6opvKRLq",
-            "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"
-        );
-        return $addresses;
-    }
-
-    /**
      * @depends testSerializationDeserialization
      * @param Wallet $obj
      */
@@ -105,6 +93,18 @@ class WalletTest extends ResourceModelTestCase
         $obj->removeAddress($address);
 
         $this->assertNotContains($address, $obj->getAddresses());
+    }
+
+    /**
+     * @return string[]
+     */
+    public static function addresses()
+    {
+        $addresses = array(
+            "18VAyux27CiWQnmYumZeTKNcaw6opvKRLq",
+            "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"
+        );
+        return $addresses;
     }
 
     /**
@@ -143,7 +143,7 @@ class WalletTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                AddressCreateResponseTest::getJson()
+                AddressKeyChainTest::getJson()
             ));
 
         /** @noinspection PhpParamsInspection */
@@ -162,7 +162,7 @@ class WalletTest extends ResourceModelTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $addressesList = AddressesListTest::getObject();
+        $addressesList = AddressListTest::getObject();
 
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
@@ -188,7 +188,7 @@ class WalletTest extends ResourceModelTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $addressesList = AddressesListTest::getObject();
+        $addressesList = AddressListTest::getObject();
 
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')

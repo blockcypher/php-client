@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\addressBalance;
+namespace sample\Test\Functional\address;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetAddressBalanceTest
- * @package sample\Test\Functional\address-balance
+ * Class AddressBalanceEndpointTest
+ * @package sample\Test\Functional\address
  */
-class GetAddressBalanceTest extends WebTestCase
+class AddressBalanceEndpointTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GetAddressBalanceTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetAddressBalance()
+    public function testAddressBalanceEndpoint()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

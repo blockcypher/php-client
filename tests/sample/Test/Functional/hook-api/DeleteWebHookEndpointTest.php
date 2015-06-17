@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\webhooks;
+namespace sample\Test\Functional\hook;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class CreateWebHookEndpointTest
- * @package sample\Test\Functional\webhooks
+ * Class DeleteWebHookEndpointTest
+ * @package sample\Test\Functional\hook
  */
-class CreateWebHookEndpointTest extends WebTestCase
+class DeleteWebHookEndpointTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class CreateWebHookEndpointTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testCreateWebHookEndpoint()
+    public function testDeleteWebHookEndpoint()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

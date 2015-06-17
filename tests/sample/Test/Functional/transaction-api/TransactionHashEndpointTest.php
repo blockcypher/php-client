@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\transactions;
+namespace sample\Test\Functional\transaction;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetMultipleTransactionsTest
- * @package sample\Test\Functional\transactions
+ * Class TransactionHashEndpointTest
+ * @package sample\Test\Functional\transaction
  */
-class GetMultipleTransactionsTest extends WebTestCase
+class TransactionHashEndpointTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GetMultipleTransactionsTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetMultipleTransactions()
+    public function testTransactionHashEndpoint()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

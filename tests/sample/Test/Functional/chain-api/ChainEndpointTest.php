@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\chains;
+namespace sample\Test\Functional\chain;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetChainTest
- * @package sample\Test\Functional\chains
+ * Class ChainEndpointTest
+ * @package sample\Test\Functional\chain
  */
-class GetChainTest extends WebTestCase
+class ChainEndpointTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GetChainTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetChain()
+    public function testChainEndpoint()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\webhooks;
+namespace sample\Test\Functional\hook;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class CreateWebHookTest
- * @package sample\Test\Functional\webhooks
+ * @package sample\Test\Functional\hook
  */
 class CreateWebHookTest extends WebTestCase
 {

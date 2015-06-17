@@ -1,6 +1,6 @@
 <?php
 
-namespace sample\Test\Functional\wallets;
+namespace sample\Test\Functional\wallet;
 
 /**
  * Class GetWalletAsAddressTest

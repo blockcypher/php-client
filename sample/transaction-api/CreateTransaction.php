@@ -50,8 +50,8 @@ $tx->addOutput($output);
 // For Sample Purposes Only.
 $request = clone $tx;
 
-// ### Create New Transaction
 try {
+    // ### Create New Transaction
     $output = $tx->create($apiContexts['BTC.test3']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created Transaction", "TXSkeleton", null, $request, $ex);

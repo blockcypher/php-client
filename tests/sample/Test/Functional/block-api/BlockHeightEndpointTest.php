@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\blocks;
+namespace sample\Test\Functional\block;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class BlockHashEndpointTest
- * @package sample\Test\Functional\addresses
+ * Class BlockHeightEndpointTest
+ * @package sample\Test\Functional\block
  */
-class BlockHashEndpointTest extends WebTestCase
+class BlockHeightEndpointTest extends WebTestCase
 {
     public function setUp()
     {

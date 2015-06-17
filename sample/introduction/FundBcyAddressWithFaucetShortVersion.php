@@ -1,7 +1,8 @@
 <?php
 
-// Docs site sample
-// php -f .\sample\introduction\fund-bcy-address-with-faucet-short-v.php
+// Fund prior address with faucet
+// Run on console:
+// php -f .\sample\introduction\FundBcyAddressWithFaucetShortVersion.php
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -11,7 +12,8 @@ use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
     'test', 'bcy', 'v1',
-    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead')
+    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
+    array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
 $faucetResponse = Faucet::fundAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd', 100000, $apiContext);

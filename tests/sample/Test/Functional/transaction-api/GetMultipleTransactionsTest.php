@@ -1,12 +1,12 @@
 <?php
 
-namespace sample\Test\Functional\transactions;
+namespace sample\Test\Functional\transaction;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
  * Class GetTransactionTest
- * @package sample\Test\Functional\transactions
+ * @package sample\Test\Functional\transaction
  */
 class GetTransactionTest extends WebTestCase
 {
