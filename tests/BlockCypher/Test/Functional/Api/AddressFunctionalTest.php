@@ -60,7 +60,7 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
             $this->fail($ex->getMessage());
         }
         $this->assertNotNull($result);
-        $this->assertInstanceOf('\BlockCypher\Api\AddressKeychain', $result);
+        $this->assertInstanceOf('\BlockCypher\Api\AddressKeyChain', $result);
         return $result;
     }
 

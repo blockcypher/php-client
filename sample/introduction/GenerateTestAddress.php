@@ -5,7 +5,7 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-// An AddressKeychain represents an associated collection of public and
+// An AddressKeyChain represents an associated collection of public and
 // private keys alongside their respective public address.
 $addressKeyChain = new \BlockCypher\Api\AddressKeyChain();
 
