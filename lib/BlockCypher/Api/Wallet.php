@@ -85,7 +85,7 @@ class Wallet extends BlockCypherResourceModel
         $ret = new Wallet();
         $ret->fromJson($json);
 
-        // TODO: return an AddressesList instead of a Wallet when the API is fixed.
+        // TODO: return an AddressList instead of a Wallet when the API is fixed.
         /* Now the API returns
         {
           "token": "",
@@ -179,7 +179,7 @@ class Wallet extends BlockCypherResourceModel
     /**
      * Add Addresses to the Wallet. Associates addresses with the wallet.
      *
-     * @param AddressesList $addressesList
+     * @param AddressList $addressesList
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
@@ -211,7 +211,7 @@ class Wallet extends BlockCypherResourceModel
     /**
      * Remove Addresses to the Wallet. Addresses will no longer be associated with the wallet.
      *
-     * @param AddressesList $addressesList
+     * @param AddressList $addressesList
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls

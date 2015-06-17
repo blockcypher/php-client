@@ -1,0 +1,30 @@
+<?php
+
+// # Create Multisig Address Sample
+// This sample code demonstrate how you can create
+// a multisign address address.
+
+require __DIR__ . '/../bootstrap.php';
+
+$addressKeyChain = new \BlockCypher\Api\AddressKeyChain();
+$pubkeys = array(
+    "02c716d071a76cbf0d29c29cacfec76e0ef8116b37389fb7a3e76d6d32cf59f4d3",
+    "033ef4d5165637d99b673bcdbb7ead359cee6afd7aaf78d3da9d2392ee4102c8ea",
+    "022b8934cc41e76cb4286b9f3ed57e2d27798395b04dd23711981a77dc216df8ca"
+);
+$addressKeyChain->setPubkeys($pubkeys);
+
+// For Sample Purposes Only.
+$request = null;
+
+try {
+    // ### Create Multisig Address
+    $output = $addressKeyChain->create($apiContexts['BTC.main']);
+} catch (Exception $ex) {
+    ResultPrinter::printError("Create Multisig Address", "AddressKeyChain", null, $request, $ex);
+    exit(1);
+}
+
+ResultPrinter::printResult("Create Multisig Address", "AddressKeyChain", $addressKeyChain->getAddress(), $request, $output);
+
+return $output;

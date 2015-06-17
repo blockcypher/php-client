@@ -36,13 +36,19 @@ class Address extends BlockCypherResourceModel
     /**
      * Create a new address.
      *
+     * @param AddressKeyChain $addressKeyChain
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return AddressCreateResponse
+     * @return AddressKeyChain
      */
-    public static function create($apiContext = null, $restCall = null)
+    public static function create($addressKeyChain = null, $apiContext = null, $restCall = null)
     {
-        $payLoad = "";
+        if ($addressKeyChain === null) {
+            $payLoad = "";
+        } else {
+            // multisig address
+            $payLoad = $addressKeyChain->toJSON();
+        }
 
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
@@ -54,7 +60,7 @@ class Address extends BlockCypherResourceModel
             $apiContext,
             $restCall
         );
-        $ret = new AddressCreateResponse();
+        $ret = new AddressKeyChain();
         $ret->fromJson($json);
         return $ret;
     }
