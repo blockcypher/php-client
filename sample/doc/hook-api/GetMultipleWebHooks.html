@@ -1,19 +1,79 @@
-<!DOCTYPE html><html lang="en"><head><title>hook-api\GetMultipleWebHooks</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="hook-api\GetMultipleWebHooks"><meta name="groc-project-path" content="hook-api\GetMultipleWebHooks.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">hook-api\GetMultipleWebHooks.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="get-multiple-webhooks-sample">Get Multiple WebHooks Sample</h1>
-<p>This sample code demonstrate how you can get multiple webhooks at once, as documented here at:
-<a href="http://dev.blockcypher.com/#webhooks">http://dev.blockcypher.com/#webhooks</a>
-API used: GET /v1/btc/main/hooks/WebHook-Id;WebHook-Id</p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h2 id="get-webhook-id">Get WebHook ID.</h2>
-<p>In samples we are using CreateWebHook.php sample to get the created instance of webhook.
-However, in real case scenario, we could use just the ID.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/** <span class="hljs-doctag">@var</span> \BlockCypher\Api\WebHook $webHook */</span>
-<span class="hljs-variable">$webHook</span> = <span class="hljs-keyword">require</span> <span class="hljs-string">'CreateWebHook.php'</span>;
-<span class="hljs-variable">$webHookId</span> = <span class="hljs-variable">$webHook</span>-&gt;getId();</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="get-multiple-webhooks">Get Multiple WebHooks</h3></div></div></div><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">try</span> {
-    <span class="hljs-variable">$webHookList</span> = <span class="hljs-keyword">array</span>(<span class="hljs-variable">$webHookId</span>);
+<!DOCTYPE html>
+<html lang="en">
+<head><title>hook-api\GetMultipleWebHooks</title></head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="groc-relative-root" content="../">
+<meta name="groc-document-path" content="hook-api\GetMultipleWebHooks">
+<meta name="groc-project-path" content="hook-api\GetMultipleWebHooks.php">
+<link rel="stylesheet" type="text/css" media="all" href="../assets/style.css">
+<script type="text/javascript" src="../assets/behavior.js"></script>
+<body>
+<div id="meta">
+    <div class="file-path">hook-api\GetMultipleWebHooks.php</div>
+</div>
+<div id="document">
+    <div class="segment">
+        <div class="code">
+            <div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><h1 id="get-multiple-webhooks-sample">Get Multiple WebHooks Sample</h1>
 
-    <span class="hljs-variable">$output</span> = \BlockCypher\Api\WebHook::getMultiple(<span class="hljs-variable">$webHookList</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
-} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
-    ResultPrinter::printError(<span class="hljs-string">"Get Multiple WebHooks"</span>, <span class="hljs-string">"WebHook Array"</span>, <span class="hljs-keyword">null</span>, implode(<span class="hljs-string">';'</span>, <span class="hljs-variable">$webHookList</span>), <span class="hljs-variable">$ex</span>);
-    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
-}
+                <p>This sample code demonstrate how you can get multiple webhooks at once, as documented here at:
+                    <a href="http://dev.blockcypher.com/#webhooks">http://dev.blockcypher.com/#webhooks</a>
+                    API used: GET /v1/btc/main/hooks/WebHook-Id;WebHook-Id</p></div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><h2 id="get-webhook-id">Get WebHook ID.</h2>
 
-ResultPrinter::printResult(<span class="hljs-string">"Get Multiple WebHooks"</span>, <span class="hljs-string">"WebHook Array"</span>, implode(<span class="hljs-string">';'</span>, <span class="hljs-variable">$webHookList</span>), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$output</span>);
+                <p>In samples we are using CreateWebHook.php sample to get the created instance of webhook.
+                    However, in real case scenario, we could use just the ID.</p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-comment">/** <span class="hljs-doctag">@var</span> \BlockCypher\Api\WebHook $webHook */</span>
+                <span class="hljs-variable">$webHook</span> = <span class="hljs-keyword">require</span> <span
+                        class="hljs-string">'CreateWebHook.php'</span>;
+                <span class="hljs-variable">$webHookId</span> = <span class="hljs-variable">$webHook</span>-&gt;getId();
+            </div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><h3 id="get-multiple-webhooks">Get Multiple WebHooks</h3></div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="code">
+            <div class="wrapper"><span class="hljs-keyword">try</span> {
+                <span class="hljs-variable">$webHookList</span> = <span class="hljs-keyword">array</span>(<span
+                        class="hljs-variable">$webHookId</span>);
 
-<span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;</div></div></div></div></body></html>
+                <span class="hljs-variable">$output</span> = \BlockCypher\Api\WebHook::getMultiple(<span
+                        class="hljs-variable">$webHookList</span>, <span class="hljs-keyword">array</span>(), <span
+                        class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+                } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span
+                        class="hljs-variable">$ex</span>) {
+                ResultPrinter::printError(<span class="hljs-string">"Get Multiple WebHooks"</span>, <span
+                        class="hljs-string">"WebHook Array"</span>, <span class="hljs-keyword">null</span>,
+                implode(<span class="hljs-string">';'</span>, <span class="hljs-variable">$webHookList</span>), <span
+                        class="hljs-variable">$ex</span>);
+                <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+                }
+
+                ResultPrinter::printResult(<span class="hljs-string">"Get Multiple WebHooks"</span>, <span
+                        class="hljs-string">"WebHook Array"</span>, implode(<span class="hljs-string">';'</span>, <span
+                        class="hljs-variable">$webHookList</span>), <span class="hljs-keyword">null</span>, <span
+                        class="hljs-variable">$output</span>);
+
+                <span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

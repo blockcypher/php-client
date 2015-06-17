@@ -2,26 +2,26 @@
 
 namespace BlockCypher\Test\Api;
 
-use BlockCypher\Api\AddressKeychain;
+use BlockCypher\Api\AddressKeyChain;
 
 /**
- * Class AddressKeychainTest
+ * Class AddressKeyChainTest
  *
  * @package BlockCypher\Test\Api
  */
-class AddressKeychainTest extends ResourceModelTestCase
+class AddressKeyChainTest extends ResourceModelTestCase
 {
     /**
      * Gets Object Instance with Json data filled in
-     * @return AddressKeychain
+     * @return AddressKeyChain
      */
     public static function getObject()
     {
-        return new AddressKeychain(self::getJson());
+        return new AddressKeyChain(self::getJson());
     }
 
     /**
-     * Gets Json String of Object AddressKeychain
+     * Gets Json String of Object AddressKeyChain
      * @return string
      */
     public static function getJson()
@@ -42,11 +42,11 @@ class AddressKeychainTest extends ResourceModelTestCase
 
     /**
      * Tests for Serialization and Deserialization Issues
-     * @return AddressKeychain
+     * @return AddressKeyChain
      */
     public function testSerializationDeserialization()
     {
-        $obj = new AddressKeychain(self::getJson());
+        $obj = new AddressKeyChain(self::getJson());
 
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getPrivate());
@@ -61,7 +61,7 @@ class AddressKeychainTest extends ResourceModelTestCase
 
     /**
      * @depends testSerializationDeserialization
-     * @param AddressKeychain $obj
+     * @param AddressKeyChain $obj
      */
     public function testGetters($obj)
     {

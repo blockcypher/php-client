@@ -1,6 +1,7 @@
 <?php
 
 namespace BlockCypher\Crypto;
+
 use BitWasp\Bitcoin\Key\PrivateKeyFactory;
 
 /**
@@ -17,7 +18,7 @@ class PrivateKeyList
     /**
      * @param PrivateKey[] $keys
      */
-    function __construct($keys=null)
+    function __construct($keys = null)
     {
         $this->keys = $keys;
     }
@@ -31,7 +32,7 @@ class PrivateKeyList
     public static function fromHexPrivateKeyArray($hexPrivateKeys, $ecAdapter, $network)
     {
         $privateKeyList = array();
-        foreach($hexPrivateKeys as $hexPrivateKey) {
+        foreach ($hexPrivateKeys as $hexPrivateKey) {
 
             // Import from compressed private key
             $compressed = true;
@@ -55,15 +56,14 @@ class PrivateKeyList
      * @return $this
      * @throws \Exception
      */
-    public function addKey($key, $address = null) {
+    public function addKey($key, $address = null)
+    {
         if ($address === null) {
             $this->keys[] = $key;
-        }
-        else {
+        } else {
             if (isset($this->keys[$address])) {
                 throw new \Exception("Key $address already in use.");
-            }
-            else {
+            } else {
                 $this->keys[$address] = $key;
             }
         }
@@ -73,11 +73,11 @@ class PrivateKeyList
      * @param string $address
      * @throws \Exception
      */
-    public function deleteKey($address) {
+    public function deleteKey($address)
+    {
         if (isset($this->keys[$address])) {
             unset($this->keys[$address]);
-    }
-        else {
+        } else {
             throw new \Exception("Invalid address $address.");
         }
     }
@@ -91,8 +91,7 @@ class PrivateKeyList
     {
         if (isset($this->keys[$address])) {
             return $this->keys[$address];
-        }
-        else {
+        } else {
             throw new \Exception("Address $address not found in PrivateKeyList.");
         }
     }
@@ -117,14 +116,16 @@ class PrivateKeyList
     /**
      * @return string[]
      */
-    public function addresses() {
+    public function addresses()
+    {
         return array_keys($this->keys);
     }
 
     /**
      * @return int
      */
-    public function length() {
+    public function length()
+    {
         return count($this->keys);
     }
 }
