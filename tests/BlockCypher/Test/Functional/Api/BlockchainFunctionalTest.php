@@ -2,15 +2,15 @@
 
 namespace BlockCypher\Test\Functional\Api;
 
-use BlockCypher\Api\Chain;
+use BlockCypher\Api\Blockchain;
 use BlockCypher\Test\Functional\Setup;
 
 /**
- * Class ChainFunctionalTest
+ * Class BlockchainFunctionalTest
  *
  * @package BlockCypher\Test\Api
  */
-class ChainFunctionalTest extends \PHPUnit_Framework_TestCase
+class BlockchainFunctionalTest extends \PHPUnit_Framework_TestCase
 {
     public $operation;
 
@@ -43,18 +43,18 @@ class ChainFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return Chain
+     * @return Blockchain
      */
     public function testGet()
     {
         $request = $this->operation['response']['body'];
-        $chain = new Chain($request);
+        $blockchain = new Blockchain($request);
 
-        $result = Chain::get($chain->getName(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $result = Blockchain::get($blockchain->getName(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertInstanceOf('\BlockCypher\Api\Chain', $result);
+        $this->assertInstanceOf('\BlockCypher\Api\Blockchain', $result);
         // Assert only immutable values.
-        $this->assertEquals($chain->getName(), $result->getName());
+        $this->assertEquals($blockchain->getName(), $result->getName());
         return $result;
     }
 }

@@ -1,0 +1,47 @@
+{
+  "description": "Obtain the chain resource for the given chain name.",
+  "title": "Get a block resource by chain name",
+  "runnable": true,
+  "operationId": "chain.get",
+  "user": {
+    "scopes": []
+  },
+  "credentials": {
+    "simpleToken": {
+      "accessToken": ""
+    },
+    "oauth": {
+      "clientId": "",
+      "clientSecret": "",
+      "path": ""
+    },
+    "login": {},
+    "openIdConnect": {}
+  },
+  "request": {
+    "headers": {},
+    "body": {},
+    "path": "/v1/btc/main",
+    "method": "GET"
+  },
+  "response": {
+    "headers": {},
+    "body": {
+      "name": "BTC.main",
+      "height": 361452,
+      "hash": "0000000000000000110740bc53a7caf67e1c5761eb883360af2c9f27b7ca4862",
+      "time": "2015-06-18T09:17:33.674206028Z",
+      "latest_url": "https://api.blockcypher.com/v1/btc/main/blocks/0000000000000000110740bc53a7caf67e1c5761eb883360af2c9f27b7ca4862",
+      "previous_hash": "00000000000000000fee58c66e4481ed836b9ea182a84adf39b70e110a21d806",
+      "previous_url": "https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000fee58c66e4481ed836b9ea182a84adf39b70e110a21d806",
+      "peer_count": 302,
+      "unconfirmed_count": 2116,
+      "high_fee_per_kb": 41304,
+      "medium_fee_per_kb": 25631,
+      "low_fee_per_kb": 12500,
+      "last_fork_height": 360322,
+      "last_fork_hash": "00000000000000000f8d0292d70f3d28237a5610c39446a447c8907a50dbf75d"
+    },
+    "status": "200 OK"
+  }
+}

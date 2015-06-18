@@ -10,9 +10,9 @@ use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
 /**
- * Class Chain
+ * Class Transaction
  *
- * A resource representing a block.
+ * A resource representing a transaction.
  *
  * @package BlockCypher\Api
  *

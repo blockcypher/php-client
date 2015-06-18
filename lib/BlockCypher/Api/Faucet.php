@@ -22,7 +22,7 @@ class Faucet extends BlockCypherResourceModel
 {
     /**
      * Fund an address with faucet.
-     * The faucet endpoint is only available on BlockCypher’s Test Chain and Bitcoin Testnet3
+     * The faucet endpoint is only available on BlockCypher’s Test Blockchain and Bitcoin Testnet3
      *
      * @param string $address Address to fund
      * @param int $amount
@@ -62,7 +62,7 @@ class Faucet extends BlockCypherResourceModel
 
     /**
      * Fund an address with faucet.
-     * The faucet endpoint is only available on BlockCypher’s Test Chain and Bitcoin Testnet3
+     * The faucet endpoint is only available on BlockCypher’s Test Blockchain and Bitcoin Testnet3
      *
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls

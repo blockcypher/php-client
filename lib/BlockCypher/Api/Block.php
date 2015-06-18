@@ -10,7 +10,7 @@ use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
 /**
- * Class Chain
+ * Class Block
  *
  * A resource representing a block.
  *
