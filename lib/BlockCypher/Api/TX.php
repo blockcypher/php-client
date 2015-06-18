@@ -120,6 +120,36 @@ class TX extends BlockCypherResourceModel
     }
 
     /**
+     * The Unconfirmed Transactions Endpoint returns an array of the latest transactions relayed by nodes
+     * in a blockchain that haven’t been included in any blocks.
+     *
+     * @param array $params Parameters. Options: instart, outstart and limit
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return TX[]
+     */
+    public static function getUnconfirmed($params = array(), $apiContext = null, $restCall = null)
+    {
+        ArgumentGetParamsValidator::validate($params, 'params');
+        $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $payLoad = "";
+
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs?" . http_build_query($params),
+            "GET",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        return TX::getList($json);
+    }
+
+    /**
      * Create a new TX.
      *
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
