@@ -11,7 +11,7 @@ use BlockCypher\Validation\ArgumentValidator;
 /**
  * Class Wallet
  *
- * A resource representing a block.
+ * A Wallet represents a list of addresses, and can be used interchangeably with all the Address API endpoints.
  *
  * @package BlockCypher\Api
  *

@@ -12,7 +12,8 @@ use BlockCypher\Validation\ArgumentValidator;
 /**
  * Class Blockchain
  *
- * A resource representing a block chain.
+ * A Blockchain represents the current state of a particular blockchain
+ * from the Coin/Chain resources that BlockCypher supports. Typically returned from the Chain API endpoint.
  *
  * @package BlockCypher\Api
  *

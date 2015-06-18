@@ -12,7 +12,8 @@ use BlockCypher\Validation\ArgumentValidator;
 /**
  * Class Block
  *
- * A resource representing a block.
+ * A Block represents the current state of a particular block from a Blockchain.
+ * Typically returned from the Block Hash and Block Height endpoints.
  *
  * @package BlockCypher\Api
  *

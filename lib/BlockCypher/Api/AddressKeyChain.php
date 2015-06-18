@@ -9,8 +9,8 @@ use BlockCypher\Transport\BlockCypherRestCall;
 /**
  * Class AddressKeyChain
  *
- * An AddressKeyChain represents an associated collection of public and private keys alongside their respective
- * public address. Generally returned and used with the Generate Address Endpoint.
+ * An AddressKeychain represents an associated collection of public and private keys alongside
+ * their respective public address. Generally returned and used with the Generate Address Endpoint.
  *
  * @package BlockCypher\Api
  *

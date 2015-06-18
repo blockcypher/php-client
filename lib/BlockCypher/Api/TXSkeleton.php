@@ -17,7 +17,8 @@ use BlockCypher\Transport\BlockCypherRestCall;
 /**
  * Class TXSkeleton
  *
- * A TXSkeleton is a convenience/wrapper Object that’s used primarily when Creating Transactions through the New and Send endpoints.
+ * A TXSkeleton is a convenience/wrapper Object that’s used primarily when Creating Transactions
+ * through the New and Send endpoints.
  *
  * @package BlockCypher\Api
  *

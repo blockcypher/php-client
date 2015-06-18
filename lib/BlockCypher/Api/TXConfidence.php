@@ -12,7 +12,8 @@ use BlockCypher\Validation\ArgumentValidator;
 /**
  * Class TXConfidence
  *
- * A resource representing a transaction confidence.
+ * A TXConfidence represents information about the confidence that an unconfirmed transaction will make it into
+ * the next block. Typically used as a return object from the Transaction Confidence Endpoint.
  *
  * @package BlockCypher\Api
  *

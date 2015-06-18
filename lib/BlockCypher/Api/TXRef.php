@@ -7,7 +7,8 @@ use BlockCypher\Common\BlockCypherBaseModel;
 /**
  * Class TXRef
  *
- * Information about a single line item.
+ * A TXRef object represents summarized data about a transaction input or output. Typically found in an array
+ * within an Address object, which is usually returned from the standard Address Endpoint.
  *
  * @package BlockCypher\Api
  *

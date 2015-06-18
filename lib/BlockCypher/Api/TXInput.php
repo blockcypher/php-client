@@ -7,7 +7,9 @@ use BlockCypher\Common\BlockCypherBaseModel;
 /**
  * Class TXInput
  *
- * Information about a transaction input.
+ * A TXInput represents an input consumed within a transaction. Typically found within an array in a TX.
+ * In most cases, TXInputs are from previous UTXOs, with the most prominent exceptions being attempted double-spend
+ * and coinbase inputs.
  *
  * @package BlockCypher\Api
  *

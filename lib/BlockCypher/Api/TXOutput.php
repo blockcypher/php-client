@@ -7,7 +7,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
 /**
  * Class TXOutput
  *
- * Information about a transaction ou.
+ * A TXOutput represents an output created by a transaction. Typically found within an array in a TX.
  *
  * script_type values:
  * pay-to-pubkey-hash (most common transaction transferring to a public key hash, and the default behavior if no out)

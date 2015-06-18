@@ -13,7 +13,8 @@ use BlockCypher\Validation\UrlValidator;
 /**
  * Class WebHook
  *
- * A resource representing a block.
+ * It represents a WebHooks or WebSockets-based notification request, as detailed in the Events & Hooks
+ * section of the documentation.
  *
  * script values:
  * pay-to-pubkey-hash (most common transaction transferring to a public key hash, and the default behavior if no out)

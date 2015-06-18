@@ -12,7 +12,9 @@ use BlockCypher\Validation\ArgumentValidator;
 /**
  * Class Address
  *
- * A resource representing a block.
+ * An Address represents a public address on a blockchain, and contains information about the state of balances and
+ * transactions related to this address. Typically returned from the Address Balance, Address,
+ * and Address Detail Endpoint.
  *
  * @package BlockCypher\Api
  *

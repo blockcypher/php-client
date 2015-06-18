@@ -12,7 +12,9 @@ use BlockCypher\Validation\ArgumentValidator;
 /**
  * Class TX
  *
- * A resource representing a transaction.
+ * A TX represents the current state of a particular transaction from either a Block within a Blockchain,
+ * or an unconfirmed transaction that has yet to be included in a Block. Typically returned from the
+ * Unconfirmed Transactions and Transaction Hash endpoints.
  *
  * @package BlockCypher\Api
  *
