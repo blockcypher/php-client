@@ -1,126 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><title>wallet-api\CreateWallet</title></head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="groc-relative-root" content="../">
-<meta name="groc-document-path" content="wallet-api\CreateWallet">
-<meta name="groc-project-path" content="wallet-api\CreateWallet.php">
-<link rel="stylesheet" type="text/css" media="all" href="../assets/style.css">
-<script type="text/javascript" src="../assets/behavior.js"></script>
-<body>
-<div id="meta">
-    <div class="file-path">wallet-api\CreateWallet.php</div>
-</div>
-<div id="document">
-    <div class="segment">
-        <div class="code">
-            <div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><h1 id="create-wallet-sample">Create Wallet Sample</h1>
+<!DOCTYPE html><html lang="en"><head><title>wallet-api\CreateWallet</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="wallet-api\CreateWallet"><meta name="groc-project-path" content="wallet-api\CreateWallet.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">wallet-api\CreateWallet.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="create-wallet-sample">Create Wallet Sample</h1>
+<p>This sample code demonstrate how you can create a wallet, as documented here at:
+<a href="http://dev.blockcypher.com/#wallet_api"><a href="http://dev.blockcypher.com/#wallet_api">http://dev.blockcypher.com/#wallet_api</a></a>
+API used: POST /v1/btc/main/wallets</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
 
-                <p>This sample code demonstrate how you can create a wallet, as documented here at:
-                    <a href="http://dev.blockcypher.com/#wallet_api"><a href="http://dev.blockcypher.com/#wallet_api">http://dev.blockcypher.com/#wallet_api</a></a>
-                    API used: POST /v1/btc/main/wallets</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> .
-                <span class="hljs-string">'/../bootstrap.php'</span>;
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'wallet_name'</span>])) {
+    <span class="hljs-variable">$walletName</span> = filter_input(INPUT_GET, <span class="hljs-string">'wallet_name'</span>, FILTER_SANITIZE_SPECIAL_CHARS);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-variable">$walletName</span> = <span class="hljs-string">'alice'</span>; <span class="hljs-comment">// Default wallet name for samples</span>
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Create a new instance of Wallet object</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$wallet</span> = <span class="hljs-keyword">new</span> \BlockCypher\Api\Wallet();</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="wallet-information">Wallet Information</h1></div></div></div><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-comment">//{</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p> &quot;name&quot;: &quot;alice&quot;,
+ &quot;addresses&quot;: [
+   &quot;1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e&quot;
+ ]</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">//}</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Fill up the information that is required for the wallet</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$wallet</span>-&gt;setName(<span class="hljs-variable">$walletName</span>);
+<span class="hljs-variable">$wallet</span>-&gt;setAddresses(<span class="hljs-keyword">array</span>(
+    <span class="hljs-string">"1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"</span>
+));</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>For Sample Purposes Only.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$wallet</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="create-wallet">Create Wallet</h3></div></div></div><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$wallet</span>-&gt;create(<span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Created Wallet"</span>, <span class="hljs-string">"Wallet"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}
 
-                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span
-                        class="hljs-variable">$_GET</span>[<span class="hljs-string">'wallet_name'</span>])) {
-                <span class="hljs-variable">$walletName</span> = filter_input(INPUT_GET, <span class="hljs-string">'wallet_name'</span>,
-                FILTER_SANITIZE_SPECIAL_CHARS);
-                } <span class="hljs-keyword">else</span> {
-                <span class="hljs-variable">$walletName</span> = <span class="hljs-string">'alice'</span>; <span
-                        class="hljs-comment">// Default wallet name for samples</span>
-                }
-            </div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><p>Create a new instance of Wallet object</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-variable">$wallet</span> = <span class="hljs-keyword">new</span>
-                \BlockCypher\Api\Wallet();
-            </div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><h1 id="wallet-information">Wallet Information</h1></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="code">
-            <div class="wrapper"><span class="hljs-comment">//{</span></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><p> &quot;name&quot;: &quot;alice&quot;,
-                &quot;addresses&quot;: [
-                &quot;1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e&quot;
-                ]</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-comment">//}</span></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><p>Fill up the information that is required for the wallet</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-variable">$wallet</span>-&gt;setName(<span class="hljs-variable">$walletName</span>);
-                <span class="hljs-variable">$wallet</span>-&gt;setAddresses(<span class="hljs-keyword">array</span>(
-                <span class="hljs-string">"1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"</span>
-                ));
-            </div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><p>For Sample Purposes Only.</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span>
-                <span class="hljs-variable">$wallet</span>;
-            </div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><h3 id="create-wallet">Create Wallet</h3></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="code">
-            <div class="wrapper"><span class="hljs-keyword">try</span> {
-                <span class="hljs-variable">$output</span> = <span class="hljs-variable">$wallet</span>-&gt;create(<span
-                        class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span
-                        class="hljs-string">'BTC.main'</span>]);
-                } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span
-                        class="hljs-variable">$ex</span>) {
-                ResultPrinter::printError(<span class="hljs-string">"Created Wallet"</span>, <span class="hljs-string">"Wallet"</span>,
-                <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span
-                        class="hljs-variable">$ex</span>);
-                <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
-                }
+ResultPrinter::printResult(<span class="hljs-string">"Created Wallet"</span>, <span class="hljs-string">"Wallet"</span>, <span class="hljs-variable">$output</span>-&gt;getName(), <span class="hljs-variable">$request</span>, <span class="hljs-variable">$output</span>);
 
-                ResultPrinter::printResult(<span class="hljs-string">"Created Wallet"</span>, <span class="hljs-string">"Wallet"</span>,
-                <span class="hljs-variable">$output</span>-&gt;getName(), <span class="hljs-variable">$request</span>,
-                <span class="hljs-variable">$output</span>);
-
-                <span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;</div></div></div></div></body></html>

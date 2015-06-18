@@ -1,71 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><title>chain-api\GetChain</title></head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="groc-relative-root" content="../">
-<meta name="groc-document-path" content="chain-api\GetChain">
-<meta name="groc-project-path" content="chain-api\GetChain.php">
-<link rel="stylesheet" type="text/css" media="all" href="../assets/style.css">
-<script type="text/javascript" src="../assets/behavior.js"></script>
-<body>
-<div id="meta">
-    <div class="file-path">chain-api\GetChain.php</div>
-</div>
-<div id="document">
-    <div class="segment">
-        <div class="code">
-            <div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><h1 id="get-chain-sample">Get Chain Sample</h1>
+<!DOCTYPE html><html lang="en"><head><title>chain-api\GetChain</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="chain-api\GetChain"><meta name="groc-project-path" content="chain-api\GetChain.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">chain-api\GetChain.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="get-blockchain-sample">Get Blockchain Sample</h1>
+<p>The Blockchain resource allows you to
+retrieve details about chains.
+API called: &#39;/v1/btc/main&#39;</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>The following code takes you through
+the process of retrieving details about a chain</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/// ### Retrieve Blockchain</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>(See bootstrap.php for more on <code>ApiContext</code>)</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$blockchain</span> = \BlockCypher\Api\Blockchain::get(<span class="hljs-string">'BTC.main'</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Get Blockchain"</span>, <span class="hljs-string">"Blockchain"</span>, <span class="hljs-string">'BTC.main'</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}
 
-                <p>The Chain resource allows you to
-                    retrieve details about chains.
-                    API called: &#39;/v1/btc/main&#39;</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> .
-                <span class="hljs-string">'/../bootstrap.php'</span>;
-            </div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><p>The following code takes you through
-                the process of retrieving details about a chain</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-comment">/// ### Retrieve Chain</span></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><p>(See bootstrap.php for more on <code>ApiContext</code>)</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-keyword">try</span> {
-                <span class="hljs-variable">$chain</span> = \BlockCypher\Api\Chain::get(<span class="hljs-string">'BTC.main'</span>,
-                <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span
-                        class="hljs-string">'BTC.main'</span>]);
-                } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span
-                        class="hljs-variable">$ex</span>) {
-                ResultPrinter::printError(<span class="hljs-string">"Get Chain"</span>, <span class="hljs-string">"Chain"</span>,
-                <span class="hljs-string">'BTC.main'</span>, <span class="hljs-keyword">null</span>, <span
-                        class="hljs-variable">$ex</span>);
-                <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
-                }
+ResultPrinter::printResult(<span class="hljs-string">"Get Blockchain"</span>, <span class="hljs-string">"Blockchain"</span>, <span class="hljs-variable">$blockchain</span>-&gt;getName(), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$blockchain</span>);
 
-                ResultPrinter::printResult(<span class="hljs-string">"Get Chain"</span>, <span class="hljs-string">"Chain"</span>,
-                <span class="hljs-variable">$chain</span>-&gt;getName(), <span class="hljs-keyword">null</span>, <span
-                        class="hljs-variable">$chain</span>);
-
-                <span class="hljs-keyword">return</span> <span class="hljs-variable">$chain</span>;
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$blockchain</span>;</div></div></div></div></body></html>
