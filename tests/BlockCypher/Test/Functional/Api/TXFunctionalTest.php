@@ -2,15 +2,15 @@
 
 namespace BlockCypher\Test\Functional\Api;
 
-use BlockCypher\Api\Transaction;
+use BlockCypher\Api\TX;
 use BlockCypher\Test\Functional\Setup;
 
 /**
- * Class TransactionFunctionalTest
+ * Class TXFunctionalTest
  *
  * @package BlockCypher\Test\Api
  */
-class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
+class TXFunctionalTest extends \PHPUnit_Framework_TestCase
 {
     public $operation;
 
@@ -43,14 +43,14 @@ class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return Transaction
+     * @return TX
      */
     public function testGet()
     {
         $request = $this->operation['response']['body'];
-        $transaction = new Transaction($request);
+        $transaction = new TX($request);
 
-        $result = Transaction::get($transaction->getHash(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $result = TX::get($transaction->getHash(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertInstanceOf('\BlockCypher\Api\Transaction', $result);
         // Assert only immutable values.
@@ -63,20 +63,20 @@ class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return Transaction[]
+     * @return TX[]
      */
     public function testGetMultiple()
     {
         $request = $this->operation['response']['body'];
-        $transactionArray = Transaction::getList($request);
+        $transactionArray = TX::getList($request);
 
         $transactionList = array();
-        /** @var Transaction $transaction */
+        /** @var TX $transaction */
         foreach ($transactionArray as $transaction) {
             $transactionList[] = $transaction->getHash();
         }
 
-        $result = Transaction::getMultiple($transactionList, array(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $result = TX::getMultiple($transactionList, array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertContainsOnlyInstancesOf('\BlockCypher\Api\Transaction', $result);
         $this->assertEquals(count($result), count($transactionList));
@@ -87,12 +87,12 @@ class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return Transaction
+     * @return TX
      */
     public function testGetWithPaging()
     {
         $request = $this->operation['response']['body'];
-        $transaction = new Transaction($request);
+        $transaction = new TX($request);
 
         $params = array(
             'instart' => 1,
@@ -100,7 +100,7 @@ class TransactionFunctionalTest extends \PHPUnit_Framework_TestCase
             'limit' => 1,
         );
 
-        $result = Transaction::get($transaction->getHash(), $params, $this->apiContext, $this->mockBlockCypherRestCall);
+        $result = TX::get($transaction->getHash(), $params, $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertInstanceOf('\BlockCypher\Api\Transaction', $result);
         // Assert only immutable values.

@@ -5,7 +5,7 @@ namespace BlockCypher\Api;
 use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
- * Class Txref
+ * Class TXRef
  *
  * Information about a single line item.
  *
@@ -28,7 +28,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
  * @property int receive_count
  * @property float confidence
  */
-class Txref extends BlockCypherBaseModel
+class TXRef extends BlockCypherBaseModel
 {
     /**
      * @return string

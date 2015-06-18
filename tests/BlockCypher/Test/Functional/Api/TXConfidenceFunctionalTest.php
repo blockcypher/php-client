@@ -2,15 +2,15 @@
 
 namespace BlockCypher\Test\Functional\Api;
 
-use BlockCypher\Api\TransactionConfidence;
+use BlockCypher\Api\TXConfidence;
 use BlockCypher\Test\Functional\Setup;
 
 /**
- * Class TransactionConfidenceFunctionalTest
+ * Class TXConfidenceFunctionalTest
  *
  * @package BlockCypher\Test\Api
  */
-class TransactionConfidenceFunctionalTest extends \PHPUnit_Framework_TestCase
+class TXConfidenceFunctionalTest extends \PHPUnit_Framework_TestCase
 {
     public $operation;
 
@@ -43,14 +43,14 @@ class TransactionConfidenceFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return TransactionConfidence
+     * @return TXConfidence
      */
     public function testGet()
     {
         $request = $this->operation['response']['body'];
-        $txConfidence = new TransactionConfidence($request);
+        $txConfidence = new TXConfidence($request);
 
-        $result = TransactionConfidence::get($txConfidence->getTxhash(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $result = TXConfidence::get($txConfidence->getTxhash(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertInstanceOf('\BlockCypher\Api\TransactionConfidence', $result);
         // Assert only immutable values.
@@ -59,20 +59,20 @@ class TransactionConfidenceFunctionalTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return TransactionConfidence[]
+     * @return TXConfidence[]
      */
     public function testGetMultiple()
     {
         $request = $this->operation['response']['body'];
-        $txConfidenceArray = TransactionConfidence::getList($request);
+        $txConfidenceArray = TXConfidence::getList($request);
 
         $txConfidenceList = array();
-        /** @var TransactionConfidence $txConfidence */
+        /** @var TXConfidence $txConfidence */
         foreach ($txConfidenceArray as $txConfidence) {
             $txConfidenceList[] = $txConfidence->getTxhash();
         }
 
-        $result = TransactionConfidence::getMultiple($txConfidenceList, array(), $this->apiContext, $this->mockBlockCypherRestCall);
+        $result = TXConfidence::getMultiple($txConfidenceList, array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
         $this->assertContainsOnlyInstancesOf('\BlockCypher\Api\TransactionConfidence', $result);
         $this->assertEquals(count($result), count($txConfidenceList));

@@ -2,22 +2,22 @@
 
 namespace BlockCypher\Test\Api;
 
-use BlockCypher\Api\TransactionConfidence;
+use BlockCypher\Api\TXConfidence;
 
 /**
- * Class TransactionConfidenceTest
+ * Class TXConfidenceTest
  *
  * @package BlockCypher\Test\Api
  */
-class TransactionConfidenceTest extends ResourceModelTestCase
+class TXConfidenceTest extends ResourceModelTestCase
 {
     /**
      * Tests for Serialization and Deserialization Issues
-     * @return TransactionConfidence
+     * @return TXConfidence
      */
     public function testSerializationDeserialization()
     {
-        $obj = new TransactionConfidence(self::getJson());
+        $obj = new TXConfidence(self::getJson());
 
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getAgeMillis());
@@ -34,7 +34,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
     }
 
     /**
-     * Gets Json String of Object TransactionConfidence
+     * Gets Json String of Object TXConfidence
      * @return string
      */
     public static function getJson()
@@ -55,7 +55,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
 
     /**
      * @depends testSerializationDeserialization
-     * @param TransactionConfidence $obj
+     * @param TXConfidence $obj
      */
     public function testGetters($obj)
     {
@@ -70,7 +70,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param TransactionConfidence $obj
+     * @param TXConfidence $obj
      */
     public function testGet($obj, /** @noinspection PhpDocSignatureInspection */
                             $mockApiContext)
@@ -82,7 +82,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                TransactionConfidenceTest::getJson()
+                TXConfidenceTest::getJson()
             ));
 
         /** @noinspection PhpParamsInspection */
@@ -92,7 +92,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param TransactionConfidence $obj
+     * @param TXConfidence $obj
      * @param $mockApiContext
      * @param $params
      * @expectedException \InvalidArgumentException
@@ -110,7 +110,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                TransactionConfidenceTest::getJson()
+                TXConfidenceTest::getJson()
             ));
 
         /** @noinspection PhpUndefinedVariableInspection */
@@ -120,7 +120,7 @@ class TransactionConfidenceTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param TransactionConfidence $obj
+     * @param TXConfidence $obj
      */
     public function testGetMultiple($obj, $mockApiContext)
     {
@@ -131,28 +131,28 @@ class TransactionConfidenceTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                '[' . TransactionConfidenceTest::getJson() . ']'
+                '[' . TXConfidenceTest::getJson() . ']'
             ));
 
-        $txConfidenceList = Array(TransactionConfidenceTest::getObject()->getTxhash());
+        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
 
         $result = $obj->getMultiple($txConfidenceList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertEquals($result[0], TransactionConfidenceTest::getObject());
+        $this->assertEquals($result[0], TXConfidenceTest::getObject());
     }
 
     /**
      * Gets Object Instance with Json data filled in
-     * @return TransactionConfidence
+     * @return TXConfidence
      */
     public static function getObject()
     {
-        return new TransactionConfidence(self::getJson());
+        return new TXConfidence(self::getJson());
     }
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param TransactionConfidence $obj
+     * @param TXConfidence $obj
      * @param $mockApiContext
      * @param $params
      * @expectedException \InvalidArgumentException
@@ -170,10 +170,10 @@ class TransactionConfidenceTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                '[' . TransactionConfidenceTest::getJson() . ']'
+                '[' . TXConfidenceTest::getJson() . ']'
             ));
 
-        $txConfidenceList = Array(TransactionConfidenceTest::getObject()->getTxhash());
+        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
 
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */

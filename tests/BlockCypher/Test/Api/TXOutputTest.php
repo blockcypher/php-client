@@ -2,26 +2,26 @@
 
 namespace BlockCypher\Test\Api;
 
-use BlockCypher\Api\Output;
+use BlockCypher\Api\TXOutput;
 
 /**
- * Class OutputTest
+ * Class TXOutputTest
  *
  * @package BlockCypher\Test\Api
  */
-class OutputTest extends ResourceModelTestCase
+class TXOutputTest extends ResourceModelTestCase
 {
     /**
      * Gets Object Instance with Json data filled in
-     * @return Output
+     * @return TXOutput
      */
     public static function getObject()
     {
-        return new Output(self::getJson());
+        return new TXOutput(self::getJson());
     }
 
     /**
-     * Gets Json String of Object Output
+     * Gets Json String of Object TXOutput
      * @return string
      */
     public static function getJson()
@@ -45,11 +45,11 @@ class OutputTest extends ResourceModelTestCase
 
     /**
      * Tests for Serialization and Deserialization Issues
-     * @return Output
+     * @return TXOutput
      */
     public function testSerializationDeserialization()
     {
-        $obj = new Output(self::getJson());
+        $obj = new TXOutput(self::getJson());
 
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getValue());
@@ -64,7 +64,7 @@ class OutputTest extends ResourceModelTestCase
 
     /**
      * @depends testSerializationDeserialization
-     * @param Output $obj
+     * @param TXOutput $obj
      */
     public function testGetters($obj)
     {

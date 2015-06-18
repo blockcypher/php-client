@@ -10,7 +10,7 @@ use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
 /**
- * Class TransactionConfidence
+ * Class TXConfidence
  *
  * A resource representing a block.
  *
@@ -22,18 +22,18 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property string txhash
  * @property string txurl
  */
-class TransactionConfidence extends BlockCypherResourceModel
+class TXConfidence extends BlockCypherResourceModel
 {
     // TODO: add description for setters and getters from http://dev.blockcypher.com/ (not currently available)
 
     /**
-     * Obtain the TransactionConfidence resource for the given identifier.
+     * Obtain the TXConfidence resource for the given identifier.
      *
      * @param string $txhash
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return TransactionConfidence
+     * @return TXConfidence
      */
     public static function get($txhash, $params = array(), $apiContext = null, $restCall = null)
     {
@@ -54,7 +54,7 @@ class TransactionConfidence extends BlockCypherResourceModel
             $apiContext,
             $restCall
         );
-        $ret = new TransactionConfidence();
+        $ret = new TXConfidence();
         $ret->fromJson($json);
         return $ret;
     }
@@ -66,7 +66,7 @@ class TransactionConfidence extends BlockCypherResourceModel
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return TransactionConfidence[]
+     * @return TXConfidence[]
      */
     public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
@@ -89,7 +89,7 @@ class TransactionConfidence extends BlockCypherResourceModel
             $apiContext,
             $restCall
         );
-        return TransactionConfidence::getList($json);
+        return TXConfidence::getList($json);
     }
 
     /**

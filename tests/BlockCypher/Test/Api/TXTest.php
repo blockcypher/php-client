@@ -2,14 +2,14 @@
 
 namespace BlockCypher\Test\Api;
 
-use BlockCypher\Api\Transaction;
+use BlockCypher\Api\TX;
 
 /**
- * Class Transaction
+ * Class TX
  *
  * @package BlockCypher\Test\Api
  */
-class TransactionTest extends ResourceModelTestCase
+class TXTest extends ResourceModelTestCase
 {
     // TODO:
     // - add test with hex property. Only included when the includeHex URL property is set to true.
@@ -21,11 +21,11 @@ class TransactionTest extends ResourceModelTestCase
 
     /**
      * Tests for Serialization and Deserialization Issues
-     * @return Transaction
+     * @return TX
      */
     public function testSerializationDeserialization()
     {
-        $obj = new Transaction(self::getJson());
+        $obj = new TX(self::getJson());
 
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getBlockHash());
@@ -157,7 +157,7 @@ class TransactionTest extends ResourceModelTestCase
 
     /**
      * @depends testSerializationDeserialization
-     * @param Transaction $obj
+     * @param TX $obj
      */
     public function testGetters($obj)
     {
@@ -200,7 +200,7 @@ class TransactionTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param Transaction $obj
+     * @param TX $obj
      * @param $mockApiContext
      */
     public function testGet($obj, $mockApiContext)
@@ -212,7 +212,7 @@ class TransactionTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                TransactionTest::getJson()
+                TXTest::getJson()
             ));
 
         /** @noinspection PhpParamsInspection */
@@ -223,7 +223,7 @@ class TransactionTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param Transaction $obj
+     * @param TX $obj
      * @param $mockApiContext
      */
     public function testGetWithParams($obj, $mockApiContext)
@@ -235,7 +235,7 @@ class TransactionTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                TransactionTest::getJson()
+                TXTest::getJson()
             ));
 
         $params = array(
@@ -252,7 +252,7 @@ class TransactionTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param Transaction $obj
+     * @param TX $obj
      * @param $mockApiContext
      * @param $params
      * @expectedException \InvalidArgumentException
@@ -270,7 +270,7 @@ class TransactionTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                TransactionTest::getJson()
+                TXTest::getJson()
             ));
 
         /** @noinspection PhpUndefinedVariableInspection */
@@ -280,7 +280,7 @@ class TransactionTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param Transaction $obj
+     * @param TX $obj
      */
     public function testGetMultiple($obj, $mockApiContext)
     {
@@ -291,28 +291,28 @@ class TransactionTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                '[' . TransactionTest::getJson() . ']'
+                '[' . TXTest::getJson() . ']'
             ));
 
-        $transactionList = Array(TransactionTest::getObject()->getHash());
+        $transactionList = Array(TXTest::getObject()->getHash());
 
         $result = $obj->getMultiple($transactionList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertEquals($result[0], TransactionTest::getObject());
+        $this->assertEquals($result[0], TXTest::getObject());
     }
 
     /**
      * Gets Object Instance with Json data filled in
-     * @return Transaction
+     * @return TX
      */
     public static function getObject()
     {
-        return new Transaction(self::getJson());
+        return new TX(self::getJson());
     }
 
     /**
      * @dataProvider mockProvider
-     * @param Transaction $obj
+     * @param TX $obj
      */
     public function testGetMultipleWithParams($obj, $mockApiContext)
     {
@@ -323,7 +323,7 @@ class TransactionTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                '[' . TransactionTest::getJson() . ']'
+                '[' . TXTest::getJson() . ']'
             ));
 
         $transactionList = Array(AddressTest::getObject()->getAddress());
@@ -335,12 +335,12 @@ class TransactionTest extends ResourceModelTestCase
 
         $result = $obj->getMultiple($transactionList, $params, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertEquals($result[0], TransactionTest::getObject());
+        $this->assertEquals($result[0], TXTest::getObject());
     }
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param Transaction $obj
+     * @param TX $obj
      * @param $mockApiContext
      * @param $params
      * @expectedException \InvalidArgumentException
@@ -358,7 +358,7 @@ class TransactionTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                '[' . TransactionTest::getJson() . ']'
+                '[' . TXTest::getJson() . ']'
             ));
 
         $transactionList = Array(AddressTest::getObject()->getAddress());

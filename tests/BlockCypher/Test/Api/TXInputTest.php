@@ -2,29 +2,29 @@
 
 namespace BlockCypher\Test\Api;
 
-use BlockCypher\Api\Input;
+use BlockCypher\Api\TXInput;
 
 /**
- * Class InputTest
+ * Class TXInputTest
  *
  * @package BlockCypher\Test\Api
  */
-class InputTest extends ResourceModelTestCase
+class TXInputTest extends ResourceModelTestCase
 {
     // TODO:
     // - add test for unconfirmed transaction with age property
 
     /**
      * Gets Object Instance with Json data filled in
-     * @return Input
+     * @return TXInput
      */
     public static function getObject()
     {
-        return new Input(self::getJson());
+        return new TXInput(self::getJson());
     }
 
     /**
-     * Gets Json String of Object Input
+     * Gets Json String of Object TXInput
      * @return string
      */
     public static function getJson()
@@ -49,11 +49,11 @@ class InputTest extends ResourceModelTestCase
 
     /**
      * Tests for Serialization and Deserialization Issues
-     * @return Input
+     * @return TXInput
      */
     public function testSerializationDeserialization()
     {
-        $obj = new Input(self::getJson());
+        $obj = new TXInput(self::getJson());
 
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getPrevHash());
@@ -72,7 +72,7 @@ class InputTest extends ResourceModelTestCase
 
     /**
      * @depends testSerializationDeserialization
-     * @param Input $obj
+     * @param TXInput $obj
      */
     public function testGetters($obj)
     {

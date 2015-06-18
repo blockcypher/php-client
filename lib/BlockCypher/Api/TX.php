@@ -10,7 +10,7 @@ use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
 /**
- * Class Transaction
+ * Class TX
  *
  * A resource representing a transaction.
  *
@@ -42,16 +42,16 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property \BlockCypher\Api\Output[] outputs
  * @property string next_inputs
  */
-class Transaction extends BlockCypherResourceModel
+class TX extends BlockCypherResourceModel
 {
     /**
-     * Obtain the Transaction resource for the given identifier.
+     * Obtain the TX resource for the given identifier.
      *
      * @param string $hash
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Transaction
+     * @return TX
      */
     public static function get($hash, $params = array(), $apiContext = null, $restCall = null)
     {
@@ -76,19 +76,19 @@ class Transaction extends BlockCypherResourceModel
             $apiContext,
             $restCall
         );
-        $ret = new Transaction();
+        $ret = new TX();
         $ret->fromJson($json);
         return $ret;
     }
 
     /**
-     * Obtain multiple Transaction resources for the given identifier.
+     * Obtain multiple TX resources for the given identifier.
      *
      * @param string[] $array
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Transaction[]
+     * @return TX[]
      */
     public static function getMultiple($array, $params = array(), $apiContext = null, $restCall = null)
     {
@@ -114,11 +114,11 @@ class Transaction extends BlockCypherResourceModel
             $apiContext,
             $restCall
         );
-        return Transaction::getList($json);
+        return TX::getList($json);
     }
 
     /**
-     * Create a new Transaction.
+     * Create a new TX.
      *
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
