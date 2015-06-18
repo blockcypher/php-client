@@ -7,7 +7,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
 /**
  * Class TXOutput
  *
- * Information about a single line item.
+ * Information about a transaction ou.
  *
  * script_type values:
  * pay-to-pubkey-hash (most common transaction transferring to a public key hash, and the default behavior if no out)

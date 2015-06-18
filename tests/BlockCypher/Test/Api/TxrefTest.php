@@ -2,14 +2,14 @@
 
 namespace BlockCypher\Test\Api;
 
-use BlockCypher\Api\Txref;
+use BlockCypher\Api\TXRef;
 
 /**
- * Class TxrefTest
+ * Class TXRefTest
  *
  * @package BlockCypher\Test\Api
  */
-class TxrefTest extends ResourceModelTestCase
+class TXRefTest extends ResourceModelTestCase
 {
     // TODO: add tests
     // - add test for double spend case (double_of, receive_count)
@@ -17,15 +17,15 @@ class TxrefTest extends ResourceModelTestCase
 
     /**
      * Gets Object Instance with Json data filled in
-     * @return Txref
+     * @return TXRef
      */
     public static function getObject()
     {
-        return new Txref(self::getJson());
+        return new TXRef(self::getJson());
     }
 
     /**
-     * Gets Json String of Object Txref
+     * Gets Json String of Object TXRef
      * @return string
      */
     public static function getJson()
@@ -56,11 +56,11 @@ class TxrefTest extends ResourceModelTestCase
 
     /**
      * Tests for Serialization and Deserialization Issues
-     * @return Txref
+     * @return TXRef
      */
     public function testSerializationDeserialization()
     {
-        $obj = new Txref(self::getJson());
+        $obj = new TXRef(self::getJson());
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getTxHash());
         $this->assertNotNull($obj->getBlockHeight());
@@ -86,7 +86,7 @@ class TxrefTest extends ResourceModelTestCase
 
     /**
      * @depends testSerializationDeserialization
-     * @param Txref $obj
+     * @param TXRef $obj
      */
     public function testGetters($obj)
     {

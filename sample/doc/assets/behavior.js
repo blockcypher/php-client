@@ -871,7 +871,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Get Transaction Confidence Sample",
+                  "title": "Get TX Confidence Sample",
                 "slug": "get-transaction-confidence-sample"
               },
               "depth": 1
@@ -1572,7 +1572,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Create, Sign and Send Transaction Sample",
+                  "title": "Create, Sign and Send TX Sample",
                 "slug": "create-sign-and-send-transaction-sample"
               },
               "depth": 1,
@@ -1581,7 +1581,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "type": "heading",
                   "data": {
                     "level": 3,
-                    "title": "Sign the Transaction",
+                      "title": "Sign the TX",
                     "slug": "sign-the-transaction"
                   },
                   "depth": 3
@@ -1589,7 +1589,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "type": "heading",
                   "data": {
                     "level": 3,
-                    "title": "Send Transaction to the network",
+                      "title": "Send TX to the network",
                     "slug": "send-transaction-to-the-network"
                   },
                   "depth": 3
@@ -1620,7 +1620,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Create Transaction Sample (without sending it)",
+                  "title": "Create TX Sample (without sending it)",
                 "slug": "create-transaction-sample-without-sending-it"
               },
               "depth": 1,
@@ -1638,7 +1638,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                       "type": "heading",
                       "data": {
                         "level": 3,
-                        "title": "Create New Transaction",
+                          "title": "Create New TX",
                         "slug": "create-new-transaction"
                       },
                       "depth": 3
@@ -1700,7 +1700,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Get Transaction Sample",
+                  "title": "Get TX Sample",
                 "slug": "get-transaction-sample"
               },
               "depth": 1
@@ -1729,7 +1729,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Get Transaction With Paging Sample",
+                  "title": "Get TX With Paging Sample",
                 "slug": "get-transaction-with-paging-sample"
               },
               "depth": 1
@@ -1758,7 +1758,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 3,
-                "title": "Create New Transaction",
+                  "title": "Create New TX",
                 "slug": "create-new-transaction"
               },
               "depth": 3

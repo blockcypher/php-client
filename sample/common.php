@@ -15,7 +15,7 @@ class ResultPrinter
     private static $printResultCounter = 0;
 
     /**
-     * Prints success response HTML Output to web page.
+     * Prints success response HTML TXOutput to web page.
      *
      * @param string $title
      * @param string $objectName
@@ -29,7 +29,7 @@ class ResultPrinter
     }
 
     /**
-     * Prints HTML Output to web page.
+     * Prints HTML TXOutput to web page.
      *
      * @param string $title
      * @param string $objectName

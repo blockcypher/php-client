@@ -20,12 +20,12 @@ try {
         '6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780'
     );
 
-    $txConfidence = \BlockCypher\Api\TransactionConfidence::getMultiple($txhashList, array(), $apiContexts['BTC.main']);
+    $txConfidence = \BlockCypher\Api\TXConfidence::getMultiple($txhashList, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Get Multiple Transactions Confidence", "Transaction Confidence", implode(",", $txhashList), null, $ex);
+    ResultPrinter::printError("Get Multiple Transactions Confidence", "TX Confidence", implode(",", $txhashList), null, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Get Multiple Transactions Confidence", "Transaction Confidence", implode(",", $txhashList), null, $txConfidence);
+ResultPrinter::printResult("Get Multiple Transactions Confidence", "TX Confidence", implode(",", $txhashList), null, $txConfidence);
 
 return $txConfidence;

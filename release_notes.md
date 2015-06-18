@@ -4,12 +4,12 @@ BlockCypher PHP SDK release notes
 v1.0.0
 ------
 
-* Added TxrefTest::received property
-* Renamed TransactionConfidence::age_seconds TransactionConfidence::age_millis
+* Added TXRefTest::received property
+* Renamed TXConfidence::age_seconds TXConfidence::age_millis
 * Added BtcConverter
 * Added TokenValidator
 * Added BlockCypherCoinSymbolConstants
-* Added missing property Transaction::next_inputs
+* Added missing property TX::next_inputs
 * Added Wallet API
 * Get wallet as address
 * Get wallet balance as address balance
@@ -23,7 +23,7 @@ v1.0.0-beta
 * Allow getting token from config ini file
 * Removed FINE log level
 * Added BlockCypherBaseModel. Base model class with error and errors properties
-* Added TransactionConfidence class
+* Added TXConfidence class
 * Added Address:getAllTxrefs method
 
 v0.6.0
@@ -38,7 +38,7 @@ v0.6.0
 * Added URL params 'unspentOnly' and 'before' to Address
 * Added URL params 'unspentOnly' and 'before' to FullAddress
 * Added URL params 'txstart' and 'limit' to Block
-* Added URL params 'instart', 'outstart' and 'limit' to Transaction
+* Added URL params 'instart', 'outstart' and 'limit' to TX
 * Added WebHook API endpoint
 * Added 'params' parameter to all GET methods to allow add URL parameters in the future without breaking method signature
 

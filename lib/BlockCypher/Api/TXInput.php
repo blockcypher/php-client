@@ -7,7 +7,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
 /**
  * Class TXInput
  *
- * Information about a single line item.
+ * Information about a transaction input.
  *
  * @package BlockCypher\Api
  *

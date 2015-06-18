@@ -21,7 +21,7 @@ use BlockCypher\Transport\BlockCypherRestCall;
  *
  * @package BlockCypher\Api
  *
- * @property \BlockCypher\Api\Transaction tx
+ * @property \BlockCypher\Api\TX tx
  * @property string[] tosign
  * @property string[] signatures
  * @property string[] pubkeys
@@ -121,7 +121,7 @@ class TXSkeleton extends BlockCypherResourceModel
     /**
      * A temporary TX, usually returned fully filled but missing input scripts.
      *
-     * @return \BlockCypher\Api\Transaction
+     * @return \BlockCypher\Api\TX
      */
     public function getTx()
     {
@@ -263,7 +263,7 @@ class TXSkeleton extends BlockCypherResourceModel
     /**
      * A temporary TX, usually returned fully filled but missing input scripts.
      *
-     * @param \BlockCypher\Api\Transaction $tx
+     * @param \BlockCypher\Api\TX $tx
      * @return $this
      */
     public function setTx($tx)

@@ -7,12 +7,20 @@ the process of retrieving confidence of multiple Transactions at once.</p></div>
         <span class="hljs-string">'6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780'</span>
     );
 
-    <span class="hljs-variable">$txConfidence</span> = \BlockCypher\Api\TransactionConfidence::getMultiple(<span class="hljs-variable">$txhashList</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+    <span class="hljs-variable">$txConfidence</span> = \BlockCypher\Api\TXConfidence::getMultiple(<span
+            class="hljs-variable">$txhashList</span>, <span class="hljs-keyword">array</span>(), <span
+            class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
-    ResultPrinter::printError(<span class="hljs-string">"Get Multiple Transactions Confidence"</span>, <span class="hljs-string">"Transaction Confidence"</span>, implode(<span class="hljs-string">","</span>, <span class="hljs-variable">$txhashList</span>), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
+    ResultPrinter::printError(<span class="hljs-string">"Get Multiple Transactions Confidence"</span>, <span
+            class="hljs-string">"TX Confidence"</span>, implode(<span class="hljs-string">","</span>, <span
+            class="hljs-variable">$txhashList</span>), <span class="hljs-keyword">null</span>, <span
+            class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
 }
 
-ResultPrinter::printResult(<span class="hljs-string">"Get Multiple Transactions Confidence"</span>, <span class="hljs-string">"Transaction Confidence"</span>, implode(<span class="hljs-string">","</span>, <span class="hljs-variable">$txhashList</span>), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$txConfidence</span>);
+    ResultPrinter::printResult(<span class="hljs-string">"Get Multiple Transactions Confidence"</span>, <span
+            class="hljs-string">"TX Confidence"</span>, implode(<span class="hljs-string">","</span>, <span
+            class="hljs-variable">$txhashList</span>), <span class="hljs-keyword">null</span>, <span
+            class="hljs-variable">$txConfidence</span>);
 
 <span class="hljs-keyword">return</span> <span class="hljs-variable">$txConfidence</span>;</div></div></div></div></body></html>

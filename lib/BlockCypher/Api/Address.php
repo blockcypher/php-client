@@ -28,8 +28,8 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int final_n_tx
  * @property bool has_more
  * @property string tx_url
- * @property \BlockCypher\Api\Txref[] txrefs
- * @property \BlockCypher\Api\Txref[] unconfirmed_txrefs
+ * @property \BlockCypher\Api\TXRef[] txrefs
+ * @property \BlockCypher\Api\TXRef[] unconfirmed_txrefs
  */
 class Address extends BlockCypherResourceModel
 {
@@ -435,9 +435,9 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * Append Txref to the list.
+     * Append TXRef to the list.
      *
-     * @param \BlockCypher\Api\Txref $txref
+     * @param \BlockCypher\Api\TXRef $txref
      * @return $this
      */
     public function addTxref($txref)
@@ -454,7 +454,7 @@ class Address extends BlockCypherResourceModel
     /**
      * All transaction inputs and outputs for the specified address.
      *
-     * @return \BlockCypher\Api\Txref[]
+     * @return \BlockCypher\Api\TXRef[]
      */
     public function getTxrefs()
     {
@@ -464,7 +464,7 @@ class Address extends BlockCypherResourceModel
     /**
      * All transaction inputs and outputs for the specified address.
      *
-     * @param \BlockCypher\Api\Txref[] $txrefs
+     * @param \BlockCypher\Api\TXRef[] $txrefs
      *
      * @return $this
      */
@@ -475,9 +475,9 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * Remove Txref from the list.
+     * Remove TXRef from the list.
      *
-     * @param \BlockCypher\Api\Txref $txref
+     * @param \BlockCypher\Api\TXRef $txref
      * @return $this
      */
     public function removeTxref($txref)
@@ -488,9 +488,9 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * Append Unconfirmed Txref to the list.
+     * Append Unconfirmed TXRef to the list.
      *
-     * @param \BlockCypher\Api\Txref $unconfirmedTxref
+     * @param \BlockCypher\Api\TXRef $unconfirmedTxref
      * @return $this
      */
     public function addUnconfirmedTxref($unconfirmedTxref)
@@ -507,7 +507,7 @@ class Address extends BlockCypherResourceModel
     /**
      * All unconfirmed transaction inputs and outputs for the specified address.
      *
-     * @return \BlockCypher\Api\Txref[]
+     * @return \BlockCypher\Api\TXRef[]
      */
     public function getUnconfirmedTxrefs()
     {
@@ -517,7 +517,7 @@ class Address extends BlockCypherResourceModel
     /**
      * All unconfirmed transaction inputs and outputs for the specified address.
      *
-     * @param \BlockCypher\Api\Txref[] $unconfirmed_txrefs
+     * @param \BlockCypher\Api\TXRef[] $unconfirmed_txrefs
      * @return $this
      */
     public function setUnconfirmedTxrefs($unconfirmed_txrefs)
@@ -527,9 +527,9 @@ class Address extends BlockCypherResourceModel
     }
 
     /**
-     * Remove Unconfirmed Txref from the list.
+     * Remove Unconfirmed TXRef from the list.
      *
-     * @param \BlockCypher\Api\Txref $unconfirmedTxref
+     * @param \BlockCypher\Api\TXRef $unconfirmedTxref
      * @return $this
      */
     public function removeUnconfirmedTxref($unconfirmedTxref)
@@ -542,7 +542,7 @@ class Address extends BlockCypherResourceModel
     /**
      * All transactions refs for confirmed and unconfirmed transactions.
      *
-     * @return \BlockCypher\Api\Txref[]
+     * @return \BlockCypher\Api\TXRef[]
      */
     public function getAllTxrefs()
     {

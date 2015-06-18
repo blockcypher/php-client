@@ -32,7 +32,7 @@ Press Ctrl-C to quit.
 `http://localhost/php-client/sample/index.html`
 
 You should see a sample dashboard page as shown below:
-![Web Output!](/sample/images/sample_web.png)
+![Web TXOutput!](/sample/images/sample_web.png)
 
 #### Running on console
 > Please note that there are few samples that requires you to have a working local server
@@ -44,7 +44,7 @@ php -f chains/GetChain.php
 ```
 
 The result would be as shown below:
-![Console Output!](/sample/images/sample_console.png)
+![Console TXOutput!](/sample/images/sample_console.png)
 #### Configuration
 
 The sample comes pre-configured with a test account but in case you need to try them against your account, you must

@@ -10,7 +10,7 @@ require __DIR__ . '/../bootstrap.php';
 
 // The following code takes you through
 // the process of retrieving details about a Block.
-// Transaction list begins at 'txstart' and we only get 'limit' transactions at once
+// TX list begins at 'txstart' and we only get 'limit' transactions at once
 
 /// ### Retrieve Block by hash with only one transaction starting at transaction 1 (the second)
 // (See bootstrap.php for more on `ApiContext`)

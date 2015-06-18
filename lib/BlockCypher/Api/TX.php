@@ -38,8 +38,8 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int vout_sz
  * @property int confirmations
  * @property int confidence
- * @property \BlockCypher\Api\Input[] inputs
- * @property \BlockCypher\Api\Output[] outputs
+ * @property \BlockCypher\Api\TXInput[] inputs
+ * @property \BlockCypher\Api\TXOutput[] outputs
  * @property string next_inputs
  */
 class TX extends BlockCypherResourceModel
@@ -518,10 +518,10 @@ class TX extends BlockCypherResourceModel
     }
 
     /**
-     * Append Input to the list.
+     * Append TXInput to the list.
      *
-     * @param \BlockCypher\Api\Input $input
-     * @return \BlockCypher\Api\Input[]
+     * @param \BlockCypher\Api\TXInput $input
+     * @return \BlockCypher\Api\TXInput[]
      */
     public function addInput($input)
     {
@@ -538,7 +538,7 @@ class TX extends BlockCypherResourceModel
      * Array of inputs, limited to 20. Use paging to get more inputs (see section on blocks) with
      * instart and limit URL parameters.
      *
-     * @return \BlockCypher\Api\Input[]
+     * @return \BlockCypher\Api\TXInput[]
      */
     public function getInputs()
     {
@@ -549,7 +549,7 @@ class TX extends BlockCypherResourceModel
      * Array of inputs, limited to 20. Use paging to get more inputs (see section on blocks) with
      * instart and limit URL parameters.
      *
-     * @param \BlockCypher\Api\Input[] $inputs
+     * @param \BlockCypher\Api\TXInput[] $inputs
      * @return $this
      */
     public function setInputs($inputs)
@@ -559,10 +559,10 @@ class TX extends BlockCypherResourceModel
     }
 
     /**
-     * Remove Input from the list.
+     * Remove TXInput from the list.
      *
-     * @param \BlockCypher\Api\Input $input
-     * @return \BlockCypher\Api\Input[]
+     * @param \BlockCypher\Api\TXInput $input
+     * @return \BlockCypher\Api\TXInput[]
      */
     public function removeInput($input)
     {
@@ -572,10 +572,10 @@ class TX extends BlockCypherResourceModel
     }
 
     /**
-     * Append Output to the list.
+     * Append TXOutput to the list.
      *
-     * @param \BlockCypher\Api\Output $output
-     * @return \BlockCypher\Api\Output[]
+     * @param \BlockCypher\Api\TXOutput $output
+     * @return \BlockCypher\Api\TXOutput[]
      */
     public function addOutput($output)
     {
@@ -592,7 +592,7 @@ class TX extends BlockCypherResourceModel
      * Array of outputs, limited to 20. Use paging to get more outputs (see section on blocks) with
      * outstart and limit URL parameters.
      *
-     * @return \BlockCypher\Api\Output[]
+     * @return \BlockCypher\Api\TXOutput[]
      */
     public function getOutputs()
     {
@@ -603,7 +603,7 @@ class TX extends BlockCypherResourceModel
      * Array of outputs, limited to 20. Use paging to get more outputs (see section on blocks) with
      * outstart and limit URL parameters.
      *
-     * @param \BlockCypher\Api\Output[] $outputs
+     * @param \BlockCypher\Api\TXOutput[] $outputs
      * @return $this
      */
     public function setOutputs($outputs)
@@ -613,10 +613,10 @@ class TX extends BlockCypherResourceModel
     }
 
     /**
-     * Remove Output from the list.
+     * Remove TXOutput from the list.
      *
-     * @param \BlockCypher\Api\Output $output
-     * @return \BlockCypher\Api\Output[]
+     * @param \BlockCypher\Api\TXOutput $output
+     * @return \BlockCypher\Api\TXOutput[]
      */
     public function removeOutput($output)
     {

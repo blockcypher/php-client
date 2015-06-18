@@ -99,7 +99,7 @@ class AddressFunctionalTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($fullAddress->getAddress(), $result->getAddress());
         $this->assertEquals($fullAddress->getTxUrl(), $result->getTxUrl());
         $this->assertEquals(count($fullAddress->getTxs()), count($result->getTxs()));
-        $this->assertContainsOnlyInstancesOf('\BlockCypher\Api\Transaction', $result->getTxs());
+        $this->assertContainsOnlyInstancesOf('\BlockCypher\Api\TX', $result->getTxs());
         return $result;
     }
 

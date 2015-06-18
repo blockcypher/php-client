@@ -5,7 +5,7 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\Transaction;
+use BlockCypher\Api\TX;
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Rest\ApiContext;
 
@@ -15,6 +15,6 @@ $apiContext = ApiContext::create(
     array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$transaction = Transaction::get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', array(), $apiContext);
+$transaction = TX::get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', array(), $apiContext);
 
-ResultPrinter::printResult("Transaction Hash Endpoint", "Transaction", $transaction->getHash(), null, $transaction);
+ResultPrinter::printResult("TX Hash Endpoint", "TX", $transaction->getHash(), null, $transaction);

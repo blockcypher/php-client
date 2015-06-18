@@ -52,7 +52,7 @@ class TXConfidenceFunctionalTest extends \PHPUnit_Framework_TestCase
 
         $result = TXConfidence::get($txConfidence->getTxhash(), array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertInstanceOf('\BlockCypher\Api\TransactionConfidence', $result);
+        $this->assertInstanceOf('\BlockCypher\Api\TXConfidence', $result);
         // Assert only immutable values.
         $this->assertEquals($txConfidence->getTxhash(), $result->getTxhash());
         return $result;
@@ -74,7 +74,7 @@ class TXConfidenceFunctionalTest extends \PHPUnit_Framework_TestCase
 
         $result = TXConfidence::getMultiple($txConfidenceList, array(), $this->apiContext, $this->mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertContainsOnlyInstancesOf('\BlockCypher\Api\TransactionConfidence', $result);
+        $this->assertContainsOnlyInstancesOf('\BlockCypher\Api\TXConfidence', $result);
         $this->assertEquals(count($result), count($txConfidenceList));
         foreach ($result as $resultTxConfidence) {
             $this->assertContains($resultTxConfidence->getTxhash(), $txConfidenceList);

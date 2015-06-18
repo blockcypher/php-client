@@ -12,7 +12,7 @@ use BlockCypher\Validation\ArgumentValidator;
 /**
  * Class TXConfidence
  *
- * A resource representing a block.
+ * A resource representing a transaction confidence.
  *
  * @package BlockCypher\Api
  *

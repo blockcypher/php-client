@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Test\Common;
 
-use BlockCypher\Api\Transaction;
+use BlockCypher\Api\TX;
 use BlockCypher\Common\BlockCypherModel;
 use BlockCypher\Core\BlockCypherConfigManager;
 
@@ -147,7 +147,7 @@ class ModelTest extends \PHPUnit_Framework_TestCase
     {
         /** @noinspection SpellCheckingInspection */
         $json = '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","inputs":[{"related_resources":[]}]}';
-        $transaction = new Transaction($json);
+        $transaction = new TX($json);
         $result = $transaction->toJSON();
         $this->assertContains('"related_resources":[]', $result);
         $this->assertNotNull($result);
@@ -157,7 +157,7 @@ class ModelTest extends \PHPUnit_Framework_TestCase
     {
         /** @noinspection SpellCheckingInspection */
         $json = '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","inputs":[{"related_resources":[{},{}]}]}';
-        $transaction = new Transaction($json);
+        $transaction = new TX($json);
         $result = $transaction->toJSON();
         $this->assertContains('"related_resources":[{},{}]', $result);
         $this->assertNotNull($result);

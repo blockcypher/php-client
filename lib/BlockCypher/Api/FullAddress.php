@@ -27,7 +27,7 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int unconfirmed_n_tx
  * @property int final_n_tx
  * @property bool has_more
- * @property \BlockCypher\Api\Transaction[] txs
+ * @property \BlockCypher\Api\TX[] txs
  * @property string tx_url
  */
 class FullAddress extends BlockCypherResourceModel
@@ -353,7 +353,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * Alias for addTx method.
      *
-     * @param \BlockCypher\Api\Transaction $transaction
+     * @param \BlockCypher\Api\TX $transaction
      * @return $this
      */
     public function addTransaction($transaction)
@@ -362,9 +362,9 @@ class FullAddress extends BlockCypherResourceModel
     }
 
     /**
-     * Append Transaction to the list.
+     * Append TX to the list.
      *
-     * @param \BlockCypher\Api\Transaction $tx
+     * @param \BlockCypher\Api\TX $tx
      * @return $this
      */
     public function addTx($tx)
@@ -381,7 +381,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * All transaction inputs and outputs for the specified address.
      *
-     * @return \BlockCypher\Api\Transaction[]
+     * @return \BlockCypher\Api\TX[]
      */
     public function getTxs()
     {
@@ -391,7 +391,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * All transaction inputs and outputs for the specified address.
      *
-     * @param \BlockCypher\Api\Transaction[] $tx
+     * @param \BlockCypher\Api\TX[] $tx
      *
      * @return $this
      */
@@ -404,7 +404,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * Alias for getTxs method.
      *
-     * @return \BlockCypher\Api\Transaction[]
+     * @return \BlockCypher\Api\TX[]
      */
     public function getTransactions()
     {
@@ -414,7 +414,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * Alias for setTxs method.
      *
-     * @param \BlockCypher\Api\Transaction[] $transactions
+     * @param \BlockCypher\Api\TX[] $transactions
      *
      * @return $this
      */
@@ -426,7 +426,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * Alias for removeTx method.
      *
-     * @param \BlockCypher\Api\Transaction $transaction
+     * @param \BlockCypher\Api\TX $transaction
      * @return $this
      */
     public function removeTransaction($transaction)
@@ -435,9 +435,9 @@ class FullAddress extends BlockCypherResourceModel
     }
 
     /**
-     * Remove Transaction from the list.
+     * Remove TX from the list.
      *
-     * @param \BlockCypher\Api\Transaction $tx
+     * @param \BlockCypher\Api\TX $tx
      * @return $this
      */
     public function removeTx($tx)

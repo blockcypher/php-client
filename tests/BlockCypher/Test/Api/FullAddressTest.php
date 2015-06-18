@@ -466,7 +466,7 @@ class FullAddressTest extends ResourceModelTestCase
         }
         */
 
-        return '{"address":"1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD","total_received":4433416,"total_sent":0,"balance":4433416,"unconfirmed_balance":0,"final_balance":0,"n_tx":7,"unconfirmed_n_tx":0,"final_n_tx":7,"txs":[' . TransactionTest::getJson() . '],"error":"","errors":[]}';
+        return '{"address":"1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD","total_received":4433416,"total_sent":0,"balance":4433416,"unconfirmed_balance":0,"final_balance":0,"n_tx":7,"unconfirmed_n_tx":0,"final_n_tx":7,"txs":[' . TXTest::getJson() . '],"error":"","errors":[]}';
     }
 
     /**
@@ -484,7 +484,7 @@ class FullAddressTest extends ResourceModelTestCase
         $this->assertEquals($obj->getNTx(), 7);
         $this->assertEquals($obj->getUnconfirmedNTx(), 0);
         $this->assertEquals($obj->getFinalNTx(), 7);
-        $this->assertEquals($obj->getTxs(), array(TransactionTest::getObject()));
+        $this->assertEquals($obj->getTxs(), array(TXTest::getObject()));
     }
 
     /**

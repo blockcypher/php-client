@@ -1,6 +1,6 @@
 <?php
 
-// # Create, Sign and Send Transaction Sample
+// # Create, Sign and Send TX Sample
 //
 // This sample code demonstrate how you can create a new transaction and send it to the network, as documented here at:
 // <a href="http://dev.blockcypher.com/#creating-transactions">http://dev.blockcypher.com/#creating-transactions</a>
@@ -17,7 +17,7 @@ $privateKeys = array(
     "1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e" // Address: n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4
 );
 
-// ### Sign the Transaction
+// ### Sign the TX
 $txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
 
 // Source and Destination addresses used in this sample
@@ -28,7 +28,7 @@ $txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
 $request = clone $txSkeleton;
 
 try {
-    // ### Send Transaction to the network
+    // ### Send TX to the network
     $output = $txSkeleton->send($apiContexts['BTC.test3']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created TXSkeleton", "TXSkeleton", null, $request, $ex);

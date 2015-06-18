@@ -140,7 +140,7 @@ class AddressTest extends ResourceModelTestCase
         }
         */
 
-        $txref = TxrefTest::getJson();
+        $txref = TXRefTest::getJson();
 
         return '{"address":"1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD","total_received":4433416,"total_sent":0,"balance":4433416,"unconfirmed_balance":0,"final_balance":4433416,"n_tx":7,"unconfirmed_n_tx":0,"final_n_tx":7,"txrefs":[' . $txref . '],"unconfirmed_txrefs":[' . $txref . '],"tx_url":"https://api.blockcypher.com/v1/btc/main/txs/","error":"","errors":[]}';
     }
@@ -160,12 +160,12 @@ class AddressTest extends ResourceModelTestCase
         $this->assertEquals($obj->getNTx(), 7);
         $this->assertEquals($obj->getUnconfirmedNTx(), 0);
         $this->assertEquals($obj->getFinalNTx(), 7);
-        $this->assertEquals($obj->getTxrefs(), array(TxrefTest::getObject()));
-        $this->assertEquals($obj->getUnconfirmedTxrefs(), array(TxrefTest::getObject()));
+        $this->assertEquals($obj->getTxrefs(), array(TXRefTest::getObject()));
+        $this->assertEquals($obj->getUnconfirmedTxrefs(), array(TXRefTest::getObject()));
         $this->assertEquals($obj->getTxUrl(), "https://api.blockcypher.com/v1/btc/main/txs/");
 
         // Calculate properties
-        $this->assertEquals($obj->getAllTxrefs(), array(TxrefTest::getObject(), TxrefTest::getObject()));
+        $this->assertEquals($obj->getAllTxrefs(), array(TXRefTest::getObject(), TXRefTest::getObject()));
     }
 
     /**
