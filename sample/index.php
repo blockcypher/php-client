@@ -246,7 +246,7 @@ if (PHP_SAPI == 'cli') {
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 id="chain-api" class="panel-title"><a
-                            href="http://dev.blockcypher.com/#chain-api"
+                            href="http://dev.blockcypher.com/#chain-endpoint"
                             target="_blank">Chains</a></h3>
                 </div>
                 <!-- List group -->
@@ -269,7 +269,7 @@ if (PHP_SAPI == 'cli') {
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 id="block-api" class="panel-title"><a
-                            href="http://dev.blockcypher.com/#block-api"
+                            href="http://dev.blockcypher.com/#block-hash-endpoint"
                             target="_blank">Blocks</a></h3>
                 </div>
                 <!-- List group -->
@@ -501,7 +501,7 @@ if (PHP_SAPI == 'cli') {
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 id="wallet-api" class="panel-title"><a
-                            href="http://dev.blockcypher.com/#wallet-api"
+                            href="http://dev.blockcypher.com/#wallets"
                             target="_blank">Wallets</a></h3>
                 </div>
                 <!-- List group -->
@@ -873,7 +873,7 @@ if (PHP_SAPI == 'cli') {
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 id="payment-api" class="panel-title"><a
-                            href="http://dev.blockcypher.com/#payment-api"
+                            href="http://dev.blockcypher.com/#payment-forwarding"
                             target="_blank">Payments Forwarding</a></h3>
                 </div>
                 <!-- List group -->
@@ -892,7 +892,7 @@ if (PHP_SAPI == 'cli') {
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 id="hook-api" class="panel-title"><a
-                            href="http://dev.blockcypher.com/#hook-api"
+                            href="http://dev.blockcypher.com/#events-and-hooks"
                             target="_blank">WebHooks</a></h3>
                 </div>
                 <!-- List group -->
