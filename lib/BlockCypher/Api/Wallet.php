@@ -153,7 +153,7 @@ class Wallet extends BlockCypherResourceModel
         $allowedParams = array();
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
-        $payLoad = $this->toJSON();
+        $payLoad = "";
 
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
@@ -179,20 +179,20 @@ class Wallet extends BlockCypherResourceModel
     /**
      * Add Addresses to the Wallet. Associates addresses with the wallet.
      *
-     * @param AddressList $addressesList
+     * @param AddressList $addressList
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return Wallet
      */
-    public function addAddresses($addressesList, $params = array(), $apiContext = null, $restCall = null)
+    public function addAddresses($addressList, $params = array(), $apiContext = null, $restCall = null)
     {
-        ArgumentValidator::validate($addressesList, 'addressesList');
+        ArgumentValidator::validate($addressList, 'addressList');
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array();
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
-        $payLoad = $addressesList->toJSON();
+        $payLoad = $addressList->toJSON();
 
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
@@ -211,25 +211,35 @@ class Wallet extends BlockCypherResourceModel
     /**
      * Remove Addresses to the Wallet. Addresses will no longer be associated with the wallet.
      *
-     * @param AddressList $addressesList
+     * @param AddressList $addressList
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return Wallet
      */
-    public function removeAddresses($addressesList, $params = array(), $apiContext = null, $restCall = null)
+    public function removeAddresses($addressList, $params = array(), $apiContext = null, $restCall = null)
     {
-        ArgumentValidator::validate($addressesList, 'addressesList');
+        ArgumentValidator::validate($addressList, 'addressList');
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array();
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
-        $payLoad = $addressesList->toJSON();
+        // DEPRECATED: Using DELETE Body
+        //$payLoad = $addressList->toJSON();
+
+        $payLoad = '';
+        // Using 'address' url parameter
+        if (!isset($params['address'])) {
+            $params['address'] = implode(';', $addressList->getAddresses());
+        } else {
+            $params['address'] .= ';' . implode(';', $addressList->getAddresses());
+        }
 
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
-            "$chainUrlPrefix/wallets/{$this->name}/addresses?" . http_build_query($params),
+            //"$chainUrlPrefix/wallets/{$this->name}/addresses?" . http_build_query($params), // With DELETE body
+            "$chainUrlPrefix/wallets/{$this->name}/addresses?" . http_build_query($params), // Without DELETE body
             "DELETE",
             $payLoad,
             null,
