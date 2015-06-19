@@ -24,6 +24,14 @@
             <file>tests/sample/Test/Functional/hook-api/GetMultipleWebHooksTest.php</file>
             <file>tests/sample/Test/Functional/hook-api/GetWebHooksTest.php</file>
             <file>tests/sample/Test/Functional/hook-api/ListWebHooksTest.php</file>
+            <!-- payment-api tests must be executed in order -->
+            <file>tests/sample/Test/Functional/hook-api/CreateAndDeleteAllPaymentForwardsTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/CreateAndDeletePaymentForwardTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/CreateAndListPaymentForwardTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/DeleteAllPaymentForwardsTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/GetMultiplePaymentForwardsTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/GetPaymentForwardsTest.php</file>
+            <file>tests/sample/Test/Functional/hook-api/ListPaymentForwardsTest.php</file>
             <!-- wallet-api tests must be executed in order -->
             <file>tests/sample/Test/Functional/wallet-api/CreateWalletTest.php</file>
             <file>tests/sample/Test/Functional/wallet-api/AddAddressesToWalletTest.php</file>

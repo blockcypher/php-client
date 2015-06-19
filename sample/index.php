@@ -898,8 +898,85 @@ if (PHP_SAPI == 'cli') {
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Coming soon!</h5></div>
+                            <div class="col-md-8"><h5>Create payment</h5></div>
                             <div class="col-md-4">
+                                <a href="payment-api/CreatePaymentForward.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/CreatePayment.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Get payment details</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/GetPaymentForward.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/GetPaymentForward.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Get multiple payments at once</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/GetMultiplePaymentForwards.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/GetMultiplePaymentForwards.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>List all payments</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/CreateAndListPaymentForwards.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/CreateAndListPaymentForwards.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Delete payment</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/CreateAndDeletePaymentForward.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/CreateAndDeletePaymentForward.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Delete all payments</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/DeleteAllPaymentForwards.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/DeleteAllPaymentForwards.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
                     </li>
@@ -945,7 +1022,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Get multiple webHooks at once</h5></div>
+                            <div class="col-md-8"><h5>Get multiple webhooks at once</h5></div>
                             <div class="col-md-4">
                                 <a href="hook-api/GetMultipleWebHooks.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
@@ -959,7 +1036,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>List all WebHooks</h5></div>
+                            <div class="col-md-8"><h5>List all webhooks</h5></div>
                             <div class="col-md-4">
                                 <a href="hook-api/CreateAndListWebHooks.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
@@ -973,7 +1050,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Delete WebHook</h5></div>
+                            <div class="col-md-8"><h5>Delete webhook</h5></div>
                             <div class="col-md-4">
                                 <a href="hook-api/CreateAndDeleteWebHook.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
@@ -987,7 +1064,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Delete all WebHook</h5></div>
+                            <div class="col-md-8"><h5>Delete all webhook</h5></div>
                             <div class="col-md-4">
                                 <a href="hook-api/DeleteAllWebHooks.php"
                                    class="btn btn-primary pull-left execute"> Try It <i

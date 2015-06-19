@@ -16,6 +16,7 @@ v1.0.0
 * Get full wallet as full address
 * Allow create, sign and send transactions
 * Added docs site samples for Blockchain API and Address API (without wallets and multisign endpoint)
+* Added Payment API
 
 v1.0.0-beta
 -----------

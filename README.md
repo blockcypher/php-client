@@ -22,8 +22,10 @@ __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP S
 
 ## Prerequisites
 
-   - PHP 5.3 or above
+   - PHP 5.4+
    - [curl](http://php.net/manual/en/book.curl.php), [json](http://php.net/manual/en/book.json.php) & [openssl](http://php.net/manual/en/book.openssl.php) extensions must be enabled
+   - [ext-gmp](http://php.net/manual/en/book.gmp.php)
+   - [ext-mcrypt](http://php.net/manual/es/book.mcrypt.php)
 
 ## More help
    * [Going Live](https://github.com/blockcypher/php-client/wiki/Going-Live)

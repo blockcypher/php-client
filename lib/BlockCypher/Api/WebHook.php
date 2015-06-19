@@ -358,7 +358,7 @@ class WebHook extends BlockCypherResourceModel
      */
     public function setUrl($url)
     {
-        UrlValidator::validate($url, "Url");
+        UrlValidator::validate($url, "url");
         $this->url = $url;
         return $this;
     }
