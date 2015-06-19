@@ -40,7 +40,7 @@ You should see a sample dashboard page as shown below:
 * To run samples itself on console, you need to open command prompt, and direct to samples directory.
 * Execute the sample php script by using `php -f` command as shown below:
 ```bat
-php -f chains/GetChain.php
+php -f .\sample\chain-api\GetChain.php
 ```
 
 The result would be as shown below:
@@ -54,4 +54,5 @@ The sample comes pre-configured with a test account but in case you need to try 
 
 #### More Help
 
-If you are looking for a full fledged application that uses the new RESTful APIs, we are working on it ... :-)
+If you are looking for a full fledged application that uses the new RESTful APIs, we are working on it ... :-) but it's already public:
+https://github.com/blockcypher/php-wallet-sample
