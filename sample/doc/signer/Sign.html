@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>signer\Sign</title></head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="groc-relative-root" content="../">
+<meta name="groc-document-path" content="signer\Sign">
+<meta name="groc-project-path" content="signer\Sign.php">
+<link rel="stylesheet" type="text/css" media="all" href="../assets/style.css">
+<script type="text/javascript" src="../assets/behavior.js"></script>
+<body>
+<div id="meta">
+    <div class="file-path">signer\Sign.php</div>
+</div>
+<div id="document">
+    <div class="segment">
+        <div class="code">
+            <div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><h1 id="sign-hex-data-with-a-private-key">Sign hex data with a private key</h1>
+
+                <p>This sample code demonstrate how you can use the signer included in this library to sign hex data
+                    with a
+                    private key. Private key mus be in the same format as returned by Generate Address Endpoint:
+                    <a href="http://dev.blockcypher.com/?shell#generate-address-endpoint"><a
+                            href="http://dev.blockcypher.com/?shell#generate-address-endpoint">http://dev.blockcypher.com/?shell#generate-address-endpoint</a></a>
+                </p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> .
+                <span class="hljs-string">'/../bootstrap.php'</span>;
+
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span
+                        class="hljs-variable">$_GET</span>[<span class="hljs-string">'tosign'</span>])) {
+                <span class="hljs-variable">$tosign</span> = filter_input(INPUT_GET, <span
+                        class="hljs-string">'tosign'</span>, FILTER_SANITIZE_SPECIAL_CHARS);
+                } <span class="hljs-keyword">else</span> {
+                <span class="hljs-variable">$tosign</span> = <span class="hljs-string">"ed04813b11a47726c3b132a8ec5f067df8390058c463cd14e1e7216ba2f68b08"</span>;
+                <span class="hljs-comment">// Default sample value</span>
+                }
+
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span
+                        class="hljs-variable">$_GET</span>[<span class="hljs-string">'private_key'</span>])) {
+                <span class="hljs-variable">$privateKey</span> = filter_input(INPUT_GET, <span class="hljs-string">'private_key'</span>,
+                FILTER_SANITIZE_SPECIAL_CHARS);
+                } <span class="hljs-keyword">else</span> {
+                <span class="hljs-variable">$privateKey</span> = <span class="hljs-string">"1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e"</span>;
+                <span class="hljs-comment">// Default sample value</span>
+                }
+
+                <span class="hljs-keyword">try</span> {
+                <span class="hljs-variable">$signature</span> = BlockCypher\Crypto\Signer::sign(<span
+                        class="hljs-variable">$tosign</span>, <span class="hljs-variable">$privateKey</span>);
+                } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span
+                        class="hljs-variable">$ex</span>) {
+                ResultPrinter::printError(<span class="hljs-string">"Sign"</span>, <span
+                        class="hljs-string">"toSign"</span>, <span class="hljs-keyword">null</span>, json_encode(<span
+                        class="hljs-variable">$tosign</span>), <span class="hljs-variable">$ex</span>);
+                <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+                }
+
+                ResultPrinter::printResult(<span class="hljs-string">"Sign"</span>, <span
+                        class="hljs-string">"toSign"</span>, <span class="hljs-keyword">null</span>, json_encode(<span
+                        class="hljs-variable">$tosign</span>), json_encode(<span class="hljs-variable">$signature</span>));
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

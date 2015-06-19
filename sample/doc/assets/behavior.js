@@ -972,40 +972,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreateAndDeletePaymentForward",
             "title": "CreateAndDeletePaymentForward"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete PaymentForward Sample",
-                "slug": "delete-paymentforward-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get PaymentForward Instance",
-                    "slug": "get-paymentforward-instance"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Delete PaymentForward",
-                        "slug": "delete-paymentforward"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+            "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1023,40 +990,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreateAndListPaymentForwards",
             "title": "CreateAndListPaymentForwards"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get All PaymentForwards Sample",
-                "slug": "get-all-paymentforwards-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "List PaymentForwards",
-                    "slug": "list-paymentforwards"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Get List of All PaymentForwards",
-                        "slug": "get-list-of-all-paymentforwards"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1074,8 +1008,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreatePaymentEndpoint",
             "title": "CreatePaymentEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1093,18 +1026,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreatePaymentForward",
             "title": "CreatePaymentForward"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create a Forward Payment Sample",
-                "slug": "create-a-forward-payment-sample"
-              },
-              "depth": 1
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1122,40 +1044,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\DeleteAllPaymentForwards",
             "title": "DeleteAllPaymentForwards"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete All PaymentForwards Sample",
-                "slug": "delete-all-paymentforwards-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get All PaymentForwards",
-                    "slug": "get-all-paymentforwards"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Delete PaymentForwards",
-                        "slug": "delete-paymentforwards"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1173,8 +1062,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\DeletePaymentEndpoint",
             "title": "DeletePaymentEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1192,40 +1080,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\GetMultiplePaymentForwards",
             "title": "GetMultiplePaymentForwards"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple PaymentForwards Sample",
-                "slug": "get-multiple-paymentforwards-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get PaymentForward ID.",
-                    "slug": "get-paymentforward-id"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Get Multiple PaymentForwards",
-                        "slug": "get-multiple-paymentforwards"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1243,40 +1098,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\GetPaymentForward",
             "title": "GetPaymentForward"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get PaymentForward Sample",
-                "slug": "get-paymentforward-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get PaymentForward ID.",
-                    "slug": "get-paymentforward-id"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Get PaymentForward",
-                        "slug": "get-paymentforward"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1294,29 +1116,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\ListPaymentForwards",
             "title": "ListPaymentForwards"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get All PaymentForwards Sample",
-                "slug": "get-all-paymentforwards-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Get List of All PaymentForwards",
-                    "slug": "get-list-of-all-paymentforwards"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1334,8 +1134,46 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\ListPaymentsEndpoint",
             "title": "ListPaymentsEndpoint"
           },
+              "depth": 2
+          }
+      ]
+      }, {
+          "type": "folder",
+          "data": {
+              "path": "signer",
+              "title": "signer"
+          },
+          "depth": 1,
+          "children": [
+              {
+                  "type": "file",
+                  "data": {
+                      "language": {
+                          "nameMatchers": [{}, ".fbp"],
+                          "pygmentsLexer": "php",
+                          "singleLineComment": ["//"],
+                          "ignorePrefix": "}",
+                          "foldPrefix": "^",
+                          "name": "PHP"
+                      },
+                      "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\signer\\Sign.php",
+                      "projectPath": "signer\\Sign.php",
+                      "targetPath": "signer\\Sign",
+                      "pageTitle": "signer\\Sign",
+                      "title": "Sign"
+                  },
           "depth": 2,
-          "outline": []
+                  "outline": [
+                      {
+                          "type": "heading",
+                          "data": {
+                              "level": 1,
+                              "title": "Sign hex data with a private key",
+                              "slug": "sign-hex-data-with-a-private-key"
+                          },
+                          "depth": 1
+                      }
+                  ]
         }
       ]
     }, {
@@ -1399,8 +1237,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DataEndpoint",
             "title": "DataEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1418,18 +1255,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\EmbedDataOnBlockchain",
             "title": "EmbedDataOnBlockchain"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Embed Data on Blockchains Sample",
-                "slug": "embed-data-on-blockchains-sample"
-              },
-              "depth": 1
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1441,6 +1267,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetAllUnconfirmedTransactions.php",
+              "projectPath": "transaction-api\\GetAllUnconfirmedTransactions.php",
+              "targetPath": "transaction-api\\GetAllUnconfirmedTransactions",
+              "pageTitle": "transaction-api\\GetAllUnconfirmedTransactions",
+              "title": "GetAllUnconfirmedTransactions"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetMultipleTransactions.php",
             "projectPath": "transaction-api\\GetMultipleTransactions.php",
             "targetPath": "transaction-api\\GetMultipleTransactions",
@@ -1495,35 +1339,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetUnconfirmedTransactions.php",
-            "projectPath": "transaction-api\\GetUnconfirmedTransactions.php",
-            "targetPath": "transaction-api\\GetUnconfirmedTransactions",
-            "pageTitle": "transaction-api\\GetUnconfirmedTransactions",
-            "title": "GetUnconfirmedTransactions"
-          },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Unconfirmed Transactions Sample",
-                "slug": "get-unconfirmed-transactions-sample"
-              },
-              "depth": 1
-            }
-          ]
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [{}, ".fbp"],
-              "pygmentsLexer": "php",
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "PHP"
-            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\NewTransactionEndpoint.php",
             "projectPath": "transaction-api\\NewTransactionEndpoint.php",
             "targetPath": "transaction-api\\NewTransactionEndpoint",
@@ -1566,8 +1381,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\UnconfirmedTransactionsEndpoint",
             "title": "UnconfirmedTransactionsEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }
       ]
     }, {
@@ -1595,7 +1409,40 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWallet",
             "title": "AddAddressesToWallet"
           },
-          "depth": 2
+            "depth": 2,
+            "outline": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 1,
+                        "title": "Add Addresses to Wallet Sample",
+                        "slug": "add-addresses-to-wallet-sample"
+                    },
+                    "depth": 1,
+                    "children": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 2,
+                                "title": "Get Wallet Name.",
+                                "slug": "get-wallet-name"
+                            },
+                            "depth": 2,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 3,
+                                        "title": "Add Addresses to the Wallet",
+                                        "slug": "add-addresses-to-the-wallet"
+                                    },
+                                    "depth": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }, {
           "type": "file",
           "data": {
@@ -1613,7 +1460,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWalletEndpoint",
             "title": "AddAddressesToWalletEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1829,7 +1677,40 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWallet",
             "title": "RemoveAddressesFromWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Remove Addresses from Wallet Sample",
+                          "slug": "remove-addresses-from-wallet-sample"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Get Wallet Name and Add Addresses.",
+                                  "slug": "get-wallet-name-and-add-addresses"
+                              },
+                              "depth": 2,
+                              "children": [
+                                  {
+                                      "type": "heading",
+                                      "data": {
+                                          "level": 3,
+                                          "title": "Remove Addresses from the Wallet",
+                                          "slug": "remove-addresses-from-the-wallet"
+                                      },
+                                      "depth": 3
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -1847,7 +1728,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWalletEndpoint",
             "title": "RemoveAddressesFromWalletEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
