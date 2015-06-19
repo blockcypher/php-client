@@ -110,7 +110,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The height of the block is the distance from the root of the chain, the genesis block at height = 0.
+     * The height of the block in the blockchain; i.e., there are height earlier blocks in its blockchain.
      *
      * @return int
      */
@@ -120,7 +120,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The height of the block is the distance from the root of the chain, the genesis block at height = 0.
+     * The height of the block in the blockchain; i.e., there are height earlier blocks in its blockchain.
      *
      * @param int $height
      * @return $this
@@ -132,7 +132,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The name of the chain the block is from.
+     * The name of the blockchain represented, in the form of $COIN.$CHAIN
      *
      * @return string
      */
@@ -142,7 +142,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The name of the chain the block is from.
+     * The name of the blockchain represented, in the form of $COIN.$CHAIN
      *
      * @param string $chain
      * @return $this
@@ -154,7 +154,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The total amount in satoshis transacted in this block. Divide by 10^8 to obtain the number of bitcoins.
+     * The total number of satoshis transacted in this block.
      *
      * @return int
      */
@@ -164,7 +164,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The total amount in satoshis transacted in this block. Divide by 10^8 to obtain the number of bitcoins.
+     * The total number of satoshis transacted in this block.
      *
      * @param int $total
      * @return $this
@@ -176,7 +176,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Amount of fees, in satoshis, collected by miners on this block.
+     * The total number of fees—in satoshis—collected by miners in this block.
      *
      * @return int
      */
@@ -186,7 +186,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Amount of fees, in satoshis, collected by miners on this block.
+     * The total number of fees—in satoshis—collected by miners in this block.
      *
      * @param int $fees
      * @return $this
@@ -198,6 +198,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
+     * Block version. In Bitcoin, per BIP34 the last version 1 block was at height 227835.
+     *
      * @return int
      */
     public function getVer()
@@ -206,6 +208,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
+     * Block version. In Bitcoin, per BIP34 the last version 1 block was at height 227835.
+     *
      * @param int $ver
      * @return $this
      */
@@ -216,7 +220,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Recorded time at which the block was built. (Note: miners rarely post accurate clock times).
+     * Recorded time at which block was built. Note: Miners rarely post accurate clock times.
      *
      * @return string
      */
@@ -226,7 +230,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Recorded time at which the block was built. (Note: miners rarely post accurate clock times).
+     * Recorded time at which block was built. Note: Miners rarely post accurate clock times.
      *
      * @param string $time
      * @return $this
@@ -238,7 +242,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The time BlockCypher's servers receive the block. Our servers' time is continuously adjusted and accurate.
+     * The time BlockCypher’s servers receive the block. Our servers’ clock is continuously adjusted and accurate.
      *
      * @return string
      */
@@ -248,7 +252,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The time BlockCypher's servers receive the block. Our servers' time is continuously adjusted and accurate.
+     * The time BlockCypher’s servers receive the block. Our servers’ clock is continuously adjusted and accurate.
      *
      * @param string $received_time
      * @return $this
@@ -260,7 +264,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The block-encoded difficulty target, for more information see https://en.bitcoin.it/wiki/Difficulty
+     * The block-encoded difficulty target.
      *
      * @return int
      */
@@ -270,7 +274,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The block-encoded difficulty target, for more information see https://en.bitcoin.it/wiki/Difficulty
+     * The block-encoded difficulty target.
      *
      * @param int $bits
      * @return $this
@@ -282,7 +286,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Number used to generate this block. Incremented by miners to allow variation in the header (and hence its hash).
+     * The number used by a miner to generate this block.
      *
      * @return int
      */
@@ -292,7 +296,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Number used to generate this block. Incremented by miners to allow variation in the header (and hence its hash).
+     * The number used by a miner to generate this block.
      *
      * @param int $nonce
      * @return $this
@@ -348,7 +352,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * TODO: not documented in API reference site.
+     * The Merkle root of this block.
+     * https://bitcoin.stackexchange.com/questions/10479/what-is-the-merkle-root
      *
      * @return string
      */
@@ -358,7 +363,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * TODO: not documented in API reference site.
+     * The Merkle root of this block.
+     * https://bitcoin.stackexchange.com/questions/10479/what-is-the-merkle-root
      *
      * @param string $mrkl_root
      * @return $this
@@ -370,8 +376,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Array of transaction hashes included in this block. By default, we only return the 20 first transactions.
-     * To obtain more, use the next_txids URL or the txstart and limit url query string parameters.
+     * An array of transaction hashes in this block. By default, only 20 are included.
      *
      * @return \string[]
      */
@@ -381,8 +386,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Array of transaction hashes included in this block. By default, we only return the 20 first transactions.
-     * To obtain more, use the next_txids URL or the txstart and limit url query string parameters.
+     * An array of transaction hashes in this block. By default, only 20 are included.
      *
      * @param \string[] $txids
      * @return $this
@@ -394,7 +398,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The depth is the distance from the latest block in the chain, or how many blocks have been found after this one.
+     * The depth of the block in the blockchain; i.e., there are depth later blocks in its blockchain.
      *
      * @return int
      */
@@ -404,7 +408,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * The depth is the distance from the latest block in the chain, or how many blocks have been found after this one.
+     * The depth of the block in the blockchain; i.e., there are depth later blocks in its blockchain.
      *
      * @param int $depth
      * @return $this
@@ -416,7 +420,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * URL for the previous block's details.
+     * The BlockCypher URL to query for more information on the previous block.
      *
      * @return string
      */
@@ -426,7 +430,7 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * URL for the previous block's details.
+     * The BlockCypher URL to query for more information on the previous block.
      *
      * @param string $prev_block_url
      * @return $this
@@ -438,7 +442,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
+     * The base BlockCypher URL to receive transaction details. To get more details about specific transactions,
+     * you must concatenate this URL with the desired transaction hash(es).
      *
      * @return string
      */
@@ -448,7 +453,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * To retrieve base URL transactions. To get the full URL, concatenate this URL with the transaction's hash.
+     * The base BlockCypher URL to receive transaction details. To get more details about specific transactions,
+     * you must concatenate this URL with the desired transaction hash(es).
      *
      * @param string $tx_url
      * @return $this
@@ -460,7 +466,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * URL to get the same block information with the next 20 transactions.
+     * Optional If there are more transactions that couldn’t fit in the txids array,
+     * this is the BlockCypher URL to query the next set of transactions (within a Block object).
      *
      * @return string
      */
@@ -470,7 +477,8 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * URL to get the same block information with the next 20 transactions.
+     * Optional If there are more transactions that couldn’t fit in the txids array,
+     * this is the BlockCypher URL to query the next set of transactions (within a Block object).
      *
      * @param string $next_txids
      * @return $this
@@ -482,7 +490,17 @@ class Block extends BlockCypherResourceModel
     }
 
     /**
-     * Block hash. Can be used as a unique identifier.
+     * The hash of the block; in Bitcoin, the hashing function is SHA256(SHA256(block))
+     *
+     * @return string
+     */
+    public function getHash()
+    {
+        return $this->hash;
+    }
+
+    /**
+     * The hash of the block; in Bitcoin, the hashing function is SHA256(SHA256(block))
      *
      * @param $hash
      * @return $this
@@ -491,15 +509,5 @@ class Block extends BlockCypherResourceModel
     {
         $this->hash = $hash;
         return $this;
-    }
-
-    /**
-     * Block hash. Can be used as a unique identifier.
-     *
-     * @return string
-     */
-    public function getHash()
-    {
-        return $this->hash;
     }
 }
