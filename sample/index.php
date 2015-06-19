@@ -235,6 +235,7 @@ if (PHP_SAPI == 'cli') {
                     <li><a href="#payment-api">Payment Forwarding</a></li>
                     <li><a href="#hook-api">Events adn Hooks</a></li>
                     <li><a href="#testing">Testing</a></li>
+                    <li><a href="#signer">Signer</a></li>
                 </ul>
 
             </div>
@@ -1117,7 +1118,30 @@ if (PHP_SAPI == 'cli') {
                         </div>
                     </li>
                 </ul>
+            </div>
 
+            <!-- signer -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 id="testing" class="panel-title">Signer</h3>
+                </div>
+                <!-- List group -->
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Sign hex data with private key (using Signer class)</h5></div>
+                            <div class="col-md-4">
+                                <a href="signer/Sign.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/introduction/Sign.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
