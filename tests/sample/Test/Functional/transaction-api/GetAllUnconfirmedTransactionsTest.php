@@ -5,10 +5,10 @@ namespace sample\Test\Functional\transaction;
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GetUnconfirmedTransactionsTest
+ * Class GetAllUnconfirmedTransactionsTest
  * @package sample\Test\Functional\transaction
  */
-class GetUnconfirmedTransactionsTest extends WebTestCase
+class GetAllUnconfirmedTransactionsTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GetUnconfirmedTransactionsTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGetUnconfirmedTransactions()
+    public function testAllGetUnconfirmedTransactions()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();
