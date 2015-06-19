@@ -17,11 +17,11 @@ $apiContext = ApiContext::create(
 );
 
 // List of addresses to be removed from the wallet
-$addressesList = AddressList::fromAddressesArray(array(
+$addressList = AddressList::fromAddressesArray(array(
     "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
 ));
 
 $wallet = Wallet::get('alice', array(), $apiContext);
-$wallet->removeAddresses($addressesList, array(), $apiContext);
+$wallet->removeAddresses($addressList, array(), $apiContext);
 
-ResultPrinter::printResult("Remove Addresses From Wallet Endpoint", "Wallet", 'alice', $addressesList, $wallet);
+ResultPrinter::printResult("Remove Addresses From Wallet Endpoint", "Wallet", 'alice', $addressList, $wallet);

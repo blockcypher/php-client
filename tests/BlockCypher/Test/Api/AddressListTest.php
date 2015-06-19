@@ -80,10 +80,10 @@ class AddressListTest extends ResourceModelTestCase
 
     public function testFromAddressesArray()
     {
-        $addressesList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
+        $addressList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
             "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
         ));
 
-        $this->assertEquals(array("13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"), $addressesList->getAddresses());
+        $this->assertEquals(array("13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"), $addressList->getAddresses());
     }
 }

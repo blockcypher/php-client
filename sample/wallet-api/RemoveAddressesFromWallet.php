@@ -21,7 +21,7 @@ if (isset($_GET['wallet_name'])) {
 }
 
 // List of addresses to be removed from the wallet
-$addressesList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
+$addressList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
     "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
 ));
 
@@ -30,12 +30,12 @@ try {
     // Get Wallet
     $wallet = \BlockCypher\Api\Wallet::get($walletName, array(), $apiContexts['BTC.main']);
     // Remove addresses
-    $output = $wallet->removeAddresses($addressesList, array(), $apiContexts['BTC.main']);
+    $output = $wallet->removeAddresses($addressList, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Remove Addresses from a Wallet", "Wallet", $walletName, $addressesList, $ex);
+    ResultPrinter::printError("Remove Addresses from a Wallet", "Wallet", $walletName, $addressList, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Remove Addresses from a Wallet", "Wallet", $walletName, $addressesList, $output);
+ResultPrinter::printResult("Remove Addresses from a Wallet", "Wallet", $walletName, $addressList, $output);
 
 return $output;

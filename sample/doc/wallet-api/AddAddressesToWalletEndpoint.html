@@ -13,9 +13,9 @@ php -f .\sample\wallet-api\AddAddressesToWalletEndpoint.php</p></div></div><div 
 );
 
 <span class="hljs-variable">$wallet</span> = Wallet::get(<span class="hljs-string">'alice'</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContext</span>);
-<span class="hljs-variable">$addressesList</span> = AddressList::fromAddressesArray(<span class="hljs-keyword">array</span>(
+<span class="hljs-variable">$addressList</span> = AddressList::fromAddressesArray(<span class="hljs-keyword">array</span>(
     <span class="hljs-string">"13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"</span>
 ));
-<span class="hljs-variable">$wallet</span>-&gt;addAddresses(<span class="hljs-variable">$addressesList</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContext</span>);
+<span class="hljs-variable">$wallet</span>-&gt;addAddresses(<span class="hljs-variable">$addressList</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContext</span>);
 
-ResultPrinter::printResult(<span class="hljs-string">"Add Addresses to a Wallet Endpoint"</span>, <span class="hljs-string">"Wallet"</span>, <span class="hljs-string">'alice'</span>, <span class="hljs-variable">$addressesList</span>, <span class="hljs-variable">$wallet</span>);</div></div></div></div></body></html>
+ResultPrinter::printResult(<span class="hljs-string">"Add Addresses to a Wallet Endpoint"</span>, <span class="hljs-string">"Wallet"</span>, <span class="hljs-string">'alice'</span>, <span class="hljs-variable">$addressList</span>, <span class="hljs-variable">$wallet</span>);</div></div></div></div></body></html>

@@ -25,9 +25,9 @@ class AddressList extends BlockCypherBaseModel
     public static function fromAddressesArray($addresses)
     {
         ArgumentArrayValidator::validate($addresses, 'addresses');
-        $addressesList = new self();
-        $addressesList->setAddresses($addresses);
-        return $addressesList;
+        $addressList = new self();
+        $addressList->setAddresses($addresses);
+        return $addressList;
     }
 
     /**

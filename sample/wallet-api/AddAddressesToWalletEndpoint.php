@@ -17,9 +17,9 @@ $apiContext = ApiContext::create(
 );
 
 $wallet = Wallet::get('alice', array(), $apiContext);
-$addressesList = AddressList::fromAddressesArray(array(
+$addressList = AddressList::fromAddressesArray(array(
     "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
 ));
-$wallet->addAddresses($addressesList, array(), $apiContext);
+$wallet->addAddresses($addressList, array(), $apiContext);
 
-ResultPrinter::printResult("Add Addresses to a Wallet Endpoint", "Wallet", 'alice', $addressesList, $wallet);
+ResultPrinter::printResult("Add Addresses to a Wallet Endpoint", "Wallet", 'alice', $addressList, $wallet);

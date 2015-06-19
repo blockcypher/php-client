@@ -162,19 +162,19 @@ class WalletTest extends ResourceModelTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $addressesList = AddressListTest::getObject();
+        $addressList = AddressListTest::getObject();
 
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                self::getJson(array_merge(self::addresses(), $addressesList->getAddresses()))
+                self::getJson(array_merge(self::addresses(), $addressList->getAddresses()))
             ));
 
        /** @noinspection PhpParamsInspection */
-        $result = $obj->addAddresses($addressesList, array(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->addAddresses($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
 
         $this->assertNotNull($result);
-        $this->assertArraySubset($addressesList->getAddresses(), $result->getAddresses());
+        $this->assertArraySubset($addressList->getAddresses(), $result->getAddresses());
     }
 
     /**
@@ -188,19 +188,19 @@ class WalletTest extends ResourceModelTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $addressesList = AddressListTest::getObject();
+        $addressList = AddressListTest::getObject();
 
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                self::getJson(array_diff(self::addresses(), $addressesList->getAddresses()))
+                self::getJson(array_diff(self::addresses(), $addressList->getAddresses()))
             ));
 
         /** @noinspection PhpParamsInspection */
-        $result = $obj->addAddresses($addressesList, array(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->addAddresses($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
 
         $this->assertNotNull($result);
-        $this->assertNotContains($addressesList->getAddresses(), $result->getAddresses());
+        $this->assertNotContains($addressList->getAddresses(), $result->getAddresses());
     }
 
     /**
