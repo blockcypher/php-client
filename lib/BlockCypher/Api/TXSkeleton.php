@@ -2,15 +2,9 @@
 
 namespace BlockCypher\Api;
 
-use BitWasp\Bitcoin\Bitcoin;
-use BitWasp\Bitcoin\Crypto\EcAdapter\EcAdapterInterface;
-use BitWasp\Bitcoin\Crypto\Random\Rfc6979;
-use BitWasp\Bitcoin\Network\NetworkFactory;
-use BitWasp\Bitcoin\Signature\SignatureInterface;
-use BitWasp\Buffertools\Buffer;
 use BlockCypher\Common\BlockCypherResourceModel;
-use BlockCypher\Crypto\PrivateKey;
 use BlockCypher\Crypto\PrivateKeyList;
+use BlockCypher\Crypto\Signer;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 
@@ -79,18 +73,15 @@ class TXSkeleton extends BlockCypherResourceModel
         //echo "coinSymbol: $coinSymbol<br/>";
         //die();
 
-        $network = $this->getNetwork($coinSymbol);
-        $ecAdapter = Bitcoin::getEcAdapter();
-
         // Create PrivateKey objects from plain hex private keys
-        $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $ecAdapter, $network);
+        $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $coinSymbol);
 
         // DEBUG
         //echo "privateKeyList: <br/>";
         //var_dump($privateKeyList);
 
         // Generate signatures
-        $signatures = $this->generateSignatures($addresses, $tosign, $privateKeyList, $ecAdapter);
+        $signatures = $this->generateSignatures($addresses, $tosign, $privateKeyList);
         $this->setSignatures($signatures);
 
         // DEBUG
@@ -140,35 +131,13 @@ class TXSkeleton extends BlockCypherResourceModel
     }
 
     /**
-     * @param $coinSymbol
-     * @return \BitWasp\Bitcoin\Network\Network
-     * @throws \Exception
-     */
-    private function getNetwork($coinSymbol)
-    {
-        switch ($coinSymbol) {
-            case 'btc':
-                $network = NetworkFactory::bitcoin();
-                break;
-            case 'btc-testnet':
-                $network = NetworkFactory::bitcoinTestnet();
-                break;
-            // TODO: add all supported blockchains http://dev.blockcypher.com/?shell#restful-resources
-            default:
-                throw new \Exception("Unsupported coin symbol: $coinSymbol");
-        }
-        return $network;
-    }
-
-    /**
      * @param string[] $addresses
      * @param string[] $tosign
      * @param PrivateKeyList $privateKeyList
-     * @param EcAdapterInterface $ecAdapter
      * @return \string[]
      * @throws \Exception
      */
-    private function generateSignatures($addresses, $tosign, $privateKeyList, $ecAdapter)
+    private function generateSignatures($addresses, $tosign, $privateKeyList)
     {
         $index = 0;
         $signatures = array();
@@ -183,43 +152,20 @@ class TXSkeleton extends BlockCypherResourceModel
 
             $privateKey = $privateKeyList->getKey($address);
 
-            $sig = $this->signHexDataDeterministically($hexDataToSign, $privateKey, $ecAdapter);
-
-            $signatures[] = $sig->getHex();
+            $sig = Signer::sign($hexDataToSign, $privateKey);
 
             // DEBUG
             //echo "sig: <br/>";
-            //var_dump($sig->getHex());
+            //var_dump($sig);
+
+            $signatures[] = $sig;
+
+            // DEBUG
+            //echo "sig: <br/>";
+            //var_dump($sig);
         }
 
         return $signatures;
-    }
-
-    /**
-     * Sign hex data deterministically using deterministic k.
-     *
-     * @param string $hexDataToSign
-     * @param PrivateKey $privateKey
-     * @param EcAdapterInterface $ecAdapter
-     * @return SignatureInterface
-     */
-    private function signHexDataDeterministically($hexDataToSign, $privateKey, $ecAdapter)
-    {
-        // Convert hex data to buffer
-        $data = Buffer::hex($hexDataToSign);
-
-        // Deterministic digital signature generation
-        $k = new Rfc6979($ecAdapter, $privateKey, $data, 'sha256');
-
-        $sig = $ecAdapter->sign($data, $privateKey, $k);
-
-        // DEBUG: signer command (shell command)
-        //echo "hexDataToSign: <br/>";
-        //var_dump($hexDataToSign);
-        //echo "sig: <br/>";
-        //var_dump($sig->getHex());
-
-        return $sig;
     }
 
     /**

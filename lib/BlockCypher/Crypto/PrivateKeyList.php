@@ -2,6 +2,7 @@
 
 namespace BlockCypher\Crypto;
 
+use BitWasp\Bitcoin\Bitcoin;
 use BitWasp\Bitcoin\Key\PrivateKeyFactory;
 
 /**
@@ -25,12 +26,14 @@ class PrivateKeyList
 
     /**
      * @param string[] $hexPrivateKeys
-     * @param $ecAdapter
-     * @param $network
+     * @param string
      * @return PrivateKeyList
      */
-    public static function fromHexPrivateKeyArray($hexPrivateKeys, $ecAdapter, $network)
+    public static function fromHexPrivateKeyArray($hexPrivateKeys, $coinSymbol)
     {
+        $network = CoinSymbolNetworkMapping::getNetwork($coinSymbol);
+        $ecAdapter = Bitcoin::getEcAdapter();
+
         $privateKeyList = array();
         foreach ($hexPrivateKeys as $hexPrivateKey) {
 
