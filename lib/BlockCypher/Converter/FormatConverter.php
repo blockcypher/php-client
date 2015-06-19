@@ -31,17 +31,12 @@ class FormatConverter
     {
         $decimals = 2;
         $currencyDecimals = array(
-            'BTC' => 8,
-            'DOGE' => 8,
-            'LTC' => 8,
-            'URO' => 8,
-            'BCY' => 8,
             'JPY' => 0,
             'TWD' => 0
         );
         if ($currency && array_key_exists($currency, $currencyDecimals)) {
             if (strpos($value, ".") !== false && (floor($value) != $value)) {
-                //throw exception if it has decimal values for JPY, TWD, BTC and other virtual currencies which do not end with .00
+                //throw exception if it has decimal values for JPY, TWD and other virtual currencies which do not end with .00
                 throw new \InvalidArgumentException("value cannot have decimals for $currency currency");
             }
             $decimals = $currencyDecimals[$currency];
