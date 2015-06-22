@@ -21,7 +21,6 @@
     "php": ">=5.4.0",
     "ext-curl": "*",
     "ext-json": "*",
-    "ext-gmp": "*",
     "bitwasp/bitcoin": "0.0.*"
   },
   "require-dev": {
