@@ -31,20 +31,20 @@ class TXInputTest extends ResourceModelTestCase
     {
         /*
         {
-            "prev_hash": "583910b7bf90ab802e22e5c25a89b59862b20c8c1aeb24dfb94e7a508a70f121",
-            "output_index": 1,
-            "script": "4830450220504b1ccfddf508422bdd8b0fcda2b1483e87aee1b486c0130bc29226bbce3b4e022100b5befcfcf0d3bf6ebf0ac2f93badb19e3042c7bed456c398e743b885e782466c012103b1feb40b99e8ff18469484a50e8b52cc478d5f4f773a341fbd920a4ceaedd4bf",
-            "output_value": 16450000,
+            "prev_hash": "c719e0c52f63d9afbb72b00324499c0510672fa63c205db982188161ee3f105c",
+            "output_index": 0,
+            "script": "4830450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b01210274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf",
+            "output_value": 50000,
             "sequence": 4294967295,
             "addresses": [
-              "1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq"
+              "n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"
             ],
             "script_type": "pay-to-pubkey-hash",
             "error": "",
             "errors": []
         }
         */
-        return '{"prev_hash":"583910b7bf90ab802e22e5c25a89b59862b20c8c1aeb24dfb94e7a508a70f121","output_index":1,"script":"4830450220504b1ccfddf508422bdd8b0fcda2b1483e87aee1b486c0130bc29226bbce3b4e022100b5befcfcf0d3bf6ebf0ac2f93badb19e3042c7bed456c398e743b885e782466c012103b1feb40b99e8ff18469484a50e8b52cc478d5f4f773a341fbd920a4ceaedd4bf","output_value":16450000,"sequence":4294967295,"addresses":["1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq"],"script_type":"pay-to-pubkey-hash","error":"","errors":[]}';
+        return '{"prev_hash":"c719e0c52f63d9afbb72b00324499c0510672fa63c205db982188161ee3f105c","output_index":0,"script":"4830450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b01210274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf","output_value":50000,"sequence":4294967295,"addresses":["n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"],"script_type":"pay-to-pubkey-hash","error":"","errors":[]}';
     }
 
     /**
@@ -76,15 +76,15 @@ class TXInputTest extends ResourceModelTestCase
      */
     public function testGetters($obj)
     {
-        $this->assertEquals($obj->getPrevHash(), "583910b7bf90ab802e22e5c25a89b59862b20c8c1aeb24dfb94e7a508a70f121");
-        $this->assertEquals($obj->getOutputIndex(), 1);
+        $this->assertEquals($obj->getPrevHash(), "c719e0c52f63d9afbb72b00324499c0510672fa63c205db982188161ee3f105c");
+        $this->assertEquals($obj->getOutputIndex(), 0);
         /** @noinspection SpellCheckingInspection */
-        $this->assertEquals($obj->getScript(), "4830450220504b1ccfddf508422bdd8b0fcda2b1483e87aee1b486c0130bc29226bbce3b4e022100b5befcfcf0d3bf6ebf0ac2f93badb19e3042c7bed456c398e743b885e782466c012103b1feb40b99e8ff18469484a50e8b52cc478d5f4f773a341fbd920a4ceaedd4bf");
-        $this->assertEquals($obj->getOutputValue(), 16450000);
+        $this->assertEquals($obj->getScript(), "4830450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b01210274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf");
+        $this->assertEquals($obj->getOutputValue(), 50000);
         // TODO: only present for unconfirmed transactions
         //$this->assertEquals($obj->getAge(), "14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e");
         $this->assertEquals($obj->getSequence(), 4294967295);
-        $this->assertEquals($obj->getAddresses(), array("1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq"));
+        $this->assertEquals($obj->getAddresses(), array("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"));
         $this->assertEquals($obj->getScriptType(), "pay-to-pubkey-hash");
     }
 }

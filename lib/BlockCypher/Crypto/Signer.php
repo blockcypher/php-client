@@ -16,6 +16,26 @@ use BitWasp\Buffertools\Buffer;
 class Signer
 {
     /**
+     * Sign array of hex data deterministically using deterministic k.
+     *
+     * @param string[] $hexDataToSign
+     * @param PrivateKeyInterface|string $privateKey
+     * @return string[]
+     */
+    public static function signMultiple($hexDataToSign, $privateKey)
+    {
+        if (!is_array($hexDataToSign)) {
+            throw new \InvalidArgumentException("Signer::signMultiple, param hexDataToSign must be an array");
+        }
+
+        $signatures = array();
+        foreach ($hexDataToSign as $tosign) {
+            $signatures[] = self::sign($tosign, $privateKey);
+        }
+        return $signatures;
+    }
+
+    /**
      * Sign hex data deterministically using deterministic k.
      *
      * @param string $hexDataToSign
@@ -25,8 +45,7 @@ class Signer
     public static function sign($hexDataToSign, $privateKey)
     {
         if (is_string($privateKey)) {
-            // privateKey is hex string -> convert to object
-            $privateKey = self::fromHexPrivateKey($privateKey);
+            $privateKey = self::importPrivateKey($privateKey);
         }
 
         // Convert hex data to buffer
@@ -50,17 +69,61 @@ class Signer
     }
 
     /**
+     * @param string $plainPrivateKey
+     * @return PrivateKeyInterface
+     */
+    public static function importPrivateKey($plainPrivateKey)
+    {
+        $privateKey = null;
+        $extraMsg = '';
+
+        // TODO: Code Review. Method to detect private key format.
+
+        if ($privateKey === null) {
+            try {
+                $privateKey = PrivateKeyFactory::fromWif($plainPrivateKey);
+            } catch (\Exception $e) {
+                $extraMsg .= " Error trying to import from Wif: " . $e->getMessage();
+            }
+        }
+
+        if ($privateKey === null) {
+            try {
+                $privateKey = PrivateKeyFactory::fromHex($plainPrivateKey);
+            } catch (\Exception $e) {
+                $extraMsg .= " Error trying to import from Hex: " . $e->getMessage();
+            }
+        }
+
+        if ($privateKey === null) {
+            throw new \InvalidArgumentException("Invalid private key format. " . $extraMsg);
+        }
+
+        return $privateKey;
+    }
+
+    /**
      * @param string $hexPrivateKey
      * @return PrivateKeyInterface
      * @throws \Exception
      */
-    public static function fromHexPrivateKey($hexPrivateKey)
+    public static function importPrivateKeyFromHex($hexPrivateKey)
     {
-        $ecAdapter = Bitcoin::getEcAdapter();
-
         // Import from compressed private key
         $compressed = true;
-        $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed, $ecAdapter);
+        $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed);
+
+        return $privateKey;
+    }
+
+    /**
+     * @param string $wifPrivateKey
+     * @return PrivateKeyInterface
+     * @throws \Exception
+     */
+    public static function importPrivateKeyFromWif($wifPrivateKey)
+    {
+        $privateKey = PrivateKeyFactory::fromWif($wifPrivateKey);
 
         return $privateKey;
     }

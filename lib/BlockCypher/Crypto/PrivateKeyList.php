@@ -4,6 +4,8 @@ namespace BlockCypher\Crypto;
 
 use BitWasp\Bitcoin\Bitcoin;
 use BitWasp\Bitcoin\Key\PrivateKeyFactory;
+use BlockCypher\Validation\ArgumentArrayValidator;
+use BlockCypher\Validation\CoinSymbolValidator;
 
 /**
  * Class PrivateKeyList
@@ -31,6 +33,9 @@ class PrivateKeyList
      */
     public static function fromHexPrivateKeyArray($hexPrivateKeys, $coinSymbol)
     {
+        ArgumentArrayValidator::validate($hexPrivateKeys, 'hexPrivateKeys');
+        CoinSymbolValidator::validate($coinSymbol, 'coinSymbol');
+
         $network = CoinSymbolNetworkMapping::getNetwork($coinSymbol);
         $ecAdapter = Bitcoin::getEcAdapter();
 

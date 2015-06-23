@@ -854,8 +854,67 @@ if (PHP_SAPI == 'cli') {
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Coming soon!</h5></div>
+                            <div class="col-md-8"><h5>Create microtransaction via private keys</h5></div>
                             <div class="col-md-4">
+                                <a href="microtransaction-api/CreateMicroTransactionViaPrivateKey.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/microtransaction-api/CreateMicroTransactionViaPrivateKey.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Create microtransaction via public keys and client-side
+                                    signing</h5></div>
+                            <div class="col-md-4">
+                                <a href="microtransaction-api/CreateMicroTransactionViaPublicKey.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/microtransaction-api/CreateMicroTransactionViaPublicKey.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Create, sign and send (short version)</h5></div>
+                            <div class="col-md-4">
+                                <a href="microtransaction-api/CreateSignAndSendMicroTransaction.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/microtransaction-api/CreateSignAndSendMicroTransaction.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Create, sign and send (short version with WIF private key)</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="microtransaction-api/CreateSignWithWifAndSendMicroTransaction.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/microtransaction-api/CreateSignWithWifAndSendMicroTransaction.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
                     </li>
@@ -1123,7 +1182,7 @@ if (PHP_SAPI == 'cli') {
             <!-- signer -->
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 id="testing" class="panel-title">Signer</h3>
+                    <h3 id="signer" class="panel-title">Signer</h3>
                 </div>
                 <!-- List group -->
                 <ul class="list-group">

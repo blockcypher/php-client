@@ -12,12 +12,22 @@ use BlockCypher\Api\TXSkeleton;
 class TXSkeletonTest extends ResourceModelTestCase
 {
     /**
-     * Gets Object Instance with Json data filled in
+     * Tests for Serialization and Deserialization Issues
      * @return TXSkeleton
      */
-    public static function getObject()
+    public function testSerializationDeserialization()
     {
-        return new TXSkeleton(self::getJson());
+        $obj = new TXSkeleton(self::getJson());
+
+        $this->assertNotNull($obj);
+        $this->assertNotNull($obj->getTx());
+        $this->assertNotNull($obj->getTosign());
+        $this->assertNotNull($obj->getSignatures());
+        $this->assertNotNull($obj->getPubkeys());
+
+        $this->assertEquals(self::getJson(), $obj->toJson());
+
+        return $obj;
     }
 
     /**
@@ -95,27 +105,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         */
 
         $tx = TXTest::getJson();
-
         return '{"tx":' . $tx . ',"tosign":["7e6a71a683f303b6a659daa8009c81c47edd2b14f59b938cb31f8ef2a3e129f5"],"signatures":["30450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b"],"pubkeys":["0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf"],"error":"","errors":[]}';
-    }
-
-    /**
-     * Tests for Serialization and Deserialization Issues
-     * @return TXSkeleton
-     */
-    public function testSerializationDeserialization()
-    {
-        $obj = new TXSkeleton(self::getJson());
-
-        $this->assertNotNull($obj);
-        $this->assertNotNull($obj->getTx());
-        $this->assertNotNull($obj->getTosign());
-        $this->assertNotNull($obj->getSignatures());
-        $this->assertNotNull($obj->getPubkeys());
-
-        $this->assertEquals(self::getJson(), $obj->toJson());
-
-        return $obj;
     }
 
     /**
@@ -128,5 +118,75 @@ class TXSkeletonTest extends ResourceModelTestCase
         $this->assertEquals($obj->getTosign(), array("7e6a71a683f303b6a659daa8009c81c47edd2b14f59b938cb31f8ef2a3e129f5"));
         $this->assertEquals($obj->getSignatures(), array("30450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b"));
         $this->assertEquals($obj->getPubkeys(), array("0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf"));
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param TXSkeleton $obj
+     */
+    public function testCreate($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                self::getJson()
+            ));
+
+        $result = $obj->create($mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param TXSkeleton $obj
+     */
+    public function testSend($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                self::getJson()
+            ));
+
+        $result = $obj->send($mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+    }
+
+    public function testSign()
+    {
+        $obj = static::getObject();
+
+        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
+            ->disableOriginalConstructor()
+            ->setMethods(array('getCoinSymbol'))
+            ->getMock();
+
+        $mockApiContext->expects($this->once())
+            ->method('getCoinSymbol')
+            ->will($this->returnValue("btc-testnet"));
+
+        $hexPrivateKey = "1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e";
+        $expectedSignatures = array("30450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b");
+
+        /** @noinspection PhpParamsInspection */
+        $obj->sign($hexPrivateKey, $mockApiContext);
+        $this->assertEquals($expectedSignatures, $obj->getSignatures());
+    }
+
+    /**
+     * Gets Object Instance with Json data filled in
+     * @return TXSkeleton
+     */
+    public static function getObject()
+    {
+        return new TXSkeleton(self::getJson());
     }
 }

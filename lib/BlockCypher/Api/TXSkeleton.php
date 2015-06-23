@@ -24,11 +24,36 @@ use BlockCypher\Transport\BlockCypherRestCall;
 class TXSkeleton extends BlockCypherResourceModel
 {
     /**
-     * Send the transaction to the network.
+     * Create a new TX.
      *
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return TXSkeleton
+     */
+    public function create($apiContext = null, $restCall = null)
+    {
+        $payLoad = $this->toJSON();
+
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs/new",
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $this->fromJson($json);
+        return $this;
+    }
+
+    /**
+     * Send the transaction to the network.
+     *
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return $this
      */
     public function send($apiContext = null, $restCall = null)
     {
@@ -51,10 +76,15 @@ class TXSkeleton extends BlockCypherResourceModel
     /**
      * @param string[]|string $privateKeys
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @return $this
      * @throws \Exception
      */
     public function sign($privateKeys, $apiContext = null)
     {
+        if (is_string($privateKeys)) {
+            $privateKeys = array($privateKeys);
+        }
+
         $addresses = $this->getInputsAddresses();
         $tosign = $this->getTosign();
 
@@ -95,6 +125,8 @@ class TXSkeleton extends BlockCypherResourceModel
         // DEBUG
         //echo "pubkeys: <br/>";
         //var_dump($pubkeys);
+
+        return $this;
     }
 
     /**
@@ -147,6 +179,10 @@ class TXSkeleton extends BlockCypherResourceModel
             $hexDataToSign = $tosign[$index++];
 
             if (!$privateKeyList->keyExists($address)) {
+
+                // DEBUG
+                //var_dump($privateKeyList);
+
                 throw new \Exception("Missing private key from address $address");
             }
 

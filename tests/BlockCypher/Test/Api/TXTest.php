@@ -5,7 +5,7 @@ namespace BlockCypher\Test\Api;
 use BlockCypher\Api\TX;
 
 /**
- * Class TX
+ * Class TXTest
  *
  * @package BlockCypher\Test\Api
  */
@@ -151,8 +151,11 @@ class TXTest extends ResourceModelTestCase
         }
         */
 
+        $inputs = TXInputTest::getJson();
+        $outputs = TXOutputTest::getJson();
+
         /** @noinspection SpellCheckingInspection */
-        return '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","block_height":293000,"hash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","addresses":["13XXaBufpMvqRqLkyDty1AXqueZHVe6iyy","19YtzZdcfs1V2ZCgyRWo8i2wLT8ND1Tu4L","1BNiazBzCxJacAKo2yL83Wq1VJ18AYzNHy","1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq","1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"],"total":70320221545,"fees":0,"preference":"low","relayed_by":"","confirmed":"2014-03-29T01:29:19Z","received":"2014-03-29T01:29:19Z","ver":1,"lock_time":0,"double_spend":false,"vin_sz":4,"vout_sz":1,"confirmations":59116,"confidence":1,"inputs":[' . TXInputTest::getJson() . '],"outputs":[' . TXOutputTest::getJson() . '],"next_inputs":"https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=2\u0026outstart=1\u0026limit=1","error":"","errors":[]}';
+        return '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","block_height":293000,"hash":"f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449","addresses":["13XXaBufpMvqRqLkyDty1AXqueZHVe6iyy","19YtzZdcfs1V2ZCgyRWo8i2wLT8ND1Tu4L","1BNiazBzCxJacAKo2yL83Wq1VJ18AYzNHy","1GbMfYui17L5m6sAy3L3WXAtf1P32bxJXq","1N2f642sbgCMbNtXFajz9XDACDFnFzdXzV"],"total":70320221545,"fees":0,"preference":"low","relayed_by":"","confirmed":"2014-03-29T01:29:19Z","received":"2014-03-29T01:29:19Z","ver":1,"lock_time":0,"double_spend":false,"vin_sz":4,"vout_sz":1,"confirmations":59116,"confidence":1,"inputs":[' . $inputs . '],"outputs":[' . $outputs . '],"next_inputs":"https://api.blockcypher.com/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449?instart=2\u0026outstart=1\u0026limit=1","error":"","errors":[]}';
     }
 
     /**
@@ -387,5 +390,26 @@ class TXTest extends ResourceModelTestCase
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */
         $obj->get($transactionList, $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param TX $obj
+     */
+    public function testCreate($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                TXSkeletonTest::getJson()
+            ));
+
+        $result = $obj->create($mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertInstanceOf($result, '\BlockCypher\Api\TXSkeleton');
     }
 }

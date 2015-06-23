@@ -38,8 +38,9 @@ class TokenValidator
 
         if (preg_match($type0RegExpression, $token) == false
             && preg_match($type1RegExpression, $token) == false
-        )
+        ) {
             return false;
+        }
 
         return true;
     }

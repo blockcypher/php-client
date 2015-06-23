@@ -17,6 +17,7 @@ v1.0.0
 * Allow create, sign and send transactions
 * Added docs site samples for Blockchain API and Address API (without wallets and multisign endpoint)
 * Added Payment API
+* Added Microtransaction API
 
 v1.0.0-beta
 -----------
