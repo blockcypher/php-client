@@ -825,6 +825,24 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
+                                <h5>Decode raw transaction</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="transaction-api/DecodeRawTransaction.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transaction-api/DecodeRawTransaction.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
                                 <h5>Embed data on Blockchain</h5>
                             </div>
                             <div class="col-md-4">

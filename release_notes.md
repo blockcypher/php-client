@@ -18,6 +18,7 @@ v1.0.0
 * Added docs site samples for Blockchain API and Address API (without wallets and multisign endpoint)
 * Added Payment API
 * Added Microtransaction API
+* Added Decode Raw Transaction Endpoint
 
 v1.0.0-beta
 -----------

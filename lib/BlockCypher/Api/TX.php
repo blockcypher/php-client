@@ -150,6 +150,42 @@ class TX extends BlockCypherResourceModel
     }
 
     /**
+     * Decode raw transactions without sending propagating them to the network; perhaps you want to double-check
+     * another client library or confirm that another service is sending proper transactions.
+     *
+     * @param string $hexRawTx
+     * @param array $params Parameters. Options: instart, outstart and limit
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return TX
+     */
+    public static function decode($hexRawTx, $params = array(), $apiContext = null, $restCall = null)
+    {
+        ArgumentValidator::validate($hexRawTx, 'hexRawTx');
+        ArgumentGetParamsValidator::validate($params, 'params');
+        $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $txHex = new TXHex();
+        $txHex->setTx($hexRawTx);
+        $payLoad = $txHex->toJSON();
+
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs/decode?" . http_build_query($params),
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $ret = new TX();
+        $ret->fromJson($json);
+        return $ret;
+    }
+
+    /**
      * Create a new TX.
      *
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
