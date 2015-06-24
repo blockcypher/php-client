@@ -19,6 +19,7 @@ v1.0.0
 * Added Payment API
 * Added Microtransaction API
 * Added Decode Raw Transaction Endpoint
+* Added Push Raw Transaction Endpoint
 
 v1.0.0-beta
 -----------

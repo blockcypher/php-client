@@ -360,6 +360,28 @@ class TXTest extends ResourceModelTestCase
      * @dataProvider mockProvider
      * @param TX $obj
      */
+    public function testPush($obj, $mockApiContext)
+    {
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                TXTest::getJson()
+            ));
+
+        $result = $obj->decode("hexRawTx", array(), $mockApiContext, $mockBlockCypherRestCall);
+
+        $this->assertNotNull($result);
+        $this->assertEquals($result, TXTest::getObject());
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param TX $obj
+     */
     public function testGetMultipleWithParams($obj, $mockApiContext)
     {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')

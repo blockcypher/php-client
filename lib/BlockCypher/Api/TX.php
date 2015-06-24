@@ -63,6 +63,7 @@ class TX extends BlockCypherResourceModel
             'instart' => 1,
             'outstart' => 1,
             'limit' => 1,
+            'includeHex' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
@@ -174,6 +175,41 @@ class TX extends BlockCypherResourceModel
 
         $json = self::executeCall(
             "$chainUrlPrefix/txs/decode?" . http_build_query($params),
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $ret = new TX();
+        $ret->fromJson($json);
+        return $ret;
+    }
+
+    /**
+     * Push the raw transaction to the network.
+     *
+     * @param string $hexRawTx
+     * @param array $params Parameters. Options: instart, outstart and limit
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return TX
+     */
+    public static function push($hexRawTx, $params = array(), $apiContext = null, $restCall = null)
+    {
+        ArgumentValidator::validate($hexRawTx, 'hexRawTx');
+        ArgumentGetParamsValidator::validate($params, 'params');
+        $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $txHex = new TXHex();
+        $txHex->setTx($hexRawTx);
+        $payLoad = $txHex->toJSON();
+
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs/push?" . http_build_query($params),
             "POST",
             $payLoad,
             null,
