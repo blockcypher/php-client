@@ -1,14 +1,19 @@
 <?php
 
-// # Create, Sign and Send TX Sample
+// # Fund Multisign Address Sample
 //
-// This sample code demonstrate how you can create a new transaction and send it to the network, as documented here at:
-// <a href="http://dev.blockcypher.com/#creating-transactions">http://dev.blockcypher.com/#creating-transactions</a>
+// This sample code demonstrate how you can create a new transaction and send it to the network
+// to fund a multisign address, as documented here at:
+// <a href="http://dev.blockcypher.com/?javascript#multisig-transactions">http://dev.blockcypher.com/?javascript#multisig-transactions</a>
 // API used: POST /v1/btc/main/txs/new and
 // POST /v1/btc/main/txs/send
 
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
-$txSkeleton = require 'CreateTransaction.php';
+$txSkeleton = require 'CreateTransactionToFundMultisignAddress.php';
+
+// DEBUG
+//var_dump($txSkeleton);
+//die();
 
 // source addresses private keys
 // private key in the same format as returned by Generate Address Endpoint:
@@ -22,7 +27,7 @@ $txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
 
 // Source and Destination addresses used in this sample
 // https://live.blockcypher.com/btc-testnet/address/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4/
-// https://live.blockcypher.com/btc-testnet/address/mvwhcFDFjmbDWCwVJ73b8DcG6bso3CZXDj/
+// https://live.blockcypher.com/btc-testnet/address/2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ/
 
 // For sample purposes only.
 $request = clone $txSkeleton;
@@ -31,10 +36,10 @@ try {
     // ### Send TX to the network
     $output = $txSkeleton->send($apiContexts['BTC.test3']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Send Transaction", "TXSkeleton", null, $request, $ex);
+    ResultPrinter::printError("Sent Transaction (fund multisign address)", "TXSkeleton", null, $request, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Send Transaction", "TXSkeleton", $output->getTx()->getHash(), $request, $output);
+ResultPrinter::printResult("Sent Transaction (fund multisign address)", "TXSkeleton", $output->getTx()->getHash(), $request, $output);
 
 return $output;

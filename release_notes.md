@@ -20,6 +20,7 @@ v1.0.0
 * Added Microtransaction API
 * Added Decode Raw Transaction Endpoint
 * Added Push Raw Transaction Endpoint
+* Multisign txs (fund and spend)
 
 v1.0.0-beta
 -----------

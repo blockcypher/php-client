@@ -22,9 +22,9 @@ use BlockCypher\Common\BlockCypherBaseModel;
  *
  * @property int value
  * @property string script
- * @property string spent_by
  * @property string[] addresses
  * @property string script_type
+ * @property string spent_by
  */
 class TXOutput extends BlockCypherBaseModel
 {
@@ -51,7 +51,7 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Raw hexadecimal encoding of the script.
+     * Raw hexadecimal encoding of the encumbrance script for this output.
      *
      * @return string
      */
@@ -61,7 +61,7 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Raw hexadecimal encoding of the script.
+     * Raw hexadecimal encoding of the encumbrance script for this output.
      *
      * @param string $script
      * @return $this
@@ -73,7 +73,7 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Hash of the transaction that spent this output, if it was spent.
+     * Optional The transaction hash that spent this output. Only returned for outputs that have been spent.
      *
      * @return string
      */
@@ -83,7 +83,7 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Hash of the transaction that spent this output, if it was spent.
+     * Optional The transaction hash that spent this output. Only returned for outputs that have been spent.
      *
      * @param string $spent_by
      * @return $this
@@ -112,7 +112,8 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Addresses where the value is being transferred to.
+     * Addresses that correspond to this output; typically this will only have a single address,
+     * and you can think of this output as having “sent” value to the address contained herein.
      *
      * @return \string[]
      */
@@ -122,7 +123,8 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Addresses where the value is being transferred to.
+     * Addresses that correspond to this output; typically this will only have a single address,
+     * and you can think of this output as having “sent” value to the address contained herein.
      *
      * @param \string[] $addresses
      * @return $this
@@ -147,7 +149,7 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Script type for this output.
+     * The type of encumbrance script used for this output.
      *
      * @return string
      */
@@ -157,7 +159,7 @@ class TXOutput extends BlockCypherBaseModel
     }
 
     /**
-     * Script type for this output.
+     * The type of encumbrance script used for this output.
      *
      * @param string $script_type
      * @return $this
