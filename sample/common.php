@@ -22,10 +22,17 @@ class ResultPrinter
      * @param string $objectId
      * @param mixed $request
      * @param mixed $response
+     * @param bool $forceConsole
      */
-    public static function printResult($title, $objectName, $objectId = null, $request = null, $response = null)
+    public static function printResult(
+        $title,
+        $objectName,
+        $objectId = null,
+        $request = null,
+        $response = null,
+        $forceConsole = false)
     {
-        self::printOutput($title, $objectName, $objectId, $request, $response, false);
+        self::printOutput($title, $objectName, $objectId, $request, $response, false, $forceConsole);
     }
 
     /**
@@ -37,10 +44,19 @@ class ResultPrinter
      * @param mixed $request
      * @param mixed $response
      * @param string $errorMessage
+     * @param bool $forceConsole
      */
-    public static function printOutput($title, $objectName, $objectId = null, $request = null, $response = null, $errorMessage = null)
+    public static function printOutput(
+        $title,
+        $objectName,
+        $objectId = null,
+        $request = null,
+        $response = null,
+        $errorMessage = null,
+        $forceConsole = false
+    )
     {
-        if (PHP_SAPI == 'cli') {
+        if ((PHP_SAPI == 'cli') || $forceConsole == true) {
             self::$printResultCounter++;
             printf("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
             printf("(%d) %s", self::$printResultCounter, strtoupper($title));
@@ -172,14 +188,15 @@ class ResultPrinter
      * @param null $objectId
      * @param null $request
      * @param \Exception $exception
+     * @param bool $forceConsole
      */
-    public static function printError($title, $objectName, $objectId = null, $request = null, $exception = null)
+    public static function printError($title, $objectName, $objectId = null, $request = null, $exception = null, $forceConsole = false)
     {
         $data = null;
         if ($exception instanceof \BlockCypher\Exception\BlockCypherConnectionException) {
             $data = $exception->getData();
         }
-        self::printOutput($title, $objectName, $objectId, $request, $data, $exception->getMessage());
+        self::printOutput($title, $objectName, $objectId, $request, $data, $exception->getMessage(), $forceConsole);
     }
 }
 
