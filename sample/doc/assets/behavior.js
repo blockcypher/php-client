@@ -96,6 +96,46 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateAddressBtcTest3.php",
+            "projectPath": "address-api\\CreateAddressBtcTest3.php",
+            "targetPath": "address-api\\CreateAddressBtcTest3",
+            "pageTitle": "address-api\\CreateAddressBtcTest3",
+            "title": "CreateAddressBtcTest3"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create Testnet3 Address Sample",
+                "slug": "create-testnet3-address-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create Address",
+                    "slug": "create-address"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateBcyTestAddress.php",
             "projectPath": "address-api\\CreateBcyTestAddress.php",
             "targetPath": "address-api\\CreateBcyTestAddress",
@@ -157,6 +197,46 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "title": "GenerateMultisignAddress"
           },
           "depth": 2
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisignAddressBtcTest3.php",
+            "projectPath": "address-api\\GenerateMultisignAddressBtcTest3.php",
+            "targetPath": "address-api\\GenerateMultisignAddressBtcTest3",
+            "pageTitle": "address-api\\GenerateMultisignAddressBtcTest3",
+            "title": "GenerateMultisignAddressBtcTest3"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create Multisig Testnet3 Address Sample",
+                "slug": "create-multisig-testnet3-address-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create Multisig Address",
+                    "slug": "create-multisig-address"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -950,6 +1030,262 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
     }, {
       "type": "folder",
       "data": {
+        "path": "microtransaction-api",
+        "title": "microtransaction-api"
+      },
+      "depth": 1,
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTransaction.php",
+            "projectPath": "microtransaction-api\\CreateMicroTransaction.php",
+            "targetPath": "microtransaction-api\\CreateMicroTransaction",
+            "pageTitle": "microtransaction-api\\CreateMicroTransaction",
+            "title": "CreateMicroTransaction"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create MicroTX Sample",
+                "slug": "create-microtx-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create New MicroTX",
+                    "slug": "create-new-microtx"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTransactionViaPrivateKey.php",
+            "projectPath": "microtransaction-api\\CreateMicroTransactionViaPrivateKey.php",
+            "targetPath": "microtransaction-api\\CreateMicroTransactionViaPrivateKey",
+            "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPrivateKey",
+            "title": "CreateMicroTransactionViaPrivateKey"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create MicroTX Sample",
+                "slug": "create-microtx-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create New MicroTX",
+                    "slug": "create-new-microtx"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTransactionViaPublicKey.php",
+            "projectPath": "microtransaction-api\\CreateMicroTransactionViaPublicKey.php",
+            "targetPath": "microtransaction-api\\CreateMicroTransactionViaPublicKey",
+            "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPublicKey",
+            "title": "CreateMicroTransactionViaPublicKey"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create MicroTX Sample from PublicKey and client-side signing",
+                "slug": "create-microtx-sample-from-publickey-and-client-side-signing"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Sign the MicroTX",
+                    "slug": "sign-the-microtx"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Send MicroTX to the network",
+                    "slug": "send-microtx-to-the-network"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateSignAndSendMicroTransaction.php",
+            "projectPath": "microtransaction-api\\CreateSignAndSendMicroTransaction.php",
+            "targetPath": "microtransaction-api\\CreateSignAndSendMicroTransaction",
+            "pageTitle": "microtransaction-api\\CreateSignAndSendMicroTransaction",
+            "title": "CreateSignAndSendMicroTransaction"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign and Send MicroTX Sample",
+                "slug": "create-sign-and-send-microtx-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create, Sign and Send a MicroTX",
+                    "slug": "create-sign-and-send-a-microtx"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint.php",
+            "projectPath": "microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint.php",
+            "targetPath": "microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint",
+            "pageTitle": "microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint",
+            "title": "CreateSignAndSendMicroTransactionEndpoint"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateSignWithWifAndSendMicroTransaction.php",
+            "projectPath": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction.php",
+            "targetPath": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction",
+            "pageTitle": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction",
+            "title": "CreateSignWithWifAndSendMicroTransaction"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign (using WIF private Key) and Send MicroTX Sample",
+                "slug": "create-sign-using-wif-private-key-and-send-microtx-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create, Sign and Send a MicroTX",
+                    "slug": "create-sign-and-send-a-microtx"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint.php",
+            "projectPath": "microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint.php",
+            "targetPath": "microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint",
+            "pageTitle": "microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint",
+            "title": "MicroTransactionViaPrivateKeyEndpoint"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
+    }, {
+      "type": "folder",
+      "data": {
         "path": "payment-api",
         "title": "payment-api"
       },
@@ -972,7 +1308,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreateAndDeletePaymentForward",
             "title": "CreateAndDeletePaymentForward"
           },
-            "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -990,7 +1326,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreateAndListPaymentForwards",
             "title": "CreateAndListPaymentForwards"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1008,7 +1344,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreatePaymentEndpoint",
             "title": "CreatePaymentEndpoint"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1026,7 +1362,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\CreatePaymentForward",
             "title": "CreatePaymentForward"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1044,7 +1380,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\DeleteAllPaymentForwards",
             "title": "DeleteAllPaymentForwards"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1062,7 +1398,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\DeletePaymentEndpoint",
             "title": "DeletePaymentEndpoint"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1080,7 +1416,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\GetMultiplePaymentForwards",
             "title": "GetMultiplePaymentForwards"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1098,7 +1434,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\GetPaymentForward",
             "title": "GetPaymentForward"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1116,7 +1452,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\ListPaymentForwards",
             "title": "ListPaymentForwards"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1134,46 +1470,35 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\ListPaymentsEndpoint",
             "title": "ListPaymentsEndpoint"
           },
-              "depth": 2
-          }
+          "depth": 2
+        }
       ]
-      }, {
-          "type": "folder",
+    }, {
+      "type": "folder",
+      "data": {
+        "path": "signer",
+        "title": "signer"
+      },
+      "depth": 1,
+      "children": [
+        {
+          "type": "file",
           "data": {
-              "path": "signer",
-              "title": "signer"
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\signer\\Sign.php",
+            "projectPath": "signer\\Sign.php",
+            "targetPath": "signer\\Sign",
+            "pageTitle": "signer\\Sign",
+            "title": "Sign"
           },
-          "depth": 1,
-          "children": [
-              {
-                  "type": "file",
-                  "data": {
-                      "language": {
-                          "nameMatchers": [{}, ".fbp"],
-                          "pygmentsLexer": "php",
-                          "singleLineComment": ["//"],
-                          "ignorePrefix": "}",
-                          "foldPrefix": "^",
-                          "name": "PHP"
-                      },
-                      "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\signer\\Sign.php",
-                      "projectPath": "signer\\Sign.php",
-                      "targetPath": "signer\\Sign",
-                      "pageTitle": "signer\\Sign",
-                      "title": "Sign"
-                  },
-          "depth": 2,
-                  "outline": [
-                      {
-                          "type": "heading",
-                          "data": {
-                              "level": 1,
-                              "title": "Sign hex data with a private key",
-                              "slug": "sign-hex-data-with-a-private-key"
-                          },
-                          "depth": 1
-                      }
-                  ]
+          "depth": 2
         }
       ]
     }, {
@@ -1201,7 +1526,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransaction",
             "title": "CreateAndSignAndSendTransaction"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign and Send TX Sample",
+                "slug": "create-sign-and-send-tx-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Sign the TX",
+                    "slug": "sign-the-tx"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Send TX to the network",
+                    "slug": "send-tx-to-the-network"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1231,13 +1586,319 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisignAddress.php",
+            "projectPath": "transaction-api\\CreateTransactionToFundMultisignAddress.php",
+            "targetPath": "transaction-api\\CreateTransactionToFundMultisignAddress",
+            "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddress",
+            "title": "CreateTransactionToFundMultisignAddress"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX Sample (without sending it)",
+                "slug": "create-tx-sample-without-sending-it"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "partially-filled out TX request object.",
+                    "slug": "partially-filled-out-tx-request-object"
+                  },
+                  "depth": 2,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Create New TX",
+                        "slug": "create-new-tx"
+                      },
+                      "depth": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisignAddressEndpoint.php",
+            "projectPath": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint.php",
+            "targetPath": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint",
+            "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint",
+            "title": "CreateTransactionToFundMultisignAddressEndpoint"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToSpendMultisignFunds.php",
+            "projectPath": "transaction-api\\CreateTransactionToSpendMultisignFunds.php",
+            "targetPath": "transaction-api\\CreateTransactionToSpendMultisignFunds",
+            "pageTitle": "transaction-api\\CreateTransactionToSpendMultisignFunds",
+            "title": "CreateTransactionToSpendMultisignFunds"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX Sample (without sending it)",
+                "slug": "create-tx-sample-without-sending-it"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "partially-filled out TX request object.",
+                    "slug": "partially-filled-out-tx-request-object"
+                  },
+                  "depth": 2,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Create New TX",
+                        "slug": "create-new-tx"
+                      },
+                      "depth": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilder.php",
+            "projectPath": "transaction-api\\CreateTransactionWithTXBuilder.php",
+            "targetPath": "transaction-api\\CreateTransactionWithTXBuilder",
+            "pageTitle": "transaction-api\\CreateTransactionWithTXBuilder",
+            "title": "CreateTransactionWithTXBuilder"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX Sample (without sending it)",
+                "slug": "create-tx-sample-without-sending-it"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "partially-filled out TX request object.",
+                    "slug": "partially-filled-out-tx-request-object"
+                  },
+                  "depth": 2,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Create New TX",
+                        "slug": "create-new-tx"
+                      },
+                      "depth": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithThirdPartySoftware.php",
+            "projectPath": "transaction-api\\CreateTransactionWithThirdPartySoftware.php",
+            "targetPath": "transaction-api\\CreateTransactionWithThirdPartySoftware",
+            "pageTitle": "transaction-api\\CreateTransactionWithThirdPartySoftware",
+            "title": "CreateTransactionWithThirdPartySoftware"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create a TX using third party software",
+                "slug": "create-a-tx-using-third-party-software"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisignAddrEndpoint.php",
+            "projectPath": "transaction-api\\CreateTxToFundMultisignAddrEndpoint.php",
+            "targetPath": "transaction-api\\CreateTxToFundMultisignAddrEndpoint",
+            "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrEndpoint",
+            "title": "CreateTxToFundMultisignAddrEndpoint"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint.php",
+            "projectPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint.php",
+            "targetPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
+            "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
+            "title": "CreateTxToFundMultisignAddrWithBuilderEndpoint"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint.php",
+            "projectPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint.php",
+            "targetPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
+            "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
+            "title": "CreateTxToSpendMultisignFundsWithBuilderEndpoint"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\DataEndpoint.php",
             "projectPath": "transaction-api\\DataEndpoint.php",
             "targetPath": "transaction-api\\DataEndpoint",
             "pageTitle": "transaction-api\\DataEndpoint",
             "title": "DataEndpoint"
           },
-              "depth": 2
+          "depth": 2
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\DecodeRawTransaction.php",
+            "projectPath": "transaction-api\\DecodeRawTransaction.php",
+            "targetPath": "transaction-api\\DecodeRawTransaction",
+            "pageTitle": "transaction-api\\DecodeRawTransaction",
+            "title": "DecodeRawTransaction"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Decode raw transactions without sending propagating them to the network",
+                "slug": "decode-raw-transactions-without-sending-propagating-them-to-the-network"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\DecodeRawTransactionEndpoint.php",
+            "projectPath": "transaction-api\\DecodeRawTransactionEndpoint.php",
+            "targetPath": "transaction-api\\DecodeRawTransactionEndpoint",
+            "pageTitle": "transaction-api\\DecodeRawTransactionEndpoint",
+            "title": "DecodeRawTransactionEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1255,7 +1916,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\EmbedDataOnBlockchain",
             "title": "EmbedDataOnBlockchain"
           },
-              "depth": 2
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1267,24 +1928,72 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetAllUnconfirmedTransactions.php",
-              "projectPath": "transaction-api\\GetAllUnconfirmedTransactions.php",
-              "targetPath": "transaction-api\\GetAllUnconfirmedTransactions",
-              "pageTitle": "transaction-api\\GetAllUnconfirmedTransactions",
-              "title": "GetAllUnconfirmedTransactions"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\FundMultisignAddressTransaction.php",
+            "projectPath": "transaction-api\\FundMultisignAddressTransaction.php",
+            "targetPath": "transaction-api\\FundMultisignAddressTransaction",
+            "pageTitle": "transaction-api\\FundMultisignAddressTransaction",
+            "title": "FundMultisignAddressTransaction"
           },
-              "depth": 2
-          }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
+                "level": 1,
+                "title": "Fund Multisign Address Sample",
+                "slug": "fund-multisign-address-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Sign the TX",
+                    "slug": "sign-the-tx"
                   },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Send TX to the network",
+                    "slug": "send-tx-to-the-network"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetAllUnconfirmedTransactions.php",
+            "projectPath": "transaction-api\\GetAllUnconfirmedTransactions.php",
+            "targetPath": "transaction-api\\GetAllUnconfirmedTransactions",
+            "pageTitle": "transaction-api\\GetAllUnconfirmedTransactions",
+            "title": "GetAllUnconfirmedTransactions"
+          },
+          "depth": 2
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetMultipleTransactions.php",
             "projectPath": "transaction-api\\GetMultipleTransactions.php",
             "targetPath": "transaction-api\\GetMultipleTransactions",
@@ -1357,6 +2066,102 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\PushRawTransaction.php",
+            "projectPath": "transaction-api\\PushRawTransaction.php",
+            "targetPath": "transaction-api\\PushRawTransaction",
+            "pageTitle": "transaction-api\\PushRawTransaction",
+            "title": "PushRawTransaction"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Push raw transaction to the network",
+                "slug": "push-raw-transaction-to-the-network"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\PushRawTransactionEndpoint.php",
+            "projectPath": "transaction-api\\PushRawTransactionEndpoint.php",
+            "targetPath": "transaction-api\\PushRawTransactionEndpoint",
+            "pageTitle": "transaction-api\\PushRawTransactionEndpoint",
+            "title": "PushRawTransactionEndpoint"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\SpendMultisignFundsTransaction.php",
+            "projectPath": "transaction-api\\SpendMultisignFundsTransaction.php",
+            "targetPath": "transaction-api\\SpendMultisignFundsTransaction",
+            "pageTitle": "transaction-api\\SpendMultisignFundsTransaction",
+            "title": "SpendMultisignFundsTransaction"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Spend Multisign Funds Sample",
+                "slug": "spend-multisign-funds-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Sign the TX",
+                    "slug": "sign-the-tx"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Send TX to the network",
+                    "slug": "send-tx-to-the-network"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\TransactionHashEndpoint.php",
             "projectPath": "transaction-api\\TransactionHashEndpoint.php",
             "targetPath": "transaction-api\\TransactionHashEndpoint",
@@ -1381,7 +2186,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\UnconfirmedTransactionsEndpoint",
             "title": "UnconfirmedTransactionsEndpoint"
           },
-              "depth": 2
+          "depth": 2
         }
       ]
     }, {
@@ -1409,40 +2214,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWallet",
             "title": "AddAddressesToWallet"
           },
-            "depth": 2,
-            "outline": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 1,
-                        "title": "Add Addresses to Wallet Sample",
-                        "slug": "add-addresses-to-wallet-sample"
-                    },
-                    "depth": 1,
-                    "children": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 2,
-                                "title": "Get Wallet Name.",
-                                "slug": "get-wallet-name"
-                            },
-                            "depth": 2,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 3,
-                                        "title": "Add Addresses to the Wallet",
-                                        "slug": "add-addresses-to-the-wallet"
-                                    },
-                                    "depth": 3
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1460,8 +2232,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWalletEndpoint",
             "title": "AddAddressesToWalletEndpoint"
           },
-              "depth": 2,
-              "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1677,40 +2448,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWallet",
             "title": "RemoveAddressesFromWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Remove Addresses from Wallet Sample",
-                          "slug": "remove-addresses-from-wallet-sample"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Get Wallet Name and Add Addresses.",
-                                  "slug": "get-wallet-name-and-add-addresses"
-                              },
-                              "depth": 2,
-                              "children": [
-                                  {
-                                      "type": "heading",
-                                      "data": {
-                                          "level": 3,
-                                          "title": "Remove Addresses from the Wallet",
-                                          "slug": "remove-addresses-from-the-wallet"
-                                      },
-                                      "depth": 3
-                                  }
-                              ]
-                          }
-                      ]
-                  }
-              ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1728,8 +2466,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWalletEndpoint",
             "title": "RemoveAddressesFromWalletEndpoint"
           },
-              "depth": 2,
-              "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {

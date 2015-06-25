@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\CreateTransactionWithThirdPartySoftware</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\CreateTransactionWithThirdPartySoftware"><meta name="groc-project-path" content="transaction-api\CreateTransactionWithThirdPartySoftware.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\CreateTransactionWithThirdPartySoftware.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="create-a-tx-using-third-party-software">Create a TX using third party software</h1>
+<p><a href="https://github.com/Bit-Wasp/bitcoin-php">https://github.com/Bit-Wasp/bitcoin-php</a></p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Run on console:
+php -f .\sample\transaction-api\CreateTransactionWithThirdPartySoftware.php</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">use</span> <span class="hljs-title">BitWasp</span>\<span class="hljs-title">Bitcoin</span>\<span class="hljs-title">Address</span>\<span class="hljs-title">AddressFactory</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BitWasp</span>\<span class="hljs-title">Bitcoin</span>\<span class="hljs-title">Bitcoin</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BitWasp</span>\<span class="hljs-title">Bitcoin</span>\<span class="hljs-title">Key</span>\<span class="hljs-title">PrivateKeyFactory</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BitWasp</span>\<span class="hljs-title">Bitcoin</span>\<span class="hljs-title">Transaction</span>\<span class="hljs-title">TransactionBuilder</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BitWasp</span>\<span class="hljs-title">Bitcoin</span>\<span class="hljs-title">Transaction</span>\<span class="hljs-title">TransactionFactory</span>;
+
+<span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
+
+<span class="hljs-variable">$debug</span> = <span class="hljs-keyword">false</span>;
+
+Bitcoin::setNetwork(\BitWasp\Bitcoin\Network\NetworkFactory::bitcoinTestnet());
+<span class="hljs-variable">$network</span> = Bitcoin::getNetwork();
+<span class="hljs-variable">$ecAdapter</span> = Bitcoin::getEcAdapter();</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Import private key</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$compressed</span> = <span class="hljs-keyword">true</span>;
+<span class="hljs-variable">$privateKey</span> = PrivateKeyFactory::fromHex(<span class="hljs-string">'1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e'</span>, <span class="hljs-variable">$compressed</span>);
+
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$debug</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"[Key: "</span> . <span class="hljs-variable">$privateKey</span>-&gt;toWif(<span class="hljs-variable">$network</span>) . <span class="hljs-string">"]\n"</span>;
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"[Address "</span> . <span class="hljs-variable">$privateKey</span>-&gt;getAddress()-&gt;getAddress(<span class="hljs-variable">$network</span>) . <span class="hljs-string">"]\n"</span>;
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>In order to run the sample you will need:
+1.- Use the faucet to fund source address
+Faucet <a href="https://accounts.blockcypher.com/testnet-faucet?a=n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4">https://accounts.blockcypher.com/testnet-faucet?a=n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4</a>
+2.- Get unspent transaction outputs (UTXOs) and select one:
+<a href="https://api.blockcypher.com/v1/btc/test3/addrs/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4?unspentOnly=true">https://api.blockcypher.com/v1/btc/test3/addrs/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4?unspentOnly=true</a>
+3.- Get the hex tx for the selected UTXO:
+<a href="https://live.blockcypher.com/btc-testnet/tx/e7f034f4a56999d04d8a3a8f07dca10e87cd4a7fd2a779e9ecd41c57afec84f8/">https://live.blockcypher.com/btc-testnet/tx/e7f034f4a56999d04d8a3a8f07dca10e87cd4a7fd2a779e9ecd41c57afec84f8/</a>
+4.- Copy Tx Hex and paste here:</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$txHex</span> = <span class="hljs-string">'0100000001b674eafd9c1a79402661e7e7b37746145869260c29263f213f6f120ea8a95574010000006b483045022100ac406c14ef2da774d64d5504340fd278a827a99941cf0bef26fdff17c191ffa4022016a69a281ec1fcdf22c34543ff97a5c332ed12856fb44e525cf8ba3aea7c2d4101210274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdfffffffff02e8030000000000001976a914a93806b8ae200fffca565f7cf9ef3ab17d4ffe8888ac204e0000000000001976a914edeed3ce7f485e44bc33969af08ec9250510f83f88ac00000000'</span>;
+<span class="hljs-variable">$myTx</span> = TransactionFactory::fromHex(<span class="hljs-variable">$txHex</span>);
+
+<span class="hljs-variable">$spendOutput</span> = <span class="hljs-number">0</span>;
+<span class="hljs-variable">$recipient</span> = AddressFactory::fromString(<span class="hljs-string">'mvwhcFDFjmbDWCwVJ73b8DcG6bso3CZXDj'</span>);
+
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$debug</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"[Send to: "</span> . <span class="hljs-variable">$recipient</span>-&gt;getAddress(<span class="hljs-variable">$network</span>) . <span class="hljs-string">"]\n"</span>;
+}
+
+<span class="hljs-variable">$builder</span> = <span class="hljs-keyword">new</span> TransactionBuilder(<span class="hljs-variable">$ecAdapter</span>);
+<span class="hljs-variable">$builder</span>
+    -&gt;spendOutput(<span class="hljs-variable">$myTx</span>, <span class="hljs-variable">$spendOutput</span>)
+    -&gt;payToAddress(<span class="hljs-variable">$recipient</span>, <span class="hljs-number">1000</span>);
+
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$debug</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"Setup stage\n"</span>;
+    <span class="hljs-comment">//print_r($builder);</span>
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"Signing\n"</span>;
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>This line throws a warning but it works:
+<a href="https://github.com/mdanter/phpecc/issues/90">https://github.com/mdanter/phpecc/issues/90</a></p></div></div><div class="code"><div class="wrapper">error_reporting(E_ERROR | E_PARSE);
+<span class="hljs-variable">$builder</span>-&gt;signInputWithKey(<span class="hljs-variable">$privateKey</span>, <span class="hljs-variable">$myTx</span>-&gt;getOutputs()-&gt;getOutput(<span class="hljs-variable">$spendOutput</span>)-&gt;getScript(), <span class="hljs-number">0</span>);
+
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$debug</span>) {
+    <span class="hljs-comment">//print_r($builder);</span>
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"Generate transaction: \n"</span>;
+}
+
+<span class="hljs-variable">$new</span> = <span class="hljs-variable">$builder</span>-&gt;getTransaction();
+
+<span class="hljs-variable">$hexRawTx</span> = <span class="hljs-variable">$new</span>-&gt;getHex();
+
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$debug</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-variable">$hexRawTx</span> . <span class="hljs-string">"\n"</span>;
+}
+
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$hexRawTx</span>;</div></div></div></div></body></html>

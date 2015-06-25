@@ -49,7 +49,7 @@ $output->setAddresses(array(
     "03c8e6e99c1d0b42120d5cf40c963e5e8048fd2d2a184758784a041a9d101f1f02"
 ));
 $output->setScriptType("multisig-2-of-3");
-$output->setValue(100000); // Satoshis
+$output->setValue(1000); // Satoshis
 
 $tx->addInput($input);
 $tx->addOutput($output);
