@@ -8,6 +8,7 @@ use BlockCypher\Transport\BlockCypherRestCall;
 use BlockCypher\Validation\ArgumentArrayValidator;
 use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
+use BlockCypher\Validation\UrlValidator;
 
 /**
  * Class TX
@@ -40,9 +41,11 @@ use BlockCypher\Validation\ArgumentValidator;
  * @property int vout_sz
  * @property int confirmations
  * @property int confidence
+ * @property int guaranteed
  * @property \BlockCypher\Api\TXInput[] inputs
  * @property \BlockCypher\Api\TXOutput[] outputs
  * @property string next_inputs
+ * @property string next_outputs
  */
 class TX extends BlockCypherResourceModel
 {
@@ -622,6 +625,38 @@ class TX extends BlockCypherResourceModel
     }
 
     /**
+     * TODO: missing description in docs site.
+     *
+     * @return boolean
+     */
+    public function isGuaranteed()
+    {
+        return $this->guaranteed;
+    }
+
+    /**
+     * TODO: missing description in docs site.
+     *
+     * @return boolean
+     */
+    public function getGuaranteed()
+    {
+        return $this->guaranteed;
+    }
+
+    /**
+     * TODO: missing description in docs site.
+     *
+     * @param boolean $guaranteed
+     * @return $this
+     */
+    public function setGuaranteed($guaranteed)
+    {
+        $this->guaranteed = $guaranteed;
+        return $this;
+    }
+
+    /**
      * Append TXInput to the list.
      *
      * @param \BlockCypher\Api\TXInput $input
@@ -849,7 +884,27 @@ class TX extends BlockCypherResourceModel
      */
     public function setNextInputs($next_inputs)
     {
+        UrlValidator::validate($next_inputs, "next_inputs");
         $this->next_inputs = $next_inputs;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNextOutputs()
+    {
+        return $this->next_outputs;
+    }
+
+    /**
+     * @param string $next_outputs
+     * @return $this
+     */
+    public function setNextOutputs($next_outputs)
+    {
+        UrlValidator::validate($next_outputs, "next_outputs");
+        $this->next_outputs = $next_outputs;
         return $this;
     }
 }

@@ -8,6 +8,7 @@ use BlockCypher\Transport\BlockCypherRestCall;
 use BlockCypher\Validation\ArgumentArrayValidator;
 use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
+use BlockCypher\Validation\UrlValidator;
 
 /**
  * Class Address
@@ -432,6 +433,7 @@ class Address extends BlockCypherResourceModel
      */
     public function setTxUrl($tx_url)
     {
+        UrlValidator::validate($tx_url, "tx_url");
         $this->tx_url = $tx_url;
         return $this;
     }
