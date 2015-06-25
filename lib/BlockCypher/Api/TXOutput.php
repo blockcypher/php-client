@@ -22,6 +22,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
  *
  * @property int value
  * @property string script
+ * @property string address
  * @property string[] addresses
  * @property string script_type
  * @property string spent_by
@@ -91,6 +92,24 @@ class TXOutput extends BlockCypherBaseModel
     public function setSpentBy($spent_by)
     {
         $this->spent_by = $spent_by;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param string $address
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
         return $this;
     }
 
