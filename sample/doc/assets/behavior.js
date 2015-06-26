@@ -102,29 +102,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\CreateAddressBtcTest3",
             "title": "CreateAddressBtcTest3"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Testnet3 Address Sample",
-                "slug": "create-testnet3-address-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create Address",
-                    "slug": "create-address"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -214,29 +192,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddressBtcTest3",
             "title": "GenerateMultisignAddressBtcTest3"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Multisig Testnet3 Address Sample",
-                "slug": "create-multisig-testnet3-address-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create Multisig Address",
-                    "slug": "create-multisig-address"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1046,35 +1002,123 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPrivate.php",
+              "projectPath": "microtransaction-api\\CreateMicroTXFromPrivate.php",
+              "targetPath": "microtransaction-api\\CreateMicroTXFromPrivate",
+              "pageTitle": "microtransaction-api\\CreateMicroTXFromPrivate",
+              "title": "CreateMicroTXFromPrivate"
+          },
+            "depth": 2
+        }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPrivateDocsSample.php",
+                  "projectPath": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample.php",
+                  "targetPath": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample",
+                  "pageTitle": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample",
+                  "title": "CreateMicroTXFromPrivateDocsSample"
+              },
+              "depth": 2,
+              "outline": []
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPubkey.php",
+                  "projectPath": "microtransaction-api\\CreateMicroTXFromPubkey.php",
+                  "targetPath": "microtransaction-api\\CreateMicroTXFromPubkey",
+                  "pageTitle": "microtransaction-api\\CreateMicroTXFromPubkey",
+                  "title": "CreateMicroTXFromPubkey"
+              },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPubkeyDocsSample.php",
+                  "projectPath": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample.php",
+                  "targetPath": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample",
+                  "pageTitle": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample",
+                  "title": "CreateMicroTXFromPubkeyDocsSample"
+              },
+              "depth": 2,
+              "outline": []
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromWif.php",
+                  "projectPath": "microtransaction-api\\CreateMicroTXFromWif.php",
+                  "targetPath": "microtransaction-api\\CreateMicroTXFromWif",
+                  "pageTitle": "microtransaction-api\\CreateMicroTXFromWif",
+                  "title": "CreateMicroTXFromWif"
+              },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXWithMicroTXBuilder.php",
+                  "projectPath": "microtransaction-api\\CreateMicroTXWithMicroTXBuilder.php",
+                  "targetPath": "microtransaction-api\\CreateMicroTXWithMicroTXBuilder",
+                  "pageTitle": "microtransaction-api\\CreateMicroTXWithMicroTXBuilder",
+                  "title": "CreateMicroTXWithMicroTXBuilder"
+              },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTransaction.php",
             "projectPath": "microtransaction-api\\CreateMicroTransaction.php",
             "targetPath": "microtransaction-api\\CreateMicroTransaction",
             "pageTitle": "microtransaction-api\\CreateMicroTransaction",
             "title": "CreateMicroTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create MicroTX Sample",
-                "slug": "create-microtx-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create New MicroTX",
-                    "slug": "create-new-microtx"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1092,29 +1136,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPrivateKey",
             "title": "CreateMicroTransactionViaPrivateKey"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create MicroTX Sample",
-                "slug": "create-microtx-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create New MicroTX",
-                    "slug": "create-new-microtx"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1132,37 +1154,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPublicKey",
             "title": "CreateMicroTransactionViaPublicKey"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create MicroTX Sample from PublicKey and client-side signing",
-                "slug": "create-microtx-sample-from-publickey-and-client-side-signing"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Sign the MicroTX",
-                    "slug": "sign-the-microtx"
-                  },
-                  "depth": 3
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Send MicroTX to the network",
-                    "slug": "send-microtx-to-the-network"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1180,29 +1172,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateSignAndSendMicroTransaction",
             "title": "CreateSignAndSendMicroTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign and Send MicroTX Sample",
-                "slug": "create-sign-and-send-microtx-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create, Sign and Send a MicroTX",
-                    "slug": "create-sign-and-send-a-microtx"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1220,8 +1190,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint",
             "title": "CreateSignAndSendMicroTransactionEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1239,29 +1208,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction",
             "title": "CreateSignWithWifAndSendMicroTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign (using WIF private Key) and Send MicroTX Sample",
-                "slug": "create-sign-using-wif-private-key-and-send-microtx-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create, Sign and Send a MicroTX",
-                    "slug": "create-sign-and-send-a-microtx"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1279,8 +1226,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint",
             "title": "MicroTransactionViaPrivateKeyEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }
       ]
     }, {
@@ -1476,6 +1422,34 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
     }, {
       "type": "folder",
       "data": {
+          "path": "sandbox",
+          "title": "sandbox"
+      },
+          "depth": 1,
+          "children": [
+              {
+                  "type": "file",
+                  "data": {
+                      "language": {
+                          "nameMatchers": [{}, ".fbp"],
+                          "pygmentsLexer": "php",
+                          "singleLineComment": ["//"],
+                          "ignorePrefix": "}",
+                          "foldPrefix": "^",
+                          "name": "PHP"
+                      },
+                      "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\sandbox\\index.php",
+                      "projectPath": "sandbox\\index.php",
+                      "targetPath": "sandbox\\index",
+                      "pageTitle": "sandbox\\index",
+                      "title": "index"
+                  },
+                  "depth": 2
+              }
+          ]
+      }, {
+          "type": "folder",
+          "data": {
         "path": "signer",
         "title": "signer"
       },
@@ -1526,37 +1500,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransaction",
             "title": "CreateAndSignAndSendTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign and Send TX Sample",
-                "slug": "create-sign-and-send-tx-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Sign the TX",
-                    "slug": "sign-the-tx"
-                  },
-                  "depth": 3
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Send TX to the network",
-                    "slug": "send-tx-to-the-network"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+            "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1592,40 +1536,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddress",
             "title": "CreateTransactionToFundMultisignAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX Sample (without sending it)",
-                "slug": "create-tx-sample-without-sending-it"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "partially-filled out TX request object.",
-                    "slug": "partially-filled-out-tx-request-object"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Create New TX",
-                        "slug": "create-new-tx"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1643,8 +1554,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint",
             "title": "CreateTransactionToFundMultisignAddressEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1662,40 +1572,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToSpendMultisignFunds",
             "title": "CreateTransactionToSpendMultisignFunds"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX Sample (without sending it)",
-                "slug": "create-tx-sample-without-sending-it"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "partially-filled out TX request object.",
-                    "slug": "partially-filled-out-tx-request-object"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Create New TX",
-                        "slug": "create-new-tx"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1713,40 +1590,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilder",
             "title": "CreateTransactionWithTXBuilder"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX Sample (without sending it)",
-                "slug": "create-tx-sample-without-sending-it"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "partially-filled out TX request object.",
-                    "slug": "partially-filled-out-tx-request-object"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Create New TX",
-                        "slug": "create-new-tx"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1764,18 +1608,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithThirdPartySoftware",
             "title": "CreateTransactionWithThirdPartySoftware"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create a TX using third party software",
-                "slug": "create-a-tx-using-third-party-software"
-              },
-              "depth": 1
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1793,8 +1626,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrEndpoint",
             "title": "CreateTxToFundMultisignAddrEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1812,8 +1644,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
             "title": "CreateTxToFundMultisignAddrWithBuilderEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1831,8 +1662,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
             "title": "CreateTxToSpendMultisignFundsWithBuilderEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1868,18 +1698,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransaction",
             "title": "DecodeRawTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Decode raw transactions without sending propagating them to the network",
-                "slug": "decode-raw-transactions-without-sending-propagating-them-to-the-network"
-              },
-              "depth": 1
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1897,8 +1716,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransactionEndpoint",
             "title": "DecodeRawTransactionEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1934,37 +1752,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\FundMultisignAddressTransaction",
             "title": "FundMultisignAddressTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Fund Multisign Address Sample",
-                "slug": "fund-multisign-address-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Sign the TX",
-                    "slug": "sign-the-tx"
-                  },
-                  "depth": 3
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Send TX to the network",
-                    "slug": "send-tx-to-the-network"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2072,18 +1860,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransaction",
             "title": "PushRawTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Push raw transaction to the network",
-                "slug": "push-raw-transaction-to-the-network"
-              },
-              "depth": 1
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2101,8 +1878,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransactionEndpoint",
             "title": "PushRawTransactionEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2120,37 +1896,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\SpendMultisignFundsTransaction",
             "title": "SpendMultisignFundsTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Spend Multisign Funds Sample",
-                "slug": "spend-multisign-funds-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Sign the TX",
-                    "slug": "sign-the-tx"
-                  },
-                  "depth": 3
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Send TX to the network",
-                    "slug": "send-tx-to-the-network"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
