@@ -42,6 +42,8 @@ class PrivateKeyList
         $privateKeyList = array();
         foreach ($hexPrivateKeys as $hexPrivateKey) {
 
+            // TODO: Code Review. Use PrivateKeyManipulator?
+
             // Import from compressed private key
             $compressed = true;
             $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed, $ecAdapter);
