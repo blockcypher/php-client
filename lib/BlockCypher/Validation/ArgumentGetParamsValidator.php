@@ -1,6 +1,7 @@
 <?php
 
 namespace BlockCypher\Validation;
+
 use BlockCypher\Core\BlockCypherConfigManager;
 use BlockCypher\Core\BlockCypherLoggingManager;
 
@@ -40,13 +41,16 @@ class ArgumentGetParamsValidator
     /**
      * @param $params
      * @param $allowedParams
+     * @param string $validationLevel allows override global validation level settings
      * @return array
      */
-    public static function sanitize($params, $allowedParams)
+    public static function sanitize($params, $allowedParams, $validationLevel = null)
     {
         $notAllowedParams = self::getNotAllowedParams($params, $allowedParams);
         if (count($notAllowedParams) > 0) {
-            $validationLevel = BlockCypherConfigManager::getInstance()->get('validation.level');
+            if ($validationLevel === null) {
+                $validationLevel = BlockCypherConfigManager::getInstance()->get('validation.level');
+            }
             foreach ($notAllowedParams as $key => $value) {
                 $validationMessage = "Param {$key} not allowed: It can be a typo in the param name or you should update the PHP SDK library.";
                 switch ($validationLevel) {
