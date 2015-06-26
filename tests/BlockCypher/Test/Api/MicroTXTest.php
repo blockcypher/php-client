@@ -126,117 +126,6 @@ class MicroTXTest extends ResourceModelTestCase
         $this->assertEquals($obj->getHash(), "7fc9e41e6ef29486bc4478ff063934ea9a1ecd08bbfb0a207b39ad92fe55bebf");
     }
 
-//    public function testFromPubkey()
-//    {
-//        $obj = static::getObject();
-//
-//        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-//            ->disableOriginalConstructor()
-//            ->setMethods(array('getBaseChainUrl'))
-//            ->getMock();
-//
-//        $mockApiContext->expects($this->any())
-//            ->method('getBaseChainUrl')
-//            ->will($this->returnValue("/v1/bcy/test"));
-//
-//        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-//            ->disableOriginalConstructor()
-//            ->getMock();
-//
-//        $mockBlockCypherRestCall->expects($this->any())
-//            ->method('execute')
-//            ->will($this->returnValue(
-//                self::getJson()
-//            ));
-//
-//        $result = $obj->fromPubkey(
-//            "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff",
-//            "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi",
-//            10000,
-//            $mockApiContext,
-//            $mockBlockCypherRestCall
-//        );
-//
-//        $this->assertNotNull($result);
-//    }
-
-    /**
-     * Gets Object Instance with Json data filled in
-     * @return MicroTX
-     */
-    public static function getObject()
-    {
-        return new MicroTX(self::getJson());
-    }
-
-//    public function testFromPrivate()
-//    {
-//        $obj = static::getObject();
-//
-//        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-//            ->disableOriginalConstructor()
-//            ->setMethods(array('getBaseChainUrl'))
-//            ->getMock();
-//
-//        $mockApiContext->expects($this->any())
-//            ->method('getBaseChainUrl')
-//            ->will($this->returnValue("/v1/bcy/test"));
-//
-//        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-//            ->disableOriginalConstructor()
-//            ->getMock();
-//
-//        $mockBlockCypherRestCall->expects($this->any())
-//            ->method('execute')
-//            ->will($this->returnValue(
-//                self::getJson()
-//            ));
-//
-//        $result = $obj->fromPrivate(
-//            "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff",
-//            "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi",
-//            10000,
-//            $mockApiContext,
-//            $mockBlockCypherRestCall
-//        );
-//
-//        $this->assertNotNull($result);
-//    }
-
-//    public function testFromWif()
-//    {
-//        $obj = static::getObject();
-//
-//        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-//            ->disableOriginalConstructor()
-//            ->setMethods(array('getBaseChainUrl'))
-//            ->getMock();
-//
-//        $mockApiContext->expects($this->any())
-//            ->method('getBaseChainUrl')
-//            ->will($this->returnValue("/v1/bcy/test"));
-//
-//        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-//            ->disableOriginalConstructor()
-//            ->getMock();
-//
-//        $mockBlockCypherRestCall->expects($this->any())
-//            ->method('execute')
-//            ->will($this->returnValue(
-//                self::getJson()
-//            ));
-//
-//        $result = $obj->fromWif(
-//            "BpouCdZ5dXbjcUDQBj8ZVYBbSPtWYDQHxuDcP48VA6Q7dZuqW4UJ",
-//            "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi",
-//            10000,
-//            $mockApiContext,
-//            $mockBlockCypherRestCall
-//        );
-//
-//        $this->assertNotNull($result);
-//    }
-
     /**
      * @dataProvider mockProvider
      * @param MicroTX $obj
@@ -286,5 +175,14 @@ class MicroTXTest extends ResourceModelTestCase
 
         $obj->sign($hexPrivateKey);
         $this->assertEquals($expectedSignatures, $obj->getSignatures());
+    }
+
+    /**
+     * Gets Object Instance with Json data filled in
+     * @return MicroTX
+     */
+    public static function getObject()
+    {
+        return new MicroTX(self::getJson());
     }
 }
