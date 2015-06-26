@@ -1,5 +1,7 @@
 
-build
+build/artifacts
+build/coverage
+build/junit.xml
 .DS_Store
 phpunit.local.xml
 *.log
