@@ -2,9 +2,7 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Builder\MicroTXBuilder;
 use BlockCypher\Common\BlockCypherResourceModel;
-use BlockCypher\Crypto\PrivateKeyManipulator;
 use BlockCypher\Crypto\Signer;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
@@ -40,33 +38,6 @@ use BlockCypher\Transport\BlockCypherRestCall;
  */
 class MicroTX extends BlockCypherResourceModel
 {
-    /**
-     * Send a microtransaction signing it locally (without sending the private key to the server)
-     *
-     * @param string $hexPrivateKey
-     * @param string $toAddress
-     * @param int $valueSatoshis
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return MicroTX
-     */
-    public static function fromPubkey($hexPrivateKey, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
-    {
-        $compressed = true;
-        $pubkey = PrivateKeyManipulator::generateHexPubKeyFromHexPrivKey($hexPrivateKey, $compressed);
-
-        $microTX = MicroTXBuilder::aMicroTX()
-            ->fromPubkey($pubkey)
-            ->toAddress($toAddress)
-            ->withValueInSatoshis($valueSatoshis)
-            ->build()
-            ->create($apiContext, $restCall)
-            ->sign($hexPrivateKey)
-            ->send($apiContext, $restCall);
-
-        return $microTX;
-    }
-
     /**
      * Send the microtransaction to the network.
      *
@@ -140,51 +111,6 @@ class MicroTX extends BlockCypherResourceModel
         );
         $this->fromJson($json);
         return $this;
-    }
-
-    /**
-     * Send a microtransaction signing it on server side (sending the private key to the server)
-     *
-     * @param string $hexPrivateKey
-     * @param string $toAddress
-     * @param int $valueSatoshis
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return MicroTX
-     */
-    public static function fromPrivate($hexPrivateKey, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
-    {
-        $microTX = MicroTXBuilder::aMicroTX()
-            ->fromPrivate($hexPrivateKey)
-            ->toAddress($toAddress)
-            ->withValueInSatoshis($valueSatoshis)
-            ->build()
-            ->create($apiContext, $restCall);
-
-        return $microTX;
-    }
-
-    /**
-     * Send a microtransaction signing it on server side (sending the private key to the server).
-     * Same functionality as fromPrivate method but using WIF format for private key.
-     *
-     * @param string $wif
-     * @param string $toAddress
-     * @param int $valueSatoshis
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return MicroTX
-     */
-    public static function fromWif($wif, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
-    {
-        $microTX = MicroTXBuilder::aMicroTX()
-            ->fromWif($wif)
-            ->toAddress($toAddress)
-            ->withValueInSatoshis($valueSatoshis)
-            ->build()
-            ->create($apiContext, $restCall);
-
-        return $microTX;
     }
 
     /**

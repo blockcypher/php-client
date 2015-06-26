@@ -10,7 +10,7 @@ require __DIR__ . '/../bootstrap.php';
 
 // ### Create and Send a MicroTX (server-side signing)
 try {
-    $microTX = \BlockCypher\Api\MicroTX::fromWif(
+    $microTX = \BlockCypher\Client\MicroTXClient::sendWithWif(
         "BpouCdZ5dXbjcUDQBj8ZVYBbSPtWYDQHxuDcP48VA6Q7dZuqW4UJ", // wif
         "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
         10000, // value (satoshis)

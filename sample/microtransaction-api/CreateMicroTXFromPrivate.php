@@ -10,7 +10,7 @@ require __DIR__ . '/../bootstrap.php';
 
 // ### Create, Sign and Send a MicroTX (server-side signing)
 try {
-    $microTX = \BlockCypher\Api\MicroTX::fromPrivate(
+    $microTX = \BlockCypher\Client\MicroTXClient::sendWithPrivateKey(
         "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff", // private key
         "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
         10000, // value (satoshis)

@@ -22,6 +22,7 @@ v1.0.0
 * Added Push Raw Transaction Endpoint
 * Multisign txs (fund and spend)
 * Improved usability for MicroTX
+* Extracted methods from MicroTX to MicroTXClient
 
 v1.0.0-beta
 -----------

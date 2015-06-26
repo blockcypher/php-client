@@ -14,7 +14,7 @@ $apiContext = ApiContext::create(
     array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$microTX = \BlockCypher\Api\MicroTX::fromPubkey(
+$microTX = \BlockCypher\Client\MicroTXClient::sendSigned(
     "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff", // private key
     "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
     10000, // value (satoshis)
