@@ -33,6 +33,6 @@ $output->setValue(1000); // Satoshis
 $request = clone $tx;
 
 // ### Create New TX
-$output = $tx->create($apiContext);
+$txSkeleton = $tx->create($apiContext);
 
-ResultPrinter::printResult("New TX Endpoint", "TXSkeleton", $output->getTx()->getHash(), $request, $output);
+ResultPrinter::printResult("New TX Endpoint", "TXSkeleton", $output->getTx()->getHash(), $request, $txSkeleton);
