@@ -2,8 +2,6 @@
 
 namespace BlockCypher\Crypto;
 
-use BitWasp\Bitcoin\Bitcoin;
-use BitWasp\Bitcoin\Key\PrivateKeyFactory;
 use BlockCypher\Validation\ArgumentArrayValidator;
 use BlockCypher\Validation\CoinSymbolValidator;
 
@@ -37,16 +35,11 @@ class PrivateKeyList
         CoinSymbolValidator::validate($coinSymbol, 'coinSymbol');
 
         $network = CoinSymbolNetworkMapping::getNetwork($coinSymbol);
-        $ecAdapter = Bitcoin::getEcAdapter();
 
         $privateKeyList = array();
         foreach ($hexPrivateKeys as $hexPrivateKey) {
-
-            // TODO: Code Review. Use PrivateKeyManipulator?
-
-            // Import from compressed private key
             $compressed = true;
-            $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed, $ecAdapter);
+            $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($hexPrivateKey, $compressed);
 
             // Get address (used as array key)
             $publicKey = $privateKey->getPublicKey();
@@ -61,7 +54,7 @@ class PrivateKeyList
     /**
      * Append Key to the list.
      *
-     * @param string $key
+     * @param PrivateKey $key
      * @param string $address
      * @return $this
      * @throws \Exception
@@ -116,7 +109,7 @@ class PrivateKeyList
     }
 
     /**
-     * @return string[]
+     * @return PrivateKey[]
      */
     public function getKeys()
     {

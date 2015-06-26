@@ -24,7 +24,6 @@ class CoinSymbolNetworkMapping
 
         switch ($coinSymbol) {
             case 'btc':
-                echo "coin symbol $coinSymbol";
                 $network = NetworkFactory::bitcoin();
                 break;
             case 'btc-testnet':

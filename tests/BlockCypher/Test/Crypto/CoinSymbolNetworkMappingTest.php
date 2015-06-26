@@ -1,6 +1,6 @@
 <?php
 
-namespace BlockCypher\Test\Validation;
+namespace BlockCypher\Test\Crypto;
 
 use BlockCypher\Core\BlockCypherCoinSymbolConstants;
 use BlockCypher\Crypto\CoinSymbolNetworkMapping;
