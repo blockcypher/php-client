@@ -35,4 +35,4 @@ $request = clone $tx;
 // ### Create New TX
 $txSkeleton = $tx->create($apiContext);
 
-ResultPrinter::printResult("New TX Endpoint", "TXSkeleton", $output->getTx()->getHash(), $request, $txSkeleton);
+ResultPrinter::printResult("New TX Endpoint", "TXSkeleton", $txSkeleton->getTx()->getHash(), $request, $txSkeleton);

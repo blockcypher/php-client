@@ -29,12 +29,12 @@ $request = clone $txSkeleton;
 
 try {
     // ### Send TX to the network
-    $output = $txSkeleton->send($apiContexts['BTC.test3']);
+    $txSkeleton = $txSkeleton->send($apiContexts['BTC.test3']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Send Transaction", "TXSkeleton", null, $request, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Send Transaction", "TXSkeleton", $output->getTx()->getHash(), $request, $output);
+ResultPrinter::printResult("Send Transaction", "TXSkeleton", $txSkeleton->getTx()->getHash(), $request, $txSkeleton);
 
 return $output;
