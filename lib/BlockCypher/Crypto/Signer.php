@@ -7,6 +7,7 @@ use BitWasp\Bitcoin\Crypto\EcAdapter\EcAdapterInterface;
 use BitWasp\Bitcoin\Crypto\Random\Rfc6979;
 use BitWasp\Bitcoin\Key\PrivateKeyInterface;
 use BitWasp\Buffertools\Buffer;
+use BlockCypher\Validation\ArgumentArrayValidator;
 
 /**
  * Class Signer
@@ -23,9 +24,7 @@ class Signer
      */
     public static function signMultiple($hexDataToSign, $privateKey)
     {
-        if (!is_array($hexDataToSign)) {
-            throw new \InvalidArgumentException("Signer::signMultiple, param hexDataToSign must be an array");
-        }
+        ArgumentArrayValidator::validate($hexDataToSign, 'hexDataToSign');
 
         $signatures = array();
         foreach ($hexDataToSign as $tosign) {
