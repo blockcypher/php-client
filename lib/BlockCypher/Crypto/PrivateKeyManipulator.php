@@ -4,6 +4,7 @@ namespace BlockCypher\Crypto;
 
 use BitWasp\Bitcoin\Key\PrivateKeyFactory;
 use BitWasp\Bitcoin\Key\PrivateKeyInterface;
+use BlockCypher\Validation\CoinSymbolValidator;
 
 /**
  * Class PrivateKeyManipulator
@@ -77,5 +78,23 @@ class PrivateKeyManipulator
     {
         $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed);
         return $privateKey;
+    }
+
+    /**
+     * @param PrivateKeyInterface $privateKey
+     * @param string $coinSymbol
+     * @return mixed
+     * @throws \Exception
+     */
+    public static function getAddressFromPrivateKey($privateKey, $coinSymbol)
+    {
+        CoinSymbolValidator::validate($coinSymbol, 'coinSymbol');
+
+        $network = CoinSymbolNetworkMapping::getNetwork($coinSymbol);
+
+        $publicKey = $privateKey->getPublicKey();
+        $address = $publicKey->getAddress()->getAddress($network);
+
+        return $address;
     }
 }

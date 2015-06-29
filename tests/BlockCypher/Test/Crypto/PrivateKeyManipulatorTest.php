@@ -12,11 +12,18 @@ use BlockCypher\Crypto\PrivateKeyManipulator;
  */
 class PrivateKeyManipulatorTest extends \PHPUnit_Framework_TestCase
 {
-    /** Sample BTC testnet address */
-    const ADDRESS = 'n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4';
     const ADDRESS_PRIVATE_KEY = '1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e';
-    const ADDRESS_WIF = 'cNJ96rBRnL1dmcUdbRZjpRqTPRiChXWTJtR4u6WRUB4uGXQBynkH';
-    const ADDRESS_PUBLIC_KEY = '0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf';
+    const /** @noinspection SpellCheckingInspection */
+        ADDRESS_WIF = 'cNJ96rBRnL1dmcUdbRZjpRqTPRiChXWTJtR4u6WRUB4uGXQBynkH';
+    const /** @noinspection SpellCheckingInspection */
+        ADDRESS_PUBLIC_KEY = '0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf';
+    const /** @noinspection SpellCheckingInspection */
+        ADDRESS_BTC_TESTNET = 'n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4'; // btc-testnet
+    const /** @noinspection SpellCheckingInspection */
+        ADDRESS_BTC = '1Nh5FUrx1mxRM9DzoG1vtWq84KiZJYsdJT';
+    const ADDRESS_DOGE = 'DSqAnjobKBrht9QbXr1VSGziwTSrcPrykZ'; // btc-testnet
+
+    protected $privateKey;
 
     /**
      * @test
@@ -76,5 +83,31 @@ class PrivateKeyManipulatorTest extends \PHPUnit_Framework_TestCase
     should_throw_an_exception_importing_a_private_key_with_invalid_format()
     {
         PrivateKeyManipulator::importPrivateKey('INVALID PRIVATE KEY');
+    }
+
+    /**
+     * @test
+     * @dataProvider addressGenerationProvider
+     * @param string $coinSymbol
+     * @param string $address
+     */
+    public function
+    should_generate_a_network_address_from_private_key($coinSymbol, $address)
+    {
+        $this->assertEquals($address, PrivateKeyManipulator::getAddressFromPrivateKey($this->privateKey, $coinSymbol));
+    }
+
+    public function addressGenerationProvider()
+    {
+        return array(
+            array('btc', self::ADDRESS_BTC),
+            array('btc-testnet', self::ADDRESS_BTC_TESTNET),
+            array('doge', self::ADDRESS_DOGE),
+        );
+    }
+
+    protected function setUp()
+    {
+        $this->privateKey = PrivateKeyManipulator::importPrivateKeyFromHex(self::ADDRESS_PRIVATE_KEY, true);
     }
 }

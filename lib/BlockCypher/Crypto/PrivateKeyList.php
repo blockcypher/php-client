@@ -34,16 +34,12 @@ class PrivateKeyList
         ArgumentArrayValidator::validate($hexPrivateKeys, 'hexPrivateKeys');
         CoinSymbolValidator::validate($coinSymbol, 'coinSymbol');
 
-        $network = CoinSymbolNetworkMapping::getNetwork($coinSymbol);
-
         $privateKeyList = array();
         foreach ($hexPrivateKeys as $hexPrivateKey) {
             $compressed = true;
             $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($hexPrivateKey, $compressed);
 
-            // Get address (used as array key)
-            $publicKey = $privateKey->getPublicKey();
-            $address = $publicKey->getAddress()->getAddress($network);
+            $address = PrivateKeyManipulator::getAddressFromPrivateKey($privateKey, $coinSymbol);
 
             $privateKeyList[$address] = $privateKey;
         }

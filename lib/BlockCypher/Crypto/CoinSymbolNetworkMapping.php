@@ -33,19 +33,20 @@ class CoinSymbolNetworkMapping
                 $network = NetworkFactory::litecoin();
                 break;
             case 'doge':
-                //$network = NetworkFactory::dogecoin();
-                throw new \Exception("Unsupported coin symbol: $coinSymbol by php-client");
+                $network = NetworkFactory::create('1e', '16', '9e')
+                    ->setHDPubByte('02fd3929')
+                    ->setHDPrivByte('02fd3955')
+                    ->setNetMagicBytes('c0c0c0c0');
                 break;
             case 'uro':
-                //$network = NetworkFactory::uro();
-                throw new \Exception("Unsupported coin symbol: $coinSymbol by php-client");
+                throw new \Exception("Unsupported coin symbol: $coinSymbol");
                 break;
             case 'bcy':
-                //$network = NetworkFactory::BlockCypherTestnet();
-                throw new \Exception("Unsupported coin symbol: $coinSymbol by php-client");
+                // TODO: pending to test with transaction
+                throw new \Exception("Unsupported coin symbol: $coinSymbol");
                 break;
             default:
-                throw new \Exception("Unsupported coin symbol: $coinSymbol");
+                throw new \Exception("Unsupported coin symbol: $coinSymbol by php-client");
         }
 
         return $network;

@@ -20,7 +20,7 @@ class CoinSymbolNetworkMappingTest extends \PHPUnit_Framework_TestCase
             array('btc'),
             array('btc-testnet'),
             array('ltc'),
-            //array('doge'),
+            array('doge'),
             //array('uro'),
             //array('bcy'),
         );
@@ -36,7 +36,6 @@ class CoinSymbolNetworkMappingTest extends \PHPUnit_Framework_TestCase
             array(1),
             array(1.0),
             array(true),
-            array('doge'),
             array('uro'),
             array('bcy'),
         );
