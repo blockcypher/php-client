@@ -8,9 +8,11 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$microTXClient = new \BlockCypher\Client\MicroTXClient();
+
 // ### Create and Send a MicroTX (server-side signing)
 try {
-    $microTX = \BlockCypher\Client\MicroTXClient::sendWithWif(
+    $microTX = $microTXClient->sendWithWif(
         "BpouCdZ5dXbjcUDQBj8ZVYBbSPtWYDQHxuDcP48VA6Q7dZuqW4UJ", // wif
         "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
         10000, // value (satoshis)

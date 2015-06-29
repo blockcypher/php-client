@@ -16,9 +16,6 @@ use BlockCypher\Transport\BlockCypherRestCall;
  */
 class MicroTXClient
 {
-    // TODO: Code Review. Remove $apiContext and $restCall from methods and add them to constructor
-    // and use the Client with an instance not static methods?
-
     /**
      * Send a microtransaction signing it locally (without sending the private key to the server)
      *
@@ -29,7 +26,7 @@ class MicroTXClient
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return MicroTX
      */
-    public static function sendSigned($hexPrivateKey, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
+    public function sendSigned($hexPrivateKey, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
     {
         $compressed = true;
         $pubkey = PrivateKeyManipulator::generateHexPubKeyFromHexPrivKey($hexPrivateKey, $compressed);
@@ -56,7 +53,7 @@ class MicroTXClient
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return MicroTX
      */
-    public static function sendWithPrivateKey($hexPrivateKey, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
+    public function sendWithPrivateKey($hexPrivateKey, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
     {
         $microTX = MicroTXBuilder::aMicroTX()
             ->fromPrivate($hexPrivateKey)
@@ -79,7 +76,7 @@ class MicroTXClient
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return MicroTX
      */
-    public static function sendWithWif($wif, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
+    public function sendWithWif($wif, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
     {
         $microTX = MicroTXBuilder::aMicroTX()
             ->fromWif($wif)
