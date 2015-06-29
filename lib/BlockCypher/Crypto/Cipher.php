@@ -1,13 +1,13 @@
 <?php
 
-namespace BlockCypher\Security;
+namespace BlockCypher\Cipher;
 
 /**
  * Class Cipher
  *
  * Helper class to encrypt/decrypt data with secret key
  *
- * @package BlockCypher\Security
+ * @package BlockCypher\Cipher
  */
 class Cipher
 {
