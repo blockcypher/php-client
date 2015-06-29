@@ -4,8 +4,8 @@
 //
 // This sample code demonstrate how you can create a new transaction and send it to the network, as documented here at:
 // <a href="http://dev.blockcypher.com/#creating-transactions">http://dev.blockcypher.com/#creating-transactions</a>
-// API used: POST /v1/btc/main/txs/new and
-// POST /v1/btc/main/txs/send
+// API used: POST /v1/doge/main/txs/new and
+// POST /v1/doge/main/txs/send
 
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
 $txSkeleton = require 'CreateTransactionWithTXBuilderDogeMain.php';
@@ -25,8 +25,8 @@ try {
     exit(1);
 }
 // Source and Destination addresses used in this sample
-// https://live.blockcypher.com/btc-testnet/address/DGKpPALLfKA2bfTXQmHrUCBuNsX5DBGvjH/
-// https://live.blockcypher.com/btc-testnet/address/DJ4bg6Reh5CHZEGYEfWFj6ubPWNL693ngM/
+// https://live.blockcypher.com/doge/address/DGKpPALLfKA2bfTXQmHrUCBuNsX5DBGvjH/
+// https://live.blockcypher.com/doge/address/DJ4bg6Reh5CHZEGYEfWFj6ubPWNL693ngM/
 
 // For sample purposes only.
 $request = clone $txSkeleton;

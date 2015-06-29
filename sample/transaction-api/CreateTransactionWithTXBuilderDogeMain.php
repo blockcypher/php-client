@@ -5,7 +5,7 @@
 // This sample code demonstrate how you can create a new transaction, as documented here at:
 // <a href="http://dev.blockcypher.com/#creating-transactions">http://dev.blockcypher.com/#creating-transactions</a>
 // Destination address is a multisign address.
-// API used: POST /v1/btc/main/txs/new
+// API used: POST /v1/doge/main/txs/new
 
 require __DIR__ . '/../bootstrap.php';
 
