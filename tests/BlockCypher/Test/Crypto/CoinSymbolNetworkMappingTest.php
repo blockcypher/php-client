@@ -22,7 +22,7 @@ class CoinSymbolNetworkMappingTest extends \PHPUnit_Framework_TestCase
             array('ltc'),
             array('doge'),
             //array('uro'),
-            //array('bcy'),
+            array('bcy'),
         );
     }
 
@@ -37,7 +37,6 @@ class CoinSymbolNetworkMappingTest extends \PHPUnit_Framework_TestCase
             array(1.0),
             array(true),
             array('uro'),
-            array('bcy'),
         );
     }
 

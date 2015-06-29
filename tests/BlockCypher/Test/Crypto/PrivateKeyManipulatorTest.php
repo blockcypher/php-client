@@ -18,10 +18,12 @@ class PrivateKeyManipulatorTest extends \PHPUnit_Framework_TestCase
     const /** @noinspection SpellCheckingInspection */
         ADDRESS_PUBLIC_KEY = '0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf';
     const /** @noinspection SpellCheckingInspection */
-        ADDRESS_BTC_TESTNET = 'n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4'; // btc-testnet
+        ADDRESS_BTC_TESTNET = 'n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4';
     const /** @noinspection SpellCheckingInspection */
         ADDRESS_BTC = '1Nh5FUrx1mxRM9DzoG1vtWq84KiZJYsdJT';
-    const ADDRESS_DOGE = 'DSqAnjobKBrht9QbXr1VSGziwTSrcPrykZ'; // btc-testnet
+    const /** @noinspection SpellCheckingInspection */
+        ADDRESS_DOGE = 'DSqAnjobKBrht9QbXr1VSGziwTSrcPrykZ';
+    const ADDRESS_BCY = 'CEpMqQujBeU5RqzLTb1XyuBN3wg2auyUvQ';
 
     protected $privateKey;
 
@@ -103,6 +105,7 @@ class PrivateKeyManipulatorTest extends \PHPUnit_Framework_TestCase
             array('btc', self::ADDRESS_BTC),
             array('btc-testnet', self::ADDRESS_BTC_TESTNET),
             array('doge', self::ADDRESS_DOGE),
+            array('bcy', self::ADDRESS_BCY),
         );
     }
 
