@@ -1,6 +1,6 @@
 <?php
 
-namespace BlockCypher\Cipher;
+namespace BlockCypher\Crypto;
 
 /**
  * Class Cipher
