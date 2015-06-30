@@ -17,8 +17,7 @@ script:
 - phpunit
 after_success:
 - php vendor/bin/coveralls -v -c .coveralls.yml
-- if [ $TRAVIS_PHP_VERSION = '5.6' ] && [ $TRAVIS_BRANCH = 'master' ] && [ $TRAVIS_PULL_REQUEST
-  = 'false' ]; then sh generate-api.sh; fi
+- if [ $TRAVIS_PHP_VERSION = '5.6' ] && [ $TRAVIS_BRANCH = 'master' ] && [ $TRAVIS_PULL_REQUEST = 'false' ]; then sh generate-api.sh; fi
 notifications:
   email:
     recipients:
