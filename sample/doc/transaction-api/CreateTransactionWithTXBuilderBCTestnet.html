@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\CreateTransactionWithTXBuilderBCTestnet</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\CreateTransactionWithTXBuilderBCTestnet"><meta name="groc-project-path" content="transaction-api\CreateTransactionWithTXBuilderBCTestnet.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\CreateTransactionWithTXBuilderBCTestnet.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="create-tx-sample-without-sending-it">Create TX Sample (without sending it)</h1>
+<p>This sample code demonstrate how you can create a new transaction, as documented here at:
+<a href="http://dev.blockcypher.com/#creating-transactions"><a href="http://dev.blockcypher.com/#creating-transactions">http://dev.blockcypher.com/#creating-transactions</a></a>
+Destination address is a multisign address.
+API used: POST /v1/bcy/test/txs/new</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Create a new instance of TX object</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$tx</span> = <span class="hljs-keyword">new</span> \BlockCypher\Api\TX();
+
+<span class="hljs-variable">$input</span> = \BlockCypher\Builder\TXInputBuilder::aTXInput()
+    -&gt;addAddress(<span class="hljs-string">"C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm"</span>)
+    -&gt;build();
+
+<span class="hljs-variable">$output</span> = \BlockCypher\Builder\TXOutputBuilder::aTXOutput()
+    -&gt;addAddress(<span class="hljs-string">"C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi"</span>)
+    -&gt;withValue(<span class="hljs-number">1000</span>)
+    -&gt;build();
+
+<span class="hljs-variable">$tx</span> = \BlockCypher\Builder\TXBuilder::aTX()
+    -&gt;addTXInput(<span class="hljs-variable">$input</span>)
+    -&gt;addTXOutput(<span class="hljs-variable">$output</span>)
+    -&gt;build();</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>For Sample Purposes Only.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$tx</span>;
+
+<span class="hljs-keyword">try</span> {</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="create-new-tx">Create New TX</h3></div></div></div><div class="segment"><div class="code"><div class="wrapper">    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$tx</span>-&gt;create(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BCY.test'</span>]);
+} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Created TX BlockCypher Testnet"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}
+
+ResultPrinter::printResult(<span class="hljs-string">"Created TX BlockCypher Testnet"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$request</span>, <span class="hljs-variable">$txSkeleton</span>);
+
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$txSkeleton</span>;</div></div></div></div></body></html>
