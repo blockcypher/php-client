@@ -108,8 +108,16 @@ class BlockCypherLoggingManager
     {
         if ($this->isLoggingEnabled) {
             $config = BlockCypherConfigManager::getInstance()->getConfigHashmap();
+
+            if (isset($config['mode'])) {
+                $configMode = $config['mode'];
+            } else {
+                // mode has not been configured by user
+                $configMode = null;
+            }
+
             // Check if logging in live
-            if ($config['mode'] == 'live') {
+            if ($configMode == 'live') {
                 // Live should not have logging level above INFO.
                 if ($this->loggingLevel >= BlockCypherLoggingLevel::INFO) {
                     // If it is at Debug Level, throw an warning in the log.
