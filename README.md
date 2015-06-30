@@ -52,20 +52,34 @@ __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP S
 
 ```php
 <?php
-// Require the Composer autoloader.
-require 'vendor/autoload.php';
+// Autoload the SDK Package. Installed via direct download.
+require __DIR__  . '/php-client/autoload.php';
+// Require the Composer autoloader. Installed via composer
+//require 'vendor/autoload.php';
 
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Rest\ApiContext;
+use BlockCypher\Api\Address;
+
+// Provide your Token. Replace the given one with your app Token
+// https://accounts.blockcypher.com/dashboard
+$token = 'c0afcccdde5081d6429de37d16166ead';
+
+// SDK config
+$config = array(
+    'mode' => 'sandbox',
+    'log.LogEnabled' => true,
+    'log.FileName' => 'BlockCypher.log',
+    'log.LogLevel' => 'DEBUG', // PLEASE USE 'INFO' LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
+    'validation.level' => 'log',
+);
 
 $apiContext = ApiContext::create(
-    'test', 'bcy', 'v1',
+    'main', 'btc', 'v1',
     new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
-    array(
-        'log.LogEnabled' => true, 
-        'log.FileName' => 'BlockCypher.log', 
-        'log.LogLevel' => 'DEBUG'
-));
+    $config
+);
+ApiContext::setDefault($apiContext);
 ```
 
 ### Get Address info
@@ -74,7 +88,10 @@ $apiContext = ApiContext::create(
 <?php
 use BlockCypher\Api\Address;
 
-$address = Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD');  
+$address = Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD');
+
+echo "JSON Address: " . $address->toJson() . "\n";
+var_dump($address);
 ```   
 
 ### Send a microtransaction
