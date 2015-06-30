@@ -114,6 +114,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateAddressDogeMain.php",
+              "projectPath": "address-api\\CreateAddressDogeMain.php",
+              "targetPath": "address-api\\CreateAddressDogeMain",
+              "pageTitle": "address-api\\CreateAddressDogeMain",
+              "title": "CreateAddressDogeMain"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateBcyTestAddress.php",
             "projectPath": "address-api\\CreateBcyTestAddress.php",
             "targetPath": "address-api\\CreateBcyTestAddress",
@@ -1026,8 +1044,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "pageTitle": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample",
                   "title": "CreateMicroTXFromPrivateDocsSample"
               },
-              "depth": 2,
-              "outline": []
+              "depth": 2
           }, {
               "type": "file",
               "data": {
@@ -1063,8 +1080,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "pageTitle": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample",
                   "title": "CreateMicroTXFromPubkeyDocsSample"
               },
-              "depth": 2,
-              "outline": []
+              "depth": 2
           }, {
               "type": "file",
               "data": {
@@ -1429,21 +1445,21 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "children": [
               {
                   "type": "file",
-                  "data": {
-                      "language": {
-                          "nameMatchers": [{}, ".fbp"],
-                          "pygmentsLexer": "php",
-                          "singleLineComment": ["//"],
-                          "ignorePrefix": "}",
-                          "foldPrefix": "^",
-                          "name": "PHP"
-                      },
-                      "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\sandbox\\index.php",
-                      "projectPath": "sandbox\\index.php",
-                      "targetPath": "sandbox\\index",
-                      "pageTitle": "sandbox\\index",
-                      "title": "index"
-                  },
+          "data": {
+              "language": {
+                  "nameMatchers": [{}, ".fbp"],
+                  "pygmentsLexer": "php",
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "PHP"
+              },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\sandbox\\index.php",
+              "projectPath": "sandbox\\index.php",
+              "targetPath": "sandbox\\index",
+              "pageTitle": "sandbox\\index",
+              "title": "index"
+          },
                   "depth": 2
               }
           ]
@@ -1512,6 +1528,42 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransactionBCTesnet.php",
+              "projectPath": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet.php",
+              "targetPath": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet",
+              "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet",
+              "title": "CreateAndSignAndSendTransactionBCTesnet"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransactionDogeMain.php",
+                  "projectPath": "transaction-api\\CreateAndSignAndSendTransactionDogeMain.php",
+                  "targetPath": "transaction-api\\CreateAndSignAndSendTransactionDogeMain",
+                  "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionDogeMain",
+                  "title": "CreateAndSignAndSendTransactionDogeMain"
+              },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransaction.php",
             "projectPath": "transaction-api\\CreateTransaction.php",
             "targetPath": "transaction-api\\CreateTransaction",
@@ -1602,6 +1654,42 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilderBCTestnet.php",
+              "projectPath": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet.php",
+              "targetPath": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet",
+              "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet",
+              "title": "CreateTransactionWithTXBuilderBCTestnet"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilderDogeMain.php",
+                  "projectPath": "transaction-api\\CreateTransactionWithTXBuilderDogeMain.php",
+                  "targetPath": "transaction-api\\CreateTransactionWithTXBuilderDogeMain",
+                  "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderDogeMain",
+                  "title": "CreateTransactionWithTXBuilderDogeMain"
+              },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithThirdPartySoftware.php",
             "projectPath": "transaction-api\\CreateTransactionWithThirdPartySoftware.php",
             "targetPath": "transaction-api\\CreateTransactionWithThirdPartySoftware",
@@ -1638,6 +1726,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisignAddrWithBuilder.php",
+              "projectPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder.php",
+              "targetPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder",
+              "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder",
+              "title": "CreateTxToFundMultisignAddrWithBuilder"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint.php",
             "projectPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint.php",
             "targetPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
@@ -1656,6 +1762,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisignFundsWithBuilder.php",
+              "projectPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder.php",
+              "targetPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder",
+              "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder",
+              "title": "CreateTxToSpendMultisignFundsWithBuilder"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint.php",
             "projectPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint.php",
             "targetPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
@@ -1806,7 +1930,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetTransaction",
             "title": "GetTransaction"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get TX Sample",
+                          "slug": "get-tx-sample"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {

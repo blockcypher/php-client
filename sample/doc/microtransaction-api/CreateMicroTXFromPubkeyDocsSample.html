@@ -28,11 +28,14 @@
                 <span class="hljs-string">'/../bootstrap.php'</span>;
 
                 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
-                        class="hljs-title">Api</span>\<span class="hljs-title">MicroTX</span>;
-                <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
                         class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
                 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
+                        class="hljs-title">Client</span>\<span class="hljs-title">MicroTXClient</span>;
+                <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
                         class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
+
+                <span class="hljs-variable">$microTXClient</span> = <span class="hljs-keyword">new</span>
+                MicroTXClient();
 
                 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
                 <span class="hljs-string">'test'</span>, <span class="hljs-string">'bcy'</span>, <span
@@ -44,7 +47,7 @@
                 <span class="hljs-string">'DEBUG'</span>)
                 );
 
-                <span class="hljs-variable">$microTX</span> = \BlockCypher\Api\MicroTX::fromPubkey(
+                <span class="hljs-variable">$microTX</span> = <span class="hljs-variable">$microTXClient</span>-&gt;sendSigned(
                 <span class="hljs-string">"2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff"</span>,
                 <span class="hljs-comment">// private key</span>
                 <span class="hljs-string">"C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi"</span>, <span class="hljs-comment">// to address</span>
