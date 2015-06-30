@@ -861,6 +861,86 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
+                                <h5>Fund multisign address*
+                                    <small>(source address must contains enough balance)</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="transaction-api/CreateTransactionToFundMultisignAddress.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transaction-api/CreateTransactionToFundMultisignAddress.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Spend multisign funds*
+                                    <small>(source address must contains enough balance)</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="transaction-api/CreateTransactionToSpendMultisignFunds.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transaction-api/CreateTransactionToSpendMultisignFunds.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Fund multisign address using TXBuilder *
+                                    <small>(source address must contains enough balance)</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="transaction-api/CreateTxToFundMultisignAddrWithBuilder.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transaction-api/CreateTxToFundMultisignAddrWithBuilder.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Spend multisign funds using TXBuilder *
+                                    <small>(source address must contains enough balance)</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="transaction-api/CreateTxToSpendMultisignFundsWithBuilder.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transaction-api/CreateTxToSpendMultisignFundsWithBuilder.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
                                 <h5>Embed data on Blockchain</h5>
                             </div>
                             <div class="col-md-4">
