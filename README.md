@@ -7,8 +7,6 @@
 
 __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP SDK and samples for REST API.
 
-> **Before starting to use the sdk, please be aware it´s still a beta.
-
 ## SDK Documentation
 
 [ Our BlockCypher-PHP-SDK Page ](http://blockcypher.github.io/php-client/) includes all the documentation related to PHP SDK. Everything from SDK Wiki, to Sample Codes, to Releases. Here are few quick links to get you there faster.
@@ -16,6 +14,7 @@ __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP S
 * [ BlockCypher-PHP-SDK Home Page ](http://blockcypher.github.io/php-client/)
 * [ Wiki ](https://github.com/blockcypher/php-client/wiki)
 * [ Samples ](http://blockcypher.github.io/php-client/sample/)
+* [ PHP wallet sample](https://github.com/blockcypher/php-wallet-sample)
 * [ Installation ](https://github.com/blockcypher/php-client/wiki/Installation)
 * [ Make your First SDK Call](https://github.com/blockcypher/php-client/wiki/Making-First-Call)
 * [ BlockCypher Developer Docs] (http://dev.blockcypher.com/)
@@ -39,16 +38,61 @@ __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP S
 
 ###Currently unavailable/upcoming REST API features
 
-   * [Address Wallets API](http://dev.blockcypher.com/#wallet_api)
-   * [Payments and Forwarding](http://dev.blockcypher.com/#payments)
-   * [Creating Transactions](http://dev.blockcypher.com/#creating_transactions)
+   * TXClient. It makes even easier to build tx.
+   * Install from phar
    
 ###New samples
 
-   - PHP wallet demo.
-   - Faucet use.
    - Capturing callback sample.
    - Managing errors in batching requests.
+   
+## Quick Examples
+
+### Setup ApiContext
+
+```php
+<?php
+// Require the Composer autoloader.
+require 'vendor/autoload.php';
+
+use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Rest\ApiContext;
+
+$apiContext = ApiContext::create(
+    'test', 'bcy', 'v1',
+    new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
+    array(
+        'log.LogEnabled' => true, 
+        'log.FileName' => 'BlockCypher.log', 
+        'log.LogLevel' => 'DEBUG'
+));
+```
+
+### Get Address info
+
+```php
+<?php
+use BlockCypher\Api\Address;
+
+$address = Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD');  
+```   
+
+### Send a microtransaction
+
+```php
+<?php
+$microTXClient = new MicroTXClient();
+
+try {
+    $microTX = $microTXClient->sendSigned(
+        "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff", // private key
+        "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
+        10000, // value (satoshis)
+    );
+} catch (\Exception $e) {
+    echo "There was an error sending the microtx.\n";
+}
+```   
 
    
    
