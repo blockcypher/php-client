@@ -1,8 +1,7 @@
 <?php
 
-// # Create Testnet3 Address Sample
-// This sample code demonstrate how you can create
-// an address.
+// # Create Testnet3 Address
+// This sample code demonstrate how you can create an address.
 
 require __DIR__ . '/../bootstrap.php';
 

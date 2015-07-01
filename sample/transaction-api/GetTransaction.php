@@ -1,7 +1,7 @@
 <?php
 
-// # Get TX Sample
-// The Block resource allows you to retrieve details about a TX.
+// # Get Transaction
+// The TX resource allows you to retrieve details about a transaction.
 //
 // API called: '/v1/btc/main/txs/f854aebae...bd5063449'
 

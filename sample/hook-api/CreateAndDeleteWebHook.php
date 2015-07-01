@@ -1,17 +1,19 @@
 <?php
 
-// # Delete WebHook Sample
-//
+// # Delete WebHook
 // This sample code demonstrate how to use this call to a WebHook, as documented here at:
-// http://dev.blockcypher.com/#webhooks
+// <a href="http://dev.blockcypher.com/#webhooks">Using webhooks</a>
+//
 // API used: DELETE /v1/btc/main/hooks/Webhook-Id
 
-// ## Get WebHook Instance
-
+// ## Create Sample WebHook
+// This step is not necessarily required. We are creating a webhook for sample purpose only, so that we would not
+// get an empty list at any point.
+// In real case, you do not need to create any webhook to make this API call.
 /** @var \BlockCypher\Api\WebHook $webHook */
 $webHook = require 'CreateWebHook.php';
 
-// ### Delete WebHook
+// ## Delete WebHook
 try {
     $output = $webHook->delete($apiContexts['BTC.main']);
 } catch (Exception $ex) {

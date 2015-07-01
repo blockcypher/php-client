@@ -1,17 +1,12 @@
 <?php
 
-// # Get Block Sample
-// The Block resource allows you to
-// retrieve details about a Block.
+// # Get Block By Height
+// The Block resource allows you to retrieve details about a Block.
+//
 // API called: '/v1/btc/main/blocks/293000'
 
 require __DIR__ . '/../bootstrap.php';
 
-// The following code takes you through
-// the process of retrieving details about a Block.
-
-/// ### Retrieve Block by height
-// (See bootstrap.php for more on `ApiContext`)
 try {
     $block = \BlockCypher\Api\Block::get('293000', array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {

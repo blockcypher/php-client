@@ -1,11 +1,15 @@
 <?php
 
-// # Spend multisign funds (using builder)
+// # Spend Multisign Funds (using builder)
 //
 // This sample code demonstrate how you can create a new transaction, as documented here at:
 // <a href="http://dev.blockcypher.com/#creating-transactions">http://dev.blockcypher.com/#creating-transactions</a>
+//
 // Destination address is a multisign address.
+//
 // API used: POST /v1/btc/main/txs/new
+//
+// This sample uses builders classes (optional).
 
 require __DIR__ . '/../bootstrap.php';
 

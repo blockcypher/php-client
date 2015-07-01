@@ -403,7 +403,7 @@ if (PHP_SAPI == 'cli') {
                                 <a href="address-api/GetMultipleAddressesBalance.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/address-balance/GetMultipleAddressesBalance.html"
+                                <a href="doc/address-api/GetMultipleAddressesBalance.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -431,7 +431,7 @@ if (PHP_SAPI == 'cli') {
                                 <a href="address-api/GetMultipleFullAddresses.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/full-addresses/GetMultipleFullAddresses.html"
+                                <a href="doc/address-api/GetMultipleFullAddresses.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -616,7 +616,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Generate new address and associated it to a wallet*
+                                <h5>Generate new address and associate it to a wallet*
                                     <small>(Depends on "Create wallet")</small>
                                 </h5>
                             </div>
@@ -901,7 +901,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Fund multisign address using TXBuilder *
+                                <h5>Fund multisign address using TXBuilder*
                                     <small>(source address must contains enough balance)</small>
                                 </h5>
                             </div>
@@ -921,7 +921,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Spend multisign funds using TXBuilder *
+                                <h5>Spend multisign funds using TXBuilder*
                                     <small>(source address must contains enough balance)</small>
                                 </h5>
                             </div>
@@ -1036,7 +1036,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Create from private (with only one method call)</h5>
+                            <div class="col-md-8"><h5>Create from private (using client)</h5>
                             </div>
                             <div class="col-md-4">
                                 <a href="microtransaction-api/CreateMicroTXFromPrivate.php"
@@ -1053,7 +1053,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Create from pubkey (with only one method call)</h5>
+                            <div class="col-md-8"><h5>Create from pubkey (using client)</h5>
                             </div>
                             <div class="col-md-4">
                                 <a href="microtransaction-api/CreateMicroTXFromPubkey.php"
@@ -1070,7 +1070,7 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Create from WIF (with only one method call)</h5>
+                            <div class="col-md-8"><h5>Create from WIF (using client)</h5>
                             </div>
                             <div class="col-md-4">
                                 <a href="microtransaction-api/CreateMicroTXFromWif.php"
@@ -1130,7 +1130,7 @@ if (PHP_SAPI == 'cli') {
                                 <a href="payment-api/CreatePaymentForward.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/payment-api/CreatePayment.html"
+                                <a href="doc/payment-api/CreatePaymentForward.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -1360,7 +1360,7 @@ if (PHP_SAPI == 'cli') {
                                 <a href="signer/Sign.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/introduction/Sign.html"
+                                <a href="doc/signer/Sign.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>

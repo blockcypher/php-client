@@ -1,6 +1,7 @@
 <?php
 
-// # Generate new test BCY address
+// # Generate New BlockCypher Test Address
+//
 // API called: '/v1/bcy/test'
 
 require __DIR__ . '/../bootstrap.php';
@@ -9,12 +10,11 @@ require __DIR__ . '/../bootstrap.php';
 // private keys alongside their respective public address.
 $addressKeyChain = new \BlockCypher\Api\AddressKeyChain();
 
-// Clone request object for sample purposes only.
+/// For sample purposes only
 $request = clone $addressKeyChain;
 
-// (See bootstrap.php for more on `ApiContext`)
 try {
-    /// ### Create new test BCY Address
+    /// Create new test BCY Address
     $addressKeyChain->create($apiContexts['BCY.test']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Generate Test Bcy Address", "AddressKeyChain", null, $request, $ex);

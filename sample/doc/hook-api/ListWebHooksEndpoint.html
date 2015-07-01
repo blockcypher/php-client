@@ -8,7 +8,7 @@ php -f .\sample\hook-api\ListWebHooksEndpoint.php</p></div></div><div class="cod
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
     <span class="hljs-string">'main'</span>, <span class="hljs-string">'btc'</span>, <span class="hljs-string">'v1'</span>,
     <span class="hljs-keyword">new</span> SimpleTokenCredential(<span class="hljs-string">'c0afcccdde5081d6429de37d16166ead'</span>),
-    <span class="hljs-keyword">array</span>(<span class="hljs-string">'log.LogEnabled'</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-string">'log.FileName'</span> =&gt; <span class="hljs-string">'BlockCypher.log'</span>, <span class="hljs-string">'log.LogLevel'</span> =&gt; <span class="hljs-string">'DEBUG'</span>)
+    <span class="hljs-keyword">array</span>(<span class="hljs-string">'mode'</span> =&gt; <span class="hljs-string">'sandbox'</span>, <span class="hljs-string">'log.LogEnabled'</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-string">'log.FileName'</span> =&gt; <span class="hljs-string">'BlockCypher.log'</span>, <span class="hljs-string">'log.LogLevel'</span> =&gt; <span class="hljs-string">'DEBUG'</span>)
 );
 
 <span class="hljs-variable">$webHooks</span> = WebHook::getAll(<span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContext</span>);

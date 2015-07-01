@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="en"><head><title>address-api\GetAddressWithUnspentOnly</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="address-api\GetAddressWithUnspentOnly"><meta name="groc-project-path" content="address-api\GetAddressWithUnspentOnly.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">address-api\GetAddressWithUnspentOnly.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="get-address-only-with-the-unspent-transactions-sample">Get Address Only with the unspent transactions Sample</h1>
-<p>This method allows you to
-retrieve details about an Address only with the unspent transactions.
-API called: &#39;/v1/btc/main/addrs/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD?unspentOnly=true&#39;</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>The following code takes you through
-the process of retrieving details about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
-only with the unspent transactions</p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>override default sample address with GET parameter</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'address'</span>])) {
+<!DOCTYPE html><html lang="en"><head><title>address-api\GetAddressWithUnspentOnly</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="address-api\GetAddressWithUnspentOnly"><meta name="groc-project-path" content="address-api\GetAddressWithUnspentOnly.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">address-api\GetAddressWithUnspentOnly.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="get-utxos">Get UTXOs</h1>
+<p>Get only unspent transaction outputs.
+This method allows you to retrieve details about an Address only with the unspent transactions.</p>
+<p>API called: &#39;/v1/btc/main/addrs/1DEP8i3QJC...62aGvhD?unspentOnly=true&#39;</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
+
+<span class="hljs-comment">/// override default sample address with GET parameter</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'address'</span>])) {
     <span class="hljs-variable">$sampleAddress</span> = filter_input(INPUT_GET, <span class="hljs-string">'address'</span>, FILTER_SANITIZE_SPECIAL_CHARS);
 } <span class="hljs-keyword">else</span> {
     <span class="hljs-variable">$sampleAddress</span> = <span class="hljs-string">'1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'</span>; <span class="hljs-comment">// Default address for samples</span>
 }
 
-<span class="hljs-comment">/// ### Retrieve 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>(See bootstrap.php for more on <code>ApiContext</code>)</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">try</span> {
-
+<span class="hljs-keyword">try</span> {
     <span class="hljs-variable">$params</span> = <span class="hljs-keyword">array</span>(
         <span class="hljs-string">'unspentOnly'</span> =&gt; <span class="hljs-string">'true'</span>, <span class="hljs-comment">// NOTICE: string type not boolean</span>
     );

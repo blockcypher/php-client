@@ -1,14 +1,15 @@
 <?php
 
-// # Delete Wallet Sample
+// # Delete Wallet
 //
 // This sample code demonstrate how you can delete a wallet, as documented here at:
-// <a href="http://dev.blockcypher.com/#wallet_api">http://dev.blockcypher.com/#wallet_api</a>
+// <a href="http://dev.blockcypher.com/#wallets">http://dev.blockcypher.com/#wallets</a>
+//
 // API used: DELETE /v1/btc/main/wallets/Wallet-Name
 
 require __DIR__ . '/../bootstrap.php';
 
-// Delete a new instance of Wallet object
+// Delete a new instance of Wallet object.
 // First you have to run CreateWallet sample to create "alice" wallet
 
 if (isset($_GET['wallet_name'])) {
@@ -17,12 +18,10 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
-// ### Delete Wallet
 try {
-    // Get the Wallet
+    /// Get the Wallet
     $wallet = \BlockCypher\Api\Wallet::get($walletName, array(), $apiContexts['BTC.main']);
-
-    // Delete the Wallet
+    /// Delete the Wallet
     $output = $wallet->delete(array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Deleted Wallet", "Wallet", $walletName, null, $ex);

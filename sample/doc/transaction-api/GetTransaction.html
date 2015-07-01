@@ -1,48 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><title>transaction-api\GetTransaction</title></head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="groc-relative-root" content="../">
-<meta name="groc-document-path" content="transaction-api\GetTransaction">
-<meta name="groc-project-path" content="transaction-api\GetTransaction.php">
-<link rel="stylesheet" type="text/css" media="all" href="../assets/style.css">
-<script type="text/javascript" src="../assets/behavior.js"></script>
-<body>
-<div id="meta">
-    <div class="file-path">transaction-api\GetTransaction.php</div>
-</div>
-<div id="document">
-    <div class="segment">
-        <div class="code">
-            <div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><h1 id="get-tx-sample">Get TX Sample</h1>
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\GetTransaction</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\GetTransaction"><meta name="groc-project-path" content="transaction-api\GetTransaction.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\GetTransaction.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="get-transaction">Get Transaction</h1>
+<p>The TX resource allows you to retrieve details about a transaction.</p>
+<p>API called: &#39;/v1/btc/main/txs/f854aebae...bd5063449&#39;</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
 
-                <p>The Block resource allows you to retrieve details about a TX.</p>
-
-                <p>API called: &#39;/v1/btc/main/txs/f854aebae...bd5063449&#39;</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> .
-                <span class="hljs-string">'/../bootstrap.php'</span>;
-
-                <span class="hljs-keyword">try</span> {
-                <span class="hljs-variable">$transaction</span> = \BlockCypher\Api\TX::get(<span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>,
-                <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span
-                        class="hljs-string">'BTC.main'</span>]);
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$transaction</span> = \BlockCypher\Api\TX::get(<span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
-                ResultPrinter::printError(<span class="hljs-string">"Get TX"</span>, <span
-                        class="hljs-string">"TX"</span>, <span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>,
-                <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
+    ResultPrinter::printError(<span class="hljs-string">"Get TX"</span>, <span class="hljs-string">"TX"</span>, <span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
 }
 
-                ResultPrinter::printResult(<span class="hljs-string">"Get TX"</span>, <span
-                        class="hljs-string">"TX"</span>, <span class="hljs-variable">$transaction</span>-&gt;getHash(),
-                <span class="hljs-keyword">null</span>, <span class="hljs-variable">$transaction</span>);
+ResultPrinter::printResult(<span class="hljs-string">"Get TX"</span>, <span class="hljs-string">"TX"</span>, <span class="hljs-variable">$transaction</span>-&gt;getHash(), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$transaction</span>);
 
 <span class="hljs-keyword">return</span> <span class="hljs-variable">$transaction</span>;</div></div></div></div></body></html>

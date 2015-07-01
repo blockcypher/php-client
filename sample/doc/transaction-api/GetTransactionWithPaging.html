@@ -1,57 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><title>transaction-api\GetTransactionWithPaging</title></head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="groc-relative-root" content="../">
-<meta name="groc-document-path" content="transaction-api\GetTransactionWithPaging">
-<meta name="groc-project-path" content="transaction-api\GetTransactionWithPaging.php">
-<link rel="stylesheet" type="text/css" media="all" href="../assets/style.css">
-<script type="text/javascript" src="../assets/behavior.js"></script>
-<body>
-<div id="meta">
-    <div class="file-path">transaction-api\GetTransactionWithPaging.php</div>
-</div>
-<div id="document">
-    <div class="segment">
-        <div class="code">
-            <div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div>
-        </div>
-    </div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><h1 id="get-transaction-with-paging-sample">Get TX With Paging Sample</h1>
-<p>Inputs and outputs are limited to 20. Use paging to get more.
-API called: &#39;/v1/btc/main/txs/f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449&#39;</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>The following code takes you through
-    the process of retrieving more inputs and outputs from a TX when they exceeds 20</p></div>
-</div>
-    <div class="code">
-        <div class="wrapper"><span class="hljs-comment">/// ### Retrieve TX</span></div>
-    </div>
-</div>
-    <div class="segment">
-        <div class="comments ">
-            <div class="wrapper"><p>(See bootstrap.php for more on <code>ApiContext</code>)</p></div>
-        </div>
-        <div class="code">
-            <div class="wrapper"><span class="hljs-keyword">try</span> {
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\GetTransactionWithPaging</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\GetTransactionWithPaging"><meta name="groc-project-path" content="transaction-api\GetTransactionWithPaging.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\GetTransactionWithPaging.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="get-transactions-with-paging">Get Transactions With Paging</h1>
+<p>Inputs and outputs are limited to 20. Use paging to get more.</p>
+<p>API called: &#39;/v1/btc/main/txs/f854aebae9515...f58bd5063449&#39;</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
+
+<span class="hljs-keyword">try</span> {
     <span class="hljs-variable">$params</span> = <span class="hljs-keyword">array</span>(
         <span class="hljs-string">'instart'</span> =&gt; <span class="hljs-number">1</span>,
         <span class="hljs-string">'outstart'</span> =&gt; <span class="hljs-number">1</span>,
         <span class="hljs-string">'limit'</span> =&gt; <span class="hljs-number">1</span>,
     );
-                <span class="hljs-variable">$transaction</span> = \BlockCypher\Api\TX::get(<span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>,
-                <span class="hljs-variable">$params</span>, <span class="hljs-variable">$apiContexts</span>[<span
-                        class="hljs-string">'BTC.main'</span>]);
+    <span class="hljs-variable">$transaction</span> = \BlockCypher\Api\TX::get(<span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>, <span class="hljs-variable">$params</span>, <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
-                ResultPrinter::printError(<span class="hljs-string">"Get TX Paging Inputs and Outputs"</span>, <span
-                        class="hljs-string">"TX"</span>, <span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>,
-                <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
+    ResultPrinter::printError(<span class="hljs-string">"Get TX Paging Inputs and Outputs"</span>, <span class="hljs-string">"TX"</span>, <span class="hljs-string">'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449'</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
 }
 
-                ResultPrinter::printResult(<span class="hljs-string">"Get TX Paging Inputs and Outputs"</span>, <span
-                        class="hljs-string">"TX"</span>, <span class="hljs-variable">$transaction</span>-&gt;getHash(),
-                <span class="hljs-keyword">null</span>, <span class="hljs-variable">$transaction</span>);
+ResultPrinter::printResult(<span class="hljs-string">"Get TX Paging Inputs and Outputs"</span>, <span class="hljs-string">"TX"</span>, <span class="hljs-variable">$transaction</span>-&gt;getHash(), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$transaction</span>);
 
 <span class="hljs-keyword">return</span> <span class="hljs-variable">$transaction</span>;</div></div></div></div></body></html>

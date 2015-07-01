@@ -1,15 +1,15 @@
 <?php
 
-// # Get All PaymentForwards Sample
-//
+// # List All PaymentForwards
 // Use this call to list all the PaymentForwards, as documented here at:
-// <a href="http://dev.blockcypher.com/#list-payments-endpoint">http://dev.blockcypher.com/#list-payments-endpoint</a>
+// <a href="http://dev.blockcypher.com/#list-payments-endpoint">List Payments Endpoint</a>
+//
 // API used: GET /v1/btc/main/payments?token=<Your-Token>
 
 require __DIR__ . '/../bootstrap.php';
 
-// ### Get List of All PaymentForwards
 try {
+    /// Get List of All PaymentForwards
     $output = \BlockCypher\Api\PaymentForward::getAll(array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("List all PaymentForwards", "PaymentForward[]", null, null, $ex);

@@ -1,24 +1,18 @@
 <?php
 
-// # Get Full Wallet Sample
-// This method allows you to
-// retrieve all details about a given wallet, including full transaction information.
+// # Get Full Wallet
+// This method allows you to retrieve all details about a given wallet, including full transaction information.
+//
 // API called: '/v1/btc/main/addrs/alice/full'
 
 require __DIR__ . '/../bootstrap.php';
 
-// The following code takes you through
-// the process of retrieving all details about this wallet 'alice'
-
-// Wallet must be created
 if (isset($_GET['wallet_name'])) {
     $walletName = filter_input(INPUT_GET, 'wallet_name', FILTER_SANITIZE_SPECIAL_CHARS);
 } else {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
-/// ### Retrieve this wallet 'alice'
-// (See bootstrap.php for more on `ApiContext`)
 try {
     $fullAddress = \BlockCypher\Api\Address::getFullAddress($walletName, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {

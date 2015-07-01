@@ -14,7 +14,7 @@ require __DIR__ . '/../bootstrap.php';
 // (See bootstrap.php for more on `ApiContext`)
 try {
 
-    // List of addresses. You can use height or hash and mix them in the same request
+    // List of addresses
     $addressList = Array(
         '1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE',
         '1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV',

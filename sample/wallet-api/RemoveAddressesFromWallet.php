@@ -1,35 +1,33 @@
 <?php
 
-// # Remove Addresses from Wallet Sample
+// # Remove Addresses from Wallet
 //
 // This sample code demonstrate how you can removes addresses from a wallet, as documented here at:
-// <a href="http://dev.blockcypher.com/#wallet_api">http://dev.blockcypher.com/#wallet_api</a>
-// API used: GET /v1/btc/main/wallets/Wallet-Name/addresses
+// <a href="http://dev.blockcypher.com/#wallets">http://dev.blockcypher.com/#wallets</a>
+//
+// API used: DELETE /v1/btc/main/wallets/Wallet-Name/addresses?address=13cj1Qtf...gQiRM6j
 
-// ## Get Wallet Name and Add Addresses.
 // In samples we are using CreateWallet.php sample to get the created instance of wallet
 // and AddAddressesToWallet to add the address which is going to be removed.
 // You have to run that sample before running this one.
 
 require __DIR__ . '/../bootstrap.php';
 
-// Wallet must be created previously
 if (isset($_GET['wallet_name'])) {
     $walletName = filter_input(INPUT_GET, 'wallet_name', FILTER_SANITIZE_SPECIAL_CHARS);
 } else {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
-// List of addresses to be removed from the wallet
+/// List of addresses to be removed from the wallet
 $addressList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
     "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
 ));
 
-// ### Remove Addresses from the Wallet
 try {
-    // Get Wallet
+    /// Get Wallet
     $wallet = \BlockCypher\Api\Wallet::get($walletName, array(), $apiContexts['BTC.main']);
-    // Remove addresses
+    /// Remove addresses
     $output = $wallet->removeAddresses($addressList, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Remove Addresses from a Wallet", "Wallet", $walletName, $addressList, $ex);

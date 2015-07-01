@@ -1,20 +1,21 @@
 <?php
 
-// # Get WebHook Sample
-//
+// # Get WebHook
 // This sample code demonstrate how you can get a webhook, as documented here at:
-// http://dev.blockcypher.com/#webhooks
+// <a href="http://dev.blockcypher.com/#webhooks">Using webhooks</a>
+//
 // API used: GET /v1/btc/main/hooks/WebHook-Id
 
-// ## Get WebHook ID.
+// ## Create Sample WebHook
 // In samples we are using CreateWebHook.php sample to get the created instance of webhook.
 // However, in real case scenario, we could use just the ID.
 /** @var \BlockCypher\Api\WebHook $webHook */
 $webHook = require 'CreateWebHook.php';
 $webHookId = $webHook->getId();
 
-// ### Get WebHook
+// ## Get WebHook by Id
 try {
+    /// Get WebHook by Id
     $output = \BlockCypher\Api\WebHook::get($webHookId, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get a WebHook", "WebHook", null, $webHookId, $ex);

@@ -1,17 +1,19 @@
 <?php
 
-// # Create and Send MicroTX Sample (server-side signing)
+// # Create and Send with MicroTXClient
+// Server-side signing (Wif)
 //
 // This sample code demonstrate how you can create, sign and send a new microtransaction, as documented here at:
 // <a href="http://dev.blockcypher.com/#microtransaction-endpoint">http://dev.blockcypher.com/#microtransaction-endpoint</a>
+//
 // API used: POST /v1/btc/main/txs/micro
 
 require __DIR__ . '/../bootstrap.php';
 
 $microTXClient = new \BlockCypher\Client\MicroTXClient();
 
-// ### Create and Send a MicroTX (server-side signing)
 try {
+    /// Create and Send a MicroTX (server-side signing)
     $microTX = $microTXClient->sendWithWif(
         "BpouCdZ5dXbjcUDQBj8ZVYBbSPtWYDQHxuDcP48VA6Q7dZuqW4UJ", // wif
         "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address

@@ -1,20 +1,19 @@
 <?php
 
-// # Get All WebHooks Sample
-//
+// # List All WebHooks
 // Use this call to list all the webhooks, as documented here at:
-// http://dev.blockcypher.com/#webhooks
+// <a href="http://dev.blockcypher.com/#webhooks">Using webhooks</a>
+//
 // API used: GET /v1/btc/main/hooks?token=<Your-Token>
 
-// ## List WebHooks
-
+// ## Create Sample WebHook
 // This step is not necessarily required. We are creating a webhook for sample purpose only, so that we would not
 // get an empty list at any point.
 // In real case, you do not need to create any webhook to make this API call.
 /** @var \BlockCypher\Api\WebHook $webHook */
 $webHook = require 'CreateWebHook.php';
 
-// ### Get List of All WebHooks
+// ## Get all webhooks
 try {
     $output = \BlockCypher\Api\WebHook::getAll(array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {

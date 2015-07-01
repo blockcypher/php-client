@@ -1,17 +1,12 @@
 <?php
 
-// # Get Blockchain Sample
-// The Blockchain resource allows you to
-// retrieve details about chains.
+// # Get Blockchain
+// The Blockchain resource allows you to retrieve details about chains.
+//
 // API called: '/v1/btc/main'
 
 require __DIR__ . '/../bootstrap.php';
 
-// The following code takes you through
-// the process of retrieving details about a chain
-
-/// ### Retrieve Blockchain
-// (See bootstrap.php for more on `ApiContext`)
 try {
     $blockchain = \BlockCypher\Api\Blockchain::get('BTC.main', array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
