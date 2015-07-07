@@ -17,6 +17,7 @@ require __DIR__ . '/../bootstrap.php';
 /// Tx inputs
 $input = new \BlockCypher\Api\TXInput();
 $input->setWalletName("5596926E976A1149871172");
+//$input->setWalletName("AC33394F28292099183");
 $input->setWalletToken("c0afcccdde5081d6429de37d16166ead");
 
 /// Tx outputs
@@ -34,7 +35,29 @@ $request = clone $tx;
 
 try {
     $output = $tx->create($apiContexts['BTC.test3']);
-} catch (Exception $ex) {
+} catch (\BlockCypher\Exception\BlockCypherConnectionException $ex) {
+
+    $data = $ex->getData();
+
+    //DEBUG
+    //var_export($data);
+    //die();
+
+    $txSkeleton = new \BlockCypher\Api\TXSkeleton($data);
+
+    //DEBUG
+    //var_dump($txSkeleton);
+    //die();
+
+    //DEBUG
+    //$errorMessages = $txSkeleton->getAllErrorMessages();
+    //var_dump($errorMessages);
+    //die();
+
+    ResultPrinter::printError("Created TX", "TXSkeleton", null, $request, $ex);
+    exit(1);
+
+} catch (\Exception $ex) {
     ResultPrinter::printError("Created TX", "TXSkeleton", null, $request, $ex);
     exit(1);
 }

@@ -9,7 +9,7 @@ namespace BlockCypher\Common;
  * @package BlockCypher\Common
  *
  * @property string error
- * @property string[] errors
+ * @property \BlockCypher\Api\Error[] errors
  */
 class BlockCypherBaseModel extends BlockCypherModel
 {
@@ -34,7 +34,7 @@ class BlockCypherBaseModel extends BlockCypherModel
     /**
      * Append error to the list.
      *
-     * @param string $error
+     * @param \BlockCypher\Api\Error $error
      * @return $this
      */
     public function addError($error)
@@ -49,7 +49,7 @@ class BlockCypherBaseModel extends BlockCypherModel
     }
 
     /**
-     * @return \string[]
+     * @return \BlockCypher\Api\Error[]
      */
     public function getErrors()
     {
@@ -57,7 +57,7 @@ class BlockCypherBaseModel extends BlockCypherModel
     }
 
     /**
-     * @param \string[] $errors
+     * @param \BlockCypher\Api\Error[] $errors
      * @return $this
      */
     public function setErrors($errors)
@@ -67,9 +67,33 @@ class BlockCypherBaseModel extends BlockCypherModel
     }
 
     /**
+     * @return \string[]
+     */
+    public function getAllErrorMessages()
+    {
+        if ($this->error === null) {
+            return $this->getErrorMessages();
+        } else {
+            return array_merge(array($this->error), $this->getErrorMessages());
+        }
+    }
+
+    /**
+     * @return \string[]
+     */
+    public function getErrorMessages()
+    {
+        $errorMessages = array();
+        foreach ($this->errors as $error) {
+            $errorMessages[] = $error->getError();
+        }
+        return $errorMessages;
+    }
+
+    /**
      * Remove error from the list.
      *
-     * @param string $error
+     * @param \BlockCypher\Api\Error $error
      * @return $this
      */
     public function removeError($error)
@@ -77,5 +101,5 @@ class BlockCypherBaseModel extends BlockCypherModel
         return $this->setErrors(
             array_diff($this->getErrors(), array($error))
         );
-    }    
+    }
 }

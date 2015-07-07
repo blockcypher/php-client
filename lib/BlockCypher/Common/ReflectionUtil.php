@@ -36,6 +36,7 @@ class ReflectionUtil
      * @param $propertyName
      * @return null|string
      * @throws BlockCypherConfigurationException
+     * @throws \Exception
      */
     public static function getPropertyClass($class, $propertyName)
     {
