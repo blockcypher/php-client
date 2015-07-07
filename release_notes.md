@@ -1,6 +1,11 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v1.0.1
+------
+
+* Added TXInput wallet_name and wallet_token properties
+
 v1.0.0
 ------
 

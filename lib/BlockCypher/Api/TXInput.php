@@ -21,6 +21,8 @@ use BlockCypher\Common\BlockCypherBaseModel;
  * @property int sequence
  * @property string[] addresses
  * @property string script_type
+ * @property string wallet_name
+ * @property string wallet_token
  * @property \BlockCypher\Api\RelatedResources[] related_resources
  */
 class TXInput extends BlockCypherBaseModel
@@ -226,6 +228,42 @@ class TXInput extends BlockCypherBaseModel
     public function setScriptType($script_type)
     {
         $this->script_type = $script_type;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWalletName()
+    {
+        return $this->wallet_name;
+    }
+
+    /**
+     * @param string $wallet_name
+     * @return $this
+     */
+    public function setWalletName($wallet_name)
+    {
+        $this->wallet_name = $wallet_name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWalletToken()
+    {
+        return $this->wallet_token;
+    }
+
+    /**
+     * @param string $wallet_token
+     * @return $this
+     */
+    public function setWalletToken($wallet_token)
+    {
+        $this->wallet_token = $wallet_token;
         return $this;
     }
 
