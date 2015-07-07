@@ -5,6 +5,7 @@ v1.0.1
 ------
 
 * Added TXInput wallet_name and wallet_token properties
+* Added tx creation sample using a wallet
 
 v1.0.0
 ------
