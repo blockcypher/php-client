@@ -131,13 +131,16 @@ class TXSkeleton extends BlockCypherResourceModel
 
     /**
      * Return an array of all inputs addresses in the same order they are in the json tx skeleton
-     * @return string[]
+     * @return \string[]
      */
-    private function getInputsAddresses()
+    public function getInputsAddresses()
     {
         $addresses = array();
         foreach ($this->getTx()->getInputs() as $txInput) {
-            $addresses = array_merge($addresses, $txInput->getAddresses());
+            $inputAddresses = $txInput->getAddresses();
+            if (is_array($inputAddresses)) {
+                $addresses = array_merge($addresses, $inputAddresses);
+            }
         }
         return $addresses;
     }
