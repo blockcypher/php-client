@@ -7,6 +7,7 @@ v1.0.1
 * Added TXInput wallet_name and wallet_token properties
 * Added tx creation sample using a wallet
 * Changed class for BlockCypherBaseModel errors attribute
+* Fixed bug in TXInputBuilder and sample
 
 v1.0.0
 ------

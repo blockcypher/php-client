@@ -35,6 +35,12 @@ $request = clone $tx;
 
 try {
     $output = $tx->create($apiContexts['BTC.test3']);
+
+    //DEBUG
+    //$inputAddresses = $output->getInputsAddresses();
+    //var_dump($inputAddresses);
+    //die();
+
 } catch (\BlockCypher\Exception\BlockCypherConnectionException $ex) {
 
     $data = $ex->getData();
