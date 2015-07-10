@@ -61,6 +61,7 @@ class TXInputBuilder
         $txInput = new TXInput();
 
         $txInput->setAddresses($this->addresses);
+        $txInput->setScriptType($this->scryptType);
 
         return $txInput;
     }

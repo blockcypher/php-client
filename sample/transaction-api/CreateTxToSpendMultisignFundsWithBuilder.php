@@ -30,6 +30,9 @@ $tx = \BlockCypher\Builder\TXBuilder::aTX()
     ->addTXOutput($output)
     ->build();
 
+// For Sample Purposes Only.
+$request = clone $tx;
+
 try {
     $txSkeleton = $tx->create($apiContexts['BTC.test3']);
 } catch (\Exception $ex) {
