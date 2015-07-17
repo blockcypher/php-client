@@ -18,6 +18,7 @@ use BlockCypher\Common\BlockCypherBaseModel;
  * @property int tx_input_n
  * @property int tx_output_n
  * @property int value
+ * @property int ref_balance
  * @property string preference
  * @property bool spent
  * @property string spent_by
@@ -292,6 +293,30 @@ class TXRef extends BlockCypherBaseModel
     public function setValue($value)
     {
         $this->value = $value;
+        return $this;
+    }
+
+    /**
+     * Optional The past balance of the parent address the moment this transaction was confirmed.
+     * Not present for unconfirmed transactions.
+     *
+     * @return int
+     */
+    public function getRefBalance()
+    {
+        return $this->ref_balance;
+    }
+
+    /**
+     * Optional The past balance of the parent address the moment this transaction was confirmed.
+     * Not present for unconfirmed transactions.
+     *
+     * @param int $ref_balance
+     * @return $this
+     */
+    public function setRefBalance($ref_balance)
+    {
+        $this->ref_balance = $ref_balance;
         return $this;
     }
 

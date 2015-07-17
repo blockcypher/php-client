@@ -37,6 +37,7 @@ class TXRefTest extends ResourceModelTestCase
             "tx_input_n": -1,
             "tx_output_n": 0,
             "value": 20213,
+            "ref_balance": 35000,
             "preference": "high",
             "spent": false,
             "spent_by": "14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e",
@@ -51,7 +52,7 @@ class TXRefTest extends ResourceModelTestCase
             "errors": []
         }
         */
-        return '{"tx_hash":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","block_height":302013,"tx_input_n":-1,"tx_output_n":0,"value":20213,"preference":"high","spent":false,"spent_by":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","confirmations":50118,"confirmed":"2014-05-22T03:46:25Z","received":"2014-05-22T03:46:25Z","double_spend":false,"double_of":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","receive_count":42,"confidence":0.98819,"error":"","errors":[]}';
+        return '{"tx_hash":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","block_height":302013,"tx_input_n":-1,"tx_output_n":0,"value":20213,"ref_balance":35000,"preference":"high","spent":false,"spent_by":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","confirmations":50118,"confirmed":"2014-05-22T03:46:25Z","received":"2014-05-22T03:46:25Z","double_spend":false,"double_of":"14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e","receive_count":42,"confidence":0.98819,"error":"","errors":[]}';
     }
 
     /**
@@ -67,6 +68,7 @@ class TXRefTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getTxInputN());
         $this->assertNotNull($obj->gettxOutputN());
         $this->assertNotNull($obj->getValue());
+        $this->assertNotNull($obj->getRefBalance());
         $this->assertNotNull($obj->getPreference());
         $this->assertNotNull($obj->isSpent());
         $this->assertNotNull($obj->getSpent());
@@ -95,6 +97,7 @@ class TXRefTest extends ResourceModelTestCase
         $this->assertEquals($obj->getTxInputN(), -1);
         $this->assertEquals($obj->gettxOutputN(), 0);
         $this->assertEquals($obj->getValue(), 20213);
+        $this->assertEquals($obj->getRefBalance(), 35000);
         $this->assertEquals($obj->getPreference(), "high");
         $this->assertEquals($obj->isSpent(), false);
         $this->assertEquals($obj->getSpent(), false);

@@ -8,6 +8,7 @@ v1.0.1
 * Added tx creation sample using a wallet
 * Changed class for BlockCypherBaseModel errors attribute
 * Fixed bug in TXInputBuilder and sample
+* Added TXRef ref_balance property
 
 v1.0.0
 ------
