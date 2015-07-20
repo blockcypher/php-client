@@ -4,6 +4,7 @@ namespace BlockCypher\Crypto;
 
 use BitWasp\Bitcoin\Key\PrivateKeyFactory;
 use BitWasp\Bitcoin\Key\PrivateKeyInterface;
+use BlockCypher\Exception\BlockCypherInvalidPrivateKeyException;
 use BlockCypher\Validation\CoinSymbolValidator;
 
 /**
@@ -72,11 +73,19 @@ class PrivateKeyManipulator
     /**
      * @param string $hexPrivateKey
      * @param bool $compressed
-     * @return \BitWasp\Bitcoin\Key\PrivateKeyInterface
+     * @return PrivateKeyInterface
+     * @throws BlockCypherInvalidPrivateKeyException
      */
     public static function importPrivateKeyFromHex($hexPrivateKey, $compressed = true)
     {
-        $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed);
+        $privateKey = null;
+
+        try {
+            $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed);
+        } catch (\Exception $e) {
+            throw new BlockCypherInvalidPrivateKeyException('Invalid private key format, hex expected.' . $e->getMessage());
+        }
+
         return $privateKey;
     }
 

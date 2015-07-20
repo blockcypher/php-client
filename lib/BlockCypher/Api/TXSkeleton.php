@@ -85,48 +85,71 @@ class TXSkeleton extends BlockCypherResourceModel
             $privateKeys = array($privateKeys);
         }
 
-        $addresses = $this->getInputsAddresses();
-        $tosign = $this->getTosign();
-
-        // DEBUG
-        //echo "txInputs: <br/>";
-        //var_dump($txInputs);
-        //echo "addresses: <br/>";
-        //var_dump($addresses);
-        //echo "tosign: <br/>";
-        //var_dump($tosign);
-        //die();
-
         $coinSymbol = $this->getCoinSymbol($apiContext);
-
-        // DEBUG
-        //echo "coinSymbol: $coinSymbol<br/>";
-        //die();
 
         // Create PrivateKey objects from plain hex private keys
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $coinSymbol);
 
-        // DEBUG
-        //echo "privateKeyList: <br/>";
-        //var_dump($privateKeyList);
-
-        // Generate signatures
-        $signatures = $this->generateSignatures($addresses, $tosign, $privateKeyList);
-        $this->setSignatures($signatures);
-
-        // DEBUG
-        //echo "signatures: <br/>";
-        //var_dump($signatures);
-
-        // Generate pubkeys
-        $pubkeys = $this->generatePubkeys($addresses, $privateKeyList);
-        $this->setPubkeys($pubkeys);
-
-        // DEBUG
-        //echo "pubkeys: <br/>";
-        //var_dump($pubkeys);
+        $this->generateSignatures($privateKeyList);
 
         return $this;
+    }
+
+    /**
+     * @param PrivateKeyList $privateKeyList
+     * @throws \Exception
+     */
+    private function generateSignatures($privateKeyList)
+    {
+        $signatures = array();
+        $pubkeys = array();
+        $tosignIndex = 0;
+
+        foreach ($this->getTxInputs() as $txInput) {
+
+            // Addresses can be network addresses or pubkeys (multisign txs)
+            $txInputAddresses = $txInput->getAddresses();
+
+            foreach ($txInputAddresses as $inputAddress) {
+                if ($privateKeyList->keyExists($inputAddress)) {
+
+                    $privateKey = $privateKeyList->getKey($inputAddress);
+
+                    // Signature
+                    $hexDataToSign = $this->tosign[$tosignIndex];
+                    $sig = Signer::sign($hexDataToSign, $privateKey);
+                    $signatures[] = $sig;
+
+                    // Pubkey
+                    $pubKey = $privateKey->getPublicKey()->getHex();
+                    $pubkeys[] = $pubKey;
+
+                } else {
+                    // User has not provide a private key for this address
+                    // API allows to send partially signed tx
+                }
+            }
+
+            $tosignIndex++;
+        }
+
+        $this->signatures = $signatures;
+        $this->pubkeys = $pubkeys;
+    }
+
+    private function getTxInputs()
+    {
+        return $this->getTx()->getInputs();
+    }
+
+    /**
+     * A temporary TX, usually returned fully filled but missing input scripts.
+     *
+     * @return \BlockCypher\Api\TX
+     */
+    public function getTx()
+    {
+        return $this->tx;
     }
 
     /**
@@ -143,107 +166,6 @@ class TXSkeleton extends BlockCypherResourceModel
             }
         }
         return $addresses;
-    }
-
-    /**
-     * A temporary TX, usually returned fully filled but missing input scripts.
-     *
-     * @return \BlockCypher\Api\TX
-     */
-    public function getTx()
-    {
-        return $this->tx;
-    }
-
-    /**
-     * Array of hex-encoded data for you to sign, one for each input.
-     *
-     * @return \string[]
-     */
-    public function getTosign()
-    {
-        return $this->tosign;
-    }
-
-    /**
-     * @param string[] $addresses
-     * @param string[] $tosign
-     * @param PrivateKeyList $privateKeyList
-     * @return \string[]
-     * @throws \Exception
-     */
-    private function generateSignatures($addresses, $tosign, $privateKeyList)
-    {
-        $index = 0;
-        $signatures = array();
-
-        foreach ($addresses as $address) {
-
-            $hexDataToSign = $tosign[$index++];
-
-            if (!$privateKeyList->keyExists($address)) {
-
-                // DEBUG
-                //var_dump($privateKeyList);
-
-                throw new \Exception("Missing private key from address $address");
-            }
-
-            $privateKey = $privateKeyList->getKey($address);
-
-            $sig = Signer::sign($hexDataToSign, $privateKey);
-
-            // DEBUG
-            //echo "sig: <br/>";
-            //var_dump($sig);
-
-            $signatures[] = $sig;
-
-            // DEBUG
-            //echo "sig: <br/>";
-            //var_dump($sig);
-        }
-
-        return $signatures;
-    }
-
-    /**
-     * Array of signatures corresponding to all the data in tosign, typically provided by you.
-     *
-     * @param \string[] $signatures
-     * @return $this
-     */
-    public function setSignatures($signatures)
-    {
-        $this->signatures = $signatures;
-        return $this;
-    }
-
-    /**
-     * @param $addresses
-     * @param PrivateKeyList $privateKeyList
-     * @return array
-     */
-    private function generatePubkeys($addresses, $privateKeyList)
-    {
-        $pubkeys = array();
-        foreach ($addresses as $address) {
-            $pubkeys[] = (string)$privateKeyList->getKey($address)->getPublicKey()->getHex();
-        }
-        return $pubkeys;
-    }
-
-    /**
-     * Array of public keys corresponding to each signature.
-     * In general, these are provided by you, and correspond to the signatures you provide.
-     *
-     * @param \string[] $pubkeys
-     * @return $this
-     */
-    public function setPubkeys($pubkeys)
-    {
-        $this->pubkeys = $pubkeys;
-        return $this;
     }
 
     /**
@@ -273,6 +195,16 @@ class TXSkeleton extends BlockCypherResourceModel
                 array_merge($this->getTosign(), array($tosign))
             );
         }
+    }
+
+    /**
+     * Array of hex-encoded data for you to sign, one for each input.
+     *
+     * @return \string[]
+     */
+    public function getTosign()
+    {
+        return $this->tosign;
     }
 
     /**
@@ -328,6 +260,18 @@ class TXSkeleton extends BlockCypherResourceModel
     }
 
     /**
+     * Array of signatures corresponding to all the data in tosign, typically provided by you.
+     *
+     * @param \string[] $signatures
+     * @return $this
+     */
+    public function setSignatures($signatures)
+    {
+        $this->signatures = $signatures;
+        return $this;
+    }
+
+    /**
      * Remove Signature from the list.
      *
      * @param string $signature
@@ -366,6 +310,19 @@ class TXSkeleton extends BlockCypherResourceModel
     public function getPubkeys()
     {
         return $this->pubkeys;
+    }
+
+    /**
+     * Array of public keys corresponding to each signature.
+     * In general, these are provided by you, and correspond to the signatures you provide.
+     *
+     * @param \string[] $pubkeys
+     * @return $this
+     */
+    public function setPubkeys($pubkeys)
+    {
+        $this->pubkeys = $pubkeys;
+        return $this;
     }
 
     /**

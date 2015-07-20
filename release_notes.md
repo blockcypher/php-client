@@ -10,6 +10,7 @@ v1.0.1
 * Fixed bug in TXInputBuilder and sample
 * Added TXRef ref_balance property
 * Fixed argv bug in signer console command
+* Fixed bug in multisign tx signature
 
 v1.0.0
 ------

@@ -16,15 +16,17 @@ class PrivateKeyListTest extends \PHPUnit_Framework_TestCase
 
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'btc-testnet');
 
-        $this->assertTrue($privateKeyList->keyExists("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"));
+        $this->assertArrayHasKey("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4", $privateKeyList->getKeys());
+        $this->assertArrayHasKey("0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf", $privateKeyList->getKeys());
     }
 
-    public function testFromHexPrivateKeyArrayWithWrongCoinSymbol()
+    public function testFromHexPrivateKeyArrayWithDifferentCoinSymbol()
     {
         $hexPrivateKeyArray = array("1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e");
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'btc');
 
-        $this->assertFalse($privateKeyList->keyExists("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"));
+        $this->assertArrayNotHasKey("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4", $privateKeyList->getKeys());
+        $this->assertArrayHasKey("0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf", $privateKeyList->getKeys());
     }
 
     /**
@@ -35,7 +37,7 @@ class PrivateKeyListTest extends \PHPUnit_Framework_TestCase
         $hexPrivateKeyArray = array("1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e");
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'INVALID-COIN-SYMBOL');
 
-        $this->assertFalse($privateKeyList->keyExists("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"));
+        $this->assertEmpty($privateKeyList->getKeys());
     }
 
     public function testAddKey()

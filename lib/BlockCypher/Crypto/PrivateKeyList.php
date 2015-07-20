@@ -39,9 +39,13 @@ class PrivateKeyList
             $compressed = true;
             $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($hexPrivateKey, $compressed);
 
+            // Add private key indexed by address
             $address = PrivateKeyManipulator::getAddressFromPrivateKey($privateKey, $coinSymbol);
-
             $privateKeyList[$address] = $privateKey;
+
+            // Add private key indexed by public key
+            $pubKeyHex = $privateKey->getPublicKey()->getHex();
+            $privateKeyList[$pubKeyHex] = $privateKey;
         }
 
         return new self($privateKeyList);
