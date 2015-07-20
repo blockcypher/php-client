@@ -23,11 +23,14 @@ if (PHP_SAPI == 'cli') {
 
     require __DIR__ . '/bootstrap.php';
 
+    if (isset($argv[0])) {
+        $script = $argv[0];
+    };
     if (isset($argv[1])) {
         $tosign = $argv[1];
     };
     if (isset($argv[2])) {
-        $privateKey = $argv[1];
+        $privateKey = $argv[2];
     };
 
     if (empty($tosign)) {
@@ -49,6 +52,9 @@ if (PHP_SAPI == 'cli') {
         echo "Error: invalid private key. Not valid hex data.\n";
         exit(3);
     }
+
+    //echo "tosign: ".$tosign."\n";
+    //echo "privateKey: ".$privateKey."\n";
 
     $signature = BlockCypher\Crypto\Signer::sign($tosign, $privateKey);
 

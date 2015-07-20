@@ -9,6 +9,7 @@ v1.0.1
 * Changed class for BlockCypherBaseModel errors attribute
 * Fixed bug in TXInputBuilder and sample
 * Added TXRef ref_balance property
+* Fixed argv bug in signer console command
 
 v1.0.0
 ------
