@@ -102,12 +102,12 @@ class TXSkeletonTest extends ResourceModelTestCase
                 "0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf"
             ],
             "error": "message",
-            "errors": ["message"]
+            "errors": []
         }
         */
 
         $tx = TXTest::getJson();
-        return '{"tx":' . $tx . ',"tosign":["7e6a71a683f303b6a659daa8009c81c47edd2b14f59b938cb31f8ef2a3e129f5"],"signatures":["30450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b"],"pubkeys":["0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf"],"error":"message","errors":["message"]}';
+        return '{"tx":' . $tx . ',"tosign":["7e6a71a683f303b6a659daa8009c81c47edd2b14f59b938cb31f8ef2a3e129f5"],"signatures":["30450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b"],"pubkeys":["0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf"],"error":"message","errors":[]}';
     }
 
     /**
@@ -121,7 +121,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         $this->assertEquals($obj->getSignatures(), array("30450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b"));
         $this->assertEquals($obj->getPubkeys(), array("0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf"));
         $this->assertEquals($obj->getError(), "message");
-        $this->assertEquals($obj->getErrors(), array("message"));
+        $this->assertEquals($obj->getErrors(), array());
     }
 
     /**
