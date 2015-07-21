@@ -2,7 +2,9 @@
 
 namespace BlockCypher\Test\Crypto;
 
+use BitWasp\Bitcoin\Key\PrivateKeyInterface;
 use BlockCypher\Crypto\PrivateKeyList;
+use BlockCypher\Crypto\PrivateKeyManipulator;
 
 /**
  * Class PrivateKeyListTest
@@ -10,148 +12,174 @@ use BlockCypher\Crypto\PrivateKeyList;
  */
 class PrivateKeyListTest extends \PHPUnit_Framework_TestCase
 {
-    public function testFromHexPrivateKeyArray()
+    /**
+     * @dataProvider dataProvider
+     * @param $address
+     */
+    public function testFromHexPrivateKeyArray($address)
     {
-        $hexPrivateKeyArray = array("1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e");
+        $hexPrivateKeyArray = array($address['private']);
 
-        $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'btc-testnet');
+        $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, $address['coinSymbol']);
 
-        $this->assertArrayHasKey("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4", $privateKeyList->getKeys());
-        $this->assertArrayHasKey("0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf", $privateKeyList->getKeys());
-    }
-
-    public function testFromHexPrivateKeyArrayWithDifferentCoinSymbol()
-    {
-        $hexPrivateKeyArray = array("1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e");
-        $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'btc');
-
-        $this->assertArrayNotHasKey("n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4", $privateKeyList->getKeys());
-        $this->assertArrayHasKey("0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf", $privateKeyList->getKeys());
+        $this->assertArrayHasKey($address['public'], $privateKeyList->getPrivateKeys());
     }
 
     /**
-     * @expectedException \InvalidArgumentException
+     * @dataProvider dataProvider
+     * @param $address
      */
-    public function testFromHexPrivateKeyArrayWithInvalidCoinSymbol()
+    public function testFromHexPrivateKeyArrayWithDifferentCoinSymbol($address)
     {
-        $hexPrivateKeyArray = array("1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e");
+        $hexPrivateKeyArray = array($address['private']);
+        $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'doge');
+
+        $this->assertArrayHasKey($address['public'], $privateKeyList->getPrivateKeys());
+    }
+
+    /**
+     * @dataProvider dataProvider
+     * @expectedException \InvalidArgumentException
+     * @param $address
+     */
+    public function testFromHexPrivateKeyArrayWithInvalidCoinSymbol($address)
+    {
+        $hexPrivateKeyArray = array($address['private']);
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'INVALID-COIN-SYMBOL');
 
-        $this->assertEmpty($privateKeyList->getKeys());
+        $this->assertEmpty($privateKeyList->getPrivateKeys());
     }
 
-    public function testAddKey()
+    /**
+     * @dataProvider dataProvider
+     * @param $address
+     * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
+     */
+    public function testAddPrivateKey($address)
     {
-        $privateKey = $this->getPrivateKeyMockForAddress();
+        $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($address['private'], $address['compressed']);
         $privateKeyList = $this->anEmptyPrivateKeyList();
 
-        $privateKeyList->addKey($privateKey, "C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm");
+        $privateKeyList->addPrivateKey($privateKey, $address['coinSymbol']);
 
-        $this->assertContains($privateKey, $privateKeyList->getKeys());
+        $this->assertContains($privateKey, $privateKeyList->getPrivateKeys());
     }
 
-    public function getPrivateKeyMockForAddress()
-    {
-        $privateKey = $this->getMockBuilder('\BitWasp\Bitcoin\Key\PrivateKey')
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        return $privateKey;
-    }
-
+    /**
+     * @return PrivateKeyList
+     */
     public function anEmptyPrivateKeyList()
     {
         return new PrivateKeyList();
     }
 
     /**
-     * @dataProvider mockProvider
+     * @dataProvider dataProvider
      * @param $address
-     * @param $privateKey
-     * @param PrivateKeyList $privateKeyList
-     * @throws \Exception
+     * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
      */
-    public function testDeleteKey($address, $privateKey, $privateKeyList)
+    public function testGetPrivateKey($address)
     {
-        $privateKeyList->deleteKey($address);
+        $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($address['private'], $address['compressed']);
+        $privateKeyList = $this->aPrivateKeyListWithOne($privateKey);
 
-        $this->assertNotContains($privateKey, $privateKeyList->getKeys());
+        // DEBUG
+        //var_export($address);
+        //var_export($privateKey);
+        //var_dump($privateKeyList->getPrivateKey($address['public'], $address['coinSymbol']));
+        //die();
+
+        $this->assertEquals($privateKey, $privateKeyList->getPrivateKey($address['public'], $address['coinSymbol']));
+        $this->assertEquals($privateKey, $privateKeyList->getPrivateKey($address['address'], $address['coinSymbol']));
     }
 
     /**
-     * @dataProvider mockProvider
-     * @param $address
-     * @param $privateKey
-     * @param PrivateKeyList $privateKeyList
+     * @param PrivateKeyInterface $privateKey
+     * @return PrivateKeyList
      */
-    public function testGetKey($address, $privateKey, $privateKeyList)
+    public function aPrivateKeyListWithOne(PrivateKeyInterface $privateKey)
     {
-        $result = $privateKeyList->getKey($address);
-
-        $this->assertEquals($privateKey, $result);
+        $privateKeyList = new PrivateKeyList();
+        $privateKeyList->addPrivateKey($privateKey);
+        return $privateKeyList;
     }
 
     /**
-     * @dataProvider mockProvider
+     * @dataProvider dataProvider
      * @param $address
-     * @param $privateKey
-     * @param PrivateKeyList $privateKeyList
+     * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
      */
-    public function testKeyExists($address, $privateKey, $privateKeyList)
+    public function testKeyExists($address)
     {
-        $this->assertTrue($privateKeyList->keyExists($address));
+        $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($address['private'], $address['compressed']);
+        $privateKeyList = $this->aPrivateKeyListWithOne($privateKey);
+
+        $this->assertTrue($privateKeyList->privateKeyExists($address['public'], $address['coinSymbol']));
+        $this->assertTrue($privateKeyList->privateKeyExists($address['address'], $address['coinSymbol']));
     }
 
     /**
-     * @dataProvider mockProvider
+     * @dataProvider dataProvider
      * @param $address
-     * @param $privateKey
-     * @param PrivateKeyList $privateKeyList
+     * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
      */
-    public function testGetKeys($address, $privateKey, $privateKeyList)
+    public function testGetPrivateKeys($address)
     {
-        $result = $privateKeyList->getKeys();
+        $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($address['private'], $address['compressed']);
+        $privateKeyList = $this->aPrivateKeyListWithOne($privateKey);
 
-        $this->assertEquals(array($address => $privateKey), $result);
+        $this->assertEquals(array($address['public'] => $privateKey), $privateKeyList->getPrivateKeys());
     }
 
     /**
-     * @dataProvider mockProvider
+     * @dataProvider dataProvider
      * @param $address
-     * @param $privateKey
-     * @param PrivateKeyList $privateKeyList
+     * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
      */
-    public function testAddresses($address, $privateKey, $privateKeyList)
+    public function testAddresses($address)
     {
-        $result = $privateKeyList->addresses();
+        $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($address['private'], $address['compressed']);
+        $privateKeyList = $this->aPrivateKeyListWithOne($privateKey);
 
-        $this->assertEquals(array($address), $result);
+        $this->assertEquals(array($address['address']), $privateKeyList->getAddresses($address['coinSymbol']));
     }
 
     /**
-     * @dataProvider mockProvider
+     * @dataProvider dataProvider
      * @param $address
-     * @param $privateKey
-     * @param PrivateKeyList $privateKeyList
+     * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
      */
-    public function testLength($address, $privateKey, $privateKeyList)
+    public function testLength($address)
     {
+        $privateKeyList = $this->anEmptyPrivateKeyList();
+        $this->assertEquals(0, $privateKeyList->length());
+
+        $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($address['private'], $address['compressed']);
+        $privateKeyList = $this->aPrivateKeyListWithOne($privateKey);
         $this->assertEquals(1, $privateKeyList->length());
     }
 
-    public function mockProvider()
+    public function dataProvider()
     {
-        $address = "C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm";
-        $privateKey = $this->getPrivateKeyMockForAddress();
-        $privateKeyList = $this->aPrivateKeyListWith($privateKey, $address);
+        $addressBtc = array();
+        $addressBtc['coinSymbol'] = 'btc';
+        $addressBtc['compressed'] = true;
+        $addressBtc['private'] = '264f692826e03a0c92f5821063d316ed666b941fd5b524f0915896b6c6585fae';
+        $addressBtc['public'] = '0222e045d6c73eaeb859caa5721e0757159c3513d74bc1f363e2f0bfc3f519e2c0';
+        $addressBtc['address'] = '12aWoA8ZETnKBgrWRF13VRQRqBbephS7Qf';
+        $addressBtc['wif'] = 'KxWBSoYSpEwUMYPpL44cy5JYmik6Btq45waGVocfTPK5b2PvQsJ3';
+
+        $addressBtcTest3 = array();
+        $addressBtcTest3['coinSymbol'] = 'btc-testnet';
+        $addressBtcTest3['compressed'] = true;
+        $addressBtcTest3['private'] = 'd4269a38cac9fb340d13b2e9b6f56d38d3864b705efabd538f4778df88d6caeb';
+        $addressBtcTest3['public'] = '031199c92b70ab127c9d12fcfd3e366342fe615427e551d90715895513cc7d7bc9';
+        $addressBtcTest3['address'] = 'n1F6ryEcx1aM6TKqrM7vAtWunWsKuxZ6Hs';
+        $addressBtcTest3['wif'] = 'cUh6U224smkjRX4z1XQwYaQLSTzGDJvVk4gEsTAiBb7RJANmDMmj';
 
         return array(
-            array($address, $privateKey, $privateKeyList)
+            array($addressBtc),
+            array($addressBtcTest3),
         );
-    }
-
-    public function aPrivateKeyListWith($privateKey, $address)
-    {
-        return new PrivateKeyList(array($address => $privateKey));
     }
 }

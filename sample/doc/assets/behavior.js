@@ -1470,45 +1470,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "signer\\Sign",
             "title": "Sign"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Sign Hex Data",
-                "slug": "sign-hex-data"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Sample accepts GET parameters",
-                    "slug": "sample-accepts-get-parameters"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Using signer",
-                    "slug": "using-signer"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Run on console",
-                    "slug": "run-on-console"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+            "depth": 2
         }
       ]
     }, {
@@ -1643,6 +1605,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "targetPath": "transaction-api\\CreateTransactionToSpendMultisignFunds",
             "pageTitle": "transaction-api\\CreateTransactionToSpendMultisignFunds",
             "title": "CreateTransactionToSpendMultisignFunds"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionUsingWallet.php",
+                  "projectPath": "transaction-api\\CreateTransactionUsingWallet.php",
+                  "targetPath": "transaction-api\\CreateTransactionUsingWallet",
+                  "pageTitle": "transaction-api\\CreateTransactionUsingWallet",
+                  "title": "CreateTransactionUsingWallet"
           },
           "depth": 2
         }, {

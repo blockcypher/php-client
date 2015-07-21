@@ -482,6 +482,21 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
+                            <div class="col-md-8"><h5>Create new BTC Testnet address</h5></div>
+                            <div class="col-md-4">
+                                <a href="address-api/CreateAddressBtcTest3.php"
+                                   class="btn btn-primary pull-left execute"> Try
+                                    It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/address-api/CreateAddressBtcTest3.html" class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
                             <div class="col-md-8"><h5>Generate multisig address</h5></div>
                             <div class="col-md-4">
                                 <a href="address-api/GenerateMultisignAddress.php"
@@ -932,6 +947,26 @@ if (PHP_SAPI == 'cli') {
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/transaction-api/CreateTxToSpendMultisignFundsWithBuilder.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Create, sign and send multisign transaction*
+                                    <small>(source address must contains enough balance)</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="transaction-api/SpendMultisignFundsTransaction.php"
+                                   class="btn btn-primary pull-left execute">
+                                    Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/transaction-api/SpendMultisignFundsTransaction.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>

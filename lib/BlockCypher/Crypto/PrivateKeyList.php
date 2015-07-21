@@ -2,6 +2,7 @@
 
 namespace BlockCypher\Crypto;
 
+use BitWasp\Bitcoin\Key\PrivateKeyInterface;
 use BlockCypher\Validation\ArgumentArrayValidator;
 use BlockCypher\Validation\CoinSymbolValidator;
 
@@ -14,14 +15,11 @@ class PrivateKeyList
     /**
      * @var PrivateKey[]
      */
-    private $keys;
+    private $privateKeys;
 
-    /**
-     * @param PrivateKey[] $keys
-     */
-    function __construct($keys = null)
+    function __construct()
     {
-        $this->keys = $keys;
+        $this->privateKeys = array();
     }
 
     /**
@@ -34,94 +32,152 @@ class PrivateKeyList
         ArgumentArrayValidator::validate($hexPrivateKeys, 'hexPrivateKeys');
         CoinSymbolValidator::validate($coinSymbol, 'coinSymbol');
 
-        $privateKeyList = array();
+        $privateKeyList = new self($coinSymbol);
+
         foreach ($hexPrivateKeys as $hexPrivateKey) {
             $compressed = true;
             $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($hexPrivateKey, $compressed);
 
-            // Add private key indexed by address
-            $address = PrivateKeyManipulator::getAddressFromPrivateKey($privateKey, $coinSymbol);
-            $privateKeyList[$address] = $privateKey;
-
             // Add private key indexed by public key
-            $pubKeyHex = $privateKey->getPublicKey()->getHex();
-            $privateKeyList[$pubKeyHex] = $privateKey;
+            $privateKeyList->addPrivateKey($privateKey);
         }
-
-        return new self($privateKeyList);
+        return $privateKeyList;
     }
 
     /**
-     * Append Key to the list.
+     * Append private key to the list.
      *
-     * @param PrivateKey $key
-     * @param string $address
+     * @param PrivateKeyInterface $privateKey
      * @return $this
-     * @throws \Exception
      */
-    public function addKey($key, $address = null)
+    public function addPrivateKey(PrivateKeyInterface $privateKey)
     {
-        if ($address === null) {
-            $this->keys[] = $key;
+        $pubKeyHex = $privateKey->getPublicKey()->getHex();
+        $this->privateKeys[$pubKeyHex] = $privateKey;
+    }
+
+    /**
+     * @param string $addressOrPublicKey
+     * @param string $coinSymbol
+     * @return PrivateKey|null
+     */
+    public function getPrivateKey($addressOrPublicKey, $coinSymbol)
+    {
+        $privateKey = $this->getPrivateKeyByPublicKey($addressOrPublicKey);
+        if ($privateKey !== null) {
+            return $privateKey;
+        }
+
+        $privateKey = $this->getPrivateKeyByAddress($addressOrPublicKey, $coinSymbol);
+        if ($privateKey !== null) {
+            return $privateKey;
+        }
+
+        return null;
+    }
+
+    /**
+     * @param $publicKeyHex
+     * @return PrivateKey|null
+     */
+    private function getPrivateKeyByPublicKey($publicKeyHex)
+    {
+        if (isset($this->privateKeys[$publicKeyHex])) {
+            return $this->privateKeys[$publicKeyHex];
         } else {
-            if (isset($this->keys[$address])) {
-                throw new \Exception("Key $address already in use.");
-            } else {
-                $this->keys[$address] = $key;
+            return null;
+        }
+    }
+
+    /**
+     * @param string $addressToFind
+     * @param $coinSymbol
+     * @return PrivateKey|null
+     */
+    private function getPrivateKeyByAddress($addressToFind, $coinSymbol)
+    {
+        foreach ($this->privateKeys as $privateKey) {
+            $address = PrivateKeyManipulator::getAddressFromPrivateKey($privateKey, $coinSymbol);
+            if ($address == $addressToFind) {
+                return $privateKey;
             }
         }
+        return null;
     }
 
     /**
-     * @param string $address
-     * @throws \Exception
-     */
-    public function deleteKey($address)
-    {
-        if (isset($this->keys[$address])) {
-            unset($this->keys[$address]);
-        } else {
-            throw new \Exception("Invalid address $address.");
-        }
-    }
-
-    /**
-     * @param string $address
-     * @return PrivateKey
-     * @throws \Exception
-     */
-    public function getKey($address)
-    {
-        if (isset($this->keys[$address])) {
-            return $this->keys[$address];
-        } else {
-            throw new \Exception("Address $address not found in PrivateKeyList.");
-        }
-    }
-
-    /**
-     * @param string $address
+     * @param string $addressOrPublicKey
+     * @param string $coinSymbol
      * @return bool
      */
-    public function keyExists($address)
+    public function privateKeyExists($addressOrPublicKey, $coinSymbol)
     {
-        return isset($this->keys[$address]);
+        if ($this->privateKeyExistsForPubKey($addressOrPublicKey)) {
+            return true;
+        }
+
+        if ($this->privateKeyExistsForAddress($addressOrPublicKey, $coinSymbol)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * @param string $pubKeyHex
+     * @return bool
+     */
+    private function privateKeyExistsForPubKey($pubKeyHex)
+    {
+        if ($this->getPrivateKeyByPublicKey($pubKeyHex) !== null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * @param string $addressToFind
+     * @param $coinSymbol
+     * @return bool
+     */
+    private function privateKeyExistsForAddress($addressToFind, $coinSymbol)
+    {
+        if ($this->getPrivateKeyByAddress($addressToFind, $coinSymbol) !== null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
      * @return PrivateKey[]
      */
-    public function getKeys()
+    public function getPrivateKeys()
     {
-        return $this->keys;
+        return $this->privateKeys;
     }
 
     /**
      * @return string[]
      */
-    public function addresses()
+    public function getPublicKeys()
     {
-        return array_keys($this->keys);
+        return array_keys($this->privateKeys);
+    }
+
+    /**
+     * @param string $coinSymbol
+     * @return \string[]
+     */
+    public function getAddresses($coinSymbol)
+    {
+        $addresses = array();
+        foreach ($this->privateKeys as $privateKey) {
+            $address = PrivateKeyManipulator::getAddressFromPrivateKey($privateKey, $coinSymbol);
+            $addresses[] = $address;
+        }
+        return $addresses;
     }
 
     /**
@@ -129,6 +185,6 @@ class PrivateKeyList
      */
     public function length()
     {
-        return count($this->keys);
+        return count($this->privateKeys);
     }
 }

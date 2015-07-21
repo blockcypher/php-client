@@ -3,40 +3,41 @@
 // # Spend Multisign Funds Sample
 //
 // This sample code demonstrate how you can create a new transaction and send it to the network
-// to spend fund from multisign address, as documented here at:
-// <a href="http://dev.blockcypher.com/?javascript#multisig-transactions">http://dev.blockcypher.com/?javascript#multisig-transactions</a>
+// to spend fund from multisign address, as documented at <a href="http://dev.blockcypher.com/#multisig-transactions">docs</a>.
+//
 // API used: POST /v1/btc/main/txs/new and
+//
 // POST /v1/btc/main/txs/send
 
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
 $txSkeleton = require 'CreateTransactionToSpendMultisignFunds.php';
 
-// DEBUG
-//var_dump($txSkeleton);
-//die();
-
-// source addresses private keys
-// private key in the same format as returned by Generate Address Endpoint:
-// http://dev.blockcypher.com/?shell#generate-address-endpoint
-// Private keys, at least 2 of 3:
+// Private keys (at least 2 of 3) in the same format as returned by <a href="http://dev.blockcypher.com/#generate-address-endpoint">Generate Address Endpoint</a>.
 $privateKeys = array(
-    "a2d2a8aa1cb1dbf7780d99aece481be1cd7d79427618a6091cf9b0d9d1244210",
-    "d6dd853fa8c294c8178eac620fb7c58e98813dcf3a85c012786280bab4662ed8"
-    //"b0b730309a90eabc7681a47facf3f8bcaeb68668d2eaf8a2fe52682144d61418"
+    "bb5b3be6d9ac87a16660f363e3597861f06bb8bdf3de2c46e957f922dda37f68",
+    "e394e5ee8e28d4454a7d328eea58a369cdd63ec6d471ac89ca1cb8a80b72a6eb"
+    //"5399dfcf4e8a3f2be7a04ca2a92b69a88576b85b7c0f7a14d773e5682c5a8613"
 );
 
-// ### Sign the TX
-$txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
-
-// Source (multisign) and destination addresses used in this sample
-// https://live.blockcypher.com/btc-testnet/address/2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ/
-// https://live.blockcypher.com/btc-testnet/address/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4/
-
-// For sample purposes only.
+/// For sample purposes only.
 $request = clone $txSkeleton;
 
+/// Sign the TX
 try {
-    // ### Send TX to the network
+    $txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
+} catch (Exception $ex) {
+    ResultPrinter::printError("Sign Transaction (spend multisign funds)", "TXSkeleton", null, $request, $ex);
+    exit(1);
+}
+
+// Source (multisign) address: <a href="https://live.blockcypher.com/btc-testnet/address/2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ/">2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ</a>
+// Destination addresses: <a href="https://live.blockcypher.com/btc-testnet/address/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4/">n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4</a>
+
+/// For sample purposes only.
+$request = clone $txSkeleton;
+
+/// Send TX to the network
+try {
     $output = $txSkeleton->send($apiContexts['BTC.test3']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Sent Transaction (spend multisign funds)", "TXSkeleton", null, $request, $ex);

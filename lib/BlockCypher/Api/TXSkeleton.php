@@ -5,6 +5,7 @@ namespace BlockCypher\Api;
 use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Crypto\PrivateKeyList;
 use BlockCypher\Crypto\Signer;
+use BlockCypher\Exception\BlockCypherSignatureException;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 
@@ -90,20 +91,23 @@ class TXSkeleton extends BlockCypherResourceModel
         // Create PrivateKey objects from plain hex private keys
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $coinSymbol);
 
-        $this->generateSignatures($privateKeyList);
+        $this->generateSignatures($privateKeyList, $coinSymbol);
 
         return $this;
     }
 
     /**
      * @param PrivateKeyList $privateKeyList
-     * @throws \Exception
+     * @param string $coinSymbol
+     * @throws BlockCypherSignatureException
      */
-    private function generateSignatures($privateKeyList)
+    private function generateSignatures($privateKeyList, $coinSymbol)
     {
         $signatures = array();
         $pubkeys = array();
         $tosignIndex = 0;
+
+        $privateKeysUsed = array();
 
         foreach ($this->getTxInputs() as $txInput) {
 
@@ -111,9 +115,10 @@ class TXSkeleton extends BlockCypherResourceModel
             $txInputAddresses = $txInput->getAddresses();
 
             foreach ($txInputAddresses as $inputAddress) {
-                if ($privateKeyList->keyExists($inputAddress)) {
 
-                    $privateKey = $privateKeyList->getKey($inputAddress);
+                if ($privateKeyList->privateKeyExists($inputAddress, $coinSymbol)) {
+
+                    $privateKey = $privateKeyList->getPrivateKey($inputAddress, $coinSymbol);
 
                     // Signature
                     $hexDataToSign = $this->tosign[$tosignIndex];
@@ -124,13 +129,21 @@ class TXSkeleton extends BlockCypherResourceModel
                     $pubKey = $privateKey->getPublicKey()->getHex();
                     $pubkeys[] = $pubKey;
 
+                    $privateKeysUsed[] = $inputAddress;
+
                 } else {
                     // User has not provide a private key for this address
                     // API allows to send partially signed tx
+                    // TODO: add log?
                 }
             }
 
             $tosignIndex++;
+        }
+
+        $numPrivateKeysNotUsed = $privateKeyList->length() - count($privateKeysUsed);
+        if ($numPrivateKeysNotUsed > 0) {
+            throw new BlockCypherSignatureException(sprintf("%s private keys do not correspond to any input. Please check private keys provided.", $numPrivateKeysNotUsed));
         }
 
         $this->signatures = $signatures;
