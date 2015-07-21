@@ -1,6 +1,9 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v1.1.0
+------
+
 v1.0.1
 ------
 
