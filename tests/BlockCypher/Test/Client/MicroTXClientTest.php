@@ -14,19 +14,6 @@ class MicroTXClientTest extends ClientTestCase
 {
     public function testCreate()
     {
-//        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-//            ->disableOriginalConstructor()
-//            ->getMock();
-//
-//        $mockBlockCypherRestCall->expects($this->any())
-//            ->method('execute')
-//            ->will($this->returnValue(
-//                MicroTXTest::getJson()
-//            ));
-//
-//        $result = $obj->create($mockApiContext, $mockBlockCypherRestCall);
-//        $this->assertNotNull($result);
-
         $obj = static::getObject();
 
         $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')

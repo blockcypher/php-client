@@ -7,8 +7,10 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$blockClient = new \BlockCypher\Client\BlockClient($apiContexts['BTC.main']);
+
 try {
-    $block = \BlockCypher\Api\Block::get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', array(), $apiContexts['BTC.main']);
+    $block = $blockClient->get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328');
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Block", "Block", '0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', null, $ex);
     exit(1);

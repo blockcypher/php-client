@@ -7,6 +7,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$blockClient = new \BlockCypher\Client\BlockClient();
+
 // TX list begins at 'txstart' and we only get 'limit' transactions at once
 $params = array(
     'txstart' => 1,
@@ -14,7 +16,7 @@ $params = array(
 );
 
 try {
-    $block = \BlockCypher\Api\Block::get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', $params, $apiContexts['BTC.main']);
+    $block = $blockClient->get('0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', $params, $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Block With Paging", "Block", '0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328', null, $ex);
     exit(1);

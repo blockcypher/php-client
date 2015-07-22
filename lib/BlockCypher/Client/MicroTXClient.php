@@ -56,9 +56,9 @@ class MicroTXClient extends BlockCypherClient
     {
         $payLoad = $microTX->toJSON();
 
-        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+        $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);
 
-        $json = self::executeCall(
+        $json = $this->executeCall(
             "$chainUrlPrefix/txs/micro",
             "POST",
             $payLoad,
@@ -82,9 +82,9 @@ class MicroTXClient extends BlockCypherClient
     {
         $payLoad = $microTX->toJSON();
 
-        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+        $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);
 
-        $json = self::executeCall(
+        $json = $this->executeCall(
             "$chainUrlPrefix/txs/micro",
             "POST",
             $payLoad,

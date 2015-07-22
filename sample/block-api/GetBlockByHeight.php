@@ -7,8 +7,10 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$blockClient = new \BlockCypher\Client\BlockClient();
+
 try {
-    $block = \BlockCypher\Api\Block::get('293000', array(), $apiContexts['BTC.main']);
+    $block = $blockClient->get('293000', array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Block By Height", "Block", '293000', null, $ex);
     exit(1);

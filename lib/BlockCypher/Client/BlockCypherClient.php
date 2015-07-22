@@ -2,6 +2,8 @@
 
 namespace BlockCypher\Client;
 
+use BlockCypher\Auth\TokenCredential;
+use BlockCypher\Exception\BlockCypherMissingCredentialException;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 
@@ -12,11 +14,26 @@ use BlockCypher\Transport\BlockCypherRestCall;
 class BlockCypherClient implements BlockCypherClientInterface
 {
     /**
+     * @var ApiContext
+     */
+    private $apiContext;
+
+    /**
      * Credentials to use for this call
      *
      * @var \BlockCypher\Auth\TokenCredential $credential
      */
     private $credential;
+
+    /**
+     * @param ApiContext|null $apiContext
+     * @param TokenCredential|null $credential
+     */
+    function __construct($apiContext = null, $credential = null)
+    {
+        $this->apiContext = $apiContext;
+        $this->credential = $credential;
+    }
 
     /**
      * Execute SDK Call to BlockCypher services
@@ -53,16 +70,28 @@ class BlockCypherClient implements BlockCypherClientInterface
 
     /**
      * @return ApiContext
+     * @throws BlockCypherMissingCredentialException
      */
     public function getApiContext()
     {
-        // First try default ApiContext
+        // First try private property
+        if ($this->apiContext !== null) {
+            return $this->apiContext;
+        }
+
+        // Second try default ApiContext
         $apiContext = ApiContext::getDefault();
-        if ($apiContext === null) {
+        if ($apiContext !== null) {
+            return $apiContext;
+        }
+
+        // Third create a new ApiContext using local credentials
+        if ($this->credential !== null) {
             $apiContext = new ApiContext($this->credential);
             return $apiContext;
         }
-        return $apiContext;
+
+        throw new BlockCypherMissingCredentialException("Missing ApiContext or Credentials.");
     }
 
     /**

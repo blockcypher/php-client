@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\Block;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\BlockClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,11 +15,13 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
+$blockClient = new BlockClient();
+
 $params = array(
     'txstart' => 1,
     'limit' => 1,
 );
 
-$block = Block::get('293000', $params, $apiContext);
+$block = $blockClient->get('293000', $params, $apiContext);
 
 ResultPrinter::printResult("Get Block With Paging", "Block", $block->getHash(), null, $block);

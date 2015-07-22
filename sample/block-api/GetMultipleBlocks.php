@@ -9,10 +9,11 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$blockClient = new \BlockCypher\Client\BlockClient();
 $blockList = array('5', '6', '7');
 
 try {
-    $blocks = \BlockCypher\Api\Block::getMultiple($blockList, array(), $apiContexts['BTC.main']);
+    $blocks = $blockClient->getMultiple($blockList, array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple Blocks", "Blocks", implode(",", $blockList), null, $ex);
     exit(1);

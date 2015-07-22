@@ -4,6 +4,7 @@ BlockCypher PHP SDK release notes
 v1.2.0
 ------
 * MicroTXClient
+* BlockClient
 
 v1.1.0
 ------

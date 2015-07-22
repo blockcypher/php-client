@@ -41,6 +41,7 @@ class Block extends BlockCypherResourceModel
     /**
      * Obtain the Block resource for the given identifier (hash or height).
      *
+     * @deprecated since version 1.2. Use BlockClient.
      * @param string $hashOrHeight
      * @param array $params Parameters. Options: txstart, and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -77,6 +78,7 @@ class Block extends BlockCypherResourceModel
     /**
      * Obtain multiple Block resources for the given identifiers (hash or height).
      *
+     * @deprecated since version 1.2. Use BlockClient.
      * @param string[] $array
      * @param array $params Parameters. Options: txstart, and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
