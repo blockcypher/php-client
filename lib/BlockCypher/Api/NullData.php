@@ -25,10 +25,11 @@ class NullData extends BlockCypherResourceModel
     /**
      * Allow to embed small pieces of data on the blockchain.
      *
+     * @deprecated since version 1.2. Use NullDataClient.
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Wallet
+     * @return NullData
      */
     public function create($params = array(), $apiContext = null, $restCall = null)
     {

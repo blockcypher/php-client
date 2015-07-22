@@ -6,6 +6,7 @@ v1.2.0
 * MicroTXClient
 * BlockClient
 * BlockchainClient
+* NullDataClient
 
 v1.1.0
 ------

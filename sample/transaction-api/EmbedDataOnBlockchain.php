@@ -7,16 +7,19 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-$nullData = new \BlockCypher\Api\NullData();
-$nullData->setEncoding('string');
-$nullData->setData('***BlockCypher Data Endpoint Test***'); // max 40 bytes
+$data = '***BlockCypher Data Endpoint Test***'; // max 40 bytes
 
 /// For Sample Purposes Only.
+$nullData = new \BlockCypher\Api\NullData();
+$nullData->setEncoding('string');
+$nullData->setData($data); // max 40 bytes
 $request = clone $nullData;
+
+$nullDataClient = new \BlockCypher\Client\NullDataClient($apiContexts['BTC.main']);
 
 try {
     /// Create TX with embed data
-    $nullData->create(array(), $apiContexts['BTC.main']);
+    $nullData = $nullDataClient->embedString($data); // max 40 bytes
 } catch (Exception $ex) {
     ResultPrinter::printError("Embed Data On Blockchain", "NullData", null, $request, $ex);
     exit(1);

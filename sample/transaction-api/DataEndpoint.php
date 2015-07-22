@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\NullData;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\NullDataClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,13 +15,8 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$nullData = new NullData();
-$nullData->setEncoding('string');
-$nullData->setData('***BlockCypher Data Endpoint Test***'); // max 40 bytes
+$nullDataClient = new NullDataClient($apiContext);
 
-// For Sample Purposes Only.
-$request = clone $nullData;
+$nullData = $nullDataClient->embedString('***BlockCypher Data Endpoint Test***'); // max 40 bytes
 
-$nullData->create(array(), $apiContext);
-
-ResultPrinter::printResult("Embed Data On Blockchain", "NullData", $nullData->getHash(), $request, $nullData);
+ResultPrinter::printResult("Embed Data On Blockchain", "NullData", $nullData->getHash(), null, $nullData);
