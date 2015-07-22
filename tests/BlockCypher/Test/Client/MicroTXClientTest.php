@@ -3,7 +3,10 @@
 namespace BlockCypher\Test\Client;
 
 use BlockCypher\Client\MicroTXClient;
+use BlockCypher\Rest\ApiContext;
 use BlockCypher\Test\Api\MicroTXTest;
+use BlockCypher\Transport\BlockCypherRestCall;
+use PHPUnit_Framework_MockObject_MockObject;
 
 /**
  * Class MicroTXClientTest
@@ -12,30 +15,28 @@ use BlockCypher\Test\Api\MicroTXTest;
  */
 class MicroTXClientTest extends ClientTestCase
 {
-    public function testCreate()
+    /**
+     * @return MicroTXClient
+     */
+    public static function getObject()
     {
-        $obj = static::getObject();
+        return new MicroTXClient();
+    }
 
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->any())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue("/v1/bcy/test"));
-
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
+    /**
+     * @dataProvider mockProvider
+     * @param MicroTXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     */
+    public function testCreate($obj, $mockApiContext, $mockBlockCypherRestCall)
+    {
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 MicroTXTest::getJson()
             ));
 
-        /** @noinspection PhpParamsInspection */
         $result = $obj->create(
             MicroTXTest::getObject(),
             $mockApiContext,
@@ -47,37 +48,19 @@ class MicroTXClientTest extends ClientTestCase
     }
 
     /**
-     * @return MicroTXClient
+     * @dataProvider mockProvider
+     * @param MicroTXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
-    public static function getObject()
+    public function testSend($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
-        return new MicroTXClient();
-    }
-
-    public function testSend()
-    {
-        $obj = static::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->any())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue("/v1/bcy/test"));
-
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 MicroTXTest::getJson()
             ));
 
-        /** @noinspection PhpParamsInspection */
         $result = $obj->send(
             MicroTXTest::getObject(),
             $mockApiContext,
@@ -88,30 +71,20 @@ class MicroTXClientTest extends ClientTestCase
         $this->assertInstanceOf('\BlockCypher\Api\MicroTX', $result);
     }
 
-    public function testFromPubkey()
+    /**
+     * @dataProvider mockProvider
+     * @param MicroTXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     */
+    public function testFromPubkey($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
-        $obj = static::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->any())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue("/v1/bcy/test"));
-
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 MicroTXTest::getJson()
             ));
 
-        /** @noinspection PhpParamsInspection */
         $result = $obj->sendSigned(
             "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff",
             "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi",
@@ -123,30 +96,20 @@ class MicroTXClientTest extends ClientTestCase
         $this->assertNotNull($result);
     }
 
-    public function testFromPrivate()
+    /**
+     * @dataProvider mockProvider
+     * @param MicroTXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     */
+    public function testFromPrivate($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
-        $obj = static::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->any())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue("/v1/bcy/test"));
-
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 MicroTXTest::getJson()
             ));
 
-        /** @noinspection PhpParamsInspection */
         $result = $obj->sendWithPrivateKey(
             "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff",
             "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi",
@@ -158,30 +121,20 @@ class MicroTXClientTest extends ClientTestCase
         $this->assertNotNull($result);
     }
 
-    public function testFromWif()
+    /**
+     * @dataProvider mockProvider
+     * @param MicroTXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     */
+    public function testFromWif($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
-        $obj = static::getObject();
-
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getBaseChainUrl'))
-            ->getMock();
-
-        $mockApiContext->expects($this->any())
-            ->method('getBaseChainUrl')
-            ->will($this->returnValue("/v1/bcy/test"));
-
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 MicroTXTest::getJson()
             ));
 
-        /** @noinspection PhpParamsInspection */
         /** @noinspection SpellCheckingInspection */
         $result = $obj->sendWithWif(
             "BpouCdZ5dXbjcUDQBj8ZVYBbSPtWYDQHxuDcP48VA6Q7dZuqW4UJ",

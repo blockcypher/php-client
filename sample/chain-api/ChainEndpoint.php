@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\Blockchain;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\BlockchainClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,6 +15,8 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$blockchain = Blockchain::get('BTC.main', array(), $apiContext);
+$blockchainClient = new BlockchainClient($apiContext);
+
+$blockchain = $blockchainClient->get('BTC.main');
 
 ResultPrinter::printResult("Get Blockchain", "Blockchain", $blockchain->getName(), null, $blockchain);

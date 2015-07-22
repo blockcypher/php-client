@@ -454,8 +454,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\BlockHashEndpoint",
             "title": "BlockHashEndpoint"
           },
-            "depth": 2,
-            "outline": []
+            "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -473,8 +472,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\BlockHeightEndpoint",
             "title": "BlockHeightEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -492,18 +490,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetBlock",
             "title": "GetBlock"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Block",
-                          "slug": "get-block"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -521,18 +508,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetBlockByHeight",
             "title": "GetBlockByHeight"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Block By Height",
-                          "slug": "get-block-by-height"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -550,18 +526,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetBlockWithPaging",
             "title": "GetBlockWithPaging"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Block With Paging",
-                          "slug": "get-block-with-paging"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -579,18 +544,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetMultipleBlocks",
             "title": "GetMultipleBlocks"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Multiple Blocks",
-                          "slug": "get-multiple-blocks"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }
       ]
     }, {
@@ -618,7 +572,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "chain-api\\ChainEndpoint",
             "title": "ChainEndpoint"
           },
-          "depth": 2
+            "depth": 2,
+            "outline": []
         }, {
           "type": "file",
           "data": {
@@ -636,7 +591,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "chain-api\\GetChain",
             "title": "GetChain"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Blockchain",
+                          "slug": "get-blockchain"
+                      },
+                      "depth": 1
+                  }
+              ]
         }
       ]
     }, {

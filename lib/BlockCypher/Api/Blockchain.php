@@ -35,8 +35,9 @@ use BlockCypher\Validation\ArgumentValidator;
 class Blockchain extends BlockCypherResourceModel
 {
     /**
-     * Obtain the Bank Account resource for the given identifier.
+     * Obtain the Blockchain resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use BlockchainClient.
      * @param string $name
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.

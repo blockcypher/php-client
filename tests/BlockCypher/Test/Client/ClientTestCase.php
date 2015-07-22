@@ -9,27 +9,6 @@ namespace BlockCypher\Test\Client;
  */
 class ClientTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function mockProvider()
-    {
-        $obj = static::getObject();
-
-        $mockApiContext = $this->getMockApiContext();
-
-        return array(
-            array($obj, $mockApiContext),
-            array($obj, null)
-        );
-    }
-
-    /**
-     * Gets Object Instance with Json data filled in
-     * @return null
-     */
-    public static function getObject()
-    {
-        return null;
-    }
-
     /**
      * @param string $version
      * @param string $coin
@@ -50,16 +29,64 @@ class ClientTestCase extends \PHPUnit_Framework_TestCase
         return $mockApiContext;
     }
 
+    /**
+     * @return array
+     */
+    public function mockProvider()
+    {
+        $obj = static::getObject();
+
+        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
+            ->disableOriginalConstructor()
+            ->setMethods(array('getBaseChainUrl'))
+            ->getMock();
+
+        $mockApiContext->expects($this->any())
+            ->method('getBaseChainUrl')
+            ->will($this->returnValue("/v1/bcy/test"));
+
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        return array(
+            array($obj, $mockApiContext, $mockBlockCypherRestCall)
+        );
+    }
+
+    /**
+     * Gets Object Instance with Json data filled in
+     * @return null
+     */
+    public static function getObject()
+    {
+        return null;
+    }
+
+    /**
+     * @return array
+     */
     public function mockProviderGetParamsValidation()
     {
         $obj = static::getObject();
 
-        $mockApiContext = $this->getMockApiContext();
+        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
+            ->disableOriginalConstructor()
+            ->setMethods(array('getBaseChainUrl'))
+            ->getMock();
+
+        $mockApiContext->expects($this->any())
+            ->method('getBaseChainUrl')
+            ->will($this->returnValue("/v1/bcy/test"));
+
+        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
+            ->disableOriginalConstructor()
+            ->getMock();
 
         return array(
-            array($obj, $mockApiContext, null),
-            array($obj, $mockApiContext, ''),
-            array($obj, $mockApiContext, 'TestSample'),
+            array($obj, $mockApiContext, $mockBlockCypherRestCall, null),
+            array($obj, $mockApiContext, $mockBlockCypherRestCall, ''),
+            array($obj, $mockApiContext, $mockBlockCypherRestCall, 'TestSample'),
         );
     }
 

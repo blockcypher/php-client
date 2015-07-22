@@ -7,8 +7,10 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$blockchainClient = new \BlockCypher\Client\BlockchainClient($apiContexts['BTC.main']);
+
 try {
-    $blockchain = \BlockCypher\Api\Blockchain::get('BTC.main', array(), $apiContexts['BTC.main']);
+    $blockchain = $blockchainClient->get('BTC.main');
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Blockchain", "Blockchain", 'BTC.main', null, $ex);
     exit(1);
