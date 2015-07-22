@@ -1107,6 +1107,7 @@ if (PHP_SAPI == 'cli') {
                 </div>
                 <!-- List group -->
                 <ul class="list-group">
+                    <!--
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Create microtransaction via private keys</h5></div>
@@ -1173,6 +1174,7 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
+                    -->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Create from private (using client)</h5>

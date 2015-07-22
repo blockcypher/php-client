@@ -14,7 +14,7 @@ use BlockCypher\Transport\BlockCypherRestCall;
  * @package BlockCypher\Client
  *
  */
-class MicroTXClient
+class MicroTXClient extends BlockCypherClient
 {
     /**
      * Send a microtransaction signing it locally (without sending the private key to the server)
@@ -31,15 +31,68 @@ class MicroTXClient
         $compressed = true;
         $pubkey = PrivateKeyManipulator::generateHexPubKeyFromHexPrivKey($hexPrivateKey, $compressed);
 
-        $microTX = MicroTXBuilder::aMicroTX()
+        $microTX = MicroTXBuilder::newMicroTX()
             ->fromPubkey($pubkey)
             ->toAddress($toAddress)
             ->withValueInSatoshis($valueSatoshis)
-            ->build()
-            ->create($apiContext, $restCall)
-            ->sign($hexPrivateKey)
-            ->send($apiContext, $restCall);
+            ->build();
 
+        $microTX = $this->create($microTX, $apiContext, $restCall);
+        $microTX->sign($hexPrivateKey);
+        $microTX = $this->send($microTX, $apiContext, $restCall);
+
+        return $microTX;
+    }
+
+    /**
+     * Create a new MicroTX.
+     *
+     * @param MicroTX $microTX
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return MicroTX
+     */
+    public function create(MicroTX $microTX, $apiContext = null, $restCall = null)
+    {
+        $payLoad = $microTX->toJSON();
+
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs/micro",
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $microTX->fromJson($json);
+        return $microTX;
+    }
+
+    /**
+     * Send the microtransaction to the network.
+     *
+     * @param MicroTX $microTX
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return MicroTX
+     */
+    public function send(MicroTX $microTX, $apiContext = null, $restCall = null)
+    {
+        $payLoad = $microTX->toJSON();
+
+        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+
+        $json = self::executeCall(
+            "$chainUrlPrefix/txs/micro",
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $microTX->fromJson($json);
         return $microTX;
     }
 
@@ -55,12 +108,13 @@ class MicroTXClient
      */
     public function sendWithPrivateKey($hexPrivateKey, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
     {
-        $microTX = MicroTXBuilder::aMicroTX()
+        $microTX = MicroTXBuilder::newMicroTX()
             ->fromPrivate($hexPrivateKey)
             ->toAddress($toAddress)
             ->withValueInSatoshis($valueSatoshis)
-            ->build()
-            ->create($apiContext, $restCall);
+            ->build();
+
+        $microTX = $this->create($microTX, $apiContext, $restCall);
 
         return $microTX;
     }
@@ -78,12 +132,13 @@ class MicroTXClient
      */
     public function sendWithWif($wif, $toAddress, $valueSatoshis, $apiContext = null, $restCall = null)
     {
-        $microTX = MicroTXBuilder::aMicroTX()
+        $microTX = MicroTXBuilder::newMicroTX()
             ->fromWif($wif)
             ->toAddress($toAddress)
             ->withValueInSatoshis($valueSatoshis)
-            ->build()
-            ->create($apiContext, $restCall);
+            ->build();
+
+        $microTX = $this->create($microTX, $apiContext, $restCall);
 
         return $microTX;
     }

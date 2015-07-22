@@ -41,6 +41,7 @@ class MicroTX extends BlockCypherResourceModel
     /**
      * Send the microtransaction to the network.
      *
+     * @deprecated since version 1.2. Use MicroTXClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return MicroTX
@@ -91,6 +92,7 @@ class MicroTX extends BlockCypherResourceModel
     /**
      * Create a new MicroTX.
      *
+     * @deprecated since version 1.2. Use MicroTXClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return MicroTX

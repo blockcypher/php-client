@@ -44,9 +44,19 @@ class MicroTXBuilder
     }
 
     /**
+     * Alias for newMicroTX method.
+     *
      * @return MicroTXBuilder
      */
     public static function aMicroTX()
+    {
+        return self::newMicroTX();
+    }
+
+    /**
+     * @return MicroTXBuilder
+     */
+    public static function newMicroTX()
     {
         return new MicroTXBuilder();
     }
