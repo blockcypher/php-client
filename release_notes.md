@@ -3,6 +3,7 @@ BlockCypher PHP SDK release notes
 
 v1.1.0
 ------
+* Added HDWallet API
 
 v1.0.1
 ------

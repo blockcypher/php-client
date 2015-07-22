@@ -5,21 +5,21 @@ namespace BlockCypher\Api;
 use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
- * Class WalletGenerateAddressResponse
+ * Class HDWalletGenerateAddressResponse
  *
- * A resource representing an wallet address generation response.
+ * A resource representing an HD wallet address generation response.
  *
  * @package BlockCypher\Api
  *
  * @property string token
  * @property string name
  * @property string[] addresses
- * @property string private
- * @property string public
+ * @property bool hd
+ * @property int subchain_index
  * @property string address
- * @property string wif
+ * @property string public
  */
-class WalletGenerateAddressResponse extends BlockCypherBaseModel
+class HDWalletGenerateAddressResponse extends BlockCypherBaseModel
 {
     /**
      * @return string
@@ -106,38 +106,46 @@ class WalletGenerateAddressResponse extends BlockCypherBaseModel
     }
 
     /**
-     * @return string
+     * @return boolean
      */
-    public function getPrivate()
+    public function isHd()
     {
-        return $this->private;
+        return $this->hd;
     }
 
     /**
-     * @param string $private
+     * @return bool
+     */
+    public function getHd()
+    {
+        return $this->hd;
+    }
+
+    /**
+     * @param boolean $hd
      * @return $this
      */
-    public function setPrivate($private)
+    public function setHd($hd)
     {
-        $this->private = $private;
+        $this->hd = $hd;
         return $this;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getPublic()
+    public function getSubchainIndex()
     {
-        return $this->public;
+        return $this->subchain_index;
     }
 
     /**
-     * @param string $public
+     * @param int $subchain_index
      * @return $this
      */
-    public function setPublic($public)
+    public function setSubchainIndex($subchain_index)
     {
-        $this->public = $public;
+        $this->subchain_index = $subchain_index;
         return $this;
     }
 
@@ -162,18 +170,18 @@ class WalletGenerateAddressResponse extends BlockCypherBaseModel
     /**
      * @return string
      */
-    public function getWif()
+    public function getPublic()
     {
-        return $this->wif;
+        return $this->public;
     }
 
     /**
-     * @param string $wif
+     * @param string $public
      * @return $this
      */
-    public function setWif($wif)
+    public function setPublic($public)
     {
-        $this->wif = $wif;
+        $this->public = $public;
         return $this;
     }
 }

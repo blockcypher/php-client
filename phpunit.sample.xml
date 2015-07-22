@@ -50,6 +50,15 @@
             <file>tests/sample/Test/Functional/wallet-api/GenerateAddressInWalletEndpointTest.php</file>
             <file>tests/sample/Test/Functional/wallet-api/WalletAddressesEndpointTest.php</file>
             <file>tests/sample/Test/Functional/wallet-api/DeleteWalletEndpointTest.php</file>
+            <!-- wallet-api HD wallet tests must be executed in order -->
+            <file>tests/sample/Test/Functional/wallet-api/CreateHDWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GenerateAddressInHDWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetHDWalletTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetHDWalletAsAddressTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetHDWalletAsFullAddressTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/GetHDWalletAsAddressBalanceTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/ListHDWalletAddressesTest.php</file>
+            <file>tests/sample/Test/Functional/wallet-api/DeleteHDWalletTest.php</file>
         </testsuite>
     </testsuites>
 

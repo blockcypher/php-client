@@ -2,11 +2,13 @@
 
 namespace sample\Test\Functional\wallet;
 
+use sample\Test\Functional\WalletSampleTestCase;
+
 /**
- * Class ListWalletAddressesTest
- * @package sample\Test\Functional\wallet
+ * Class GetHDWalletAsFullAddressTest
+ * @package sample\Test\Functional\wallets
  */
-class ListWalletAddressesTest extends WalletSampleTestCase
+class GetHDWalletAsFullAddressTest extends WalletSampleTestCase
 {
     public function setUp()
     {
@@ -25,7 +27,7 @@ class ListWalletAddressesTest extends WalletSampleTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testListWalletAddresses()
+    public function testGetHDWalletAsFullAddress()
     {
         $this->loadAndAssertSample($this->url . '?wallet_name=' . self::$walletName);
     }

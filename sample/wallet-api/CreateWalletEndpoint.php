@@ -27,4 +27,4 @@ $request = clone $wallet;
 
 $wallet->create(array(), $apiContext);
 
-ResultPrinter::printResult("Created Wallet End Point", "Wallet", $output->getName(), $request, $wallet);
+ResultPrinter::printResult("Created Wallet End Point", "Wallet", $wallet->getName(), $request, $wallet);

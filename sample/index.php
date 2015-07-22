@@ -538,6 +538,20 @@ if (PHP_SAPI == 'cli') {
                     </li>
                     <li class="list-group-item">
                         <div class="row">
+                            <div class="col-md-8"><h5>Create HD wallet</h5></div>
+                            <div class="col-md-4">
+                                <a href="wallet-api/CreateHDWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallet-api/CreateHDWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
                             <div class="col-md-8">
                                 <h5>Get wallet*
                                     <small>(Depends on "Create wallet")</small>
@@ -548,6 +562,24 @@ if (PHP_SAPI == 'cli') {
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/wallet-api/GetWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Get HD wallet*
+                                    <small>(Depends on "Create HD wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallet-api/GetHDWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallet-api/GetHDWallet.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -649,6 +681,42 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
+                                <h5>Generate new address in HD wallet*
+                                    <small>(Depends on "Create HD wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallet-api/GenerateAddressInHDWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallet-api/GenerateAddressInHDWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Generate new address in HD wallet with subchain index*
+                                    <small>(Depends on "Create HD wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallet-api/GenerateAddressInHDWalletWithSubchainIndex.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallet-api/GenerateAddressInHDWalletWithSubchainIndex.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
                                 <h5>List wallet addresses*
                                     <small>(Depends on "Add addresses to a wallet")</small>
                                 </h5>
@@ -658,6 +726,24 @@ if (PHP_SAPI == 'cli') {
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/wallet-api/ListWalletAddresses.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>List HD wallet addresses*
+                                    <small>(Depends on "Generate address in wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallet-api/ListHDWalletAddresses.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallet-api/ListHDWalletAddresses.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -694,6 +780,24 @@ if (PHP_SAPI == 'cli') {
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/wallet-api/DeleteWallet.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Delete HD wallet*
+                                    <small>(Depends on "Create HD wallet")</small>
+                                </h5>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="wallet-api/DeleteHDWallet.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/wallet-api/DeleteHDWallet.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>

@@ -20,7 +20,7 @@ use BlockCypher\Validation\UrlValidator;
  * @package BlockCypher\Api
  *
  * @property string address Only present when object represents an address
- * @property \BlockCypher\Api\Wallet wallet Only present when object represents a wallet
+ * @property \BlockCypher\Api\WalletInfo wallet Only present when object represents a wallet
  * @property int total_received
  * @property int total_sent
  * @property int balance

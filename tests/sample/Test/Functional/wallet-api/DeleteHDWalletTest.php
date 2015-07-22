@@ -2,11 +2,13 @@
 
 namespace sample\Test\Functional\wallet;
 
+use sample\Test\Functional\WalletSampleTestCase;
+
 /**
- * Class CreateWalletTest
+ * Class DeleteHDWalletTest
  * @package sample\Test\Functional\wallet
  */
-class CreateWalletTest extends WalletSampleTestCase
+class DeleteHDWalletTest extends WalletSampleTestCase
 {
     public function setUp()
     {
@@ -25,7 +27,7 @@ class CreateWalletTest extends WalletSampleTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testCreateWallet()
+    public function testDeleteHDWallet()
     {
         $this->loadAndAssertSample($this->url . '?wallet_name=' . self::$walletName);
     }

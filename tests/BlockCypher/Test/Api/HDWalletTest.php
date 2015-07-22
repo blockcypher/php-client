@@ -2,78 +2,87 @@
 
 namespace BlockCypher\Test\Api;
 
-use BlockCypher\Api\Wallet;
+use BlockCypher\Api\HDWallet;
 
 /**
- * Class WalletTest
+ * Class HDWalletTest
  *
  * @package BlockCypher\Test\Api
  */
-class WalletTest extends ResourceModelTestCase
+class HDWalletTest extends ResourceModelTestCase
 {
+    // TODO: addSubchainIndex, removesSubchainIndex, isHd tests
+
+    /**
+     * Gets Object Instance with Json data filled in
+     * @return HDWallet
+     */
+    public static function getObject()
+    {
+        return new HDWallet(self::getJson());
+    }
+
+    /**
+     * Gets Json String of Object Wallet
+     * @return string
+     */
+    public static function getJson()
+    {
+        /*
+        {
+            "name": "bob",
+            "extended_public_key": "xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8",
+            "subchain_indexes": [
+                1,
+                3
+            ],
+            "token": "c0afcccdde5081d6429de37d16166ead",
+            "hd": true,
+            "error": "",
+            "errors": []
+        }
+        */
+
+        return '{"name":"bob","extended_public_key":"xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8","subchain_indexes":[1,3],"token":"c0afcccdde5081d6429de37d16166ead","hd":true,"error":"","errors":[]}';
+    }
+
     /**
      * Tests for Serialization and Deserialization Issues
-     * @return Wallet
+     * @return HDWallet
      */
     public function testSerializationDeserialization()
     {
-        $obj = new Wallet(self::getJson());
+        $obj = new HDWallet(self::getJson());
         $this->assertNotNull($obj);
 
         $this->assertNotNull($obj->getToken());
         $this->assertNotNull($obj->getName());
-        $this->assertNotNull($obj->getAddresses());
+        //$this->assertNotNull($obj->getAddresses());
+        $this->assertNotNull($obj->getHd());
+        $this->assertNotNull($obj->getExtendedPublicKey());
+        $this->assertNotNull($obj->getSubchainIndexes());
 
         $this->assertEquals(self::getJson(), $obj->toJson());
         return $obj;
     }
 
     /**
-     * Gets Json String of Object Wallet
-     * @param array $addresses
-     * @return string
-     */
-    public static function getJson($addresses=array())
-    {
-        /*
-        {
-          "token": "c0afcccdde5081d6429de37d16166ead",
-          "name": "alice",
-          "addresses": [
-            "18VAyux27CiWQnmYumZeTKNcaw6opvKRLq",
-            "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"
-          ],
-          "error": "",
-          "errors": []  
-        }
-        */
-
-        //return '{"token":"c0afcccdde5081d6429de37d16166ead","name":"alice","addresses":["18VAyux27CiWQnmYumZeTKNcaw6opvKRLq","1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"],"error":"","errors":[]}';
-
-        if (empty($addresses)) {
-            $addresses = array(
-                "18VAyux27CiWQnmYumZeTKNcaw6opvKRLq",
-                "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"
-            );
-        }
-
-        return '{"token":"c0afcccdde5081d6429de37d16166ead","name":"alice","addresses":'.json_encode($addresses, true).',"error":"","errors":[]}';
-    }
-
-    /**
      * @depends testSerializationDeserialization
-     * @param Wallet $obj
+     * @param HDWallet $obj
      */
     public function testGetters($obj)
     {
         $this->assertEquals($obj->getToken(), "c0afcccdde5081d6429de37d16166ead");
-        $this->assertEquals($obj->getName(), "alice");
-        $this->assertEquals($obj->getAddresses(), array("18VAyux27CiWQnmYumZeTKNcaw6opvKRLq", "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"));
+        $this->assertEquals($obj->getName(), "bob");
+        //$this->assertEquals($obj->getAddresses(), array("18VAyux27CiWQnmYumZeTKNcaw6opvKRLq", "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"));
+        $this->assertEquals($obj->getHd(), true);
+        $this->assertEquals($obj->getExtendedPublicKey(), 'xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8');
+        $this->assertEquals($obj->getSubchainIndexes(), array(1, 3));
     }
 
     /**
      * @depends testSerializationDeserialization
-     * @param Wallet $obj
+     * @param HDWallet $obj
      */
     public function testAddAddress($obj)
     {
@@ -84,7 +93,7 @@ class WalletTest extends ResourceModelTestCase
 
     /**
      * @depends testSerializationDeserialization
-     * @param Wallet $obj
+     * @param HDWallet $obj
      */
     public function testRemoveAddress($obj)
     {
@@ -109,7 +118,7 @@ class WalletTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param Wallet $obj
+     * @param HDWallet $obj
      * @param $mockApiContext
      */
     public function testCreate($obj, $mockApiContext)
@@ -131,7 +140,7 @@ class WalletTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param Wallet $obj
+     * @param HDWallet $obj
      * @param $mockApiContext
      */
     public function testGenerateAddress($obj, $mockApiContext)
@@ -143,7 +152,7 @@ class WalletTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                WalletGenerateAddressResponseTest::getJson()
+                HDWalletGenerateAddressResponseTest::getJson()
             ));
 
         /** @noinspection PhpParamsInspection */
@@ -153,59 +162,7 @@ class WalletTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param Wallet $obj
-     * @param $mockApiContext
-     */
-    public function testAddAddresses($obj, $mockApiContext)
-    {
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $addressList = AddressListTest::getObject();
-
-        $mockBlockCypherRestCall->expects($this->any())
-            ->method('execute')
-            ->will($this->returnValue(
-                self::getJson(array_merge(self::addresses(), $addressList->getAddresses()))
-            ));
-
-       /** @noinspection PhpParamsInspection */
-        $result = $obj->addAddresses($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
-
-        $this->assertNotNull($result);
-        $this->assertArraySubset($addressList->getAddresses(), $result->getAddresses());
-    }
-
-    /**
-     * @dataProvider mockProvider
-     * @param Wallet $obj
-     * @param $mockApiContext
-     */
-    public function testRemoveAddresses($obj, $mockApiContext)
-    {
-        $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $addressList = AddressListTest::getObject();
-
-        $mockBlockCypherRestCall->expects($this->any())
-            ->method('execute')
-            ->will($this->returnValue(
-                self::getJson(array_diff(self::addresses(), $addressList->getAddresses()))
-            ));
-
-        /** @noinspection PhpParamsInspection */
-        $result = $obj->addAddresses($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
-
-        $this->assertNotNull($result);
-        $this->assertNotContains($addressList->getAddresses(), $result->getAddresses());
-    }
-
-    /**
-     * @dataProvider mockProvider
-     * @param Wallet $obj
+     * @param HDWallet $obj
      * @param $mockApiContext
      */
     public function testGet($obj, $mockApiContext)
@@ -227,7 +184,7 @@ class WalletTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProvider
-     * @param Wallet $obj
+     * @param HDWallet $obj
      * @param $mockApiContext
      */
     public function testGetOnlyAddresses($obj, $mockApiContext)
@@ -249,7 +206,7 @@ class WalletTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param Wallet $obj
+     * @param HDWallet $obj
      * @param $mockApiContext
      * @param $params
      * @expectedException \InvalidArgumentException
@@ -277,7 +234,7 @@ class WalletTest extends ResourceModelTestCase
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param Wallet $obj
+     * @param HDWallet $obj
      * @param $mockApiContext
      * @param $params
      * @expectedException \InvalidArgumentException
@@ -306,17 +263,8 @@ class WalletTest extends ResourceModelTestCase
     }
 
     /**
-     * Gets Object Instance with Json data filled in
-     * @return Wallet
-     */
-    public static function getObject()
-    {
-        return new Wallet(self::getJson());
-    }
-
-    /**
      * @dataProvider mockProvider
-     * @param Wallet $obj
+     * @param HDWallet $obj
      * @param $mockApiContext
      */
     public function testDelete($obj, $mockApiContext)

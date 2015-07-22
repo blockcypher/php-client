@@ -24,10 +24,10 @@ try {
     /// Add addresses
     $output = $wallet->generateAddress(array(), $apiContexts['BTC.main']);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Generate New Address for Wallet", "WalletGenerateAddressResponse", $walletName, null, $ex);
+    ResultPrinter::printError("Add Addresses to a Wallet", "WalletGenerateAddressResponse", $walletName, null, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Generate New Address for Wallet", "WalletGenerateAddressResponse", $walletName, null, $output);
+ResultPrinter::printResult("Add Addresses to a Wallet", "WalletGenerateAddressResponse", $walletName, null, $output);
 
 return $output;

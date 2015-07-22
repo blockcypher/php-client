@@ -5,6 +5,7 @@ namespace sample\Test\Functional\wallet;
 use BlockCypher\Api\Wallet;
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Rest\ApiContext;
+use sample\Test\Functional\WalletSampleTestCase;
 
 /**
  * Class CreateWalletEndpointTest

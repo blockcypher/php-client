@@ -1,8 +1,6 @@
 <?php
 
-namespace sample\Test\Functional\wallet;
-
-use sample\Test\Functional\WebTestCase;
+namespace sample\Test\Functional;
 
 /**
  * Class WalletSamplesTest

@@ -2,25 +2,28 @@
 
 namespace BlockCypher\Api;
 
-use BlockCypher\Common\BlockCypherBaseModel;
+use BlockCypher\Common\BlockCypherModel;
 
 /**
- * Class WalletGenerateAddressResponse
- *
- * A resource representing an wallet address generation response.
+ * Class WalletInfo
  *
  * @package BlockCypher\Api
  *
  * @property string token
  * @property string name
  * @property string[] addresses
- * @property string private
- * @property string public
- * @property string address
- * @property string wif
+ * @property bool hd
  */
-class WalletGenerateAddressResponse extends BlockCypherBaseModel
+class WalletInfo extends BlockCypherModel
 {
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
     /**
      * @return string
      */
@@ -37,14 +40,6 @@ class WalletGenerateAddressResponse extends BlockCypherBaseModel
     {
         $this->token = $token;
         return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
     }
 
     /**
@@ -106,74 +101,28 @@ class WalletGenerateAddressResponse extends BlockCypherBaseModel
     }
 
     /**
-     * @return string
+     * @return boolean
      */
-    public function getPrivate()
+    public function isHd()
     {
-        return $this->private;
+        return $this->hd;
     }
 
     /**
-     * @param string $private
+     * @return bool
+     */
+    public function getHd()
+    {
+        return $this->hd;
+    }
+
+    /**
+     * @param boolean $hd
      * @return $this
      */
-    public function setPrivate($private)
+    public function setHd($hd)
     {
-        $this->private = $private;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPublic()
-    {
-        return $this->public;
-    }
-
-    /**
-     * @param string $public
-     * @return $this
-     */
-    public function setPublic($public)
-    {
-        $this->public = $public;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * @param string $address
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getWif()
-    {
-        return $this->wif;
-    }
-
-    /**
-     * @param string $wif
-     * @return $this
-     */
-    public function setWif($wif)
-    {
-        $this->wif = $wif;
+        $this->hd = $hd;
         return $this;
     }
 }

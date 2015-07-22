@@ -2,11 +2,13 @@
 
 namespace sample\Test\Functional\wallet;
 
+use sample\Test\Functional\WalletSampleTestCase;
+
 /**
- * Class GenerateAddressInWalletEndpointTest
+ * Class WalletAddressesEndpointTest
  * @package sample\Test\Functional\wallet
  */
-class GenerateAddressInWalletEndpointTest extends WalletSampleTestCase
+class WalletAddressesEndpointTest extends WalletSampleTestCase
 {
     public function setUp()
     {
@@ -26,7 +28,7 @@ class GenerateAddressInWalletEndpointTest extends WalletSampleTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGenerateAddressInWalletEndpoint()
+    public function testWalletAddressesEndpoint()
     {
         $this->loadAndAssertSample($this->url . '?wallet_name=' . self::$walletName);
     }

@@ -2,16 +2,17 @@
 
 namespace sample\Test\Functional\wallet;
 
+use sample\Test\Functional\WalletSampleTestCase;
+
 /**
- * Class AddAddressesToWalletEndpointTest
+ * Class RemoveAddressesFromWalletTest
  * @package sample\Test\Functional\wallet
  */
-class AddAddressesToWalletEndpointTest extends WalletSampleTestCase
+class RemoveAddressesFromWalletTest extends WalletSampleTestCase
 {
     public function setUp()
     {
         parent::SetUp();
-        self::$walletName = 'alice';
         $className = $this->getClassName();
         $sampleName = substr($className, 0, -4);
         $this->url = self::baseUrl() . basename(__DIR__) . '/' . $sampleName . '.php';
@@ -26,7 +27,7 @@ class AddAddressesToWalletEndpointTest extends WalletSampleTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testAddAddressesToWalletEndpoint()
+    public function testRemoveAddressesFromWallet()
     {
         $this->loadAndAssertSample($this->url . '?wallet_name=' . self::$walletName);
     }

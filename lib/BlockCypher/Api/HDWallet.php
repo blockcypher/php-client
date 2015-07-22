@@ -9,17 +9,21 @@ use BlockCypher\Validation\ArgumentGetParamsValidator;
 use BlockCypher\Validation\ArgumentValidator;
 
 /**
- * Class Wallet
+ * Class HDWallet
  *
- * A Wallet represents a list of addresses, and can be used interchangeably with all the Address API endpoints.
+ * A HDWallet contains addresses derived from a single seed. Like normal wallets,
+ * it can be used interchangeably with all the Address API endpoints.
  *
  * @package BlockCypher\Api
  *
  * @property string token
  * @property string name
  * @property string[] addresses
+ * @property bool hd
+ * @property string extended_public_key
+ * @property int[] subchain_indexes
  */
-class Wallet extends BlockCypherResourceModel
+class HDWallet extends BlockCypherResourceModel
 {
     /**
      * Obtain the Wallet resource for the given identifier.
@@ -28,7 +32,7 @@ class Wallet extends BlockCypherResourceModel
      * @param array $params Parameters.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Wallet
+     * @return HDWallet
      */
     public static function get($walletName, $params = array(), $apiContext = null, $restCall = null)
     {
@@ -42,14 +46,14 @@ class Wallet extends BlockCypherResourceModel
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
-            "$chainUrlPrefix/wallets/$walletName?" . http_build_query($params),
+            "$chainUrlPrefix/wallets/hd/$walletName?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
             $apiContext,
             $restCall
         );
-        $ret = new Wallet();
+        $ret = new HDWallet();
         $ret->fromJson($json);
         return $ret;
     }
@@ -61,7 +65,7 @@ class Wallet extends BlockCypherResourceModel
      * @param array $params Parameters.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Wallet
+     * @return HDWallet
      */
     public static function getOnlyAddresses($walletName, $params = array(), $apiContext = null, $restCall = null)
     {
@@ -75,7 +79,7 @@ class Wallet extends BlockCypherResourceModel
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
-            "$chainUrlPrefix/wallets/$walletName/addresses?" . http_build_query($params),
+            "$chainUrlPrefix/wallets/hd/$walletName/addresses?" . http_build_query($params),
             "GET",
             $payLoad,
             null,
@@ -84,16 +88,17 @@ class Wallet extends BlockCypherResourceModel
         );
         $ret = new AddressList();
         $ret->fromJson($json);
+
         return $ret;
     }
 
     /**
-     * Create a new Wallet.
+     * Create a new HDWallet.
      *
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Wallet
+     * @return HDWallet
      */
     public function create($params = array(), $apiContext = null, $restCall = null)
     {
@@ -106,7 +111,7 @@ class Wallet extends BlockCypherResourceModel
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
-            "$chainUrlPrefix/wallets?" . http_build_query($params),
+            "$chainUrlPrefix/wallets/hd?" . http_build_query($params),
             "POST",
             $payLoad,
             null,
@@ -118,7 +123,7 @@ class Wallet extends BlockCypherResourceModel
     }
 
     /**
-     * Deletes the Wallet identified by wallet_id for the application associated with access token.
+     * Deletes the HDWallet identified by wallet_id for the application associated with access token.
      *
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -136,7 +141,7 @@ class Wallet extends BlockCypherResourceModel
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         self::executeCall(
-            "$chainUrlPrefix/wallets/{$this->getName()}" . http_build_query($params),
+            "$chainUrlPrefix/wallets/hd/{$this->getName()}" . http_build_query($params),
             "DELETE",
             $payLoad,
             null,
@@ -155,91 +160,19 @@ class Wallet extends BlockCypherResourceModel
     }
 
     /**
-     * Add Addresses to the Wallet. Associates addresses with the wallet.
-     *
-     * @param AddressList $addressList
-     * @param array $params Parameters
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Wallet
-     */
-    public function addAddresses($addressList, $params = array(), $apiContext = null, $restCall = null)
-    {
-        ArgumentValidator::validate($addressList, 'addressList');
-        ArgumentGetParamsValidator::validate($params, 'params');
-        $allowedParams = array();
-        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
-
-        $payLoad = $addressList->toJSON();
-
-        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
-
-        $json = self::executeCall(
-            "$chainUrlPrefix/wallets/{$this->name}/addresses?" . http_build_query($params),
-            "POST",
-            $payLoad,
-            null,
-            $apiContext,
-            $restCall
-        );
-        $this->fromJson($json);
-        return $this;
-    }
-
-    /**
-     * Remove Addresses to the Wallet. Addresses will no longer be associated with the wallet.
-     *
-     * @param AddressList $addressList
-     * @param array $params Parameters
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
-     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Wallet
-     */
-    public function removeAddresses($addressList, $params = array(), $apiContext = null, $restCall = null)
-    {
-        ArgumentValidator::validate($addressList, 'addressList');
-        ArgumentGetParamsValidator::validate($params, 'params');
-        $allowedParams = array();
-        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
-
-        // DEPRECATED: Using DELETE Body
-        //$payLoad = $addressList->toJSON();
-
-        $payLoad = '';
-        // Using 'address' url parameter
-        if (!isset($params['address'])) {
-            $params['address'] = implode(';', $addressList->getAddresses());
-        } else {
-            $params['address'] .= ';' . implode(';', $addressList->getAddresses());
-        }
-
-        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
-
-        $json = self::executeCall(
-            //"$chainUrlPrefix/wallets/{$this->name}/addresses?" . http_build_query($params), // With DELETE body
-            "$chainUrlPrefix/wallets/{$this->name}/addresses?" . http_build_query($params), // Without DELETE body
-            "DELETE",
-            $payLoad,
-            null,
-            $apiContext,
-            $restCall
-        );
-        $this->fromJson($json);
-        return $this;
-    }
-
-    /**
      * A new address is generated similar to Address Generation and associated it with the given wallet.
      *
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return WalletGenerateAddressResponse
+     * @return HDWalletGenerateAddressResponse
      */
     public function generateAddress($params = array(), $apiContext = null, $restCall = null)
     {
         ArgumentGetParamsValidator::validate($params, 'params');
-        $allowedParams = array();
+        $allowedParams = array(
+            'subchain_index' => 1
+        );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
         $payLoad = "";
@@ -247,14 +180,14 @@ class Wallet extends BlockCypherResourceModel
         $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
 
         $json = self::executeCall(
-            "$chainUrlPrefix/wallets/{$this->name}/addresses/generate?" . http_build_query($params),
+            "$chainUrlPrefix/wallets/hd/{$this->name}/addresses/generate?" . http_build_query($params),
             "POST",
             $payLoad,
             null,
             $apiContext,
             $restCall
         );
-        $ret = new WalletGenerateAddressResponse();
+        $ret = new HDWalletGenerateAddressResponse();
         $ret->fromJson($json);
         return $ret;
     }
@@ -332,6 +265,98 @@ class Wallet extends BlockCypherResourceModel
     {
         return $this->setAddresses(
             array_diff($this->getAddresses(), array($address))
+        );
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isHd()
+    {
+        return $this->hd;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getHd()
+    {
+        return $this->hd;
+    }
+
+    /**
+     * @param boolean $hd
+     * @return $this
+     */
+    public function setHd($hd)
+    {
+        $this->hd = $hd;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExtendedPublicKey()
+    {
+        return $this->extended_public_key;
+    }
+
+    /**
+     * @param string $extended_public_key
+     * @return $this
+     */
+    public function setExtendedPublicKey($extended_public_key)
+    {
+        $this->extended_public_key = $extended_public_key;
+        return $this;
+    }
+
+    /**
+     * Append subchain index to the list.
+     *
+     * @param int $subchainIndex
+     * @return $this
+     */
+    public function addSubchainIndex($subchainIndex)
+    {
+        if (!$this->getSubchainIndexes()) {
+            return $this->setSubchainIndexes(array($subchainIndex));
+        } else {
+            return $this->setSubchainIndexes(
+                array_merge($this->getSubchainIndexes(), array($subchainIndex))
+            );
+        }
+    }
+
+    /**
+     * @return \int[]
+     */
+    public function getSubchainIndexes()
+    {
+        return $this->subchain_indexes;
+    }
+
+    /**
+     * @param \int[] $subchain_indexes
+     * @return $this
+     */
+    public function setSubchainIndexes($subchain_indexes)
+    {
+        $this->subchain_indexes = $subchain_indexes;
+        return $this;
+    }
+
+    /**
+     * Remove subchain index from the list.
+     *
+     * @param int $subchainIndex
+     * @return $this
+     */
+    public function removeSubchainIndex($subchainIndex)
+    {
+        return $this->getSubchainIndexes(
+            array_diff($this->getSubchainIndexes(), array($subchainIndex))
         );
     }
 }
