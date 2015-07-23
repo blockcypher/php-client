@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><title>payment-api\CreateAndDeleteForwardingAddress</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="payment-api\CreateAndDeleteForwardingAddress"><meta name="groc-project-path" content="payment-api\CreateAndDeleteForwardingAddress.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">payment-api\CreateAndDeleteForwardingAddress.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="delete-paymentforward">Delete PaymentForward</h1>
+<p>This sample code demonstrate how to use this call to delete a PaymentForward, as documented here at:
+<a href="http://dev.blockcypher.com/#delete-payment-endpoint">Delete Payment Endpoint</a></p>
+<p>API used: DELETE /v1/btc/main/payments/PaymentForward-Id</p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h2 id="create-paymentforward-instance">Create PaymentForward Instance</h2>
+<p>This step is not necessarily required. We are creating a PaymentForward for sample purpose only,
+so that we would not get an empty list at any point.
+In real case, you do not need to create any PaymentForward to make this API call.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/** <span class="hljs-doctag">@var</span> \BlockCypher\Api\PaymentForward $paymentForward */</span>
+<span class="hljs-variable">$paymentForward</span> = <span class="hljs-keyword">require</span> <span class="hljs-string">'CreateForwardingAddress.php'</span>;
+
+<span class="hljs-variable">$paymentForwardClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\PaymentForwardClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h2 id="delete-paymentforward">Delete PaymentForward</h2></div></div></div><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">/// Delete PaymentForward</span>
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$paymentForwardClient</span>-&gt;deleteForwardingAddress(<span class="hljs-variable">$paymentForward</span>-&gt;getId());
+} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Delete a PaymentForward"</span>, <span class="hljs-string">"PaymentForward"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$paymentForward</span>-&gt;getId(), <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}
+
+ResultPrinter::printResult(<span class="hljs-string">"Delete a PaymentForward"</span>, <span class="hljs-string">"PaymentForward"</span>, <span class="hljs-variable">$paymentForward</span>-&gt;getId(), <span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>);
+
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;</div></div></div></div></body></html>

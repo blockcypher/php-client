@@ -1305,11 +1305,11 @@ if (PHP_SAPI == 'cli') {
                 <div class="panel-heading">
                     <h3 id="payment-api" class="panel-title"><a
                             href="http://dev.blockcypher.com/#payment-forwarding"
-                            target="_blank">Payments Forwarding</a></h3>
+                            target="_blank">Payment Forwarding</a></h3>
                 </div>
                 <!-- List group -->
                 <ul class="list-group">
-                    <li class="list-group-item">
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Create payment</h5></div>
                             <div class="col-md-4">
@@ -1322,8 +1322,22 @@ if (PHP_SAPI == 'cli') {
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
-                    </li>
+                    </li>-->
                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Create forwarding address</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/CreateForwardingAddress.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/CreateForwardingAddress.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Get payment details</h5></div>
                             <div class="col-md-4">
@@ -1336,8 +1350,22 @@ if (PHP_SAPI == 'cli') {
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
-                    </li>
+                    </li>-->
                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Get forwarding address</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/GetForwardingAddress.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/GetForwardingAddress.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Get multiple payments at once</h5></div>
                             <div class="col-md-4">
@@ -1350,8 +1378,22 @@ if (PHP_SAPI == 'cli') {
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
-                    </li>
+                    </li>-->
                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Get multiple forwarding address at once</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/GetMultipleForwardingAddresses.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/GetMultipleForwardingAddresses.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>List all payments</h5></div>
                             <div class="col-md-4">
@@ -1364,8 +1406,22 @@ if (PHP_SAPI == 'cli') {
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
-                    </li>
+                    </li>-->
                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>List forwarding addresses</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/CreateAndListForwardingAddresses.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/CreateAndListForwardingAddresses.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Delete payment</h5></div>
                             <div class="col-md-4">
@@ -1378,8 +1434,22 @@ if (PHP_SAPI == 'cli') {
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
-                    </li>
+                    </li>-->
                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Delete forwarding address</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/CreateAndDeleteForwardingAddress.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/CreateAndDeleteForwardingAddress.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Delete all payments</h5></div>
                             <div class="col-md-4">
@@ -1387,6 +1457,20 @@ if (PHP_SAPI == 'cli') {
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/payment-api/DeleteAllPaymentForwards.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>-->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Delete all forwarding addresses</h5></div>
+                            <div class="col-md-4">
+                                <a href="payment-api/DeleteAllForwardingAddresses.php"
+                                   class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/payment-api/DeleteAllForwardingAddresses.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>

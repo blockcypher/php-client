@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\PaymentForward;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\PaymentForwardClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,8 +15,8 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$webHook = new PaymentForward();
-$webHook->setId('ec2b4b4f-eeb2-4824-b528-7d78a6f52492');
-$webHook->delete($apiContext);
+$paymentForwardClient = new PaymentForwardClient($apiContext);
 
-ResultPrinter::printResult("Delete Payment Endpoint", "PaymentForward", 'ec2b4b4f-eeb2-4824-b528-7d78a6f52492', null, null);
+$paymentForwardClient->deleteForwardingAddress('1fdf8f9b-cc37-4955-882b-8cbcd670a433');
+
+ResultPrinter::printResult("Delete Payment Endpoint", "PaymentForward", '1fdf8f9b-cc37-4955-882b-8cbcd670a433', null, null);

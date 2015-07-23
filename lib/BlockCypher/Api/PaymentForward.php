@@ -32,6 +32,7 @@ class PaymentForward extends BlockCypherResourceModel
     /**
      * Obtain the PaymentForward resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use PaymentForwardClient.
      * @param string $paymentForwardId
      * @param array $params Parameters.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -40,7 +41,7 @@ class PaymentForward extends BlockCypherResourceModel
      */
     public static function get($paymentForwardId, $params = array(), $apiContext = null, $restCall = null)
     {
-        ArgumentValidator::validate($paymentForwardId, 'webHookId');
+        ArgumentValidator::validate($paymentForwardId, 'paymentForwardId');
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array();
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
@@ -65,6 +66,7 @@ class PaymentForward extends BlockCypherResourceModel
     /**
      * Obtain multiple PaymentForwards resources for the given identifiers.
      *
+     * @deprecated since version 1.2. Use PaymentForwardClient.
      * @param string[] $array
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -99,6 +101,7 @@ class PaymentForward extends BlockCypherResourceModel
     /**
      * Obtain all PaymentForward resources for the provided token.
      *
+     * @deprecated since version 1.2. Use PaymentForwardClient.
      * @param array $params Parameters. Options: token
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
@@ -130,6 +133,7 @@ class PaymentForward extends BlockCypherResourceModel
     /**
      * Create a new PaymentForward.
      *
+     * @deprecated since version 1.2. Use PaymentForwardClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return PaymentForward
@@ -155,6 +159,7 @@ class PaymentForward extends BlockCypherResourceModel
     /**
      * Deletes the Webhook identified by webhook_id for the application associated with access token.
      *
+     * @deprecated since version 1.2. Use PaymentForwardClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return bool

@@ -3,6 +3,8 @@ php -f .\sample\payment-api\ListPaymentsEndpoint.php</p></div></div><div class="
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Api</span>\<span class="hljs-title">PaymentForward</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
+    <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
+            class="hljs-title">Client</span>\<span class="hljs-title">PaymentForwardClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
@@ -11,6 +13,9 @@ php -f .\sample\payment-api\ListPaymentsEndpoint.php</p></div></div><div class="
     <span class="hljs-keyword">array</span>(<span class="hljs-string">'mode'</span> =&gt; <span class="hljs-string">'sandbox'</span>, <span class="hljs-string">'log.LogEnabled'</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-string">'log.FileName'</span> =&gt; <span class="hljs-string">'BlockCypher.log'</span>, <span class="hljs-string">'log.LogLevel'</span> =&gt; <span class="hljs-string">'DEBUG'</span>)
 );
 
-<span class="hljs-variable">$paymentForwardArray</span> = PaymentForward::getAll(<span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContext</span>);
+    <span class="hljs-variable">$paymentForwardClient</span> = <span class="hljs-keyword">new</span>
+    PaymentForwardClient(<span class="hljs-variable">$apiContext</span>);
+
+    <span class="hljs-variable">$paymentForwardArray</span> = <span class="hljs-variable">$paymentForwardClient</span>-&gt;listForwardingAddresses();
 
 ResultPrinter::printResult(<span class="hljs-string">"List all PaymentForwards"</span>, <span class="hljs-string">"PaymentForward[]"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$paymentForwardArray</span>);</div></div></div></div></body></html>

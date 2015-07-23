@@ -7,6 +7,7 @@ require __DIR__ . '/../bootstrap.php';
 
 use BlockCypher\Api\PaymentForward;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\PaymentForwardClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,13 +16,16 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$paymentForward = new PaymentForward();
-$paymentForward->setDestination('15qx9ug952GWGTNn7Uiv6vode4RcGrRemh');
-$paymentForward->setCallbackUrl("http://requestb.in/rwp6jirw?uniqid=" . uniqid());
+$paymentForwardClient = new PaymentForwardClient($apiContext);
+
+$options = array(
+    'callback_url' => 'http://requestb.in/rwp6jirw?uniqid=' . uniqid()
+);
+$paymentForward = $paymentForwardClient->createForwardingAddress('15qx9ug952GWGTNn7Uiv6vode4RcGrRemh', $options);
 
 // For Sample Purposes Only.
-$request = clone $paymentForward;
-
-$paymentForward->create($apiContext);
+$request = new PaymentForward();
+$request->setDestination('15qx9ug952GWGTNn7Uiv6vode4RcGrRemh');
+$request->setCallbackUrl('http://requestb.in/rwp6jirw?uniqid=' . uniqid());
 
 ResultPrinter::printResult("Create Payment Endpoint", "PaymentForward", $paymentForward->getId(), $request, $paymentForward);

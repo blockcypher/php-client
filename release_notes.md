@@ -9,6 +9,7 @@ v1.2.0
 * NullDataClient
 * FaucetClient
 * AddressClient
+* PaymentForwardClient
 
 v1.1.0
 ------

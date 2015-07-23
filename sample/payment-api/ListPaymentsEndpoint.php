@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\PaymentForward;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\PaymentForwardClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,6 +15,8 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$paymentForwardArray = PaymentForward::getAll(array(), $apiContext);
+$paymentForwardClient = new PaymentForwardClient($apiContext);
+
+$paymentForwardArray = $paymentForwardClient->listForwardingAddresses();
 
 ResultPrinter::printResult("List all PaymentForwards", "PaymentForward[]", null, null, $paymentForwardArray);

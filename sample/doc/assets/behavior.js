@@ -174,18 +174,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "pageTitle": "address-api\\CreateMultisignAddress",
               "title": "CreateMultisignAddress"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create Multisig Address",
-                          "slug": "create-multisig-address"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
           }, {
               "type": "file",
               "data": {
@@ -203,29 +192,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "pageTitle": "address-api\\CreateMultisignAddressBtcTest3",
                   "title": "CreateMultisignAddressBtcTest3"
               },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create Multisig Testnet3 Address Sample",
-                          "slug": "create-multisig-testnet3-address-sample"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Create Multisig Address",
-                                  "slug": "create-multisig-address"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
           }, {
               "type": "file",
               "data": {
@@ -243,8 +210,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "pageTitle": "address-api\\CreateMultisignAddressEndpoint",
                   "title": "CreateMultisignAddressEndpoint"
               },
-              "depth": 2,
-              "outline": []
+              "depth": 2
           }, {
               "type": "file",
               "data": {
@@ -262,18 +228,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "pageTitle": "address-api\\GenerateAddress",
                   "title": "GenerateAddress"
               },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate Address",
-                          "slug": "generate-address"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
           }, {
               "type": "file",
               "data": {
@@ -291,29 +246,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "pageTitle": "address-api\\GenerateAddressBtcTest3",
                   "title": "GenerateAddressBtcTest3"
               },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate Testnet3 Address",
-                          "slug": "generate-testnet3-address"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Generate BTC Testnet Address",
-                                  "slug": "generate-btc-testnet-address"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
           }, {
               "type": "file",
               "data": {
@@ -331,8 +264,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateAddressEndpoint",
             "title": "GenerateAddressEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -350,18 +282,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddress",
             "title": "GenerateMultisignAddress"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate Multisig Address",
-                          "slug": "generate-multisig-address"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -379,29 +300,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddressBtcTest3",
             "title": "GenerateMultisignAddressBtcTest3"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate Multisig Testnet3 Address Sample",
-                          "slug": "generate-multisig-testnet3-address-sample"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Create Multisig Address",
-                                  "slug": "create-multisig-address"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -419,8 +318,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddressEndpoint",
             "title": "GenerateMultisignAddressEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1100,18 +998,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "introduction\\FundAddressWithFaucet",
             "title": "FundAddressWithFaucet"
           },
-            "depth": 2,
-            "outline": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 1,
-                        "title": "Fund Address with Faucet",
-                        "slug": "fund-address-with-faucet"
-                    },
-                    "depth": 1
-                }
-            ]
+            "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1129,8 +1016,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "pageTitle": "introduction\\FundAddressWithFaucetEndpoint",
               "title": "FundAddressWithFaucetEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1432,6 +1318,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndDeleteForwardingAddress.php",
+              "projectPath": "payment-api\\CreateAndDeleteForwardingAddress.php",
+              "targetPath": "payment-api\\CreateAndDeleteForwardingAddress",
+              "pageTitle": "payment-api\\CreateAndDeleteForwardingAddress",
+              "title": "CreateAndDeleteForwardingAddress"
+          },
+            "depth": 2
+        }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndDeletePaymentForward.php",
             "projectPath": "payment-api\\CreateAndDeletePaymentForward.php",
             "targetPath": "payment-api\\CreateAndDeletePaymentForward",
@@ -1450,6 +1354,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndListForwardingAddresses.php",
+              "projectPath": "payment-api\\CreateAndListForwardingAddresses.php",
+              "targetPath": "payment-api\\CreateAndListForwardingAddresses",
+              "pageTitle": "payment-api\\CreateAndListForwardingAddresses",
+              "title": "CreateAndListForwardingAddresses"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndListPaymentForwards.php",
             "projectPath": "payment-api\\CreateAndListPaymentForwards.php",
             "targetPath": "payment-api\\CreateAndListPaymentForwards",
@@ -1468,6 +1390,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateForwardingAddress.php",
+              "projectPath": "payment-api\\CreateForwardingAddress.php",
+              "targetPath": "payment-api\\CreateForwardingAddress",
+              "pageTitle": "payment-api\\CreateForwardingAddress",
+              "title": "CreateForwardingAddress"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreatePaymentEndpoint.php",
             "projectPath": "payment-api\\CreatePaymentEndpoint.php",
             "targetPath": "payment-api\\CreatePaymentEndpoint",
@@ -1504,6 +1444,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\DeleteAllForwardingAddresses.php",
+              "projectPath": "payment-api\\DeleteAllForwardingAddresses.php",
+              "targetPath": "payment-api\\DeleteAllForwardingAddresses",
+              "pageTitle": "payment-api\\DeleteAllForwardingAddresses",
+              "title": "DeleteAllForwardingAddresses"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\DeleteAllPaymentForwards.php",
             "projectPath": "payment-api\\DeleteAllPaymentForwards.php",
             "targetPath": "payment-api\\DeleteAllPaymentForwards",
@@ -1528,6 +1486,25 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\DeletePaymentEndpoint",
             "title": "DeletePaymentEndpoint"
           },
+              "depth": 2,
+              "outline": []
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetForwardingAddress.php",
+                  "projectPath": "payment-api\\GetForwardingAddress.php",
+                  "targetPath": "payment-api\\GetForwardingAddress",
+                  "pageTitle": "payment-api\\GetForwardingAddress",
+                  "title": "GetForwardingAddress"
+              },
           "depth": 2
         }, {
           "type": "file",
@@ -1540,6 +1517,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultipleForwardingAddresses.php",
+              "projectPath": "payment-api\\GetMultipleForwardingAddresses.php",
+              "targetPath": "payment-api\\GetMultipleForwardingAddresses",
+              "pageTitle": "payment-api\\GetMultipleForwardingAddresses",
+              "title": "GetMultipleForwardingAddresses"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultiplePaymentForwards.php",
             "projectPath": "payment-api\\GetMultiplePaymentForwards.php",
             "targetPath": "payment-api\\GetMultiplePaymentForwards",
@@ -1576,6 +1571,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\ListForwardingAddresses.php",
+              "projectPath": "payment-api\\ListForwardingAddresses.php",
+              "targetPath": "payment-api\\ListForwardingAddresses",
+              "pageTitle": "payment-api\\ListForwardingAddresses",
+              "title": "ListForwardingAddresses"
+          },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\ListPaymentForwards.php",
             "projectPath": "payment-api\\ListPaymentForwards.php",
             "targetPath": "payment-api\\ListPaymentForwards",
@@ -1600,7 +1613,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\ListPaymentsEndpoint",
             "title": "ListPaymentsEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }
       ]
     }, {

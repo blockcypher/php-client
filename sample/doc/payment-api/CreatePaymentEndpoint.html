@@ -3,6 +3,8 @@ php -f .\sample\payment-api\CreatePaymentEndpoint.php</p></div></div><div class=
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Api</span>\<span class="hljs-title">PaymentForward</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
+    <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
+            class="hljs-title">Client</span>\<span class="hljs-title">PaymentForwardClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
@@ -11,10 +13,27 @@ php -f .\sample\payment-api\CreatePaymentEndpoint.php</p></div></div><div class=
     <span class="hljs-keyword">array</span>(<span class="hljs-string">'mode'</span> =&gt; <span class="hljs-string">'sandbox'</span>, <span class="hljs-string">'log.LogEnabled'</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-string">'log.FileName'</span> =&gt; <span class="hljs-string">'BlockCypher.log'</span>, <span class="hljs-string">'log.LogLevel'</span> =&gt; <span class="hljs-string">'DEBUG'</span>)
 );
 
-<span class="hljs-variable">$paymentForward</span> = <span class="hljs-keyword">new</span> PaymentForward();
-<span class="hljs-variable">$paymentForward</span>-&gt;setDestination(<span class="hljs-string">'15qx9ug952GWGTNn7Uiv6vode4RcGrRemh'</span>);
-<span class="hljs-variable">$paymentForward</span>-&gt;setCallbackUrl(<span class="hljs-string">"http://requestb.in/rwp6jirw?uniqid="</span> . uniqid());</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>For Sample Purposes Only.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$paymentForward</span>;
+    <span class="hljs-variable">$paymentForwardClient</span> = <span class="hljs-keyword">new</span>
+    PaymentForwardClient(<span class="hljs-variable">$apiContext</span>);
 
-<span class="hljs-variable">$paymentForward</span>-&gt;create(<span class="hljs-variable">$apiContext</span>);
+    <span class="hljs-variable">$options</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'callback_url'</span> =&gt; <span class="hljs-string">'http://requestb.in/rwp6jirw?uniqid='</span>
+    . uniqid()
+    );
+    <span class="hljs-variable">$paymentForward</span> = <span class="hljs-variable">$paymentForwardClient</span>-&gt;createForwardingAddress(<span
+            class="hljs-string">'15qx9ug952GWGTNn7Uiv6vode4RcGrRemh'</span>, <span class="hljs-variable">$options</span>);
+</div>
+</div>
+</div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><p>For Sample Purposes Only.</p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-variable">$request</span> = <span class="hljs-keyword">new</span>
+                PaymentForward();
+                <span class="hljs-variable">$request</span>-&gt;setDestination(<span class="hljs-string">'15qx9ug952GWGTNn7Uiv6vode4RcGrRemh'</span>);
+                <span class="hljs-variable">$request</span>-&gt;setCallbackUrl(<span class="hljs-string">'http://requestb.in/rwp6jirw?uniqid='</span>
+                . uniqid());
 
 ResultPrinter::printResult(<span class="hljs-string">"Create Payment Endpoint"</span>, <span class="hljs-string">"PaymentForward"</span>, <span class="hljs-variable">$paymentForward</span>-&gt;getId(), <span class="hljs-variable">$request</span>, <span class="hljs-variable">$paymentForward</span>);</div></div></div></div></body></html>
