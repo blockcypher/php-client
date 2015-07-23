@@ -11,8 +11,10 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$faucetClient = new \BlockCypher\Client\FaucetClient($apiContexts['BCY.test']);
+
 try {
-    $faucetResponse = \BlockCypher\Api\Faucet::fundAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd', 100000, $apiContexts['BCY.test']);
+    $faucetResponse = $faucetClient->fundAddress('CFqoZmZ3ePwK5wnkhxJjJAQKJ82C7RJdmd', 100000);
 } catch (Exception $ex) {
     ResultPrinter::printError("Fund Bcy Test Address", "FaucetResponse", null, null, $ex);
     exit(1);

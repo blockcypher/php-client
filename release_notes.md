@@ -7,6 +7,7 @@ v1.2.0
 * BlockClient
 * BlockchainClient
 * NullDataClient
+* FaucetClient
 
 v1.1.0
 ------

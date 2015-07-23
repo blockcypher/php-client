@@ -1,82 +1,60 @@
 <?php
 
-namespace BlockCypher\Api;
+namespace BlockCypher\Client;
 
-use BlockCypher\Common\BlockCypherResourceModel;
+use BlockCypher\Api\Faucet;
+use BlockCypher\Api\FaucetResponse;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 use BlockCypher\Validation\ArgumentValidator;
 use BlockCypher\Validation\NumericValidator;
 
 /**
- * Class Faucet
+ * Class FaucetClient
  *
- * A resource representing a block.
+ * @package BlockCypher\Client
  *
- * @package BlockCypher\Api
- *
- * @property string address
- * @property int amount
  */
-class Faucet extends BlockCypherResourceModel
+class FaucetClient extends BlockCypherClient
 {
     /**
      * Fund an address with faucet.
      * The faucet endpoint is only available on BlockCypher’s Test Blockchain and Bitcoin Testnet3
      *
-     * @deprecated since version 1.2. Use FaucetClient.
      * @param string $address Address to fund
      * @param int $amount
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return FaucetResponse
      */
-    public static function fundAddress($address, $amount, $apiContext = null, $restCall = null)
+    public function fundAddress($address, $amount, $apiContext = null, $restCall = null)
     {
         ArgumentValidator::validate($address, 'address');
         NumericValidator::validate($amount, 'amount');
 
-        $faucet = new self();
+        $faucet = new Faucet();
         $faucet->setAddress($address);
         $faucet->setAmount($amount);
 
-        return $faucet->turnOn($apiContext, $restCall);
-    }
-
-    /**
-     * @param string $address
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-    }
-
-    /**
-     * @param int $amount
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        $this->amount = $amount;
+        return $this->turnOn($faucet, $apiContext, $restCall);
     }
 
     /**
      * Fund an address with faucet.
      * The faucet endpoint is only available on BlockCypher’s Test Blockchain and Bitcoin Testnet3
      *
-     * @deprecated since version 1.2. Use FaucetClient.
+     * @param Faucet $faucet
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return FaucetResponse
      */
-    public function turnOn($apiContext = null, $restCall = null)
+    public function turnOn(Faucet $faucet, $apiContext = null, $restCall = null)
     {
-        $payLoad = $this->toJSON();
+        $payLoad = $faucet->toJSON();
 
-        $chainUrlPrefix = self::getChainUrlPrefix($apiContext);
+        $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);
 
-        $json = self::executeCall(
+        $json = $this->executeCall(
             "$chainUrlPrefix/faucet",
             "POST",
             $payLoad,
@@ -87,21 +65,5 @@ class Faucet extends BlockCypherResourceModel
         $ret = new FaucetResponse();
         $ret->fromJson($json);
         return $ret;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * @return int
-     */
-    public function getAmount()
-    {
-        return $this->amount;
     }
 }
