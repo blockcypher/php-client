@@ -32,6 +32,7 @@ class AddressBalance extends BlockCypherResourceModel
     /**
      * Obtain the AddressBalance resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string $address
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -65,6 +66,7 @@ class AddressBalance extends BlockCypherResourceModel
     /**
      * Obtain multiple AddressBalances resources for the given identifiers.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string[] $array
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.

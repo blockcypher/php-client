@@ -7,7 +7,6 @@ require __DIR__ . '/../bootstrap.php';
 
 use BlockCypher\Api\AddressKeyChain;
 use BlockCypher\Auth\SimpleTokenCredential;
-use BlockCypher\Client\AddressClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -16,20 +15,18 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$addressClient = new AddressClient($apiContext);
-
+$addressKeyChain = new AddressKeyChain();
 $pubkeys = array(
     "02c716d071a76cbf0d29c29cacfec76e0ef8116b37389fb7a3e76d6d32cf59f4d3",
     "033ef4d5165637d99b673bcdbb7ead359cee6afd7aaf78d3da9d2392ee4102c8ea",
     "022b8934cc41e76cb4286b9f3ed57e2d27798395b04dd23711981a77dc216df8ca"
 );
-
-// For Sample Purposes Only.
-$addressKeyChain = new AddressKeyChain();
 $addressKeyChain->setPubkeys($pubkeys);
 $addressKeyChain->setScriptType('multisig-2-of-3');
+
+// For Sample Purposes Only.
 $request = clone $addressKeyChain;
 
-$addressKeyChain = $addressClient->generateMultisignAddress($pubkeys, 'multisig-2-of-3');
+$addressKeyChain->create($apiContext);
 
 ResultPrinter::printResult("Create Multisig Address", "AddressKeyChain", $addressKeyChain->getAddress(), $request, $addressKeyChain);

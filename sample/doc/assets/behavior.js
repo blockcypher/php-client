@@ -168,13 +168,171 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddress.php",
+              "projectPath": "address-api\\CreateMultisignAddress.php",
+              "targetPath": "address-api\\CreateMultisignAddress",
+              "pageTitle": "address-api\\CreateMultisignAddress",
+              "title": "CreateMultisignAddress"
+          },
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create Multisig Address",
+                          "slug": "create-multisig-address"
+                      },
+                      "depth": 1
+                  }
+              ]
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddressBtcTest3.php",
+                  "projectPath": "address-api\\CreateMultisignAddressBtcTest3.php",
+                  "targetPath": "address-api\\CreateMultisignAddressBtcTest3",
+                  "pageTitle": "address-api\\CreateMultisignAddressBtcTest3",
+                  "title": "CreateMultisignAddressBtcTest3"
+              },
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create Multisig Testnet3 Address Sample",
+                          "slug": "create-multisig-testnet3-address-sample"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Create Multisig Address",
+                                  "slug": "create-multisig-address"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddressEndpoint.php",
+                  "projectPath": "address-api\\CreateMultisignAddressEndpoint.php",
+                  "targetPath": "address-api\\CreateMultisignAddressEndpoint",
+                  "pageTitle": "address-api\\CreateMultisignAddressEndpoint",
+                  "title": "CreateMultisignAddressEndpoint"
+              },
+              "depth": 2,
+              "outline": []
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddress.php",
+                  "projectPath": "address-api\\GenerateAddress.php",
+                  "targetPath": "address-api\\GenerateAddress",
+                  "pageTitle": "address-api\\GenerateAddress",
+                  "title": "GenerateAddress"
+              },
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate Address",
+                          "slug": "generate-address"
+                      },
+                      "depth": 1
+                  }
+              ]
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddressBtcTest3.php",
+                  "projectPath": "address-api\\GenerateAddressBtcTest3.php",
+                  "targetPath": "address-api\\GenerateAddressBtcTest3",
+                  "pageTitle": "address-api\\GenerateAddressBtcTest3",
+                  "title": "GenerateAddressBtcTest3"
+              },
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate Testnet3 Address",
+                          "slug": "generate-testnet3-address"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Generate BTC Testnet Address",
+                                  "slug": "generate-btc-testnet-address"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddressEndpoint.php",
             "projectPath": "address-api\\GenerateAddressEndpoint.php",
             "targetPath": "address-api\\GenerateAddressEndpoint",
             "pageTitle": "address-api\\GenerateAddressEndpoint",
             "title": "GenerateAddressEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -192,7 +350,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddress",
             "title": "GenerateMultisignAddress"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate Multisig Address",
+                          "slug": "generate-multisig-address"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -210,7 +379,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddressBtcTest3",
             "title": "GenerateMultisignAddressBtcTest3"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate Multisig Testnet3 Address Sample",
+                          "slug": "generate-multisig-testnet3-address-sample"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Create Multisig Address",
+                                  "slug": "create-multisig-address"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -228,7 +419,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddressEndpoint",
             "title": "GenerateMultisignAddressEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -908,7 +1100,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "introduction\\FundAddressWithFaucet",
             "title": "FundAddressWithFaucet"
           },
-          "depth": 2
+            "depth": 2,
+            "outline": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 1,
+                        "title": "Fund Address with Faucet",
+                        "slug": "fund-address-with-faucet"
+                    },
+                    "depth": 1
+                }
+            ]
         }, {
           "type": "file",
           "data": {
@@ -920,31 +1123,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundBcyAddressWithFaucet.php",
-            "projectPath": "introduction\\FundBcyAddressWithFaucet.php",
-            "targetPath": "introduction\\FundBcyAddressWithFaucet",
-            "pageTitle": "introduction\\FundBcyAddressWithFaucet",
-            "title": "FundBcyAddressWithFaucet"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundAddressWithFaucetEndpoint.php",
+              "projectPath": "introduction\\FundAddressWithFaucetEndpoint.php",
+              "targetPath": "introduction\\FundAddressWithFaucetEndpoint",
+              "pageTitle": "introduction\\FundAddressWithFaucetEndpoint",
+              "title": "FundAddressWithFaucetEndpoint"
           },
-          "depth": 2
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [{}, ".fbp"],
-              "pygmentsLexer": "php",
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "PHP"
-            },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundBcyAddressWithFaucetShortVersion.php",
-            "projectPath": "introduction\\FundBcyAddressWithFaucetShortVersion.php",
-            "targetPath": "introduction\\FundBcyAddressWithFaucetShortVersion",
-            "pageTitle": "introduction\\FundBcyAddressWithFaucetShortVersion",
-            "title": "FundBcyAddressWithFaucetShortVersion"
-          },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1804,8 +1990,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DataEndpoint",
             "title": "DataEndpoint"
           },
-          "depth": 2,
-          "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1859,18 +2044,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\EmbedDataOnBlockchain",
             "title": "EmbedDataOnBlockchain"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Embed Data on Blockchains",
-                "slug": "embed-data-on-blockchains"
-              },
-              "depth": 1
-            }
-          ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {

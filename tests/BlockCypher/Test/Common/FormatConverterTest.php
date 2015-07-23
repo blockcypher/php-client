@@ -2,10 +2,7 @@
 
 namespace BlockCypher\Test\Common;
 
-use BlockCypher\Api\Currency;
-use BlockCypher\Common\BlockCypherModel;
 use BlockCypher\Converter\FormatConverter;
-use BlockCypher\Test\Validation\NumericValidatorTest;
 
 class FormatConverterTest extends \PHPUnit_Framework_TestCase
 {

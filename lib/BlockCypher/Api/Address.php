@@ -39,6 +39,7 @@ class Address extends BlockCypherResourceModel
     /**
      * Create a new address.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param AddressKeyChain $addressKeyChain
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
@@ -71,6 +72,7 @@ class Address extends BlockCypherResourceModel
     /**
      * Obtain the Address resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string $address
      * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -107,6 +109,7 @@ class Address extends BlockCypherResourceModel
     /**
      * Obtain the FullAddress resource for the given address.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string $address
      * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -121,6 +124,7 @@ class Address extends BlockCypherResourceModel
     /**
      * Obtain the AddressBalance resource for the given address.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string $address
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -135,6 +139,7 @@ class Address extends BlockCypherResourceModel
     /**
      * Obtain multiple Addresses resources for the given identifiers.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string[] $array
      * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.

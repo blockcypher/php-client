@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\AddressKeyChain;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\AddressClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,11 +15,7 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$addressKeyChain = new AddressKeyChain();
+$addressClient = new AddressClient($apiContext);
+$addressKeyChain = $addressClient->generateAddress();
 
-// For Sample Purposes Only.
-$request = clone $addressKeyChain;
-
-$addressKeyChain->create($apiContexts['BTC.main']);
-
-ResultPrinter::printResult("Create Multisig Address", "AddressKeyChain", $addressKeyChain->getAddress(), $request, $addressKeyChain);
+ResultPrinter::printResult("Create Multisig Address", "AddressKeyChain", $addressKeyChain->getAddress(), null, $addressKeyChain);

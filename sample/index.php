@@ -466,7 +466,7 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Create new address</h5></div>
                             <div class="col-md-4">
@@ -479,8 +479,22 @@ if (PHP_SAPI == 'cli') {
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
-                    </li>
+                    </li>-->
                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Generate new address</h5></div>
+                            <div class="col-md-4">
+                                <a href="address-api/GenerateAddress.php" class="btn btn-primary pull-left execute"> Try
+                                    It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/address-api/GenerateAddress.html" class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Create new BTC Testnet address</h5></div>
                             <div class="col-md-4">
@@ -494,16 +508,47 @@ if (PHP_SAPI == 'cli') {
                                         class="fa fa-file-code-o"></i></a>
                             </div>
                         </div>
+                    </li>-->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Generate new BTC Testnet address</h5></div>
+                            <div class="col-md-4">
+                                <a href="address-api/GenerateAddressBtcTest3.php"
+                                   class="btn btn-primary pull-left execute"> Try
+                                    It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/address-api/GenerateAddressBtcTest3.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-8"><h5>Generate multisig address</h5></div>
+                            <div class="col-md-8"><h5>Generate new multisig address</h5></div>
                             <div class="col-md-4">
                                 <a href="address-api/GenerateMultisignAddress.php"
                                    class="btn btn-primary pull-left execute"> Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/address-api/GenerateMultisignAddress.html"
+                                   class="btn btn-default pull-right">Source
+                                    <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Generate new BTC Testnet multisig address</h5></div>
+                            <div class="col-md-4">
+                                <a href="address-api/GenerateMultisignAddressBtcTest3.php"
+                                   class="btn btn-primary pull-left execute"> Try It
+                                    <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/address-api/GenerateMultisignAddressBtcTest3.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>

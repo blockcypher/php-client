@@ -35,6 +35,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * Obtain the FullAddress resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string $address
      * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -71,6 +72,7 @@ class FullAddress extends BlockCypherResourceModel
     /**
      * Obtain multiple FullAddress resources for the given identifiers.
      *
+     * @deprecated since version 1.2. Use AddressClient.
      * @param string[] $array
      * @param array $params Parameters. Options: unspentOnly, and before
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.

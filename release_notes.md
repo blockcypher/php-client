@@ -8,6 +8,7 @@ v1.2.0
 * BlockchainClient
 * NullDataClient
 * FaucetClient
+* AddressClient
 
 v1.1.0
 ------
