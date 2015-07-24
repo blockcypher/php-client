@@ -16,7 +16,6 @@ $apiContext = ApiContext::create(
 );
 
 $blockchainClient = new BlockchainClient($apiContext);
-
 $blockchain = $blockchainClient->get('BTC.main');
 
 ResultPrinter::printResult("Get Blockchain", "Blockchain", $blockchain->getName(), null, $blockchain);
