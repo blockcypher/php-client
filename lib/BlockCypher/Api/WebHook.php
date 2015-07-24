@@ -43,6 +43,7 @@ class WebHook extends BlockCypherResourceModel
     /**
      * Obtain the WebHook resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use WebHookClient.
      * @param string $webHookId
      * @param array $params Parameters.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -76,6 +77,7 @@ class WebHook extends BlockCypherResourceModel
     /**
      * Obtain multiple WebHooks resources for the given identifiers.
      *
+     * @deprecated since version 1.2. Use WebHookClient.
      * @param string[] $array
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -110,6 +112,7 @@ class WebHook extends BlockCypherResourceModel
     /**
      * Obtain all WebHook resources for the provided token.
      *
+     * @deprecated since version 1.2. Use WebHookClient.
      * @param array $params Parameters. Options: token
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
@@ -141,6 +144,7 @@ class WebHook extends BlockCypherResourceModel
     /**
      * Create a new WebHook.
      *
+     * @deprecated since version 1.2. Use WebHookClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return WebHook
@@ -166,6 +170,7 @@ class WebHook extends BlockCypherResourceModel
     /**
      * Deletes the Webhook identified by webhook_id for the application associated with access token.
      *
+     * @deprecated since version 1.2. Use WebHookClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return bool

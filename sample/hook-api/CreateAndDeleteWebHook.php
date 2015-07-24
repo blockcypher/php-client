@@ -13,9 +13,11 @@
 /** @var \BlockCypher\Api\WebHook $webHook */
 $webHook = require 'CreateWebHook.php';
 
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContexts['BTC.main']);
+
 // ## Delete WebHook
 try {
-    $output = $webHook->delete($apiContexts['BTC.main']);
+    $output = $webHookClient->delete($webHook->getId());
 } catch (Exception $ex) {
     ResultPrinter::printError("Delete a WebHook", "WebHook", null, $webHook->getId(), $ex);
     exit(1);

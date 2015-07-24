@@ -10,6 +10,7 @@ v1.2.0
 * FaucetClient
 * AddressClient
 * PaymentForwardClient
+* WebHookClient
 
 v1.1.0
 ------

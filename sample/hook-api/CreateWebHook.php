@@ -16,9 +16,11 @@ $webHook->setHash('2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa8
 /// For Sample Purposes Only.
 $request = clone $webHook;
 
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContexts['BTC.main']);
+
 /// Create WebHook
 try {
-    $output = $webHook->create($apiContexts['BTC.main']);
+    $output = $webHookClient->create($webHook);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created WebHook", "WebHook", null, $request, $ex);
     exit(1);

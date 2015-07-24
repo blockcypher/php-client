@@ -9,6 +9,8 @@
 /** @var \BlockCypher\Api\WebHook[] $webHookList */
 $webHookList = require 'ListWebHooks.php';
 
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContexts['BTC.main']);
+
 // ## Delete All WebHooks
 try {
     $webHookIdList = array();
@@ -16,7 +18,7 @@ try {
     foreach ($webHookList as $webHook) {
         /// For sample purposes only, it stores deleted webhook ids in an array
         $webHookIdList[] = $webHook->getId();
-        $webHook->delete($apiContexts['BTC.main']);
+        $webHookClient->delete($webHook->getId());
     }
 } catch (Exception $ex) {
     ResultPrinter::printError("Deleted All WebHooks", "", implode(';', $webHookIdList), null, $ex);

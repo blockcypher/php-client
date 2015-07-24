@@ -8,9 +8,11 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContexts['BTC.main']);
+
 // ### Get List of All WebHooks
 try {
-    $output = \BlockCypher\Api\WebHook::getAll(array(), $apiContexts['BTC.main']);
+    $output = $webHookClient->getAll();
 } catch (Exception $ex) {
     ResultPrinter::printError("List all WebHooks", "Array of WebHook", null, null, $ex);
     exit(1);

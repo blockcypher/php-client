@@ -13,15 +13,17 @@
 $webHook = require 'CreateWebHook.php';
 $webHookId = $webHook->getId();
 
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContexts['BTC.main']);
+
 // ## Get Multiple WebHooks
 try {
     $webHookList = array($webHookId);
-    $output = \BlockCypher\Api\WebHook::getMultiple($webHookList, array(), $apiContexts['BTC.main']);
+    $output = $webHookClient->getMultiple($webHookList);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Get Multiple WebHooks", "WebHook Array", null, implode(';', $webHookList), $ex);
+    ResultPrinter::printError("Get Multiple WebHooks", "WebHook[]", null, implode(';', $webHookList), $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Get Multiple WebHooks", "WebHook Array", implode(';', $webHookList), null, $output);
+ResultPrinter::printResult("Get Multiple WebHooks", "WebHook[]", implode(';', $webHookList), null, $output);
 
 return $output;

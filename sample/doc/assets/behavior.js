@@ -772,7 +772,40 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndDeleteAllWebHooks",
             "title": "CreateAndDeleteAllWebHooks"
           },
-          "depth": 2
+            "depth": 2,
+            "outline": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 1,
+                        "title": "Delete All WebHooks Sample",
+                        "slug": "delete-all-webhooks-sample"
+                    },
+                    "depth": 1,
+                    "children": [
+                        {
+                            "type": "heading",
+                            "data": {
+                                "level": 2,
+                                "title": "Get WebHook Instance",
+                                "slug": "get-webhook-instance"
+                            },
+                            "depth": 2,
+                            "children": [
+                                {
+                                    "type": "heading",
+                                    "data": {
+                                        "level": 3,
+                                        "title": "Delete All WebHooks",
+                                        "slug": "delete-all-webhooks"
+                                    },
+                                    "depth": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }, {
           "type": "file",
           "data": {
@@ -790,7 +823,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndDeleteWebHook",
             "title": "CreateAndDeleteWebHook"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Delete WebHook",
+                          "slug": "delete-webhook"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Create Sample WebHook",
+                                  "slug": "create-sample-webhook"
+                              },
+                              "depth": 2
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Delete WebHook",
+                                  "slug": "delete-webhook"
+                              },
+                              "depth": 2
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -808,7 +871,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndListWebHooks",
             "title": "CreateAndListWebHooks"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "List All WebHooks",
+                          "slug": "list-all-webhooks"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Create Sample WebHook",
+                                  "slug": "create-sample-webhook"
+                              },
+                              "depth": 2
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Get all webhooks",
+                                  "slug": "get-all-webhooks"
+                              },
+                              "depth": 2
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -826,7 +919,45 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateWebHook",
             "title": "CreateWebHook"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create WebHook",
+                          "slug": "create-webhook"
+                      },
+                      "depth": 1
+                  }, {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "WebHook request",
+                          "slug": "webhook-request"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 4,
+                                  "title": "NOTE: Please note that the use of https is recommended for webhooks.",
+                                  "slug": "note-please-note-that-the-use-of-https-is-recommended-for-webhooks"
+                              },
+                              "depth": 4
+                          }
+                      ]
+                  }, {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Event Types",
+                          "slug": "event-types"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -844,7 +975,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateWebHookEndpoint",
             "title": "CreateWebHookEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -862,7 +994,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\DeleteAllWebHooks",
             "title": "DeleteAllWebHooks"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Delete All WebHooks",
+                          "slug": "delete-all-webhooks"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Get WebHook Instance",
+                                  "slug": "get-webhook-instance"
+                              },
+                              "depth": 2
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Delete All WebHooks",
+                                  "slug": "delete-all-webhooks"
+                              },
+                              "depth": 2
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -880,7 +1042,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\DeleteWebHookEndpoint",
             "title": "DeleteWebHookEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -898,7 +1061,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\GetMultipleWebHooks",
             "title": "GetMultipleWebHooks"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Multiple WebHooks",
+                          "slug": "get-multiple-webhooks"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Create Sample WebHook",
+                                  "slug": "create-sample-webhook"
+                              },
+                              "depth": 2
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Get Multiple WebHooks",
+                                  "slug": "get-multiple-webhooks"
+                              },
+                              "depth": 2
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -916,7 +1109,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\GetWebHook",
             "title": "GetWebHook"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get WebHook",
+                          "slug": "get-webhook"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Create Sample WebHook",
+                                  "slug": "create-sample-webhook"
+                              },
+                              "depth": 2
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "Get WebHook by Id",
+                                  "slug": "get-webhook-by-id"
+                              },
+                              "depth": 2
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -934,7 +1157,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\ListWebHooks",
             "title": "ListWebHooks"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get All WebHooks Sample",
+                          "slug": "get-all-webhooks-sample"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Get List of All WebHooks",
+                                  "slug": "get-list-of-all-webhooks"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -952,7 +1197,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\ListWebHooksEndpoint",
             "title": "ListWebHooksEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -970,7 +1216,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\WebHookIdEndpoint",
             "title": "WebHookIdEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }
       ]
     }, {
@@ -1486,25 +1733,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\DeletePaymentEndpoint",
             "title": "DeletePaymentEndpoint"
           },
-              "depth": 2,
-              "outline": []
-          }, {
-              "type": "file",
-              "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
-                  },
-                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetForwardingAddress.php",
-                  "projectPath": "payment-api\\GetForwardingAddress.php",
-                  "targetPath": "payment-api\\GetForwardingAddress",
-                  "pageTitle": "payment-api\\GetForwardingAddress",
-                  "title": "GetForwardingAddress"
-              },
           "depth": 2
         }, {
           "type": "file",
@@ -1517,12 +1745,30 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultipleForwardingAddresses.php",
-              "projectPath": "payment-api\\GetMultipleForwardingAddresses.php",
-              "targetPath": "payment-api\\GetMultipleForwardingAddresses",
-              "pageTitle": "payment-api\\GetMultipleForwardingAddresses",
-              "title": "GetMultipleForwardingAddresses"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetForwardingAddress.php",
+              "projectPath": "payment-api\\GetForwardingAddress.php",
+              "targetPath": "payment-api\\GetForwardingAddress",
+              "pageTitle": "payment-api\\GetForwardingAddress",
+              "title": "GetForwardingAddress"
           },
+              "depth": 2
+          }, {
+              "type": "file",
+              "data": {
+                  "language": {
+                      "nameMatchers": [{}, ".fbp"],
+                      "pygmentsLexer": "php",
+                      "singleLineComment": ["//"],
+                      "ignorePrefix": "}",
+                      "foldPrefix": "^",
+                      "name": "PHP"
+                  },
+                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultipleForwardingAddresses.php",
+                  "projectPath": "payment-api\\GetMultipleForwardingAddresses.php",
+                  "targetPath": "payment-api\\GetMultipleForwardingAddresses",
+                  "pageTitle": "payment-api\\GetMultipleForwardingAddresses",
+                  "title": "GetMultipleForwardingAddresses"
+              },
               "depth": 2
           }, {
               "type": "file",
@@ -1613,8 +1859,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\ListPaymentsEndpoint",
             "title": "ListPaymentsEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }
       ]
     }, {

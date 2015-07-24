@@ -5,7 +5,6 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\WebHook;
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Rest\ApiContext;
 
@@ -15,13 +14,7 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-// Option 1: get the object before removing it
-//$webHook = WebHook::get('d5ca3bd3-5dfb-477d-9fb4-ac3510af258d', array(), $apiContext);
-
-// Option 2: create a new empty object only with its ID. You save one API request
-$webHook = new WebHook();
-$webHook->setId('d5ca3bd3-5dfb-477d-9fb4-ac3510af258d');
-
-$webHook->delete($apiContext);
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContext);
+$webHookClient->delete('d5ca3bd3-5dfb-477d-9fb4-ac3510af258d');
 
 ResultPrinter::printResult("Delete WebHook Endpoint", "WebHook", 'd5ca3bd3-5dfb-477d-9fb4-ac3510af258d', null, $webHook);

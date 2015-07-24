@@ -13,14 +13,16 @@
 /** @var \BlockCypher\Api\WebHook $webHook */
 $webHook = require 'CreateWebHook.php';
 
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContexts['BTC.main']);
+
 // ## Get all webhooks
 try {
-    $output = \BlockCypher\Api\WebHook::getAll(array(), $apiContexts['BTC.main']);
+    $output = $webHookClient->getAll();
 } catch (Exception $ex) {
-    ResultPrinter::printError("List all WebHooks", "Array of WebHook", null, null, $ex);
+    ResultPrinter::printError("List all WebHooks", "WebHook[]", null, null, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("List all WebHooks", "Array of WebHook", null, null, $output);
+ResultPrinter::printResult("List all WebHooks", "WebHook[]", null, null, $output);
 
 return $output;

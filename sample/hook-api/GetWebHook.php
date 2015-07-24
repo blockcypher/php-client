@@ -13,10 +13,12 @@
 $webHook = require 'CreateWebHook.php';
 $webHookId = $webHook->getId();
 
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContexts['BTC.main']);
+
 // ## Get WebHook by Id
 try {
     /// Get WebHook by Id
-    $output = \BlockCypher\Api\WebHook::get($webHookId, array(), $apiContexts['BTC.main']);
+    $output = $webHookClient->get($webHookId);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get a WebHook", "WebHook", null, $webHookId, $ex);
     exit(1);

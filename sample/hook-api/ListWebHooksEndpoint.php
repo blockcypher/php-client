@@ -5,7 +5,6 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\WebHook;
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Rest\ApiContext;
 
@@ -15,6 +14,7 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$webHooks = WebHook::getAll(array(), $apiContext);
+$webHookClient = new \BlockCypher\Client\WebHookClient($apiContext);
+$webHooks = $webHookClient->getAll();
 
-ResultPrinter::printResult("List WebHooks Endpoint", "Array of WebHook", null, null, $webHooks);
+ResultPrinter::printResult("List WebHooks Endpoint", "WebHook[]", null, null, $webHooks);
