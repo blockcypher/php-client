@@ -26,4 +26,4 @@ try {
 
 ResultPrinter::printResult("Delete All PaymentForwards", "", implode(';', $paymentForwardIdList), null, null);
 
-return $output;
+return $createdWallet;

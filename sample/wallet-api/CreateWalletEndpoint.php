@@ -7,6 +7,7 @@ require __DIR__ . '/../bootstrap.php';
 
 use BlockCypher\Api\Wallet;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\WalletClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -25,7 +26,7 @@ $wallet->setAddresses(array(
 // For Sample Purposes Only.
 $request = clone $wallet;
 
-$walletClient = new \BlockCypher\Client\WalletClient($apiContext);
-$wallet = $walletClient->create($wallet);
+$walletClient = new WalletClient($apiContext);
+$createdWallet = $walletClient->create($wallet);
 
-ResultPrinter::printResult("Created Wallet End Point", "Wallet", $wallet->getName(), $request, $wallet);
+ResultPrinter::printResult("Created Wallet End Point", "Wallet", $createdWallet->getName(), $request, $createdWallet);

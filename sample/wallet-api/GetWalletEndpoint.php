@@ -1,11 +1,10 @@
 <?php
 
 // Run on console:
-// php -f .\sample\wallet-api\RemoveAddressesFromWalletEndpoint.php
+// php -f .\sample\wallet-api\GetWalletEndpoint.php
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\AddressList;
 use BlockCypher\Auth\SimpleTokenCredential;
 use BlockCypher\Client\WalletClient;
 use BlockCypher\Rest\ApiContext;
@@ -17,10 +16,6 @@ $apiContext = ApiContext::create(
 );
 
 $walletClient = new WalletClient($apiContext);
-// List of addresses to be removed from the wallet
-$addressList = AddressList::fromAddressesArray(array(
-    "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
-));
-$wallet = $walletClient->removeAddresses('alice', $addressList);
+$wallet = $walletClient->get('alice');
 
-ResultPrinter::printResult("Remove Addresses From Wallet Endpoint", "Wallet", 'alice', $addressList, $wallet);
+ResultPrinter::printResult("Get a Wallet", "Wallet", $wallet->getName(), null, $wallet);
