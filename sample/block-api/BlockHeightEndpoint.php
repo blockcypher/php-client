@@ -15,13 +15,11 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$blockClient = new BlockClient();
-
+$blockClient = new BlockClient($apiContext);
 $params = array(
     'txstart' => 1,
     'limit' => 1,
 );
-
-$block = $blockClient->get('293000', $params, $apiContext);
+$block = $blockClient->get('293000', $params);
 
 ResultPrinter::printResult("Get Block With Paging", "Block", $block->getHash(), null, $block);

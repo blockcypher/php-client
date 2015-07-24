@@ -12,8 +12,10 @@ $addressKeyChain = null;
 /// For Sample Purposes Only.
 $request = null;
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.main']);
+
 try {
-    $addressKeyChain = \BlockCypher\Api\Address::create(null, $apiContexts['BTC.main']);
+    $addressKeyChain = $addressClient->generateAddress();
 } catch (Exception $ex) {
     ResultPrinter::printError("Create Address", "AddressKeyChain", null, $request, $ex);
     exit(1);

@@ -11,11 +11,10 @@ $addressKeyChain = null;
 // For Sample Purposes Only.
 $request = null;
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.test3']);
+
 try {
-    // ### Create Btc Testnet Address
-    // Create an address by calling the Address::create() method
-    // with a valid ApiContext (See bootstrap.php for more on `ApiContext`)
-    $addressKeyChain = \BlockCypher\Api\Address::create(null, $apiContexts['BTC.test3']);
+    $addressKeyChain = $addressClient->generateAddress();
 } catch (Exception $ex) {
     ResultPrinter::printError("Create Btc Testnet Address", "AddressKeyChain", null, $request, $ex);
     exit(1);

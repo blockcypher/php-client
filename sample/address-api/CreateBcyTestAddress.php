@@ -11,11 +11,10 @@ $addressKeyChain = null;
 // For Sample Purposes Only.
 $request = null;
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BCY.test']);
+
 try {
-    // ### Create BlockCypher Test Address
-    // Create an address by calling the Address::create() method
-    // with a valid ApiContext (See bootstrap.php for more on `ApiContext`)
-    $addressKeyChain = \BlockCypher\Api\Address::create(null, $apiContexts['BCY.test']);
+    $addressKeyChain = $addressClient->generateAddress();
 } catch (Exception $ex) {
     ResultPrinter::printError("Create BlockCypher Test Address", "AddressKeyChain", null, $request, $ex);
     exit(1);

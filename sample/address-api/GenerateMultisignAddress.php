@@ -20,7 +20,7 @@ $addressKeyChain->setScriptType('multisig-2-of-3');
 $request = clone $addressKeyChain;
 
 try {
-    $output = $addressClient->generateMultisignAddress($pubkeys, 'multisig-2-of-3');
+    $output = $addressClient->generateMultisigAddress($pubkeys, 'multisig-2-of-3');
 } catch (Exception $ex) {
     ResultPrinter::printError("Generate Multisig Address", "AddressKeyChain", null, $request, $ex);
     exit(1);

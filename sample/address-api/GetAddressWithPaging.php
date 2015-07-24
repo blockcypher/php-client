@@ -20,12 +20,14 @@ if (isset($_GET['address'])) {
     $sampleAddress = '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD';
 }
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.main']);
+
 try {
     $params = array(
         'before' => 300000,
     );
 
-    $address = \BlockCypher\Api\Address::get($sampleAddress, $params, $apiContexts['BTC.main']);
+    $address = $addressClient->get($sampleAddress, $params);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Address", "Address", $sampleAddress, null, $ex);
     exit(1);

@@ -10,10 +10,10 @@ require __DIR__ . '/../bootstrap.php';
 // The following code takes you through
 // the process of retrieving all details about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
 
-/// ### Retrieve this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD
-// (See bootstrap.php for more on `ApiContext`)
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.main']);
+
 try {
-    $fullAddress = \BlockCypher\Api\FullAddress::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', array(), $apiContexts['BTC.main']);
+    $fullAddress = $addressClient->getFullAddress('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD');
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Full Address", "Full Address", '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD', null, $ex);
     exit(1);

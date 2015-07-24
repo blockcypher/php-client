@@ -10,18 +10,16 @@ require __DIR__ . '/../bootstrap.php';
 // The following code takes you through
 // the process of retrieving full address info of multiple addresses at once.
 
-/// ### Retrieve Multiple Full Addresses
-// (See bootstrap.php for more on `ApiContext`)
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.main']);
+
+$addressList = Array(
+    '1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE',
+    '1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV',
+    '1ENn7XmqXNnReiQEFHhBGzfiv5gAyBj7r1'
+);
+
 try {
-
-    // List of addresses
-    $addressList = Array(
-        '1J38WorKngZLJvA7qMin9g5jqUfTQUBZNE',
-        '1JP8FqoXtCMrR1sZc2McLWmHxENox1Y1PV',
-        '1ENn7XmqXNnReiQEFHhBGzfiv5gAyBj7r1'
-    );
-
-    $fullAddresses = \BlockCypher\Api\FullAddress::getMultiple($addressList, array(), $apiContexts['BTC.main']);
+    $fullAddresses = $addressClient->getMultipleFullAddresses($addressList);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple Full Addresses", "Full Addresses", implode(",", $addressList), null, $ex);
     exit(1);

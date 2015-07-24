@@ -11,11 +11,10 @@ $addressKeyChain = null;
 // For Sample Purposes Only.
 $request = null;
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['DOGE.main']);
+
 try {
-    // ### Create Address
-    // Create an address by calling the Address::create() method
-    // with a valid ApiContext (See bootstrap.php for more on `ApiContext`)
-    $addressKeyChain = \BlockCypher\Api\Address::create(null, $apiContexts['DOGE.main']);
+    $addressKeyChain = $addressClient->generateAddress();
 } catch (Exception $ex) {
     ResultPrinter::printError("Create Address", "AddressKeyChain", null, $request, $ex);
     exit(1);

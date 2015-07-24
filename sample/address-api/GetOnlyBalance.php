@@ -14,8 +14,10 @@ if (isset($_GET['address'])) {
     $sampleAddress = '1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'; // Default address for samples
 }
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.main']);
+
 try {
-    $addressBalance = \BlockCypher\Api\Address::getOnlyBalance($sampleAddress, array(), $apiContexts['BTC.main']);
+    $addressBalance = $addressClient->getBalance($sampleAddress);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Only Address Balance", "Address Balance", $sampleAddress, null, $ex);
     exit(1);
