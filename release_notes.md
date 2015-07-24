@@ -4,6 +4,7 @@ BlockCypher PHP SDK release notes
 v1.2.1
 ------
 * Added samples for docs
+* Refactored some samples
 
 v1.2.0
 ------

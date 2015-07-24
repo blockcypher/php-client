@@ -3,7 +3,7 @@
 // # Create TX Sample (without sending it)
 //
 // This sample code demonstrate how you can create a new transaction, as documented at <a href="http://dev.blockcypher.com/?#multisig-transactions">docs</a>.
-// Source address is a multisign address.
+// Source address is a multisig address.
 //
 // API used: POST /v1/btc/main/txs/new
 //
@@ -38,11 +38,11 @@ $txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
 try {
     $txSkeleton = $txClient->create($tx);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Created Multisign TX (spend multisign fund)", "TXSkeleton", null, $request, $ex);
+    ResultPrinter::printError("Created Multisig TX (spend multisig fund)", "TXSkeleton", null, $request, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Created Multisign TX (spend multisign fund)", "TXSkeleton", $txSkeleton->getTx()->getHash(), $request, $txSkeleton);
+ResultPrinter::printResult("Created Multisig TX (spend multisig fund)", "TXSkeleton", $txSkeleton->getTx()->getHash(), $request, $txSkeleton);
 
 return $txSkeleton;
 

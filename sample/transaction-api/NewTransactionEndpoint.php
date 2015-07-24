@@ -34,8 +34,6 @@ $output->setValue(1000); // Satoshis
 $request = clone $tx;
 
 $txClient = new TXClient($apiContext);
-
-// ### Create New TX
 $txSkeleton = $txClient->create($tx);
 
 ResultPrinter::printResult("New TX Endpoint", "TXSkeleton", $txSkeleton->getTx()->getHash(), $request, $txSkeleton);

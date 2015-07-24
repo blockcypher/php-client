@@ -1,15 +1,15 @@
 <?php
 
-// # Fund Multisign Address Sample
+// # Fund Multisig Address Sample
 //
 // This sample code demonstrate how you can create a new transaction and send it to the network
-// to fund a multisign address, as documented here at:
+// to fund a multisig address, as documented here at:
 // <a href="http://dev.blockcypher.com/?javascript#multisig-transactions">http://dev.blockcypher.com/?javascript#multisig-transactions</a>
 // API used: POST /v1/btc/main/txs/new and
 // POST /v1/btc/main/txs/send
 
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
-$txSkeleton = require 'CreateTransactionToFundMultisignAddress.php';
+$txSkeleton = require 'CreateTransactionToFundMultisigAddress.php';
 
 $txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
 
@@ -33,10 +33,10 @@ try {
     // ### Send TX to the network
     $output = $txClient->send($txSkeleton);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Sent Transaction (fund multisign address)", "TXSkeleton", null, $request, $ex);
+    ResultPrinter::printError("Sent Transaction (fund multisig address)", "TXSkeleton", null, $request, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Sent Transaction (fund multisign address)", "TXSkeleton", $output->getTx()->getHash(), $request, $output);
+ResultPrinter::printResult("Sent Transaction (fund multisig address)", "TXSkeleton", $output->getTx()->getHash(), $request, $output);
 
 return $output;

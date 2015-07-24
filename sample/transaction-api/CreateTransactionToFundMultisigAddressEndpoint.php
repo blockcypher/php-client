@@ -1,7 +1,7 @@
 <?php
 
 // Run on console:
-// php -f .\sample\transaction-api\CreateTransactionToFundMultisignAddressEndpoint.php
+// php -f .\sample\transaction-api\CreateTransactionToFundMultisigAddressEndpoint.php
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -36,4 +36,4 @@ $tx->addOutput($output);
 $txClient = new TXClient($apiContext);
 $txSkeleton = $txClient->create($tx);
 
-ResultPrinter::printResult("Created Multisign TX", "TXSkeleton", $txSkeleton->getTx()->getHash(), $tx, $txSkeleton);
+ResultPrinter::printResult("Created Multisig TX", "TXSkeleton", $txSkeleton->getTx()->getHash(), $tx, $txSkeleton);

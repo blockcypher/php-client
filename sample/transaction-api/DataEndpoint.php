@@ -16,7 +16,6 @@ $apiContext = ApiContext::create(
 );
 
 $nullDataClient = new NullDataClient($apiContext);
-
 $nullData = $nullDataClient->embedString('***BlockCypher Data Endpoint Test***'); // max 40 bytes
 
 ResultPrinter::printResult("Embed Data On Blockchain", "NullData", $nullData->getHash(), null, $nullData);

@@ -1030,7 +1030,7 @@ if (PHP_SAPI == 'cli') {
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="transaction-api/CreateTransactionToFundMultisignAddress.php"
+                                <a href="transaction-api/CreateTransactionToFundMultisigAddress.php"
                                    class="btn btn-primary pull-left execute">
                                     Try It
                                     <i
@@ -1050,7 +1050,7 @@ if (PHP_SAPI == 'cli') {
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="transaction-api/CreateTransactionToSpendMultisignFunds.php"
+                                <a href="transaction-api/CreateTransactionToSpendMultisigFunds.php"
                                    class="btn btn-primary pull-left execute">
                                     Try It
                                     <i
@@ -1070,7 +1070,7 @@ if (PHP_SAPI == 'cli') {
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="transaction-api/CreateTxToFundMultisignAddrWithBuilder.php"
+                                <a href="transaction-api/CreateTxToFundMultisigAddrWithBuilder.php"
                                    class="btn btn-primary pull-left execute">
                                     Try It
                                     <i
@@ -1090,7 +1090,7 @@ if (PHP_SAPI == 'cli') {
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="transaction-api/CreateTxToSpendMultisignFundsWithBuilder.php"
+                                <a href="transaction-api/CreateTxToSpendMultisigFundsWithBuilder.php"
                                    class="btn btn-primary pull-left execute">
                                     Try It
                                     <i
@@ -1110,7 +1110,7 @@ if (PHP_SAPI == 'cli') {
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="transaction-api/SpendMultisignFundsTransaction.php"
+                                <a href="transaction-api/SpendMultisigFundsTransaction.php"
                                    class="btn btn-primary pull-left execute">
                                     Try It
                                     <i

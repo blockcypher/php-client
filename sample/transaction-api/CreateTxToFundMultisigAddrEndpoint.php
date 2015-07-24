@@ -1,8 +1,8 @@
 <?php
 
 // Run on console:
-// php -f .\sample\transaction-api\CreateTxToFundMultisignAddrEndpoint.php
-// You can also use builders, see CreateTxToFundMultisignAddrWithBuilderEndpoint.php sample
+// php -f .\sample\transaction-api\CreateTxToFundMultisigAddrEndpoint.php
+// You can also use builders, see CreateTxToFundMultisigAddrWithBuilderEndpoint.php sample
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -46,4 +46,4 @@ $tx
 $txClient = new TXClient($apiContext);
 $txSkeleton = $txClient->create($tx);
 
-ResultPrinter::printResult("Created Multisign TX", "TXSkeleton", $txSkeleton->getTx()->getHash(), $tx, $txSkeleton);
+ResultPrinter::printResult("Created Multisig TX", "TXSkeleton", $txSkeleton->getTx()->getHash(), $tx, $txSkeleton);
