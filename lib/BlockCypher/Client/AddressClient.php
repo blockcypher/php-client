@@ -63,6 +63,7 @@ class AddressClient extends BlockCypherClient
     }
 
     /**
+     * @deprecated since 1.2.1. Renamed to generateMultisigAddress.
      * @param array $pubkeys
      * @param string $scriptType
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -70,6 +71,18 @@ class AddressClient extends BlockCypherClient
      * @return AddressKeyChain
      */
     public function generateMultisignAddress($pubkeys, $scriptType, $apiContext = null, $restCall = null)
+    {
+        return $this->generateMultisigAddress($pubkeys, $scriptType, $apiContext, $restCall);
+    }
+
+    /**
+     * @param array $pubkeys
+     * @param string $scriptType
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return AddressKeyChain
+     */
+    public function generateMultisigAddress($pubkeys, $scriptType, $apiContext = null, $restCall = null)
     {
         ArgumentArrayValidator::validate($pubkeys, 'pubkeys');
 
