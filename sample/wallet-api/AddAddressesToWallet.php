@@ -18,15 +18,15 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
+$walletClient = new \BlockCypher\Client\WalletClient($apiContexts['BTC.main']);
+
 $addressList = \BlockCypher\Api\AddressList::fromAddressesArray(array(
     "13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"
 ));
 
 try {
-    /// Get Wallet
-    $wallet = \BlockCypher\Api\Wallet::get($walletName, array(), $apiContexts['BTC.main']);
-    /// Add addresses
-    $output = $wallet->addAddresses($addressList, array(), $apiContexts['BTC.main']);
+    /// Add addresses to Wallet
+    $output = $walletClient->addAddresses($walletName, $addressList);
 } catch (Exception $ex) {
     ResultPrinter::printError("Add Addresses to a Wallet", "Wallet", $walletName, $addressList, $ex);
     exit(1);

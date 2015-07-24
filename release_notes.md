@@ -13,6 +13,7 @@ v1.2.0
 * WebHookClient
 * TXClient
 * TXSkeleton::sign changed function signature
+* WalletClient
 
 v1.1.0
 ------

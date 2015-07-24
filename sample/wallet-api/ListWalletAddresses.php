@@ -18,8 +18,10 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
+$walletClient = new \BlockCypher\Client\WalletClient($apiContexts['BTC.main']);
+
 try {
-    $output = \BlockCypher\Api\Wallet::getOnlyAddresses($walletName, array(), $apiContexts['BTC.main']);
+    $output = $walletClient->getWalletAddresses($walletName);
 } catch (Exception $ex) {
     ResultPrinter::printError("List all Wallet addresses", "Wallet", $walletName, null, $ex);
     exit(1);

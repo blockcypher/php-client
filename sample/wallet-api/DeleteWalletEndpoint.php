@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\Wallet;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\WalletClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,7 +15,7 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$wallet = Wallet::get('alice', array(), $apiContext);
-$result = $wallet->delete(array(), $apiContext);
+$walletClient = new WalletClient($apiContext);
+$result = $walletClient->delete('alice');
 
 ResultPrinter::printResult("Delete Wallet Endpoint", "Wallet", 'alice', null, $result);

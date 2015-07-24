@@ -13,8 +13,10 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.main']);
+
 try {
-    $address = \BlockCypher\Api\Address::get($walletName, array(), $apiContexts['BTC.main']);
+    $address = $addressClient->get($walletName);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Address", "Wallet as Address", $walletName, null, $ex);
     exit(1);

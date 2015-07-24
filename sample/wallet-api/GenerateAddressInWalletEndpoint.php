@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\Wallet;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\WalletClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,7 +15,7 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$wallet = Wallet::get('alice', array(), $apiContext);
-$walletGenerateAddressResponse = $wallet->generateAddress(array(), $apiContext);
+$walletClient = new WalletClient($apiContext);
+$walletGenerateAddressResponse = $walletClient->generateAddress('alice');
 
 ResultPrinter::printResult("Generate Address In Wallet Endpoint", "Wallet", 'alice', null, $walletGenerateAddressResponse);

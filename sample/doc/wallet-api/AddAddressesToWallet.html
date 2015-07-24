@@ -10,15 +10,17 @@ You have to run that sample before running this one or there will be no wallets<
     <span class="hljs-variable">$walletName</span> = <span class="hljs-string">'alice'</span>; <span class="hljs-comment">// Default wallet name for samples</span>
 }
 
+    <span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span>
+    \BlockCypher\Client\WalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+
 <span class="hljs-variable">$addressList</span> = \BlockCypher\Api\AddressList::fromAddressesArray(<span class="hljs-keyword">array</span>(
     <span class="hljs-string">"13cj1QtfW61kQHoqXm3khVRYPJrgQiRM6j"</span>
 ));
 
 <span class="hljs-keyword">try</span> {
-    <span class="hljs-comment">/// Get Wallet</span>
-    <span class="hljs-variable">$wallet</span> = \BlockCypher\Api\Wallet::get(<span class="hljs-variable">$walletName</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
-    <span class="hljs-comment">/// Add addresses</span>
-    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$wallet</span>-&gt;addAddresses(<span class="hljs-variable">$addressList</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+    <span class="hljs-comment">/// Add addresses to Wallet</span>
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$walletClient</span>-&gt;addAddresses(<span
+            class="hljs-variable">$walletName</span>, <span class="hljs-variable">$addressList</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Add Addresses to a Wallet"</span>, <span class="hljs-string">"Wallet"</span>, <span class="hljs-variable">$walletName</span>, <span class="hljs-variable">$addressList</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

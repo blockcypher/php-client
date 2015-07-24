@@ -18,16 +18,16 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
+$walletClient = new \BlockCypher\Client\WalletClient($apiContexts['BTC.main']);
+
 try {
-    /// Get Wallet
-    $wallet = \BlockCypher\Api\Wallet::get($walletName, array(), $apiContexts['BTC.main']);
-    /// Add addresses
-    $output = $wallet->generateAddress(array(), $apiContexts['BTC.main']);
+    /// Generate new address in wallet
+    $output = $walletClient->generateAddress($walletName);
 } catch (Exception $ex) {
-    ResultPrinter::printError("Generate New Address for Wallet", "WalletGenerateAddressResponse", $walletName, null, $ex);
+    ResultPrinter::printError("Generate New Address in Wallet", "WalletGenerateAddressResponse", $walletName, null, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("Generate New Address for Wallet", "WalletGenerateAddressResponse", $walletName, null, $output);
+ResultPrinter::printResult("Generate New Address in Wallet", "WalletGenerateAddressResponse", $walletName, null, $output);
 
 return $output;

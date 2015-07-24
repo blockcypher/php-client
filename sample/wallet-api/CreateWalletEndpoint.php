@@ -25,6 +25,7 @@ $wallet->setAddresses(array(
 // For Sample Purposes Only.
 $request = clone $wallet;
 
-$wallet->create(array(), $apiContext);
+$walletClient = new \BlockCypher\Client\WalletClient($apiContext);
+$wallet = $walletClient->create($wallet);
 
 ResultPrinter::printResult("Created Wallet End Point", "Wallet", $wallet->getName(), $request, $wallet);

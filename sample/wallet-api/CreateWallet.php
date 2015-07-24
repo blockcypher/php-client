@@ -23,8 +23,10 @@ $wallet->setAddresses(array(
 /// For Sample Purposes Only.
 $request = clone $wallet;
 
+$walletClient = new \BlockCypher\Client\WalletClient($apiContexts['BTC.main']);
+
 try {
-    $output = $wallet->create(array(), $apiContexts['BTC.main']);
+    $output = $walletClient->create($wallet);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created Wallet", "Wallet", null, $request, $ex);
     exit(1);

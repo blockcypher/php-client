@@ -1696,18 +1696,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransaction",
             "title": "CreateAndSignAndSendTransaction"
           },
-            "depth": 2,
-            "outline": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 1,
-                        "title": "Create, Sign and Send Transaction",
-                        "slug": "create-sign-and-send-transaction"
-                    },
-                    "depth": 1
-                }
-            ]
+            "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1725,37 +1714,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet",
             "title": "CreateAndSignAndSendTransactionBCTesnet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create, Sign and Send TX Sample",
-                          "slug": "create-sign-and-send-tx-sample"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Sign the TX",
-                                  "slug": "sign-the-tx"
-                              },
-                              "depth": 3
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Send TX to the network",
-                                  "slug": "send-tx-to-the-network"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1773,37 +1732,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionDogeMain",
             "title": "CreateAndSignAndSendTransactionDogeMain"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create, Sign and Send TX Sample",
-                          "slug": "create-sign-and-send-tx-sample"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Sign the TX",
-                                  "slug": "sign-the-tx"
-                              },
-                              "depth": 3
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Send TX to the network",
-                                  "slug": "send-tx-to-the-network"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1821,18 +1750,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransaction",
             "title": "CreateTransaction"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create TX (without sending it)",
-                          "slug": "create-tx-without-sending-it"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1850,29 +1768,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddress",
             "title": "CreateTransactionToFundMultisignAddress"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create TX To Fund Multisign Address",
-                          "slug": "create-tx-to-fund-multisign-address"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "TX request object:",
-                                  "slug": "tx-request-object"
-                              },
-                              "depth": 2
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1890,8 +1786,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint",
             "title": "CreateTransactionToFundMultisignAddressEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1909,18 +1804,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToSpendMultisignFunds",
             "title": "CreateTransactionToSpendMultisignFunds"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create TX Sample (without sending it)",
-                          "slug": "create-tx-sample-without-sending-it"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1938,18 +1822,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionUsingWallet",
             "title": "CreateTransactionUsingWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create TX from wallet (without sending it)",
-                          "slug": "create-tx-from-wallet-without-sending-it"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1967,40 +1840,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilder",
             "title": "CreateTransactionWithTXBuilder"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create TX Sample (without sending it)",
-                          "slug": "create-tx-sample-without-sending-it"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "partially-filled out TX request object.",
-                                  "slug": "partially-filled-out-tx-request-object"
-                              },
-                              "depth": 2,
-                              "children": [
-                                  {
-                                      "type": "heading",
-                                      "data": {
-                                          "level": 3,
-                                          "title": "Create New TX",
-                                          "slug": "create-new-tx"
-                                      },
-                                      "depth": 3
-                                  }
-                              ]
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2018,29 +1858,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet",
             "title": "CreateTransactionWithTXBuilderBCTestnet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create TX Sample (without sending it)",
-                          "slug": "create-tx-sample-without-sending-it"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Create New TX",
-                                  "slug": "create-new-tx"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2058,29 +1876,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderDogeMain",
             "title": "CreateTransactionWithTXBuilderDogeMain"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create TX Sample (without sending it)",
-                          "slug": "create-tx-sample-without-sending-it"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Create New TX",
-                                  "slug": "create-new-tx"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2116,8 +1912,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrEndpoint",
             "title": "CreateTxToFundMultisignAddrEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2135,18 +1930,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder",
             "title": "CreateTxToFundMultisignAddrWithBuilder"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Fund multisign address (using builder)",
-                          "slug": "fund-multisign-address-using-builder"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2164,8 +1948,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
             "title": "CreateTxToFundMultisignAddrWithBuilderEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2183,18 +1966,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder",
             "title": "CreateTxToSpendMultisignFundsWithBuilder"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Spend Multisign Funds (using builder)",
-                          "slug": "spend-multisign-funds-using-builder"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2212,8 +1984,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
             "title": "CreateTxToSpendMultisignFundsWithBuilderEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2249,18 +2020,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransaction",
             "title": "DecodeRawTransaction"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Decode Raw Transactions",
-                          "slug": "decode-raw-transactions"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2278,8 +2038,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransactionEndpoint",
             "title": "DecodeRawTransactionEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2315,37 +2074,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\FundMultisignAddressTransaction",
             "title": "FundMultisignAddressTransaction"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Fund Multisign Address Sample",
-                          "slug": "fund-multisign-address-sample"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Sign the TX",
-                                  "slug": "sign-the-tx"
-                              },
-                              "depth": 3
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Send TX to the network",
-                                  "slug": "send-tx-to-the-network"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2363,18 +2092,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetAllUnconfirmedTransactions",
             "title": "GetAllUnconfirmedTransactions"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Unconfirmed Transactions",
-                          "slug": "get-unconfirmed-transactions"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2392,18 +2110,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetMultipleTransactions",
             "title": "GetMultipleTransactions"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Multiple Transactions",
-                          "slug": "get-multiple-transactions"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2421,18 +2128,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetTransaction",
             "title": "GetTransaction"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Transaction",
-                          "slug": "get-transaction"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2450,18 +2146,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetTransactionWithPaging",
             "title": "GetTransactionWithPaging"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Transactions With Paging",
-                          "slug": "get-transactions-with-paging"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2479,18 +2164,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\NewTransactionEndpoint",
             "title": "NewTransactionEndpoint"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 3,
-                          "title": "Create New TX",
-                          "slug": "create-new-tx"
-                      },
-                      "depth": 3
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2508,18 +2182,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransaction",
             "title": "PushRawTransaction"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Push Raw Transaction to the Network",
-                          "slug": "push-raw-transaction-to-the-network"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2537,8 +2200,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransactionEndpoint",
             "title": "PushRawTransactionEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2556,18 +2218,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\SpendMultisignFundsTransaction",
             "title": "SpendMultisignFundsTransaction"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Spend Multisign Funds Sample",
-                          "slug": "spend-multisign-funds-sample"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2585,8 +2236,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\TransactionHashEndpoint",
             "title": "TransactionHashEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2604,8 +2254,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\UnconfirmedTransactionsEndpoint",
             "title": "UnconfirmedTransactionsEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }
       ]
     }, {
@@ -2633,7 +2282,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWallet",
             "title": "AddAddressesToWallet"
           },
-          "depth": 2
+            "depth": 2,
+            "outline": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 1,
+                        "title": "Add Addresses to Wallet",
+                        "slug": "add-addresses-to-wallet"
+                    },
+                    "depth": 1
+                }
+            ]
         }, {
           "type": "file",
           "data": {
@@ -2651,7 +2311,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWalletEndpoint",
             "title": "AddAddressesToWalletEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2687,7 +2348,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateWallet",
             "title": "CreateWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create Wallet",
+                          "slug": "create-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2705,7 +2377,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateWalletEndpoint",
             "title": "CreateWalletEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2741,7 +2414,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteWallet",
             "title": "DeleteWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Delete Wallet",
+                          "slug": "delete-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2759,7 +2443,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteWalletEndpoint",
             "title": "DeleteWalletEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2813,7 +2498,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInWallet",
             "title": "GenerateAddressInWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate New Address for a Wallet",
+                          "slug": "generate-new-address-for-a-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2831,7 +2527,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInWalletEndpoint",
             "title": "GenerateAddressInWalletEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2849,7 +2546,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateNewAddressForWallet",
             "title": "GenerateNewAddressForWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate New Address for a Wallet",
+                          "slug": "generate-new-address-for-a-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2939,7 +2647,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWallet",
             "title": "GetWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Wallet",
+                          "slug": "get-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2957,7 +2676,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletAsAddress",
             "title": "GetWalletAsAddress"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Wallet as Address",
+                          "slug": "get-wallet-as-address"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2975,7 +2705,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletAsFullAddress",
             "title": "GetWalletAsFullAddress"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Full Wallet",
+                          "slug": "get-full-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2993,7 +2734,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletBalanceAsAddressBalance",
             "title": "GetWalletBalanceAsAddressBalance"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Only Wallet Balance",
+                          "slug": "get-only-wallet-balance"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -3029,7 +2781,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\ListWalletAddresses",
             "title": "ListWalletAddresses"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get All Wallet Addresses",
+                          "slug": "get-all-wallet-addresses"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -3047,7 +2810,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWallet",
             "title": "RemoveAddressesFromWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Remove Addresses from Wallet",
+                          "slug": "remove-addresses-from-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -3065,7 +2839,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWalletEndpoint",
             "title": "RemoveAddressesFromWalletEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -3083,7 +2858,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\WalletAddressesEndpoint",
             "title": "WalletAddressesEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }
       ]
     }

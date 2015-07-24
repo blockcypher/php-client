@@ -18,8 +18,10 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'alice'; // Default wallet name for samples
 }
 
+$walletClient = new \BlockCypher\Client\WalletClient($apiContexts['BTC.main']);
+
 try {
-    $output = \BlockCypher\Api\Wallet::get($walletName, array(), $apiContexts['BTC.main']);
+    $output = $walletClient->get($walletName);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get a Wallet", "Wallet", null, $walletName, $ex);
     exit(1);
