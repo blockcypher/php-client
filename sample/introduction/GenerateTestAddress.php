@@ -8,14 +8,15 @@ require __DIR__ . '/../bootstrap.php';
 
 // An AddressKeyChain represents an associated collection of public and
 // private keys alongside their respective public address.
-$addressKeyChain = new \BlockCypher\Api\AddressKeyChain();
-
 /// For sample purposes only
+$addressKeyChain = new \BlockCypher\Api\AddressKeyChain();
 $request = clone $addressKeyChain;
+
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BCY.test']);
 
 try {
     /// Create new test BCY Address
-    $addressKeyChain->create($apiContexts['BCY.test']);
+    $addressKeyChain = $addressClient->generateAddress();
 } catch (Exception $ex) {
     ResultPrinter::printError("Generate Test Bcy Address", "AddressKeyChain", null, $request, $ex);
     exit(1);
