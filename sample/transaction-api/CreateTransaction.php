@@ -32,8 +32,10 @@ $tx->addOutput($output);
 /// For Sample Purposes Only.
 $request = clone $tx;
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
+
 try {
-    $output = $tx->create($apiContexts['BTC.test3']);
+    $output = $txClient->create($tx);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created TX", "TXSkeleton", null, $request, $ex);
     exit(1);

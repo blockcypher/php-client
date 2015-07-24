@@ -101,7 +101,7 @@ class BlockCypherClient implements BlockCypherClientInterface
     public function getChainUrlPrefix($apiContext)
     {
         if ($apiContext === null) {
-            $apiContext = self::getApiContext();
+            $apiContext = $this->getApiContext();
         }
         $chainUrlPrefix = $apiContext->getBaseChainUrl();
         return $chainUrlPrefix;
@@ -114,7 +114,7 @@ class BlockCypherClient implements BlockCypherClientInterface
     public function getCoinSymbol($apiContext)
     {
         if ($apiContext === null) {
-            $apiContext = self::getApiContext();
+            $apiContext = $this->getApiContext();
         }
         return $apiContext->getCoinSymbol();
     }

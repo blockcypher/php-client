@@ -168,21 +168,13 @@ class TXSkeletonTest extends ResourceModelTestCase
     {
         $obj = static::getObject();
 
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getCoinSymbol'))
-            ->getMock();
-
-        $mockApiContext->expects($this->once())
-            ->method('getCoinSymbol')
-            ->will($this->returnValue("btc-testnet"));
-
+        $coinSymbol = 'btc-testnet';
         $hexPrivateKey = "1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e";
         $expectedPubkeys = array("0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf");
         $expectedSignatures = array("30450221008627dbea1b070e8ceb025ab0ecb154227a65a34e6e8cd64966f181ca151d354f022066264b1930ad9e638f2853db683f5f81059e8c547bf9b4512046d2525c170c0b");
 
         /** @noinspection PhpParamsInspection */
-        $obj->sign($hexPrivateKey, $mockApiContext);
+        $obj->sign($hexPrivateKey, $coinSymbol);
         $this->assertEquals($expectedSignatures, $obj->getSignatures());
         $this->assertEquals($expectedPubkeys, $obj->getPubkeys());
     }
@@ -200,15 +192,7 @@ class TXSkeletonTest extends ResourceModelTestCase
     {
         $obj = static::getMultisignObject();
 
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getCoinSymbol'))
-            ->getMock();
-
-        $mockApiContext->expects($this->once())
-            ->method('getCoinSymbol')
-            ->will($this->returnValue("btc-testnet"));
-
+        $coinSymbol = 'btc-testnet';
         $hexPrivateKeys = static::getMultisignPrivateKeys();
         $pubKeys = static::getMultisignPublicKeys();
         $signatures = static::getMultisignSignatures();
@@ -242,7 +226,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         );
 
         /** @noinspection PhpParamsInspection */
-        $obj->sign($threePrivateKeys, $mockApiContext);
+        $obj->sign($threePrivateKeys, $coinSymbol);
         $this->assertEquals($expectedSignatures, $obj->getSignatures());
         $this->assertEquals($expectedPubkeys, $obj->getPubkeys());
     }
@@ -403,15 +387,7 @@ class TXSkeletonTest extends ResourceModelTestCase
     {
         $obj = static::getMultisignObject();
 
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getCoinSymbol'))
-            ->getMock();
-
-        $mockApiContext->expects($this->once())
-            ->method('getCoinSymbol')
-            ->will($this->returnValue("btc-testnet"));
-
+        $coinSymbol = 'btc-testnet';
         $hexPrivateKeys = static::getMultisignPrivateKeys();
         $pubKeys = static::getMultisignPublicKeys();
         $signatures = static::getMultisignSignatures();
@@ -438,7 +414,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         );
 
         /** @noinspection PhpParamsInspection */
-        $obj->sign($twoPrivateKeys, $mockApiContext);
+        $obj->sign($twoPrivateKeys, $coinSymbol);
         $this->assertEquals($expectedSignatures, $obj->getSignatures());
         $this->assertEquals($expectedPubkeys, $obj->getPubkeys());
     }
@@ -447,15 +423,7 @@ class TXSkeletonTest extends ResourceModelTestCase
     {
         $obj = static::getMultisignObject();
 
-        $mockApiContext = $this->getMockBuilder('\BlockCypher\Rest\ApiContext')
-            ->disableOriginalConstructor()
-            ->setMethods(array('getCoinSymbol'))
-            ->getMock();
-
-        $mockApiContext->expects($this->once())
-            ->method('getCoinSymbol')
-            ->will($this->returnValue("btc-testnet"));
-
+        $coinSymbol = 'btc-testnet';
         $hexPrivateKeys = static::getMultisignPrivateKeys();
         $pubKeys = static::getMultisignPublicKeys();
         $signatures = static::getMultisignSignatures();
@@ -475,7 +443,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         );
 
         /** @noinspection PhpParamsInspection */
-        $obj->sign($onePrivateKeys, $mockApiContext);
+        $obj->sign($onePrivateKeys, $coinSymbol);
         $this->assertEquals($expectedSignatures, $obj->getSignatures());
         $this->assertEquals($expectedPubkeys, $obj->getPubkeys());
     }

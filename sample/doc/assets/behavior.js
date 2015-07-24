@@ -772,40 +772,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndDeleteAllWebHooks",
             "title": "CreateAndDeleteAllWebHooks"
           },
-            "depth": 2,
-            "outline": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 1,
-                        "title": "Delete All WebHooks Sample",
-                        "slug": "delete-all-webhooks-sample"
-                    },
-                    "depth": 1,
-                    "children": [
-                        {
-                            "type": "heading",
-                            "data": {
-                                "level": 2,
-                                "title": "Get WebHook Instance",
-                                "slug": "get-webhook-instance"
-                            },
-                            "depth": 2,
-                            "children": [
-                                {
-                                    "type": "heading",
-                                    "data": {
-                                        "level": 3,
-                                        "title": "Delete All WebHooks",
-                                        "slug": "delete-all-webhooks"
-                                    },
-                                    "depth": 3
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -823,37 +790,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndDeleteWebHook",
             "title": "CreateAndDeleteWebHook"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Delete WebHook",
-                          "slug": "delete-webhook"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Create Sample WebHook",
-                                  "slug": "create-sample-webhook"
-                              },
-                              "depth": 2
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Delete WebHook",
-                                  "slug": "delete-webhook"
-                              },
-                              "depth": 2
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -871,37 +808,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndListWebHooks",
             "title": "CreateAndListWebHooks"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "List All WebHooks",
-                          "slug": "list-all-webhooks"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Create Sample WebHook",
-                                  "slug": "create-sample-webhook"
-                              },
-                              "depth": 2
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Get all webhooks",
-                                  "slug": "get-all-webhooks"
-                              },
-                              "depth": 2
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -919,45 +826,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateWebHook",
             "title": "CreateWebHook"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create WebHook",
-                          "slug": "create-webhook"
-                      },
-                      "depth": 1
-                  }, {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "WebHook request",
-                          "slug": "webhook-request"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 4,
-                                  "title": "NOTE: Please note that the use of https is recommended for webhooks.",
-                                  "slug": "note-please-note-that-the-use-of-https-is-recommended-for-webhooks"
-                              },
-                              "depth": 4
-                          }
-                      ]
-                  }, {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Event Types",
-                          "slug": "event-types"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -975,8 +844,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateWebHookEndpoint",
             "title": "CreateWebHookEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -994,37 +862,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\DeleteAllWebHooks",
             "title": "DeleteAllWebHooks"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Delete All WebHooks",
-                          "slug": "delete-all-webhooks"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Get WebHook Instance",
-                                  "slug": "get-webhook-instance"
-                              },
-                              "depth": 2
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Delete All WebHooks",
-                                  "slug": "delete-all-webhooks"
-                              },
-                              "depth": 2
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1042,8 +880,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\DeleteWebHookEndpoint",
             "title": "DeleteWebHookEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1061,37 +898,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\GetMultipleWebHooks",
             "title": "GetMultipleWebHooks"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Multiple WebHooks",
-                          "slug": "get-multiple-webhooks"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Create Sample WebHook",
-                                  "slug": "create-sample-webhook"
-                              },
-                              "depth": 2
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Get Multiple WebHooks",
-                                  "slug": "get-multiple-webhooks"
-                              },
-                              "depth": 2
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1109,37 +916,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\GetWebHook",
             "title": "GetWebHook"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get WebHook",
-                          "slug": "get-webhook"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Create Sample WebHook",
-                                  "slug": "create-sample-webhook"
-                              },
-                              "depth": 2
-                          }, {
-                              "type": "heading",
-                              "data": {
-                                  "level": 2,
-                                  "title": "Get WebHook by Id",
-                                  "slug": "get-webhook-by-id"
-                              },
-                              "depth": 2
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1157,29 +934,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\ListWebHooks",
             "title": "ListWebHooks"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get All WebHooks Sample",
-                          "slug": "get-all-webhooks-sample"
-                      },
-                      "depth": 1,
-                      "children": [
-                          {
-                              "type": "heading",
-                              "data": {
-                                  "level": 3,
-                                  "title": "Get List of All WebHooks",
-                                  "slug": "get-list-of-all-webhooks"
-                              },
-                              "depth": 3
-                          }
-                      ]
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1197,8 +952,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\ListWebHooksEndpoint",
             "title": "ListWebHooksEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1216,8 +970,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\WebHookIdEndpoint",
             "title": "WebHookIdEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }
       ]
     }, {
@@ -1943,7 +1696,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransaction",
             "title": "CreateAndSignAndSendTransaction"
           },
-          "depth": 2
+            "depth": 2,
+            "outline": [
+                {
+                    "type": "heading",
+                    "data": {
+                        "level": 1,
+                        "title": "Create, Sign and Send Transaction",
+                        "slug": "create-sign-and-send-transaction"
+                    },
+                    "depth": 1
+                }
+            ]
         }, {
           "type": "file",
           "data": {
@@ -1961,7 +1725,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet",
             "title": "CreateAndSignAndSendTransactionBCTesnet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create, Sign and Send TX Sample",
+                          "slug": "create-sign-and-send-tx-sample"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Sign the TX",
+                                  "slug": "sign-the-tx"
+                              },
+                              "depth": 3
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Send TX to the network",
+                                  "slug": "send-tx-to-the-network"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -1979,7 +1773,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionDogeMain",
             "title": "CreateAndSignAndSendTransactionDogeMain"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create, Sign and Send TX Sample",
+                          "slug": "create-sign-and-send-tx-sample"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Sign the TX",
+                                  "slug": "sign-the-tx"
+                              },
+                              "depth": 3
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Send TX to the network",
+                                  "slug": "send-tx-to-the-network"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -1997,7 +1821,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransaction",
             "title": "CreateTransaction"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create TX (without sending it)",
+                          "slug": "create-tx-without-sending-it"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2015,7 +1850,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddress",
             "title": "CreateTransactionToFundMultisignAddress"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create TX To Fund Multisign Address",
+                          "slug": "create-tx-to-fund-multisign-address"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "TX request object:",
+                                  "slug": "tx-request-object"
+                              },
+                              "depth": 2
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2033,7 +1890,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint",
             "title": "CreateTransactionToFundMultisignAddressEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2051,7 +1909,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionToSpendMultisignFunds",
             "title": "CreateTransactionToSpendMultisignFunds"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create TX Sample (without sending it)",
+                          "slug": "create-tx-sample-without-sending-it"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2069,7 +1938,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionUsingWallet",
             "title": "CreateTransactionUsingWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create TX from wallet (without sending it)",
+                          "slug": "create-tx-from-wallet-without-sending-it"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2087,7 +1967,40 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilder",
             "title": "CreateTransactionWithTXBuilder"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create TX Sample (without sending it)",
+                          "slug": "create-tx-sample-without-sending-it"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 2,
+                                  "title": "partially-filled out TX request object.",
+                                  "slug": "partially-filled-out-tx-request-object"
+                              },
+                              "depth": 2,
+                              "children": [
+                                  {
+                                      "type": "heading",
+                                      "data": {
+                                          "level": 3,
+                                          "title": "Create New TX",
+                                          "slug": "create-new-tx"
+                                      },
+                                      "depth": 3
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2105,7 +2018,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet",
             "title": "CreateTransactionWithTXBuilderBCTestnet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create TX Sample (without sending it)",
+                          "slug": "create-tx-sample-without-sending-it"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Create New TX",
+                                  "slug": "create-new-tx"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2123,7 +2058,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderDogeMain",
             "title": "CreateTransactionWithTXBuilderDogeMain"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create TX Sample (without sending it)",
+                          "slug": "create-tx-sample-without-sending-it"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Create New TX",
+                                  "slug": "create-new-tx"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2159,7 +2116,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrEndpoint",
             "title": "CreateTxToFundMultisignAddrEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2177,7 +2135,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder",
             "title": "CreateTxToFundMultisignAddrWithBuilder"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Fund multisign address (using builder)",
+                          "slug": "fund-multisign-address-using-builder"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2195,7 +2164,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
             "title": "CreateTxToFundMultisignAddrWithBuilderEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2213,7 +2183,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder",
             "title": "CreateTxToSpendMultisignFundsWithBuilder"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Spend Multisign Funds (using builder)",
+                          "slug": "spend-multisign-funds-using-builder"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2231,7 +2212,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
             "title": "CreateTxToSpendMultisignFundsWithBuilderEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2267,7 +2249,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransaction",
             "title": "DecodeRawTransaction"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Decode Raw Transactions",
+                          "slug": "decode-raw-transactions"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2285,7 +2278,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransactionEndpoint",
             "title": "DecodeRawTransactionEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2321,7 +2315,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\FundMultisignAddressTransaction",
             "title": "FundMultisignAddressTransaction"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Fund Multisign Address Sample",
+                          "slug": "fund-multisign-address-sample"
+                      },
+                      "depth": 1,
+                      "children": [
+                          {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Sign the TX",
+                                  "slug": "sign-the-tx"
+                              },
+                              "depth": 3
+                          }, {
+                              "type": "heading",
+                              "data": {
+                                  "level": 3,
+                                  "title": "Send TX to the network",
+                                  "slug": "send-tx-to-the-network"
+                              },
+                              "depth": 3
+                          }
+                      ]
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2339,7 +2363,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetAllUnconfirmedTransactions",
             "title": "GetAllUnconfirmedTransactions"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Unconfirmed Transactions",
+                          "slug": "get-unconfirmed-transactions"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2357,7 +2392,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetMultipleTransactions",
             "title": "GetMultipleTransactions"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Multiple Transactions",
+                          "slug": "get-multiple-transactions"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2375,7 +2421,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetTransaction",
             "title": "GetTransaction"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Transaction",
+                          "slug": "get-transaction"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2393,7 +2450,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetTransactionWithPaging",
             "title": "GetTransactionWithPaging"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Transactions With Paging",
+                          "slug": "get-transactions-with-paging"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2411,7 +2479,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\NewTransactionEndpoint",
             "title": "NewTransactionEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 3,
+                          "title": "Create New TX",
+                          "slug": "create-new-tx"
+                      },
+                      "depth": 3
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2429,7 +2508,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransaction",
             "title": "PushRawTransaction"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Push Raw Transaction to the Network",
+                          "slug": "push-raw-transaction-to-the-network"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2447,7 +2537,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransactionEndpoint",
             "title": "PushRawTransactionEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2465,7 +2556,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\SpendMultisignFundsTransaction",
             "title": "SpendMultisignFundsTransaction"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Spend Multisign Funds Sample",
+                          "slug": "spend-multisign-funds-sample"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2483,7 +2585,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\TransactionHashEndpoint",
             "title": "TransactionHashEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2501,7 +2604,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\UnconfirmedTransactionsEndpoint",
             "title": "UnconfirmedTransactionsEndpoint"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": []
         }
       ]
     }, {

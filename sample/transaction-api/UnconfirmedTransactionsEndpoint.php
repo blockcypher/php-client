@@ -5,8 +5,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-use BlockCypher\Api\TX;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\TXClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -15,6 +15,7 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$txs = TX::getUnconfirmed(array(), $apiContext);
+$txClient = new TXClient($apiContext);
+$txs = $txClient->getUnconfirmed(array(), $apiContext);
 
 ResultPrinter::printResult("Get Unconfirmed Transactions", "TX[]", null, null, $txs);

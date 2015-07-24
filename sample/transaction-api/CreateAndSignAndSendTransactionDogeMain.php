@@ -10,6 +10,8 @@
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
 $txSkeleton = require 'CreateTransactionWithTXBuilderDogeMain.php';
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['DOGE.main']);
+
 // source addresses private keys
 // private key in the same format as returned by Generate Address Endpoint:
 // http://dev.blockcypher.com/?shell#generate-address-endpoint
@@ -19,7 +21,7 @@ $privateKeys = array(
 
 // ### Sign the TX
 try {
-    $txSkeleton->sign($privateKeys, $apiContexts['DOGE.main']);
+    $txSkeleton = $txClient->sign($txSkeleton, $privateKeys);
 } catch (Exception $ex) {
     ResultPrinter::printError("Sign Transaction DOGE", "TXSkeleton", null, $request, $ex);
     exit(1);
@@ -33,7 +35,7 @@ $request = clone $txSkeleton;
 
 try {
     // ### Send TX to the network
-    $txSkeleton = $txSkeleton->send($apiContexts['DOGE.main']);
+    $txSkeleton = $txClient->send($txSkeleton);
 } catch (Exception $ex) {
     ResultPrinter::printError("Send Transaction DOGE", "TXSkeleton", null, $request, $ex);
     exit(1);

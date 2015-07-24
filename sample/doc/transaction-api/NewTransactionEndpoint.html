@@ -3,6 +3,8 @@ php -f .\sample\transaction-api\NewTransactionEndpoint.php</p></div></div><div c
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Api</span>\<span class="hljs-title">TX</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
+    <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
+            class="hljs-title">Client</span>\<span class="hljs-title">TXClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
@@ -13,6 +15,40 @@ php -f .\sample\transaction-api\NewTransactionEndpoint.php</p></div></div><div c
 <span class="hljs-variable">$input</span>-&gt;addAddress(<span class="hljs-string">"C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm"</span>);
 <span class="hljs-variable">$tx</span>-&gt;addInput(<span class="hljs-variable">$input</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Tx outputs</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$output</span> = <span class="hljs-keyword">new</span> \BlockCypher\Api\TXOutput();
 <span class="hljs-variable">$output</span>-&gt;addAddress(<span class="hljs-string">"C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi"</span>);
-<span class="hljs-variable">$tx</span>-&gt;addOutput(<span class="hljs-variable">$output</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Tx amount</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$output</span>-&gt;setValue(<span class="hljs-number">1000</span>); <span class="hljs-comment">// Satoshis</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>For Sample Purposes Only.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$tx</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="create-new-tx">Create New TX</h3></div></div></div><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$tx</span>-&gt;create(<span class="hljs-variable">$apiContext</span>);
+    <span class="hljs-variable">$tx</span>-&gt;addOutput(<span class="hljs-variable">$output</span>);
+</div>
+</div>
+</div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><p>Tx amount</p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-variable">$output</span>-&gt;setValue(<span
+                    class="hljs-number">1000</span>); <span class="hljs-comment">// Satoshis</span></div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><p>For Sample Purposes Only.</p></div>
+        </div>
+        <div class="code">
+            <div class="wrapper"><span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span>
+                <span class="hljs-variable">$tx</span>;
+
+                <span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> TXClient(<span
+                        class="hljs-variable">$apiContext</span>);
+            </div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="comments ">
+            <div class="wrapper"><h3 id="create-new-tx">Create New TX</h3></div>
+        </div>
+    </div>
+    <div class="segment">
+        <div class="code">
+            <div class="wrapper"><span class="hljs-variable">$txSkeleton</span> = <span
+                    class="hljs-variable">$txClient</span>-&gt;create(<span class="hljs-variable">$tx</span>);
 
 ResultPrinter::printResult(<span class="hljs-string">"New TX Endpoint"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$request</span>, <span class="hljs-variable">$txSkeleton</span>);</div></div></div></div></body></html>

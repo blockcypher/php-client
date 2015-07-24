@@ -7,6 +7,8 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.main']);
+
 try {
     /// Transaction hash list
     $transactionList = array(
@@ -14,7 +16,7 @@ try {
         '6370d43593fc47daf9443e0773faf289c54ca0bd9b92c2e538c77a6db67b0780'
     );
 
-    $transactions = \BlockCypher\Api\TX::getMultiple($transactionList, array(), $apiContexts['BTC.main']);
+    $transactions = $txClient->getMultiple($transactionList);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Multiple Transactions", "Transactions", implode(",", $transactionList), null, $ex);
     exit(1);

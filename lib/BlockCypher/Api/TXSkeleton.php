@@ -25,8 +25,9 @@ use BlockCypher\Transport\BlockCypherRestCall;
 class TXSkeleton extends BlockCypherResourceModel
 {
     /**
-     * Create a new TX.
+     * Create a new transaction skeleton.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return TXSkeleton
@@ -52,6 +53,7 @@ class TXSkeleton extends BlockCypherResourceModel
     /**
      * Send the transaction to the network.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return $this
@@ -75,18 +77,18 @@ class TXSkeleton extends BlockCypherResourceModel
     }
 
     /**
+     * Sign the transaction skeleton.
+     *
      * @param string[]|string $privateKeys
-     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param string $coinSymbol
      * @return $this
-     * @throws \Exception
+     * @throws BlockCypherSignatureException
      */
-    public function sign($privateKeys, $apiContext = null)
+    public function sign($privateKeys, $coinSymbol)
     {
         if (is_string($privateKeys)) {
             $privateKeys = array($privateKeys);
         }
-
-        $coinSymbol = $this->getCoinSymbol($apiContext);
 
         // Create PrivateKey objects from plain hex private keys
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $coinSymbol);

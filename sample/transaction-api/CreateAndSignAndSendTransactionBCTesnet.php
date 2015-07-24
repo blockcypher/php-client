@@ -10,6 +10,8 @@
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
 $txSkeleton = require 'CreateTransactionWithTXBuilderBCTestnet.php';
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test']);
+
 // source addresses private keys
 // private key in the same format as returned by Generate Address Endpoint:
 // http://dev.blockcypher.com/?shell#generate-address-endpoint
@@ -19,21 +21,20 @@ $privateKeys = array(
 
 // ### Sign the TX
 try {
-    $txSkeleton->sign($privateKeys, $apiContexts['BCY.test']);
+    $txClient->sign($txSkeleton, $privateKeys);
 } catch (Exception $ex) {
     ResultPrinter::printError("Sign Transaction DOGE", "TXSkeleton", null, $request, $ex);
     exit(1);
 }
-// Source and Destination addresses used in this sample
-// https://live.blockcypher.com/bcy/address/C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm/
-// https://live.blockcypher.com/bcy/address/C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi/
+// Source address: <a href="https://live.blockcypher.com/bcy/address/C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm/">C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm</a>
+// Destination address: <a href="https://live.blockcypher.com/bcy/address/C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi/">C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi</a>
 
 // For sample purposes only.
 $request = clone $txSkeleton;
 
 try {
     // ### Send TX to the network
-    $txSkeleton = $txSkeleton->send($apiContexts['BCY.test']);
+    $txSkeleton = $txClient->send($txSkeleton);
 } catch (Exception $ex) {
     ResultPrinter::printError("Send Transaction DOGE", "TXSkeleton", null, $request, $ex);
     exit(1);

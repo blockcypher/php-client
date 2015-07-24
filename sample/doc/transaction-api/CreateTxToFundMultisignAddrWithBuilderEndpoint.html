@@ -6,6 +6,8 @@ Builder classes are optional, see CreateTxToFundMultisignAddrEndpoint.php to see
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Builder</span>\<span class="hljs-title">TXBuilder</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Builder</span>\<span class="hljs-title">TXInputBuilder</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Builder</span>\<span class="hljs-title">TXOutputBuilder</span>;
+    <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
+            class="hljs-title">Client</span>\<span class="hljs-title">TXClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
@@ -31,6 +33,9 @@ Builder classes are optional, see CreateTxToFundMultisignAddrEndpoint.php to see
     -&gt;addTXOutput(<span class="hljs-variable">$output</span>)
     -&gt;build();
 
-<span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$tx</span>-&gt;create(<span class="hljs-variable">$apiContext</span>);
+    <span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> TXClient(<span
+            class="hljs-variable">$apiContext</span>);
+    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;create(<span
+            class="hljs-variable">$tx</span>);
 
 ResultPrinter::printResult(<span class="hljs-string">"Created Multisign TX"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$tx</span>, <span class="hljs-variable">$txSkeleton</span>);</div></div></div></div></body></html>

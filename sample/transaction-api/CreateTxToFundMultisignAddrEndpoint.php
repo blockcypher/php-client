@@ -10,6 +10,7 @@ use BlockCypher\Api\TX;
 use BlockCypher\Api\TXInput;
 use BlockCypher\Api\TXOutput;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\TXClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -42,6 +43,7 @@ $tx
         )
     );
 
-$txSkeleton = $tx->create($apiContext);
+$txClient = new TXClient($apiContext);
+$txSkeleton = $txClient->create($tx);
 
 ResultPrinter::printResult("Created Multisign TX", "TXSkeleton", $txSkeleton->getTx()->getHash(), $tx, $txSkeleton);

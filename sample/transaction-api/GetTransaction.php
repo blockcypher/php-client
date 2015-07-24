@@ -7,8 +7,10 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.main']);
+
 try {
-    $transaction = \BlockCypher\Api\TX::get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', array(), $apiContexts['BTC.main']);
+    $transaction = $txClient->get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449');
 } catch (Exception $ex) {
     ResultPrinter::printError("Get TX", "TX", 'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', null, $ex);
     exit(1);

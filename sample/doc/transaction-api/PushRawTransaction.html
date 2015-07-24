@@ -5,9 +5,14 @@
 <span class="hljs-variable">$txHex</span> = <span class="hljs-keyword">new</span> \BlockCypher\Api\TXHex();
 <span class="hljs-variable">$txHex</span>-&gt;setTx(<span class="hljs-variable">$hexRawTx</span>);
 
+    <span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span>
+    \BlockCypher\Client\TXClient(<span class="hljs-variable">$apiContexts</span>[<span
+            class="hljs-string">'BTC.main'</span>]);
+
 <span class="hljs-keyword">try</span> {
     <span class="hljs-comment">/// Push Raw Transaction</span>
-    <span class="hljs-variable">$tx</span> = \BlockCypher\Api\TX::push(<span class="hljs-variable">$hexRawTx</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+    <span class="hljs-variable">$tx</span> = <span class="hljs-variable">$txClient</span>-&gt;push(<span
+            class="hljs-variable">$hexRawTx</span>);
 } <span class="hljs-keyword">catch</span> (\<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Push Raw Transaction"</span>, <span class="hljs-string">"TX"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$txHex</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

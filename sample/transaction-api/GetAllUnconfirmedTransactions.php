@@ -8,8 +8,10 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.main']);
+
 try {
-    $txs = \BlockCypher\Api\TX::getUnconfirmed(array(), $apiContexts['BTC.main']);
+    $txs = $txClient->getUnconfirmed();
 } catch (Exception $ex) {
     ResultPrinter::printError("Get Unconfirmed Transactions", "TX[]", null, null, $ex);
     exit(1);

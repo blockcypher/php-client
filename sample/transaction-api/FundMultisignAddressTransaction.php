@@ -11,9 +11,7 @@
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
 $txSkeleton = require 'CreateTransactionToFundMultisignAddress.php';
 
-// DEBUG
-//var_dump($txSkeleton);
-//die();
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
 
 // source addresses private keys
 // private key in the same format as returned by Generate Address Endpoint:
@@ -23,18 +21,17 @@ $privateKeys = array(
 );
 
 // ### Sign the TX
-$txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
+$txSkeleton = $txClient->sign($txSkeleton, $privateKeys);
 
-// Source and Destination addresses used in this sample
-// https://live.blockcypher.com/btc-testnet/address/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4/
-// https://live.blockcypher.com/btc-testnet/address/2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ/
+// Source address: <a href="https://live.blockcypher.com/btc-testnet/address/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4/">n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4</a>
+// Destination addresses <a href="https://live.blockcypher.com/btc-testnet/address/2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ/">2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ</a>
 
 // For sample purposes only.
 $request = clone $txSkeleton;
 
 try {
     // ### Send TX to the network
-    $output = $txSkeleton->send($apiContexts['BTC.test3']);
+    $output = $txClient->send($txSkeleton);
 } catch (Exception $ex) {
     ResultPrinter::printError("Sent Transaction (fund multisign address)", "TXSkeleton", null, $request, $ex);
     exit(1);

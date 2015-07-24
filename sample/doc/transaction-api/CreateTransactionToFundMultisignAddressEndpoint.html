@@ -5,6 +5,8 @@ php -f .\sample\transaction-api\CreateTransactionToFundMultisignAddressEndpoint.
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Api</span>\<span class="hljs-title">TXInput</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Api</span>\<span class="hljs-title">TXOutput</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
+    <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
+            class="hljs-title">Client</span>\<span class="hljs-title">TXClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
@@ -28,6 +30,9 @@ php -f .\sample\transaction-api\CreateTransactionToFundMultisignAddressEndpoint.
 <span class="hljs-variable">$tx</span>-&gt;addInput(<span class="hljs-variable">$input</span>);
 <span class="hljs-variable">$tx</span>-&gt;addOutput(<span class="hljs-variable">$output</span>);
 
-<span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$tx</span>-&gt;create(<span class="hljs-variable">$apiContext</span>);
+    <span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> TXClient(<span
+            class="hljs-variable">$apiContext</span>);
+    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;create(<span
+            class="hljs-variable">$tx</span>);
 
 ResultPrinter::printResult(<span class="hljs-string">"Created Multisign TX"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$tx</span>, <span class="hljs-variable">$txSkeleton</span>);</div></div></div></div></body></html>

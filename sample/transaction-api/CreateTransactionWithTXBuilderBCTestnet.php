@@ -29,9 +29,11 @@ $tx = \BlockCypher\Builder\TXBuilder::aTX()
 // For Sample Purposes Only.
 $request = clone $tx;
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BCY.test']);
+
 try {
     // ### Create New TX
-    $txSkeleton = $tx->create($apiContexts['BCY.test']);
+    $txSkeleton = $txClient->create($tx);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created TX BlockCypher Testnet", "TXSkeleton", null, $request, $ex);
     exit(1);

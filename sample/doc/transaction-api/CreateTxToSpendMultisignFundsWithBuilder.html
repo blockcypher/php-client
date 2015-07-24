@@ -39,8 +39,12 @@
                 <span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span
                         class="hljs-variable">$tx</span>;
 
+                <span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span>
+                \BlockCypher\Client\TXClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.test3'</span>]);
+
 <span class="hljs-keyword">try</span> {
-    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$tx</span>-&gt;create(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.test3'</span>]);
+                <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;create(<span
+                        class="hljs-variable">$tx</span>);
 } <span class="hljs-keyword">catch</span> (\<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Created Multisign TX (Spend Multisign Fund)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

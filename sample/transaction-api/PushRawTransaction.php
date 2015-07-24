@@ -10,9 +10,11 @@ $hexRawTx = require 'CreateTransactionWithThirdPartySoftware.php';
 $txHex = new \BlockCypher\Api\TXHex();
 $txHex->setTx($hexRawTx);
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.main']);
+
 try {
     /// Push Raw Transaction
-    $tx = \BlockCypher\Api\TX::push($hexRawTx, array(), $apiContexts['BTC.main']);
+    $tx = $txClient->push($hexRawTx);
 } catch (\Exception $ex) {
     ResultPrinter::printError("Push Raw Transaction", "TX", null, $txHex, $ex);
     exit(1);

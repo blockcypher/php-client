@@ -7,13 +7,15 @@
 
 require __DIR__ . '/../bootstrap.php';
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.main']);
+
 try {
     $params = array(
         'instart' => 1,
         'outstart' => 1,
         'limit' => 1,
     );
-    $transaction = \BlockCypher\Api\TX::get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', $params, $apiContexts['BTC.main']);
+    $transaction = $txClient->get('f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', $params);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get TX Paging Inputs and Outputs", "TX", 'f854aebae95150b379cc1187d848d58225f3c4157fe992bcd166f58bd5063449', null, $ex);
     exit(1);

@@ -29,9 +29,11 @@ $tx = \BlockCypher\Builder\TXBuilder::aTX()
 // For Sample Purposes Only.
 $request = clone $tx;
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['DOGE.main']);
+
 try {
     // ### Create New TX
-    $txSkeleton = $tx->create($apiContexts['DOGE.main']);
+    $txSkeleton = $txClient->create($tx);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created TX Doge", "TXSkeleton", null, $request, $ex);
     exit(1);

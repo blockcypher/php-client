@@ -55,9 +55,11 @@ $tx = \BlockCypher\Builder\TXBuilder::aTX()
 // For Sample Purposes Only.
 $request = clone $tx;
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
+
 try {
     // ### Create New TX
-    $txSkeleton = $tx->create($apiContexts['BTC.test3']);
+    $txSkeleton = $txClient->create($tx);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created Multisign TX", "TXSkeleton", null, $request, $ex);
     exit(1);

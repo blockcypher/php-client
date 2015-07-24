@@ -32,9 +32,11 @@ $tx->addOutput($output);
 /// For Sample Purposes Only.
 $request = clone $tx;
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
+
 /// Create New TX
 try {
-    $txSkeleton = $tx->create($apiContexts['BTC.test3']);
+    $txSkeleton = $txClient->create($tx);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created Multisign TX (spend multisign fund)", "TXSkeleton", null, $request, $ex);
     exit(1);

@@ -13,9 +13,11 @@ $hexRawTx = "01000000011935b41d12936df99d322ac8972b74ecff7b79408bbccaf1b2eb80152
 $txHex = new \BlockCypher\Api\TXHex();
 $txHex->setTx($hexRawTx);
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.main']);
+
 try {
     /// Decode Raw Transaction
-    $tx = \BlockCypher\Api\TX::decode($hexRawTx, array(), $apiContexts['BTC.main']);
+    $tx = $txClient->decode($hexRawTx);
 } catch (Exception $ex) {
     ResultPrinter::printError("Decode Raw Transaction", "TX", $txHex, $ex);
     exit(1);

@@ -52,6 +52,7 @@ class TX extends BlockCypherResourceModel
     /**
      * Obtain the TX resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param string $hash
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -90,6 +91,7 @@ class TX extends BlockCypherResourceModel
     /**
      * Obtain multiple TX resources for the given identifier.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param string[] $array
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -127,6 +129,7 @@ class TX extends BlockCypherResourceModel
      * The Unconfirmed Transactions Endpoint returns an array of the latest transactions relayed by nodes
      * in a blockchain that haven’t been included in any blocks.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
@@ -157,6 +160,7 @@ class TX extends BlockCypherResourceModel
      * Decode raw transactions without sending propagating them to the network; perhaps you want to double-check
      * another client library or confirm that another service is sending proper transactions.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param string $hexRawTx
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -192,6 +196,7 @@ class TX extends BlockCypherResourceModel
     /**
      * Push the raw transaction to the network.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param string $hexRawTx
      * @param array $params Parameters. Options: instart, outstart and limit
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -227,6 +232,7 @@ class TX extends BlockCypherResourceModel
     /**
      * Create a new TX.
      *
+     * @deprecated since version 1.2. Use TXClient.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
      * @return TXSkeleton

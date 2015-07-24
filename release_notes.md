@@ -11,6 +11,8 @@ v1.2.0
 * AddressClient
 * PaymentForwardClient
 * WebHookClient
+* TXClient
+* TXSkeleton::sign changed function signature
 
 v1.1.0
 ------

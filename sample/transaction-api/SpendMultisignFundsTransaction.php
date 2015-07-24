@@ -22,9 +22,11 @@ $privateKeys = array(
 /// For sample purposes only.
 $request = clone $txSkeleton;
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
+
 /// Sign the TX
 try {
-    $txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
+    $txSkeleton = $txClient->sign($txSkeleton, $privateKeys);
 } catch (Exception $ex) {
     ResultPrinter::printError("Sign Transaction (spend multisign funds)", "TXSkeleton", null, $request, $ex);
     exit(1);
@@ -38,7 +40,7 @@ $request = clone $txSkeleton;
 
 /// Send TX to the network
 try {
-    $output = $txSkeleton->send($apiContexts['BTC.test3']);
+    $output = $txClient->send($txSkeleton);
 } catch (Exception $ex) {
     ResultPrinter::printError("Sent Transaction (spend multisign funds)", "TXSkeleton", null, $request, $ex);
     exit(1);

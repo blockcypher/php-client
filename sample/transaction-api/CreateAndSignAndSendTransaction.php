@@ -20,20 +20,23 @@
 /** @var \BlockCypher\Api\TXSkeleton $txSkeleton */
 $txSkeleton = require 'CreateTransaction.php';
 
+$txClient = new \BlockCypher\Client\TXClient($apiContexts['BTC.test3']);
+
 // Private key must have the same format as returned by Generate Address Endpoint:
 // <a href="http://dev.blockcypher.com/?#generate-address-endpoint">http://dev.blockcypher.com/?#generate-address-endpoint</a>
 $privateKeys = array(
     "1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e" // Address: n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4
 );
-/// Sign TX
-$txSkeleton->sign($privateKeys, $apiContexts['BTC.test3']);
+
+/// Sign TXSkeleton
+$txSkeleton = $txClient->sign($txSkeleton, $privateKeys);
 
 /// For sample purposes only.
 $request = clone $txSkeleton;
 
 try {
     /// Send TX to the network
-    $txSkeleton = $txSkeleton->send($apiContexts['BTC.test3']);
+    $txSkeleton = $txClient->send($txSkeleton);
 } catch (Exception $ex) {
     ResultPrinter::printError("Send Transaction", "TXSkeleton", null, $request, $ex);
     exit(1);

@@ -7,6 +7,7 @@ require __DIR__ . '/../bootstrap.php';
 
 use BlockCypher\Api\TX;
 use BlockCypher\Auth\SimpleTokenCredential;
+use BlockCypher\Client\TXClient;
 use BlockCypher\Rest\ApiContext;
 
 $apiContext = ApiContext::create(
@@ -32,7 +33,9 @@ $output->setValue(1000); // Satoshis
 // For Sample Purposes Only.
 $request = clone $tx;
 
+$txClient = new TXClient($apiContext);
+
 // ### Create New TX
-$txSkeleton = $tx->create($apiContext);
+$txSkeleton = $txClient->create($tx);
 
 ResultPrinter::printResult("New TX Endpoint", "TXSkeleton", $txSkeleton->getTx()->getHash(), $request, $txSkeleton);
