@@ -18,11 +18,11 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'bob'; // Default wallet name for samples
 }
 
+$walletClient = new \BlockCypher\Client\HDWalletClient($apiContexts['BTC.main']);
+
 try {
-    /// Get the Wallet
-    $wallet = \BlockCypher\Api\HDWallet::get($walletName, array(), $apiContexts['BTC.main']);
-    /// Delete the Wallet
-    $output = $wallet->delete(array(), $apiContexts['BTC.main']);
+    /// Delete the HDWallet
+    $output = $walletClient->delete($walletName);
 } catch (Exception $ex) {
     ResultPrinter::printError("Deleted HDWallet", "HDWallet", $walletName, null, $ex);
     exit(1);

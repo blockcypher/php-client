@@ -28,6 +28,7 @@ class HDWallet extends BlockCypherResourceModel
     /**
      * Obtain the Wallet resource for the given identifier.
      *
+     * @deprecated since version 1.2. Use HDWalletClient.
      * @param string $walletName
      * @param array $params Parameters.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -61,6 +62,7 @@ class HDWallet extends BlockCypherResourceModel
     /**
      * Get all addresses in a given wallet.
      *
+     * @deprecated since version 1.2. Use HDWalletClient.
      * @param string $walletName
      * @param array $params Parameters.
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -95,6 +97,7 @@ class HDWallet extends BlockCypherResourceModel
     /**
      * Create a new HDWallet.
      *
+     * @deprecated since version 1.2. Use HDWalletClient.
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
@@ -125,6 +128,7 @@ class HDWallet extends BlockCypherResourceModel
     /**
      * Deletes the HDWallet identified by wallet_id for the application associated with access token.
      *
+     * @deprecated since version 1.2. Use HDWalletClient.
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
@@ -162,6 +166,7 @@ class HDWallet extends BlockCypherResourceModel
     /**
      * A new address is generated similar to Address Generation and associated it with the given wallet.
      *
+     * @deprecated since version 1.2. Use HDWalletClient.
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls

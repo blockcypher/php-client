@@ -18,13 +18,15 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'bob'; // Default hd wallet name for samples
 }
 
+$walletClient = new \BlockCypher\Client\HDWalletClient($apiContexts['BTC.main']);
+
 try {
-    $output = \BlockCypher\Api\HDWallet::getOnlyAddresses($walletName, array(), $apiContexts['BTC.main']);
+    $output = $walletClient->getWalletAddresses($walletName);
 } catch (Exception $ex) {
-    ResultPrinter::printError("List all HDWallet addresses", "HDWallet", $walletName, null, $ex);
+    ResultPrinter::printError("List all HDWallet addresses", "AddressList", $walletName, null, $ex);
     exit(1);
 }
 
-ResultPrinter::printResult("List all HDWallet addresses", "HDWallet", $walletName, null, $output);
+ResultPrinter::printResult("List all HDWallet addresses", "AddressList", $walletName, null, $output);
 
 return $output;

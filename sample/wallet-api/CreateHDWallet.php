@@ -22,8 +22,10 @@ $wallet->setSubchainIndexes(array(1, 3));
 /// For Sample Purposes Only.
 $request = clone $wallet;
 
+$walletClient = new \BlockCypher\Client\HDWalletClient($apiContexts['BTC.main']);
+
 try {
-    $output = $wallet->create(array(), $apiContexts['BTC.main']);
+    $output = $walletClient->create($wallet);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created HDWallet", "HDWallet", null, $request, $ex);
     exit(1);

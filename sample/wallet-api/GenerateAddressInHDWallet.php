@@ -18,11 +18,11 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'bob'; // Default hd wallet name for samples
 }
 
+$walletClient = new \BlockCypher\Client\HDWalletClient($apiContexts['BTC.main']);
+
 try {
-    /// Get Wallet
-    $wallet = \BlockCypher\Api\HDWallet::get($walletName, array(), $apiContexts['BTC.main']);
     /// Generate new address
-    $output = $wallet->generateAddress(array(), $apiContexts['BTC.main']);
+    $output = $walletClient->generateAddress($walletName);
 } catch (Exception $ex) {
     ResultPrinter::printError("Generate Address in a HDWallet", "HDWalletGenerateAddressResponse", $walletName, null, $ex);
     exit(1);

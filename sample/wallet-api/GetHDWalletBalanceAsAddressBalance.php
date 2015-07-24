@@ -13,8 +13,10 @@ if (isset($_GET['wallet_name'])) {
     $walletName = 'bob'; // Default hd wallet name for samples
 }
 
+$addressClient = new \BlockCypher\Client\AddressClient($apiContexts['BTC.main']);
+
 try {
-    $addressBalance = \BlockCypher\Api\Address::getOnlyBalance($walletName, array(), $apiContexts['BTC.main']);
+    $addressBalance = $addressClient->getBalance($walletName);
 } catch (Exception $ex) {
     ResultPrinter::printError("Get HDWallet as AddressBalance", "AddressBalance", $walletName, null, $ex);
     exit(1);

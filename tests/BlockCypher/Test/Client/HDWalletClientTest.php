@@ -2,32 +2,32 @@
 
 namespace BlockCypher\Test\Client;
 
-use BlockCypher\Client\WalletClient;
+use BlockCypher\Client\HDWalletClient;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Test\Api\AddressListTest;
-use BlockCypher\Test\Api\WalletGenerateAddressResponseTest;
-use BlockCypher\Test\Api\WalletTest;
+use BlockCypher\Test\Api\HDWalletGenerateAddressResponseTest;
+use BlockCypher\Test\Api\HDWalletTest;
 use BlockCypher\Transport\BlockCypherRestCall;
 use PHPUnit_Framework_MockObject_MockObject;
 
 /**
- * Class WalletClientTest
+ * Class HDWalletClientTest
  *
  * @package BlockCypher\Test\Client
  */
-class WalletClientTest extends ClientTestCase
+class HDWalletClientTest extends ClientTestCase
 {
     /**
-     * @return WalletClient
+     * @return HDWalletClient
      */
     public static function getObject()
     {
-        return new WalletClient();
+        return new HDWalletClient();
     }
 
     /**
      * @dataProvider mockProvider
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
@@ -36,16 +36,16 @@ class WalletClientTest extends ClientTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                WalletTest::getJson()
+                HDWalletTest::getJson()
             ));
 
-        $result = $obj->create(WalletTest::getObject(), array(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->create(HDWalletTest::getObject(), array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
     /**
      * @dataProvider mockProvider
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
@@ -54,62 +54,16 @@ class WalletClientTest extends ClientTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                WalletGenerateAddressResponseTest::getJson()
+                HDWalletGenerateAddressResponseTest::getJson()
             ));
 
-        $result = $obj->generateAddress(WalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->generateAddress(HDWalletGenerateAddressResponseTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
     /**
      * @dataProvider mockProvider
-     * @param WalletClient $obj
-     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
-     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
-     */
-    public function testAddAddresses($obj, $mockApiContext, $mockBlockCypherRestCall)
-    {
-        $addressList = AddressListTest::getObject();
-
-        $mockBlockCypherRestCall->expects($this->any())
-            ->method('execute')
-            ->will($this->returnValue(
-                WalletTest::getJson(array_merge(WalletTest::addresses(), $addressList->getAddresses()))
-            ));
-
-        $result = $obj->addAddresses(WalletTest::getObject()->getName(), $addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
-
-        $this->assertNotNull($result);
-        foreach ($addressList->getAddresses() as $address) {
-            $this->assertContains($address, $result->getAddresses());
-        }
-    }
-
-    /**
-     * @dataProvider mockProvider
-     * @param WalletClient $obj
-     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
-     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
-     */
-    public function testRemoveAddresses($obj, $mockApiContext, $mockBlockCypherRestCall)
-    {
-        $addressList = AddressListTest::getObject();
-
-        $mockBlockCypherRestCall->expects($this->any())
-            ->method('execute')
-            ->will($this->returnValue(
-                WalletTest::getJson(array_diff(WalletTest::addresses(), $addressList->getAddresses()))
-            ));
-
-        $result = $obj->addAddresses(WalletTest::getObject()->getName(), $addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
-
-        $this->assertNotNull($result);
-        $this->assertNotContains($addressList->getAddresses(), $result->getAddresses());
-    }
-
-    /**
-     * @dataProvider mockProvider
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
@@ -118,16 +72,16 @@ class WalletClientTest extends ClientTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                WalletTest::getJson()
+                HDWalletTest::getJson()
             ));
 
-        $result = $obj->get(WalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->get(HDWalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
     /**
      * @dataProvider mockProvider
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
@@ -136,19 +90,19 @@ class WalletClientTest extends ClientTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                '[' . WalletTest::getJson() . ']'
+                '[' . HDWalletTest::getJson() . ']'
             ));
 
-        $walletList = Array(WalletTest::getObject()->getName());
+        $walletList = array(HDWalletTest::getObject()->getName());
 
         $result = $obj->getMultiple($walletList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
-        $this->assertEquals($result[0], WalletTest::getObject());
+        $this->assertEquals($result[0], HDWalletTest::getObject());
     }
 
     /**
      * @dataProvider mockProvider
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
@@ -160,31 +114,13 @@ class WalletClientTest extends ClientTestCase
                 AddressListTest::getJson()
             ));
 
-        $result = $obj->getWalletAddresses(WalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
-        $this->assertNotNull($result);
-    }
-
-    /**
-     * @dataProvider mockProvider
-     * @param WalletClient $obj
-     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
-     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
-     */
-    public function testGetOnlyAddresses($obj, $mockApiContext, $mockBlockCypherRestCall)
-    {
-        $mockBlockCypherRestCall->expects($this->any())
-            ->method('execute')
-            ->will($this->returnValue(
-                AddressListTest::getJson()
-            ));
-
-        $result = $obj->getOnlyAddresses(WalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->getWalletAddresses(HDWalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
@@ -195,15 +131,15 @@ class WalletClientTest extends ClientTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                WalletTest::getJson()
+                HDWalletTest::getJson()
             ));
 
-        $obj->get(WalletTest::getObject()->getName(), $params, $mockApiContext, $mockBlockCypherRestCall);
+        $obj->get(HDWalletTest::getObject()->getName(), $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 
     /**
      * @dataProvider mockProviderGetParamsValidation
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
@@ -214,17 +150,17 @@ class WalletClientTest extends ClientTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                '[' . WalletTest::getJson() . ']'
+                '[' . HDWalletTest::getJson() . ']'
             ));
 
-        $walletNames = array(WalletTest::getObject()->getName());
+        $walletList = array(HDWalletTest::getObject()->getName());
 
-        $obj->getMultiple($walletNames, $params, $mockApiContext, $mockBlockCypherRestCall);
+        $obj->getMultiple($walletList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 
     /**
      * @dataProvider mockProvider
-     * @param WalletClient $obj
+     * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
@@ -236,7 +172,7 @@ class WalletClientTest extends ClientTestCase
                 true
             ));
 
-        $result = $obj->delete(WalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->delete(HDWalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 }

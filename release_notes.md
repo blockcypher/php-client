@@ -14,6 +14,7 @@ v1.2.0
 * TXClient
 * TXSkeleton::sign changed function signature
 * WalletClient
+* HDWalletClient
 
 v1.1.0
 ------

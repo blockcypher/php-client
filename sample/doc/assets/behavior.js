@@ -2282,18 +2282,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWallet",
             "title": "AddAddressesToWallet"
           },
-            "depth": 2,
-            "outline": [
-                {
-                    "type": "heading",
-                    "data": {
-                        "level": 1,
-                        "title": "Add Addresses to Wallet",
-                        "slug": "add-addresses-to-wallet"
-                    },
-                    "depth": 1
-                }
-            ]
+            "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2311,8 +2300,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWalletEndpoint",
             "title": "AddAddressesToWalletEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2330,7 +2318,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateHDWallet",
             "title": "CreateHDWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Create HDWallet",
+                          "slug": "create-hdwallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2348,18 +2347,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateWallet",
             "title": "CreateWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create Wallet",
-                          "slug": "create-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2377,8 +2365,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateWalletEndpoint",
             "title": "CreateWalletEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2396,7 +2383,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteHDWallet",
             "title": "DeleteHDWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Delete HDWallet",
+                          "slug": "delete-hdwallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2414,18 +2412,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteWallet",
             "title": "DeleteWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Delete Wallet",
-                          "slug": "delete-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2443,8 +2430,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteWalletEndpoint",
             "title": "DeleteWalletEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2462,7 +2448,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInHDWallet",
             "title": "GenerateAddressInHDWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate New Address in a HD Wallet",
+                          "slug": "generate-new-address-in-a-hd-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2480,7 +2477,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndex",
             "title": "GenerateAddressInHDWalletWithSubchainIndex"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Generate New Address in a HD Wallet",
+                          "slug": "generate-new-address-in-a-hd-wallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2498,18 +2506,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInWallet",
             "title": "GenerateAddressInWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate New Address for a Wallet",
-                          "slug": "generate-new-address-for-a-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2527,8 +2524,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInWalletEndpoint",
             "title": "GenerateAddressInWalletEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2546,18 +2542,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateNewAddressForWallet",
             "title": "GenerateNewAddressForWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate New Address for a Wallet",
-                          "slug": "generate-new-address-for-a-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2575,7 +2560,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWallet",
             "title": "GetHDWallet"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get HDWallet",
+                          "slug": "get-hdwallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2593,7 +2589,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWalletAsAddress",
             "title": "GetHDWalletAsAddress"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get HDWallet as Address",
+                          "slug": "get-hdwallet-as-address"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2611,7 +2618,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWalletAsFullAddress",
             "title": "GetHDWalletAsFullAddress"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Full HDWallet",
+                          "slug": "get-full-hdwallet"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2629,7 +2647,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWalletBalanceAsAddressBalance",
             "title": "GetHDWalletBalanceAsAddressBalance"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get Only HDWallet Balance",
+                          "slug": "get-only-hdwallet-balance"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2647,18 +2676,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWallet",
             "title": "GetWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Wallet",
-                          "slug": "get-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2676,18 +2694,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletAsAddress",
             "title": "GetWalletAsAddress"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Wallet as Address",
-                          "slug": "get-wallet-as-address"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2705,18 +2712,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletAsFullAddress",
             "title": "GetWalletAsFullAddress"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Full Wallet",
-                          "slug": "get-full-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2734,18 +2730,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletBalanceAsAddressBalance",
             "title": "GetWalletBalanceAsAddressBalance"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Only Wallet Balance",
-                          "slug": "get-only-wallet-balance"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2763,7 +2748,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\ListHDWalletAddresses",
             "title": "ListHDWalletAddresses"
           },
-          "depth": 2
+              "depth": 2,
+              "outline": [
+                  {
+                      "type": "heading",
+                      "data": {
+                          "level": 1,
+                          "title": "Get All HD Wallet Addresses",
+                          "slug": "get-all-hd-wallet-addresses"
+                      },
+                      "depth": 1
+                  }
+              ]
         }, {
           "type": "file",
           "data": {
@@ -2781,18 +2777,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\ListWalletAddresses",
             "title": "ListWalletAddresses"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get All Wallet Addresses",
-                          "slug": "get-all-wallet-addresses"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2810,18 +2795,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWallet",
             "title": "RemoveAddressesFromWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Remove Addresses from Wallet",
-                          "slug": "remove-addresses-from-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2839,8 +2813,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWalletEndpoint",
             "title": "RemoveAddressesFromWalletEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2858,8 +2831,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\WalletAddressesEndpoint",
             "title": "WalletAddressesEndpoint"
           },
-              "depth": 2,
-              "outline": []
+              "depth": 2
         }
       ]
     }
