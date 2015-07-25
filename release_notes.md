@@ -5,6 +5,7 @@ v1.2.1
 ------
 * Added samples for docs
 * Refactored some samples
+* Added TXClient::getConfidence and getMultipleConfidences
 
 v1.2.0
 ------
