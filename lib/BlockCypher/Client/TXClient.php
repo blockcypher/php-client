@@ -3,6 +3,7 @@
 namespace BlockCypher\Client;
 
 use BlockCypher\Api\TX;
+use BlockCypher\Api\TXConfidence;
 use BlockCypher\Api\TXHex;
 use BlockCypher\Api\TXSkeleton;
 use BlockCypher\Rest\ApiContext;
@@ -263,5 +264,71 @@ class TXClient extends BlockCypherClient
         $returnedTXSkeleton = new TXSkeleton();
         $returnedTXSkeleton->fromJson($json);
         return $returnedTXSkeleton;
+    }
+
+    /**
+     * Obtain the TXConfidence resource for the given identifier.
+     *
+     * @param string $txhash
+     * @param array $params Parameters
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return TXConfidence
+     */
+    public function getConfidence($txhash, $params = array(), $apiContext = null, $restCall = null)
+    {
+        ArgumentValidator::validate($txhash, 'txhash');
+        ArgumentGetParamsValidator::validate($params, 'params');
+        $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $payLoad = "";
+
+        $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);
+
+        $json = $this->executeCall(
+            "$chainUrlPrefix/txs/$txhash/confidence" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "GET",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        $txConfidence = new TXConfidence();
+        $txConfidence->fromJson($json);
+        return $txConfidence;
+    }
+
+    /**
+     * Obtain multiple TransactionConfidences resources for the given identifiers.
+     *
+     * @param string[] $array
+     * @param array $params Parameters
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return TXConfidence[]
+     */
+    public function getMultipleConfidences($array, $params = array(), $apiContext = null, $restCall = null)
+    {
+        ArgumentArrayValidator::validate($array, 'array');
+        ArgumentGetParamsValidator::validate($params, 'params');
+        $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $payLoad = "";
+
+        $txhashList = implode(";", $array);
+
+        $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);
+
+        $json = $this->executeCall(
+            "$chainUrlPrefix/txs/$txhashList/confidence" . http_build_query(array_intersect_key($params, $allowedParams)),
+            "GET",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        return TXConfidence::getList($json);
     }
 }

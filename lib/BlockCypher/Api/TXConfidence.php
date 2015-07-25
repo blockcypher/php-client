@@ -25,11 +25,10 @@ use BlockCypher\Validation\ArgumentValidator;
  */
 class TXConfidence extends BlockCypherResourceModel
 {
-    // TODO: add description for setters and getters from http://dev.blockcypher.com/ (not currently available)
-
     /**
      * Obtain the TXConfidence resource for the given identifier.
      *
+     * @deprecated since version 1.2.1 Use TXClient.
      * @param string $txhash
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -63,6 +62,7 @@ class TXConfidence extends BlockCypherResourceModel
     /**
      * Obtain multiple TransactionConfidences resources for the given identifiers.
      *
+     * @deprecated since version 1.2.1 Use TXClient.
      * @param string[] $array
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -94,6 +94,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * The age of the transaction in milliseconds, based on the earliest time BlockCypher saw it relayed in the network.
+     *
      * @return int
      */
     public function getAgeMillis()
@@ -102,6 +104,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * The age of the transaction in milliseconds, based on the earliest time BlockCypher saw it relayed in the network.
+     *
      * @param int $age_millis
      * @return $this
      */
@@ -112,6 +116,9 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * Number of peers that have sent this transaction to BlockCypher; only positive for unconfirmed transactions.
+     * -1 for confirmed transactions.
+     *
      * @return int
      */
     public function getReceiveCount()
@@ -120,6 +127,9 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * Number of peers that have sent this transaction to BlockCypher; only positive for unconfirmed transactions.
+     * -1 for confirmed transactions.
+     *
      * @param int $receive_count
      * @return $this
      */
@@ -130,6 +140,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * A number from 0 to 1 representing BlockCypher’s confidence that the transaction will make it into the next block.
+     *
      * @return float
      */
     public function getConfidence()
@@ -138,6 +150,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * A number from 0 to 1 representing BlockCypher’s confidence that the transaction will make it into the next block.
+     *
      * @param float $confidence
      * @return $this
      */
@@ -148,6 +162,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * The hash of the transaction. While reasonably unique, using hashes as identifiers may be unsafe.
+     *
      * @return string
      */
     public function getTxhash()
@@ -156,6 +172,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * The hash of the transaction. While reasonably unique, using hashes as identifiers may be unsafe.
+     *
      * @param string $txhash
      * @return $this
      */
@@ -166,6 +184,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * The BlockCypher URL one can use to query more detailed information about this transaction.
+     *
      * @return string
      */
     public function getTxurl()
@@ -174,6 +194,8 @@ class TXConfidence extends BlockCypherResourceModel
     }
 
     /**
+     * The BlockCypher URL one can use to query more detailed information about this transaction.
+     *
      * @param string $txurl
      * @return $this
      */

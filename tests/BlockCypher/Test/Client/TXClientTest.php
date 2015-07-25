@@ -5,6 +5,7 @@ namespace BlockCypher\Test\Client;
 use BlockCypher\Client\TXClient;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Test\Api\AddressTest;
+use BlockCypher\Test\Api\TXConfidenceTest;
 use BlockCypher\Test\Api\TXSkeletonTest;
 use BlockCypher\Test\Api\TXTest;
 use BlockCypher\Transport\BlockCypherRestCall;
@@ -286,5 +287,86 @@ class TXClientTest extends ClientTestCase
     public static function getObject()
     {
         return new TXClient();
+    }
+
+    // TXConfidence
+
+    /**
+     * @dataProvider mockProvider
+     * @param TXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     */
+    public function testGetConfidence($obj, $mockApiContext, $mockBlockCypherRestCall)
+    {
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                TXConfidenceTest::getJson()
+            ));
+
+        $result = $obj->getConfidence(TXConfidenceTest::getObject()->getTxhash(), array(), $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+    }
+
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param TXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetConfidenceParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
+    {
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                TXConfidenceTest::getJson()
+            ));
+
+        $obj->getConfidence(TXConfidenceTest::getObject()->getTxhash(), $params, $mockApiContext, $mockBlockCypherRestCall);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param TXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     */
+    public function testGetMultipleConfidences($obj, $mockApiContext, $mockBlockCypherRestCall)
+    {
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . TXConfidenceTest::getJson() . ']'
+            ));
+
+        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
+
+        $result = $obj->getMultipleConfidences($txConfidenceList, array(), $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+        $this->assertEquals($result[0], TXConfidenceTest::getObject());
+    }
+
+    /**
+     * @dataProvider mockProviderGetParamsValidation
+     * @param TXClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     * @param $params
+     * @expectedException \InvalidArgumentException
+     */
+    public function testGetMultipleConfidenceParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
+    {
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                '[' . TXConfidenceTest::getJson() . ']'
+            ));
+
+        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
+
+        $obj->getMultipleConfidences($txConfidenceList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 }
