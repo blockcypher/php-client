@@ -15,13 +15,11 @@ $apiContext = ApiContext::create(
     array('mode' => 'sandbox', 'log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
 );
 
-$microTXClient = new MicroTXClient();
-
+$microTXClient = new MicroTXClient($apiContext);
 $microTX = $microTXClient->sendWithPrivateKey(
     "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff", // private key
     "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
-    10000, // value (satoshis)
-    $apiContext
+    10000 // value (satoshis)
 );
 
 ResultPrinter::printResult("Created and Send MicroTX", "MicroTX", $microTX->getHash(), null, $microTX);

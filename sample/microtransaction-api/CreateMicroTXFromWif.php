@@ -10,15 +10,14 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-$microTXClient = new \BlockCypher\Client\MicroTXClient();
+$microTXClient = new \BlockCypher\Client\MicroTXClient($apiContexts['BCY.test']);
 
 try {
     /// Create and Send a MicroTX (server-side signing)
     $microTX = $microTXClient->sendWithWif(
         "BpouCdZ5dXbjcUDQBj8ZVYBbSPtWYDQHxuDcP48VA6Q7dZuqW4UJ", // wif
         "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
-        10000, // value (satoshis)
-        $apiContexts['BCY.test']
+        10000 // value (satoshis)
     );
 } catch (Exception $ex) {
     ResultPrinter::printError("Created and Send MicroTX (using WIF)", "MicroTX", null, null, $ex);

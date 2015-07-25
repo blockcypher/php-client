@@ -24,9 +24,10 @@ $microTX->setValueSatoshis(10000);
 /// For Sample Purposes Only.
 $request = clone $microTX;
 
+$microTXClient = new \BlockCypher\Client\MicroTXClient($apiContexts['BCY.test']);
+
 try {
-    /// Create New MicroTX
-    $output = $microTX->create($apiContexts['BCY.test']);
+    $output = $microTXClient->create($microTX);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created MicroTX Via PrivateKey", "MicroTX", null, $request, $ex);
     exit(1);

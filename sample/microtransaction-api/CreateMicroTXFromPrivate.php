@@ -9,15 +9,14 @@
 
 require __DIR__ . '/../bootstrap.php';
 
-$microTXClient = new \BlockCypher\Client\MicroTXClient();
+$microTXClient = new \BlockCypher\Client\MicroTXClient($apiContexts['BCY.test']);
 
 try {
     /// Create, Sign and Send a MicroTX (server-side signing)
     $microTX = $microTXClient->sendWithPrivateKey(
         "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff", // private key
         "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
-        10000, // value (satoshis)
-        $apiContexts['BCY.test']
+        10000 // value (satoshis)
     );
 } catch (Exception $ex) {
     ResultPrinter::printError("Created and Send MicroTX", "MicroTX", null, null, $ex);

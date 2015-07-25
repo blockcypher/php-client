@@ -9,19 +9,20 @@
 require __DIR__ . '/../bootstrap.php';
 
 // Create a new instance of MicroTX object
+// Source address: <a href="https://live.blockcypher.com/bcy/address/C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm/">C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm</a>
+// Destination address: <a href="https://live.blockcypher.com/bcy/address/C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi/">C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi</a>
 $microTX = new \BlockCypher\Api\MicroTX();
-// Source address: https://live.blockcypher.com/bcy/address/C5vqMGme4FThKnCY44gx1PLgWr86uxRbDm/
 $microTX->setFromPubkey("02d4e3404e175923adf89c932fab96758716f6a0a896890f2494c5d9141eb3f543");
-// Destination address: https://live.blockcypher.com/bcy/address/C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi/
 $microTX->setToAddress("C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi");
 $microTX->setValueSatoshis(10000);
 
 // For Sample Purposes Only.
 $request = clone $microTX;
 
+$microTXClient = new \BlockCypher\Client\MicroTXClient($apiContexts['BCY.test']);
+
 try {
-    // ### Create New MicroTX
-    $output = $microTX->create($apiContexts['BCY.test']);
+    $output = $microTXClient->create($microTX);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created MicroTX", "MicroTX", null, $request, $ex);
     exit(1);

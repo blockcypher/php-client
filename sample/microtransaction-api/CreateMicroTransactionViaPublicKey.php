@@ -28,9 +28,11 @@ $microTX->sign($privateKey);
 /// For Sample Purposes Only.
 $request = clone $microTX;
 
+$microTXClient = new \BlockCypher\Client\MicroTXClient($apiContexts['BCY.test']);
+
 try {
     /// Send MicroTX to the network
-    $output = $microTX->send($apiContexts['BCY.test']);
+    $output = $microTXClient->send($microTX);
 } catch (Exception $ex) {
     ResultPrinter::printError("Created MicroTX Via PublicKey", "MicroTX", null, $request, $ex);
     exit(1);
