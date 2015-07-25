@@ -15,9 +15,7 @@ $paymentForward = require 'CreateForwardingAddress.php';
 
 $paymentForwardClient = new \BlockCypher\Client\PaymentForwardClient($apiContexts['BTC.main']);
 
-// ## Get all PaymentForwards
 try {
-    /// Get all PaymentForwards
     $output = $paymentForwardClient->listForwardingAddresses();
 } catch (Exception $ex) {
     ResultPrinter::printError("List Forwarding Addresses", "PaymentForward[]", null, null, $ex);

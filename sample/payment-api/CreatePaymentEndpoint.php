@@ -17,7 +17,6 @@ $apiContext = ApiContext::create(
 );
 
 $paymentForwardClient = new PaymentForwardClient($apiContext);
-
 $options = array(
     'callback_url' => 'http://requestb.in/rwp6jirw?uniqid=' . uniqid()
 );

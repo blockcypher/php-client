@@ -466,20 +466,6 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Create new address</h5></div>
-                            <div class="col-md-4">
-                                <a href="address-api/CreateAddress.php" class="btn btn-primary pull-left execute"> Try
-                                    It
-                                    <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/address-api/CreateAddress.html" class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Generate new address</h5></div>
@@ -494,21 +480,6 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Create new BTC Testnet address</h5></div>
-                            <div class="col-md-4">
-                                <a href="address-api/CreateAddressBtcTest3.php"
-                                   class="btn btn-primary pull-left execute"> Try
-                                    It
-                                    <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/address-api/CreateAddressBtcTest3.html" class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Generate new BTC Testnet address</h5></div>
@@ -1152,74 +1123,6 @@ if (PHP_SAPI == 'cli') {
                 </div>
                 <!-- List group -->
                 <ul class="list-group">
-                    <!--
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Create microtransaction via private keys</h5></div>
-                            <div class="col-md-4">
-                                <a href="microtransaction-api/CreateMicroTransactionViaPrivateKey.php"
-                                   class="btn btn-primary pull-left execute">
-                                    Try It
-                                    <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/microtransaction-api/CreateMicroTransactionViaPrivateKey.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Create microtransaction via public keys and client-side
-                                    signing</h5></div>
-                            <div class="col-md-4">
-                                <a href="microtransaction-api/CreateMicroTransactionViaPublicKey.php"
-                                   class="btn btn-primary pull-left execute">
-                                    Try It
-                                    <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/microtransaction-api/CreateMicroTransactionViaPublicKey.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Create, sign and send (short version)</h5></div>
-                            <div class="col-md-4">
-                                <a href="microtransaction-api/CreateSignAndSendMicroTransaction.php"
-                                   class="btn btn-primary pull-left execute">
-                                    Try It
-                                    <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/microtransaction-api/CreateSignAndSendMicroTransaction.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Create, sign and send (short version with WIF private key)</h5>
-                            </div>
-                            <div class="col-md-4">
-                                <a href="microtransaction-api/CreateSignWithWifAndSendMicroTransaction.php"
-                                   class="btn btn-primary pull-left execute">
-                                    Try It
-                                    <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/microtransaction-api/CreateSignWithWifAndSendMicroTransaction.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    -->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Create from private (using client)</h5>
@@ -1309,20 +1212,6 @@ if (PHP_SAPI == 'cli') {
                 </div>
                 <!-- List group -->
                 <ul class="list-group">
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Create payment</h5></div>
-                            <div class="col-md-4">
-                                <a href="payment-api/CreatePaymentForward.php"
-                                   class="btn btn-primary pull-left execute"> Try It <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/payment-api/CreatePaymentForward.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Create forwarding address</h5></div>
@@ -1337,20 +1226,6 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Get payment details</h5></div>
-                            <div class="col-md-4">
-                                <a href="payment-api/GetPaymentForward.php"
-                                   class="btn btn-primary pull-left execute"> Try It <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/payment-api/GetPaymentForward.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Get forwarding address</h5></div>
@@ -1365,20 +1240,6 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Get multiple payments at once</h5></div>
-                            <div class="col-md-4">
-                                <a href="payment-api/GetMultiplePaymentForwards.php"
-                                   class="btn btn-primary pull-left execute"> Try It <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/payment-api/GetMultiplePaymentForwards.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Get multiple forwarding address at once</h5></div>
@@ -1393,20 +1254,6 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>List all payments</h5></div>
-                            <div class="col-md-4">
-                                <a href="payment-api/CreateAndListPaymentForwards.php"
-                                   class="btn btn-primary pull-left execute"> Try It <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/payment-api/CreateAndListPaymentForwards.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>List forwarding addresses</h5></div>
@@ -1421,20 +1268,6 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Delete payment</h5></div>
-                            <div class="col-md-4">
-                                <a href="payment-api/CreateAndDeletePaymentForward.php"
-                                   class="btn btn-primary pull-left execute"> Try It <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/payment-api/CreateAndDeletePaymentForward.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Delete forwarding address</h5></div>
@@ -1449,20 +1282,6 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
-                    <!--<li class="list-group-item">
-                        <div class="row">
-                            <div class="col-md-8"><h5>Delete all payments</h5></div>
-                            <div class="col-md-4">
-                                <a href="payment-api/DeleteAllPaymentForwards.php"
-                                   class="btn btn-primary pull-left execute"> Try It <i
-                                        class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/payment-api/DeleteAllPaymentForwards.html"
-                                   class="btn btn-default pull-right">Source
-                                    <i
-                                        class="fa fa-file-code-o"></i></a>
-                            </div>
-                        </div>
-                    </li>-->
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8"><h5>Delete all forwarding addresses</h5></div>

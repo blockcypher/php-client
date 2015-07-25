@@ -13,10 +13,10 @@
 /** @var \BlockCypher\Api\PaymentForward $paymentForward */
 $paymentForward = require 'CreatePaymentForward.php';
 
-// ## Delete PaymentForward
+$paymentForwardClient = new \BlockCypher\Client\PaymentForwardClient($apiContexts['BTC.main']);
+
 try {
-    /// Delete PaymentForward
-    $output = $paymentForward->delete($apiContexts['BTC.main']);
+    $output = $paymentForwardClient->delete($paymentForward->getId());
 } catch (Exception $ex) {
     ResultPrinter::printError("Delete a PaymentForward", "PaymentForward", null, $paymentForward->getId(), $ex);
     exit(1);

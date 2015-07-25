@@ -16,7 +16,6 @@ $apiContext = ApiContext::create(
 );
 
 $paymentForwardClient = new PaymentForwardClient($apiContext);
-
 $paymentForwardArray = $paymentForwardClient->listForwardingAddresses();
 
 ResultPrinter::printResult("List all PaymentForwards", "PaymentForward[]", null, null, $paymentForwardArray);

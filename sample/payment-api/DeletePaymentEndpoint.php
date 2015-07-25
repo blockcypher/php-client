@@ -16,7 +16,6 @@ $apiContext = ApiContext::create(
 );
 
 $paymentForwardClient = new PaymentForwardClient($apiContext);
-
 $paymentForwardClient->deleteForwardingAddress('1fdf8f9b-cc37-4955-882b-8cbcd670a433');
 
 ResultPrinter::printResult("Delete Payment Endpoint", "PaymentForward", '1fdf8f9b-cc37-4955-882b-8cbcd670a433', null, null);
