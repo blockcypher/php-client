@@ -1,7 +1,7 @@
 <?php
 
 // # Generate Multisig Address
-// This sample code demonstrate how you can generate a multisign address address.
+// This sample code demonstrate how you can generate a multisig address address.
 
 require __DIR__ . '/../bootstrap.php';
 

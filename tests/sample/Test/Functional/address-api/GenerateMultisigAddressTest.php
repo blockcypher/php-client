@@ -5,10 +5,10 @@ namespace sample\Test\Functional\address;
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class GenerateMultisignAddressEndpointTest
+ * Class GenerateMultisigAddressTest
  * @package sample\Test\Functional\address
  */
-class GenerateMultisignAddressEndpointTest extends WebTestCase
+class GenerateMultisigAddressTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class GenerateMultisignAddressEndpointTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testGenerateMultisignAddressEndpoint()
+    public function testGenerateMultisigAddress()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

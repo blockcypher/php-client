@@ -500,11 +500,11 @@ if (PHP_SAPI == 'cli') {
                         <div class="row">
                             <div class="col-md-8"><h5>Generate new multisig address</h5></div>
                             <div class="col-md-4">
-                                <a href="address-api/GenerateMultisignAddress.php"
+                                <a href="address-api/GenerateMultisigAddress.php"
                                    class="btn btn-primary pull-left execute"> Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/address-api/GenerateMultisignAddress.html"
+                                <a href="doc/address-api/GenerateMultisigAddress.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -515,11 +515,11 @@ if (PHP_SAPI == 'cli') {
                         <div class="row">
                             <div class="col-md-8"><h5>Generate new BTC Testnet multisig address</h5></div>
                             <div class="col-md-4">
-                                <a href="address-api/GenerateMultisignAddressBtcTest3.php"
+                                <a href="address-api/GenerateMultisigAddressBtcTest3.php"
                                    class="btn btn-primary pull-left execute"> Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/address-api/GenerateMultisignAddressBtcTest3.html"
+                                <a href="doc/address-api/GenerateMultisigAddressBtcTest3.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -996,7 +996,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Fund multisign address*
+                                <h5>Fund multisig address*
                                     <small>(source address must contains enough balance)</small>
                                 </h5>
                             </div>
@@ -1006,7 +1006,7 @@ if (PHP_SAPI == 'cli') {
                                     Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/transaction-api/CreateTransactionToFundMultisignAddress.html"
+                                <a href="doc/transaction-api/CreateTransactionToFundMultisigAddress.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -1016,7 +1016,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Spend multisign funds*
+                                <h5>Spend multisig funds*
                                     <small>(source address must contains enough balance)</small>
                                 </h5>
                             </div>
@@ -1026,7 +1026,7 @@ if (PHP_SAPI == 'cli') {
                                     Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/transaction-api/CreateTransactionToSpendMultisignFunds.html"
+                                <a href="doc/transaction-api/CreateTransactionToSpendMultisigFunds.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -1036,7 +1036,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Fund multisign address using TXBuilder*
+                                <h5>Fund multisig address using TXBuilder*
                                     <small>(source address must contains enough balance)</small>
                                 </h5>
                             </div>
@@ -1046,7 +1046,7 @@ if (PHP_SAPI == 'cli') {
                                     Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/transaction-api/CreateTxToFundMultisignAddrWithBuilder.html"
+                                <a href="doc/transaction-api/CreateTxToFundMultisigAddrWithBuilder.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -1056,7 +1056,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Spend multisign funds using TXBuilder*
+                                <h5>Spend multisig funds using TXBuilder*
                                     <small>(source address must contains enough balance)</small>
                                 </h5>
                             </div>
@@ -1066,7 +1066,7 @@ if (PHP_SAPI == 'cli') {
                                     Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/transaction-api/CreateTxToSpendMultisignFundsWithBuilder.html"
+                                <a href="doc/transaction-api/CreateTxToSpendMultisigFundsWithBuilder.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
@@ -1076,7 +1076,7 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Create, sign and send multisign transaction*
+                                <h5>Create, sign and send multisig transaction*
                                     <small>(source address must contains enough balance)</small>
                                 </h5>
                             </div>
@@ -1086,7 +1086,7 @@ if (PHP_SAPI == 'cli') {
                                     Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/transaction-api/SpendMultisignFundsTransaction.html"
+                                <a href="doc/transaction-api/SpendMultisigFundsTransaction.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>

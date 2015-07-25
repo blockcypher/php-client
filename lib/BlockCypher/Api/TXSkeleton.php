@@ -113,7 +113,7 @@ class TXSkeleton extends BlockCypherResourceModel
 
         foreach ($this->getTxInputs() as $txInput) {
 
-            // Addresses can be network addresses or pubkeys (multisign txs)
+            // Addresses can be network addresses or pubkeys (multisig txs)
             $txInputAddresses = $txInput->getAddresses();
 
             foreach ($txInputAddresses as $inputAddress) {

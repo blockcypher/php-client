@@ -5,10 +5,10 @@ namespace sample\Test\Functional\transaction;
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class SpendMultisignFundsTransactionTest
+ * Class CreateTransactionToSpendMultisigFundsTest
  * @package sample\Test\Functional\transaction
  */
-class SpendMultisignFundsTransactionTest extends WebTestCase
+class CreateTransactionToSpendMultisigFundsTest extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class SpendMultisignFundsTransactionTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testSpendMultisignFundsTransaction()
+    public function testCreateTransactionToSpendMultisigFunds()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

@@ -50,7 +50,7 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      */
-    public function testGenerateMultisignAddress($obj, $mockApiContext, $mockBlockCypherRestCall)
+    public function testGenerateMultisigAddress($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
@@ -61,7 +61,7 @@ class AddressClientTest extends ClientTestCase
         $pubkeys = AddressKeyChainTest::getObject()->getPubkeys();
         $scriptType = AddressKeyChainTest::getObject()->getScriptType();
 
-        $result = $obj->generateMultisignAddress($pubkeys, $scriptType, $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->generateMultisigAddress($pubkeys, $scriptType, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 
@@ -72,7 +72,7 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @expectedException \InvalidArgumentException
      */
-    public function testGenerateMultisignAddressValidationForPubkeys($obj, $mockApiContext, $mockBlockCypherRestCall)
+    public function testGenerateMultisigAddressValidationForPubkeys($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
@@ -83,7 +83,7 @@ class AddressClientTest extends ClientTestCase
         $pubkeys = 'NOT ARRAY';
         $scriptType = AddressKeyChainTest::getObject()->getScriptType();
 
-        $result = $obj->generateMultisignAddress($pubkeys, $scriptType, $mockApiContext, $mockBlockCypherRestCall);
+        $result = $obj->generateMultisigAddress($pubkeys, $scriptType, $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 

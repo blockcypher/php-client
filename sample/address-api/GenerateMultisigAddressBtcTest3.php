@@ -2,7 +2,7 @@
 
 // # Generate Multisig Testnet3 Address Sample
 // This sample code demonstrate how you can create
-// a multisign address address.
+// a multisig address address.
 
 require __DIR__ . '/../bootstrap.php';
 

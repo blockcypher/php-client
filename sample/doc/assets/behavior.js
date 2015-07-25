@@ -237,11 +237,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddress.php",
-            "projectPath": "address-api\\CreateMultisignAddress.php",
-            "targetPath": "address-api\\CreateMultisignAddress",
-            "pageTitle": "address-api\\CreateMultisignAddress",
-            "title": "CreateMultisignAddress"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddress.php",
+              "projectPath": "address-api\\CreateMultisigAddress.php",
+              "targetPath": "address-api\\CreateMultisigAddress",
+              "pageTitle": "address-api\\CreateMultisigAddress",
+              "title": "CreateMultisigAddress"
           },
           "depth": 2,
           "outline": [
@@ -266,11 +266,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddressBtcTest3.php",
-            "projectPath": "address-api\\CreateMultisignAddressBtcTest3.php",
-            "targetPath": "address-api\\CreateMultisignAddressBtcTest3",
-            "pageTitle": "address-api\\CreateMultisignAddressBtcTest3",
-            "title": "CreateMultisignAddressBtcTest3"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddressBtcTest3.php",
+              "projectPath": "address-api\\CreateMultisigAddressBtcTest3.php",
+              "targetPath": "address-api\\CreateMultisigAddressBtcTest3",
+              "pageTitle": "address-api\\CreateMultisigAddressBtcTest3",
+              "title": "CreateMultisigAddressBtcTest3"
           },
           "depth": 2,
           "outline": [
@@ -394,30 +394,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressEndpoint.php",
-            "projectPath": "address-api\\GenerateMultisigAddressEndpoint.php",
-            "targetPath": "address-api\\GenerateMultisigAddressEndpoint",
-            "pageTitle": "address-api\\GenerateMultisigAddressEndpoint",
-            "title": "GenerateMultisigAddressEndpoint"
-          },
-          "depth": 2,
-          "outline": []
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [{}, ".fbp"],
-              "pygmentsLexer": "php",
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "PHP"
-            },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisignAddress.php",
-            "projectPath": "address-api\\GenerateMultisignAddress.php",
-            "targetPath": "address-api\\GenerateMultisignAddress",
-            "pageTitle": "address-api\\GenerateMultisignAddress",
-            "title": "GenerateMultisignAddress"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddress.php",
+              "projectPath": "address-api\\GenerateMultisigAddress.php",
+              "targetPath": "address-api\\GenerateMultisigAddress",
+              "pageTitle": "address-api\\GenerateMultisigAddress",
+              "title": "GenerateMultisigAddress"
           },
           "depth": 2,
           "outline": [
@@ -442,11 +423,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisignAddressBtcTest3.php",
-            "projectPath": "address-api\\GenerateMultisignAddressBtcTest3.php",
-            "targetPath": "address-api\\GenerateMultisignAddressBtcTest3",
-            "pageTitle": "address-api\\GenerateMultisignAddressBtcTest3",
-            "title": "GenerateMultisignAddressBtcTest3"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressBtcTest3.php",
+              "projectPath": "address-api\\GenerateMultisigAddressBtcTest3.php",
+              "targetPath": "address-api\\GenerateMultisigAddressBtcTest3",
+              "pageTitle": "address-api\\GenerateMultisigAddressBtcTest3",
+              "title": "GenerateMultisigAddressBtcTest3"
           },
           "depth": 2,
           "outline": [
@@ -482,11 +463,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisignAddressEndpoint.php",
-            "projectPath": "address-api\\GenerateMultisignAddressEndpoint.php",
-            "targetPath": "address-api\\GenerateMultisignAddressEndpoint",
-            "pageTitle": "address-api\\GenerateMultisignAddressEndpoint",
-            "title": "GenerateMultisignAddressEndpoint"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressEndpoint.php",
+              "projectPath": "address-api\\GenerateMultisigAddressEndpoint.php",
+              "targetPath": "address-api\\GenerateMultisigAddressEndpoint",
+              "pageTitle": "address-api\\GenerateMultisigAddressEndpoint",
+              "title": "GenerateMultisigAddressEndpoint"
           },
           "depth": 2,
           "outline": []
@@ -3146,11 +3127,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\FundMultisignAddressTransaction.php",
-            "projectPath": "transaction-api\\FundMultisignAddressTransaction.php",
-            "targetPath": "transaction-api\\FundMultisignAddressTransaction",
-            "pageTitle": "transaction-api\\FundMultisignAddressTransaction",
-            "title": "FundMultisignAddressTransaction"
+              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\FundMultisigAddressTransaction.php",
+              "projectPath": "transaction-api\\FundMultisigAddressTransaction.php",
+              "targetPath": "transaction-api\\FundMultisigAddressTransaction",
+              "pageTitle": "transaction-api\\FundMultisigAddressTransaction",
+              "title": "FundMultisigAddressTransaction"
           },
           "depth": 2,
           "outline": [

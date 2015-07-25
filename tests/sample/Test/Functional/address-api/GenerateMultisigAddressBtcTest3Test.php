@@ -1,14 +1,14 @@
 <?php
 
-namespace sample\Test\Functional\transaction;
+namespace sample\Test\Functional\address;
 
 use sample\Test\Functional\WebTestCase;
 
 /**
- * Class CreateTxToFundMultisignAddrWithBuilderEndpointTest
- * @package sample\Test\Functional\transaction
+ * Class GenerateMultisigAddressBtcTest3Test
+ * @package sample\Test\Functional\address
  */
-class CreateTxToFundMultisignAddrWithBuilderEndpointTest extends WebTestCase
+class GenerateMultisigAddressBtcTest3Test extends WebTestCase
 {
     public function setUp()
     {
@@ -27,7 +27,7 @@ class CreateTxToFundMultisignAddrWithBuilderEndpointTest extends WebTestCase
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
 
-    public function testCreateTxToFundMultisignAddrWithBuilderEndpoint()
+    public function testGenerateMultisigAddressBtcTest3()
     {
         $this->client->request('GET', $this->url);
         $responseBody = (string)$this->client->getResponse()->getContent();

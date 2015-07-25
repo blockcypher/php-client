@@ -188,14 +188,14 @@ class TXSkeletonTest extends ResourceModelTestCase
         return new TXSkeleton(self::getJson());
     }
 
-    public function testMultiSign3of3()
+    public function testMultiSig3of3()
     {
-        $obj = static::getMultisignObject();
+        $obj = static::getMultisigObject();
 
         $coinSymbol = 'btc-testnet';
-        $hexPrivateKeys = static::getMultisignPrivateKeys();
-        $pubKeys = static::getMultisignPublicKeys();
-        $signatures = static::getMultisignSignatures();
+        $hexPrivateKeys = static::getMultisigPrivateKeys();
+        $pubKeys = static::getMultisigPublicKeys();
+        $signatures = static::getMultisigSignatures();
 
         $threePrivateKeys = array(
             $hexPrivateKeys[0],
@@ -235,16 +235,16 @@ class TXSkeletonTest extends ResourceModelTestCase
      * Gets Object Instance with Json data filled in
      * @return TXSkeleton
      */
-    public static function getMultisignObject()
+    public static function getMultisigObject()
     {
-        return new TXSkeleton(self::getMultisignJson());
+        return new TXSkeleton(self::getMultisigJson());
     }
 
     /**
      * Gets Json String of Object TXSkeleton
      * @return string
      */
-    public static function getMultisignJson()
+    public static function getMultisigJson()
     {
         /*
         {
@@ -338,7 +338,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         return '{"errors":[{"error":"Notenoughfundsafterfeesin3inputstopayfor1outputs,missing-6200."}],"tx":{"block_height":-1,"hash":"59dca8cd1cac56c58bcaeba43fd451791a448cecbfd09d4925695ab0f82e7c14","addresses":["2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ","n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"],"total":1000,"fees":51000,"size":167,"preference":"high","relayed_by":"83.37.162.102","received":"2015-07-20T08:42:12.712907487Z","ver":1,"lock_time":0,"double_spend":false,"vin_sz":3,"vout_sz":1,"confirmations":0,"inputs":[{"prev_hash":"7f130e3f7dda2ca51632a5a87b1b8a8b53e2706ad9240d2f765d5c1036d70281","output_index":0,"script":"","output_value":1000,"sequence":4294967295,"addresses":["03798be8162d7d6bc5c4e3b236100fcc0dfee899130f84c97d3a49faf83450fd81","03dd9f1d4a39951013b4305bf61887ada66439ab84a9a2f8aca9dc736041f815f1","03c8e6e99c1d0b42120d5cf40c963e5e8048fd2d2a184758784a041a9d101f1f02"],"script_type":"multisig-2-of-3","age":22720},{"prev_hash":"16a26118d0a69665057b23f50e641760d867380c744322b0e057ace05eb92b87","output_index":0,"script":"","output_value":1000,"sequence":4294967295,"addresses":["03798be8162d7d6bc5c4e3b236100fcc0dfee899130f84c97d3a49faf83450fd81","03dd9f1d4a39951013b4305bf61887ada66439ab84a9a2f8aca9dc736041f815f1","03c8e6e99c1d0b42120d5cf40c963e5e8048fd2d2a184758784a041a9d101f1f02"],"script_type":"multisig-2-of-3","age":22715},{"prev_hash":"7946b37103ec6993a5a3f52dd2658a9e09d78a2484d172a64b67cc8f4aec1931","output_index":0,"script":"","output_value":50000,"sequence":4294967295,"addresses":["03798be8162d7d6bc5c4e3b236100fcc0dfee899130f84c97d3a49faf83450fd81","03dd9f1d4a39951013b4305bf61887ada66439ab84a9a2f8aca9dc736041f815f1","03c8e6e99c1d0b42120d5cf40c963e5e8048fd2d2a184758784a041a9d101f1f02"],"script_type":"multisig-2-of-3","age":22694}],"outputs":[{"value":1000,"script":"76a914edeed3ce7f485e44bc33969af08ec9250510f83f88ac","addresses":["n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"],"script_type":"pay-to-pubkey-hash"}]},"tosign":["66c89208140058dca1ea9210d5b0304371734398ed29e4fb9b3d3d360ab980ce","1567ee28b7d112e231b9dd9fabdc3c0af1178d20565deb68cd33ab997a8c9567","1c22f516a685b5245bcc8788a4cc2d1854c0ad8515b9f3f758443c318f717656"]}';
     }
 
-    public static function getMultisignPrivateKeys()
+    public static function getMultisigPrivateKeys()
     {
         $hexPrivateKeys = array(
             'a2d2a8aa1cb1dbf7780d99aece481be1cd7d79427618a6091cf9b0d9d1244210',
@@ -349,7 +349,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         return $hexPrivateKeys;
     }
 
-    public static function getMultisignPublicKeys()
+    public static function getMultisigPublicKeys()
     {
         $pubKeys = array(
             '03798be8162d7d6bc5c4e3b236100fcc0dfee899130f84c97d3a49faf83450fd81',
@@ -360,7 +360,7 @@ class TXSkeletonTest extends ResourceModelTestCase
         return $pubKeys;
     }
 
-    public static function getMultisignSignatures()
+    public static function getMultisigSignatures()
     {
         $signatures = array(
             'tosign0' => array(
@@ -383,14 +383,14 @@ class TXSkeletonTest extends ResourceModelTestCase
         return $signatures;
     }
 
-    public function testMultiSign2of3()
+    public function testMultiSig2of3()
     {
-        $obj = static::getMultisignObject();
+        $obj = static::getMultisigObject();
 
         $coinSymbol = 'btc-testnet';
-        $hexPrivateKeys = static::getMultisignPrivateKeys();
-        $pubKeys = static::getMultisignPublicKeys();
-        $signatures = static::getMultisignSignatures();
+        $hexPrivateKeys = static::getMultisigPrivateKeys();
+        $pubKeys = static::getMultisigPublicKeys();
+        $signatures = static::getMultisigSignatures();
 
         $twoPrivateKeys = array(
             $hexPrivateKeys[0],
@@ -419,14 +419,14 @@ class TXSkeletonTest extends ResourceModelTestCase
         $this->assertEquals($expectedPubkeys, $obj->getPubkeys());
     }
 
-    public function testMultiSign1of3()
+    public function testMultiSig1of3()
     {
-        $obj = static::getMultisignObject();
+        $obj = static::getMultisigObject();
 
         $coinSymbol = 'btc-testnet';
-        $hexPrivateKeys = static::getMultisignPrivateKeys();
-        $pubKeys = static::getMultisignPublicKeys();
-        $signatures = static::getMultisignSignatures();
+        $hexPrivateKeys = static::getMultisigPrivateKeys();
+        $pubKeys = static::getMultisigPublicKeys();
+        $signatures = static::getMultisigSignatures();
 
         $onePrivateKeys = array(
             $hexPrivateKeys[0]

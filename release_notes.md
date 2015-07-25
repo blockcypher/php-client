@@ -6,6 +6,7 @@ v1.2.1
 * Added samples for docs
 * Refactored some samples
 * Added TXClient::getConfidence and getMultipleConfidences
+* Replaced Multisign by Multisig
 
 v1.2.0
 ------
@@ -35,7 +36,7 @@ v1.0.1
 * Fixed bug in TXInputBuilder and sample
 * Added TXRef ref_balance property
 * Fixed argv bug in signer console command
-* Fixed bug in multisign tx signature
+* Fixed bug in multisig tx signature
 
 v1.0.0
 ------
@@ -51,12 +52,12 @@ v1.0.0
 * Get wallet balance as address balance
 * Get full wallet as full address
 * Allow create, sign and send transactions
-* Added docs site samples for Blockchain API and Address API (without wallets and multisign endpoint)
+* Added docs site samples for Blockchain API and Address API (without wallets and multisig endpoint)
 * Added Payment API
 * Added Microtransaction API
 * Added Decode Raw Transaction Endpoint
 * Added Push Raw Transaction Endpoint
-* Multisign txs (fund and spend)
+* Multisig txs (fund and spend)
 * Improved usability for MicroTX
 * Extracted methods from MicroTX to MicroTXClient
 
