@@ -38,7 +38,6 @@ __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP S
 
 ###Currently unavailable/upcoming REST API features
 
-   * TXClient. It makes even easier to build tx.
    * Install from phar
    
 ###New samples
@@ -79,7 +78,6 @@ $apiContext = ApiContext::create(
     new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
     $config
 );
-ApiContext::setDefault($apiContext);
 ```
 
 ### Get Address info
@@ -88,7 +86,8 @@ ApiContext::setDefault($apiContext);
 <?php
 use BlockCypher\Api\Address;
 
-$address = Address::get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD');
+$addressClient = new AddressClient($apiContext);
+$address = $addressClient->get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD');
 
 echo "JSON Address: " . $address->toJson() . "\n";
 var_dump($address);
@@ -98,13 +97,13 @@ var_dump($address);
 
 ```php
 <?php
-$microTXClient = new MicroTXClient();
+$microTXClient = new MicroTXClient($apiContext);
 
 try {
     $microTX = $microTXClient->sendSigned(
         "2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff", // private key
         "C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi", // to address
-        10000, // value (satoshis)
+        10000 // value (satoshis)
     );
 } catch (\Exception $e) {
     echo "There was an error sending the microtx.\n";
