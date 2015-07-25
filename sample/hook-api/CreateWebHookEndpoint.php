@@ -24,6 +24,6 @@ $webHook->setHash('2b17f5589528f97436b5d563635b4b27ca8980aa20c300abdc538f2a8bfa8
 $request = clone $webHook;
 
 $webHookClient = new \BlockCypher\Client\WebHookClient($apiContext);
-$output = $webHookClient->create($webHook);
+$webHook = $webHookClient->create($webHook);
 
-ResultPrinter::printResult("Created WebHook Endpoint", "WebHook", $output->getId(), $request, $output);
+ResultPrinter::printResult("Created WebHook Endpoint", "WebHook", $output->getId(), $request, $webHook);

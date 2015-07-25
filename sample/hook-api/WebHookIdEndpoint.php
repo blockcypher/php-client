@@ -15,6 +15,6 @@ $apiContext = ApiContext::create(
 );
 
 $webHookClient = new \BlockCypher\Client\WebHookClient($apiContext);
-$webHook = $webHookClient->get('d5ca3bd3-5dfb-477d-9fb4-ac3510af258d', array(), $apiContext);
+$webHook = $webHookClient->get('d5ca3bd3-5dfb-477d-9fb4-ac3510af258d');
 
 ResultPrinter::printResult("WebHook ID Endpoint", "WebHook", $webHook->getId(), null, $webHook);
