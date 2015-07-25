@@ -4,15 +4,14 @@ This sample code demonstrate how you can create, sign and send a new microtransa
 <a href="http://dev.blockcypher.com/#microtransaction-endpoint"><a href="http://dev.blockcypher.com/#microtransaction-endpoint">http://dev.blockcypher.com/#microtransaction-endpoint</a></a></p>
 <p>API used: POST /v1/btc/main/txs/micro</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
 
-<span class="hljs-variable">$microTXClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\MicroTXClient();
+<span class="hljs-variable">$microTXClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\MicroTXClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BCY.test'</span>]);
 
 <span class="hljs-keyword">try</span> {
     <span class="hljs-comment">/// Create, Sign and Send a MicroTX (server-side signing)</span>
     <span class="hljs-variable">$microTX</span> = <span class="hljs-variable">$microTXClient</span>-&gt;sendWithPrivateKey(
         <span class="hljs-string">"2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff"</span>, <span class="hljs-comment">// private key</span>
         <span class="hljs-string">"C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi"</span>, <span class="hljs-comment">// to address</span>
-        <span class="hljs-number">10000</span>, <span class="hljs-comment">// value (satoshis)</span>
-        <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BCY.test'</span>]
+        <span class="hljs-number">10000</span> <span class="hljs-comment">// value (satoshis)</span>
     );
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Created and Send MicroTX"</span>, <span class="hljs-string">"MicroTX"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);

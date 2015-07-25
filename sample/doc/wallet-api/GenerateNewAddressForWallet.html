@@ -10,23 +10,16 @@ You have to run that sample before running this one or there will be no wallets<
     <span class="hljs-variable">$walletName</span> = <span class="hljs-string">'alice'</span>; <span class="hljs-comment">// Default wallet name for samples</span>
 }
 
-    <span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span>
-    \BlockCypher\Client\WalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+<span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\WalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
 
 <span class="hljs-keyword">try</span> {
     <span class="hljs-comment">/// Generate new address in wallet</span>
-    <span class="hljs-variable">$output</span> = <span
-            class="hljs-variable">$walletClient</span>-&gt;generateAddress(<span
-            class="hljs-variable">$walletName</span>);
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$walletClient</span>-&gt;generateAddress(<span class="hljs-variable">$walletName</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
-    ResultPrinter::printError(<span class="hljs-string">"Generate New Address in Wallet"</span>, <span
-            class="hljs-string">"WalletGenerateAddressResponse"</span>, <span class="hljs-variable">$walletName</span>,
-    <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
+    ResultPrinter::printError(<span class="hljs-string">"Generate New Address in Wallet"</span>, <span class="hljs-string">"WalletGenerateAddressResponse"</span>, <span class="hljs-variable">$walletName</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
 }
 
-    ResultPrinter::printResult(<span class="hljs-string">"Generate New Address in Wallet"</span>, <span
-            class="hljs-string">"WalletGenerateAddressResponse"</span>, <span class="hljs-variable">$walletName</span>,
-    <span class="hljs-keyword">null</span>, <span class="hljs-variable">$output</span>);
+ResultPrinter::printResult(<span class="hljs-string">"Generate New Address in Wallet"</span>, <span class="hljs-string">"WalletGenerateAddressResponse"</span>, <span class="hljs-variable">$walletName</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$output</span>);
 
 <span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;</div></div></div></div></body></html>

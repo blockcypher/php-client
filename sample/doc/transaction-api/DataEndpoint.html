@@ -12,7 +12,6 @@ php -f .\sample\transaction-api\DataEndpoint.php</p></div></div><div class="code
 );
 
 <span class="hljs-variable">$nullDataClient</span> = <span class="hljs-keyword">new</span> NullDataClient(<span class="hljs-variable">$apiContext</span>);
-
 <span class="hljs-variable">$nullData</span> = <span class="hljs-variable">$nullDataClient</span>-&gt;embedString(<span class="hljs-string">'***BlockCypher Data Endpoint Test***'</span>); <span class="hljs-comment">// max 40 bytes</span>
 
 ResultPrinter::printResult(<span class="hljs-string">"Embed Data On Blockchain"</span>, <span class="hljs-string">"NullData"</span>, <span class="hljs-variable">$nullData</span>-&gt;getHash(), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$nullData</span>);</div></div></div></div></body></html>

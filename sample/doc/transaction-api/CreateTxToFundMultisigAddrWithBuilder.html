@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\CreateTxToFundMultisigAddrWithBuilder</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\CreateTxToFundMultisigAddrWithBuilder"><meta name="groc-project-path" content="transaction-api\CreateTxToFundMultisigAddrWithBuilder.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\CreateTxToFundMultisigAddrWithBuilder.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="fund-multisig-address-using-builder">Fund multisig address (using builder)</h1>
+<p>This sample code demonstrate how you can create a new transaction, as documented here at:
+<a href="http://dev.blockcypher.com/#creating-transactions"><a href="http://dev.blockcypher.com/#creating-transactions">http://dev.blockcypher.com/#creating-transactions</a></a></p>
+<p>Destination address is a multisig address.</p>
+<p>API used: POST /v1/btc/main/txs/new</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
+
+<span class="hljs-variable">$input</span> = \BlockCypher\Builder\TXInputBuilder::aTXInput()
+    -&gt;addAddress(<span class="hljs-string">"n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"</span>)
+    -&gt;build();
+
+<span class="hljs-variable">$output</span> = \BlockCypher\Builder\TXOutputBuilder::aTXOutput()
+    -&gt;withScryptType(<span class="hljs-string">"multisig-2-of-3"</span>)
+    -&gt;withValue(<span class="hljs-number">1000</span>)
+    -&gt;addAddress(<span class="hljs-string">"03798be8162d7d6bc5c4e3b236100fcc0dfee899130f84c97d3a49faf83450fd81"</span>)
+    -&gt;addAddress(<span class="hljs-string">"03dd9f1d4a39951013b4305bf61887ada66439ab84a9a2f8aca9dc736041f815f1"</span>)
+    -&gt;addAddress(<span class="hljs-string">"03c8e6e99c1d0b42120d5cf40c963e5e8048fd2d2a184758784a041a9d101f1f02"</span>)
+    -&gt;build();
+
+<span class="hljs-variable">$tx</span> = \BlockCypher\Builder\TXBuilder::aTX()
+    -&gt;addTXInput(<span class="hljs-variable">$input</span>)
+    -&gt;addTXOutput(<span class="hljs-variable">$output</span>)
+    -&gt;build();
+
+<span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\TXClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.test3'</span>]);
+
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;create(<span class="hljs-variable">$tx</span>);
+} <span class="hljs-keyword">catch</span> (\<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Created Multisig TX (fund multisig addr)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}
+
+ResultPrinter::printResult(<span class="hljs-string">"Created Multisig TX (fund multisig addr)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$tx</span>, <span class="hljs-variable">$txSkeleton</span>);</div></div></div></div></body></html>

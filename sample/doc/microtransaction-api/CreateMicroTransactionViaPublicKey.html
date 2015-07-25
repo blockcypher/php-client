@@ -16,9 +16,11 @@
 <span class="hljs-comment">/// For Sample Purposes Only.</span>
 <span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$microTX</span>;
 
+<span class="hljs-variable">$microTXClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\MicroTXClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BCY.test'</span>]);
+
 <span class="hljs-keyword">try</span> {
     <span class="hljs-comment">/// Send MicroTX to the network</span>
-    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$microTX</span>-&gt;send(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BCY.test'</span>]);
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$microTXClient</span>-&gt;send(<span class="hljs-variable">$microTX</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Created MicroTX Via PublicKey"</span>, <span class="hljs-string">"MicroTX"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

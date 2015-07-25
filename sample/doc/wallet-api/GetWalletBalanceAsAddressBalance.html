@@ -8,12 +8,10 @@
     <span class="hljs-variable">$walletName</span> = <span class="hljs-string">'alice'</span>; <span class="hljs-comment">// Default wallet name for samples</span>
 }
 
-    <span class="hljs-variable">$addressClient</span> = <span class="hljs-keyword">new</span>
-    \BlockCypher\Client\AddressClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+<span class="hljs-variable">$addressClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\AddressClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
 
 <span class="hljs-keyword">try</span> {
-    <span class="hljs-variable">$addressBalance</span> = <span class="hljs-variable">$addressClient</span>-&gt;getBalance(<span
-            class="hljs-variable">$walletName</span>);
+    <span class="hljs-variable">$addressBalance</span> = <span class="hljs-variable">$addressClient</span>-&gt;getBalance(<span class="hljs-variable">$walletName</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Get Only Address Balance"</span>, <span class="hljs-string">"Wallet Balance"</span>, <span class="hljs-variable">$walletName</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

@@ -1,13 +1,12 @@
-<!DOCTYPE html><html lang="en"><head><title>transaction-api\CreateTxToFundMultisignAddrWithBuilderEndpoint</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\CreateTxToFundMultisignAddrWithBuilderEndpoint"><meta name="groc-project-path" content="transaction-api\CreateTxToFundMultisignAddrWithBuilderEndpoint.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\CreateTxToFundMultisignAddrWithBuilderEndpoint.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Run on console:
-php -f .\sample\transaction-api\CreateTxToFundMultisignAddrWithBuilderEndpoint.php
-Builder classes are optional, see CreateTxToFundMultisignAddrEndpoint.php to see a sample using only base API classes.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\CreateTxToFundMultisigAddrWithBuilderEndpoint</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\CreateTxToFundMultisigAddrWithBuilderEndpoint"><meta name="groc-project-path" content="transaction-api\CreateTxToFundMultisigAddrWithBuilderEndpoint.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\CreateTxToFundMultisigAddrWithBuilderEndpoint.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Run on console:
+php -f .\sample\transaction-api\CreateTxToFundMultisigAddrWithBuilderEndpoint.php
+Builder classes are optional, see CreateTxToFundMultisigAddrEndpoint.php to see a sample using only base API classes.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Builder</span>\<span class="hljs-title">TXBuilder</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Builder</span>\<span class="hljs-title">TXInputBuilder</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Builder</span>\<span class="hljs-title">TXOutputBuilder</span>;
-    <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
-            class="hljs-title">Client</span>\<span class="hljs-title">TXClient</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Client</span>\<span class="hljs-title">TXClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
@@ -33,9 +32,7 @@ Builder classes are optional, see CreateTxToFundMultisignAddrEndpoint.php to see
     -&gt;addTXOutput(<span class="hljs-variable">$output</span>)
     -&gt;build();
 
-    <span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> TXClient(<span
-            class="hljs-variable">$apiContext</span>);
-    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;create(<span
-            class="hljs-variable">$tx</span>);
+<span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> TXClient(<span class="hljs-variable">$apiContext</span>);
+<span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;create(<span class="hljs-variable">$tx</span>);
 
-ResultPrinter::printResult(<span class="hljs-string">"Created Multisign TX"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$tx</span>, <span class="hljs-variable">$txSkeleton</span>);</div></div></div></div></body></html>
+ResultPrinter::printResult(<span class="hljs-string">"Created Multisig TX"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$tx</span>, <span class="hljs-variable">$txSkeleton</span>);</div></div></div></div></body></html>

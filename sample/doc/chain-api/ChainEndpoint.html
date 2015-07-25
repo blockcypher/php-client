@@ -2,8 +2,7 @@
 php -f .\sample\chain-api\ChainEndpoint.php</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
 
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
-    <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span
-            class="hljs-title">Client</span>\<span class="hljs-title">BlockchainClient</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Client</span>\<span class="hljs-title">BlockchainClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
@@ -12,10 +11,7 @@ php -f .\sample\chain-api\ChainEndpoint.php</p></div></div><div class="code"><di
     <span class="hljs-keyword">array</span>(<span class="hljs-string">'mode'</span> =&gt; <span class="hljs-string">'sandbox'</span>, <span class="hljs-string">'log.LogEnabled'</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-string">'log.FileName'</span> =&gt; <span class="hljs-string">'BlockCypher.log'</span>, <span class="hljs-string">'log.LogLevel'</span> =&gt; <span class="hljs-string">'DEBUG'</span>)
 );
 
-    <span class="hljs-variable">$blockchainClient</span> = <span class="hljs-keyword">new</span> BlockchainClient(<span
-            class="hljs-variable">$apiContext</span>);
-
-    <span class="hljs-variable">$blockchain</span> = <span class="hljs-variable">$blockchainClient</span>-&gt;get(<span
-            class="hljs-string">'BTC.main'</span>);
+<span class="hljs-variable">$blockchainClient</span> = <span class="hljs-keyword">new</span> BlockchainClient(<span class="hljs-variable">$apiContext</span>);
+<span class="hljs-variable">$blockchain</span> = <span class="hljs-variable">$blockchainClient</span>-&gt;get(<span class="hljs-string">'BTC.main'</span>);
 
 ResultPrinter::printResult(<span class="hljs-string">"Get Blockchain"</span>, <span class="hljs-string">"Blockchain"</span>, <span class="hljs-variable">$blockchain</span>-&gt;getName(), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$blockchain</span>);</div></div></div></div></body></html>

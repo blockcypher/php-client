@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\SpendMultisigFundsTransaction</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\SpendMultisigFundsTransaction"><meta name="groc-project-path" content="transaction-api\SpendMultisigFundsTransaction.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\SpendMultisigFundsTransaction.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="spend-multisig-funds-sample">Spend Multisig Funds Sample</h1>
+<p>This sample code demonstrate how you can create a new transaction and send it to the network
+to spend fund from multisig address, as documented at <a href="http://dev.blockcypher.com/#multisig-transactions">docs</a>.</p>
+<p>API used: POST /v1/btc/main/txs/new and</p>
+<p>POST /v1/btc/main/txs/send</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/** <span class="hljs-doctag">@var</span> \BlockCypher\Api\TXSkeleton $txSkeleton */</span>
+<span class="hljs-variable">$txSkeleton</span> = <span class="hljs-keyword">require</span> <span class="hljs-string">'CreateTransactionToSpendMultisigFunds.php'</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Private keys (at least 2 of 3) in the same format as returned by <a href="http://dev.blockcypher.com/#generate-address-endpoint">Generate Address Endpoint</a>.</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$privateKeys</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">"bb5b3be6d9ac87a16660f363e3597861f06bb8bdf3de2c46e957f922dda37f68"</span>,
+    <span class="hljs-string">"e394e5ee8e28d4454a7d328eea58a369cdd63ec6d471ac89ca1cb8a80b72a6eb"</span>
+    <span class="hljs-comment">//"5399dfcf4e8a3f2be7a04ca2a92b69a88576b85b7c0f7a14d773e5682c5a8613"</span>
+);
+
+<span class="hljs-comment">/// For sample purposes only.</span>
+<span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$txSkeleton</span>;
+
+<span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\TXClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.test3'</span>]);
+
+<span class="hljs-comment">/// Sign the TX</span>
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;sign(<span class="hljs-variable">$txSkeleton</span>, <span class="hljs-variable">$privateKeys</span>);
+} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Sign Transaction (spend multisig funds)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Source (multisig) address: <a href="https://live.blockcypher.com/btc-testnet/address/2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ/">2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ</a>
+Destination addresses: <a href="https://live.blockcypher.com/btc-testnet/address/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4/">n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4</a></p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/// For sample purposes only.</span>
+<span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$txSkeleton</span>;
+
+<span class="hljs-comment">/// Send TX to the network</span>
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$txClient</span>-&gt;send(<span class="hljs-variable">$txSkeleton</span>);
+} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Sent Transaction (spend multisig funds)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}
+
+ResultPrinter::printResult(<span class="hljs-string">"Sent Transaction (spend multisig funds)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$output</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$request</span>, <span class="hljs-variable">$output</span>);
+
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;</div></div></div></div></body></html>

@@ -30,7 +30,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\AddressBalanceEndpoint",
             "title": "AddressBalanceEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -48,7 +49,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\AddressEndpoint",
             "title": "AddressEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -66,7 +68,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\AddressFullEndpoint",
             "title": "AddressFullEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -84,7 +87,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\CreateAddress",
             "title": "CreateAddress"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create Address",
+                "slug": "create-address"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -102,7 +116,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\CreateAddressBtcTest3",
             "title": "CreateAddressBtcTest3"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create Testnet3 Address",
+                "slug": "create-testnet3-address"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create Address",
+                    "slug": "create-address"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -120,7 +156,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\CreateAddressDogeMain",
             "title": "CreateAddressDogeMain"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create Dogecoin Address Sample",
+                "slug": "create-dogecoin-address-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -138,7 +185,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\CreateBcyTestAddress",
             "title": "CreateBcyTestAddress"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create BlockCypher Test Address Sample",
+                "slug": "create-blockcypher-test-address-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -156,7 +214,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\CreateBtcTestnetAddress",
             "title": "CreateBtcTestnetAddress"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create Bitcoin Testnet Address Sample",
+                "slug": "create-bitcoin-testnet-address-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -168,103 +237,171 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddress.php",
-              "projectPath": "address-api\\CreateMultisignAddress.php",
-              "targetPath": "address-api\\CreateMultisignAddress",
-              "pageTitle": "address-api\\CreateMultisignAddress",
-              "title": "CreateMultisignAddress"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddress.php",
+            "projectPath": "address-api\\CreateMultisignAddress.php",
+            "targetPath": "address-api\\CreateMultisignAddress",
+            "pageTitle": "address-api\\CreateMultisignAddress",
+            "title": "CreateMultisignAddress"
           },
-              "depth": 2
-          }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
-                  },
-                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddressBtcTest3.php",
-                  "projectPath": "address-api\\CreateMultisignAddressBtcTest3.php",
-                  "targetPath": "address-api\\CreateMultisignAddressBtcTest3",
-                  "pageTitle": "address-api\\CreateMultisignAddressBtcTest3",
-                  "title": "CreateMultisignAddressBtcTest3"
+                "level": 1,
+                "title": "Create Multisig Address",
+                "slug": "create-multisig-address"
               },
-              "depth": 2
-          }, {
-              "type": "file",
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddressBtcTest3.php",
+            "projectPath": "address-api\\CreateMultisignAddressBtcTest3.php",
+            "targetPath": "address-api\\CreateMultisignAddressBtcTest3",
+            "pageTitle": "address-api\\CreateMultisignAddressBtcTest3",
+            "title": "CreateMultisignAddressBtcTest3"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
-                  },
-                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisignAddressEndpoint.php",
-                  "projectPath": "address-api\\CreateMultisignAddressEndpoint.php",
-                  "targetPath": "address-api\\CreateMultisignAddressEndpoint",
-                  "pageTitle": "address-api\\CreateMultisignAddressEndpoint",
-                  "title": "CreateMultisignAddressEndpoint"
+                "level": 1,
+                "title": "Create Multisig Testnet3 Address Sample",
+                "slug": "create-multisig-testnet3-address-sample"
               },
-              "depth": 2
-          }, {
-              "type": "file",
-              "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create Multisig Address",
+                    "slug": "create-multisig-address"
                   },
-                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddress.php",
-                  "projectPath": "address-api\\GenerateAddress.php",
-                  "targetPath": "address-api\\GenerateAddress",
-                  "pageTitle": "address-api\\GenerateAddress",
-                  "title": "GenerateAddress"
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddress.php",
+            "projectPath": "address-api\\GenerateAddress.php",
+            "targetPath": "address-api\\GenerateAddress",
+            "pageTitle": "address-api\\GenerateAddress",
+            "title": "GenerateAddress"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate Address",
+                "slug": "generate-address"
               },
-              "depth": 2
-          }, {
-              "type": "file",
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddressBtcTest3.php",
+            "projectPath": "address-api\\GenerateAddressBtcTest3.php",
+            "targetPath": "address-api\\GenerateAddressBtcTest3",
+            "pageTitle": "address-api\\GenerateAddressBtcTest3",
+            "title": "GenerateAddressBtcTest3"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
-                  },
-                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddressBtcTest3.php",
-                  "projectPath": "address-api\\GenerateAddressBtcTest3.php",
-                  "targetPath": "address-api\\GenerateAddressBtcTest3",
-                  "pageTitle": "address-api\\GenerateAddressBtcTest3",
-                  "title": "GenerateAddressBtcTest3"
+                "level": 1,
+                "title": "Generate Testnet3 Address",
+                "slug": "generate-testnet3-address"
               },
-              "depth": 2
-          }, {
-              "type": "file",
-              "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Generate BTC Testnet Address",
+                    "slug": "generate-btc-testnet-address"
                   },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddressEndpoint.php",
             "projectPath": "address-api\\GenerateAddressEndpoint.php",
             "targetPath": "address-api\\GenerateAddressEndpoint",
             "pageTitle": "address-api\\GenerateAddressEndpoint",
             "title": "GenerateAddressEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressEndpoint.php",
+            "projectPath": "address-api\\GenerateMultisigAddressEndpoint.php",
+            "targetPath": "address-api\\GenerateMultisigAddressEndpoint",
+            "pageTitle": "address-api\\GenerateMultisigAddressEndpoint",
+            "title": "GenerateMultisigAddressEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -282,7 +419,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddress",
             "title": "GenerateMultisignAddress"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate Multisig Address",
+                "slug": "generate-multisig-address"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -300,7 +448,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddressBtcTest3",
             "title": "GenerateMultisignAddressBtcTest3"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate Multisig Testnet3 Address Sample",
+                "slug": "generate-multisig-testnet3-address-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create Multisig Address",
+                    "slug": "create-multisig-address"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -318,7 +488,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GenerateMultisignAddressEndpoint",
             "title": "GenerateMultisignAddressEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -336,7 +507,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetAddress",
             "title": "GetAddress"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Address",
+                "slug": "get-address"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -354,7 +536,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetAddressBalance",
             "title": "GetAddressBalance"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Address Balance Sample",
+                "slug": "get-address-balance-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -372,7 +565,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetAddressBtcTest3",
             "title": "GetAddressBtcTest3"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Testnet Address",
+                "slug": "get-testnet-address"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -390,7 +594,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetAddressWithPaging",
             "title": "GetAddressWithPaging"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Address Paging Transactions",
+                "slug": "get-address-paging-transactions"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Params:",
+                    "slug": "params"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -408,7 +634,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetAddressWithUnspentOnly",
             "title": "GetAddressWithUnspentOnly"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get UTXOs",
+                "slug": "get-utxos"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -426,25 +663,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetFullAddress",
             "title": "GetFullAddress"
           },
-          "depth": 2
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [{}, ".fbp"],
-              "pygmentsLexer": "php",
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "PHP"
-            },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetFullAddressUsingAddress.php",
-            "projectPath": "address-api\\GetFullAddressUsingAddress.php",
-            "targetPath": "address-api\\GetFullAddressUsingAddress",
-            "pageTitle": "address-api\\GetFullAddressUsingAddress",
-            "title": "GetFullAddressUsingAddress"
-          },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Full Address Sample",
+                "slug": "get-full-address-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -462,7 +692,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetMultipleAddresses",
             "title": "GetMultipleAddresses"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple Addresses",
+                "slug": "get-multiple-addresses"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -480,7 +721,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetMultipleAddressesBalance",
             "title": "GetMultipleAddressesBalance"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple Addresses Balance",
+                "slug": "get-multiple-addresses-balance"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -498,7 +750,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetMultipleFullAddresses",
             "title": "GetMultipleFullAddresses"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple Full Addresses Sample",
+                "slug": "get-multiple-full-addresses-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -516,7 +779,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "address-api\\GetOnlyBalance",
             "title": "GetOnlyBalance"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Only Balance",
+                "slug": "get-only-balance"
+              },
+              "depth": 1
+            }
+          ]
         }
       ]
     }, {
@@ -544,7 +818,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\BlockHashEndpoint",
             "title": "BlockHashEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -562,7 +837,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\BlockHeightEndpoint",
             "title": "BlockHeightEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -580,7 +856,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetBlock",
             "title": "GetBlock"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Block",
+                "slug": "get-block"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -598,7 +885,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetBlockByHeight",
             "title": "GetBlockByHeight"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Block By Height",
+                "slug": "get-block-by-height"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -616,7 +914,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetBlockWithPaging",
             "title": "GetBlockWithPaging"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Block With Paging",
+                "slug": "get-block-with-paging"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -634,7 +943,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "block-api\\GetMultipleBlocks",
             "title": "GetMultipleBlocks"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple Blocks",
+                "slug": "get-multiple-blocks"
+              },
+              "depth": 1
+            }
+          ]
         }
       ]
     }, {
@@ -662,7 +982,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "chain-api\\ChainEndpoint",
             "title": "ChainEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -680,7 +1001,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "chain-api\\GetChain",
             "title": "GetChain"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Blockchain",
+                "slug": "get-blockchain"
+              },
+              "depth": 1
+            }
+          ]
         }
       ]
     }, {
@@ -708,7 +1040,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "confidence-factor\\GetMultipleTransactionsConfidence",
             "title": "GetMultipleTransactionsConfidence"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple Transactions Confidence",
+                "slug": "get-multiple-transactions-confidence"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -726,7 +1069,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "confidence-factor\\GetTransactionConfidence",
             "title": "GetTransactionConfidence"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Transaction Confidence",
+                "slug": "get-transaction-confidence"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -744,7 +1098,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "confidence-factor\\TransactionConfidenceEndpoint",
             "title": "TransactionConfidenceEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }
       ]
     }, {
@@ -772,7 +1127,40 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndDeleteAllWebHooks",
             "title": "CreateAndDeleteAllWebHooks"
           },
-            "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Delete All WebHooks Sample",
+                "slug": "delete-all-webhooks-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get WebHook Instance",
+                    "slug": "get-webhook-instance"
+                  },
+                  "depth": 2,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Delete All WebHooks",
+                        "slug": "delete-all-webhooks"
+                      },
+                      "depth": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -790,7 +1178,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndDeleteWebHook",
             "title": "CreateAndDeleteWebHook"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Delete WebHook",
+                "slug": "delete-webhook"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Create Sample WebHook",
+                    "slug": "create-sample-webhook"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Delete WebHook",
+                    "slug": "delete-webhook"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -808,7 +1226,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateAndListWebHooks",
             "title": "CreateAndListWebHooks"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "List All WebHooks",
+                "slug": "list-all-webhooks"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Create Sample WebHook",
+                    "slug": "create-sample-webhook"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get all webhooks",
+                    "slug": "get-all-webhooks"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -826,7 +1274,45 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateWebHook",
             "title": "CreateWebHook"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create WebHook",
+                "slug": "create-webhook"
+              },
+              "depth": 1
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "WebHook request",
+                "slug": "webhook-request"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "NOTE: Please note that the use of https is recommended for webhooks.",
+                    "slug": "note-please-note-that-the-use-of-https-is-recommended-for-webhooks"
+                  },
+                  "depth": 4
+                }
+              ]
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Event Types",
+                "slug": "event-types"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -844,7 +1330,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\CreateWebHookEndpoint",
             "title": "CreateWebHookEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -862,7 +1349,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\DeleteAllWebHooks",
             "title": "DeleteAllWebHooks"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Delete All WebHooks",
+                "slug": "delete-all-webhooks"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get WebHook Instance",
+                    "slug": "get-webhook-instance"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Delete All WebHooks",
+                    "slug": "delete-all-webhooks"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -880,7 +1397,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\DeleteWebHookEndpoint",
             "title": "DeleteWebHookEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -898,7 +1416,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\GetMultipleWebHooks",
             "title": "GetMultipleWebHooks"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple WebHooks",
+                "slug": "get-multiple-webhooks"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Create Sample WebHook",
+                    "slug": "create-sample-webhook"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get Multiple WebHooks",
+                    "slug": "get-multiple-webhooks"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -916,7 +1464,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\GetWebHook",
             "title": "GetWebHook"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get WebHook",
+                "slug": "get-webhook"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Create Sample WebHook",
+                    "slug": "create-sample-webhook"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get WebHook by Id",
+                    "slug": "get-webhook-by-id"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -934,7 +1512,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\ListWebHooks",
             "title": "ListWebHooks"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get All WebHooks Sample",
+                "slug": "get-all-webhooks-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Get List of All WebHooks",
+                    "slug": "get-list-of-all-webhooks"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -952,7 +1552,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\ListWebHooksEndpoint",
             "title": "ListWebHooksEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -970,7 +1571,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "hook-api\\WebHookIdEndpoint",
             "title": "WebHookIdEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }
       ]
     }, {
@@ -992,13 +1594,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundAddressWithFaucet.php",
-            "projectPath": "introduction\\FundAddressWithFaucet.php",
-            "targetPath": "introduction\\FundAddressWithFaucet",
-            "pageTitle": "introduction\\FundAddressWithFaucet",
-            "title": "FundAddressWithFaucet"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\Batching.php",
+            "projectPath": "introduction\\Batching.php",
+            "targetPath": "introduction\\Batching",
+            "pageTitle": "introduction\\Batching",
+            "title": "Batching"
           },
-            "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1010,13 +1613,43 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundAddressWithFaucetEndpoint.php",
-              "projectPath": "introduction\\FundAddressWithFaucetEndpoint.php",
-              "targetPath": "introduction\\FundAddressWithFaucetEndpoint",
-              "pageTitle": "introduction\\FundAddressWithFaucetEndpoint",
-              "title": "FundAddressWithFaucetEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundAddressWithFaucet.php",
+            "projectPath": "introduction\\FundAddressWithFaucet.php",
+            "targetPath": "introduction\\FundAddressWithFaucet",
+            "pageTitle": "introduction\\FundAddressWithFaucet",
+            "title": "FundAddressWithFaucet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Fund Address with Faucet",
+                "slug": "fund-address-with-faucet"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundAddressWithFaucetEndpoint.php",
+            "projectPath": "introduction\\FundAddressWithFaucetEndpoint.php",
+            "targetPath": "introduction\\FundAddressWithFaucetEndpoint",
+            "pageTitle": "introduction\\FundAddressWithFaucetEndpoint",
+            "title": "FundAddressWithFaucetEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1034,7 +1667,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "introduction\\GenerateBcyAddress",
             "title": "GenerateBcyAddress"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1052,7 +1686,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "introduction\\GenerateTestAddress",
             "title": "GenerateTestAddress"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate New BlockCypher Test Address",
+                "slug": "generate-new-blockcypher-test-address"
+              },
+              "depth": 1
+            }
+          ]
         }
       ]
     }, {
@@ -1080,7 +1725,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPrivate",
             "title": "CreateMicroTXFromPrivate"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create and Send with MicroTXClient",
+                "slug": "create-and-send-with-microtxclient"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1098,7 +1754,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample",
             "title": "CreateMicroTXFromPrivateDocsSample"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1116,7 +1773,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPubkey",
             "title": "CreateMicroTXFromPubkey"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign and Send With MicroTXClient",
+                "slug": "create-sign-and-send-with-microtxclient"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1134,7 +1802,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample",
             "title": "CreateMicroTXFromPubkeyDocsSample"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1152,7 +1821,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTXFromWif",
             "title": "CreateMicroTXFromWif"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create and Send with MicroTXClient",
+                "slug": "create-and-send-with-microtxclient"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1170,7 +1850,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTXWithMicroTXBuilder",
             "title": "CreateMicroTXWithMicroTXBuilder"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create MicroTX Sample (using a builder)",
+                "slug": "create-microtx-sample-using-a-builder"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1188,7 +1879,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTransaction",
             "title": "CreateMicroTransaction"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create MicroTX Sample",
+                "slug": "create-microtx-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1206,7 +1908,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPrivateKey",
             "title": "CreateMicroTransactionViaPrivateKey"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create MicroTX",
+                "slug": "create-microtx"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1224,7 +1937,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPublicKey",
             "title": "CreateMicroTransactionViaPublicKey"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create MicroTX Sample from PublicKey",
+                "slug": "create-microtx-sample-from-publickey"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1242,25 +1966,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateSignAndSendMicroTransaction",
             "title": "CreateSignAndSendMicroTransaction"
           },
-          "depth": 2
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [{}, ".fbp"],
-              "pygmentsLexer": "php",
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "PHP"
-            },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint.php",
-            "projectPath": "microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint.php",
-            "targetPath": "microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint",
-            "pageTitle": "microtransaction-api\\CreateSignAndSendMicroTransactionEndpoint",
-            "title": "CreateSignAndSendMicroTransactionEndpoint"
-          },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign and Send MicroTX",
+                "slug": "create-sign-and-send-microtx"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1278,25 +1995,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction",
             "title": "CreateSignWithWifAndSendMicroTransaction"
           },
-          "depth": 2
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [{}, ".fbp"],
-              "pygmentsLexer": "php",
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "PHP"
-            },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint.php",
-            "projectPath": "microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint.php",
-            "targetPath": "microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint",
-            "pageTitle": "microtransaction-api\\MicroTransactionViaPrivateKeyEndpoint",
-            "title": "MicroTransactionViaPrivateKeyEndpoint"
-          },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign (WIF) and Send MicroTX",
+                "slug": "create-sign-wif-and-send-microtx"
+              },
+              "depth": 1
+            }
+          ]
         }
       ]
     }, {
@@ -1318,31 +2028,83 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndDeleteForwardingAddress.php",
-              "projectPath": "payment-api\\CreateAndDeleteForwardingAddress.php",
-              "targetPath": "payment-api\\CreateAndDeleteForwardingAddress",
-              "pageTitle": "payment-api\\CreateAndDeleteForwardingAddress",
-              "title": "CreateAndDeleteForwardingAddress"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndDeleteForwardingAddress.php",
+            "projectPath": "payment-api\\CreateAndDeleteForwardingAddress.php",
+            "targetPath": "payment-api\\CreateAndDeleteForwardingAddress",
+            "pageTitle": "payment-api\\CreateAndDeleteForwardingAddress",
+            "title": "CreateAndDeleteForwardingAddress"
           },
-            "depth": 2
-        }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
+                "level": 1,
+                "title": "Delete PaymentForward",
+                "slug": "delete-paymentforward"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Create PaymentForward Instance",
+                    "slug": "create-paymentforward-instance"
                   },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Delete PaymentForward",
+                    "slug": "delete-paymentforward"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndDeletePaymentForward.php",
             "projectPath": "payment-api\\CreateAndDeletePaymentForward.php",
             "targetPath": "payment-api\\CreateAndDeletePaymentForward",
             "pageTitle": "payment-api\\CreateAndDeletePaymentForward",
             "title": "CreateAndDeletePaymentForward"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Delete PaymentForward",
+                "slug": "delete-paymentforward"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Create PaymentForward Instance",
+                    "slug": "create-paymentforward-instance"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1354,31 +2116,35 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndListForwardingAddresses.php",
-              "projectPath": "payment-api\\CreateAndListForwardingAddresses.php",
-              "targetPath": "payment-api\\CreateAndListForwardingAddresses",
-              "pageTitle": "payment-api\\CreateAndListForwardingAddresses",
-              "title": "CreateAndListForwardingAddresses"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndListForwardingAddresses.php",
+            "projectPath": "payment-api\\CreateAndListForwardingAddresses.php",
+            "targetPath": "payment-api\\CreateAndListForwardingAddresses",
+            "pageTitle": "payment-api\\CreateAndListForwardingAddresses",
+            "title": "CreateAndListForwardingAddresses"
           },
-              "depth": 2
-          }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
+                "level": 1,
+                "title": "List All PaymentForwards",
+                "slug": "list-all-paymentforwards"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Create one PaymentForward",
+                    "slug": "create-one-paymentforward"
                   },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndListPaymentForwards.php",
-            "projectPath": "payment-api\\CreateAndListPaymentForwards.php",
-            "targetPath": "payment-api\\CreateAndListPaymentForwards",
-            "pageTitle": "payment-api\\CreateAndListPaymentForwards",
-            "title": "CreateAndListPaymentForwards"
-          },
-          "depth": 2
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1390,31 +2156,43 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateForwardingAddress.php",
-              "projectPath": "payment-api\\CreateForwardingAddress.php",
-              "targetPath": "payment-api\\CreateForwardingAddress",
-              "pageTitle": "payment-api\\CreateForwardingAddress",
-              "title": "CreateForwardingAddress"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateForwardingAddress.php",
+            "projectPath": "payment-api\\CreateForwardingAddress.php",
+            "targetPath": "payment-api\\CreateForwardingAddress",
+            "pageTitle": "payment-api\\CreateForwardingAddress",
+            "title": "CreateForwardingAddress"
           },
-              "depth": 2
-          }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
-                  },
+                "level": 1,
+                "title": "Create a Payment Forwarding Address",
+                "slug": "create-a-payment-forwarding-address"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
             "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreatePaymentEndpoint.php",
             "projectPath": "payment-api\\CreatePaymentEndpoint.php",
             "targetPath": "payment-api\\CreatePaymentEndpoint",
             "pageTitle": "payment-api\\CreatePaymentEndpoint",
             "title": "CreatePaymentEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1426,49 +2204,43 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreatePaymentForward.php",
-            "projectPath": "payment-api\\CreatePaymentForward.php",
-            "targetPath": "payment-api\\CreatePaymentForward",
-            "pageTitle": "payment-api\\CreatePaymentForward",
-            "title": "CreatePaymentForward"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\DeleteAllForwardingAddresses.php",
+            "projectPath": "payment-api\\DeleteAllForwardingAddresses.php",
+            "targetPath": "payment-api\\DeleteAllForwardingAddresses",
+            "pageTitle": "payment-api\\DeleteAllForwardingAddresses",
+            "title": "DeleteAllForwardingAddresses"
           },
-          "depth": 2
-        }, {
-          "type": "file",
-          "data": {
-            "language": {
-              "nameMatchers": [{}, ".fbp"],
-              "pygmentsLexer": "php",
-              "singleLineComment": ["//"],
-              "ignorePrefix": "}",
-              "foldPrefix": "^",
-              "name": "PHP"
-            },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\DeleteAllForwardingAddresses.php",
-              "projectPath": "payment-api\\DeleteAllForwardingAddresses.php",
-              "targetPath": "payment-api\\DeleteAllForwardingAddresses",
-              "pageTitle": "payment-api\\DeleteAllForwardingAddresses",
-              "title": "DeleteAllForwardingAddresses"
-          },
-              "depth": 2
-          }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
+                "level": 1,
+                "title": "Delete All PaymentForwards",
+                "slug": "delete-all-paymentforwards"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get All PaymentForwards",
+                    "slug": "get-all-paymentforwards"
                   },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\DeleteAllPaymentForwards.php",
-            "projectPath": "payment-api\\DeleteAllPaymentForwards.php",
-            "targetPath": "payment-api\\DeleteAllPaymentForwards",
-            "pageTitle": "payment-api\\DeleteAllPaymentForwards",
-            "title": "DeleteAllPaymentForwards"
-          },
-          "depth": 2
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Delete All PaymentForwards",
+                    "slug": "delete-all-paymentforwards"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1486,7 +2258,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\DeletePaymentEndpoint",
             "title": "DeletePaymentEndpoint"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1498,49 +2271,35 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetForwardingAddress.php",
-              "projectPath": "payment-api\\GetForwardingAddress.php",
-              "targetPath": "payment-api\\GetForwardingAddress",
-              "pageTitle": "payment-api\\GetForwardingAddress",
-              "title": "GetForwardingAddress"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetForwardingAddress.php",
+            "projectPath": "payment-api\\GetForwardingAddress.php",
+            "targetPath": "payment-api\\GetForwardingAddress",
+            "pageTitle": "payment-api\\GetForwardingAddress",
+            "title": "GetForwardingAddress"
           },
-              "depth": 2
-          }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
-                  },
-                  "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultipleForwardingAddresses.php",
-                  "projectPath": "payment-api\\GetMultipleForwardingAddresses.php",
-                  "targetPath": "payment-api\\GetMultipleForwardingAddresses",
-                  "pageTitle": "payment-api\\GetMultipleForwardingAddresses",
-                  "title": "GetMultipleForwardingAddresses"
+                "level": 1,
+                "title": "Get PaymentForward",
+                "slug": "get-paymentforward"
               },
-              "depth": 2
-          }, {
-              "type": "file",
-              "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get PaymentForward ID",
+                    "slug": "get-paymentforward-id"
                   },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultiplePaymentForwards.php",
-            "projectPath": "payment-api\\GetMultiplePaymentForwards.php",
-            "targetPath": "payment-api\\GetMultiplePaymentForwards",
-            "pageTitle": "payment-api\\GetMultiplePaymentForwards",
-            "title": "GetMultiplePaymentForwards"
-          },
-          "depth": 2
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1552,13 +2311,35 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetPaymentForward.php",
-            "projectPath": "payment-api\\GetPaymentForward.php",
-            "targetPath": "payment-api\\GetPaymentForward",
-            "pageTitle": "payment-api\\GetPaymentForward",
-            "title": "GetPaymentForward"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultipleForwardingAddresses.php",
+            "projectPath": "payment-api\\GetMultipleForwardingAddresses.php",
+            "targetPath": "payment-api\\GetMultipleForwardingAddresses",
+            "pageTitle": "payment-api\\GetMultipleForwardingAddresses",
+            "title": "GetMultipleForwardingAddresses"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple PaymentForwards",
+                "slug": "get-multiple-paymentforwards"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Get PaymentForward ID",
+                    "slug": "get-paymentforward-id"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1570,31 +2351,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\ListForwardingAddresses.php",
-              "projectPath": "payment-api\\ListForwardingAddresses.php",
-              "targetPath": "payment-api\\ListForwardingAddresses",
-              "pageTitle": "payment-api\\ListForwardingAddresses",
-              "title": "ListForwardingAddresses"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\ListForwardingAddresses.php",
+            "projectPath": "payment-api\\ListForwardingAddresses.php",
+            "targetPath": "payment-api\\ListForwardingAddresses",
+            "pageTitle": "payment-api\\ListForwardingAddresses",
+            "title": "ListForwardingAddresses"
           },
-              "depth": 2
-          }, {
-              "type": "file",
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
               "data": {
-                  "language": {
-                      "nameMatchers": [{}, ".fbp"],
-                      "pygmentsLexer": "php",
-                      "singleLineComment": ["//"],
-                      "ignorePrefix": "}",
-                      "foldPrefix": "^",
-                      "name": "PHP"
-                  },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\ListPaymentForwards.php",
-            "projectPath": "payment-api\\ListPaymentForwards.php",
-            "targetPath": "payment-api\\ListPaymentForwards",
-            "pageTitle": "payment-api\\ListPaymentForwards",
-            "title": "ListPaymentForwards"
-          },
-          "depth": 2
+                "level": 1,
+                "title": "List All PaymentForwards",
+                "slug": "list-all-paymentforwards"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1612,7 +2386,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "payment-api\\ListPaymentsEndpoint",
             "title": "ListPaymentsEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }
       ]
     }, {
@@ -1640,7 +2415,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "sandbox\\index",
             "title": "index"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": []
         }
       ]
     }, {
@@ -1668,7 +2444,45 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "signer\\Sign",
             "title": "Sign"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Sign Hex Data",
+                "slug": "sign-hex-data"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Sample accepts GET parameters",
+                    "slug": "sample-accepts-get-parameters"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Using signer",
+                    "slug": "using-signer"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Run on console",
+                    "slug": "run-on-console"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }
       ]
     }, {
@@ -1696,7 +2510,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransaction",
             "title": "CreateAndSignAndSendTransaction"
           },
-            "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign and Send Transaction",
+                "slug": "create-sign-and-send-transaction"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1714,7 +2539,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet",
             "title": "CreateAndSignAndSendTransactionBCTesnet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign and Send TX Sample",
+                "slug": "create-sign-and-send-tx-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Sign the TX",
+                    "slug": "sign-the-tx"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Send TX to the network",
+                    "slug": "send-tx-to-the-network"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1732,7 +2587,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionDogeMain",
             "title": "CreateAndSignAndSendTransactionDogeMain"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create, Sign and Send TX Sample",
+                "slug": "create-sign-and-send-tx-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Sign the TX",
+                    "slug": "sign-the-tx"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Send TX to the network",
+                    "slug": "send-tx-to-the-network"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1750,7 +2635,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransaction",
             "title": "CreateTransaction"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX (without sending it)",
+                "slug": "create-tx-without-sending-it"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1762,13 +2658,35 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisignAddress.php",
-            "projectPath": "transaction-api\\CreateTransactionToFundMultisignAddress.php",
-            "targetPath": "transaction-api\\CreateTransactionToFundMultisignAddress",
-            "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddress",
-            "title": "CreateTransactionToFundMultisignAddress"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisigAddress.php",
+            "projectPath": "transaction-api\\CreateTransactionToFundMultisigAddress.php",
+            "targetPath": "transaction-api\\CreateTransactionToFundMultisigAddress",
+            "pageTitle": "transaction-api\\CreateTransactionToFundMultisigAddress",
+            "title": "CreateTransactionToFundMultisigAddress"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX To Fund Multisig Address",
+                "slug": "create-tx-to-fund-multisig-address"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "TX request object:",
+                    "slug": "tx-request-object"
+                  },
+                  "depth": 2
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1780,13 +2698,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisignAddressEndpoint.php",
-            "projectPath": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint.php",
-            "targetPath": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint",
-            "pageTitle": "transaction-api\\CreateTransactionToFundMultisignAddressEndpoint",
-            "title": "CreateTransactionToFundMultisignAddressEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisigAddressEndpoint.php",
+            "projectPath": "transaction-api\\CreateTransactionToFundMultisigAddressEndpoint.php",
+            "targetPath": "transaction-api\\CreateTransactionToFundMultisigAddressEndpoint",
+            "pageTitle": "transaction-api\\CreateTransactionToFundMultisigAddressEndpoint",
+            "title": "CreateTransactionToFundMultisigAddressEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1798,13 +2717,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToSpendMultisignFunds.php",
-            "projectPath": "transaction-api\\CreateTransactionToSpendMultisignFunds.php",
-            "targetPath": "transaction-api\\CreateTransactionToSpendMultisignFunds",
-            "pageTitle": "transaction-api\\CreateTransactionToSpendMultisignFunds",
-            "title": "CreateTransactionToSpendMultisignFunds"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToSpendMultisigFunds.php",
+            "projectPath": "transaction-api\\CreateTransactionToSpendMultisigFunds.php",
+            "targetPath": "transaction-api\\CreateTransactionToSpendMultisigFunds",
+            "pageTitle": "transaction-api\\CreateTransactionToSpendMultisigFunds",
+            "title": "CreateTransactionToSpendMultisigFunds"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX Sample (without sending it)",
+                "slug": "create-tx-sample-without-sending-it"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1822,7 +2752,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionUsingWallet",
             "title": "CreateTransactionUsingWallet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX from wallet (without sending it)",
+                "slug": "create-tx-from-wallet-without-sending-it"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1840,7 +2781,40 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilder",
             "title": "CreateTransactionWithTXBuilder"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX Sample (without sending it)",
+                "slug": "create-tx-sample-without-sending-it"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "partially-filled out TX request object.",
+                    "slug": "partially-filled-out-tx-request-object"
+                  },
+                  "depth": 2,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Create New TX",
+                        "slug": "create-new-tx"
+                      },
+                      "depth": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1858,7 +2832,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet",
             "title": "CreateTransactionWithTXBuilderBCTestnet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX Sample (without sending it)",
+                "slug": "create-tx-sample-without-sending-it"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create New TX",
+                    "slug": "create-new-tx"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1876,7 +2872,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderDogeMain",
             "title": "CreateTransactionWithTXBuilderDogeMain"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create TX Sample (without sending it)",
+                "slug": "create-tx-sample-without-sending-it"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Create New TX",
+                    "slug": "create-new-tx"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1894,7 +2912,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\CreateTransactionWithThirdPartySoftware",
             "title": "CreateTransactionWithThirdPartySoftware"
           },
-          "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create a TX using third party software",
+                "slug": "create-a-tx-using-third-party-software"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1906,13 +2935,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisignAddrEndpoint.php",
-            "projectPath": "transaction-api\\CreateTxToFundMultisignAddrEndpoint.php",
-            "targetPath": "transaction-api\\CreateTxToFundMultisignAddrEndpoint",
-            "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrEndpoint",
-            "title": "CreateTxToFundMultisignAddrEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrEndpoint.php",
+            "projectPath": "transaction-api\\CreateTxToFundMultisigAddrEndpoint.php",
+            "targetPath": "transaction-api\\CreateTxToFundMultisigAddrEndpoint",
+            "pageTitle": "transaction-api\\CreateTxToFundMultisigAddrEndpoint",
+            "title": "CreateTxToFundMultisigAddrEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1924,13 +2954,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisignAddrWithBuilder.php",
-            "projectPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder.php",
-            "targetPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder",
-            "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilder",
-            "title": "CreateTxToFundMultisignAddrWithBuilder"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrWithBuilder.php",
+            "projectPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilder.php",
+            "targetPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilder",
+            "pageTitle": "transaction-api\\CreateTxToFundMultisigAddrWithBuilder",
+            "title": "CreateTxToFundMultisigAddrWithBuilder"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Fund multisig address (using builder)",
+                "slug": "fund-multisig-address-using-builder"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1942,13 +2983,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint.php",
-            "projectPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint.php",
-            "targetPath": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
-            "pageTitle": "transaction-api\\CreateTxToFundMultisignAddrWithBuilderEndpoint",
-            "title": "CreateTxToFundMultisignAddrWithBuilderEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint.php",
+            "projectPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint.php",
+            "targetPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint",
+            "pageTitle": "transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint",
+            "title": "CreateTxToFundMultisigAddrWithBuilderEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -1960,13 +3002,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisignFundsWithBuilder.php",
-            "projectPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder.php",
-            "targetPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder",
-            "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilder",
-            "title": "CreateTxToSpendMultisignFundsWithBuilder"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisigFundsWithBuilder.php",
+            "projectPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilder.php",
+            "targetPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilder",
+            "pageTitle": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilder",
+            "title": "CreateTxToSpendMultisigFundsWithBuilder"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Spend Multisig Funds (using builder)",
+                "slug": "spend-multisig-funds-using-builder"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -1978,13 +3031,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint.php",
-            "projectPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint.php",
-            "targetPath": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
-            "pageTitle": "transaction-api\\CreateTxToSpendMultisignFundsWithBuilderEndpoint",
-            "title": "CreateTxToSpendMultisignFundsWithBuilderEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint.php",
+            "projectPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint.php",
+            "targetPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint",
+            "pageTitle": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint",
+            "title": "CreateTxToSpendMultisigFundsWithBuilderEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2002,7 +3056,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DataEndpoint",
             "title": "DataEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2020,7 +3075,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransaction",
             "title": "DecodeRawTransaction"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Decode Raw Transactions",
+                "slug": "decode-raw-transactions"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2038,7 +3104,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\DecodeRawTransactionEndpoint",
             "title": "DecodeRawTransactionEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2056,7 +3123,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\EmbedDataOnBlockchain",
             "title": "EmbedDataOnBlockchain"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Embed Data on Blockchains",
+                "slug": "embed-data-on-blockchains"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2074,7 +3152,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\FundMultisignAddressTransaction",
             "title": "FundMultisignAddressTransaction"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Fund Multisig Address Sample",
+                "slug": "fund-multisig-address-sample"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Sign the TX",
+                    "slug": "sign-the-tx"
+                  },
+                  "depth": 3
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Send TX to the network",
+                    "slug": "send-tx-to-the-network"
+                  },
+                  "depth": 3
+                }
+              ]
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2092,7 +3200,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetAllUnconfirmedTransactions",
             "title": "GetAllUnconfirmedTransactions"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Unconfirmed Transactions",
+                "slug": "get-unconfirmed-transactions"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2110,7 +3229,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetMultipleTransactions",
             "title": "GetMultipleTransactions"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Multiple Transactions",
+                "slug": "get-multiple-transactions"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2128,7 +3258,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetTransaction",
             "title": "GetTransaction"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Transaction",
+                "slug": "get-transaction"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2146,7 +3287,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\GetTransactionWithPaging",
             "title": "GetTransactionWithPaging"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Transactions With Paging",
+                "slug": "get-transactions-with-paging"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2164,7 +3316,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\NewTransactionEndpoint",
             "title": "NewTransactionEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2182,7 +3335,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransaction",
             "title": "PushRawTransaction"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Push Raw Transaction to the Network",
+                "slug": "push-raw-transaction-to-the-network"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2200,7 +3364,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\PushRawTransactionEndpoint",
             "title": "PushRawTransactionEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2212,13 +3377,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\SpendMultisignFundsTransaction.php",
-            "projectPath": "transaction-api\\SpendMultisignFundsTransaction.php",
-            "targetPath": "transaction-api\\SpendMultisignFundsTransaction",
-            "pageTitle": "transaction-api\\SpendMultisignFundsTransaction",
-            "title": "SpendMultisignFundsTransaction"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\SpendMultisigFundsTransaction.php",
+            "projectPath": "transaction-api\\SpendMultisigFundsTransaction.php",
+            "targetPath": "transaction-api\\SpendMultisigFundsTransaction",
+            "pageTitle": "transaction-api\\SpendMultisigFundsTransaction",
+            "title": "SpendMultisigFundsTransaction"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Spend Multisig Funds Sample",
+                "slug": "spend-multisig-funds-sample"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2236,7 +3412,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\TransactionHashEndpoint",
             "title": "TransactionHashEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2254,7 +3431,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "transaction-api\\UnconfirmedTransactionsEndpoint",
             "title": "UnconfirmedTransactionsEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }
       ]
     }, {
@@ -2282,7 +3460,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWallet",
             "title": "AddAddressesToWallet"
           },
-            "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Add Addresses to Wallet",
+                "slug": "add-addresses-to-wallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2300,7 +3489,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\AddAddressesToWalletEndpoint",
             "title": "AddAddressesToWalletEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2318,18 +3508,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateHDWallet",
             "title": "CreateHDWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Create HDWallet",
-                          "slug": "create-hdwallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create HDWallet",
+                "slug": "create-hdwallet"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\CreateHDWalletEndpoint.php",
+            "projectPath": "wallet-api\\CreateHDWalletEndpoint.php",
+            "targetPath": "wallet-api\\CreateHDWalletEndpoint",
+            "pageTitle": "wallet-api\\CreateHDWalletEndpoint",
+            "title": "CreateHDWalletEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2347,7 +3556,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateWallet",
             "title": "CreateWallet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Create Wallet",
+                "slug": "create-wallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2365,7 +3585,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\CreateWalletEndpoint",
             "title": "CreateWalletEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2383,18 +3604,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteHDWallet",
             "title": "DeleteHDWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Delete HDWallet",
-                          "slug": "delete-hdwallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Delete HDWallet",
+                "slug": "delete-hdwallet"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeleteHDWalletEndpoint.php",
+            "projectPath": "wallet-api\\DeleteHDWalletEndpoint.php",
+            "targetPath": "wallet-api\\DeleteHDWalletEndpoint",
+            "pageTitle": "wallet-api\\DeleteHDWalletEndpoint",
+            "title": "DeleteHDWalletEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2412,7 +3652,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteWallet",
             "title": "DeleteWallet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Delete Wallet",
+                "slug": "delete-wallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2430,7 +3681,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\DeleteWalletEndpoint",
             "title": "DeleteWalletEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2448,18 +3700,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInHDWallet",
             "title": "GenerateAddressInHDWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate New Address in a HD Wallet",
-                          "slug": "generate-new-address-in-a-hd-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate New Address in a HD Wallet",
+                "slug": "generate-new-address-in-a-hd-wallet"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInHDWalletEndpoint.php",
+            "projectPath": "wallet-api\\GenerateAddressInHDWalletEndpoint.php",
+            "targetPath": "wallet-api\\GenerateAddressInHDWalletEndpoint",
+            "pageTitle": "wallet-api\\GenerateAddressInHDWalletEndpoint",
+            "title": "GenerateAddressInHDWalletEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2477,18 +3748,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndex",
             "title": "GenerateAddressInHDWalletWithSubchainIndex"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Generate New Address in a HD Wallet",
-                          "slug": "generate-new-address-in-a-hd-wallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate New Address in a HD Wallet",
+                "slug": "generate-new-address-in-a-hd-wallet"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint.php",
+            "projectPath": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint.php",
+            "targetPath": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint",
+            "pageTitle": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint",
+            "title": "GenerateAddressInHDWalletWithSubchainIndexEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2506,7 +3796,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInWallet",
             "title": "GenerateAddressInWallet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate New Address for a Wallet",
+                "slug": "generate-new-address-for-a-wallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2524,7 +3825,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateAddressInWalletEndpoint",
             "title": "GenerateAddressInWalletEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2542,7 +3844,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GenerateNewAddressForWallet",
             "title": "GenerateNewAddressForWallet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Generate New Address for a Wallet",
+                "slug": "generate-new-address-for-a-wallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2560,18 +3873,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWallet",
             "title": "GetHDWallet"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get HDWallet",
-                          "slug": "get-hdwallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get HDWallet",
+                "slug": "get-hdwallet"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWalletAddressesEndpoint.php",
+            "projectPath": "wallet-api\\GetHDWalletAddressesEndpoint.php",
+            "targetPath": "wallet-api\\GetHDWalletAddressesEndpoint",
+            "pageTitle": "wallet-api\\GetHDWalletAddressesEndpoint",
+            "title": "GetHDWalletAddressesEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2589,18 +3921,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWalletAsAddress",
             "title": "GetHDWalletAsAddress"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get HDWallet as Address",
-                          "slug": "get-hdwallet-as-address"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get HDWallet as Address",
+                "slug": "get-hdwallet-as-address"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2618,18 +3950,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWalletAsFullAddress",
             "title": "GetHDWalletAsFullAddress"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Full HDWallet",
-                          "slug": "get-full-hdwallet"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Full HDWallet",
+                "slug": "get-full-hdwallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2647,18 +3979,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetHDWalletBalanceAsAddressBalance",
             "title": "GetHDWalletBalanceAsAddressBalance"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get Only HDWallet Balance",
-                          "slug": "get-only-hdwallet-balance"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Only HDWallet Balance",
+                "slug": "get-only-hdwallet-balance"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWalletEndpoint.php",
+            "projectPath": "wallet-api\\GetHDWalletEndpoint.php",
+            "targetPath": "wallet-api\\GetHDWalletEndpoint",
+            "pageTitle": "wallet-api\\GetHDWalletEndpoint",
+            "title": "GetHDWalletEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2676,7 +4027,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWallet",
             "title": "GetWallet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Wallet",
+                "slug": "get-wallet"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWalletAddressesEndpoint.php",
+            "projectPath": "wallet-api\\GetWalletAddressesEndpoint.php",
+            "targetPath": "wallet-api\\GetWalletAddressesEndpoint",
+            "pageTitle": "wallet-api\\GetWalletAddressesEndpoint",
+            "title": "GetWalletAddressesEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2694,7 +4075,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletAsAddress",
             "title": "GetWalletAsAddress"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Wallet as Address",
+                "slug": "get-wallet-as-address"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2712,7 +4104,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletAsFullAddress",
             "title": "GetWalletAsFullAddress"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Full Wallet",
+                "slug": "get-full-wallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2730,7 +4133,37 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\GetWalletBalanceAsAddressBalance",
             "title": "GetWalletBalanceAsAddressBalance"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Only Wallet Balance",
+                "slug": "get-only-wallet-balance"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWalletEndpoint.php",
+            "projectPath": "wallet-api\\GetWalletEndpoint.php",
+            "targetPath": "wallet-api\\GetWalletEndpoint",
+            "pageTitle": "wallet-api\\GetWalletEndpoint",
+            "title": "GetWalletEndpoint"
+          },
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2748,18 +4181,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\ListHDWalletAddresses",
             "title": "ListHDWalletAddresses"
           },
-              "depth": 2,
-              "outline": [
-                  {
-                      "type": "heading",
-                      "data": {
-                          "level": 1,
-                          "title": "Get All HD Wallet Addresses",
-                          "slug": "get-all-hd-wallet-addresses"
-                      },
-                      "depth": 1
-                  }
-              ]
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get All HD Wallet Addresses",
+                "slug": "get-all-hd-wallet-addresses"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2777,7 +4210,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\ListWalletAddresses",
             "title": "ListWalletAddresses"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get All Wallet Addresses",
+                "slug": "get-all-wallet-addresses"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2795,7 +4239,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWallet",
             "title": "RemoveAddressesFromWallet"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Remove Addresses from Wallet",
+                "slug": "remove-addresses-from-wallet"
+              },
+              "depth": 1
+            }
+          ]
         }, {
           "type": "file",
           "data": {
@@ -2813,7 +4268,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\RemoveAddressesFromWalletEndpoint",
             "title": "RemoveAddressesFromWalletEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }, {
           "type": "file",
           "data": {
@@ -2831,7 +4287,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             "pageTitle": "wallet-api\\WalletAddressesEndpoint",
             "title": "WalletAddressesEndpoint"
           },
-              "depth": 2
+          "depth": 2,
+          "outline": []
         }
       ]
     }

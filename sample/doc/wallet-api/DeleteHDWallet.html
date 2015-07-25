@@ -8,13 +8,11 @@ First you have to run CreateHDWallet sample to create &quot;bob&quot; wallet</p>
     <span class="hljs-variable">$walletName</span> = <span class="hljs-string">'bob'</span>; <span class="hljs-comment">// Default wallet name for samples</span>
 }
 
-    <span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span>
-    \BlockCypher\Client\HDWalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+<span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\HDWalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
 
 <span class="hljs-keyword">try</span> {
     <span class="hljs-comment">/// Delete the HDWallet</span>
-    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$walletClient</span>-&gt;delete(<span
-            class="hljs-variable">$walletName</span>);
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$walletClient</span>-&gt;delete(<span class="hljs-variable">$walletName</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Deleted HDWallet"</span>, <span class="hljs-string">"HDWallet"</span>, <span class="hljs-variable">$walletName</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

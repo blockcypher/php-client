@@ -5,19 +5,17 @@ php -f .\sample\microtransaction-api\CreateMicroTXFromPubkeyDocsSample.php</p></
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Client</span>\<span class="hljs-title">MicroTXClient</span>;
 <span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
 
-<span class="hljs-variable">$microTXClient</span> = <span class="hljs-keyword">new</span> MicroTXClient();
-
 <span class="hljs-variable">$apiContext</span> = ApiContext::create(
     <span class="hljs-string">'test'</span>, <span class="hljs-string">'bcy'</span>, <span class="hljs-string">'v1'</span>,
     <span class="hljs-keyword">new</span> SimpleTokenCredential(<span class="hljs-string">'c0afcccdde5081d6429de37d16166ead'</span>),
     <span class="hljs-keyword">array</span>(<span class="hljs-string">'mode'</span> =&gt; <span class="hljs-string">'sandbox'</span>, <span class="hljs-string">'log.LogEnabled'</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-string">'log.FileName'</span> =&gt; <span class="hljs-string">'BlockCypher.log'</span>, <span class="hljs-string">'log.LogLevel'</span> =&gt; <span class="hljs-string">'DEBUG'</span>)
 );
 
+<span class="hljs-variable">$microTXClient</span> = <span class="hljs-keyword">new</span> MicroTXClient(<span class="hljs-variable">$apiContext</span>);
 <span class="hljs-variable">$microTX</span> = <span class="hljs-variable">$microTXClient</span>-&gt;sendSigned(
     <span class="hljs-string">"2c2cc015519b79782bd9c5af66f442e808f573714e3c4dc6df7d79c183963cff"</span>, <span class="hljs-comment">// private key</span>
     <span class="hljs-string">"C4MYFr4EAdqEeUKxTnPUF3d3whWcPMz1Fi"</span>, <span class="hljs-comment">// to address</span>
-    <span class="hljs-number">10000</span>, <span class="hljs-comment">// value (satoshis)</span>
-    <span class="hljs-variable">$apiContext</span>
+    <span class="hljs-number">10000</span> <span class="hljs-comment">// value (satoshis)</span>
 );
 
 ResultPrinter::printResult(<span class="hljs-string">"Created, Sign and Send MicroTX"</span>, <span class="hljs-string">"MicroTX"</span>, <span class="hljs-variable">$microTX</span>-&gt;getHash(), <span class="hljs-keyword">null</span>, <span class="hljs-variable">$microTX</span>);</div></div></div></div></body></html>

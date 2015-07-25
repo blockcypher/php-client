@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><title>transaction-api\CreateTransactionToSpendMultisigFunds</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="transaction-api\CreateTransactionToSpendMultisigFunds"><meta name="groc-project-path" content="transaction-api\CreateTransactionToSpendMultisigFunds.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">transaction-api\CreateTransactionToSpendMultisigFunds.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h1 id="create-tx-sample-without-sending-it">Create TX Sample (without sending it)</h1>
+<p>This sample code demonstrate how you can create a new transaction, as documented at <a href="http://dev.blockcypher.com/?#multisig-transactions">docs</a>.
+Source address is a multisig address.</p>
+<p>API used: POST /v1/btc/main/txs/new</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
+
+<span class="hljs-variable">$tx</span> = <span class="hljs-keyword">new</span> \BlockCypher\Api\TX();</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Source address: <a href="https://live.blockcypher.com/btc-testnet/address/2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ/">2Mu7dJvawNdhshTkKRXGAVLKdr2VA7Rs1wZ</a></p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$input</span> = <span class="hljs-keyword">new</span> \BlockCypher\Api\TXInput();
+<span class="hljs-variable">$input</span>-&gt;setAddresses(<span class="hljs-keyword">array</span>(
+    <span class="hljs-string">"033e88a5503dc09243e58d9e7a53831c2b77cac014415ad8c29cabab5d933894c1"</span>,
+    <span class="hljs-string">"02087f346641256d4ba19cc0473afaa8d3d1b903761b9220a915e1af65a12e613c"</span>,
+    <span class="hljs-string">"03051fa1586ff8d509125d3e25308b4c66fcf656b377bf60bfdb296a4898d42efd"</span>
+));
+<span class="hljs-variable">$input</span>-&gt;setScriptType(<span class="hljs-string">"multisig-2-of-3"</span>);</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Destination address: <a href="https://live.blockcypher.com/btc-testnet/address/n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4/">n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4</a></p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$output</span> = <span class="hljs-keyword">new</span> \BlockCypher\Api\TXOutput();
+<span class="hljs-variable">$output</span>-&gt;addAddress(<span class="hljs-string">"n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"</span>);
+<span class="hljs-variable">$output</span>-&gt;setValue(<span class="hljs-number">1000</span>); <span class="hljs-comment">// Satoshis</span>
+
+<span class="hljs-variable">$tx</span>-&gt;addInput(<span class="hljs-variable">$input</span>);
+<span class="hljs-variable">$tx</span>-&gt;addOutput(<span class="hljs-variable">$output</span>);
+
+<span class="hljs-comment">/// For Sample Purposes Only.</span>
+<span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$tx</span>;
+
+<span class="hljs-variable">$txClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\TXClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.test3'</span>]);
+
+<span class="hljs-comment">/// Create New TX</span>
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$txSkeleton</span> = <span class="hljs-variable">$txClient</span>-&gt;create(<span class="hljs-variable">$tx</span>);
+} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
+    ResultPrinter::printError(<span class="hljs-string">"Created Multisig TX (spend multisig fund)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
+    <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
+}
+
+ResultPrinter::printResult(<span class="hljs-string">"Created Multisig TX (spend multisig fund)"</span>, <span class="hljs-string">"TXSkeleton"</span>, <span class="hljs-variable">$txSkeleton</span>-&gt;getTx()-&gt;getHash(), <span class="hljs-variable">$request</span>, <span class="hljs-variable">$txSkeleton</span>);
+
+<span class="hljs-keyword">return</span> <span class="hljs-variable">$txSkeleton</span>;
+
+<span class="hljs-comment">/// ## partially-filled out TX request object.</span>
+<span class="hljs-comment">/// To use BlockCypher’s two-endpoint transaction creation tool, first you need to provide the input address(es),</span>
+<span class="hljs-comment">/// output address, and value to transfer (in satoshis). This is provided in the form of a partially-filled out</span>
+<span class="hljs-comment">/// TX request object.</span>
+<span class="hljs-comment">///{</span>
+<span class="hljs-comment">///  "inputs":[</span>
+<span class="hljs-comment">///    {</span>
+<span class="hljs-comment">///      "addresses":[</span>
+<span class="hljs-comment">///        "03798be8162d7d6bc5c4e3b236100fcc0dfee899130f84c97d3a49faf83450fd81",</span>
+<span class="hljs-comment">///        "03dd9f1d4a39951013b4305bf61887ada66439ab84a9a2f8aca9dc736041f815f1",</span>
+<span class="hljs-comment">///        "03c8e6e99c1d0b42120d5cf40c963e5e8048fd2d2a184758784a041a9d101f1f02"</span>
+<span class="hljs-comment">///      ],</span>
+<span class="hljs-comment">///      "script_type":"multisig-2-of-3",</span>
+<span class="hljs-comment">///    }</span>
+<span class="hljs-comment">///  ],</span>
+<span class="hljs-comment">///  "outputs":[</span>
+<span class="hljs-comment">///    {</span>
+<span class="hljs-comment">///      "addresses":[</span>
+<span class="hljs-comment">///        "n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4"</span>
+<span class="hljs-comment">///      ],</span>
+<span class="hljs-comment">///      "value":1000</span>
+<span class="hljs-comment">///    }</span>
+<span class="hljs-comment">///  ]</span>
+<span class="hljs-comment">///}</span></div></div></div></div></body></html>

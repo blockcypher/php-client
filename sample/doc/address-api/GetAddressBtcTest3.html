@@ -9,8 +9,10 @@
     <span class="hljs-variable">$sampleAddress</span> = <span class="hljs-string">'2N66DDrmjDCMM3yMSYtAQyAqRtasSkFhbmX'</span>;
 }
 
+<span class="hljs-variable">$addressClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\AddressClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.test3'</span>]);
+
 <span class="hljs-keyword">try</span> {
-    <span class="hljs-variable">$address</span> = \BlockCypher\Api\Address::get(<span class="hljs-variable">$sampleAddress</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.test3'</span>]);
+    <span class="hljs-variable">$address</span> = <span class="hljs-variable">$addressClient</span>-&gt;get(<span class="hljs-variable">$sampleAddress</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Get Address BTC Test3"</span>, <span class="hljs-string">"Address"</span>, <span class="hljs-variable">$sampleAddress</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

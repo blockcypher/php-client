@@ -2,8 +2,10 @@
 <p>This method allows you to
 retrieve only balance for a given address/wallet.
 API called: &#39;/v1/btc/main/addrs/1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD/balance&#39;</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>The following code takes you through
-the process of retrieving balance about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">/// ### Retrieve this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD balance</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>(See bootstrap.php for more on <code>ApiContext</code>)</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">try</span> {
-    <span class="hljs-variable">$addressBalance</span> = \BlockCypher\Api\AddressBalance::get(<span class="hljs-string">'1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'</span>, <span class="hljs-keyword">array</span>(), <span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+the process of retrieving balance about this address 1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD</p></div></div><div class="code"><div class="wrapper"><span class="hljs-variable">$addressClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\AddressClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-variable">$addressBalance</span> = <span class="hljs-variable">$addressClient</span>-&gt;getBalance(<span class="hljs-string">'1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Get Only Address Balance"</span>, <span class="hljs-string">"Address Balance"</span>, <span class="hljs-string">'1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD'</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);

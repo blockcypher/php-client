@@ -18,12 +18,10 @@
 <span class="hljs-comment">/// For Sample Purposes Only.</span>
 <span class="hljs-variable">$request</span> = <span class="hljs-keyword">clone</span> <span class="hljs-variable">$wallet</span>;
 
-    <span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span>
-    \BlockCypher\Client\WalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+<span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span> \BlockCypher\Client\WalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
 
 <span class="hljs-keyword">try</span> {
-    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$walletClient</span>-&gt;create(<span
-            class="hljs-variable">$wallet</span>);
+    <span class="hljs-variable">$output</span> = <span class="hljs-variable">$walletClient</span>-&gt;create(<span class="hljs-variable">$wallet</span>);
 } <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> <span class="hljs-variable">$ex</span>) {
     ResultPrinter::printError(<span class="hljs-string">"Created Wallet"</span>, <span class="hljs-string">"Wallet"</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$request</span>, <span class="hljs-variable">$ex</span>);
     <span class="hljs-keyword">exit</span>(<span class="hljs-number">1</span>);
