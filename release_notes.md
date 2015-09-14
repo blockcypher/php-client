@@ -4,6 +4,7 @@ BlockCypher PHP SDK release notes
 v1.2.2
 ------
 * Fixed minor warnings in samples
+* Bitwasp/bitcoin versions older than 0.0.7 not compatible
 
 v1.2.1
 ------
