@@ -41,5 +41,3 @@ try {
 }
 
 ResultPrinter::printResult("Send Transaction DOGE", "TXSkeleton", $txSkeleton->getTx()->getHash(), $request, $txSkeleton);
-
-return $createdWallet;

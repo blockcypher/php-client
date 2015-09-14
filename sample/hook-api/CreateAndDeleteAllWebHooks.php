@@ -24,5 +24,3 @@ try {
 }
 
 ResultPrinter::printResult("Delete All WebHook", "", implode(';', $webHookIdList), null, null);
-
-return $createdWallet;
