@@ -84,8 +84,10 @@ class BlockCypherBaseModel extends BlockCypherModel
     public function getErrorMessages()
     {
         $errorMessages = array();
-        foreach ($this->errors as $error) {
-            $errorMessages[] = $error->getError();
+        if (is_array($this->errors)) {
+            foreach ($this->errors as $error) {
+                $errorMessages[] = $error->getError();
+            }
         }
         return $errorMessages;
     }

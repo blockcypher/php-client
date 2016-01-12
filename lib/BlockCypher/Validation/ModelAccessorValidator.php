@@ -23,6 +23,15 @@ class ModelAccessorValidator
     public static function validate(BlockCypherModel $class, $attributeName)
     {
         $mode = BlockCypherConfigManager::getInstance()->get('validation.level');
+
+        // Default value if validation.level was not specified.
+        if (is_array($mode)) $mode = 'log';
+
+        // Check valid validation level
+        if (!in_array($mode, array('log', 'strict', 'disabled'))) {
+            trigger_error('Invalid validation.level in configuration', E_USER_NOTICE);
+        }
+
         if (!empty($mode) && $mode != 'disabled') {
             //Check if $attributeName is string
             if (gettype($attributeName) !== 'string') {
@@ -47,6 +56,6 @@ class ModelAccessorValidator
             }
             return true;
         }
-        return false;
+        return true;
     }
 }
