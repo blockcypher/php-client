@@ -104,20 +104,26 @@ class ModelTest extends \PHPUnit_Framework_TestCase
      */
     public function testUnknownObjectConversion()
     {
+        // We need to change validation level for this test, in order to allow create unknown object
+        // without throwing this error: Fatal error: Call to undefined method BlockCypher\Test\Common\SimpleClass::setUnknown()
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'disabled'));
+
         $json = '{"name":"test","unknown":{ "id" : "123", "object": "456"},"description":"description"}';
 
         $obj = new SimpleClass();
-        $obj->fromJson($json);
 
+        $obj->fromJson($json);
         $this->assertEquals("test", $obj->getName());
         $this->assertEquals("description", $obj->getDescription());
+
         $resultJson = $obj->toJSON();
         $this->assertContains("unknown", $resultJson);
         $this->assertContains("id", $resultJson);
         $this->assertContains("object", $resultJson);
         $this->assertContains("123", $resultJson);
         $this->assertContains("456", $resultJson);
+
+        // Restore default test validation mode
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));
     }
 
