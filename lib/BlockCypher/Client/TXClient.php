@@ -53,6 +53,7 @@ class TXClient extends BlockCypherClient
             'outstart' => 1,
             'limit' => 1,
             'includeHex' => 1,
+            'includeConfidence' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
@@ -90,6 +91,8 @@ class TXClient extends BlockCypherClient
             'instart' => 1,
             'outstart' => 1,
             'limit' => 1,
+            'includeHex' => 1,
+            'includeConfidence' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
