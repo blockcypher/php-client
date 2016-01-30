@@ -1,6 +1,13 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v1.3.0
+------
+* Fixed bug in BlockCypherBaseModel::getErrorMessages.
+* Default validation log level: `log`.
+* Specific exception when user is trying to sign a tx using uncompressed public keys.
+* Support new confidence changes. https://medium.com/blockcypher-blog/important-changes-to-blockcypher-s-confidence-api-7bbd283e099c
+
 v1.2.2
 ------
 * Fixed minor warnings in samples

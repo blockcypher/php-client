@@ -25,9 +25,11 @@ class PrivateKeyList
     /**
      * @param string[] $hexPrivateKeys
      * @param string
+     * @param bool $compressed True if the public key should be using compressed format
      * @return PrivateKeyList
+     * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
      */
-    public static function fromHexPrivateKeyArray($hexPrivateKeys, $coinSymbol)
+    public static function fromHexPrivateKeyArray($hexPrivateKeys, $coinSymbol, $compressed=true)
     {
         ArgumentArrayValidator::validate($hexPrivateKeys, 'hexPrivateKeys');
         CoinSymbolValidator::validate($coinSymbol, 'coinSymbol');
@@ -35,7 +37,6 @@ class PrivateKeyList
         $privateKeyList = new self($coinSymbol);
 
         foreach ($hexPrivateKeys as $hexPrivateKey) {
-            $compressed = true;
             $privateKey = PrivateKeyManipulator::importPrivateKeyFromHex($hexPrivateKey, $compressed);
 
             // Add private key indexed by public key
@@ -121,6 +122,16 @@ class PrivateKeyList
         }
 
         return false;
+    }
+
+    /**
+     * @param string $addressOrPublicKey
+     * @param string $coinSymbol
+     * @return bool
+     */
+    public function containsPrivateKeyFor($addressOrPublicKey, $coinSymbol)
+    {
+        return $this->privateKeyExists($addressOrPublicKey, $coinSymbol);
     }
 
     /**

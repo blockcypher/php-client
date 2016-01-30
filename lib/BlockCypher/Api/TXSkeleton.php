@@ -6,6 +6,7 @@ use BlockCypher\Common\BlockCypherResourceModel;
 use BlockCypher\Crypto\PrivateKeyList;
 use BlockCypher\Crypto\Signer;
 use BlockCypher\Exception\BlockCypherSignatureException;
+use BlockCypher\Exception\BlockCypherUncompressedKeyException;
 use BlockCypher\Rest\ApiContext;
 use BlockCypher\Transport\BlockCypherRestCall;
 
@@ -90,20 +91,27 @@ class TXSkeleton extends BlockCypherResourceModel
             $privateKeys = array($privateKeys);
         }
 
-        // Create PrivateKey objects from plain hex private keys
-        $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $coinSymbol);
+        // Create PrivateKey objects from plain hex private keys (public keys compressed)
+        $privateKeyCompressedList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $coinSymbol, true);
 
-        $this->generateSignatures($privateKeyList, $coinSymbol);
+        // Create PrivateKey objects from plain hex private keys (public keys uncompressed)
+        // Uncompressed keys are not supported by the API, we use them only to check if user is using them and
+        // show a specific exception.
+        $privateKeyUncompressedList = PrivateKeyList::fromHexPrivateKeyArray($privateKeys, $coinSymbol, false);
+
+        $this->generateSignatures($privateKeyCompressedList, $privateKeyUncompressedList, $coinSymbol);
 
         return $this;
     }
 
     /**
-     * @param PrivateKeyList $privateKeyList
+     * @param PrivateKeyList $privateKeyCompressedList
+     * @param PrivateKeyList $privateKeyUncompressedList
      * @param string $coinSymbol
      * @throws BlockCypherSignatureException
+     * @throws BlockCypherUncompressedKeyException
      */
-    private function generateSignatures($privateKeyList, $coinSymbol)
+    private function generateSignatures($privateKeyCompressedList, $privateKeyUncompressedList, $coinSymbol)
     {
         $signatures = array();
         $pubkeys = array();
@@ -118,32 +126,40 @@ class TXSkeleton extends BlockCypherResourceModel
 
             foreach ($txInputAddresses as $inputAddress) {
 
-                if ($privateKeyList->privateKeyExists($inputAddress, $coinSymbol)) {
+                if ($privateKeyCompressedList->containsPrivateKeyFor($inputAddress, $coinSymbol)) {
 
-                    $privateKey = $privateKeyList->getPrivateKey($inputAddress, $coinSymbol);
+                    // Get private key to sign
+                    $privateKey = $privateKeyCompressedList->getPrivateKey($inputAddress, $coinSymbol);
 
                     // Signature
-                    $hexDataToSign = $this->tosign[$tosignIndex];
-                    $sig = Signer::sign($hexDataToSign, $privateKey);
-                    $signatures[] = $sig;
+                    $signatures[] = Signer::sign($this->tosign[$tosignIndex], $privateKey);
 
                     // Pubkey
-                    $pubKey = $privateKey->getPublicKey()->getHex();
-                    $pubkeys[] = $pubKey;
+                    $pubkeys[] = $privateKey->getPublicKey()->getHex();
 
+                    // Mark private key as used
                     $privateKeysUsed[] = $inputAddress;
 
                 } else {
-                    // User has not provide a private key for this address
-                    // API allows to send partially signed tx
-                    // TODO: add log?
+
+                    if ($privateKeyUncompressedList->containsPrivateKeyFor($inputAddress, $coinSymbol)) {
+                        
+                        throw new BlockCypherUncompressedKeyException(sprintf("Invalid private key for address %s. Address correspond to uncompressed public key. Uncompressed public keys are not supported.", $inputAddress));
+                        
+                    } else {
+                        
+                        // User has not provide a private key for this address
+                        // API allows to send partially signed tx
+                        // TODO: add log?
+                    }
                 }
             }
 
             $tosignIndex++;
         }
 
-        $numPrivateKeysNotUsed = $privateKeyList->length() - count($privateKeysUsed);
+        $numPrivateKeysNotUsed = $privateKeyCompressedList->length() - count($privateKeysUsed);
+
         if ($numPrivateKeysNotUsed > 0) {
             throw new BlockCypherSignatureException(sprintf("%s private keys do not correspond to any input. Please check private keys provided.", $numPrivateKeysNotUsed));
         }
