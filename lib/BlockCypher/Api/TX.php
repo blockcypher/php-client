@@ -40,7 +40,7 @@ use BlockCypher\Validation\UrlValidator;
  * @property int vin_sz
  * @property int vout_sz
  * @property int confirmations
- * @property int confidence
+ * @property float confidence
  * @property int guaranteed
  * @property \BlockCypher\Api\TXInput[] inputs
  * @property \BlockCypher\Api\TXOutput[] outputs
@@ -611,7 +611,7 @@ class TX extends BlockCypherResourceModel
     /**
      * Unconfirmed transactions only. Confidence this transaction will be confirmed (see Zero Confirmations).
      *
-     * @return int
+     * @return float
      */
     public function getConfidence()
     {
@@ -621,7 +621,7 @@ class TX extends BlockCypherResourceModel
     /**
      * Unconfirmed transactions only. Confidence this transaction will be confirmed (see Zero Confirmations).
      *
-     * @param int $confidence
+     * @param float $confidence
      * @return $this
      */
     public function setConfidence($confidence)
