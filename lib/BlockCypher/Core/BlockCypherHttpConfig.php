@@ -27,7 +27,7 @@ class BlockCypherHttpConfig
         CURLOPT_RETURNTRANSFER => TRUE,
         CURLOPT_TIMEOUT => 60,    // maximum number of seconds to allow cURL functions to execute
         CURLOPT_USERAGENT => 'BlockCypher-PHP-SDK',
-        CURLOPT_HTTPHEADER => array(),
+        //CURLOPT_HTTPHEADER => array(), // https://github.com/blockcypher/php-client/issues/16
         CURLOPT_SSL_VERIFYHOST => 2,
         CURLOPT_SSL_VERIFYPEER => 1,
         CURLOPT_SSL_CIPHER_LIST => 'TLSv1'

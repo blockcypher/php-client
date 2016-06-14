@@ -4,6 +4,7 @@ BlockCypher PHP SDK release notes
 v1.3.1
 ------
 * Fix #12. Added missing allowed params in GET params validation.
+* Fix #16. Remove empty array for CURLOPT_HTTPHEADER in BlockcypherHttpConfig.php.
 
 v1.3.0
 ------
