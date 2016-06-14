@@ -49,9 +49,9 @@ class TXClient extends BlockCypherClient
         ArgumentValidator::validate($hash, 'hash');
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array(
+            'limit' => 1,
             'instart' => 1,
             'outstart' => 1,
-            'limit' => 1,
             'includeHex' => 1,
             'includeConfidence' => 1,
         );
@@ -88,9 +88,9 @@ class TXClient extends BlockCypherClient
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array(
+            'limit' => 1,
             'instart' => 1,
             'outstart' => 1,
-            'limit' => 1,
             'includeHex' => 1,
             'includeConfidence' => 1,
         );
@@ -223,6 +223,13 @@ class TXClient extends BlockCypherClient
      */
     public function create(TX $tx, $apiContext = null, $restCall = null)
     {
+        // TODO: change signature. Add $params = array() after TX $tx
+        //ArgumentGetParamsValidator::validate($params, 'params');
+        //$allowedParams = array(
+        //    'includeToSignTx' => 1,
+        //);
+        //$params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
         $payLoad = $tx->toJSON();
 
         $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);

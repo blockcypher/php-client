@@ -112,7 +112,10 @@ class HDWalletClient extends BlockCypherClient
     {
         ArgumentValidator::validate($walletName, 'walletName');
         ArgumentGetParamsValidator::validate($params, 'params');
-        $allowedParams = array();
+        $allowedParams = array(
+            'used' => 1,
+            'zerobalance' => 1,
+        );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
         $payLoad = "";

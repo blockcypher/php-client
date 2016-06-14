@@ -109,11 +109,13 @@ class AddressClient extends BlockCypherClient
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array(
             'unspentOnly' => 1,
+            'includeScript' => 1,
+            'includeConfidence' => 1,
             'before' => 1,
             'after' => 1,
             'limit' => 1,
             'confirmations' => 1,
-            'includeConfidence' => 1,
+            'confidence' => 1,
             'omitWalletAddresses' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
@@ -150,11 +152,13 @@ class AddressClient extends BlockCypherClient
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array(
             'unspentOnly' => 1,
+            'includeScript' => 1,
+            'includeConfidence' => 1,
             'before' => 1,
             'after' => 1,
             'limit' => 1,
             'confirmations' => 1,
-            'includeConfidence' => 1,
+            'confidence' => 1,
             'omitWalletAddresses' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
@@ -189,13 +193,15 @@ class AddressClient extends BlockCypherClient
         ArgumentValidator::validate($address, 'address');
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array(
-            'unspentOnly' => 1,
+            'unspentOnly' => 1, // TODO: not present in docs ?
             'before' => 1,
             'after' => 1,
             'limit' => 1,
+            'txlimit' => 1,
             'confirmations' => 1,
-            'includeConfidence' => 1,
+            'confidence' => 1,
             'includeHex' => 1,
+            'includeConfidence' => 1,
             'omitWalletAddresses' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
@@ -231,13 +237,15 @@ class AddressClient extends BlockCypherClient
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array(
-            'unspentOnly' => 1,
+            'unspentOnly' => 1, // TODO: not present in docs ?
             'before' => 1,
             'after' => 1,
             'limit' => 1,
+            'txlimit' => 1,
             'confirmations' => 1,
-            'includeConfidence' => 1,
+            'confidence' => 1,
             'includeHex' => 1,
+            'includeConfidence' => 1,
             'omitWalletAddresses' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
@@ -271,7 +279,9 @@ class AddressClient extends BlockCypherClient
     {
         ArgumentValidator::validate($address, 'address');
         ArgumentGetParamsValidator::validate($params, 'params');
-        $allowedParams = array();
+        $allowedParams = array(
+            'omitWalletAddresses' => 1,
+        );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
         $payLoad = "";
@@ -304,7 +314,9 @@ class AddressClient extends BlockCypherClient
     {
         ArgumentArrayValidator::validate($array, 'array');
         ArgumentGetParamsValidator::validate($params, 'params');
-        $allowedParams = array();
+        $allowedParams = array(
+            'omitWalletAddresses' => 1,
+        );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
 
         $payLoad = "";

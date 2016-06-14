@@ -212,6 +212,7 @@ class PaymentForwardClient extends BlockCypherClient
     {
         ArgumentGetParamsValidator::validate($params, 'params');
         $allowedParams = array(
+            'start' => 1,
             'token' => 1,
         );
         $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);

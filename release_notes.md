@@ -1,6 +1,10 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v1.3.1
+------
+* Fix #12. Added missing allowed params in GET params validation.
+
 v1.3.0
 ------
 * Fixed bug in BlockCypherBaseModel::getErrorMessages.
