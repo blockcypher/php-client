@@ -200,8 +200,10 @@ class HDWalletClient extends BlockCypherClient
     }
 
     /**
+     * TODO: remove in v1.4.0
      * A new address is generated similar to Address Generation and associated it with the given wallet.
      *
+     * @deprecated since version 1.3.1 Use deriveAddress.
      * @param string $walletName
      * @param array $params Parameters
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
@@ -230,6 +232,45 @@ class HDWalletClient extends BlockCypherClient
         );
 
         $ret = new HDWalletGenerateAddressResponse();
+        $ret->fromJson($json);
+        return $ret;
+    }
+
+    /**
+     * This endpoint allows you to derive a new address (or multiple addresses) associated with the $NAME HD Wallet.
+     * If successful, it will return an HDWallet but only with the newly derived address(es) represented in
+     * its chains field to limit the data transmitted; for the full address list after derivation,
+     * you can follow up this API call with the Get Wallet Addresses Endpoint.
+     *
+     * @param string $walletName
+     * @param array $params Parameters
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return HDWallet Partial
+     */
+    public function deriveAddress($walletName, $params = array(), $apiContext = null, $restCall = null)
+    {
+        ArgumentGetParamsValidator::validate($params, 'params');
+        $allowedParams = array(
+            'count' => 1,
+            'subchain_index' => 1,
+        );
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $payLoad = "";
+
+        $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);
+
+        $json = $this->executeCall(
+            "$chainUrlPrefix/wallets/hd/$walletName/addresses/derive?" . http_build_query($params),
+            "POST",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+
+        $ret = new HDWallet();
         $ret->fromJson($json);
         return $ret;
     }

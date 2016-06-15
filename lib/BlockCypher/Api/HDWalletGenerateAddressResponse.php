@@ -5,6 +5,8 @@ namespace BlockCypher\Api;
 use BlockCypher\Common\BlockCypherBaseModel;
 
 /**
+ * TODO: deprecated. Remove in v1.4.0
+ *
  * Class HDWalletGenerateAddressResponse
  *
  * A resource representing an HD wallet address generation response.

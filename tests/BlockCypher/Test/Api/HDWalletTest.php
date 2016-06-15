@@ -30,20 +30,29 @@ class HDWalletTest extends ResourceModelTestCase
     {
         /*
         {
+            "token": "c0afcccdde5081d6429de37d16166ead",
             "name": "bob",
+            "hd": true,
             "extended_public_key": "xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8",
             "subchain_indexes": [
-                1,
-                3
+                1
             ],
-            "token": "c0afcccdde5081d6429de37d16166ead",
-            "hd": true,
+            "chains": [
+                {
+                    "index": 1,
+                    "chain_addresses": [
+
+                    ]
+                }
+            ],
             "error": "",
             "errors": []
         }
         */
 
-        return '{"name":"bob","extended_public_key":"xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8","subchain_indexes":[1,3],"token":"c0afcccdde5081d6429de37d16166ead","hd":true,"error":"","errors":[]}';
+        $chains = HDChainTest::getJson();
+
+        return '{"token":"c0afcccdde5081d6429de37d16166ead","name":"bob","hd":true,"extended_public_key":"xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8","subchain_indexes":[1],"chains":[' . $chains . '],"error":"","errors":[]}';
     }
 
     /**
@@ -57,12 +66,12 @@ class HDWalletTest extends ResourceModelTestCase
 
         $this->assertNotNull($obj->getToken());
         $this->assertNotNull($obj->getName());
-        //$this->assertNotNull($obj->getAddresses());
+        $this->assertNotNull($obj->getChains());
         $this->assertNotNull($obj->getHd());
         $this->assertNotNull($obj->getExtendedPublicKey());
         $this->assertNotNull($obj->getSubchainIndexes());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 
@@ -74,46 +83,10 @@ class HDWalletTest extends ResourceModelTestCase
     {
         $this->assertEquals($obj->getToken(), "c0afcccdde5081d6429de37d16166ead");
         $this->assertEquals($obj->getName(), "bob");
-        //$this->assertEquals($obj->getAddresses(), array("18VAyux27CiWQnmYumZeTKNcaw6opvKRLq", "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"));
+        $this->assertEquals($obj->getChains(), array(HDChainTest::getObject()));
         $this->assertEquals($obj->getHd(), true);
         $this->assertEquals($obj->getExtendedPublicKey(), 'xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8');
-        $this->assertEquals($obj->getSubchainIndexes(), array(1, 3));
-    }
-
-    /**
-     * @depends testSerializationDeserialization
-     * @param HDWallet $obj
-     */
-    public function testAddAddress($obj)
-    {
-        $obj->addAddress("1jr1rHMthQVMNSYswB9ExSvYn339fWMzn");
-
-        $this->assertContains("1jr1rHMthQVMNSYswB9ExSvYn339fWMzn", $obj->getAddresses());
-    }
-
-    /**
-     * @depends testSerializationDeserialization
-     * @param HDWallet $obj
-     */
-    public function testRemoveAddress($obj)
-    {
-        $addresses = self::addresses();
-        $address = $addresses[0];
-        $obj->removeAddress($address);
-
-        $this->assertNotContains($address, $obj->getAddresses());
-    }
-
-    /**
-     * @return string[]
-     */
-    public static function addresses()
-    {
-        $addresses = array(
-            "18VAyux27CiWQnmYumZeTKNcaw6opvKRLq",
-            "1JcX75oraJEmzXXHpDjRctw3BX6qDmFM8e"
-        );
-        return $addresses;
+        $this->assertEquals($obj->getSubchainIndexes(), array(1));
     }
 
     /**
@@ -174,7 +147,7 @@ class HDWalletTest extends ResourceModelTestCase
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
-                WalletTest::getJson()
+                HDWalletTest::getJson()
             ));
 
         /** @noinspection PhpParamsInspection */

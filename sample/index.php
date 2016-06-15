@@ -414,7 +414,7 @@ if (PHP_SAPI == 'cli') {
                         <div class="row">
                             <div class="col-md-8"><h5>Get full address</h5></div>
                             <div class="col-md-4">
-                                <a href="address-api/GetFullAddressUsingAddress.php"
+                                <a href="address-api/GetFullAddress.php"
                                    class="btn btn-primary pull-left execute"> Try It
                                     <i
                                         class="fa fa-play-circle-o"></i></a>
@@ -697,12 +697,12 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Generate new address in HD wallet*
+                                <h5>Derive new address in HD wallet*
                                     <small>(Depends on "Create HD wallet")</small>
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="wallet-api/GenerateAddressInHDWallet.php"
+                                <a href="wallet-api/DeriveAddressInHDWallet.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
                                 <a href="doc/wallet-api/GenerateAddressInHDWallet.html"
@@ -715,15 +715,15 @@ if (PHP_SAPI == 'cli') {
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-md-8">
-                                <h5>Generate new address in HD wallet with subchain index*
+                                <h5>Derive new address in HD wallet with subchain index*
                                     <small>(Depends on "Create HD wallet")</small>
                                 </h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="wallet-api/GenerateAddressInHDWalletWithSubchainIndex.php"
+                                <a href="wallet-api/DeriveAddressInHDWalletWithSubchainIndex.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/wallet-api/GenerateAddressInHDWalletWithSubchainIndex.html"
+                                <a href="doc/wallet-api/DeriveAddressInHDWalletWithSubchainIndex.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>

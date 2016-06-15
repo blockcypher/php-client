@@ -1,7 +1,7 @@
 <?php
 
 // Run on console:
-// php -f .\sample\wallet-api\GenerateAddressInHDWalletWithSubchainIndexEndpoint.php
+// php -f .\sample\wallet-api\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -17,6 +17,6 @@ $apiContext = ApiContext::create(
 
 $walletClient = new HDWalletClient($apiContexts['BTC.main']);
 $params = array('subchain_index' => 1);
-$hdWalletGenerateAddressResponse = $walletClient->generateAddress('bob', $params);
+$hdWallet = $walletClient->deriveAddress('bob', $params);
 
-ResultPrinter::printResult("Generate Address in a HDWallet", "HDWalletGenerateAddressResponse", $walletName, null, $hdWalletGenerateAddressResponse);
+ResultPrinter::printResult("Derive Address in a HDWallet", "HDWallet", $walletName, null, $hdWallet);

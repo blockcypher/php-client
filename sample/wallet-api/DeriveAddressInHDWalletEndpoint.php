@@ -1,7 +1,7 @@
 <?php
 
 // Run on console:
-// php -f .\sample\wallet-api\GenerateAddressInHDWalletEndpoint.php
+// php -f .\sample\wallet-api\DeriveAddressInHDWalletEndpoint.php
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -16,6 +16,6 @@ $apiContext = ApiContext::create(
 );
 
 $walletClient = new HDWalletClient($apiContext);
-$hdWalletGenerateAddressResponse = $walletClient->generateAddress('bob');
+$hdWallet = $walletClient->deriveAddress('bob');
 
-ResultPrinter::printResult("Generate Address in a HDWallet", "HDWalletGenerateAddressResponse", $walletName, null, $hdWalletGenerateAddressResponse);
+ResultPrinter::printResult("Derive Address in a HDWallet", "HDWallet", $walletName, null, $hdWallet);

@@ -44,6 +44,7 @@ class HDWalletClientTest extends ClientTestCase
     }
 
     /**
+     * @deprecated since v1.3.1
      * @dataProvider mockProvider
      * @param HDWalletClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
@@ -58,6 +59,24 @@ class HDWalletClientTest extends ClientTestCase
             ));
 
         $result = $obj->generateAddress(HDWalletGenerateAddressResponseTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
+        $this->assertNotNull($result);
+    }
+
+    /**
+     * @dataProvider mockProvider
+     * @param HDWalletClient $obj
+     * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
+     * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
+     */
+    public function testDeriveAddress($obj, $mockApiContext, $mockBlockCypherRestCall)
+    {
+        $mockBlockCypherRestCall->expects($this->any())
+            ->method('execute')
+            ->will($this->returnValue(
+                HDWalletTest::getJson()
+            ));
+
+        $result = $obj->deriveAddress(HDWalletTest::getObject()->getName(), array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
     }
 

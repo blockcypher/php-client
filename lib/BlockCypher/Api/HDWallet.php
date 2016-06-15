@@ -18,7 +18,7 @@ use BlockCypher\Validation\ArgumentValidator;
  *
  * @property string token
  * @property string name
- * @property string[] addresses
+ * @property \BlockCypher\Api\HDChain[] $chains
  * @property bool hd
  * @property string extended_public_key
  * @property int[] subchain_indexes
@@ -226,51 +226,21 @@ class HDWallet extends BlockCypherResourceModel
     }
 
     /**
-     * Append Address to the list.
-     *
-     * @param string $address
-     * @return $this
+     * @return \BlockCypher\Api\HDChain[]
      */
-    public function addAddress($address)
+    public function getChains()
     {
-        if (!$this->getAddresses()) {
-            return $this->setAddresses(array($address));
-        } else {
-            return $this->setAddresses(
-                array_merge($this->getAddresses(), array($address))
-            );
-        }
+        return $this->chains;
     }
 
     /**
-     * @return \string[]
-     */
-    public function getAddresses()
-    {
-        return $this->addresses;
-    }
-
-    /**
-     * @param \string[] $addresses
+     * @param \BlockCypher\Api\HDChain[] $chains
      * @return $this
      */
-    public function setAddresses($addresses)
+    public function setChains($chains)
     {
-        $this->addresses = $addresses;
+        $this->chains = $chains;
         return $this;
-    }
-
-    /**
-     * Remove Address from the list.
-     *
-     * @param string $address
-     * @return $this
-     */
-    public function removeAddress($address)
-    {
-        return $this->setAddresses(
-            array_diff($this->getAddresses(), array($address))
-        );
     }
 
     /**
@@ -360,7 +330,7 @@ class HDWallet extends BlockCypherResourceModel
      */
     public function removeSubchainIndex($subchainIndex)
     {
-        return $this->getSubchainIndexes(
+        return $this->setSubchainIndexes(
             array_diff($this->getSubchainIndexes(), array($subchainIndex))
         );
     }
