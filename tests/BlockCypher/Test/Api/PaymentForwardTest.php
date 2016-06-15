@@ -32,7 +32,7 @@ class PaymentForwardTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getMiningFeesSatoshis());
         $this->assertNotNull($obj->getTransactions());
 
-        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

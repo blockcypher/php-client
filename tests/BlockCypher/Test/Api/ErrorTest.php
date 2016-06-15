@@ -45,7 +45,7 @@ class ErrorTest extends ResourceModelTestCase
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getError());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

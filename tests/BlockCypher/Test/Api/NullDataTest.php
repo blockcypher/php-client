@@ -84,7 +84,7 @@ class NullDataTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getToken());
         $this->assertNotNull($obj->getHash());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

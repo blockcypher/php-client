@@ -45,7 +45,7 @@ class AddressListTest extends ResourceModelTestCase
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getAddresses());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

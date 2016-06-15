@@ -15,7 +15,7 @@ class CreateWalletEndpointTest extends WalletSampleTestCase
 {
     public function setUp()
     {
-        parent::SetUp();
+        parent::setUp();
         self::$walletName = 'alice';
         $className = $this->getClassName();
         $sampleName = substr($className, 0, -4);

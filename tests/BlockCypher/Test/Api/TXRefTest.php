@@ -66,7 +66,7 @@ class TXRefTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getTxHash());
         $this->assertNotNull($obj->getBlockHeight());
         $this->assertNotNull($obj->getTxInputN());
-        $this->assertNotNull($obj->gettxOutputN());
+        $this->assertNotNull($obj->geTtxOutputN());
         $this->assertNotNull($obj->getValue());
         $this->assertNotNull($obj->getRefBalance());
         $this->assertNotNull($obj->getPreference());
@@ -81,7 +81,7 @@ class TXRefTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getReceiveCount());
         $this->assertNotNull($obj->getConfidence());
 
-        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJSON());
 
         return $obj;
     }
@@ -95,7 +95,7 @@ class TXRefTest extends ResourceModelTestCase
         $this->assertEquals($obj->getTxHash(), "14b1052855bbf6561bc4db8aa501762e7cc1e86994dda9e782a6b73b1ce0dc1e");
         $this->assertEquals($obj->getBlockHeight(), 302013);
         $this->assertEquals($obj->getTxInputN(), -1);
-        $this->assertEquals($obj->gettxOutputN(), 0);
+        $this->assertEquals($obj->getTxOutputN(), 0);
         $this->assertEquals($obj->getValue(), 20213);
         $this->assertEquals($obj->getRefBalance(), 35000);
         $this->assertEquals($obj->getPreference(), "high");

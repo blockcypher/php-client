@@ -31,7 +31,7 @@ class WebHookTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getCallbackErrors());
         $this->assertNotNull($obj->getFilter());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

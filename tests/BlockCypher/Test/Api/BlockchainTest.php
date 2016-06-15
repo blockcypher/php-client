@@ -72,7 +72,7 @@ class BlockchainTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getLastForkHeight());
         $this->assertNotNull($obj->getLastForkHash());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

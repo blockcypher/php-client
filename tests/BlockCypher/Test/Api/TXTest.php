@@ -43,7 +43,7 @@ class TXTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getOutputs());
         $this->assertNotNull($obj->getNextInputs());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

@@ -28,7 +28,7 @@ class TXConfidenceTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getError());
         $this->assertNotNull($obj->getErrors());
 
-        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

@@ -33,7 +33,7 @@ class AddressTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getUnconfirmedTxrefs());
         $this->assertNotNull($obj->getTxUrl());
 
-        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

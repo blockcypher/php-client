@@ -62,7 +62,7 @@ class AddressKeyChainTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getPubkeys());
         $this->assertNotNull($obj->getScriptType());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

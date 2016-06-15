@@ -63,7 +63,7 @@ class WalletGenerateAddressResponseTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getAddress());
         $this->assertNotNull($obj->getWif());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

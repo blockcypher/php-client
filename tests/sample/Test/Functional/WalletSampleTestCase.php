@@ -20,7 +20,7 @@ class WalletSampleTestCase extends WebTestCase
 
     public function setUp()
     {
-        parent::SetUp();
+        parent::setUp();
         self::$walletName = 'alice_test';
         self::$walletSamplesBaseUrl = self::baseUrl() . basename(__DIR__) . '/';
     }

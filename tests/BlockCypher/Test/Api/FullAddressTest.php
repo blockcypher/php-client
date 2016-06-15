@@ -32,7 +32,7 @@ class FullAddressTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getTxs());
         //$this->assertNotNull($obj->getTxUrl()); // Not present in FullAddress
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

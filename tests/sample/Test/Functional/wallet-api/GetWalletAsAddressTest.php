@@ -12,7 +12,7 @@ class GetWalletAsAddressTest extends WalletSampleTestCase
 {
     public function setUp()
     {
-        parent::SetUp();
+        parent::setUp();
         $className = $this->getClassName();
         $sampleName = substr($className, 0, -4);
         $this->url = self::baseUrl() . basename(__DIR__) . '/' . $sampleName . '.php';

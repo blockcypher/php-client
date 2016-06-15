@@ -35,7 +35,7 @@ class MicroTXTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getFees());
         $this->assertNotNull($obj->getHash());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

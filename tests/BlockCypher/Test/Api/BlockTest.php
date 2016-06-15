@@ -38,7 +38,7 @@ class BlockTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getPrevBlockUrl());
         $this->assertNotNull($obj->getNextTxids());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

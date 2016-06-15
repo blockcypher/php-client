@@ -55,7 +55,7 @@ class PaymentForwardCallbackTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getInputTransactionHash());
         $this->assertNotNull($obj->getTransactionHash());
 
-        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

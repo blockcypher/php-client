@@ -5,7 +5,8 @@ v1.3.1
 ------
 * Fix #12. Added missing allowed params in GET params validation.
 * Fix #16. Remove empty array for CURLOPT_HTTPHEADER in BlockcypherHttpConfig.php.
-* Fix #17. 
+* Fix #17.
+* Fix case sensitive bugs in method names.
 
 v1.3.0
 ------

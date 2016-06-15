@@ -30,7 +30,7 @@ class AddressBalanceTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getUnconfirmedNTx());
         $this->assertNotNull($obj->getFinalNTx());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

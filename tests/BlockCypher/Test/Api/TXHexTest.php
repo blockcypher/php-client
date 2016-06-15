@@ -47,7 +47,7 @@ class TXHexTest extends ResourceModelTestCase
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getTx());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

@@ -253,7 +253,7 @@ class FullWalletAsFullAddressTest extends ResourceModelTestCase
         $this->assertNotNull($obj);
         $this->assertNotNull($obj->getWallet());
 
-        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJSON());
 
         return $obj;
     }

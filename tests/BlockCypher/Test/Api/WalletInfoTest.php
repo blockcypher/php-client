@@ -55,7 +55,7 @@ class WalletInfoTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getAddresses());
         $this->assertNotNull($obj->getHd());
 
-        $this->assertEquals(self::getJson(), $obj->toJson());
+        $this->assertEquals(self::getJson(), $obj->toJSON());
         return $obj;
     }
 

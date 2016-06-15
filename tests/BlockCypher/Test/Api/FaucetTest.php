@@ -50,7 +50,7 @@ class FaucetTest extends ResourceModelTestCase
         $this->assertNotNull($obj->getAddress());
         $this->assertNotNull($obj->getAmount());
 
-        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJson());
+        $this->assertJsonStringEqualsJsonString(self::getJson(), $obj->toJSON());
 
         return $obj;
     }
