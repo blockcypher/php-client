@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><title>wallet-api\DeriveAddressInHDWalletWithSubchainIndexEndpoint</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="wallet-api\DeriveAddressInHDWalletWithSubchainIndexEndpoint"><meta name="groc-project-path" content="wallet-api\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">wallet-api\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-preprocessor">&lt;?php</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Run on console:
+php -f .\sample\wallet-api\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php</p></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../bootstrap.php'</span>;
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">SimpleTokenCredential</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Client</span>\<span class="hljs-title">HDWalletClient</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">BlockCypher</span>\<span class="hljs-title">Rest</span>\<span class="hljs-title">ApiContext</span>;
+
+<span class="hljs-variable">$apiContext</span> = ApiContext::create(
+    <span class="hljs-string">'main'</span>, <span class="hljs-string">'btc'</span>, <span class="hljs-string">'v1'</span>,
+    <span class="hljs-keyword">new</span> SimpleTokenCredential(<span class="hljs-string">'c0afcccdde5081d6429de37d16166ead'</span>),
+    <span class="hljs-keyword">array</span>(<span class="hljs-string">'mode'</span> =&gt; <span class="hljs-string">'sandbox'</span>, <span class="hljs-string">'log.LogEnabled'</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-string">'log.FileName'</span> =&gt; <span class="hljs-string">'BlockCypher.log'</span>, <span class="hljs-string">'log.LogLevel'</span> =&gt; <span class="hljs-string">'DEBUG'</span>)
+);
+
+<span class="hljs-variable">$walletClient</span> = <span class="hljs-keyword">new</span> HDWalletClient(<span class="hljs-variable">$apiContexts</span>[<span class="hljs-string">'BTC.main'</span>]);
+<span class="hljs-variable">$params</span> = <span class="hljs-keyword">array</span>(<span class="hljs-string">'subchain_index'</span> =&gt; <span class="hljs-number">1</span>);
+<span class="hljs-variable">$hdWallet</span> = <span class="hljs-variable">$walletClient</span>-&gt;deriveAddress(<span class="hljs-string">'bob'</span>, <span class="hljs-variable">$params</span>);
+
+ResultPrinter::printResult(<span class="hljs-string">"Derive Address in a HDWallet"</span>, <span class="hljs-string">"HDWallet"</span>, <span class="hljs-variable">$walletName</span>, <span class="hljs-keyword">null</span>, <span class="hljs-variable">$hdWallet</span>);</div></div></div></div></body></html>

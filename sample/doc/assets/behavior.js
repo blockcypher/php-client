@@ -237,11 +237,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddress.php",
-              "projectPath": "address-api\\CreateMultisigAddress.php",
-              "targetPath": "address-api\\CreateMultisigAddress",
-              "pageTitle": "address-api\\CreateMultisigAddress",
-              "title": "CreateMultisigAddress"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddress.php",
+            "projectPath": "address-api\\CreateMultisigAddress.php",
+            "targetPath": "address-api\\CreateMultisigAddress",
+            "pageTitle": "address-api\\CreateMultisigAddress",
+            "title": "CreateMultisigAddress"
           },
           "depth": 2,
           "outline": [
@@ -266,11 +266,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddressBtcTest3.php",
-              "projectPath": "address-api\\CreateMultisigAddressBtcTest3.php",
-              "targetPath": "address-api\\CreateMultisigAddressBtcTest3",
-              "pageTitle": "address-api\\CreateMultisigAddressBtcTest3",
-              "title": "CreateMultisigAddressBtcTest3"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddressBtcTest3.php",
+            "projectPath": "address-api\\CreateMultisigAddressBtcTest3.php",
+            "targetPath": "address-api\\CreateMultisigAddressBtcTest3",
+            "pageTitle": "address-api\\CreateMultisigAddressBtcTest3",
+            "title": "CreateMultisigAddressBtcTest3"
           },
           "depth": 2,
           "outline": [
@@ -394,11 +394,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddress.php",
-              "projectPath": "address-api\\GenerateMultisigAddress.php",
-              "targetPath": "address-api\\GenerateMultisigAddress",
-              "pageTitle": "address-api\\GenerateMultisigAddress",
-              "title": "GenerateMultisigAddress"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddress.php",
+            "projectPath": "address-api\\GenerateMultisigAddress.php",
+            "targetPath": "address-api\\GenerateMultisigAddress",
+            "pageTitle": "address-api\\GenerateMultisigAddress",
+            "title": "GenerateMultisigAddress"
           },
           "depth": 2,
           "outline": [
@@ -423,11 +423,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressBtcTest3.php",
-              "projectPath": "address-api\\GenerateMultisigAddressBtcTest3.php",
-              "targetPath": "address-api\\GenerateMultisigAddressBtcTest3",
-              "pageTitle": "address-api\\GenerateMultisigAddressBtcTest3",
-              "title": "GenerateMultisigAddressBtcTest3"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressBtcTest3.php",
+            "projectPath": "address-api\\GenerateMultisigAddressBtcTest3.php",
+            "targetPath": "address-api\\GenerateMultisigAddressBtcTest3",
+            "pageTitle": "address-api\\GenerateMultisigAddressBtcTest3",
+            "title": "GenerateMultisigAddressBtcTest3"
           },
           "depth": 2,
           "outline": [
@@ -463,11 +463,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressEndpoint.php",
-              "projectPath": "address-api\\GenerateMultisigAddressEndpoint.php",
-              "targetPath": "address-api\\GenerateMultisigAddressEndpoint",
-              "pageTitle": "address-api\\GenerateMultisigAddressEndpoint",
-              "title": "GenerateMultisigAddressEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressEndpoint.php",
+            "projectPath": "address-api\\GenerateMultisigAddressEndpoint.php",
+            "targetPath": "address-api\\GenerateMultisigAddressEndpoint",
+            "pageTitle": "address-api\\GenerateMultisigAddressEndpoint",
+            "title": "GenerateMultisigAddressEndpoint"
           },
           "depth": 2,
           "outline": []
@@ -3127,11 +3127,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-              "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\FundMultisigAddressTransaction.php",
-              "projectPath": "transaction-api\\FundMultisigAddressTransaction.php",
-              "targetPath": "transaction-api\\FundMultisigAddressTransaction",
-              "pageTitle": "transaction-api\\FundMultisigAddressTransaction",
-              "title": "FundMultisigAddressTransaction"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\FundMultisigAddressTransaction.php",
+            "projectPath": "transaction-api\\FundMultisigAddressTransaction.php",
+            "targetPath": "transaction-api\\FundMultisigAddressTransaction",
+            "pageTitle": "transaction-api\\FundMultisigAddressTransaction",
+            "title": "FundMultisigAddressTransaction"
           },
           "depth": 2,
           "outline": [
@@ -3247,6 +3247,35 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                 "level": 1,
                 "title": "Get Transaction",
                 "slug": "get-transaction"
+              },
+              "depth": 1
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetTransactionWithConfidenceFactor.php",
+            "projectPath": "transaction-api\\GetTransactionWithConfidenceFactor.php",
+            "targetPath": "transaction-api\\GetTransactionWithConfidenceFactor",
+            "pageTitle": "transaction-api\\GetTransactionWithConfidenceFactor",
+            "title": "GetTransactionWithConfidenceFactor"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "Get Transaction with confidence factor",
+                "slug": "get-transaction-with-confidence-factor"
               },
               "depth": 1
             }
@@ -3675,11 +3704,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInHDWallet.php",
-            "projectPath": "wallet-api\\GenerateAddressInHDWallet.php",
-            "targetPath": "wallet-api\\GenerateAddressInHDWallet",
-            "pageTitle": "wallet-api\\GenerateAddressInHDWallet",
-            "title": "GenerateAddressInHDWallet"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWallet.php",
+            "projectPath": "wallet-api\\DeriveAddressInHDWallet.php",
+            "targetPath": "wallet-api\\DeriveAddressInHDWallet",
+            "pageTitle": "wallet-api\\DeriveAddressInHDWallet",
+            "title": "DeriveAddressInHDWallet"
           },
           "depth": 2,
           "outline": [
@@ -3687,8 +3716,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Generate New Address in a HD Wallet",
-                "slug": "generate-new-address-in-a-hd-wallet"
+                "title": "Derive New Address in a HD Wallet",
+                "slug": "derive-new-address-in-a-hd-wallet"
               },
               "depth": 1
             }
@@ -3704,11 +3733,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInHDWalletEndpoint.php",
-            "projectPath": "wallet-api\\GenerateAddressInHDWalletEndpoint.php",
-            "targetPath": "wallet-api\\GenerateAddressInHDWalletEndpoint",
-            "pageTitle": "wallet-api\\GenerateAddressInHDWalletEndpoint",
-            "title": "GenerateAddressInHDWalletEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletEndpoint.php",
+            "projectPath": "wallet-api\\DeriveAddressInHDWalletEndpoint.php",
+            "targetPath": "wallet-api\\DeriveAddressInHDWalletEndpoint",
+            "pageTitle": "wallet-api\\DeriveAddressInHDWalletEndpoint",
+            "title": "DeriveAddressInHDWalletEndpoint"
           },
           "depth": 2,
           "outline": []
@@ -3723,11 +3752,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInHDWalletWithSubchainIndex.php",
-            "projectPath": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndex.php",
-            "targetPath": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndex",
-            "pageTitle": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndex",
-            "title": "GenerateAddressInHDWalletWithSubchainIndex"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletWithSubchainIndex.php",
+            "projectPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndex.php",
+            "targetPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndex",
+            "pageTitle": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndex",
+            "title": "DeriveAddressInHDWalletWithSubchainIndex"
           },
           "depth": 2,
           "outline": [
@@ -3735,8 +3764,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Generate New Address in a HD Wallet",
-                "slug": "generate-new-address-in-a-hd-wallet"
+                "title": "Derive New Address in a HD Wallet",
+                "slug": "derive-new-address-in-a-hd-wallet"
               },
               "depth": 1
             }
@@ -3752,11 +3781,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint.php",
-            "projectPath": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint.php",
-            "targetPath": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint",
-            "pageTitle": "wallet-api\\GenerateAddressInHDWalletWithSubchainIndexEndpoint",
-            "title": "GenerateAddressInHDWalletWithSubchainIndexEndpoint"
+            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php",
+            "projectPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php",
+            "targetPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint",
+            "pageTitle": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint",
+            "title": "DeriveAddressInHDWalletWithSubchainIndexEndpoint"
           },
           "depth": 2,
           "outline": []

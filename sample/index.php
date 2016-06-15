@@ -705,7 +705,7 @@ if (PHP_SAPI == 'cli') {
                                 <a href="wallet-api/DeriveAddressInHDWallet.php"
                                    class="btn btn-primary pull-left execute"> Try It <i
                                         class="fa fa-play-circle-o"></i></a>
-                                <a href="doc/wallet-api/GenerateAddressInHDWallet.html"
+                                <a href="doc/wallet-api/DeriveAddressInHDWallet.html"
                                    class="btn btn-default pull-right">Source
                                     <i
                                         class="fa fa-file-code-o"></i></a>
