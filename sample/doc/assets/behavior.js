@@ -24,14 +24,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\AddressBalanceEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\AddressBalanceEndpoint.php",
             "projectPath": "address-api\\AddressBalanceEndpoint.php",
             "targetPath": "address-api\\AddressBalanceEndpoint",
             "pageTitle": "address-api\\AddressBalanceEndpoint",
             "title": "AddressBalanceEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -43,14 +42,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\AddressEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\AddressEndpoint.php",
             "projectPath": "address-api\\AddressEndpoint.php",
             "targetPath": "address-api\\AddressEndpoint",
             "pageTitle": "address-api\\AddressEndpoint",
             "title": "AddressEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -62,14 +60,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\AddressFullEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\AddressFullEndpoint.php",
             "projectPath": "address-api\\AddressFullEndpoint.php",
             "targetPath": "address-api\\AddressFullEndpoint",
             "pageTitle": "address-api\\AddressFullEndpoint",
             "title": "AddressFullEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -81,24 +78,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\CreateAddress.php",
             "projectPath": "address-api\\CreateAddress.php",
             "targetPath": "address-api\\CreateAddress",
             "pageTitle": "address-api\\CreateAddress",
             "title": "CreateAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Address",
-                "slug": "create-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -110,35 +96,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateAddressBtcTest3.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\CreateAddressBtcTest3.php",
             "projectPath": "address-api\\CreateAddressBtcTest3.php",
             "targetPath": "address-api\\CreateAddressBtcTest3",
             "pageTitle": "address-api\\CreateAddressBtcTest3",
             "title": "CreateAddressBtcTest3"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Testnet3 Address",
-                "slug": "create-testnet3-address"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create Address",
-                    "slug": "create-address"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -150,24 +114,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateAddressDogeMain.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\CreateAddressDogeMain.php",
             "projectPath": "address-api\\CreateAddressDogeMain.php",
             "targetPath": "address-api\\CreateAddressDogeMain",
             "pageTitle": "address-api\\CreateAddressDogeMain",
             "title": "CreateAddressDogeMain"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Dogecoin Address Sample",
-                "slug": "create-dogecoin-address-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -179,24 +132,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateBcyTestAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\CreateBcyTestAddress.php",
             "projectPath": "address-api\\CreateBcyTestAddress.php",
             "targetPath": "address-api\\CreateBcyTestAddress",
             "pageTitle": "address-api\\CreateBcyTestAddress",
             "title": "CreateBcyTestAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create BlockCypher Test Address Sample",
-                "slug": "create-blockcypher-test-address-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -208,24 +150,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateBtcTestnetAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\CreateBtcTestnetAddress.php",
             "projectPath": "address-api\\CreateBtcTestnetAddress.php",
             "targetPath": "address-api\\CreateBtcTestnetAddress",
             "pageTitle": "address-api\\CreateBtcTestnetAddress",
             "title": "CreateBtcTestnetAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Bitcoin Testnet Address Sample",
-                "slug": "create-bitcoin-testnet-address-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -237,24 +168,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\CreateMultisigAddress.php",
             "projectPath": "address-api\\CreateMultisigAddress.php",
             "targetPath": "address-api\\CreateMultisigAddress",
             "pageTitle": "address-api\\CreateMultisigAddress",
             "title": "CreateMultisigAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Multisig Address",
-                "slug": "create-multisig-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -266,35 +186,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\CreateMultisigAddressBtcTest3.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\CreateMultisigAddressBtcTest3.php",
             "projectPath": "address-api\\CreateMultisigAddressBtcTest3.php",
             "targetPath": "address-api\\CreateMultisigAddressBtcTest3",
             "pageTitle": "address-api\\CreateMultisigAddressBtcTest3",
             "title": "CreateMultisigAddressBtcTest3"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Multisig Testnet3 Address Sample",
-                "slug": "create-multisig-testnet3-address-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create Multisig Address",
-                    "slug": "create-multisig-address"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -306,24 +204,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GenerateAddress.php",
             "projectPath": "address-api\\GenerateAddress.php",
             "targetPath": "address-api\\GenerateAddress",
             "pageTitle": "address-api\\GenerateAddress",
             "title": "GenerateAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Generate Address",
-                "slug": "generate-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -335,35 +222,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddressBtcTest3.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GenerateAddressBtcTest3.php",
             "projectPath": "address-api\\GenerateAddressBtcTest3.php",
             "targetPath": "address-api\\GenerateAddressBtcTest3",
             "pageTitle": "address-api\\GenerateAddressBtcTest3",
             "title": "GenerateAddressBtcTest3"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Generate Testnet3 Address",
-                "slug": "generate-testnet3-address"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Generate BTC Testnet Address",
-                    "slug": "generate-btc-testnet-address"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -375,14 +240,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateAddressEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GenerateAddressEndpoint.php",
             "projectPath": "address-api\\GenerateAddressEndpoint.php",
             "targetPath": "address-api\\GenerateAddressEndpoint",
             "pageTitle": "address-api\\GenerateAddressEndpoint",
             "title": "GenerateAddressEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -394,24 +258,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GenerateMultisigAddress.php",
             "projectPath": "address-api\\GenerateMultisigAddress.php",
             "targetPath": "address-api\\GenerateMultisigAddress",
             "pageTitle": "address-api\\GenerateMultisigAddress",
             "title": "GenerateMultisigAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Generate Multisig Address",
-                "slug": "generate-multisig-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -423,35 +276,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressBtcTest3.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GenerateMultisigAddressBtcTest3.php",
             "projectPath": "address-api\\GenerateMultisigAddressBtcTest3.php",
             "targetPath": "address-api\\GenerateMultisigAddressBtcTest3",
             "pageTitle": "address-api\\GenerateMultisigAddressBtcTest3",
             "title": "GenerateMultisigAddressBtcTest3"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Generate Multisig Testnet3 Address Sample",
-                "slug": "generate-multisig-testnet3-address-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create Multisig Address",
-                    "slug": "create-multisig-address"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -463,14 +294,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GenerateMultisigAddressEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GenerateMultisigAddressEndpoint.php",
             "projectPath": "address-api\\GenerateMultisigAddressEndpoint.php",
             "targetPath": "address-api\\GenerateMultisigAddressEndpoint",
             "pageTitle": "address-api\\GenerateMultisigAddressEndpoint",
             "title": "GenerateMultisigAddressEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -482,24 +312,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetAddress.php",
             "projectPath": "address-api\\GetAddress.php",
             "targetPath": "address-api\\GetAddress",
             "pageTitle": "address-api\\GetAddress",
             "title": "GetAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Address",
-                "slug": "get-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -511,24 +330,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetAddressBalance.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetAddressBalance.php",
             "projectPath": "address-api\\GetAddressBalance.php",
             "targetPath": "address-api\\GetAddressBalance",
             "pageTitle": "address-api\\GetAddressBalance",
             "title": "GetAddressBalance"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Address Balance Sample",
-                "slug": "get-address-balance-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -540,24 +348,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetAddressBtcTest3.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetAddressBtcTest3.php",
             "projectPath": "address-api\\GetAddressBtcTest3.php",
             "targetPath": "address-api\\GetAddressBtcTest3",
             "pageTitle": "address-api\\GetAddressBtcTest3",
             "title": "GetAddressBtcTest3"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Testnet Address",
-                "slug": "get-testnet-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -569,35 +366,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetAddressWithPaging.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetAddressWithPaging.php",
             "projectPath": "address-api\\GetAddressWithPaging.php",
             "targetPath": "address-api\\GetAddressWithPaging",
             "pageTitle": "address-api\\GetAddressWithPaging",
             "title": "GetAddressWithPaging"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Address Paging Transactions",
-                "slug": "get-address-paging-transactions"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Params:",
-                    "slug": "params"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -609,24 +384,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetAddressWithUnspentOnly.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetAddressWithUnspentOnly.php",
             "projectPath": "address-api\\GetAddressWithUnspentOnly.php",
             "targetPath": "address-api\\GetAddressWithUnspentOnly",
             "pageTitle": "address-api\\GetAddressWithUnspentOnly",
             "title": "GetAddressWithUnspentOnly"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get UTXOs",
-                "slug": "get-utxos"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -638,24 +402,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetFullAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetFullAddress.php",
             "projectPath": "address-api\\GetFullAddress.php",
             "targetPath": "address-api\\GetFullAddress",
             "pageTitle": "address-api\\GetFullAddress",
             "title": "GetFullAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Full Address Sample",
-                "slug": "get-full-address-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -667,24 +420,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetMultipleAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetMultipleAddresses.php",
             "projectPath": "address-api\\GetMultipleAddresses.php",
             "targetPath": "address-api\\GetMultipleAddresses",
             "pageTitle": "address-api\\GetMultipleAddresses",
             "title": "GetMultipleAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple Addresses",
-                "slug": "get-multiple-addresses"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -696,24 +438,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetMultipleAddressesBalance.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetMultipleAddressesBalance.php",
             "projectPath": "address-api\\GetMultipleAddressesBalance.php",
             "targetPath": "address-api\\GetMultipleAddressesBalance",
             "pageTitle": "address-api\\GetMultipleAddressesBalance",
             "title": "GetMultipleAddressesBalance"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple Addresses Balance",
-                "slug": "get-multiple-addresses-balance"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -725,24 +456,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetMultipleFullAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetMultipleFullAddresses.php",
             "projectPath": "address-api\\GetMultipleFullAddresses.php",
             "targetPath": "address-api\\GetMultipleFullAddresses",
             "pageTitle": "address-api\\GetMultipleFullAddresses",
             "title": "GetMultipleFullAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple Full Addresses Sample",
-                "slug": "get-multiple-full-addresses-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -754,24 +474,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\address-api\\GetOnlyBalance.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\address-api\\GetOnlyBalance.php",
             "projectPath": "address-api\\GetOnlyBalance.php",
             "targetPath": "address-api\\GetOnlyBalance",
             "pageTitle": "address-api\\GetOnlyBalance",
             "title": "GetOnlyBalance"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Only Balance",
-                "slug": "get-only-balance"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }
       ]
     }, {
@@ -793,14 +502,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\block-api\\BlockHashEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\block-api\\BlockHashEndpoint.php",
             "projectPath": "block-api\\BlockHashEndpoint.php",
             "targetPath": "block-api\\BlockHashEndpoint",
             "pageTitle": "block-api\\BlockHashEndpoint",
             "title": "BlockHashEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -812,14 +520,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\block-api\\BlockHeightEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\block-api\\BlockHeightEndpoint.php",
             "projectPath": "block-api\\BlockHeightEndpoint.php",
             "targetPath": "block-api\\BlockHeightEndpoint",
             "pageTitle": "block-api\\BlockHeightEndpoint",
             "title": "BlockHeightEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -831,24 +538,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\block-api\\GetBlock.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\block-api\\GetBlock.php",
             "projectPath": "block-api\\GetBlock.php",
             "targetPath": "block-api\\GetBlock",
             "pageTitle": "block-api\\GetBlock",
             "title": "GetBlock"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Block",
-                "slug": "get-block"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -860,24 +556,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\block-api\\GetBlockByHeight.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\block-api\\GetBlockByHeight.php",
             "projectPath": "block-api\\GetBlockByHeight.php",
             "targetPath": "block-api\\GetBlockByHeight",
             "pageTitle": "block-api\\GetBlockByHeight",
             "title": "GetBlockByHeight"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Block By Height",
-                "slug": "get-block-by-height"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -889,24 +574,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\block-api\\GetBlockWithPaging.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\block-api\\GetBlockWithPaging.php",
             "projectPath": "block-api\\GetBlockWithPaging.php",
             "targetPath": "block-api\\GetBlockWithPaging",
             "pageTitle": "block-api\\GetBlockWithPaging",
             "title": "GetBlockWithPaging"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Block With Paging",
-                "slug": "get-block-with-paging"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -918,24 +592,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\block-api\\GetMultipleBlocks.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\block-api\\GetMultipleBlocks.php",
             "projectPath": "block-api\\GetMultipleBlocks.php",
             "targetPath": "block-api\\GetMultipleBlocks",
             "pageTitle": "block-api\\GetMultipleBlocks",
             "title": "GetMultipleBlocks"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple Blocks",
-                "slug": "get-multiple-blocks"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }
       ]
     }, {
@@ -957,14 +620,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\chain-api\\ChainEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\chain-api\\ChainEndpoint.php",
             "projectPath": "chain-api\\ChainEndpoint.php",
             "targetPath": "chain-api\\ChainEndpoint",
             "pageTitle": "chain-api\\ChainEndpoint",
             "title": "ChainEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -976,11 +638,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\chain-api\\GetChain.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\chain-api\\GetChain.php",
             "projectPath": "chain-api\\GetChain.php",
             "targetPath": "chain-api\\GetChain",
             "pageTitle": "chain-api\\GetChain",
             "title": "GetChain"
+          },
+          "depth": 2
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [{}, ".fbp"],
+              "pygmentsLexer": "php",
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "PHP"
+            },
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\chain-api\\GetFeature.php",
+            "projectPath": "chain-api\\GetFeature.php",
+            "targetPath": "chain-api\\GetFeature",
+            "pageTitle": "chain-api\\GetFeature",
+            "title": "GetFeature"
           },
           "depth": 2,
           "outline": [
@@ -988,8 +668,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 1,
-                "title": "Get Blockchain",
-                "slug": "get-blockchain"
+                "title": "Get Blockchain Feature Status",
+                "slug": "get-blockchain-feature-status"
               },
               "depth": 1
             }
@@ -1015,24 +695,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\confidence-factor\\GetMultipleTransactionsConfidence.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\confidence-factor\\GetMultipleTransactionsConfidence.php",
             "projectPath": "confidence-factor\\GetMultipleTransactionsConfidence.php",
             "targetPath": "confidence-factor\\GetMultipleTransactionsConfidence",
             "pageTitle": "confidence-factor\\GetMultipleTransactionsConfidence",
             "title": "GetMultipleTransactionsConfidence"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple Transactions Confidence",
-                "slug": "get-multiple-transactions-confidence"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1044,24 +713,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\confidence-factor\\GetTransactionConfidence.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\confidence-factor\\GetTransactionConfidence.php",
             "projectPath": "confidence-factor\\GetTransactionConfidence.php",
             "targetPath": "confidence-factor\\GetTransactionConfidence",
             "pageTitle": "confidence-factor\\GetTransactionConfidence",
             "title": "GetTransactionConfidence"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Transaction Confidence",
-                "slug": "get-transaction-confidence"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1073,14 +731,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\confidence-factor\\TransactionConfidenceEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\confidence-factor\\TransactionConfidenceEndpoint.php",
             "projectPath": "confidence-factor\\TransactionConfidenceEndpoint.php",
             "targetPath": "confidence-factor\\TransactionConfidenceEndpoint",
             "pageTitle": "confidence-factor\\TransactionConfidenceEndpoint",
             "title": "TransactionConfidenceEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }
       ]
     }, {
@@ -1102,46 +759,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\CreateAndDeleteAllWebHooks.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\CreateAndDeleteAllWebHooks.php",
             "projectPath": "hook-api\\CreateAndDeleteAllWebHooks.php",
             "targetPath": "hook-api\\CreateAndDeleteAllWebHooks",
             "pageTitle": "hook-api\\CreateAndDeleteAllWebHooks",
             "title": "CreateAndDeleteAllWebHooks"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete All WebHooks Sample",
-                "slug": "delete-all-webhooks-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get WebHook Instance",
-                    "slug": "get-webhook-instance"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Delete All WebHooks",
-                        "slug": "delete-all-webhooks"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1153,43 +777,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\CreateAndDeleteWebHook.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\CreateAndDeleteWebHook.php",
             "projectPath": "hook-api\\CreateAndDeleteWebHook.php",
             "targetPath": "hook-api\\CreateAndDeleteWebHook",
             "pageTitle": "hook-api\\CreateAndDeleteWebHook",
             "title": "CreateAndDeleteWebHook"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete WebHook",
-                "slug": "delete-webhook"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Create Sample WebHook",
-                    "slug": "create-sample-webhook"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Delete WebHook",
-                    "slug": "delete-webhook"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1201,43 +795,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\CreateAndListWebHooks.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\CreateAndListWebHooks.php",
             "projectPath": "hook-api\\CreateAndListWebHooks.php",
             "targetPath": "hook-api\\CreateAndListWebHooks",
             "pageTitle": "hook-api\\CreateAndListWebHooks",
             "title": "CreateAndListWebHooks"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "List All WebHooks",
-                "slug": "list-all-webhooks"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Create Sample WebHook",
-                    "slug": "create-sample-webhook"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get all webhooks",
-                    "slug": "get-all-webhooks"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1249,51 +813,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\CreateWebHook.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\CreateWebHook.php",
             "projectPath": "hook-api\\CreateWebHook.php",
             "targetPath": "hook-api\\CreateWebHook",
             "pageTitle": "hook-api\\CreateWebHook",
             "title": "CreateWebHook"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create WebHook",
-                "slug": "create-webhook"
-              },
-              "depth": 1
-            }, {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "WebHook request",
-                "slug": "webhook-request"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 4,
-                    "title": "NOTE: Please note that the use of https is recommended for webhooks.",
-                    "slug": "note-please-note-that-the-use-of-https-is-recommended-for-webhooks"
-                  },
-                  "depth": 4
-                }
-              ]
-            }, {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Event Types",
-                "slug": "event-types"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1305,14 +831,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\CreateWebHookEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\CreateWebHookEndpoint.php",
             "projectPath": "hook-api\\CreateWebHookEndpoint.php",
             "targetPath": "hook-api\\CreateWebHookEndpoint",
             "pageTitle": "hook-api\\CreateWebHookEndpoint",
             "title": "CreateWebHookEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1324,43 +849,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\DeleteAllWebHooks.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\DeleteAllWebHooks.php",
             "projectPath": "hook-api\\DeleteAllWebHooks.php",
             "targetPath": "hook-api\\DeleteAllWebHooks",
             "pageTitle": "hook-api\\DeleteAllWebHooks",
             "title": "DeleteAllWebHooks"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete All WebHooks",
-                "slug": "delete-all-webhooks"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get WebHook Instance",
-                    "slug": "get-webhook-instance"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Delete All WebHooks",
-                    "slug": "delete-all-webhooks"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1372,14 +867,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\DeleteWebHookEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\DeleteWebHookEndpoint.php",
             "projectPath": "hook-api\\DeleteWebHookEndpoint.php",
             "targetPath": "hook-api\\DeleteWebHookEndpoint",
             "pageTitle": "hook-api\\DeleteWebHookEndpoint",
             "title": "DeleteWebHookEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1391,43 +885,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\GetMultipleWebHooks.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\GetMultipleWebHooks.php",
             "projectPath": "hook-api\\GetMultipleWebHooks.php",
             "targetPath": "hook-api\\GetMultipleWebHooks",
             "pageTitle": "hook-api\\GetMultipleWebHooks",
             "title": "GetMultipleWebHooks"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple WebHooks",
-                "slug": "get-multiple-webhooks"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Create Sample WebHook",
-                    "slug": "create-sample-webhook"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get Multiple WebHooks",
-                    "slug": "get-multiple-webhooks"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1439,43 +903,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\GetWebHook.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\GetWebHook.php",
             "projectPath": "hook-api\\GetWebHook.php",
             "targetPath": "hook-api\\GetWebHook",
             "pageTitle": "hook-api\\GetWebHook",
             "title": "GetWebHook"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get WebHook",
-                "slug": "get-webhook"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Create Sample WebHook",
-                    "slug": "create-sample-webhook"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get WebHook by Id",
-                    "slug": "get-webhook-by-id"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1487,35 +921,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\ListWebHooks.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\ListWebHooks.php",
             "projectPath": "hook-api\\ListWebHooks.php",
             "targetPath": "hook-api\\ListWebHooks",
             "pageTitle": "hook-api\\ListWebHooks",
             "title": "ListWebHooks"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get All WebHooks Sample",
-                "slug": "get-all-webhooks-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Get List of All WebHooks",
-                    "slug": "get-list-of-all-webhooks"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1527,14 +939,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\ListWebHooksEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\ListWebHooksEndpoint.php",
             "projectPath": "hook-api\\ListWebHooksEndpoint.php",
             "targetPath": "hook-api\\ListWebHooksEndpoint",
             "pageTitle": "hook-api\\ListWebHooksEndpoint",
             "title": "ListWebHooksEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1546,14 +957,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\hook-api\\WebHookIdEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\hook-api\\WebHookIdEndpoint.php",
             "projectPath": "hook-api\\WebHookIdEndpoint.php",
             "targetPath": "hook-api\\WebHookIdEndpoint",
             "pageTitle": "hook-api\\WebHookIdEndpoint",
             "title": "WebHookIdEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }
       ]
     }, {
@@ -1575,14 +985,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\Batching.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\introduction\\Batching.php",
             "projectPath": "introduction\\Batching.php",
             "targetPath": "introduction\\Batching",
             "pageTitle": "introduction\\Batching",
             "title": "Batching"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1594,24 +1003,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundAddressWithFaucet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\introduction\\FundAddressWithFaucet.php",
             "projectPath": "introduction\\FundAddressWithFaucet.php",
             "targetPath": "introduction\\FundAddressWithFaucet",
             "pageTitle": "introduction\\FundAddressWithFaucet",
             "title": "FundAddressWithFaucet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Fund Address with Faucet",
-                "slug": "fund-address-with-faucet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1623,14 +1021,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\FundAddressWithFaucetEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\introduction\\FundAddressWithFaucetEndpoint.php",
             "projectPath": "introduction\\FundAddressWithFaucetEndpoint.php",
             "targetPath": "introduction\\FundAddressWithFaucetEndpoint",
             "pageTitle": "introduction\\FundAddressWithFaucetEndpoint",
             "title": "FundAddressWithFaucetEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1642,14 +1039,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\GenerateBcyAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\introduction\\GenerateBcyAddress.php",
             "projectPath": "introduction\\GenerateBcyAddress.php",
             "targetPath": "introduction\\GenerateBcyAddress",
             "pageTitle": "introduction\\GenerateBcyAddress",
             "title": "GenerateBcyAddress"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1661,24 +1057,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\introduction\\GenerateTestAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\introduction\\GenerateTestAddress.php",
             "projectPath": "introduction\\GenerateTestAddress.php",
             "targetPath": "introduction\\GenerateTestAddress",
             "pageTitle": "introduction\\GenerateTestAddress",
             "title": "GenerateTestAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Generate New BlockCypher Test Address",
-                "slug": "generate-new-blockcypher-test-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }
       ]
     }, {
@@ -1700,24 +1085,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPrivate.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPrivate.php",
             "projectPath": "microtransaction-api\\CreateMicroTXFromPrivate.php",
             "targetPath": "microtransaction-api\\CreateMicroTXFromPrivate",
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPrivate",
             "title": "CreateMicroTXFromPrivate"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create and Send with MicroTXClient",
-                "slug": "create-and-send-with-microtxclient"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1729,14 +1103,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPrivateDocsSample.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPrivateDocsSample.php",
             "projectPath": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample.php",
             "targetPath": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample",
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPrivateDocsSample",
             "title": "CreateMicroTXFromPrivateDocsSample"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1748,24 +1121,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPubkey.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPubkey.php",
             "projectPath": "microtransaction-api\\CreateMicroTXFromPubkey.php",
             "targetPath": "microtransaction-api\\CreateMicroTXFromPubkey",
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPubkey",
             "title": "CreateMicroTXFromPubkey"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign and Send With MicroTXClient",
-                "slug": "create-sign-and-send-with-microtxclient"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1777,14 +1139,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPubkeyDocsSample.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromPubkeyDocsSample.php",
             "projectPath": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample.php",
             "targetPath": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample",
             "pageTitle": "microtransaction-api\\CreateMicroTXFromPubkeyDocsSample",
             "title": "CreateMicroTXFromPubkeyDocsSample"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1796,24 +1157,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromWif.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTXFromWif.php",
             "projectPath": "microtransaction-api\\CreateMicroTXFromWif.php",
             "targetPath": "microtransaction-api\\CreateMicroTXFromWif",
             "pageTitle": "microtransaction-api\\CreateMicroTXFromWif",
             "title": "CreateMicroTXFromWif"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create and Send with MicroTXClient",
-                "slug": "create-and-send-with-microtxclient"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1825,24 +1175,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTXWithMicroTXBuilder.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTXWithMicroTXBuilder.php",
             "projectPath": "microtransaction-api\\CreateMicroTXWithMicroTXBuilder.php",
             "targetPath": "microtransaction-api\\CreateMicroTXWithMicroTXBuilder",
             "pageTitle": "microtransaction-api\\CreateMicroTXWithMicroTXBuilder",
             "title": "CreateMicroTXWithMicroTXBuilder"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create MicroTX Sample (using a builder)",
-                "slug": "create-microtx-sample-using-a-builder"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1854,24 +1193,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTransaction.php",
             "projectPath": "microtransaction-api\\CreateMicroTransaction.php",
             "targetPath": "microtransaction-api\\CreateMicroTransaction",
             "pageTitle": "microtransaction-api\\CreateMicroTransaction",
             "title": "CreateMicroTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create MicroTX Sample",
-                "slug": "create-microtx-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1883,24 +1211,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTransactionViaPrivateKey.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTransactionViaPrivateKey.php",
             "projectPath": "microtransaction-api\\CreateMicroTransactionViaPrivateKey.php",
             "targetPath": "microtransaction-api\\CreateMicroTransactionViaPrivateKey",
             "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPrivateKey",
             "title": "CreateMicroTransactionViaPrivateKey"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create MicroTX",
-                "slug": "create-microtx"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1912,24 +1229,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateMicroTransactionViaPublicKey.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateMicroTransactionViaPublicKey.php",
             "projectPath": "microtransaction-api\\CreateMicroTransactionViaPublicKey.php",
             "targetPath": "microtransaction-api\\CreateMicroTransactionViaPublicKey",
             "pageTitle": "microtransaction-api\\CreateMicroTransactionViaPublicKey",
             "title": "CreateMicroTransactionViaPublicKey"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create MicroTX Sample from PublicKey",
-                "slug": "create-microtx-sample-from-publickey"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1941,24 +1247,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateSignAndSendMicroTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateSignAndSendMicroTransaction.php",
             "projectPath": "microtransaction-api\\CreateSignAndSendMicroTransaction.php",
             "targetPath": "microtransaction-api\\CreateSignAndSendMicroTransaction",
             "pageTitle": "microtransaction-api\\CreateSignAndSendMicroTransaction",
             "title": "CreateSignAndSendMicroTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign and Send MicroTX",
-                "slug": "create-sign-and-send-microtx"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -1970,24 +1265,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\microtransaction-api\\CreateSignWithWifAndSendMicroTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\microtransaction-api\\CreateSignWithWifAndSendMicroTransaction.php",
             "projectPath": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction.php",
             "targetPath": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction",
             "pageTitle": "microtransaction-api\\CreateSignWithWifAndSendMicroTransaction",
             "title": "CreateSignWithWifAndSendMicroTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign (WIF) and Send MicroTX",
-                "slug": "create-sign-wif-and-send-microtx"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }
       ]
     }, {
@@ -2009,43 +1293,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndDeleteForwardingAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\CreateAndDeleteForwardingAddress.php",
             "projectPath": "payment-api\\CreateAndDeleteForwardingAddress.php",
             "targetPath": "payment-api\\CreateAndDeleteForwardingAddress",
             "pageTitle": "payment-api\\CreateAndDeleteForwardingAddress",
             "title": "CreateAndDeleteForwardingAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete PaymentForward",
-                "slug": "delete-paymentforward"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Create PaymentForward Instance",
-                    "slug": "create-paymentforward-instance"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Delete PaymentForward",
-                    "slug": "delete-paymentforward"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2057,35 +1311,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndDeletePaymentForward.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\CreateAndDeletePaymentForward.php",
             "projectPath": "payment-api\\CreateAndDeletePaymentForward.php",
             "targetPath": "payment-api\\CreateAndDeletePaymentForward",
             "pageTitle": "payment-api\\CreateAndDeletePaymentForward",
             "title": "CreateAndDeletePaymentForward"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete PaymentForward",
-                "slug": "delete-paymentforward"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Create PaymentForward Instance",
-                    "slug": "create-paymentforward-instance"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2097,35 +1329,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateAndListForwardingAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\CreateAndListForwardingAddresses.php",
             "projectPath": "payment-api\\CreateAndListForwardingAddresses.php",
             "targetPath": "payment-api\\CreateAndListForwardingAddresses",
             "pageTitle": "payment-api\\CreateAndListForwardingAddresses",
             "title": "CreateAndListForwardingAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "List All PaymentForwards",
-                "slug": "list-all-paymentforwards"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Create one PaymentForward",
-                    "slug": "create-one-paymentforward"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2137,24 +1347,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreateForwardingAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\CreateForwardingAddress.php",
             "projectPath": "payment-api\\CreateForwardingAddress.php",
             "targetPath": "payment-api\\CreateForwardingAddress",
             "pageTitle": "payment-api\\CreateForwardingAddress",
             "title": "CreateForwardingAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create a Payment Forwarding Address",
-                "slug": "create-a-payment-forwarding-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2166,14 +1365,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\CreatePaymentEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\CreatePaymentEndpoint.php",
             "projectPath": "payment-api\\CreatePaymentEndpoint.php",
             "targetPath": "payment-api\\CreatePaymentEndpoint",
             "pageTitle": "payment-api\\CreatePaymentEndpoint",
             "title": "CreatePaymentEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2185,43 +1383,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\DeleteAllForwardingAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\DeleteAllForwardingAddresses.php",
             "projectPath": "payment-api\\DeleteAllForwardingAddresses.php",
             "targetPath": "payment-api\\DeleteAllForwardingAddresses",
             "pageTitle": "payment-api\\DeleteAllForwardingAddresses",
             "title": "DeleteAllForwardingAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete All PaymentForwards",
-                "slug": "delete-all-paymentforwards"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get All PaymentForwards",
-                    "slug": "get-all-paymentforwards"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Delete All PaymentForwards",
-                    "slug": "delete-all-paymentforwards"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2233,14 +1401,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\DeletePaymentEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\DeletePaymentEndpoint.php",
             "projectPath": "payment-api\\DeletePaymentEndpoint.php",
             "targetPath": "payment-api\\DeletePaymentEndpoint",
             "pageTitle": "payment-api\\DeletePaymentEndpoint",
             "title": "DeletePaymentEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2252,35 +1419,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetForwardingAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\GetForwardingAddress.php",
             "projectPath": "payment-api\\GetForwardingAddress.php",
             "targetPath": "payment-api\\GetForwardingAddress",
             "pageTitle": "payment-api\\GetForwardingAddress",
             "title": "GetForwardingAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get PaymentForward",
-                "slug": "get-paymentforward"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get PaymentForward ID",
-                    "slug": "get-paymentforward-id"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2292,35 +1437,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\GetMultipleForwardingAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\GetMultipleForwardingAddresses.php",
             "projectPath": "payment-api\\GetMultipleForwardingAddresses.php",
             "targetPath": "payment-api\\GetMultipleForwardingAddresses",
             "pageTitle": "payment-api\\GetMultipleForwardingAddresses",
             "title": "GetMultipleForwardingAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple PaymentForwards",
-                "slug": "get-multiple-paymentforwards"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Get PaymentForward ID",
-                    "slug": "get-paymentforward-id"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2332,24 +1455,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\ListForwardingAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\ListForwardingAddresses.php",
             "projectPath": "payment-api\\ListForwardingAddresses.php",
             "targetPath": "payment-api\\ListForwardingAddresses",
             "pageTitle": "payment-api\\ListForwardingAddresses",
             "title": "ListForwardingAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "List All PaymentForwards",
-                "slug": "list-all-paymentforwards"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2361,14 +1473,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\payment-api\\ListPaymentsEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\payment-api\\ListPaymentsEndpoint.php",
             "projectPath": "payment-api\\ListPaymentsEndpoint.php",
             "targetPath": "payment-api\\ListPaymentsEndpoint",
             "pageTitle": "payment-api\\ListPaymentsEndpoint",
             "title": "ListPaymentsEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }
       ]
     }, {
@@ -2390,14 +1501,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\sandbox\\index.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\sandbox\\index.php",
             "projectPath": "sandbox\\index.php",
             "targetPath": "sandbox\\index",
             "pageTitle": "sandbox\\index",
             "title": "index"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }
       ]
     }, {
@@ -2419,51 +1529,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\signer\\Sign.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\signer\\Sign.php",
             "projectPath": "signer\\Sign.php",
             "targetPath": "signer\\Sign",
             "pageTitle": "signer\\Sign",
             "title": "Sign"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Sign Hex Data",
-                "slug": "sign-hex-data"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Sample accepts GET parameters",
-                    "slug": "sample-accepts-get-parameters"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Using signer",
-                    "slug": "using-signer"
-                  },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Run on console",
-                    "slug": "run-on-console"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }
       ]
     }, {
@@ -2485,24 +1557,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransaction.php",
             "projectPath": "transaction-api\\CreateAndSignAndSendTransaction.php",
             "targetPath": "transaction-api\\CreateAndSignAndSendTransaction",
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransaction",
             "title": "CreateAndSignAndSendTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign and Send Transaction",
-                "slug": "create-sign-and-send-transaction"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2514,43 +1575,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransactionBCTesnet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransactionBCTesnet.php",
             "projectPath": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet.php",
             "targetPath": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet",
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionBCTesnet",
             "title": "CreateAndSignAndSendTransactionBCTesnet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign and Send TX Sample",
-                "slug": "create-sign-and-send-tx-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Sign the TX",
-                    "slug": "sign-the-tx"
-                  },
-                  "depth": 3
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Send TX to the network",
-                    "slug": "send-tx-to-the-network"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2562,43 +1593,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransactionDogeMain.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateAndSignAndSendTransactionDogeMain.php",
             "projectPath": "transaction-api\\CreateAndSignAndSendTransactionDogeMain.php",
             "targetPath": "transaction-api\\CreateAndSignAndSendTransactionDogeMain",
             "pageTitle": "transaction-api\\CreateAndSignAndSendTransactionDogeMain",
             "title": "CreateAndSignAndSendTransactionDogeMain"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create, Sign and Send TX Sample",
-                "slug": "create-sign-and-send-tx-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Sign the TX",
-                    "slug": "sign-the-tx"
-                  },
-                  "depth": 3
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Send TX to the network",
-                    "slug": "send-tx-to-the-network"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2610,24 +1611,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransaction.php",
             "projectPath": "transaction-api\\CreateTransaction.php",
             "targetPath": "transaction-api\\CreateTransaction",
             "pageTitle": "transaction-api\\CreateTransaction",
             "title": "CreateTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX (without sending it)",
-                "slug": "create-tx-without-sending-it"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2639,35 +1629,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisigAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisigAddress.php",
             "projectPath": "transaction-api\\CreateTransactionToFundMultisigAddress.php",
             "targetPath": "transaction-api\\CreateTransactionToFundMultisigAddress",
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisigAddress",
             "title": "CreateTransactionToFundMultisigAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX To Fund Multisig Address",
-                "slug": "create-tx-to-fund-multisig-address"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "TX request object:",
-                    "slug": "tx-request-object"
-                  },
-                  "depth": 2
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2679,14 +1647,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisigAddressEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionToFundMultisigAddressEndpoint.php",
             "projectPath": "transaction-api\\CreateTransactionToFundMultisigAddressEndpoint.php",
             "targetPath": "transaction-api\\CreateTransactionToFundMultisigAddressEndpoint",
             "pageTitle": "transaction-api\\CreateTransactionToFundMultisigAddressEndpoint",
             "title": "CreateTransactionToFundMultisigAddressEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2698,24 +1665,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionToSpendMultisigFunds.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionToSpendMultisigFunds.php",
             "projectPath": "transaction-api\\CreateTransactionToSpendMultisigFunds.php",
             "targetPath": "transaction-api\\CreateTransactionToSpendMultisigFunds",
             "pageTitle": "transaction-api\\CreateTransactionToSpendMultisigFunds",
             "title": "CreateTransactionToSpendMultisigFunds"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX Sample (without sending it)",
-                "slug": "create-tx-sample-without-sending-it"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2727,24 +1683,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionUsingWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionUsingWallet.php",
             "projectPath": "transaction-api\\CreateTransactionUsingWallet.php",
             "targetPath": "transaction-api\\CreateTransactionUsingWallet",
             "pageTitle": "transaction-api\\CreateTransactionUsingWallet",
             "title": "CreateTransactionUsingWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX from wallet (without sending it)",
-                "slug": "create-tx-from-wallet-without-sending-it"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2756,46 +1701,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilder.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilder.php",
             "projectPath": "transaction-api\\CreateTransactionWithTXBuilder.php",
             "targetPath": "transaction-api\\CreateTransactionWithTXBuilder",
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilder",
             "title": "CreateTransactionWithTXBuilder"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX Sample (without sending it)",
-                "slug": "create-tx-sample-without-sending-it"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "partially-filled out TX request object.",
-                    "slug": "partially-filled-out-tx-request-object"
-                  },
-                  "depth": 2,
-                  "children": [
-                    {
-                      "type": "heading",
-                      "data": {
-                        "level": 3,
-                        "title": "Create New TX",
-                        "slug": "create-new-tx"
-                      },
-                      "depth": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2807,35 +1719,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilderBCTestnet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilderBCTestnet.php",
             "projectPath": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet.php",
             "targetPath": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet",
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderBCTestnet",
             "title": "CreateTransactionWithTXBuilderBCTestnet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX Sample (without sending it)",
-                "slug": "create-tx-sample-without-sending-it"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create New TX",
-                    "slug": "create-new-tx"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2847,35 +1737,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilderDogeMain.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionWithTXBuilderDogeMain.php",
             "projectPath": "transaction-api\\CreateTransactionWithTXBuilderDogeMain.php",
             "targetPath": "transaction-api\\CreateTransactionWithTXBuilderDogeMain",
             "pageTitle": "transaction-api\\CreateTransactionWithTXBuilderDogeMain",
             "title": "CreateTransactionWithTXBuilderDogeMain"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create TX Sample (without sending it)",
-                "slug": "create-tx-sample-without-sending-it"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Create New TX",
-                    "slug": "create-new-tx"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2887,24 +1755,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTransactionWithThirdPartySoftware.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTransactionWithThirdPartySoftware.php",
             "projectPath": "transaction-api\\CreateTransactionWithThirdPartySoftware.php",
             "targetPath": "transaction-api\\CreateTransactionWithThirdPartySoftware",
             "pageTitle": "transaction-api\\CreateTransactionWithThirdPartySoftware",
             "title": "CreateTransactionWithThirdPartySoftware"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create a TX using third party software",
-                "slug": "create-a-tx-using-third-party-software"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2916,14 +1773,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrEndpoint.php",
             "projectPath": "transaction-api\\CreateTxToFundMultisigAddrEndpoint.php",
             "targetPath": "transaction-api\\CreateTxToFundMultisigAddrEndpoint",
             "pageTitle": "transaction-api\\CreateTxToFundMultisigAddrEndpoint",
             "title": "CreateTxToFundMultisigAddrEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2935,24 +1791,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrWithBuilder.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrWithBuilder.php",
             "projectPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilder.php",
             "targetPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilder",
             "pageTitle": "transaction-api\\CreateTxToFundMultisigAddrWithBuilder",
             "title": "CreateTxToFundMultisigAddrWithBuilder"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Fund multisig address (using builder)",
-                "slug": "fund-multisig-address-using-builder"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2964,14 +1809,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint.php",
             "projectPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint.php",
             "targetPath": "transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint",
             "pageTitle": "transaction-api\\CreateTxToFundMultisigAddrWithBuilderEndpoint",
             "title": "CreateTxToFundMultisigAddrWithBuilderEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -2983,24 +1827,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisigFundsWithBuilder.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisigFundsWithBuilder.php",
             "projectPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilder.php",
             "targetPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilder",
             "pageTitle": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilder",
             "title": "CreateTxToSpendMultisigFundsWithBuilder"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Spend Multisig Funds (using builder)",
-                "slug": "spend-multisig-funds-using-builder"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3012,14 +1845,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint.php",
             "projectPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint.php",
             "targetPath": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint",
             "pageTitle": "transaction-api\\CreateTxToSpendMultisigFundsWithBuilderEndpoint",
             "title": "CreateTxToSpendMultisigFundsWithBuilderEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3031,14 +1863,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\DataEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\DataEndpoint.php",
             "projectPath": "transaction-api\\DataEndpoint.php",
             "targetPath": "transaction-api\\DataEndpoint",
             "pageTitle": "transaction-api\\DataEndpoint",
             "title": "DataEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3050,24 +1881,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\DecodeRawTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\DecodeRawTransaction.php",
             "projectPath": "transaction-api\\DecodeRawTransaction.php",
             "targetPath": "transaction-api\\DecodeRawTransaction",
             "pageTitle": "transaction-api\\DecodeRawTransaction",
             "title": "DecodeRawTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Decode Raw Transactions",
-                "slug": "decode-raw-transactions"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3079,14 +1899,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\DecodeRawTransactionEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\DecodeRawTransactionEndpoint.php",
             "projectPath": "transaction-api\\DecodeRawTransactionEndpoint.php",
             "targetPath": "transaction-api\\DecodeRawTransactionEndpoint",
             "pageTitle": "transaction-api\\DecodeRawTransactionEndpoint",
             "title": "DecodeRawTransactionEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3098,24 +1917,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\EmbedDataOnBlockchain.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\EmbedDataOnBlockchain.php",
             "projectPath": "transaction-api\\EmbedDataOnBlockchain.php",
             "targetPath": "transaction-api\\EmbedDataOnBlockchain",
             "pageTitle": "transaction-api\\EmbedDataOnBlockchain",
             "title": "EmbedDataOnBlockchain"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Embed Data on Blockchains",
-                "slug": "embed-data-on-blockchains"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3127,43 +1935,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\FundMultisigAddressTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\FundMultisigAddressTransaction.php",
             "projectPath": "transaction-api\\FundMultisigAddressTransaction.php",
             "targetPath": "transaction-api\\FundMultisigAddressTransaction",
             "pageTitle": "transaction-api\\FundMultisigAddressTransaction",
             "title": "FundMultisigAddressTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Fund Multisig Address Sample",
-                "slug": "fund-multisig-address-sample"
-              },
-              "depth": 1,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Sign the TX",
-                    "slug": "sign-the-tx"
-                  },
-                  "depth": 3
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Send TX to the network",
-                    "slug": "send-tx-to-the-network"
-                  },
-                  "depth": 3
-                }
-              ]
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3175,24 +1953,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetAllUnconfirmedTransactions.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\GetAllUnconfirmedTransactions.php",
             "projectPath": "transaction-api\\GetAllUnconfirmedTransactions.php",
             "targetPath": "transaction-api\\GetAllUnconfirmedTransactions",
             "pageTitle": "transaction-api\\GetAllUnconfirmedTransactions",
             "title": "GetAllUnconfirmedTransactions"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Unconfirmed Transactions",
-                "slug": "get-unconfirmed-transactions"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3204,24 +1971,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetMultipleTransactions.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\GetMultipleTransactions.php",
             "projectPath": "transaction-api\\GetMultipleTransactions.php",
             "targetPath": "transaction-api\\GetMultipleTransactions",
             "pageTitle": "transaction-api\\GetMultipleTransactions",
             "title": "GetMultipleTransactions"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Multiple Transactions",
-                "slug": "get-multiple-transactions"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3233,24 +1989,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\GetTransaction.php",
             "projectPath": "transaction-api\\GetTransaction.php",
             "targetPath": "transaction-api\\GetTransaction",
             "pageTitle": "transaction-api\\GetTransaction",
             "title": "GetTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Transaction",
-                "slug": "get-transaction"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3262,24 +2007,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetTransactionWithConfidenceFactor.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\GetTransactionWithConfidenceFactor.php",
             "projectPath": "transaction-api\\GetTransactionWithConfidenceFactor.php",
             "targetPath": "transaction-api\\GetTransactionWithConfidenceFactor",
             "pageTitle": "transaction-api\\GetTransactionWithConfidenceFactor",
             "title": "GetTransactionWithConfidenceFactor"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Transaction with confidence factor",
-                "slug": "get-transaction-with-confidence-factor"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3291,24 +2025,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\GetTransactionWithPaging.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\GetTransactionWithPaging.php",
             "projectPath": "transaction-api\\GetTransactionWithPaging.php",
             "targetPath": "transaction-api\\GetTransactionWithPaging",
             "pageTitle": "transaction-api\\GetTransactionWithPaging",
             "title": "GetTransactionWithPaging"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Transactions With Paging",
-                "slug": "get-transactions-with-paging"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3320,14 +2043,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\NewTransactionEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\NewTransactionEndpoint.php",
             "projectPath": "transaction-api\\NewTransactionEndpoint.php",
             "targetPath": "transaction-api\\NewTransactionEndpoint",
             "pageTitle": "transaction-api\\NewTransactionEndpoint",
             "title": "NewTransactionEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3339,24 +2061,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\PushRawTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\PushRawTransaction.php",
             "projectPath": "transaction-api\\PushRawTransaction.php",
             "targetPath": "transaction-api\\PushRawTransaction",
             "pageTitle": "transaction-api\\PushRawTransaction",
             "title": "PushRawTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Push Raw Transaction to the Network",
-                "slug": "push-raw-transaction-to-the-network"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3368,14 +2079,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\PushRawTransactionEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\PushRawTransactionEndpoint.php",
             "projectPath": "transaction-api\\PushRawTransactionEndpoint.php",
             "targetPath": "transaction-api\\PushRawTransactionEndpoint",
             "pageTitle": "transaction-api\\PushRawTransactionEndpoint",
             "title": "PushRawTransactionEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3387,24 +2097,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\SpendMultisigFundsTransaction.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\SpendMultisigFundsTransaction.php",
             "projectPath": "transaction-api\\SpendMultisigFundsTransaction.php",
             "targetPath": "transaction-api\\SpendMultisigFundsTransaction",
             "pageTitle": "transaction-api\\SpendMultisigFundsTransaction",
             "title": "SpendMultisigFundsTransaction"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Spend Multisig Funds Sample",
-                "slug": "spend-multisig-funds-sample"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3416,14 +2115,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\TransactionHashEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\TransactionHashEndpoint.php",
             "projectPath": "transaction-api\\TransactionHashEndpoint.php",
             "targetPath": "transaction-api\\TransactionHashEndpoint",
             "pageTitle": "transaction-api\\TransactionHashEndpoint",
             "title": "TransactionHashEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3435,14 +2133,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\transaction-api\\UnconfirmedTransactionsEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\transaction-api\\UnconfirmedTransactionsEndpoint.php",
             "projectPath": "transaction-api\\UnconfirmedTransactionsEndpoint.php",
             "targetPath": "transaction-api\\UnconfirmedTransactionsEndpoint",
             "pageTitle": "transaction-api\\UnconfirmedTransactionsEndpoint",
             "title": "UnconfirmedTransactionsEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }
       ]
     }, {
@@ -3464,24 +2161,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\AddAddressesToWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\AddAddressesToWallet.php",
             "projectPath": "wallet-api\\AddAddressesToWallet.php",
             "targetPath": "wallet-api\\AddAddressesToWallet",
             "pageTitle": "wallet-api\\AddAddressesToWallet",
             "title": "AddAddressesToWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Add Addresses to Wallet",
-                "slug": "add-addresses-to-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3493,14 +2179,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\AddAddressesToWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\AddAddressesToWalletEndpoint.php",
             "projectPath": "wallet-api\\AddAddressesToWalletEndpoint.php",
             "targetPath": "wallet-api\\AddAddressesToWalletEndpoint",
             "pageTitle": "wallet-api\\AddAddressesToWalletEndpoint",
             "title": "AddAddressesToWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3512,24 +2197,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\CreateHDWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\CreateHDWallet.php",
             "projectPath": "wallet-api\\CreateHDWallet.php",
             "targetPath": "wallet-api\\CreateHDWallet",
             "pageTitle": "wallet-api\\CreateHDWallet",
             "title": "CreateHDWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create HDWallet",
-                "slug": "create-hdwallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3541,14 +2215,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\CreateHDWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\CreateHDWalletEndpoint.php",
             "projectPath": "wallet-api\\CreateHDWalletEndpoint.php",
             "targetPath": "wallet-api\\CreateHDWalletEndpoint",
             "pageTitle": "wallet-api\\CreateHDWalletEndpoint",
             "title": "CreateHDWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3560,24 +2233,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\CreateWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\CreateWallet.php",
             "projectPath": "wallet-api\\CreateWallet.php",
             "targetPath": "wallet-api\\CreateWallet",
             "pageTitle": "wallet-api\\CreateWallet",
             "title": "CreateWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Create Wallet",
-                "slug": "create-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3589,14 +2251,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\CreateWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\CreateWalletEndpoint.php",
             "projectPath": "wallet-api\\CreateWalletEndpoint.php",
             "targetPath": "wallet-api\\CreateWalletEndpoint",
             "pageTitle": "wallet-api\\CreateWalletEndpoint",
             "title": "CreateWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3608,24 +2269,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeleteHDWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeleteHDWallet.php",
             "projectPath": "wallet-api\\DeleteHDWallet.php",
             "targetPath": "wallet-api\\DeleteHDWallet",
             "pageTitle": "wallet-api\\DeleteHDWallet",
             "title": "DeleteHDWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete HDWallet",
-                "slug": "delete-hdwallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3637,14 +2287,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeleteHDWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeleteHDWalletEndpoint.php",
             "projectPath": "wallet-api\\DeleteHDWalletEndpoint.php",
             "targetPath": "wallet-api\\DeleteHDWalletEndpoint",
             "pageTitle": "wallet-api\\DeleteHDWalletEndpoint",
             "title": "DeleteHDWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3656,24 +2305,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeleteWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeleteWallet.php",
             "projectPath": "wallet-api\\DeleteWallet.php",
             "targetPath": "wallet-api\\DeleteWallet",
             "pageTitle": "wallet-api\\DeleteWallet",
             "title": "DeleteWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Delete Wallet",
-                "slug": "delete-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3685,14 +2323,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeleteWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeleteWalletEndpoint.php",
             "projectPath": "wallet-api\\DeleteWalletEndpoint.php",
             "targetPath": "wallet-api\\DeleteWalletEndpoint",
             "pageTitle": "wallet-api\\DeleteWalletEndpoint",
             "title": "DeleteWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3704,24 +2341,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeriveAddressInHDWallet.php",
             "projectPath": "wallet-api\\DeriveAddressInHDWallet.php",
             "targetPath": "wallet-api\\DeriveAddressInHDWallet",
             "pageTitle": "wallet-api\\DeriveAddressInHDWallet",
             "title": "DeriveAddressInHDWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Derive New Address in a HD Wallet",
-                "slug": "derive-new-address-in-a-hd-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3733,14 +2359,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletEndpoint.php",
             "projectPath": "wallet-api\\DeriveAddressInHDWalletEndpoint.php",
             "targetPath": "wallet-api\\DeriveAddressInHDWalletEndpoint",
             "pageTitle": "wallet-api\\DeriveAddressInHDWalletEndpoint",
             "title": "DeriveAddressInHDWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3752,24 +2377,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletWithSubchainIndex.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletWithSubchainIndex.php",
             "projectPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndex.php",
             "targetPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndex",
             "pageTitle": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndex",
             "title": "DeriveAddressInHDWalletWithSubchainIndex"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Derive New Address in a HD Wallet",
-                "slug": "derive-new-address-in-a-hd-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3781,14 +2395,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php",
             "projectPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint.php",
             "targetPath": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint",
             "pageTitle": "wallet-api\\DeriveAddressInHDWalletWithSubchainIndexEndpoint",
             "title": "DeriveAddressInHDWalletWithSubchainIndexEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3800,24 +2413,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GenerateAddressInWallet.php",
             "projectPath": "wallet-api\\GenerateAddressInWallet.php",
             "targetPath": "wallet-api\\GenerateAddressInWallet",
             "pageTitle": "wallet-api\\GenerateAddressInWallet",
             "title": "GenerateAddressInWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Generate New Address for a Wallet",
-                "slug": "generate-new-address-for-a-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3829,14 +2431,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateAddressInWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GenerateAddressInWalletEndpoint.php",
             "projectPath": "wallet-api\\GenerateAddressInWalletEndpoint.php",
             "targetPath": "wallet-api\\GenerateAddressInWalletEndpoint",
             "pageTitle": "wallet-api\\GenerateAddressInWalletEndpoint",
             "title": "GenerateAddressInWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3848,24 +2449,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GenerateNewAddressForWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GenerateNewAddressForWallet.php",
             "projectPath": "wallet-api\\GenerateNewAddressForWallet.php",
             "targetPath": "wallet-api\\GenerateNewAddressForWallet",
             "pageTitle": "wallet-api\\GenerateNewAddressForWallet",
             "title": "GenerateNewAddressForWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Generate New Address for a Wallet",
-                "slug": "generate-new-address-for-a-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3877,24 +2467,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetHDWallet.php",
             "projectPath": "wallet-api\\GetHDWallet.php",
             "targetPath": "wallet-api\\GetHDWallet",
             "pageTitle": "wallet-api\\GetHDWallet",
             "title": "GetHDWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get HDWallet",
-                "slug": "get-hdwallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3906,14 +2485,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWalletAddressesEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetHDWalletAddressesEndpoint.php",
             "projectPath": "wallet-api\\GetHDWalletAddressesEndpoint.php",
             "targetPath": "wallet-api\\GetHDWalletAddressesEndpoint",
             "pageTitle": "wallet-api\\GetHDWalletAddressesEndpoint",
             "title": "GetHDWalletAddressesEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3925,24 +2503,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWalletAsAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetHDWalletAsAddress.php",
             "projectPath": "wallet-api\\GetHDWalletAsAddress.php",
             "targetPath": "wallet-api\\GetHDWalletAsAddress",
             "pageTitle": "wallet-api\\GetHDWalletAsAddress",
             "title": "GetHDWalletAsAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get HDWallet as Address",
-                "slug": "get-hdwallet-as-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3954,24 +2521,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWalletAsFullAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetHDWalletAsFullAddress.php",
             "projectPath": "wallet-api\\GetHDWalletAsFullAddress.php",
             "targetPath": "wallet-api\\GetHDWalletAsFullAddress",
             "pageTitle": "wallet-api\\GetHDWalletAsFullAddress",
             "title": "GetHDWalletAsFullAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Full HDWallet",
-                "slug": "get-full-hdwallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -3983,24 +2539,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWalletBalanceAsAddressBalance.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetHDWalletBalanceAsAddressBalance.php",
             "projectPath": "wallet-api\\GetHDWalletBalanceAsAddressBalance.php",
             "targetPath": "wallet-api\\GetHDWalletBalanceAsAddressBalance",
             "pageTitle": "wallet-api\\GetHDWalletBalanceAsAddressBalance",
             "title": "GetHDWalletBalanceAsAddressBalance"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Only HDWallet Balance",
-                "slug": "get-only-hdwallet-balance"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4012,14 +2557,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetHDWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetHDWalletEndpoint.php",
             "projectPath": "wallet-api\\GetHDWalletEndpoint.php",
             "targetPath": "wallet-api\\GetHDWalletEndpoint",
             "pageTitle": "wallet-api\\GetHDWalletEndpoint",
             "title": "GetHDWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4031,24 +2575,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetWallet.php",
             "projectPath": "wallet-api\\GetWallet.php",
             "targetPath": "wallet-api\\GetWallet",
             "pageTitle": "wallet-api\\GetWallet",
             "title": "GetWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Wallet",
-                "slug": "get-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4060,14 +2593,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWalletAddressesEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetWalletAddressesEndpoint.php",
             "projectPath": "wallet-api\\GetWalletAddressesEndpoint.php",
             "targetPath": "wallet-api\\GetWalletAddressesEndpoint",
             "pageTitle": "wallet-api\\GetWalletAddressesEndpoint",
             "title": "GetWalletAddressesEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4079,24 +2611,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWalletAsAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetWalletAsAddress.php",
             "projectPath": "wallet-api\\GetWalletAsAddress.php",
             "targetPath": "wallet-api\\GetWalletAsAddress",
             "pageTitle": "wallet-api\\GetWalletAsAddress",
             "title": "GetWalletAsAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Wallet as Address",
-                "slug": "get-wallet-as-address"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4108,24 +2629,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWalletAsFullAddress.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetWalletAsFullAddress.php",
             "projectPath": "wallet-api\\GetWalletAsFullAddress.php",
             "targetPath": "wallet-api\\GetWalletAsFullAddress",
             "pageTitle": "wallet-api\\GetWalletAsFullAddress",
             "title": "GetWalletAsFullAddress"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Full Wallet",
-                "slug": "get-full-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4137,24 +2647,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWalletBalanceAsAddressBalance.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetWalletBalanceAsAddressBalance.php",
             "projectPath": "wallet-api\\GetWalletBalanceAsAddressBalance.php",
             "targetPath": "wallet-api\\GetWalletBalanceAsAddressBalance",
             "pageTitle": "wallet-api\\GetWalletBalanceAsAddressBalance",
             "title": "GetWalletBalanceAsAddressBalance"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get Only Wallet Balance",
-                "slug": "get-only-wallet-balance"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4166,14 +2665,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\GetWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\GetWalletEndpoint.php",
             "projectPath": "wallet-api\\GetWalletEndpoint.php",
             "targetPath": "wallet-api\\GetWalletEndpoint",
             "pageTitle": "wallet-api\\GetWalletEndpoint",
             "title": "GetWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4185,24 +2683,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\ListHDWalletAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\ListHDWalletAddresses.php",
             "projectPath": "wallet-api\\ListHDWalletAddresses.php",
             "targetPath": "wallet-api\\ListHDWalletAddresses",
             "pageTitle": "wallet-api\\ListHDWalletAddresses",
             "title": "ListHDWalletAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get All HD Wallet Addresses",
-                "slug": "get-all-hd-wallet-addresses"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4214,24 +2701,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\ListWalletAddresses.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\ListWalletAddresses.php",
             "projectPath": "wallet-api\\ListWalletAddresses.php",
             "targetPath": "wallet-api\\ListWalletAddresses",
             "pageTitle": "wallet-api\\ListWalletAddresses",
             "title": "ListWalletAddresses"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Get All Wallet Addresses",
-                "slug": "get-all-wallet-addresses"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4243,24 +2719,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\RemoveAddressesFromWallet.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\RemoveAddressesFromWallet.php",
             "projectPath": "wallet-api\\RemoveAddressesFromWallet.php",
             "targetPath": "wallet-api\\RemoveAddressesFromWallet",
             "pageTitle": "wallet-api\\RemoveAddressesFromWallet",
             "title": "RemoveAddressesFromWallet"
           },
-          "depth": 2,
-          "outline": [
-            {
-              "type": "heading",
-              "data": {
-                "level": 1,
-                "title": "Remove Addresses from Wallet",
-                "slug": "remove-addresses-from-wallet"
-              },
-              "depth": 1
-            }
-          ]
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4272,14 +2737,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\RemoveAddressesFromWalletEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\RemoveAddressesFromWalletEndpoint.php",
             "projectPath": "wallet-api\\RemoveAddressesFromWalletEndpoint.php",
             "targetPath": "wallet-api\\RemoveAddressesFromWalletEndpoint",
             "pageTitle": "wallet-api\\RemoveAddressesFromWalletEndpoint",
             "title": "RemoveAddressesFromWalletEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }, {
           "type": "file",
           "data": {
@@ -4291,14 +2755,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "PHP"
             },
-            "sourcePath": "C:\\Users\\Jose\\Projects\\BlockCypher\\php-client\\sample\\wallet-api\\WalletAddressesEndpoint.php",
+            "sourcePath": "C:\\Users\\Jose\\Projects\\Hyve\\myideanet-ddd\\Code\\php-client\\sample\\wallet-api\\WalletAddressesEndpoint.php",
             "projectPath": "wallet-api\\WalletAddressesEndpoint.php",
             "targetPath": "wallet-api\\WalletAddressesEndpoint",
             "pageTitle": "wallet-api\\WalletAddressesEndpoint",
             "title": "WalletAddressesEndpoint"
           },
-          "depth": 2,
-          "outline": []
+          "depth": 2
         }
       ]
     }

@@ -58,4 +58,35 @@ class BlockchainClient extends BlockCypherClient
         $ret->fromJson($json);
         return $ret;
     }
+
+    /**
+     * Obtain the information about the adoption of upgrade features on a blockchain.
+     *
+     * @param string $featureName
+     * @param array $params Parameters. Options: txstart, and limit
+     * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
+     * @param BlockCypherRestCall $restCall is the Rest Call Service that is used to make rest calls
+     * @return string
+     */
+    public function getFeature($featureName, $params = array(), $apiContext = null, $restCall = null)
+    {
+        ArgumentValidator::validate($featureName, 'featureName');
+        ArgumentGetParamsValidator::validate($params, 'params');
+        $allowedParams = array();
+        $params = ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+
+        $payLoad = "";
+
+        $chainUrlPrefix = $this->getChainUrlPrefix($apiContext);
+
+        $json = $this->executeCall(
+            "$chainUrlPrefix/feature/$featureName?" . http_build_query($params),
+            "GET",
+            $payLoad,
+            null,
+            $apiContext,
+            $restCall
+        );
+        return $json;
+    }
 }

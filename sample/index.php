@@ -263,6 +263,17 @@ if (PHP_SAPI == 'cli') {
                             </div>
                         </div>
                     </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8"><h5>Get blockchain feature status</h5></div>
+                            <div class="col-md-4">
+                                <a href="chain-api/GetFeature.php" class="btn btn-primary pull-left execute"> Try It <i
+                                        class="fa fa-play-circle-o"></i></a>
+                                <a href="doc/chain-api/GetFeature.html" class="btn btn-default pull-right">Source <i
+                                        class="fa fa-file-code-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 

@@ -1,6 +1,10 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v1.4.0
+------
+* Close #18. Added Feature Endpoint.
+
 v1.3.1
 ------
 * Fix #12. Added missing allowed params in GET params validation.
