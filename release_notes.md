@@ -4,6 +4,7 @@ BlockCypher PHP SDK release notes
 v1.4.0
 ------
 * Close #18. Added Feature Endpoint.
+* Increase bitwasp/bitcoin dependency version to 0.0.7.*. Fixed bug in dependencies.
 
 v1.3.1
 ------
