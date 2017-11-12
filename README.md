@@ -36,11 +36,11 @@ __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP S
    
 ## Upcoming features
 
-###Currently unavailable/upcoming REST API features
+### Currently unavailable/upcoming REST API features
 
    * Install from phar
    
-###New samples
+### New samples
 
    - Capturing callback sample.
    - Managing errors in batching requests.
@@ -108,7 +108,4 @@ try {
 } catch (\Exception $e) {
     echo "There was an error sending the microtx.\n";
 }
-```   
-
-   
-   
+```
