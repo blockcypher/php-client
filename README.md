@@ -109,3 +109,58 @@ try {
     echo "There was an error sending the microtx.\n";
 }
 ```
+### Getting the signature for a transaction
+
+After creating a new transaction and before sending it, you need to create a hex encoded signature you can then use to send your transaction.
+
+Install these dependancies
+```php
+{
+    "require": {
+        "blockcypher/php-client": "*",
+        "bitwasp/buffertools": "0.4.1",
+        "fgrosse/phpasn1": "~1.5",
+        "mdanter/ecc": "^0.4.0",
+        "bitwasp/bitcoin": "v0.0.34.3"
+    }
+}
+```
+Make sure you have the crypto directory inside the blockcypher/php-client package which will contain two classes you will need:
+- PrivateKeyManipulator
+- Signer
+
+Install or update dependacies via composer `composer install` or `composer update`
+
+Create a new file and include/require it as necessary:
+
+```php
+<?php
+    require __DIR__  . '/php-client/autoload.php';
+    use BlockCypher\Crypto\Signer;
+
+  function signTransaction($tosign, $privateKey){
+    $signer = new Signer;
+    $signature = $signer->sign($tosign, $privateKey);
+    return $signature;
+  }
+```
+
+You can also manually create one using one of two ways:
+
+- a tool writen in Go, see: [link](https://github.com/blockcypher/btcutils/tree/master/signer)
+- a tool using blockcypher signer class, see below
+
+Create a file called signer.php and add the following.
+
+```
+<?php
+require __DIR__  . '/vendor/autoload.php';
+
+$tosign = "{tosign string}"; // Default sample value
+$privateKey = "{private key string}"; // Default sample value
+$signature = BlockCypher\Crypto\Signer::sign($tosign, $privateKey);
+
+echo json_encode($signature);
+```
+Run file in the terminal: `php -f sign.php`
+
