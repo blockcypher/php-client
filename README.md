@@ -125,6 +125,15 @@ Install these dependancies
     }
 }
 ```
+Also make sure you install gmp extension for php. You may need to recompile php. 
+
+If using homebrew on mac you can use:
+```
+brew install autoconf
+brew install php71 —with-gmp
+brew Install php71-gmp
+```
+
 Make sure you have the crypto directory inside the blockcypher/php-client package which will contain two classes you will need:
 - PrivateKeyManipulator
 - Signer
