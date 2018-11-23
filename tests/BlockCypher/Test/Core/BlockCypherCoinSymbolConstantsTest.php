@@ -23,7 +23,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
             array("btc-testnet", "Bitcoin Testnet"),
             array("ltc", "Litecoin"),
             array("doge", "Dogecoin"),
-            array("uro", "Uro"),
+            array("dash", "Dash"),
             array("bcy", "BlockCypher Testnet"),
         );
     }
@@ -67,7 +67,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
             array("btc-testnet", "BTC"),
             array("ltc", "LTC"),
             array("doge", "DOGE"),
-            array("uro", "URO"),
+            array("dash", "DASH"),
             array("bcy", "BCY"),
         );
     }
@@ -111,7 +111,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
             array("btc-testnet", "btc"),
             array("ltc", "ltc"),
             array("doge", "doge"),
-            array("uro", "uro"),
+            array("dash", "dash"),
             array("bcy", "bcy"),
         );
     }
@@ -155,7 +155,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
             array("btc-testnet", "test3"),
             array("ltc", "main"),
             array("doge", "main"),
-            array("uro", "main"),
+            array("dash", "main"),
             array("bcy", "test"),
         );
     }
@@ -238,15 +238,15 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
                 'example_address' => 'D7Y55r6Yoc1G8EECxkQ6SuSjTgGJJ7M6yD',
                 "address_first_char_list" => array('D', '9', 'A')
             ),
-            'uro' => array(
-                'display_name' => 'Uro',
-                'display_shortname' => 'URO',
-                'blockcypher_code' => 'uro',
+            'dash' => array(
+                'display_name' => 'Dash',
+                'display_shortname' => 'DASH',
+                'blockcypher_code' => 'dash',
                 'blockcypher_network' => 'main',
-                'currency_abbrev' => 'URO',
+                'currency_abbrev' => 'DASH',
                 'pow' => 'sha',
-                'example_address' => 'Uhf1LGdgmWe33hB9VVtubyzq1GduUAtaAJ',
-                "address_first_char_list" => array('U')  // TODO: more?
+                'example_address' => 'XyMhjuc9Lmdy6EzNZmtdrxqn7mdUj8Tqg6',
+                "address_first_char_list" => array('X')  // TODO: more?
             ),
             'bcy' => array(
                 'display_name' => 'BlockCypher Testnet',
@@ -268,7 +268,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
      */
     public function testCOIN_SYMBOL_LIST()
     {
-        $expectedCoinSymbolList = array('btc', 'btc-testnet', 'ltc', 'doge', 'uro', 'bcy');
+        $expectedCoinSymbolList = array('btc', 'btc-testnet', 'ltc', 'doge', 'dash', 'bcy');
         $this->assertEquals($expectedCoinSymbolList, BlockCypherCoinSymbolConstants::COIN_SYMBOL_LIST());
     }
 
@@ -277,7 +277,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
      */
     public function testSHA_COINS()
     {
-        $expectedShaCoins = array('btc', 'btc-testnet', 'uro', 'bcy');
+        $expectedShaCoins = array('btc', 'btc-testnet', 'dash', 'bcy');
         $this->assertEquals($expectedShaCoins, BlockCypherCoinSymbolConstants::SHA_COINS());
     }
 
@@ -300,7 +300,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
             'btc-testnet' => 'Bitcoin Testnet',
             'ltc' => 'Litecoin',
             'doge' => 'Dogecoin',
-            'uro' => 'Uro',
+            'dash' => 'Dash',
             'bcy' => 'BlockCypher Testnet'
         );
         $this->assertEquals($expectedCoinChoices, BlockCypherCoinSymbolConstants::COIN_CHOICES());
@@ -316,7 +316,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
             'BTC.test3',
             'LTC.main',
             'DOGE.main',
-            'URO.main',
+            'DASH.main',
             'BCY.test',
         );
         $this->assertEquals($expectedChainNames, BlockCypherCoinSymbolConstants::CHAIN_NAMES());

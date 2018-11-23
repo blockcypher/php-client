@@ -38,7 +38,7 @@ class ApiContext
     protected $chain;
 
     /**
-     * btc|doge|ltc|uro|bcy
+     * btc|doge|ltc|dash|bcy
      * @var string
      */
     protected $coin;

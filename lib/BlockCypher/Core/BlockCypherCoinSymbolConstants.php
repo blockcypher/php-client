@@ -62,15 +62,15 @@ class BlockCypherCoinSymbolConstants
             "address_first_char_list" => array('D', '9', 'A')
         ),
         array(
-            'coin_symbol' => 'uro',
-            'display_name' => 'Uro',
-            'display_shortname' => 'URO',
-            'blockcypher_code' => 'uro',
+            'coin_symbol' => 'dash',
+            'display_name' => 'Dash',
+            'display_shortname' => 'DASH',
+            'blockcypher_code' => 'dash',
             'blockcypher_network' => 'main',
-            'currency_abbrev' => 'URO',
+            'currency_abbrev' => 'DASH',
             'pow' => 'sha',
-            'example_address' => 'Uhf1LGdgmWe33hB9VVtubyzq1GduUAtaAJ',
-            "address_first_char_list" => array('U')  // TODO: more?
+            'example_address' => 'XyMhjuc9Lmdy6EzNZmtdrxqn7mdUj8Tqg6',
+            "address_first_char_list" => array('X')
         ),
         array(
             'coin_symbol' => 'bcy',

@@ -38,9 +38,8 @@ class CoinSymbolNetworkMapping
                     ->setHDPrivByte('02fd3955')
                     ->setNetMagicBytes('c0c0c0c0');
                 break;
-            case 'uro':
-                // NetMagicBytes: https://github.com/urocoin/uro/blob/319de97bbd56a10a3b2dca5b36be0c7a9c6603ae/src/main.cpp#L3233
-                throw new \Exception("Unsupported coin symbol: $coinSymbol");
+            case 'dash':
+                $network = NetworkFactory::dash();
                 break;
             case 'bcy':
                 // TODO: check ef, 043587cf, 04358394, d9b4bef9 values

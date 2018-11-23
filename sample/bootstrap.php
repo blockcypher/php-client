@@ -99,7 +99,7 @@ function getApiContextUsingConfigIni()
  * Helper method for getting an APIContext for all calls (getting config from array)
  * @param string $token
  * @param string $version v1
- * @param string $coin btc|doge|ltc|uro|bcy
+ * @param string $coin btc|doge|ltc|dash|bcy
  * @param string $chain main|test3|test
  * @return ApiContext
  */
