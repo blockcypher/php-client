@@ -24,9 +24,11 @@ class PrivateKeyManipulator
 
         // TODO: Code Review. Method to detect private key format.
 
+        $privFactory = new PrivateKeyFactory(null);
+
         if ($privateKey === null) {
             try {
-                $privateKey = PrivateKeyFactory::fromWif($plainPrivateKey);
+                $privateKey = $privFactory->fromWif($plainPrivateKey);
             } catch (\Exception $e) {
                 $extraMsg .= " Error trying to import from Wif: " . $e->getMessage();
             }
@@ -34,7 +36,7 @@ class PrivateKeyManipulator
 
         if ($privateKey === null) {
             try {
-                $privateKey = PrivateKeyFactory::fromHex($plainPrivateKey);
+                $privateKey = $privFactory->fromHexCompressed($plainPrivateKey);
             } catch (\Exception $e) {
                 $extraMsg .= " Error trying to import from Hex: " . $e->getMessage();
             }
@@ -54,7 +56,8 @@ class PrivateKeyManipulator
      */
     public static function importPrivateKeyFromWif($wifPrivateKey)
     {
-        $privateKey = PrivateKeyFactory::fromWif($wifPrivateKey);
+        $privFactory = new PrivateKeyFactory(null);
+        $privateKey = $privFactory->fromWif($wifPrivateKey);
         return $privateKey;
     }
 
@@ -81,7 +84,11 @@ class PrivateKeyManipulator
         $privateKey = null;
 
         try {
-            $privateKey = PrivateKeyFactory::fromHex($hexPrivateKey, $compressed);
+            $privFactory = new PrivateKeyFactory(null);
+            if($compressed)
+                $privateKey = $privFactory->fromHexCompressed($hexPrivateKey);
+            else
+                $privateKey = $privFactory->fromHexUncompressed($hexPrivateKey);
         } catch (\Exception $e) {
             throw new BlockCypherInvalidPrivateKeyException('Invalid private key format, hex expected.' . $e->getMessage());
         }
