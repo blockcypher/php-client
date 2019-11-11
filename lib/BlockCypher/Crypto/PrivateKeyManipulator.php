@@ -2,8 +2,8 @@
 
 namespace BlockCypher\Crypto;
 
-use BitWasp\Bitcoin\Key\PrivateKeyFactory;
-use BitWasp\Bitcoin\Key\PrivateKeyInterface;
+use BitWasp\Bitcoin\Key\Factory\PrivateKeyFactory;
+use BitWasp\Bitcoin\Crypto\EcAdapter\Key\PrivateKeyInterface;
 use BlockCypher\Exception\BlockCypherInvalidPrivateKeyException;
 use BlockCypher\Validation\CoinSymbolValidator;
 
