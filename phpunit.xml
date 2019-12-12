@@ -9,6 +9,7 @@
          convertWarningsToExceptions="true"
          testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
 
+
     <testsuites>
         <testsuite name="All">
             <directory>tests/BlockCypher</directory>
