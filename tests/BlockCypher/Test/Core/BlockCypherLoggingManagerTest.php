@@ -6,7 +6,7 @@ use BlockCypher\Core\BlockCypherLoggingManager;
  * Test class for BlockCypherLoggingManager.
  *
  */
-class BlockCypherLoggingManagerTest extends \PHPUnit_Framework_TestCase
+class BlockCypherLoggingManagerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var BlockCypherLoggingManager
@@ -19,7 +19,6 @@ class BlockCypherLoggingManagerTest extends \PHPUnit_Framework_TestCase
     public function testError()
     {
         $this->object->error('Test Error Message');
-
     }
 
     /**

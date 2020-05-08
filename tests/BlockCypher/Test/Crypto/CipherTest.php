@@ -8,7 +8,7 @@ use BlockCypher\Crypto\Cipher;
  * Class CipherTest
  * @package BlockCypher\Test\Crypto
  */
-class CipherTest extends \PHPUnit_Framework_TestCase
+class CipherTest extends \PHPUnit\Framework\TestCase
 {
     const SECRET_KEY = 'oh5eLcd6115UBJ=0"RH{00hUE/39Be';
     const SECRET_MESSAGE = 'Build block chain applications easily with our web APIs and callbacks';

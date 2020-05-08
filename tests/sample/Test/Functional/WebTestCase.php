@@ -8,7 +8,7 @@ use Goutte\Client;
  * Class WebTestCase
  * @package sample\Test\Functional
  */
-class WebTestCase extends \PHPUnit_Framework_TestCase
+class WebTestCase extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var string
@@ -30,8 +30,10 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $this->client = new Client();
 
-        $configFile = implode(DIRECTORY_SEPARATOR,
-            array(dirname(__FILE__), "sample_config.ini"));
+        $configFile = implode(
+            DIRECTORY_SEPARATOR,
+            array(dirname(__FILE__), "sample_config.ini")
+        );
 
         if ($configs = parse_ini_file($configFile)) {
             self::$baseUrl = $configs['test.baseUrl'];

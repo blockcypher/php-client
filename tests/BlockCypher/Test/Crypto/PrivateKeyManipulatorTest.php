@@ -10,18 +10,23 @@ use BlockCypher\Crypto\PrivateKeyManipulator;
  * Class PrivateKeyManipulatorTest
  * @package BlockCypher\Test\Crypto
  */
-class PrivateKeyManipulatorTest extends \PHPUnit_Framework_TestCase
+class PrivateKeyManipulatorTest extends \PHPUnit\Framework\TestCase
 {
     const ADDRESS_PRIVATE_KEY = '1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e';
-    const /** @noinspection SpellCheckingInspection */
+    const
+        /** @noinspection SpellCheckingInspection */
         ADDRESS_WIF = 'cNJ96rBRnL1dmcUdbRZjpRqTPRiChXWTJtR4u6WRUB4uGXQBynkH';
-    const /** @noinspection SpellCheckingInspection */
+    const
+        /** @noinspection SpellCheckingInspection */
         ADDRESS_PUBLIC_KEY = '0274cb62e999bdf96c9b4ef8a2b44c1ac54d9de879e2ee666fdbbf0e1a03090cdf';
-    const /** @noinspection SpellCheckingInspection */
+    const
+        /** @noinspection SpellCheckingInspection */
         ADDRESS_BTC_TESTNET = 'n3D2YXwvpoPg8FhcWpzJiS3SvKKGD8AXZ4';
-    const /** @noinspection SpellCheckingInspection */
+    const
+        /** @noinspection SpellCheckingInspection */
         ADDRESS_BTC = '1Nh5FUrx1mxRM9DzoG1vtWq84KiZJYsdJT';
-    const /** @noinspection SpellCheckingInspection */
+    const
+        /** @noinspection SpellCheckingInspection */
         ADDRESS_DOGE = 'DSqAnjobKBrht9QbXr1VSGziwTSrcPrykZ';
     const ADDRESS_BCY = 'CEpMqQujBeU5RqzLTb1XyuBN3wg2auyUvQ';
 

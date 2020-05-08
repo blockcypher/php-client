@@ -6,7 +6,7 @@ use BlockCypher\Exception\BlockCypherConfigurationException;
  * Test class for BlockCypherConfigurationException.
  *
  */
-class BlockCypherConfigurationExceptionTest extends \PHPUnit_Framework_TestCase
+class BlockCypherConfigurationExceptionTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var BlockCypherConfigurationException

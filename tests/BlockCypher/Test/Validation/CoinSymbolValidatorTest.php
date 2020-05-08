@@ -1,10 +1,11 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Core\BlockCypherCoinSymbolConstants;
 use BlockCypher\Validation\CoinSymbolValidator;
 
-class CoinSymbolValidatorTest extends \PHPUnit_Framework_TestCase
+class CoinSymbolValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()
@@ -50,5 +51,4 @@ class CoinSymbolValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertTrue(CoinSymbolValidator::validate($input, "Name"));
     }
-
 }

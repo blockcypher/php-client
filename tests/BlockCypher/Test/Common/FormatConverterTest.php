@@ -4,7 +4,7 @@ namespace BlockCypher\Test\Common;
 
 use BlockCypher\Converter\FormatConverter;
 
-class FormatConverterTest extends \PHPUnit_Framework_TestCase
+class FormatConverterTest extends \PHPUnit\Framework\TestCase
 {
     public static function CurrencyListWithNoDecimalsProvider()
     {
@@ -22,7 +22,6 @@ class FormatConverterTest extends \PHPUnit_Framework_TestCase
     {
         $result = FormatConverter::formatToNumber($input);
         $this->assertEquals($expected, $result);
-
     }
 
     /**

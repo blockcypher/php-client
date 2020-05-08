@@ -9,7 +9,7 @@ use BlockCypher\Test\Api\MicroTXTest;
  * Class MicroTXBuilderTest
  * @package BlockCypher\Test\Builder
  */
-class MicroTXBuilderTest extends \PHPUnit_Framework_TestCase
+class MicroTXBuilderTest extends \PHPUnit\Framework\TestCase
 {
     public function testBuild()
     {

@@ -10,7 +10,7 @@ use BlockCypher\Test\Functional\Setup;
  *
  * @package BlockCypher\Test\Api
  */
-class BlockchainFunctionalTest extends \PHPUnit_Framework_TestCase
+class BlockchainFunctionalTest extends \PHPUnit\Framework\TestCase
 {
     public $operation;
 

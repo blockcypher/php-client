@@ -1,9 +1,10 @@
 <?php
+
 namespace BlockCypher\Test\Converter;
 
 use BlockCypher\Converter\BtcConverter;
 
-class BtcConverterTest extends \PHPUnit_Framework_TestCase
+class BtcConverterTest extends \PHPUnit\Framework\TestCase
 {
     public static function positiveProviderBtcToSatoshis()
     {

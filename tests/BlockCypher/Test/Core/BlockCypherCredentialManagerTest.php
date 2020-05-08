@@ -7,7 +7,7 @@ use BlockCypher\Core\BlockCypherCredentialManager;
  *
  * @runTestsInSeparateProcesses
  */
-class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
+class BlockCypherCredentialManagerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var BlockCypherCredentialManager

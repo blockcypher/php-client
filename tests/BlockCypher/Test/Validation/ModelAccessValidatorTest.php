@@ -1,11 +1,12 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Core\BlockCypherConfigManager;
 use BlockCypher\Test\Common\SimpleClass;
 use BlockCypher\Validation\ModelAccessorValidator;
 
-class ModelAccessValidatorTest extends \PHPUnit_Framework_TestCase
+class ModelAccessValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()

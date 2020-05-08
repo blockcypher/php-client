@@ -6,7 +6,7 @@ use BlockCypher\Api\TX;
 use BlockCypher\Common\BlockCypherModel;
 use BlockCypher\Core\BlockCypherConfigManager;
 
-class ModelTest extends \PHPUnit_Framework_TestCase
+class ModelTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleClassConversion()
     {
@@ -67,7 +67,6 @@ class ModelTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals("test", $obj->getName());
         $this->assertEquals("description", $obj->getDescription());
-
     }
 
     public function testSimpleClassObjectInvalidConversion()
@@ -95,7 +94,6 @@ class ModelTest extends \PHPUnit_Framework_TestCase
                 $this->fail("It should have thrown a Notice Error");
             }
         } catch (\PHPUnit_Framework_Error_Notice $ex) {
-
         }
     }
 

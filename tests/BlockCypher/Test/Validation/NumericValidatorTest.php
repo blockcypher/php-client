@@ -1,9 +1,10 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Validation\NumericValidator;
 
-class NumericValidatorTest extends \PHPUnit_Framework_TestCase
+class NumericValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()
@@ -58,5 +59,4 @@ class NumericValidatorTest extends \PHPUnit_Framework_TestCase
     {
         NumericValidator::validate($input, "Test Value");
     }
-
 }

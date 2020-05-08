@@ -8,7 +8,7 @@ use BlockCypher\Core\BlockCypherHttpConfig;
  * Test class for BlockCypherHttpConfigTest.
  *
  */
-class BlockCypherHttpConfigTest extends \PHPUnit_Framework_TestCase
+class BlockCypherHttpConfigTest extends \PHPUnit\Framework\TestCase
 {
 
     protected $object;
@@ -135,5 +135,3 @@ class BlockCypherHttpConfigTest extends \PHPUnit_Framework_TestCase
     {
     }
 }
-
-?>

@@ -7,7 +7,7 @@ namespace BlockCypher\Test\Api;
  *
  * @package BlockCypher\Test\Api
  */
-class ResourceModelTestCase extends \PHPUnit_Framework_TestCase
+class ResourceModelTestCase extends \PHPUnit\Framework\TestCase
 {
     public function mockProvider()
     {

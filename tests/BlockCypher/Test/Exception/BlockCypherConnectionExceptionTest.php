@@ -5,7 +5,7 @@ use BlockCypher\Exception\BlockCypherConnectionException;
  * Test class for BlockCypherConnectionException.
  *
  */
-class BlockCypherConnectionExceptionTest extends \PHPUnit_Framework_TestCase
+class BlockCypherConnectionExceptionTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var BlockCypherConnectionException
@@ -46,5 +46,3 @@ class BlockCypherConnectionExceptionTest extends \PHPUnit_Framework_TestCase
     {
     }
 }
-
-?>

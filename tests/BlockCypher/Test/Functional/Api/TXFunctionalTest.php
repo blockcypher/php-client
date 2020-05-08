@@ -10,7 +10,7 @@ use BlockCypher\Test\Functional\Setup;
  *
  * @package BlockCypher\Test\Api
  */
-class TXFunctionalTest extends \PHPUnit_Framework_TestCase
+class TXFunctionalTest extends \PHPUnit\Framework\TestCase
 {
     public $operation;
 

@@ -10,7 +10,7 @@ use BlockCypher\Crypto\PrivateKeyManipulator;
  * Class PrivateKeyListTest
  * @package BlockCypher\Test\Crypto
  */
-class PrivateKeyListTest extends \PHPUnit_Framework_TestCase
+class PrivateKeyListTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider dataProvider

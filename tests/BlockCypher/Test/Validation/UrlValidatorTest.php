@@ -1,9 +1,10 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Validation\UrlValidator;
 
-class UrlValidatorTest extends \PHPUnit_Framework_TestCase
+class UrlValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()
@@ -51,5 +52,4 @@ class UrlValidatorTest extends \PHPUnit_Framework_TestCase
     {
         UrlValidator::validate($input, "Test Value");
     }
-
 }

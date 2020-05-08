@@ -5,7 +5,7 @@ use BlockCypher\Core\BlockCypherCoinSymbolConstants;
 /**
  * Test class for BlockCypherCoinSymbolConstants.
  */
-class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
+class BlockCypherCoinSymbolConstantsTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test
@@ -363,20 +363,21 @@ class BlockCypherCoinSymbolConstantsRequiredFieldConfigError extends BlockCypher
      * List of Coin Symbol Ordered Dictionaries
      * @const array
      */
-    protected static /** @noinspection SpellCheckingInspection */
+    protected static
+        /** @noinspection SpellCheckingInspection */
         $COIN_SYMBOL_ODICT_LIST = array(
-        array(
-            'coin_symbol_NOT_PRESENT' => 'btc',  // <-- NOTICE!!!
-            'display_name' => 'Bitcoin',
-            'display_shortname' => 'BTC',
-            'blockcypher_code' => 'btc',
-            'blockcypher_network' => 'main',
-            'currency_abbrev' => 'BTC',
-            'pow' => 'sha',
-            'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
-            "address_first_char_list" => array('1', '3')
-        )
-    );
+            array(
+                'coin_symbol_NOT_PRESENT' => 'btc',  // <-- NOTICE!!!
+                'display_name' => 'Bitcoin',
+                'display_shortname' => 'BTC',
+                'blockcypher_code' => 'btc',
+                'blockcypher_network' => 'main',
+                'currency_abbrev' => 'BTC',
+                'pow' => 'sha',
+                'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
+                "address_first_char_list" => array('1', '3')
+            )
+        );
 }
 
 class BlockCypherCoinSymbolConstantsInvalidPowConfigError extends BlockCypherCoinSymbolConstants
@@ -385,18 +386,19 @@ class BlockCypherCoinSymbolConstantsInvalidPowConfigError extends BlockCypherCoi
      * List of Coin Symbol Ordered Dictionaries
      * @const array
      */
-    protected static /** @noinspection SpellCheckingInspection */
+    protected static
+        /** @noinspection SpellCheckingInspection */
         $COIN_SYMBOL_ODICT_LIST = array(
-        array(
-            'coin_symbol' => 'btc',
-            'display_name' => 'Bitcoin',
-            'display_shortname' => 'BTC',
-            'blockcypher_code' => 'btc',
-            'blockcypher_network' => 'main',
-            'currency_abbrev' => 'BTC',
-            'pow' => 'INVALID_POW',  // <-- NOTICE!!!
-            'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
-            "address_first_char_list" => array('1', '3')
-        )
-    );
+            array(
+                'coin_symbol' => 'btc',
+                'display_name' => 'Bitcoin',
+                'display_shortname' => 'BTC',
+                'blockcypher_code' => 'btc',
+                'blockcypher_network' => 'main',
+                'currency_abbrev' => 'BTC',
+                'pow' => 'INVALID_POW',  // <-- NOTICE!!!
+                'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
+                "address_first_char_list" => array('1', '3')
+            )
+        );
 }

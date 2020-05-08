@@ -4,7 +4,7 @@ namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Validation\TokenValidator;
 
-class TokenValidatorTest extends \PHPUnit_Framework_TestCase
+class TokenValidatorTest extends \PHPUnit\Framework\TestCase
 {
     public static function positiveProvider()
     {
@@ -49,5 +49,4 @@ class TokenValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertFalse(TokenValidator::validate($input));
     }
-
 }

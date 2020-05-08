@@ -11,7 +11,7 @@ use BlockCypher\Test\Functional\Setup;
  *
  * @package BlockCypher\Test\Api
  */
-class WebHookFunctionalTest extends \PHPUnit_Framework_TestCase
+class WebHookFunctionalTest extends \PHPUnit\Framework\TestCase
 {
     public $operation;
 

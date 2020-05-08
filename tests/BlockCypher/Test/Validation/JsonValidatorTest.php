@@ -1,9 +1,10 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Validation\JsonValidator;
 
-class JsonValidatorTest extends \PHPUnit_Framework_TestCase
+class JsonValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()

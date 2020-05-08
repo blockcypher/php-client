@@ -1,9 +1,10 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Validation\ArgumentValidator;
 
-class ArgumentValidatorTest extends \PHPUnit_Framework_TestCase
+class ArgumentValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()
@@ -47,5 +48,4 @@ class ArgumentValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertTrue(ArgumentValidator::validate($input, "Name"));
     }
-
 }

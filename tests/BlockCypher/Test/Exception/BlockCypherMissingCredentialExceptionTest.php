@@ -5,7 +5,7 @@ use BlockCypher\Exception\BlockCypherMissingCredentialException;
  * Test class for BlockCypherMissingCredentialException.
  *
  */
-class BlockCypherMissingCredentialExceptionTest extends \PHPUnit_Framework_TestCase
+class BlockCypherMissingCredentialExceptionTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var BlockCypherMissingCredentialException
@@ -38,5 +38,3 @@ class BlockCypherMissingCredentialExceptionTest extends \PHPUnit_Framework_TestC
     {
     }
 }
-
-?>
