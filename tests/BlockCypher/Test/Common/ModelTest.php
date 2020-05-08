@@ -79,6 +79,7 @@ class ModelTest extends \PHPUnit\Framework\TestCase
             $this->assertEquals("description", $obj->getDescription());
         } catch (\PHPUnit\Framework\Error\Notice $ex) {
             // No need to do anything
+            $this->expectException('\PHPUnit\Framework\Error\Notice');
         }
     }
 
@@ -92,6 +93,7 @@ class ModelTest extends \PHPUnit\Framework\TestCase
                 $this->fail("It should have thrown a Notice Error");
             }
         } catch (\PHPUnit\Framework\Error\Notice $ex) {
+            $this->expectException('\PHPUnit\Framework\Error\Notice');
         }
     }
 

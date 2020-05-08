@@ -18,7 +18,7 @@ class BlockCypherLoggingManagerTest extends \PHPUnit\Framework\TestCase
      */
     public function testError()
     {
-        $this->object->error('Test Error Message');
+        $this->assertNull($this->object->error('Test Error Message'));
     }
 
     /**
@@ -26,7 +26,7 @@ class BlockCypherLoggingManagerTest extends \PHPUnit\Framework\TestCase
      */
     public function testWarning()
     {
-        $this->object->warning('Test Warning Message');
+        $this->assertNull($this->object->warning('Test Warning Message'));
     }
 
     /**
@@ -34,7 +34,7 @@ class BlockCypherLoggingManagerTest extends \PHPUnit\Framework\TestCase
      */
     public function testInfo()
     {
-        $this->object->info('Test info Message');
+        $this->assertNull($this->object->info('Test info Message'));
     }
 
     /**
@@ -42,7 +42,7 @@ class BlockCypherLoggingManagerTest extends \PHPUnit\Framework\TestCase
      */
     public function testDebug()
     {
-        $this->object->debug('Test debug Message');
+        $this->assertNull($this->object->debug('Test debug Message'));
     }
 
     /**

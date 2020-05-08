@@ -63,7 +63,7 @@ class ArgumentGetParamsValidatorTest extends \PHPUnit\Framework\TestCase
             'param1' => 'param1Value',
         );
 
-        ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+        $this->assertNotNull(ArgumentGetParamsValidator::sanitize($params, $allowedParams));
     }
 
     public function testsSanitizeWithNotAllowedParams()
