@@ -31,5 +31,10 @@
     "psr-0": {
       "BlockCypher": "lib/"
     }
+  },
+  "scripts": {
+    "test": [
+      "phpunit"
+    ]
   }
 }
