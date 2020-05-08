@@ -13,7 +13,7 @@ use sample\Test\Functional\WalletSampleTestCase;
  */
 class CreateWalletEndpointTest extends WalletSampleTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         self::$walletName = 'alice';
@@ -22,7 +22,9 @@ class CreateWalletEndpointTest extends WalletSampleTestCase
         $this->url = self::baseUrl() . basename(__DIR__) . '/' . $sampleName . '.php';
 
         $apiContext = ApiContext::create(
-            'main', 'btc', 'v1',
+            'main',
+            'btc',
+            'v1',
             new SimpleTokenCredential('c0afcccdde5081d6429de37d16166ead'),
             array('log.LogEnabled' => true, 'log.FileName' => 'BlockCypher.log', 'log.LogLevel' => 'DEBUG')
         );

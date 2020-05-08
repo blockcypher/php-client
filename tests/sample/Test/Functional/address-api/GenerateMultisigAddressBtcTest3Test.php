@@ -10,7 +10,7 @@ use sample\Test\Functional\WebTestCase;
  */
 class GenerateMultisigAddressBtcTest3Test extends WebTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $className = $this->getClassName();
@@ -30,7 +30,7 @@ class GenerateMultisigAddressBtcTest3Test extends WebTestCase
     public function testGenerateMultisigAddressBtcTest3()
     {
         $this->client->request('GET', $this->url);
-        $responseBody = (string)$this->client->getResponse()->getContent();
+        $responseBody = (string) $this->client->getResponse()->getContent();
 
         $this->assertEquals(200, $this->client->getResponse()->getStatus());
         $this->assertNotContainsPhpErrors($responseBody);

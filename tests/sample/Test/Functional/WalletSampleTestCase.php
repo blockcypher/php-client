@@ -18,7 +18,7 @@ class WalletSampleTestCase extends WebTestCase
      */
     protected static $walletSamplesBaseUrl;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         self::$walletName = 'alice_test';
@@ -39,7 +39,7 @@ class WalletSampleTestCase extends WebTestCase
         $this->client->request('GET', $url);
 
         $status = $this->client->getResponse()->getStatus();
-        $responseBody = (string)$this->client->getResponse()->getContent();
+        $responseBody = (string) $this->client->getResponse()->getContent();
 
         $this->assertSampleIsNotBroken($status, $responseBody);
     }
