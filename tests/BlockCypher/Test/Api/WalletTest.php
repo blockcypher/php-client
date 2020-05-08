@@ -175,7 +175,8 @@ class WalletTest extends ResourceModelTestCase
         $result = $obj->addAddresses($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
 
         $this->assertNotNull($result);
-        Assert::assertArraySubset($addressList->getAddresses(), $result->getAddresses());
+        $this->assertEquals($addressList->getAddresses()[0], $result->getAddresses()[2]);
+        //Assert::assertArraySubset($addressList->getAddresses(), $result->getAddresses());
     }
 
     /**

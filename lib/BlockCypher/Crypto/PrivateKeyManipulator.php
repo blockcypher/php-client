@@ -52,7 +52,7 @@ class PrivateKeyManipulator
 
     /**
      * @param string $wifPrivateKey
-     * @param NetworkInterface $network
+     * @param \BitWasp\Bitcoin\NetworkInterface|null $network
      * @return PrivateKeyInterface
      * @throws \Exception
      */

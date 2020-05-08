@@ -43,7 +43,7 @@ class ResourceModelTestCase extends \PHPUnit\Framework\TestCase
             ->setMethods(array('getBaseChainUrl'))
             ->getMock();
 
-        $mockApiContext->expects($this->once())
+        $mockApiContext->expects($this->any())
             ->method('getBaseChainUrl')
             ->will($this->returnValue("/$version/$coin/$chain"));
 
