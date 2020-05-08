@@ -29,12 +29,12 @@ class ModelAccessValidatorTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));
     }
