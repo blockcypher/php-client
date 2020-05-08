@@ -42,10 +42,10 @@ class ArgumentValidatorTest extends \PHPUnit\Framework\TestCase
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataValidate($input)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertTrue(ArgumentValidator::validate($input, "Name"));
     }
 }

@@ -5,6 +5,7 @@ namespace BlockCypher\Test\Validation;
 use BlockCypher\Core\BlockCypherConfigManager;
 use BlockCypher\Test\Common\SimpleClass;
 use BlockCypher\Validation\ModelAccessorValidator;
+use TypeError;
 
 class ModelAccessValidatorTest extends \PHPUnit\Framework\TestCase
 {
@@ -56,8 +57,10 @@ class ModelAccessValidatorTest extends \PHPUnit\Framework\TestCase
     {
         try {
             $this->assertFalse(ModelAccessorValidator::validate($class, $name));
+        } catch (TypeError $ex) {
+            $this->assertStringContainsString($exMessage, $ex->getMessage());
         } catch (\Exception $ex) {
-            $this->assertContains($exMessage, $ex->getMessage());
+            $this->assertStringContainsString($exMessage, $ex->getMessage());
         }
     }
 }

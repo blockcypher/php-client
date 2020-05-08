@@ -72,9 +72,11 @@ class TXConfidenceTest extends ResourceModelTestCase
      * @dataProvider mockProvider
      * @param TXConfidence $obj
      */
-    public function testGet($obj, /** @noinspection PhpDocSignatureInspection */
-                            $mockApiContext)
-    {
+    public function testGet(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
         $mockBlockCypherRestCall = $this->getMockBuilder('\\BlockCypher\\Transport\\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -95,14 +97,14 @@ class TXConfidenceTest extends ResourceModelTestCase
      * @param TXConfidence $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\\BlockCypher\\Transport\\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -134,7 +136,7 @@ class TXConfidenceTest extends ResourceModelTestCase
                 '[' . TXConfidenceTest::getJson() . ']'
             ));
 
-        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
+        $txConfidenceList = array(TXConfidenceTest::getObject()->getTxhash());
 
         $result = $obj->getMultiple($txConfidenceList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -155,14 +157,14 @@ class TXConfidenceTest extends ResourceModelTestCase
      * @param TXConfidence $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\\BlockCypher\\Transport\\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -173,7 +175,7 @@ class TXConfidenceTest extends ResourceModelTestCase
                 '[' . TXConfidenceTest::getJson() . ']'
             ));
 
-        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
+        $txConfidenceList = array(TXConfidenceTest::getObject()->getTxhash());
 
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */

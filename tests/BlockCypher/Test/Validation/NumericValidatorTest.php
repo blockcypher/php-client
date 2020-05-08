@@ -53,10 +53,10 @@ class NumericValidatorTest extends \PHPUnit\Framework\TestCase
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testValidateException($input)
     {
+        $this->expectException('\InvalidArgumentException');
         NumericValidator::validate($input, "Test Value");
     }
 }

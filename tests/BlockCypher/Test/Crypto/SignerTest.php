@@ -67,12 +67,12 @@ class SignerTest extends \PHPUnit\Framework\TestCase
     /**
      * @dataProvider invalidSignMultipleParameters
      * @test
-     * @expectedException \InvalidArgumentException
      * @param $toSign
      */
     public function
     should_only_allow_sign_multiple_data_from_an_array($toSign)
     {
+        $this->expectException('\InvalidArgumentException');
         Signer::signMultiple($toSign, self::PRIVATE_KEY);
     }
 

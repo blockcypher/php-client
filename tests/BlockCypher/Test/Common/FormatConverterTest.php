@@ -32,7 +32,7 @@ class FormatConverterTest extends \PHPUnit\Framework\TestCase
         try {
             FormatConverter::formatToPrice("1.234", $input);
         } catch (\InvalidArgumentException $ex) {
-            $this->assertContains("value cannot have decimals for", $ex->getMessage());
+            $this->assertStringContainsString("value cannot have decimals for", $ex->getMessage());
         }
     }
 

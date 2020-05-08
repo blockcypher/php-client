@@ -111,10 +111,10 @@ class BlockClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -138,7 +138,7 @@ class BlockClientTest extends ClientTestCase
                 '[' . BlockTest::getJson() . ']'
             ));
 
-        $blockList = Array(BlockTest::getObject()->getHeight());
+        $blockList = array(BlockTest::getObject()->getHeight());
 
         $result = $obj->getMultiple($blockList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -151,17 +151,17 @@ class BlockClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 '[' . BlockTest::getJson() . ']'
             ));
 
-        $blockList = Array(BlockTest::getObject()->getHeight());
+        $blockList = array(BlockTest::getObject()->getHeight());
 
         $obj->get($blockList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
@@ -180,7 +180,7 @@ class BlockClientTest extends ClientTestCase
                 '[' . BlockTest::getJson() . ']'
             ));
 
-        $blockList = Array(BlockTest::getObject()->getHeight());
+        $blockList = array(BlockTest::getObject()->getHeight());
         $params = array(
             'txstart' => 1,
             'limit' => 1,

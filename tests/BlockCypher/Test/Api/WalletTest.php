@@ -3,6 +3,7 @@
 namespace BlockCypher\Test\Api;
 
 use BlockCypher\Api\Wallet;
+use DMS\PHPUnitExtensions\ArraySubset\Assert;
 
 /**
  * Class WalletTest
@@ -33,7 +34,7 @@ class WalletTest extends ResourceModelTestCase
      * @param array $addresses
      * @return string
      */
-    public static function getJson($addresses=array())
+    public static function getJson($addresses = array())
     {
         /*
         {
@@ -57,7 +58,7 @@ class WalletTest extends ResourceModelTestCase
             );
         }
 
-        return '{"token":"c0afcccdde5081d6429de37d16166ead","name":"alice","addresses":'.json_encode($addresses, true).',"error":"","errors":[]}';
+        return '{"token":"c0afcccdde5081d6429de37d16166ead","name":"alice","addresses":' . json_encode($addresses, true) . ',"error":"","errors":[]}';
     }
 
     /**
@@ -170,11 +171,11 @@ class WalletTest extends ResourceModelTestCase
                 self::getJson(array_merge(self::addresses(), $addressList->getAddresses()))
             ));
 
-       /** @noinspection PhpParamsInspection */
+        /** @noinspection PhpParamsInspection */
         $result = $obj->addAddresses($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
 
         $this->assertNotNull($result);
-        $this->assertArraySubset($addressList->getAddresses(), $result->getAddresses());
+        Assert::assertArraySubset($addressList->getAddresses(), $result->getAddresses());
     }
 
     /**
@@ -252,14 +253,14 @@ class WalletTest extends ResourceModelTestCase
      * @param Wallet $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -280,14 +281,14 @@ class WalletTest extends ResourceModelTestCase
      * @param Wallet $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();

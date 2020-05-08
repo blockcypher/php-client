@@ -284,7 +284,6 @@ class BlockCypherModelTest extends \PHPUnit\Framework\TestCase
             array(array(), 0, array()),
             array(array("id" => "123"), 1, array(new BlockCypherModel(array('id' => '123')))),
             array(null, 0, null),
-            array('', 0, array()),
             array('[[], {"id":"123"}]', 2, array(array(), new BlockCypherModel(array("id" => "123")))),
             array(
                 '[{"id":"123"}, {"id":"321"}]', 2,
@@ -331,12 +330,12 @@ class BlockCypherModelTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @dataProvider getInvalidProvider
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage Invalid JSON String
      * @param string|null $input
      */
     public function testGetListInvalidInput($input)
     {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('Invalid JSON String');
         $result = BlockCypherModel::getList($input);
     }
 

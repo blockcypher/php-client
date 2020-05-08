@@ -46,10 +46,10 @@ class ArgumentGetParamsValidatorTest extends \PHPUnit\Framework\TestCase
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataValidate($input)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertTrue(ArgumentGetParamsValidator::validate($input, "Name"));
     }
 
@@ -66,11 +66,9 @@ class ArgumentGetParamsValidatorTest extends \PHPUnit\Framework\TestCase
         ArgumentGetParamsValidator::sanitize($params, $allowedParams);
     }
 
-    /**
-     * @expectedException PHPUnit_Framework_Error_Notice
-     */
     public function testsSanitizeWithNotAllowedParams()
     {
+        $this->expectException('\PHPUnit\Framework\Error\Notice');
         $params = array(
             'paramNotAllowed' => 'param1Value',
         );

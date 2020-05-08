@@ -43,7 +43,7 @@ class AuthorizationCacheTest extends \PHPUnit\Framework\TestCase
     public function testCachePath($config, $expected)
     {
         $result = AuthorizationCache::cachePath($config);
-        $this->assertContains($expected, $result);
+        $this->assertStringContainsString($expected, $result);
     }
 
     public function testCacheDisabled()

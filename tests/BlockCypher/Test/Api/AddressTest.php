@@ -172,9 +172,11 @@ class AddressTest extends ResourceModelTestCase
      * @dataProvider mockProvider
      * @param Address $obj
      */
-    public function testCreate($obj, /** @noinspection PhpDocSignatureInspection */
-                               $mockApiContext)
-    {
+    public function testCreate(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -194,9 +196,11 @@ class AddressTest extends ResourceModelTestCase
      * @dataProvider mockProvider
      * @param Address $obj
      */
-    public function testGet($obj, /** @noinspection PhpDocSignatureInspection */
-                            $mockApiContext)
-    {
+    public function testGet(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -215,11 +219,13 @@ class AddressTest extends ResourceModelTestCase
     /**
      * @dataProvider mockProvider
      * @param Address $obj
-     * @expectedException \InvalidArgumentException
      */
-    public function testGetParamsValidationForAddressNull($obj, /** @noinspection PhpDocSignatureInspection */
-                                                          $mockApiContext)
-    {
+    public function testGetParamsValidationForAddressNull(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -238,11 +244,13 @@ class AddressTest extends ResourceModelTestCase
     /**
      * @dataProvider mockProvider
      * @param Address $obj
-     * @expectedException \InvalidArgumentException
      */
-    public function testGetParamsValidationForEmptyAddress($obj, /** @noinspection PhpDocSignatureInspection */
-                                                           $mockApiContext)
-    {
+    public function testGetParamsValidationForEmptyAddress(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -262,9 +270,11 @@ class AddressTest extends ResourceModelTestCase
      * @dataProvider mockProvider
      * @param Address $obj
      */
-    public function testGetWithParams($obj, /** @noinspection PhpDocSignatureInspection */
-                                      $mockApiContext)
-    {
+    public function testGetWithParams(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -290,14 +300,14 @@ class AddressTest extends ResourceModelTestCase
      * @param Address $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -317,9 +327,11 @@ class AddressTest extends ResourceModelTestCase
      * @dataProvider mockProvider
      * @param Address $obj
      */
-    public function testGetOnlyBalance($obj, /** @noinspection PhpDocSignatureInspection */
-                                       $mockApiContext)
-    {
+    public function testGetOnlyBalance(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -354,7 +366,7 @@ class AddressTest extends ResourceModelTestCase
                 '[' . AddressTest::getJson() . ']'
             ));
 
-        $addressList = Array(AddressTest::getObject()->getAddress());
+        $addressList = array(AddressTest::getObject()->getAddress());
 
         $result = $obj->getMultiple($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -375,14 +387,14 @@ class AddressTest extends ResourceModelTestCase
      * @param Address $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -393,7 +405,7 @@ class AddressTest extends ResourceModelTestCase
                 '[' . AddressTest::getJson() . ']'
             ));
 
-        $addressList = Array(AddressTest::getObject()->getAddress());
+        $addressList = array(AddressTest::getObject()->getAddress());
 
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */
@@ -416,7 +428,7 @@ class AddressTest extends ResourceModelTestCase
                 '[' . AddressTest::getJson() . ']'
             ));
 
-        $addressList = Array(AddressTest::getObject()->getAddress());
+        $addressList = array(AddressTest::getObject()->getAddress());
         $params = array(
             'unspentOnly' => 'true',
             'before' => 300000,

@@ -46,10 +46,10 @@ class UrlValidatorTest extends \PHPUnit\Framework\TestCase
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testValidateException($input)
     {
+        $this->expectException('\InvalidArgumentException');
         UrlValidator::validate($input, "Test Value");
     }
 }

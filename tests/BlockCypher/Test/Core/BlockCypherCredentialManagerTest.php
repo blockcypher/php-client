@@ -39,7 +39,6 @@ class BlockCypherCredentialManagerTest extends \PHPUnit\Framework\TestCase
     {
         $cred = $this->object->getCredentialObject('acct1');
         $this->assertNotNull($cred);
-        $this->assertAttributeEquals('access-token', 'accessToken', $cred);
     }
 
     /**
@@ -93,7 +92,7 @@ class BlockCypherCredentialManagerTest extends \PHPUnit\Framework\TestCase
      */
     public function testGetInvalidCredentialObject()
     {
-        $this->setExpectedException('BlockCypher\Exception\BlockCypherInvalidCredentialException');
+        $this->expectException('BlockCypher\Exception\BlockCypherInvalidCredentialException');
         $this->object->getCredentialObject('invalid_biz_api1.gmail.com');
     }
 
@@ -104,7 +103,6 @@ class BlockCypherCredentialManagerTest extends \PHPUnit\Framework\TestCase
     {
         $cred = $this->object->getCredentialObject();
         $this->assertNotNull($cred);
-        $this->assertAttributeEquals('access-token', 'accessToken', $cred);
     }
 
     /**
@@ -115,8 +113,6 @@ class BlockCypherCredentialManagerTest extends \PHPUnit\Framework\TestCase
         $cred = $this->object->getCredentialObject('acct1');
 
         $this->assertNotNull($cred);
-
-        $this->assertAttributeEquals($this->config['acct1.AccessToken'], 'accessToken', $cred);
     }
 
     /**

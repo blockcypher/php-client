@@ -70,10 +70,10 @@ class AddressClientTest extends ClientTestCase
      * @param AddressClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
-     * @expectedException \InvalidArgumentException
      */
     public function testGenerateMultisigAddressValidationForPubkeys($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -128,10 +128,10 @@ class AddressClientTest extends ClientTestCase
      * @param AddressClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForAddressNull($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -146,10 +146,10 @@ class AddressClientTest extends ClientTestCase
      * @param AddressClient $obj
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForEmptyAddress($obj, $mockApiContext, $mockBlockCypherRestCall)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -188,10 +188,10 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -236,7 +236,7 @@ class AddressClientTest extends ClientTestCase
                 '[' . AddressTest::getJson() . ']'
             ));
 
-        $addressList = Array(AddressTest::getObject()->getAddress());
+        $addressList = array(AddressTest::getObject()->getAddress());
 
         $result = $obj->getMultiple($addressList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -249,17 +249,17 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 '[' . AddressTest::getJson() . ']'
             ));
 
-        $addressList = Array(AddressTest::getObject()->getAddress());
+        $addressList = array(AddressTest::getObject()->getAddress());
 
         $obj->get($addressList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
@@ -278,7 +278,7 @@ class AddressClientTest extends ClientTestCase
                 '[' . AddressTest::getJson() . ']'
             ));
 
-        $addressList = Array(AddressTest::getObject()->getAddress());
+        $addressList = array(AddressTest::getObject()->getAddress());
         $params = array(
             'unspentOnly' => 'true',
             'before' => 300000,
@@ -316,10 +316,10 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetBalanceParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -343,7 +343,7 @@ class AddressClientTest extends ClientTestCase
                 '[' . AddressBalanceTest::getJson() . ']'
             ));
 
-        $addressBalanceList = Array(AddressBalanceTest::getObject()->getAddress());
+        $addressBalanceList = array(AddressBalanceTest::getObject()->getAddress());
 
         $result = $obj->getMultipleBalances($addressBalanceList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -356,17 +356,17 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleBalancesParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 '[' . AddressBalanceTest::getJson() . ']'
             ));
 
-        $addressBalanceList = Array(AddressBalanceTest::getObject()->getAddress());
+        $addressBalanceList = array(AddressBalanceTest::getObject()->getAddress());
 
         $obj->getMultipleBalances($addressBalanceList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
@@ -420,10 +420,10 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetFullAddressParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -447,7 +447,7 @@ class AddressClientTest extends ClientTestCase
                 '[' . FullAddressTest::getJson() . ']'
             ));
 
-        $fullAddressList = Array(FullAddressTest::getObject()->getAddress());
+        $fullAddressList = array(FullAddressTest::getObject()->getAddress());
 
         $result = $obj->getMultipleFullAddresses($fullAddressList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -468,7 +468,7 @@ class AddressClientTest extends ClientTestCase
                 '[' . FullAddressTest::getJson() . ']'
             ));
 
-        $fullAddressList = Array(FullAddressTest::getObject()->getAddress());
+        $fullAddressList = array(FullAddressTest::getObject()->getAddress());
         $params = array(
             'unspentOnly' => 'true',
             'before' => 300000,
@@ -485,17 +485,17 @@ class AddressClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleFullAddressesParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 '[' . FullAddressTest::getJson() . ']'
             ));
 
-        $fullAddressList = Array(FullAddressTest::getObject()->getAddress());
+        $fullAddressList = array(FullAddressTest::getObject()->getAddress());
 
         $obj->getMultipleFullAddresses($fullAddressList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }

@@ -49,12 +49,10 @@ class ModelTest extends \PHPUnit\Framework\TestCase
         $this->assertNull($obj->getDescription());
     }
 
-    /**
-     * @expectedException        \InvalidArgumentException
-     * @expectedExceptionMessage Invalid JSON String
-     */
     public function testConstructorInvalidInput()
     {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('Invalid JSON String');
         new SimpleClass("Something that is not even correct");
     }
 
@@ -79,7 +77,7 @@ class ModelTest extends \PHPUnit\Framework\TestCase
 
             $this->assertEquals("test", $obj->getName());
             $this->assertEquals("description", $obj->getDescription());
-        } catch (\PHPUnit_Framework_Error_Notice $ex) {
+        } catch (\PHPUnit\Framework\Error\Notice $ex) {
             // No need to do anything
         }
     }
@@ -93,7 +91,7 @@ class ModelTest extends \PHPUnit\Framework\TestCase
             if (BlockCypherConfigManager::getInstance()->get('validation.level') == 'strict') {
                 $this->fail("It should have thrown a Notice Error");
             }
-        } catch (\PHPUnit_Framework_Error_Notice $ex) {
+        } catch (\PHPUnit\Framework\Error\Notice $ex) {
         }
     }
 
@@ -115,11 +113,11 @@ class ModelTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals("description", $obj->getDescription());
 
         $resultJson = $obj->toJSON();
-        $this->assertContains("unknown", $resultJson);
-        $this->assertContains("id", $resultJson);
-        $this->assertContains("object", $resultJson);
-        $this->assertContains("123", $resultJson);
-        $this->assertContains("456", $resultJson);
+        $this->assertStringContainsString("unknown", $resultJson);
+        $this->assertStringContainsString("id", $resultJson);
+        $this->assertStringContainsString("object", $resultJson);
+        $this->assertStringContainsString("123", $resultJson);
+        $this->assertStringContainsString("456", $resultJson);
 
         // Restore default test validation mode
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));
@@ -139,11 +137,11 @@ class ModelTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals("test", $obj->getName());
         $this->assertEquals("description", $obj->getDescription());
         $resultJson = $obj->toJSON();
-        $this->assertContains("unknown", $resultJson);
-        $this->assertContains("id", $resultJson);
-        $this->assertContains("object", $resultJson);
-        $this->assertContains("123", $resultJson);
-        $this->assertContains("456", $resultJson);
+        $this->assertStringContainsString("unknown", $resultJson);
+        $this->assertStringContainsString("id", $resultJson);
+        $this->assertStringContainsString("object", $resultJson);
+        $this->assertStringContainsString("123", $resultJson);
+        $this->assertStringContainsString("456", $resultJson);
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));
     }
 
@@ -153,7 +151,7 @@ class ModelTest extends \PHPUnit\Framework\TestCase
         $json = '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","inputs":[{"related_resources":[]}]}';
         $transaction = new TX($json);
         $result = $transaction->toJSON();
-        $this->assertContains('"related_resources":[]', $result);
+        $this->assertStringContainsString('"related_resources":[]', $result);
         $this->assertNotNull($result);
     }
 
@@ -163,7 +161,7 @@ class ModelTest extends \PHPUnit\Framework\TestCase
         $json = '{"block_hash":"0000000000000000c504bdea36e531d8089d324f2d936c86e3274f97f8a44328","inputs":[{"related_resources":[{},{}]}]}';
         $transaction = new TX($json);
         $result = $transaction->toJSON();
-        $this->assertContains('"related_resources":[{},{}]', $result);
+        $this->assertStringContainsString('"related_resources":[{},{}]', $result);
         $this->assertNotNull($result);
     }
 
@@ -190,7 +188,7 @@ class ModelTest extends \PHPUnit\Framework\TestCase
         try {
             $obj->invalid = "value2";
             $this->assertEquals($obj->invalid, "value2");
-        } catch (\PHPUnit_Framework_Error_Notice $ex) {
+        } catch (\PHPUnit\Framework\Error\Notice $ex) {
             $this->fail("It should not have thrown a Notice Error as it is disabled.");
         }
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));

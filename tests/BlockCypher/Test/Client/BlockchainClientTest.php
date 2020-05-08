@@ -48,10 +48,10 @@ class BlockchainClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -78,7 +78,7 @@ class BlockchainClientTest extends ClientTestCase
 
         return '{"name":"bip65","state":"EXCLUSIVE","last_transition_height":388380,"last_transition_hash":"000000000000000009f886db2c7c12a497603e86378bace3ead93d350be3f38c"}';
     }
-    
+
     /**
      * @dataProvider mockProvider
      * @param BlockchainClient $obj

@@ -114,7 +114,7 @@ class BlockCypherHttpConfigTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('hostname:8081', $curlOpts[CURLOPT_PROXY]);
         $this->assertEquals('me:secret', $curlOpts[CURLOPT_PROXYUSERPWD]);
 
-        $this->setExpectedException('BlockCypher\Exception\BlockCypherConfigurationException');
+        $this->expectException('BlockCypher\Exception\BlockCypherConfigurationException');
         $o->setHttpProxy('invalid string');
     }
 

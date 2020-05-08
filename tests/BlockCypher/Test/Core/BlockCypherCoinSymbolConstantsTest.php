@@ -51,12 +51,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      * @dataProvider invalidGetDisplayNameProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetDisplayNameInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getDisplayName($coinSymbol);
     }
 
@@ -95,12 +95,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      * @dataProvider invalidGetCurrencyAbbrevProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetCurrencyAbbrevInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getCurrencyAbbrev($coinSymbol);
     }
 
@@ -139,12 +139,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      * @dataProvider invalidGetBlockCypherCodeProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetBlockCypherCodeInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getBlockCypherCode($coinSymbol);
     }
 
@@ -183,12 +183,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      * @dataProvider invalidGetBlockCypherNetworkProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetBlockCypherNetworkInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getBlockCypherNetwork($coinSymbol);
     }
 
@@ -324,19 +324,19 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @test
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testAllRequiredFieldsArePresent()
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         new BlockCypherCoinSymbolConstantsRequiredFieldConfigError();
     }
 
     /**
      * @test
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testInvalidPow()
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         new BlockCypherCoinSymbolConstantsInvalidPowConfigError();
     }
 

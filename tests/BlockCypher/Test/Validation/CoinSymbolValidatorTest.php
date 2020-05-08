@@ -45,10 +45,10 @@ class CoinSymbolValidatorTest extends \PHPUnit\Framework\TestCase
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataValidate($input)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertTrue(CoinSymbolValidator::validate($input, "Name"));
     }
 }

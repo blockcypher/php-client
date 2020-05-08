@@ -10,8 +10,6 @@ class JsonValidatorTest extends \PHPUnit\Framework\TestCase
     public static function positiveProvider()
     {
         return array(
-            array(null),
-            array(''),
             array("{}"),
             array('{"json":"value", "bool":false, "int":1, "float": 0.123, "array": [{"json":"value", "bool":false, "int":1, "float": 0.123},{"json":"value", "bool":false, "int":1, "float": 0.123} ]}')
         );
@@ -40,10 +38,10 @@ class JsonValidatorTest extends \PHPUnit\Framework\TestCase
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidJson($input)
     {
+        $this->expectException('\InvalidArgumentException');
         JsonValidator::validate($input);
     }
 

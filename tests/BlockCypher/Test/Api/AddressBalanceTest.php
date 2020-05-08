@@ -81,9 +81,11 @@ class AddressBalanceTest extends ResourceModelTestCase
      * @dataProvider mockProvider
      * @param AddressBalance $obj
      */
-    public function testGet($obj, /** @noinspection PhpDocSignatureInspection */
-                            $mockApiContext)
-    {
+    public function testGet(
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
+        $mockApiContext
+    ) {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -105,14 +107,13 @@ class AddressBalanceTest extends ResourceModelTestCase
      * @param AddressBalance $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -122,6 +123,8 @@ class AddressBalanceTest extends ResourceModelTestCase
             ->will($this->returnValue(
                 AddressBalanceTest::getJson()
             ));
+
+        $this->expectException('\InvalidArgumentException');
 
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */
@@ -144,7 +147,7 @@ class AddressBalanceTest extends ResourceModelTestCase
                 '[' . AddressBalanceTest::getJson() . ']'
             ));
 
-        $addressBalanceList = Array(AddressBalanceTest::getObject()->getAddress());
+        $addressBalanceList = array(AddressBalanceTest::getObject()->getAddress());
 
         $result = $obj->getMultiple($addressBalanceList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -165,14 +168,14 @@ class AddressBalanceTest extends ResourceModelTestCase
      * @param AddressBalance $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -183,10 +186,11 @@ class AddressBalanceTest extends ResourceModelTestCase
                 '[' . AddressBalanceTest::getJson() . ']'
             ));
 
-        $addressBalanceList = Array(AddressBalanceTest::getObject()->getAddress());
+        $addressBalanceList = array(AddressBalanceTest::getObject()->getAddress());
 
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */
+
         $obj->getMultiple($addressBalanceList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
 }

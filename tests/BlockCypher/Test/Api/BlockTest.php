@@ -244,14 +244,14 @@ class BlockTest extends ResourceModelTestCase
      * @param Block $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -284,7 +284,7 @@ class BlockTest extends ResourceModelTestCase
                 '[' . BlockTest::getJson() . ']'
             ));
 
-        $blockList = Array(BlockTest::getObject()->getHeight());
+        $blockList = array(BlockTest::getObject()->getHeight());
 
         /** @noinspection PhpParamsInspection */
         $result = $obj->getMultiple($blockList, array(), $mockApiContext, $mockBlockCypherRestCall);
@@ -306,14 +306,14 @@ class BlockTest extends ResourceModelTestCase
      * @param Block $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -324,7 +324,7 @@ class BlockTest extends ResourceModelTestCase
                 '[' . BlockTest::getJson() . ']'
             ));
 
-        $blockList = Array(BlockTest::getObject()->getHeight());
+        $blockList = array(BlockTest::getObject()->getHeight());
 
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */
@@ -347,7 +347,7 @@ class BlockTest extends ResourceModelTestCase
                 '[' . BlockTest::getJson() . ']'
             ));
 
-        $blockList = Array(BlockTest::getObject()->getHeight());
+        $blockList = array(BlockTest::getObject()->getHeight());
         $params = array(
             'txstart' => 1,
             'limit' => 1,

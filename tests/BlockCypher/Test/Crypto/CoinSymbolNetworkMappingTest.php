@@ -51,10 +51,10 @@ class CoinSymbolNetworkMappingTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @dataProvider invalidProvider
-     * @expectedException \Exception
      */
     public function testInvalidDataValidate($coinSymbol)
     {
+        $this->expectException('\Exception');
         $this->assertInstanceOf('\BitWasp\Bitcoin\Network\NetworkInterface', CoinSymbolNetworkMapping::getNetwork($coinSymbol));
     }
 }

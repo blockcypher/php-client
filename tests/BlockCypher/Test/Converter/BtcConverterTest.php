@@ -80,10 +80,10 @@ class BtcConverterTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @dataProvider invalidProviderBtcToSatoshis
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataBtcToSatoshis($btc, $satoshis)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertEquals(BtcConverter::btcToSatoshis($btc), $satoshis);
     }
 
@@ -97,10 +97,10 @@ class BtcConverterTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @dataProvider invalidProviderSatoshisToBtc
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataSatoshisToBtc($satoshis, $btc)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertEquals(BtcConverter::satoshisToBtc($satoshis), $btc);
     }
 
@@ -114,10 +114,10 @@ class BtcConverterTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @dataProvider invalidProviderSatoshisToBtcRounded
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataSatoshisToBtcRounded($satoshis, $btc)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertEquals(BtcConverter::satoshisToBtcRounded($satoshis), $btc);
     }
 }
