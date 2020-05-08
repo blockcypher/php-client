@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install dependencies
+      run: apt install libmcrypt-dev
+
     - name: Validate composer.json and composer.lock
       run: composer validate
 
