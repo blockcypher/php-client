@@ -20,7 +20,7 @@ The `master` branch targets PHP >= 7.1.0 and is release as v2. While we are tran
 * [ PHP wallet sample](https://github.com/blockcypher/php-wallet-sample)
 * [ Installation ](https://github.com/blockcypher/php-client/wiki/Installation)
 * [ Make your First SDK Call](https://github.com/blockcypher/php-client/wiki/Making-First-Call)
-* [ BlockCypher Developer Docs] (http://dev.blockcypher.com/)
+* [ BlockCypher Developer Docs](http://dev.blockcypher.com/)
 
 ## Prerequisites
 
