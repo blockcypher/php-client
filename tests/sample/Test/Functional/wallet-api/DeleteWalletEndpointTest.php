@@ -10,7 +10,7 @@ use sample\Test\Functional\WalletSampleTestCase;
  */
 class DeleteWalletEndpointTest extends WalletSampleTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         self::$walletName = 'alice';

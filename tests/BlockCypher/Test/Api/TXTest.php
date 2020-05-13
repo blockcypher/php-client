@@ -254,14 +254,14 @@ class TXTest extends ResourceModelTestCase
      * @param TX $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -293,7 +293,7 @@ class TXTest extends ResourceModelTestCase
                 '[' . TXTest::getJson() . ']'
             ));
 
-        $transactionList = Array(TXTest::getObject()->getHash());
+        $transactionList = array(TXTest::getObject()->getHash());
 
         $result = $obj->getMultiple($transactionList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -390,7 +390,7 @@ class TXTest extends ResourceModelTestCase
                 '[' . TXTest::getJson() . ']'
             ));
 
-        $transactionList = Array(AddressTest::getObject()->getAddress());
+        $transactionList = array(AddressTest::getObject()->getAddress());
         $params = array(
             'instart' => 1,
             'outstart' => 1,
@@ -407,14 +407,14 @@ class TXTest extends ResourceModelTestCase
      * @param TX $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -425,7 +425,7 @@ class TXTest extends ResourceModelTestCase
                 '[' . TXTest::getJson() . ']'
             ));
 
-        $transactionList = Array(AddressTest::getObject()->getAddress());
+        $transactionList = array(AddressTest::getObject()->getAddress());
 
         /** @noinspection PhpUndefinedVariableInspection */
         /** @noinspection PhpParamsInspection */

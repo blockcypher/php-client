@@ -10,7 +10,7 @@ use BlockCypher\Test\Functional\Setup;
  *
  * @package BlockCypher\Test\Api
  */
-class FullAddressFunctionalTest extends \PHPUnit_Framework_TestCase
+class FullAddressFunctionalTest extends \PHPUnit\Framework\TestCase
 {
     public $operation;
 
@@ -20,7 +20,7 @@ class FullAddressFunctionalTest extends \PHPUnit_Framework_TestCase
 
     public $apiContext;
 
-    public function setUp()
+    public function setUp(): void
     {
         $className = $this->getClassName();
         $testName = $this->getName();

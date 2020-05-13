@@ -7,7 +7,7 @@ use BlockCypher\Core\BlockCypherCredentialManager;
  *
  * @runTestsInSeparateProcesses
  */
-class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
+class BlockCypherCredentialManagerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var BlockCypherCredentialManager
@@ -39,7 +39,6 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
     {
         $cred = $this->object->getCredentialObject('acct1');
         $this->assertNotNull($cred);
-        $this->assertAttributeEquals('access-token', 'accessToken', $cred);
     }
 
     /**
@@ -93,7 +92,7 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetInvalidCredentialObject()
     {
-        $this->setExpectedException('BlockCypher\Exception\BlockCypherInvalidCredentialException');
+        $this->expectException('BlockCypher\Exception\BlockCypherInvalidCredentialException');
         $this->object->getCredentialObject('invalid_biz_api1.gmail.com');
     }
 
@@ -104,7 +103,6 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
     {
         $cred = $this->object->getCredentialObject();
         $this->assertNotNull($cred);
-        $this->assertAttributeEquals('access-token', 'accessToken', $cred);
     }
 
     /**
@@ -115,15 +113,13 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
         $cred = $this->object->getCredentialObject('acct1');
 
         $this->assertNotNull($cred);
-
-        $this->assertAttributeEquals($this->config['acct1.AccessToken'], 'accessToken', $cred);
     }
 
     /**
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->object = BlockCypherCredentialManager::getInstance($this->config);
     }
@@ -132,7 +128,7 @@ class BlockCypherCredentialManagerTest extends \PHPUnit_Framework_TestCase
      * Tears down the fixture, for example, closes a network connection.
      * This method is called after a test is executed.
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
     }
 }

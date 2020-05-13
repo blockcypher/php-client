@@ -11,7 +11,7 @@ class Setup
 {
     public static $mode = 'mock';
 
-    public static function SetUpForFunctionalTests(\PHPUnit_Framework_TestCase &$test)
+    public static function SetUpForFunctionalTests(\PHPUnit\Framework\TestCase &$test)
     {
         $configs = array(
             'mode' => 'sandbox',
@@ -34,7 +34,8 @@ class Setup
         //BlockCypherConfigManager::getInstance()->addConfigFromIni(__DIR__. '/../../../sdk_config.ini');
         //BlockCypherConfigManager::getInstance()->addConfigs($configs);
         BlockCypherCredentialManager::getInstance()->setCredentialObject(
-            BlockCypherCredentialManager::getInstance()->getCredentialObject('acct1'));
+            BlockCypherCredentialManager::getInstance()->getCredentialObject('acct1')
+        );
 
         self::$mode = getenv('REST_MODE') ? getenv('REST_MODE') : 'mock';
         if (self::$mode != 'sandbox') {

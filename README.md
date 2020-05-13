@@ -7,6 +7,9 @@
 
 __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP SDK and samples for REST API.
 
+**Warning: the legacy version (up to v1.4.0) which targets PHP >= 5.5.0 is in the branch `php55`.
+The `master` branch targets PHP >= 7.1.0 and is release as v2. While we are transitioning to v2 some of the documentation might be out of date. Please open an issue if this is the case.**
+
 ## SDK Documentation
 
 [ Our BlockCypher-PHP-SDK Page ](http://blockcypher.github.io/php-client/) includes all the documentation related to PHP SDK. Everything from SDK Wiki, to Sample Codes, to Releases. Here are few quick links to get you there faster.
@@ -21,10 +24,9 @@ __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP S
 
 ## Prerequisites
 
-   - PHP 5.4+
+   - PHP 7.1+
    - [curl](http://php.net/manual/en/book.curl.php), [json](http://php.net/manual/en/book.json.php) & [openssl](http://php.net/manual/en/book.openssl.php) extensions must be enabled
    - [ext-gmp](http://php.net/manual/en/book.gmp.php)
-   - [ext-mcrypt](http://php.net/manual/es/book.mcrypt.php)
 
 ## More help
    * [Going Live](https://github.com/blockcypher/php-client/wiki/Going-Live)

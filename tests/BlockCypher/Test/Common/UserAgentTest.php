@@ -4,7 +4,7 @@
 
 use BlockCypher\Common\BlockCypherUserAgent;
 
-class UserAgentTest extends \PHPUnit_Framework_TestCase
+class UserAgentTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testGetValue()

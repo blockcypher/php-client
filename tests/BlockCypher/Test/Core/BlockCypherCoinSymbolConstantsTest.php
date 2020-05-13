@@ -5,7 +5,7 @@ use BlockCypher\Core\BlockCypherCoinSymbolConstants;
 /**
  * Test class for BlockCypherCoinSymbolConstants.
  */
-class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
+class BlockCypherCoinSymbolConstantsTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test
@@ -51,12 +51,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      * @dataProvider invalidGetDisplayNameProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetDisplayNameInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getDisplayName($coinSymbol);
     }
 
@@ -95,12 +95,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      * @dataProvider invalidGetCurrencyAbbrevProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetCurrencyAbbrevInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getCurrencyAbbrev($coinSymbol);
     }
 
@@ -139,12 +139,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      * @dataProvider invalidGetBlockCypherCodeProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetBlockCypherCodeInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getBlockCypherCode($coinSymbol);
     }
 
@@ -183,12 +183,12 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      * @dataProvider invalidGetBlockCypherNetworkProvider
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      * @param mixed $coinSymbol
      * @throws \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testGetBlockCypherNetworkInvalidInput($coinSymbol)
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         BlockCypherCoinSymbolConstants::getBlockCypherNetwork($coinSymbol);
     }
 
@@ -324,19 +324,19 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testAllRequiredFieldsArePresent()
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         new BlockCypherCoinSymbolConstantsRequiredFieldConfigError();
     }
 
     /**
      * @test
-     * @expectedException \BlockCypher\Exception\BlockCypherConfigurationException
      */
     public function testInvalidPow()
     {
+        $this->expectException('\BlockCypher\Exception\BlockCypherConfigurationException');
         new BlockCypherCoinSymbolConstantsInvalidPowConfigError();
     }
 
@@ -344,7 +344,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
     }
 
@@ -352,7 +352,7 @@ class BlockCypherCoinSymbolConstantsTest extends \PHPUnit_Framework_TestCase
      * Tears down the fixture, for example, closes a network connection.
      * This method is called after a test is executed.
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
     }
 }
@@ -363,20 +363,21 @@ class BlockCypherCoinSymbolConstantsRequiredFieldConfigError extends BlockCypher
      * List of Coin Symbol Ordered Dictionaries
      * @const array
      */
-    protected static /** @noinspection SpellCheckingInspection */
+    protected static
+        /** @noinspection SpellCheckingInspection */
         $COIN_SYMBOL_ODICT_LIST = array(
-        array(
-            'coin_symbol_NOT_PRESENT' => 'btc',  // <-- NOTICE!!!
-            'display_name' => 'Bitcoin',
-            'display_shortname' => 'BTC',
-            'blockcypher_code' => 'btc',
-            'blockcypher_network' => 'main',
-            'currency_abbrev' => 'BTC',
-            'pow' => 'sha',
-            'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
-            "address_first_char_list" => array('1', '3')
-        )
-    );
+            array(
+                'coin_symbol_NOT_PRESENT' => 'btc',  // <-- NOTICE!!!
+                'display_name' => 'Bitcoin',
+                'display_shortname' => 'BTC',
+                'blockcypher_code' => 'btc',
+                'blockcypher_network' => 'main',
+                'currency_abbrev' => 'BTC',
+                'pow' => 'sha',
+                'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
+                "address_first_char_list" => array('1', '3')
+            )
+        );
 }
 
 class BlockCypherCoinSymbolConstantsInvalidPowConfigError extends BlockCypherCoinSymbolConstants
@@ -385,18 +386,19 @@ class BlockCypherCoinSymbolConstantsInvalidPowConfigError extends BlockCypherCoi
      * List of Coin Symbol Ordered Dictionaries
      * @const array
      */
-    protected static /** @noinspection SpellCheckingInspection */
+    protected static
+        /** @noinspection SpellCheckingInspection */
         $COIN_SYMBOL_ODICT_LIST = array(
-        array(
-            'coin_symbol' => 'btc',
-            'display_name' => 'Bitcoin',
-            'display_shortname' => 'BTC',
-            'blockcypher_code' => 'btc',
-            'blockcypher_network' => 'main',
-            'currency_abbrev' => 'BTC',
-            'pow' => 'INVALID_POW',  // <-- NOTICE!!!
-            'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
-            "address_first_char_list" => array('1', '3')
-        )
-    );
+            array(
+                'coin_symbol' => 'btc',
+                'display_name' => 'Bitcoin',
+                'display_shortname' => 'BTC',
+                'blockcypher_code' => 'btc',
+                'blockcypher_network' => 'main',
+                'currency_abbrev' => 'BTC',
+                'pow' => 'INVALID_POW',  // <-- NOTICE!!!
+                'example_address' => '16Fg2yjwrbtC6fZp61EV9mNVKmwCzGasw5',
+                "address_first_char_list" => array('1', '3')
+            )
+        );
 }

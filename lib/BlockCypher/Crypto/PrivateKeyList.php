@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Crypto;
 
-use BitWasp\Bitcoin\Key\PrivateKeyInterface;
+use BitWasp\Bitcoin\Crypto\EcAdapter\Key\PrivateKeyInterface;
 use BlockCypher\Validation\ArgumentArrayValidator;
 use BlockCypher\Validation\CoinSymbolValidator;
 
@@ -29,7 +29,7 @@ class PrivateKeyList
      * @return PrivateKeyList
      * @throws \BlockCypher\Exception\BlockCypherInvalidPrivateKeyException
      */
-    public static function fromHexPrivateKeyArray($hexPrivateKeys, $coinSymbol, $compressed=true)
+    public static function fromHexPrivateKeyArray($hexPrivateKeys, $coinSymbol, $compressed = true)
     {
         ArgumentArrayValidator::validate($hexPrivateKeys, 'hexPrivateKeys');
         CoinSymbolValidator::validate($coinSymbol, 'coinSymbol');

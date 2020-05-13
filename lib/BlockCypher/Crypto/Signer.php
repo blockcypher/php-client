@@ -3,9 +3,9 @@
 namespace BlockCypher\Crypto;
 
 use BitWasp\Bitcoin\Bitcoin;
-use BitWasp\Bitcoin\Crypto\EcAdapter\EcAdapterInterface;
+use BitWasp\Bitcoin\Crypto\EcAdapter\Adapter\EcAdapterInterface;
 use BitWasp\Bitcoin\Crypto\Random\Rfc6979;
-use BitWasp\Bitcoin\Key\PrivateKeyInterface;
+use BitWasp\Bitcoin\Crypto\EcAdapter\Key\PrivateKeyInterface;
 use BitWasp\Buffertools\Buffer;
 use BlockCypher\Validation\ArgumentArrayValidator;
 
@@ -55,7 +55,7 @@ class Signer
         // Deterministic digital signature generation
         $k = new Rfc6979($ecAdapter, $privateKey, $data, 'sha256');
 
-        $sig = $ecAdapter->sign($data, $privateKey, $k);
+        $sig = $privateKey->sign($data, $k);
 
         // DEBUG
         //echo "hexDataToSign: <br/>";

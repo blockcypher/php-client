@@ -1,11 +1,13 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Core\BlockCypherConfigManager;
 use BlockCypher\Test\Common\SimpleClass;
 use BlockCypher\Validation\ModelAccessorValidator;
+use TypeError;
 
-class ModelAccessValidatorTest extends \PHPUnit_Framework_TestCase
+class ModelAccessValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()
@@ -28,12 +30,12 @@ class ModelAccessValidatorTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         BlockCypherConfigManager::getInstance()->addConfigs(array('validation.level' => 'strict'));
     }
@@ -55,8 +57,8 @@ class ModelAccessValidatorTest extends \PHPUnit_Framework_TestCase
     {
         try {
             $this->assertFalse(ModelAccessorValidator::validate($class, $name));
-        } catch (\Exception $ex) {
-            $this->assertContains($exMessage, $ex->getMessage());
+        } catch (\Exception | TypeError $ex) {
+            $this->assertStringContainsString($exMessage, $ex->getMessage());
         }
     }
 }

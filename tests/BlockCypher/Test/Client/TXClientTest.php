@@ -66,10 +66,10 @@ class TXClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -93,7 +93,7 @@ class TXClientTest extends ClientTestCase
                 '[' . TXTest::getJson() . ']'
             ));
 
-        $transactionList = Array(TXTest::getObject()->getHash());
+        $transactionList = array(TXTest::getObject()->getHash());
 
         $result = $obj->getMultiple($transactionList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -173,7 +173,7 @@ class TXClientTest extends ClientTestCase
                 '[' . TXTest::getJson() . ']'
             ));
 
-        $transactionList = Array(AddressTest::getObject()->getAddress());
+        $transactionList = array(AddressTest::getObject()->getAddress());
         $params = array(
             'instart' => 1,
             'outstart' => 1,
@@ -191,17 +191,17 @@ class TXClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 '[' . TXTest::getJson() . ']'
             ));
 
-        $transactionList = Array(AddressTest::getObject()->getAddress());
+        $transactionList = array(AddressTest::getObject()->getAddress());
 
         $obj->get($transactionList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }
@@ -315,10 +315,10 @@ class TXClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetConfidenceParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
@@ -342,7 +342,7 @@ class TXClientTest extends ClientTestCase
                 '[' . TXConfidenceTest::getJson() . ']'
             ));
 
-        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
+        $txConfidenceList = array(TXConfidenceTest::getObject()->getTxhash());
 
         $result = $obj->getMultipleConfidences($txConfidenceList, array(), $mockApiContext, $mockBlockCypherRestCall);
         $this->assertNotNull($result);
@@ -355,17 +355,17 @@ class TXClientTest extends ClientTestCase
      * @param PHPUnit_Framework_MockObject_MockObject|ApiContext $mockApiContext
      * @param PHPUnit_Framework_MockObject_MockObject|BlockCypherRestCall $mockBlockCypherRestCall
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleConfidenceParamsValidationForParams($obj, $mockApiContext, $mockBlockCypherRestCall, $params)
     {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall->expects($this->any())
             ->method('execute')
             ->will($this->returnValue(
                 '[' . TXConfidenceTest::getJson() . ']'
             ));
 
-        $txConfidenceList = Array(TXConfidenceTest::getObject()->getTxhash());
+        $txConfidenceList = array(TXConfidenceTest::getObject()->getTxhash());
 
         $obj->getMultipleConfidences($txConfidenceList, $params, $mockApiContext, $mockBlockCypherRestCall);
     }

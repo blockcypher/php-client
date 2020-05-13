@@ -1,10 +1,11 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Validation\ArgumentGetParamsValidator;
 use PHPUnit_Framework_Error_Notice;
 
-class ArgumentGetParamsValidatorTest extends \PHPUnit_Framework_TestCase
+class ArgumentGetParamsValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()
@@ -45,10 +46,10 @@ class ArgumentGetParamsValidatorTest extends \PHPUnit_Framework_TestCase
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataValidate($input)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertTrue(ArgumentGetParamsValidator::validate($input, "Name"));
     }
 
@@ -62,14 +63,12 @@ class ArgumentGetParamsValidatorTest extends \PHPUnit_Framework_TestCase
             'param1' => 'param1Value',
         );
 
-        ArgumentGetParamsValidator::sanitize($params, $allowedParams);
+        $this->assertNotNull(ArgumentGetParamsValidator::sanitize($params, $allowedParams));
     }
 
-    /**
-     * @expectedException PHPUnit_Framework_Error_Notice
-     */
     public function testsSanitizeWithNotAllowedParams()
     {
+        $this->expectException('\PHPUnit\Framework\Error\Notice');
         $params = array(
             'paramNotAllowed' => 'param1Value',
         );
@@ -81,5 +80,4 @@ class ArgumentGetParamsValidatorTest extends \PHPUnit_Framework_TestCase
         $validationLevel = 'strict';
         ArgumentGetParamsValidator::sanitize($params, $allowedParams, $validationLevel);
     }
-
 }

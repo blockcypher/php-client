@@ -1,9 +1,10 @@
 <?php
+
 namespace BlockCypher\Test\Converter;
 
 use BlockCypher\Converter\BtcConverter;
 
-class BtcConverterTest extends \PHPUnit_Framework_TestCase
+class BtcConverterTest extends \PHPUnit\Framework\TestCase
 {
     public static function positiveProviderBtcToSatoshis()
     {
@@ -79,10 +80,10 @@ class BtcConverterTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider invalidProviderBtcToSatoshis
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataBtcToSatoshis($btc, $satoshis)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertEquals(BtcConverter::btcToSatoshis($btc), $satoshis);
     }
 
@@ -96,10 +97,10 @@ class BtcConverterTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider invalidProviderSatoshisToBtc
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataSatoshisToBtc($satoshis, $btc)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertEquals(BtcConverter::satoshisToBtc($satoshis), $btc);
     }
 
@@ -113,10 +114,10 @@ class BtcConverterTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider invalidProviderSatoshisToBtcRounded
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidDataSatoshisToBtcRounded($satoshis, $btc)
     {
+        $this->expectException('\InvalidArgumentException');
         $this->assertEquals(BtcConverter::satoshisToBtcRounded($satoshis), $btc);
     }
 }

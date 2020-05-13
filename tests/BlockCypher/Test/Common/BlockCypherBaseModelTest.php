@@ -9,7 +9,7 @@ use BlockCypher\Test\Api\ErrorTest;
  * Test class for BlockCypherBaseModelTest.
  *
  */
-class BlockCypherBaseModelTest extends \PHPUnit_Framework_TestCase
+class BlockCypherBaseModelTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Gets Object Instance with Json data filled in

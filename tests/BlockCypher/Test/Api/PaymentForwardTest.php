@@ -84,12 +84,10 @@ class PaymentForwardTest extends ResourceModelTestCase
         $this->assertEquals($obj->getTransactions(), array("6336b42b5b80118d3b15c8fc0cf7fda2414bec4d90cbbbf6148ed58089ee1ad4"));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage callback_url is not a fully qualified URL
-     */
     public function testCallbackUrlValidationForUrl()
     {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('callback_url is not a fully qualified URL');
         $obj = new PaymentForward();
         $obj->setCallbackUrl(null);
     }
@@ -139,14 +137,14 @@ class PaymentForwardTest extends ResourceModelTestCase
      * @param PaymentForward $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();
@@ -199,14 +197,14 @@ class PaymentForwardTest extends ResourceModelTestCase
      * @param PaymentForward $obj
      * @param $mockApiContext
      * @param $params
-     * @expectedException \InvalidArgumentException
      */
     public function testGetMultipleParamsValidationForParams(
-        $obj, /** @noinspection PhpDocSignatureInspection */
+        $obj,
+        /** @noinspection PhpDocSignatureInspection */
         $mockApiContext,
         $params
-    )
-    {
+    ) {
+        $this->expectException('\InvalidArgumentException');
         $mockBlockCypherRestCall = $this->getMockBuilder('\BlockCypher\Transport\BlockCypherRestCall')
             ->disableOriginalConstructor()
             ->getMock();

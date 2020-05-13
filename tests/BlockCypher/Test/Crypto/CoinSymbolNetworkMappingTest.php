@@ -5,7 +5,7 @@ namespace BlockCypher\Test\Crypto;
 use BlockCypher\Core\BlockCypherCoinSymbolConstants;
 use BlockCypher\Crypto\CoinSymbolNetworkMapping;
 
-class CoinSymbolNetworkMappingTest extends \PHPUnit_Framework_TestCase
+class CoinSymbolNetworkMappingTest extends \PHPUnit\Framework\TestCase
 {
     public static function positiveProvider()
     {
@@ -51,11 +51,10 @@ class CoinSymbolNetworkMappingTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider invalidProvider
-     * @expectedException \Exception
      */
     public function testInvalidDataValidate($coinSymbol)
     {
+        $this->expectException('\Exception');
         $this->assertInstanceOf('\BitWasp\Bitcoin\Network\NetworkInterface', CoinSymbolNetworkMapping::getNetwork($coinSymbol));
     }
-
 }

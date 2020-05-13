@@ -7,7 +7,7 @@ namespace BlockCypher\Test\Client;
  *
  * @package BlockCypher\Test\Client
  */
-class ClientTestCase extends \PHPUnit_Framework_TestCase
+class ClientTestCase extends \PHPUnit\Framework\TestCase
 {
     /**
      * @param string $version

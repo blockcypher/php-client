@@ -1,9 +1,10 @@
 <?php
+
 namespace BlockCypher\Test\Validation;
 
 use BlockCypher\Validation\UrlValidator;
 
-class UrlValidatorTest extends \PHPUnit_Framework_TestCase
+class UrlValidatorTest extends \PHPUnit\Framework\TestCase
 {
 
     public static function positiveProvider()
@@ -39,17 +40,16 @@ class UrlValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidate($input)
     {
-        UrlValidator::validate($input, "Test Value");
+        $this->assertNull(UrlValidator::validate($input, "Test Value"));
     }
 
     /**
      *
      * @dataProvider invalidProvider
-     * @expectedException \InvalidArgumentException
      */
     public function testValidateException($input)
     {
+        $this->expectException('\InvalidArgumentException');
         UrlValidator::validate($input, "Test Value");
     }
-
 }

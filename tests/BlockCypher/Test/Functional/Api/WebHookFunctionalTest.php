@@ -11,7 +11,7 @@ use BlockCypher\Test\Functional\Setup;
  *
  * @package BlockCypher\Test\Api
  */
-class WebHookFunctionalTest extends \PHPUnit_Framework_TestCase
+class WebHookFunctionalTest extends \PHPUnit\Framework\TestCase
 {
     public $operation;
 
@@ -21,7 +21,7 @@ class WebHookFunctionalTest extends \PHPUnit_Framework_TestCase
 
     public $apiContext;
 
-    public function setUp()
+    public function setUp(): void
     {
         $className = $this->getClassName();
         $testName = $this->getName();

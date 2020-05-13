@@ -4,7 +4,7 @@ namespace BlockCypher\Test\Common;
 
 use BlockCypher\Converter\FormatConverter;
 
-class FormatConverterTest extends \PHPUnit_Framework_TestCase
+class FormatConverterTest extends \PHPUnit\Framework\TestCase
 {
     public static function CurrencyListWithNoDecimalsProvider()
     {
@@ -22,7 +22,6 @@ class FormatConverterTest extends \PHPUnit_Framework_TestCase
     {
         $result = FormatConverter::formatToNumber($input);
         $this->assertEquals($expected, $result);
-
     }
 
     /**
@@ -33,7 +32,7 @@ class FormatConverterTest extends \PHPUnit_Framework_TestCase
         try {
             FormatConverter::formatToPrice("1.234", $input);
         } catch (\InvalidArgumentException $ex) {
-            $this->assertContains("value cannot have decimals for", $ex->getMessage());
+            $this->assertStringContainsString("value cannot have decimals for", $ex->getMessage());
         }
     }
 

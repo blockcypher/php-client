@@ -24,7 +24,6 @@ class ArgumentGetParamsValidator
     {
         if (!is_array($argument)) {
             throw new \InvalidArgumentException("Argument with name $argumentName is not an array");
-
         }
         foreach ($argument as $item) {
             if ($item === null) {

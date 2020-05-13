@@ -45,7 +45,7 @@ class ModelAccessorValidator
                 } //Check if both getter and setter exists for given attribute
                 elseif (!method_exists($class, $methodName)) {
                     //Delegate the error based on the choice
-                    $className = is_object($class) ? get_class($class) : (string)$class;
+                    $className = is_object($class) ? get_class($class) : (string) $class;
                     $errorMessage = "Missing Accessor: $className:$methodName. You might be using older version of SDK. If not, create an issue at https://github.com/blockcypher/php-client/issues";
                     BlockCypherLoggingManager::getInstance(__CLASS__)->debug($errorMessage);
                     if ($mode == 'strict') {

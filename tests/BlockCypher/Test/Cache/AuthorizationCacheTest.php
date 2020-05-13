@@ -8,7 +8,7 @@ use BlockCypher\Cache\AuthorizationCache;
  * Test class for AuthorizationCacheTest.
  *
  */
-class AuthorizationCacheTest extends \PHPUnit_Framework_TestCase
+class AuthorizationCacheTest extends \PHPUnit\Framework\TestCase
 {
     const CACHE_FILE = 'tests/var/test.cache';
 
@@ -43,14 +43,14 @@ class AuthorizationCacheTest extends \PHPUnit_Framework_TestCase
     public function testCachePath($config, $expected)
     {
         $result = AuthorizationCache::cachePath($config);
-        $this->assertContains($expected, $result);
+        $this->assertStringContainsString($expected, $result);
     }
 
     public function testCacheDisabled()
     {
         // 'cache.enabled' => true,
-        AuthorizationCache::push(array('cache.enabled' => false), 'clientId', 'accessToken', 'tokenCreateTime', 'tokenExpiresIn');
-        AuthorizationCache::pull(array('cache.enabled' => false), 'clientId');
+        $this->assertNull(AuthorizationCache::push(array('cache.enabled' => false), 'clientId', 'accessToken', 'tokenCreateTime', 'tokenExpiresIn'));
+        $this->assertNull(AuthorizationCache::pull(array('cache.enabled' => false), 'clientId'));
     }
 
     public function testCachePush()
@@ -63,7 +63,6 @@ class AuthorizationCacheTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('accessToken', $tokens['clientId']['accessTokenEncrypted']);
         $this->assertEquals('tokenCreateTime', $tokens['clientId']['tokenCreateTime']);
         $this->assertEquals('tokenExpiresIn', $tokens['clientId']['tokenExpiresIn']);
-
     }
 
     public function testCachePullNonExisting()
@@ -92,7 +91,7 @@ class AuthorizationCacheTest extends \PHPUnit_Framework_TestCase
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
     }
 
@@ -100,8 +99,7 @@ class AuthorizationCacheTest extends \PHPUnit_Framework_TestCase
      * Tears down the fixture, for example, closes a network connection.
      * This method is called after a test is executed.
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
     }
-
 }

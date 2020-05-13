@@ -8,7 +8,7 @@ use BlockCypher\Core\BlockCypherHttpConfig;
  * Test class for BlockCypherHttpConfigTest.
  *
  */
-class BlockCypherHttpConfigTest extends \PHPUnit_Framework_TestCase
+class BlockCypherHttpConfigTest extends \PHPUnit\Framework\TestCase
 {
 
     protected $object;
@@ -114,7 +114,7 @@ class BlockCypherHttpConfigTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('hostname:8081', $curlOpts[CURLOPT_PROXY]);
         $this->assertEquals('me:secret', $curlOpts[CURLOPT_PROXYUSERPWD]);
 
-        $this->setExpectedException('BlockCypher\Exception\BlockCypherConfigurationException');
+        $this->expectException('BlockCypher\Exception\BlockCypherConfigurationException');
         $o->setHttpProxy('invalid string');
     }
 
@@ -122,18 +122,15 @@ class BlockCypherHttpConfigTest extends \PHPUnit_Framework_TestCase
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
-
     }
 
     /**
      * Tears down the fixture, for example, closes a network connection.
      * This method is called after a test is executed.
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
     }
 }
-
-?>

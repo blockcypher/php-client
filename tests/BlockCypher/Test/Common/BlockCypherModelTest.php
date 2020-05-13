@@ -49,7 +49,6 @@ class SimpleModelTestClass extends BlockCypherModel
     {
         return $this->field2;
     }
-
 }
 
 class ContainerModelTestClass extends BlockCypherModel
@@ -98,8 +97,6 @@ class ContainerModelTestClass extends BlockCypherModel
     {
         return $this->nested1;
     }
-
-
 }
 
 class ListModelTestClass extends BlockCypherModel
@@ -146,15 +143,13 @@ class ListModelTestClass extends BlockCypherModel
     {
         return $this->list2;
     }
-
-
 }
 
 /**
  * Test class for BlockCypherModel.
  *
  */
-class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
+class BlockCypherModelTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test
@@ -170,7 +165,6 @@ class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
         $oCopy = new SimpleModelTestClass();
         $oCopy->fromJson($o->toJSON());
         $this->assertEquals($o, $oCopy);
-
     }
 
     /**
@@ -185,13 +179,14 @@ class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
         $parent->setField1("parent");
         $parent->setNested1($child);
 
-        $this->assertEquals('{"field1":"parent","nested1":{}}',
-            $parent->toJSON());
+        $this->assertEquals(
+            '{"field1":"parent","nested1":{}}',
+            $parent->toJSON()
+        );
 
         $parentCopy = new ContainerModelTestClass();
         $parentCopy->fromJson($parent->toJSON());
         $this->assertEquals($parent, $parentCopy);
-
     }
 
     /**
@@ -208,7 +203,6 @@ class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
         $oCopy = new SimpleModelTestClass();
         $oCopy->fromJson($o->toJSON());
         $this->assertEquals($o, $oCopy);
-
     }
 
     /**
@@ -224,13 +218,14 @@ class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
         $parent->setField1("parent");
         $parent->setNested1($child);
 
-        $this->assertEquals('{"field1":"parent","nested1":{"field1":"value 1","field2":"value 2"}}',
-            $parent->toJSON());
+        $this->assertEquals(
+            '{"field1":"parent","nested1":{"field1":"value 1","field2":"value 2"}}',
+            $parent->toJSON()
+        );
 
         $parentCopy = new ContainerModelTestClass();
         $parentCopy->fromJson($parent->toJSON());
         $this->assertEquals($parent, $parentCopy);
-
     }
 
     /**
@@ -289,19 +284,21 @@ class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
             array(array(), 0, array()),
             array(array("id" => "123"), 1, array(new BlockCypherModel(array('id' => '123')))),
             array(null, 0, null),
-            array('', 0, array()),
             array('[[], {"id":"123"}]', 2, array(array(), new BlockCypherModel(array("id" => "123")))),
-            array('[{"id":"123"}, {"id":"321"}]', 2,
+            array(
+                '[{"id":"123"}, {"id":"321"}]', 2,
                 array(
                     new BlockCypherModel(array("id" => "123")),
                     new BlockCypherModel(array("id" => "321"))
                 )
             ),
-            array(array(array("id" => "123"), array("id" => "321")), 2,
+            array(
+                array(array("id" => "123"), array("id" => "321")), 2,
                 array(
                     new BlockCypherModel(array("id" => "123")),
                     new BlockCypherModel(array("id" => "321"))
-                )),
+                )
+            ),
             array(new BlockCypherModel('{"id": "123"}'), 1, array(new BlockCypherModel(array("id" => "123"))))
         );
     }
@@ -333,12 +330,12 @@ class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider getInvalidProvider
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage Invalid JSON String
      * @param string|null $input
      */
     public function testGetListInvalidInput($input)
     {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('Invalid JSON String');
         $result = BlockCypherModel::getList($input);
     }
 
@@ -346,16 +343,15 @@ class BlockCypherModelTest extends \PHPUnit_Framework_TestCase
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
-
     }
 
     /**
      * Tears down the fixture, for example, closes a network connection.
      * This method is called after a test is executed.
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
     }
 }

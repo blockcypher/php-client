@@ -9,7 +9,7 @@ use BlockCypher\Crypto\Signer;
  * Class SignerTest
  * @package BlockCypher\Test\Crypto
  */
-class SignerTest extends \PHPUnit_Framework_TestCase
+class SignerTest extends \PHPUnit\Framework\TestCase
 {
     const PRIVATE_KEY = '1551558c3b75f46b71ec068f9e341bf35ee6df361f7b805deb487d8a4d5f055e';
     const TO_SIGN = 'd494ba34f5b2938aade8ac156d8099ba686f8b68de43e98d5fa35e367b6431f4';
@@ -67,12 +67,12 @@ class SignerTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider invalidSignMultipleParameters
      * @test
-     * @expectedException \InvalidArgumentException
      * @param $toSign
      */
     public function
     should_only_allow_sign_multiple_data_from_an_array($toSign)
     {
+        $this->expectException('\InvalidArgumentException');
         Signer::signMultiple($toSign, self::PRIVATE_KEY);
     }
 

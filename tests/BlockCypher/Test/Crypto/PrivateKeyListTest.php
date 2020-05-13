@@ -2,7 +2,7 @@
 
 namespace BlockCypher\Test\Crypto;
 
-use BitWasp\Bitcoin\Key\PrivateKeyInterface;
+use BitWasp\Bitcoin\Crypto\EcAdapter\Key\PrivateKeyInterface;
 use BlockCypher\Crypto\PrivateKeyList;
 use BlockCypher\Crypto\PrivateKeyManipulator;
 
@@ -10,7 +10,7 @@ use BlockCypher\Crypto\PrivateKeyManipulator;
  * Class PrivateKeyListTest
  * @package BlockCypher\Test\Crypto
  */
-class PrivateKeyListTest extends \PHPUnit_Framework_TestCase
+class PrivateKeyListTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider dataProvider
@@ -39,11 +39,11 @@ class PrivateKeyListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider dataProvider
-     * @expectedException \InvalidArgumentException
      * @param $address
      */
     public function testFromHexPrivateKeyArrayWithInvalidCoinSymbol($address)
     {
+        $this->expectException('\InvalidArgumentException');
         $hexPrivateKeyArray = array($address['private']);
         $privateKeyList = PrivateKeyList::fromHexPrivateKeyArray($hexPrivateKeyArray, 'INVALID-COIN-SYMBOL', $address['compressed']);
 
