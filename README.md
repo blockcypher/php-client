@@ -2,7 +2,7 @@
 
 ![Home Image](https://raw.githubusercontent.com/wiki/blockcypher/php-client/images/homepage.jpg)
 
-[![Build Status](https://travis-ci.org/blockcypher/php-client.svg)](https://travis-ci.org/blockcypher/php-client) 
+![PHP Composer](https://github.com/blockcypher/php-client/workflows/PHP%20Composer/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/blockcypher/php-client/badge.svg?branch=master)](https://coveralls.io/r/blockcypher/php-client?branch=master)
 
 __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP SDK and samples for REST API.
