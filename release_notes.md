@@ -1,6 +1,11 @@
 BlockCypher PHP SDK release notes
 =================================
 
+v2.0.0
+------
+* Update dependencies
+* Target PHP >= 7.1
+
 v1.4.0
 ------
 * Close #18. Added Feature Endpoint.
