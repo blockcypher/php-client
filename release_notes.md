@@ -1,7 +1,7 @@
 BlockCypher PHP SDK release notes
 =================================
 
-v2.0.0
+v2.0.0-beta.1
 ------
 * Update dependencies
 * Target PHP >= 7.1
