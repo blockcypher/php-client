@@ -233,7 +233,7 @@ if (PHP_SAPI == 'cli') {
                     <li><a href="#microtransaction-api">Microtransaction API</a></li>
                     <li><a href="#confidence-factor">Confidence Factor</a></li>
                     <li><a href="#payment-api">Payment Forwarding</a></li>
-                    <li><a href="#hook-api">Events adn Hooks</a></li>
+                    <li><a href="#hook-api">Events and Hooks</a></li>
                     <li><a href="#testing">Testing</a></li>
                     <li><a href="#signer">Signer</a></li>
                 </ul>
