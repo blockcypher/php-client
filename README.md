@@ -84,7 +84,7 @@ $apiContext = ApiContext::create(
 
 ```php
 <?php
-use BlockCypher\Api\Address;
+use BlockCypher\Client\AddressClient;
 
 $addressClient = new AddressClient($apiContext);
 $address = $addressClient->get('1DEP8i3QJCsomS4BSMY2RpU1upv62aGvhD');
