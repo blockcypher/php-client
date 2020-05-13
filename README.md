@@ -7,7 +7,7 @@
 
 __Welcome to BlockCypher PHP SDK__. This repository contains BlockCypher's PHP SDK and samples for REST API.
 
-**Warning: the legacy version (up to v1.4.0) which targets PHP >= 5.5.0 is in the branch `php55`.
+**Warning: the legacy version (up to v1.5.0) which targets PHP >= 5.5.0 is in the branch `php55`.
 The `master` branch targets PHP >= 7.1.0 and is release as v2. While we are transitioning to v2 some of the documentation might be out of date. Please open an issue if this is the case.**
 
 ## SDK Documentation
