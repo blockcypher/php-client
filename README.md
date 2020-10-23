@@ -1,3 +1,6 @@
+**Due to the lack of usage, the PHP SDK has been deprecated. However our [RESTful APIs](https://www.blockcypher.com/dev/bitcoin/#restful-resources) are extremely easy to integrate with any good HTTP client library.**
+
+
 # PHP REST API SDK for BlockCypher
 
 ![Home Image](https://raw.githubusercontent.com/wiki/blockcypher/php-client/images/homepage.jpg)
